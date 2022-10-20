@@ -1,0 +1,52 @@
+2022-09-09 19:00:27can not login button exception: Message: javascript error: Cannot read properties of undefined (reading 'defaultView')
+  (Session info: chrome=105.0.5195.102)
+
+2022-09-09 19:07:03can not login button exception: Message: javascript error: Cannot read properties of undefined (reading 'defaultView')
+  (Session info: chrome=105.0.5195.102)
+
+2022-09-09 19:15:38can not login button exception: Message: javascript error: Cannot read properties of undefined (reading 'defaultView')
+  (Session info: chrome=105.0.5195.102)
+
+2022-09-09 19:24:49TCAN1043DEVM get_stock_number exception: list index out of range
+2022-09-09 19:26:04TCAN1043DEVM can not find search input box exception: Value must be a list, tuple, range or generator, or a dict. Supplied value is <class 'int'>
+2022-09-12 10:25:55can not login button exception: Message: javascript error: Cannot read properties of undefined (reading 'defaultView')
+  (Session info: chrome=105.0.5195.102)
+
+2022-09-12 10:32:36TCAN1043DEVM can not find search input box exception: Value must be a list, tuple, range or generator, or a dict. Supplied value is <class 'int'>
+2022-09-12 10:39:34LMX2820EVM get_stock_number exception: list index out of range
+2022-09-12 10:42:30LMX2820EVM can not find search input box exception: Value must be a list, tuple, range or generator, or a dict. Supplied value is <class 'int'>
+2022-09-13 00:13:46can not login button exception: Message: javascript error: Cannot read properties of undefined (reading 'defaultView')
+  (Session info: chrome=105.0.5195.102)
+
+2022-09-13 00:27:19can not login button exception: Message: javascript error: Cannot read properties of undefined (reading 'defaultView')
+  (Session info: chrome=105.0.5195.102)
+
+2022-09-14 17:40:56{cate_name} analyze_opn_snapshot Exception: {e}
+2022-09-14 17:49:11{cate_name} analyze_opn_snapshot Exception: {e}
+2022-09-14 17:53:22{cate_name} analyze_opn_snapshot Exception: {e}
+2022-09-14 18:38:22{cate_name} analyze_opn_snapshot Exception: {e}
+2022-09-14 19:05:56TCAN1043DEVM add card error exception: record_stock_info() missing 1 required positional argument: 'detail_data'
+2022-09-14 19:10:01{cate_name} analyze_opn_snapshot Exception: {e}
+2022-09-14 19:14:58{cate_name} analyze_opn_snapshot Exception: {e}
+2022-09-14 19:20:20TCAN1043DEVM add card error exception: Message: element click intercepted: Element <div class="ti-svg-icon-bg" style="background-image: url(&quot;//www.ti.com.cn/assets/icons/ti_icons-actions/close.svg&quot;);">...</div> is not clickable at point (844, 320). Other element would receive the click: <iframe id="sec-text-if" class="custmsg" frameborder="0" scrolling="yes" src="https://www.ti.com/ak_message_atc.html"></iframe>
+  (Session info: chrome=105.0.5195.102)
+
+2022-09-14 19:24:20AMC1306M05QDWVRQ1 can not get search button exception: Message: element click intercepted: Element <span class="coveo-search-button">...</span> is not clickable at point (552, 34). Other element would receive the click: <ti-dialog class="ti-add-to-cart-dialog ti-dialog hydrated ti-dialog-visible" role="dialog" aria-labelledby="ti-dialog-8-lbl" aria-modal="" aria-expanded="">...</ti-dialog>
+  (Session info: chrome=105.0.5195.102)
+
+2022-09-14 19:29:44AMC1306M05QDWVRQ1 add card error exception: Message: element click intercepted: Element <ti-button class="ti-button-compact ti-button-primary hydrated" appearance="primary compact">...</ti-button> is not clickable at point (1078, 298). Other element would receive the click: <ti-dialog class="ti-add-to-cart-dialog ti-dialog hydrated ti-dialog-visible" role="dialog" aria-labelledby="ti-dialog-8-lbl" aria-modal="" aria-expanded="">...</ti-dialog>
+  (Session info: chrome=105.0.5195.102)
+
+2022-09-14 19:40:32{cate_name} analyze_opn_snapshot Exception: {e}
+2022-09-14 20:14:50{cate_name} analyze_opn_snapshot Exception: {e}
+2022-09-14 20:21:49TCAN1043DEVM add card error exception: record_stock_info() missing 1 required positional argument: 'detail_data'
+2022-09-14 20:36:01{cate_name} analyze_opn_snapshot Exception: {e}
+2022-09-14 20:51:54TLC5947RHBR analyze_opn_snapshot Exception: Cannot convert [{'stockText': '无库存', 'name': 'Digi-Key', 'region': 'Worldwide', 'id': 10, 'url': 'http://www.digikey.com/product-search/en?mpart=TLC5947RHBT&v=296'}, {'stockText': '无库存', 'name': 'Mouser Electronics', 'region': 'Worldwide', 'id': 26, 'url': 'http://www.mouser.com/access/?pn=TLC5947RHBT&sn=TI'}] to Excel
+2022-09-14 20:56:00TCAN1043DEVM can not get search button exception: Message: element click intercepted: Element is not clickable at point (552, -321)
+  (Session info: chrome=105.0.5195.102)
+
+2022-09-14 21:00:33TCAN1043DEVM analyze_opn_snapshot Exception: Cannot convert [{'stockText': '无库存', 'name': 'Digi-Key', 'region': 'Worldwide', 'id': 10, 'url': 'http://www.digikey.com/product-search/en?mpart=TLC5947RHBT&v=296'}, {'stockText': '无库存', 'name': 'Mouser Electronics', 'region': 'Worldwide', 'id': 26, 'url': 'http://www.mouser.com/access/?pn=TLC5947RHBT&sn=TI'}] to Excel
+2022-09-14 21:07:47TLC5947RHBR add card error exception: Message: element click intercepted: Element is not clickable at point (1025, 837)
+  (Session info: chrome=105.0.5195.102)
+
+2022-09-14 21:12:16TCAN1043DEVM get_stock_number exception: mail_TI() missing 1 required positional argument: 'detail_data'

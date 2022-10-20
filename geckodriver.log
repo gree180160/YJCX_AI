@@ -1,0 +1,21 @@
+1658910837670	geckodriver	INFO	Listening on 127.0.0.1:59664
+1658910837796	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "--remote-debugging-port" "59665" "--remote-allow-hosts" "localhost" "-foreground" "-no-remote" "-profile" "/var/folders/jc/x8nf5scd28v4wrbkt9l72vd00000gn/T/rust_mozprofilevsdgJ1"
+2022-07-27 16:33:58.089 plugin-container[3796:186956] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-07-27 16:33:58.089 plugin-container[3796:186956] nil host used in call to allowsAnyHTTPSCertificateForHost:
+1658910838098	Marionette	INFO	Marionette enabled
+2022-07-27 16:33:58.118 plugin-container[3796:186956] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-07-27 16:33:58.118 plugin-container[3796:186956] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2022-07-27 16:33:58.118 plugin-container[3796:186962] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-07-27 16:33:58.118 plugin-container[3796:186962] nil host used in call to allowsAnyHTTPSCertificateForHost:
+1658910838125	Marionette	INFO	Listening on port 59692
+WebDriver BiDi listening on ws://localhost:59665
+Read port: 59692
+1658910838284	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /var/folders/jc/x8nf5scd28v4wrbkt9l72vd00000gn/T/rust_mozprofilevsdgJ1/search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:59665/devtools/browser/fdaff0e4-1b3d-4aba-80d5-460294e0a22d
+UNSUPPORTED (log once): POSSIBLE ISSUE: unit 1 GLD_TEXTURE_INDEX_2D is unloadable and bound to sampler type (Float) - using zero texture because texture unloadable
+JavaScript warning: https://www.ic.net.cn/media/javascript/q.js?v=1616807238, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1658910839598	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+JavaScript warning: https://www.ic.net.cn/media/javascript/q.js?v=1616807238, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1658910862051	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+1658911067808	Marionette	INFO	Stopped listening on port 59692
