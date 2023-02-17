@@ -44,7 +44,7 @@ def waitfor_account_import(is_load_page, isDebug):
         time.sleep(5 + random.randint(1, 3))
     else:
         if is_load_page:
-            time.sleep(190 + random.randint(1, 120))
+            time.sleep(155 + random.randint(1, 120))
         else:
             time.sleep(5 + random.randint(1, 10))
 

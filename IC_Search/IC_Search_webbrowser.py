@@ -16,7 +16,7 @@ def open_url(isWeek):
     pn_file = PathHelp.get_file_path('TInfenion_15H', 'TInfenion_15H.xlsx')
     ppn_list = ExcelHelp.read_col_content(file_name=pn_file, sheet_name='ppn', col_index=1)
     for (index, ppn) in enumerate(ppn_list):
-        if index in range(37, 125): #
+        if index in range(94, 125): #
             url = get_url(cate_name=ppn, isWeek=isWeek)
             print(f'index is：{index} USL is: {url}')
             # UserInput.input_url(url, wait_time_kind=1)

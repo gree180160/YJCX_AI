@@ -43,13 +43,14 @@ def login_action(aim_url):
         driver.find_element(by=By.ID, value='username').send_keys(accout_current[0])
         driver.find_element(by=By.ID, value='password').clear()
         driver.find_element(by=By.ID, value='password').send_keys(accout_current[1])
+        WaitHelp.waitfor_account_import(False, False)
         driver.find_element(by=By.ID, value='btn_login').click()
         WaitHelp.waitfor_account_import(True, False)
         if driver.current_url.startswith('https://www.ic.net.cn/member/'): # 首次登录
             driver.get(aim_url)
         elif driver.current_url.startswith('https://icpi.ic.net.cn/icpi/detail'): # 查询过程中出现登录
             driver.get(aim_url)
-        WaitHelp.waitfor_octopart(True, False)
+        WaitHelp.waitfor_octopart(False, False)
 
 
 
@@ -77,6 +78,7 @@ def search_hotInfo(cate_name, isWeek):
 
 # 保存截图+关闭页面+修改保存图的名称
 def saveImageAndRename(ppn, is_week):
+    # todo 保存完把焦点切换到火狐
     UserInput.screenShot_saveAndClose()
     # rename
     fold_path = PathHelp.get_IC_hot_image_fold()

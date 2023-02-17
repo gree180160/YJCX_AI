@@ -16,7 +16,7 @@ from WRTools import IPHelper, UserAgentHelper, ExcelHelp, WaitHelp, PathHelp
 sourceFile_dic = {'fileName': PathHelp.get_file_path("TInfenion_30H", 'TInfenion_30H.xlsx'),
                   'sourceSheet': 'ppn',
                   'colIndex': 1,
-                  'startIndex': 33,
+                  'startIndex': 119,
                   'endIndex': 125}   #
 
 result_file = PathHelp.get_file_path(super_path="TInfenion_30H", file_name='IC_stock.xlsx')
@@ -66,13 +66,14 @@ def login_action(aim_url):
         driver.find_element(by=By.ID, value='username').send_keys(accout_current[0])
         driver.find_element(by=By.ID, value='password').clear()
         driver.find_element(by=By.ID, value='password').send_keys(accout_current[1])
+        WaitHelp.waitfor_account_import(False, False)
         driver.find_element(by=By.ID, value='btn_login').click()
         WaitHelp.waitfor_account_import(True, False)
         if driver.current_url.startswith('https://www.ic.net.cn/member/'): # 首次登录
             driver.get(aim_url)
         elif driver.current_url.startswith('https://www.ic.net.cn/search'): # 查询过程中出现登录
             driver.get(aim_url)
-        WaitHelp.waitfor_octopart(True, False)
+        WaitHelp.waitfor_octopart(False, False)
 
 
 # 转换cate 中的特殊字符
