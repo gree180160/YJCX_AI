@@ -15,7 +15,7 @@ class IC_Stock_Info:
 
     def shouldSave(self):
         result = False
-        if self.isICCP or self.isSSCP or self.isSpotRanking or self.isHotSell:
+        if self.isICCP or self.isSSCP or self.isSpotRanking:
             result = True
         return result
 

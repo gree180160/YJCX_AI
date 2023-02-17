@@ -80,7 +80,10 @@ def get_stock(stock_str) -> int:
         if 'On Order' in stock_str:
             return result
         digital = ''.join(re.findall('[0-9]',stock_str))   # 只保留数字
-        result = int(digital)
+        if digital.__len__() > 0:
+            result = int(digital)
+        else:
+            result = 0
         return result
 
 

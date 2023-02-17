@@ -1,18 +1,19 @@
 # 根据关键字查找P/N, manu
 from bs4 import BeautifulSoup
 import time
-from WRTools import IPHelper, UserAgentHelper, LogHelper, WaitHelp, QGHelp, EmailHelper, ExcelHelp
+from WRTools import IPHelper, UserAgentHelper, LogHelper, PathHelp, EmailHelper, ExcelHelp
 from IC_stock import IC_stock_excel_read, IC_Stock_excel_write
 from urllib.parse import urlparse, parse_qs, parse_qsl
 import os
 import re
+from urllib.parse import urlparse
 import html5lib
 import json
 
-
 default_url = 'https://octopart.com/'
-keyword_source_file = '/Users/liuhe/PycharmProjects/SeleniumDemo/TKeywords.xlsx'
+keyword_source_file = PathHelp.get_file_path('TInfineionAgencyStock2', 'TInfineonAgencyStock2.xlsx')
 log_file = '/Users/liuhe/PycharmProjects/SeleniumDemo/Octopart_category/octopart_key_cate_log.txt'
+fold_path = "/Users/liuhe/Desktop/progress/TMegSensor/octopart_html_files"
 
 total_page = 1
 current_page = 1
@@ -23,7 +24,7 @@ security_times = 0
 def get_url(key_name, page, alpha, manu_ids) -> str:
     manu_param = '&manufacturer_id=' + manu_ids.replace(';', '&manufacturer_id=')
     page_param = '' if page == 1 else '&start=' + str(page * 10 - 10)
-    url = f'https://octopart.com/search?q={key_name}{alpha}&currency=USD&specs=0{manu_param}{page_param}'
+    url = f'view-source:https://octopart.com/search?q={key_name}{alpha}&currency=USD&specs=0{manu_param}{page_param}'
     return url
 
 
@@ -38,7 +39,7 @@ def is_security_check(soup) -> bool:
             security_times += 1
             EmailHelper.mail_ip_error("mac")
             # QGHelp.maintainWhiteList()
-            time.sleep(60)
+            # time.sleep(60)
     except:
         result = False
         security_times = 0
@@ -69,8 +70,8 @@ def has_content(soup) -> bool:
     return result
 
 
-def get_category(file_name_index, file_name, key_name, alpha):
-    path = f'/Users/liuhe/Desktop/htmlFils_all/files1/{file_name}'
+def get_category(fold_path, file_name, key_name, alpha):
+    path = fold_path + f'/{file_name}'
     htmlfile = open(path, 'r', encoding='utf-8')
     htmlhandle = htmlfile.read()
     soup = BeautifulSoup(htmlhandle, 'html5lib')
@@ -78,8 +79,23 @@ def get_category(file_name_index, file_name, key_name, alpha):
     analyth_html(key_name=key_name, soup=soup, alpha=alpha, htmlhandle=htmlhandle)
 
 
+# 验证是否处于验证IP 页面
+def is_security_check(soup) -> bool:
+    result = False
+    try:
+        alert = soup.select('div.inner.narrow')
+        if alert and len(alert) > 0:
+            result = True
+    except:
+        result = False
+    return result
+
+
 # 解析html，获取cate，manu
 def analyth_html(key_name, soup, alpha, htmlhandle):
+    if is_security_check(soup=soup):
+        LogHelper.write_log(log_file_name=log_file, content=f'alert happens in :{key_name} \n')
+        return
     try:
         table = soup.select('div.jsx-2172888034.prices-view')[0]
         cate_first = table.select('div.jsx-2172888034')
@@ -89,22 +105,24 @@ def analyth_html(key_name, soup, alpha, htmlhandle):
         for temp_cate in cates_all:
             header = temp_cate.select('div.jsx-3355510592.header')[0]
             try:
-                manu = header.select('div.jsx-312275976.jsx-2649123136.manufacturer-name-and-possible-tooltip')[0].text
+                manu = header.select('div.jsx-312275976.jsx-2018853745.manufacturer-name-and-possible-tooltip')[0].text
             except:
                 manu = None
             try:
-                cate_name = header.select('div.jsx-312275976.jsx-2649123136.mpn')[0].text
+                cate_name = header.select('div.jsx-312275976.jsx-2018853745.mpn')[0].text
             except:
                 cate_name = None
             if cate_name and manu:
                 if cate_name.startswith(key_name):
-                    info_list.append([cate_name, manu, key_name, total_page])
+                    info_list.append([cate_name, manu, key_name, alpha, total_page])
         if len(info_list) > 0:
-            IC_Stock_excel_write.add_arr_to_sheet(file_name=f'{key_name}.xlsx', sheet_name='all', dim_arr=info_list)
+            IC_Stock_excel_write.add_arr_to_sheet(file_name=keyword_source_file, sheet_name='page0_pn',
+                                                  dim_arr=info_list)
     except Exception as e:
         info_arr = getSKUByRE(html_txt=htmlhandle, key_name=key_name)
         if len(info_arr) > 0:
-            IC_Stock_excel_write.add_arr_to_sheet(file_name=f'{key_name}.xlsx', sheet_name='all', dim_arr=info_arr)
+            IC_Stock_excel_write.add_arr_to_sheet(file_name=keyword_source_file, sheet_name='page0_pn',
+                                                  dim_arr=info_arr)
         else:
             LogHelper.write_log(log_file, f'{key_name} analyth_html exception: {e}')
 
@@ -122,8 +140,10 @@ def getSKUByRE(html_txt, key_name) -> list:
 
 # 获取url 查询参数dic
 def getInfoByFileName(fileName):
-    eg = 'view-source_https___octopart.com_search_q=TPS13&currency=USD&specs=0&manufacturer_id=370'
-    url = fileName.replace('view-source_', '')
+    # eg = 'view-source_https___octopart.com_search_q=TPS13&currency=USD&specs=0&manufacturer_id=370'
+    url = fileName.replace('https __octopart.com_search currency=',
+                           'view-source:https://octopart.com/search?currency=')
+    url = url.replace('view-source_', '')
     url = url.replace('___', '://')
     url = url.replace('octopart.com_search_q', 'octopart.com/search?q')
     url = url.replace('octopart.com_search q', 'octopart.com/search?q')
@@ -131,18 +151,39 @@ def getInfoByFileName(fileName):
     return result
 
 
-def get_files():
-    path = '/Users/liuhe/Desktop/htmlFils_all/files1'
-    file_name_list = os.listdir(path)
+def get_files(fold_path: str):
+    file_name_list = os.listdir(fold_path)
     result = []
     for temp in file_name_list:
-        if temp.endswith('.htm') or temp.endswith('.html')  or temp.endswith('.mhtml'):
+        if temp.endswith('.htm') or temp.endswith('.html') or temp.endswith('.mhtml'):
             result.append(temp)
     return result
 
 
+# 获取指定文件下的html files，并将结果转化为url输出
+def get_finished_ppn(fold_path: str):
+    file_name_list = os.listdir(fold_path)
+    result = []
+    for temp in file_name_list:
+        result.append(get_ppn_from_filename(temp))
+    return result
+
+
+def get_ppn_from_filename(filename: str):
+    result = ""
+    if ' q=' in filename and '&currency=' in filename:
+        index1: int = filename.index(' q=')
+        index2: int = filename.index('&currency=')
+        s = ''
+        for (index, char) in enumerate(filename):
+            if index in range(index1 + 3, index2):
+                result += char
+    return result
+
+
 def main():
-    file_name_list = get_files()
+    # fold_path = fold_path
+    file_name_list = get_files(fold_path=fold_path)
     for (file_name_index, file_name) in enumerate(file_name_list):
         print(f'file name is: {file_name}')
         dic = getInfoByFileName(file_name)
@@ -161,8 +202,39 @@ def main():
                 page = '0'
         except:
             page = '0'
-        get_category(file_name_index, file_name, key_name=key, alpha=alpha)
+        get_category(fold_path=fold_path, file_name=file_name, key_name=key,
+                     alpha=alpha)
+
+
+# 比较两个url 是否相同
+def queryToUrl(url1, url2, para1, para2) -> bool:
+    # url1 paramiter
+    qs1 = urlparse(url1)
+    dic1 = parse_qs(qs1.query)
+    para1_value1 = dic1[para1]
+    para2_value1 = dic1[para2]
+    # url2 paramiter
+    qs2 = urlparse(url2)
+    dic2 = parse_qs(qs2.query)
+    para1_value2 = dic2[para1]
+    para2_value2 = dic2[para2]
+    return para1_value1 == para1_value2 and para2_value1 == para2_value2
+
+
+# 查找遗漏的html——文件,并保存
+def get_unfinished_urls(keyword_source_file: str, finished_html_files_fold: str):
+    result = []
+    all_ppn = ExcelHelp.read_col_content(file_name=keyword_source_file, sheet_name='ppn', col_index=1)
+    finished_ppn = get_finished_ppn(fold_path=finished_html_files_fold)
+    for (ppn_index, temp_ppn) in enumerate(all_ppn):
+        if not temp_ppn in finished_ppn:
+            url = get_url(key_name=temp_ppn, alpha='', page=0, manu_ids='453;202;706;12547;196')
+            result.append([url])
+    print(result)
+    ExcelHelp.add_arr_to_sheet(file_name=keyword_source_file, sheet_name='unfinished_url', dim_arr=result)
 
 
 if __name__ == "__main__":
-    main()
+    # main()
+    # get_category(fold_path=fold_path, file_name='https __octopart.com_search q=TLE493DW2B6&currency=USD&specs=0&manufacturer_id=453&manufacturer_id=202&manufacturer_id=706&manufacturer_id=12547&manufacturer_id=196.html', key_name='TLE4961-1', alpha='L')
+    get_unfinished_urls(keyword_source_file=PathHelp.get_file_path('TInfineionAgencyStock2', 'TInfineonAgencyStock2.xlsx') , finished_html_files_fold ='/Users/liuhe/Desktop/progress/TInfineonAgencyStock2/octopart_html_files')

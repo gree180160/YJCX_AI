@@ -20,7 +20,6 @@ ip_arr_country3 = ExcelHelp.read_col_content(file_name=ip_file, sheet_name=ip_sh
 ip_arr_country4 = ExcelHelp.read_col_content(file_name=ip_file, sheet_name=ip_sheet, col_index=1)[171*3:]
 
 
-
 # same city
 def getRandowCityIP():
     return random.choice(ip_arr_city)
@@ -146,7 +145,6 @@ def pinyi_test():
     proxyHost = ip_arr[0]
     proxyPort = ip_arr[1]
     proxyMeta = "http://%(host)s:%(port)s" % {
-
         "host": proxyHost,
         "port": proxyPort,
     }
@@ -160,7 +158,6 @@ def pinyi_test():
     resp.encoding = 'utf-8'
     print(resp.status_code)
     print(resp.text)
-
 
 
 if __name__ == '__main__':

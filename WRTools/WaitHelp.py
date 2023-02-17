@@ -1,5 +1,6 @@
 import time
 import random
+from datetime import datetime
 
 
 # 普通website等待时间，load new page -> 70s; else 20s
@@ -21,9 +22,9 @@ def waitfor_octopart(is_load_page, isDebug):
     else:
         # load new page
         if is_load_page:
-            time.sleep(180 + random.randint(5, 55))
+            time.sleep(26 + random.randint(5, 55))
         else:
-            time.sleep(20 + random.randint(2, 22))
+            time.sleep(15 + random.randint(2, 22))
 
 
 # 适用于不需要账号，有隧道代理，load new page -> 60; else 5s
@@ -43,7 +44,34 @@ def waitfor_account_import(is_load_page, isDebug):
         time.sleep(5 + random.randint(1, 3))
     else:
         if is_load_page:
-            time.sleep(150 + random.randint(1, 120))
+            time.sleep(190 + random.randint(1, 120))
         else:
             time.sleep(5 + random.randint(1, 10))
+
+
+# 计算过了多少天
+def daysPassed(thatDay: str) -> int:
+    result = 99999
+    try:
+        now = datetime.now()
+        past = thatDay
+        past = list(map(int, past.split('-')))
+        past = datetime(past[0], past[1], past[2])
+        delta = now - past
+        result = delta.days
+    except:
+        print('thatDay invalid')
+        result = 99999
+    print(result)
+    return result
+
+
+# wait_time_kind, -1-> waitfor_octopart, 0 -> waitfor, 1 ->waitfor_account_import
+def waitfor_kind(kind:int, is_load_page, isDebug):
+    if kind == -1:
+        waitfor_octopart(is_load_page=is_load_page, isDebug=isDebug)
+    elif kind == 1:
+        waitfor_account_import(is_load_page=is_load_page, isDebug=isDebug)
+    else:
+        waitfor(is_load_page=is_load_page, isDebug=isDebug)
 

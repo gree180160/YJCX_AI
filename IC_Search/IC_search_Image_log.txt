@@ -1,0 +1,1888 @@
+2023-02-10 22:50:13/Users/liuhe/Desktop/识图test/M_11.png10th---  1: 432
+2: 132
+3: 132
+4: 132
+
+2023-02-10 23:00:43/Users/liuhe/Desktop/识图test/w_10.png  9th---  1: 10202
+2: 10203
+3: 10207
+4: 10203
+
+2023-02-10 23:00:44/Users/liuhe/Desktop/识图test/w_14.png  13th---  1: 4207
+2: 14203
+3: 14207
+4: 14203
+
+2023-02-10 23:00:45/Users/liuhe/Desktop/识图test/w_15.png  14th---  1: 15202
+2: 15203
+3: 15207
+4: 15203
+
+2023-02-10 23:00:45/Users/liuhe/Desktop/识图test/w_16.png  15th---  1: 16202
+2: 16203
+3: 16207
+4: 16203
+
+2023-02-10 23:00:45/Users/liuhe/Desktop/识图test/w_18.png  17th---  1: 18202
+2: 18203
+3: 18207
+4: 18203
+
+2023-02-10 23:00:46/Users/liuhe/Desktop/识图test/w_19.png  18th---  1: 19202
+2: 19203
+3: 19207
+4: 19203
+
+2023-02-10 23:00:48/Users/liuhe/Desktop/识图test/w_29.png  28th---  1: 2920
+2: 29203
+3: 29207
+4: 29203
+
+2023-02-10 23:00:49/Users/liuhe/Desktop/识图test/w_30.png  29th---  1: 30202
+2: 30203
+3: 30207
+4: 30203
+
+2023-02-10 23:03:27/Users/liuhe/Desktop/识图test/w_8.png  7th---  1: 50
+2: 30
+3: 30
+4: 30
+
+2023-02-10 23:03:30/Users/liuhe/Desktop/识图test/w_20.png  19th---  1: 109
+2: 103
+3: 103
+4: 103
+
+2023-02-10 23:03:31/Users/liuhe/Desktop/识图test/w_24.png  23th---  1: 56
+2: 36
+3: 36
+4: 36
+
+2023-02-10 23:03:32/Users/liuhe/Desktop/识图test/w_27.png  26th---  1: 118
+2: 116
+3: 18
+4: 116
+
+2023-02-10 23:03:33/Users/liuhe/Desktop/识图test/w_33.png  32th---  1: 5
+2: 3: 3
+4: 
+2023-02-10 23:03:35/Users/liuhe/Desktop/识图test/w_39.png  38th---  1: 38
+2: 38
+3: 39
+4: 38
+
+2023-02-10 23:03:35/Users/liuhe/Desktop/识图test/w_40.png  39th---  1: 38
+2: 38
+3: 39
+4: 38
+
+2023-02-10 23:03:37/Users/liuhe/Desktop/识图test/w_49.png  48th---  1: 56
+2: 36
+3: 36
+4: 36
+
+2023-02-10 23:14:09/Users/liuhe/Desktop/识图test/w_13.png  12th---  1: 2: 1
+3: 7
+4: 1
+
+2023-02-10 23:14:10/Users/liuhe/Desktop/识图test/w_18.png  17th---  1: 99
+2: 98
+3: 39
+4: 98
+
+2023-02-10 23:14:11/Users/liuhe/Desktop/识图test/w_19.png  18th---  1: 28
+2: 25
+3: 2
+4: 25
+
+2023-02-10 23:14:13/Users/liuhe/Desktop/识图test/w_27.png  26th---  1: 83
+2: 63
+3: 63
+4: 63
+
+2023-02-10 23:14:14/Users/liuhe/Desktop/识图test/w_34.png  33th---  1: 55
+2: 5
+3: 35
+4: 5
+
+2023-02-10 23:21:20/Users/liuhe/Desktop/识图test/w_12.png  11th
+
+2023-02-10 23:21:42/Users/liuhe/Desktop/识图test/w_16.png  15th---  1: 16
+2: 4
+3: 41
+4: 4
+
+2023-02-10 23:21:42/Users/liuhe/Desktop/识图test/w_18.png  17th---  1: 18
+2: 19
+3: 49
+4: 19
+
+2023-02-10 23:21:45/Users/liuhe/Desktop/识图test/w_30.png  29th---  1: 3
+2: 2
+3: 4: 2
+
+2023-02-10 23:21:46/Users/liuhe/Desktop/识图test/w_33.png  32th---  1: 33
+2: 3
+3: 37
+4: 3
+
+2023-02-10 23:21:47/Users/liuhe/Desktop/识图test/w_36.png  35th---  1: 36
+2: 2
+3: 35
+4: 2
+
+2023-02-10 23:21:47/Users/liuhe/Desktop/识图test/w_37.png  36th---  1: 49
+2: 39
+3: 37
+4: 39
+
+2023-02-10 23:21:47/Users/liuhe/Desktop/识图test/w_38.png  37th---  1: 39
+2: 3: 30
+4: 
+2023-02-10 23:21:48/Users/liuhe/Desktop/识图test/w_39.png  38th---  1: 49
+2: 39
+3: 35
+4: 39
+
+2023-02-10 23:21:49/Users/liuhe/Desktop/识图test/w_43.png  42th---  1: 2
+2: 3: 4
+4: 
+2023-02-10 23:21:50/Users/liuhe/Desktop/识图test/w_49.png  48th---  1: 49
+2: 40
+3: 40
+4: 40
+
+2023-02-10 23:29:53/Users/liuhe/Desktop/识图test/w_7.png  6th---  1: 43
+2: 28
+3: 28
+4: 28
+
+2023-02-10 23:36:31/Users/liuhe/Desktop/识图test/w_7.png  6th---  1: 43
+2: 28
+3: 28
+4: 28
+
+2023-02-10 23:39:15/Users/liuhe/Desktop/识图test/w_13.png  12th---  1: 43
+2: 28
+3: 28
+4: 28
+
+2023-02-10 23:40:20/Users/liuhe/Desktop/识图test/w_41.png  40th---  1: 43
+2: 28
+3: 28
+4: 28
+
+2023-02-10 23:40:26/Users/liuhe/Desktop/识图test/w_12.png  11th
+
+2023-02-10 23:40:49/Users/liuhe/Desktop/识图test/w_52.png  51th---  1: 43
+2: 28
+3: 28
+4: 28
+
+2023-02-10 23:41:08/Users/liuhe/Desktop/识图test/M_2.png  1th---  1: 2: 2
+3: 3
+4: 2
+
+2023-02-10 23:41:09/Users/liuhe/Desktop/识图test/M_6.png  5th---  1: 2: 2
+3: 3
+4: 2
+
+2023-02-10 23:41:10/Users/liuhe/Desktop/识图test/M_12.png  11th---  1: 5
+2: 3: 6
+4: 
+2023-02-10 23:41:28/Users/liuhe/Desktop/识图test/M_11.png  10th---  1: 43
+2: 28
+3: 28
+4: 28
+
+2023-02-10 23:41:40/Users/liuhe/Desktop/识图test/w_43.png  42th---  1: 43
+2: 28
+3: 28
+4: 28
+
+2023-02-10 23:42:29/Users/liuhe/Desktop/识图test/w_14.png  13th---  1: 43
+2: 28
+3: 28
+4: 28
+
+2023-02-10 23:44:56/Users/liuhe/Desktop/识图test/w_1.png  0th---  1: 43
+2: 28
+3: 28
+4: 28
+
+2023-02-10 23:45:49/Users/liuhe/Desktop/识图test/w_27.png  26th---  1: 43
+2: 28
+3: 28
+4: 28
+
+2023-02-10 23:45:53/Users/liuhe/Desktop/识图test/w_42.png  41th---  1: 43
+2: 28
+3: 28
+4: 28
+
+2023-02-10 23:48:51/Users/liuhe/Desktop/识图test/w_7.png  6th
+
+2023-02-10 23:49:09/Users/liuhe/Desktop/识图test/M_8.png  7th---  1: 43
+2: 28
+3: 28
+4: 28
+
+2023-02-10 23:49:15/Users/liuhe/Desktop/识图test/M_3.png  2th---  1: 2: 2
+3: 3
+4: 2
+
+2023-02-10 23:51:02/Users/liuhe/Desktop/识图test/M_1.png  0th---  1: 43
+2: 28
+3: 28
+4: 28
+
+2023-02-10 23:51:02/Users/liuhe/Desktop/识图test/M_2.png  1th---  1: 43
+2: 28
+3: 28
+4: 28
+
+2023-02-10 23:51:12/Users/liuhe/Desktop/识图test/M_11.png  10th---  1: 432
+2: 132
+3: 132
+4: 132
+
+2023-02-10 23:51:32/Users/liuhe/Desktop/识图test/M_5.png  4th
+
+2023-02-10 23:51:34/Users/liuhe/Desktop/识图test/M_11.png  10th
+
+2023-02-10 23:51:57/Users/liuhe/Desktop/识图test/w_13.png  12th---  1: 43
+2: 28
+3: 28
+4: 28
+
+2023-02-10 23:52:31/Users/liuhe/Desktop/识图test/w_31.png  30th---  1: 43
+2: 28
+3: 28
+4: 28
+
+2023-02-10 23:52:32/Users/liuhe/Desktop/识图test/w_36.png  35th---  1: 43
+2: 28
+3: 28
+4: 28
+
+2023-02-10 23:52:35/Users/liuhe/Desktop/识图test/w_47.png  46th---  1: 43
+2: 28
+3: 28
+4: 28
+
+2023-02-10 23:53:19/Users/liuhe/Desktop/识图test/M_12.png  11th---  1: 43
+2: 28
+3: 28
+4: 28
+
+2023-02-10 23:53:27/Users/liuhe/Desktop/识图test/M_12.png  11th---  1: 43
+2: 28
+3: 28
+4: 28
+
+2023-02-10 23:53:29/Users/liuhe/Desktop/识图test/M_4.png  3th---  1: 43
+2: 28
+3: 28
+4: 28
+
+2023-02-10 23:53:37/Users/liuhe/Desktop/识图test/M_7.png  6th---  1: 43
+2: 28
+3: 28
+4: 28
+
+2023-02-10 23:53:39/Users/liuhe/Desktop/识图test/M_2.png  1th---  1: 470
+2: 170
+3: 170
+4: 170
+
+2023-02-10 23:55:09/Users/liuhe/Desktop/识图test/w_13.png  12th
+
+2023-02-11 17:43:28/Users/liuhe/Desktop/识图test/M_12.png  11th---  1: 42
+2: 42
+3: 49
+4: 42
+
+2023-02-11 17:51:25/Users/liuhe/Desktop/team_file/11hot/01IC_Hot_ACS/AUIRF3B05L_M.png  11th---  1: 42
+2: 42
+3: 49
+4: 42
+
+2023-02-11 17:53:40/Users/liuhe/Desktop/team_file/11hot/01IC_Hot_ACS/AUIRF3B05L_M.png  11th---  1: 42
+2: 42
+3: 49
+4: 42
+
+2023-02-11 18:59:06/Users/liuhe/Desktop/team_file/11hot/01IC_Hot_ACS/AUIRF1405ZS_W.png  0th---  1: 20
+2: 20
+3: 29
+4: 20
+
+2023-02-11 19:00:55/Users/liuhe/Desktop/team_file/11hot/01IC_Hot_ACS/AUIRF2804S_W.png  15th---  1: 36
+2: 6
+3: 26
+4: 6
+
+2023-02-11 19:02:37/Users/liuhe/Desktop/team_file/11hot/01IC_Hot_ACS/AUIRF3805S-7P_W.png  11th---  1: 4523
+2: 4153
+3: 153
+4: 4153
+
+2023-02-11 19:04:25/Users/liuhe/Desktop/team_file/11hot/01IC_Hot_ACS/AUIRF3710ZS_W.png  8th---  1: 36
+2: 6
+3: 26
+4: 6
+
+2023-02-11 19:04:32/Users/liuhe/Desktop/team_file/11hot/01IC_Hot_ACS/AUIRF3710ZS_W.png  29th---  1: 36
+2: 6
+3: 26
+4: 6
+
+2023-02-11 21:39:03/Users/liuhe/Desktop/team_file/SZ_Image/IC_Hot_ACS_SZ1/AUIRFZ24NSTRL_W.png  3th---  1: 36
+2: 6
+3: 26
+4: 6
+
+2023-02-11 21:39:17/Users/liuhe/Desktop/team_file/SZ_Image/IC_Hot_ACS_SZ1/AUIRGDC0250_W.png  4th---  1: 4523
+2: 4153
+3: 153
+4: 4153
+
+2023-02-11 21:39:25/Users/liuhe/Desktop/team_file/SZ_Image/IC_Hot_ACS_SZ1/AUIRGDC0250_W.png  33th---  1: 78
+2: 74
+3: 73
+4: 74
+
+2023-02-11 21:40:00/Users/liuhe/Desktop/team_file/SZ_Image/IC_Hot_ACS_SZ1/AUIRGB4062D1_M.png  1th---  1: 51
+2: 41
+3: 1
+4: 41
+
+2023-02-11 21:44:07/Users/liuhe/Desktop/team_file/SZ_Image/IC_Hot_ACS_SZ1/AUIRFZ24NS_W.png  10th---  1: 20
+2: 20
+3: 29
+4: 20
+
+2023-02-11 22:16:04/Users/liuhe/Desktop/team_file/04Hot_image/SI7840BDP-T1-E3_W.png  34th---  1: 4000204
+2: 4000204
+3: 4200004
+4: 4000204
+
+2023-02-11 22:16:08/Users/liuhe/Desktop/team_file/04Hot_image/SI7840BDP-T1-E3_W.png  43th---  1: 520
+2: 501
+3: 501
+4: 501
+
+2023-02-11 22:28:15/Users/liuhe/Desktop/team_file/04Hot_image//SI7848DP-T1-E3_W.png  9th---  1: 82
+2: 52
+3: 52
+4: 52
+
+2023-02-11 22:34:37/Users/liuhe/Desktop/team_file/11hot/01IC_Hot_ACS2/AUIRF9Z34N_W.png  14th---  1: 410
+2: 110
+3: 10
+4: 110
+
+2023-02-11 22:36:37/Users/liuhe/Desktop/team_file/11hot/01IC_Hot_ACS2/AUIRF9Z34N_W.png  14th---  1: 410
+2: 110
+3: 10
+4: 110
+
+2023-02-11 23:06:46/Users/liuhe/Desktop/team_file/11hot/01IC_Hot_ACS2/AUIRFP4310Z_M.png  2th---  1: 43
+2: 13
+3: 13
+4: 13
+
+2023-02-11 23:07:19/Users/liuhe/Desktop/team_file/11hot/01IC_Hot_ACS2/AUIRF540ZS_M.png  9th---  1: 36
+2: 26
+3: 26
+4: 26
+
+2023-02-11 23:08:16/Users/liuhe/Desktop/team_file/11hot/01IC_Hot_ACS2/AUIRFS8407-7P_M.png  9th---  1: 43
+2: 13
+3: 13
+4: 13
+
+2023-02-11 23:09:27/Users/liuhe/Desktop/team_file/11hot/01IC_Hot_ACS2/AUIRFS4010_M.png  3th---  1: 43
+2: 13
+3: 13
+4: 13
+
+2023-02-11 23:11:45/Users/liuhe/Desktop/team_file/11hot/01IC_Hot_ACS2/AUIRF5210S_M.png  5th---  1: 407
+2: 107
+3: 107
+4: 107
+
+2023-02-11 23:12:12/Users/liuhe/Desktop/team_file/11hot/01IC_Hot_ACS2/AUIRFS4310ZTRL_M.png  10th---  1: 36
+2: 26
+3: 26
+4: 26
+
+2023-02-11 23:12:37/Users/liuhe/Desktop/team_file/SZ_Image/IC_Hot_ACS_SZ2/AUIRLR120N_M.png  10th---  1: 43
+2: 13
+3: 13
+4: 13
+
+2023-02-11 23:12:54/Users/liuhe/Desktop/team_file/SZ_Image/IC_Hot_ACS_SZ2/AUIRS2301STR_W.png  31th---  1: 91
+2: 31
+3: 4: 31
+
+2023-02-11 23:13:40/Users/liuhe/Desktop/team_file/SZ_Image/IC_Hot_ACS_SZ2/AUIRGPS4067D1_M.png  4th---  1: 43
+2: 13
+3: 13
+4: 13
+
+2023-02-11 23:14:07/Users/liuhe/Desktop/team_file/SZ_Image/IC_Hot_ACS_SZ2/AUIRLR3410TR_M.png  10th---  1: 36
+2: 26
+3: 26
+4: 26
+
+2023-02-11 23:14:54/Users/liuhe/Desktop/team_file/SZ_Image/IC_Hot_ACS_SZ2/AUIRLS4030-7P_M.png  1th---  1: 43
+2: 13
+3: 13
+4: 13
+
+2023-02-11 23:19:12/Users/liuhe/Desktop/team_file/SZ_Image/IC_Hot_ACS_SZ2/AUIRS21814STR_W.png  26th---  1: 4
+2: 34
+3: 54
+4: 34
+
+/////////////////////////////
+
+
+2023-02-13 19:11:51/Users/liuhe/Desktop/progress/TDiscontinue/finished/ACS/IC_hot_Images/sz/2/AUIRS20302S_M.png  0th---  1: 2
+2: 3
+3: 5
+4: 3
+
+2023-02-13 19:12:02/Users/liuhe/Desktop/progress/TDiscontinue/finished/ACS/IC_hot_Images/sz/2/AUIRS20302S_W.png  31th---  1: 2
+2: 3
+3: 5
+4: 3
+
+2023-02-13 19:12:02/Users/liuhe/Desktop/progress/TDiscontinue/finished/ACS/IC_hot_Images/sz/2/AUIRS20302S_W.png  33th---  1: 2
+2: 3
+3: 5
+4: 3
+
+2023-02-13 19:14:25/Users/liuhe/Desktop/progress/TDiscontinue/finished/ACS/IC_hot_Images/sz/2/AUIRS21271STR_M.png  2th---  1: 160
+2: 100
+3: 100
+4: 100
+
+2023-02-13 19:14:40/Users/liuhe/Desktop/progress/TDiscontinue/finished/ACS/IC_hot_Images/sz/2/AUIRS21271STR_W.png  47th---  1: 53
+2: 53
+3: 83
+4: 53
+
+2023-02-13 19:15:06/Users/liuhe/Desktop/progress/TDiscontinue/finished/ACS/IC_hot_Images/sz/2/AUIRS2127STR_W.png  15th---  1: 53
+2: 53
+3: 83
+4: 53
+
+2023-02-13 19:15:24/Users/liuhe/Desktop/progress/TDiscontinue/finished/ACS/IC_hot_Images/sz/2/AUIRS21811STR_W.png  18th---  1: 53
+2: 53
+3: 83
+4: 53
+
+2023-02-13 19:15:52/Users/liuhe/Desktop/progress/TDiscontinue/finished/ACS/IC_hot_Images/sz/2/AUIRS21814STR_M.png  6th---  1: 46
+2: 16
+3: 16
+4: 16
+
+2023-02-13 19:16:01/Users/liuhe/Desktop/progress/TDiscontinue/finished/ACS/IC_hot_Images/sz/2/AUIRS21814STR_W.png  26th---  1: 4
+2: 34
+3: 54
+4: 34
+
+2023-02-13 19:16:27/Users/liuhe/Desktop/progress/TDiscontinue/finished/ACS/IC_hot_Images/sz/2/AUIRS2181STR_M.png  6th---  1: 160
+2: 100
+3: 100
+4: 100
+
+2023-02-13 19:16:45/Users/liuhe/Desktop/progress/TDiscontinue/finished/ACS/IC_hot_Images/sz/2/AUIRS2181S_M.png  8th---  1: 53
+2: 53
+3: 83
+4: 53
+
+2023-02-13 19:18:03/Users/liuhe/Desktop/progress/TDiscontinue/finished/ACS/IC_hot_Images/sz/2/AUIRS2301STR_W.png  31th---  1: 91
+2: 31
+3: 4: 31
+
+2023-02-13 19:18:10/Users/liuhe/Desktop/progress/TDiscontinue/finished/ACS/IC_hot_Images/sz/2/AUIRS2301S_M.png  4th---  1: 53
+2: 53
+3: 83
+4: 53
+
+2023-02-13 20:21:48/Users/liuhe/Desktop/progress/TDiscontinue/finished/ACS/IC_hot_Images/sz/1/AUIRGB4062D1_W.png  4th---  1: 2
+2: 3
+3: 5
+4: 3
+
+2023-02-13 20:21:54/Users/liuhe/Desktop/progress/TDiscontinue/finished/ACS/IC_hot_Images/sz/1/AUIRGB4062D1_W.png  26th---  1: 2
+2: 3
+3: 5
+4: 3
+
+2023-02-13 20:21:57/Users/liuhe/Desktop/progress/TDiscontinue/finished/ACS/IC_hot_Images/sz/1/AUIRGB4062D1_W.png  41th---  1: 2
+2: 3
+3: 5
+4: 3
+
+2023-02-13 20:21:57/Users/liuhe/Desktop/progress/TDiscontinue/finished/ACS/IC_hot_Images/sz/1/AUIRGB4062D1_W.png  42th---  1: 2
+2: 3
+3: 5
+4: 3
+
+2023-02-13 20:21:58/Users/liuhe/Desktop/progress/TDiscontinue/finished/ACS/IC_hot_Images/sz/1/AUIRGB4062D1_W.png  44th---  1: 2
+2: 3
+3: 5
+4: 3
+
+2023-02-13 20:22:05/Users/liuhe/Desktop/progress/TDiscontinue/finished/ACS/IC_hot_Images/sz/1/AUIRGDC0250_W.png  3th---  1: 474
+2: 174
+3: 174
+4: 174
+
+2023-02-13 21:44:01/Users/liuhe/Desktop/progress/TDiscontinue/finished/ACS/IC_hot_Images/11/1/AUIRF1405ZS_M.png  2th---  1: 2: 30
+3: 39
+4: 30
+
+2023-02-14 15:21:52/Users/liuhe/Desktop/progress/TInfineonAgencyStock2/IC_hot_image/sz/IPB0401NM5S_M.png  9th---  1: 4
+2: 34
+3: 54
+4: 34
+
+2023-02-14 15:21:54/Users/liuhe/Desktop/progress/TInfineonAgencyStock2/IC_hot_image/sz/IPB0401NM5S_W.png  5th---  1: 2
+2: 3
+3: 5
+4: 3
+
+2023-02-14 15:21:56/Users/liuhe/Desktop/progress/TInfineonAgencyStock2/IC_hot_image/sz/IPB0401NM5S_W.png  16th---  1: 2
+2: 3
+3: 5
+4: 3
+
+2023-02-14 15:22:01/Users/liuhe/Desktop/progress/TInfineonAgencyStock2/IC_hot_image/sz/IPB0401NM5S_W.png  37th---  1: 2: 39
+3: 59
+4: 39
+
+2023-02-14 15:23:39/Users/liuhe/Desktop/progress/TInfineonAgencyStock2/IC_hot_image/sz/IR35217MTRPBF_M.png  2th---  1: 40
+2: 10
+3: 10
+4: 10
+
+2023-02-14 15:23:41/Users/liuhe/Desktop/progress/TInfineonAgencyStock2/IC_hot_image/sz/IR35217MTRPBF_M.png  8th---  1: 22
+2: 2
+3: 12
+4: 2
+
+2023-02-14 15:23:43/Users/liuhe/Desktop/progress/TInfineonAgencyStock2/IC_hot_image/sz/IR35217MTRPBF_W.png  5th---  1: 2
+2: 3
+3: 5
+4: 3
+
+2023-02-14 15:23:51/Users/liuhe/Desktop/progress/TInfineonAgencyStock2/IC_hot_image/sz/IR35217MTRPBF_W.png  37th---  1: 2
+2: 3
+3: 5
+4: 3
+
+2023-02-14 15:25:12/Users/liuhe/Desktop/progress/TInfineonAgencyStock2/IC_hot_image/sz/IRF1404PBF_W.png  45th---  1: 474
+2: 174
+3: 174
+4: 174
+
+2023-02-14 15:25:12/Users/liuhe/Desktop/progress/TInfineonAgencyStock2/IC_hot_image/sz/IRF1404PBF_W.png  46th---  1: 471
+2: 171
+3: 171
+4: 171
+
+2023-02-14 15:26:23/Users/liuhe/Desktop/progress/TInfineonAgencyStock2/IC_hot_image/sz/IRF3710PBF_W.png  13th---  1: 474
+2: 174
+3: 174
+4: 174
+
+2023-02-14 15:26:55/Users/liuhe/Desktop/progress/TInfineonAgencyStock2/IC_hot_image/sz/IRF5210PBF_W.png  14th---  1: 471
+2: 171
+3: 171
+4: 171
+
+2023-02-14 15:26:58/Users/liuhe/Desktop/progress/TInfineonAgencyStock2/IC_hot_image/sz/IRF5210PBF_W.png  24th---  1: 1
+2: 31
+3: 91
+4: 31
+
+2023-02-14 15:26:59/Users/liuhe/Desktop/progress/TInfineonAgencyStock2/IC_hot_image/sz/IRF5210PBF_W.png  31th---  1: 1
+2: 31
+3: 91
+4: 31
+
+2023-02-14 15:27:36/Users/liuhe/Desktop/progress/TInfineonAgencyStock2/IC_hot_image/sz/IRF6216TRPBF_W.png  50th---  1: 1
+2: 31
+3: 91
+4: 31
+
+2023-02-14 15:27:55/Users/liuhe/Desktop/progress/TInfineonAgencyStock2/IC_hot_image/sz/IRF640NPBF_M.png  10th---  1: 1715
+2: 1715
+3: 1915
+4: 1715
+
+2023-02-14 15:28:01/Users/liuhe/Desktop/progress/TInfineonAgencyStock2/IC_hot_image/sz/IRF640NPBF_W.png  22th---  1: 474
+2: 174
+3: 174
+4: 174
+
+2023-02-14 15:28:09/Users/liuhe/Desktop/progress/TInfineonAgencyStock2/IC_hot_image/sz/IRF6644TRPBF_M.png  0th---  1: 471
+2: 171
+3: 171
+4: 171
+
+2023-02-14 15:29:12/Users/liuhe/Desktop/progress/TInfineonAgencyStock2/IC_hot_image/sz/IRF7480MTRPBF_M.png  3th---  1: 1
+2: 31
+3: 91
+4: 31
+
+2023-02-14 15:32:07/Users/liuhe/Desktop/progress/TInfineonAgencyStock2/IC_hot_image/sz/IRFB7537PBF_M.png  5th---  1: 471
+2: 171
+3: 171
+4: 171
+
+2023-02-14 15:32:35/Users/liuhe/Desktop/progress/TInfineonAgencyStock2/IC_hot_image/sz/IRFB7734PBF_W.png  39th---  1: 1
+2: 31
+3: 91
+4: 31
+
+2023-02-14 15:32:55/Users/liuhe/Desktop/progress/TInfineonAgencyStock2/IC_hot_image/sz/IRFH7446TRPBF_M.png  6th---  1: 1
+2: 31
+3: 91
+4: 31
+
+2023-02-14 15:34:53/Users/liuhe/Desktop/progress/TInfineonAgencyStock2/IC_hot_image/sz/IRFP260NPBF_W.png  8th---  1: 1
+2: 31
+3: 91
+4: 31
+
+2023-02-14 15:35:37/Users/liuhe/Desktop/progress/TInfineonAgencyStock2/IC_hot_image/sz/IRFP4368PBF_M.png  1th---  1: 419
+2: 419
+3: 479
+4: 419
+
+2023-02-14 15:35:45/Users/liuhe/Desktop/progress/TInfineonAgencyStock2/IC_hot_image/sz/IRFP4368PBF_W.png  18th---  1: 471
+2: 171
+3: 171
+4: 171
+
+2023-02-14 15:35:46/Users/liuhe/Desktop/progress/TInfineonAgencyStock2/IC_hot_image/sz/IRFP4368PBF_W.png  22th---  1: 1
+2: 31
+3: 91
+4: 31
+
+2023-02-14 15:35:47/Users/liuhe/Desktop/progress/TInfineonAgencyStock2/IC_hot_image/sz/IRFP4368PBF_W.png  26th---  1: 471
+2: 171
+3: 171
+4: 171
+
+2023-02-14 15:35:56/Users/liuhe/Desktop/progress/TInfineonAgencyStock2/IC_hot_image/sz/IRFP4568PBF_M.png  10th---  1: 1711
+2: 1711
+3: 1911
+4: 1711
+
+2023-02-14 15:38:08/Users/liuhe/Desktop/progress/TInfineonAgencyStock2/IC_hot_image/sz/IRFS7437TRLPBF_W.png  8th---  1: 1
+2: 31
+3: 91
+4: 31
+
+2023-02-14 15:39:14/Users/liuhe/Desktop/progress/TInfineonAgencyStock2/IC_hot_image/sz/IRFU220NPBF_W.png  14th---  1: 53
+2: 53
+3: 83
+4: 53
+
+2023-02-14 15:39:23/Users/liuhe/Desktop/progress/TInfineonAgencyStock2/IC_hot_image/sz/IRFU220NPBF_W.png  50th---  1: 53
+2: 53
+3: 83
+4: 53
+
+2023-02-14 15:40:15/Users/liuhe/Desktop/progress/TInfineonAgencyStock2/IC_hot_image/sz/IRLB3034PBF_M.png  9th---  1: 471
+2: 171
+3: 171
+4: 171
+
+2023-02-14 15:40:15/Users/liuhe/Desktop/progress/TInfineonAgencyStock2/IC_hot_image/sz/IRLB3034PBF_M.png  10th---  1: 474
+2: 174
+3: 174
+4: 174
+
+2023-02-14 15:41:14/Users/liuhe/Desktop/progress/TInfineonAgencyStock2/IC_hot_image/sz/IRLR3110ZTRPBF_W.png  40th---  1: 474
+2: 174
+3: 174
+4: 174
+
+2023-02-14 15:42:10/Users/liuhe/Desktop/progress/TInfineonAgencyStock2/IC_hot_image/sz/PXE1610CPN-G003_W.png  4th---  1: 2
+2: 3
+3: 5
+4: 3
+
+2023-02-14 15:42:14/Users/liuhe/Desktop/progress/TInfineonAgencyStock2/IC_hot_image/sz/PXE1610CPN-G003_W.png  18th---  1: 2
+2: 3
+3: 5
+4: 3
+
+2023-02-14 15:42:14/Users/liuhe/Desktop/progress/TInfineonAgencyStock2/IC_hot_image/sz/PXE1610CPN-G003_W.png  20th---  1: 2
+2: 3
+3: 5
+4: 3
+
+2023-02-14 15:42:18/Users/liuhe/Desktop/progress/TInfineonAgencyStock2/IC_hot_image/sz/PXE1610CPN-G003_W.png  36th---  1: 2
+2: 3
+3: 5
+4: 3
+
+2023-02-14 15:42:20/Users/liuhe/Desktop/progress/TInfineonAgencyStock2/IC_hot_image/sz/PXE1610CPN-G003_W.png  44th---  1: 2
+2: 3
+3: 5
+4: 3
+
+2023-02-14 15:42:28/Users/liuhe/Desktop/progress/TInfineonAgencyStock2/IC_hot_image/sz/TDA21232_W.png  10th---  1: 46
+2: 16
+3: 16
+4: 16
+
+2023-02-14 15:42:35/Users/liuhe/Desktop/progress/TInfineonAgencyStock2/IC_hot_image/sz/TDA21232_W.png  40th---  1: 2
+2: 3
+3: 5
+4: 3
+
+2023-02-14 15:42:38/Users/liuhe/Desktop/progress/TInfineonAgencyStock2/IC_hot_image/sz/TDA21460_M.png  1th---  1: 40
+2: 10
+3: 10
+4: 10
+
+2023-02-14 15:42:44/Users/liuhe/Desktop/progress/TInfineonAgencyStock2/IC_hot_image/sz/TDA21460_W.png  10th---  1: 2
+2: 3
+3: 5
+4: 3
+
+2023-02-14 15:42:49/Users/liuhe/Desktop/progress/TInfineonAgencyStock2/IC_hot_image/sz/TDA21460_W.png  31th---  1: 2
+2: 3
+3: 5
+4: 3
+
+2023-02-14 15:43:47/Users/liuhe/Desktop/progress/TInfineonAgencyStock2/IC_hot_image/sz/TDA21535_W.png  5th---  1: 2
+2: 3
+3: 5
+4: 3
+
+2023-02-14 15:43:51/Users/liuhe/Desktop/progress/TInfineonAgencyStock2/IC_hot_image/sz/TDA21535_W.png  23th---  1: 2
+2: 3
+3: 5
+4: 3
+
+2023-02-14 15:43:53/Users/liuhe/Desktop/progress/TInfineonAgencyStock2/IC_hot_image/sz/TDA21535_W.png  30th---  1: 2
+2: 3
+3: 5
+4: 3
+
+2023-02-14 15:43:54/Users/liuhe/Desktop/progress/TInfineonAgencyStock2/IC_hot_image/sz/TDA21535_W.png  32th---  1: 2
+2: 3
+3: 5
+4: 3
+
+2023-02-14 15:44:19/Users/liuhe/Desktop/progress/TInfineonAgencyStock2/IC_hot_image/sz/XDPE132G5D-G000_W.png  4th---  1: 3
+2: 33
+3: 53
+4: 33
+
+2023-02-14 16:06:51/Users/liuhe/Desktop/progress/TInfineonAgencyStock2/IC_hot_image/sz/TDA21460_M.png  1th---  1: 40
+2: 10
+3: 10
+4: 10
+
+2023-02-14 16:28:59/Users/liuhe/Desktop/progress/TInfineonAgencyStock2/IC_hot_image/04/BSC072N08NS5ATMA1_M.png  5th---  1: 74
+2: 14
+3: 14
+4: 14
+
+2023-02-14 16:31:12/Users/liuhe/Desktop/progress/TInfineonAgencyStock2/IC_hot_image/04/IPB027N10N3GATMA1_W.png  9th---  1: 82
+2: 52
+3: 52
+4: 52
+
+2023-02-14 16:31:12/Users/liuhe/Desktop/progress/TInfineonAgencyStock2/IC_hot_image/04/IPB027N10N3GATMA1_W.png  10th---  1: 82
+2: 52
+3: 52
+4: 52
+
+2023-02-14 16:31:55/Users/liuhe/Desktop/progress/TInfineonAgencyStock2/IC_hot_image/04/IPD110N12N3GATMA1_M.png  5th---  1: 7
+2: 77
+3: 79
+4: 77
+
+2023-02-14 16:35:47/Users/liuhe/Desktop/progress/TInfineonAgencyStock2/IC_hot_image/04/IR3581MTRPBF_W.png  38th---  1: 2: 31
+3: 34
+4: 31
+
+2023-02-14 16:36:07/Users/liuhe/Desktop/progress/TInfineonAgencyStock2/IC_hot_image/04/IR3895MTRPBF_M.png  1th---  1: 7
+2: 77
+3: 79
+4: 77
+
+2023-02-14 16:37:02/Users/liuhe/Desktop/progress/TInfineonAgencyStock2/IC_hot_image/04/IRF1405PBF_W.png  16th---  1: 83
+2: 53
+3: 53
+4: 53
+
+2023-02-14 16:37:58/Users/liuhe/Desktop/progress/TInfineonAgencyStock2/IC_hot_image/04/IRF2804PBF_W.png  49th---  1: 66
+2: 66
+3: 86
+4: 66
+
+2023-02-14 16:37:58/Users/liuhe/Desktop/progress/TInfineonAgencyStock2/IC_hot_image/04/IRF2804PBF_W.png  51th---  1: 82
+2: 52
+3: 52
+4: 52
+
+2023-02-14 16:38:26/Users/liuhe/Desktop/progress/TInfineonAgencyStock2/IC_hot_image/04/IRF3205STRLPBF_W.png  32th---  1: 187
+2: 157
+3: 157
+4: 157
+
+2023-02-14 16:38:29/Users/liuhe/Desktop/progress/TInfineonAgencyStock2/IC_hot_image/04/IRF3205STRLPBF_W.png  46th---  1: 187
+2: 157
+3: 157
+4: 157
+
+2023-02-14 16:38:36/Users/liuhe/Desktop/progress/TInfineonAgencyStock2/IC_hot_image/04/IRF3808PBF_W.png  9th---  1: 89
+2: 59
+3: 59
+4: 59
+
+2023-02-14 16:38:51/Users/liuhe/Desktop/progress/TInfineonAgencyStock2/IC_hot_image/04/IRF4905STRLPBF_W.png  4th---  1: 187
+2: 157
+3: 157
+4: 157
+
+2023-02-14 16:39:08/Users/liuhe/Desktop/progress/TInfineonAgencyStock2/IC_hot_image/04/IRF540NSTRLPBF_W.png  6th---  1: 82
+2: 52
+3: 52
+4: 52
+
+2023-02-14 16:40:06/Users/liuhe/Desktop/progress/TInfineonAgencyStock2/IC_hot_image/04/IRF7317TRPBF_W.png  45th---  1: 82
+2: 52
+3: 52
+4: 52
+
+2023-02-14 16:40:20/Users/liuhe/Desktop/progress/TInfineonAgencyStock2/IC_hot_image/04/IRF9530NPBF_W.png  38th---  1: 129
+2: 123
+3: 123
+4: 123
+
+2023-02-14 16:40:33/Users/liuhe/Desktop/progress/TInfineonAgencyStock2/IC_hot_image/04/IRFB3077PBF_W.png  26th---  1: 74
+2: 14
+3: 14
+4: 14
+
+2023-02-14 16:40:33/Users/liuhe/Desktop/progress/TInfineonAgencyStock2/IC_hot_image/04/IRFB3077PBF_W.png  27th---  1: 74
+2: 14
+3: 14
+4: 14
+
+2023-02-14 16:40:40/Users/liuhe/Desktop/progress/TInfineonAgencyStock2/IC_hot_image/04/IRFB5620PBF_M.png  1th---  1: 74
+2: 14
+3: 14
+4: 14
+
+2023-02-14 16:40:47/Users/liuhe/Desktop/progress/TInfineonAgencyStock2/IC_hot_image/04/IRFB5620PBF_W.png  18th---  1: 82
+2: 52
+3: 52
+4: 52
+
+2023-02-14 16:40:52/Users/liuhe/Desktop/progress/TInfineonAgencyStock2/IC_hot_image/04/IRFB5620PBF_W.png  35th---  1: 82
+2: 52
+3: 52
+4: 52
+
+2023-02-14 16:40:52/Users/liuhe/Desktop/progress/TInfineonAgencyStock2/IC_hot_image/04/IRFB5620PBF_W.png  38th---  1: 82
+2: 52
+3: 52
+4: 52
+
+2023-02-14 16:41:10/Users/liuhe/Desktop/progress/TInfineonAgencyStock2/IC_hot_image/04/IRFB7534PBF_W.png  44th---  1: 74
+2: 14
+3: 14
+4: 14
+
+2023-02-14 16:41:21/Users/liuhe/Desktop/progress/TInfineonAgencyStock2/IC_hot_image/04/IRFHM3911TRPBF_W.png  22th---  1: 82
+2: 52
+3: 52
+4: 52
+
+2023-02-14 16:41:22/Users/liuhe/Desktop/progress/TInfineonAgencyStock2/IC_hot_image/04/IRFHM3911TRPBF_W.png  27th---  1: 83
+2: 53
+3: 53
+4: 53
+
+2023-02-14 16:41:39/Users/liuhe/Desktop/progress/TInfineonAgencyStock2/IC_hot_image/04/IRFI4019H-117P_W.png  33th---  1: 82
+2: 52
+3: 52
+4: 52
+
+2023-02-14 16:41:43/Users/liuhe/Desktop/progress/TInfineonAgencyStock2/IC_hot_image/04/IRFI4019H-117P_W.png  48th---  1: 74
+2: 14
+3: 14
+4: 14
+
+2023-02-14 16:42:24/Users/liuhe/Desktop/progress/TInfineonAgencyStock2/IC_hot_image/04/IRFP4310ZPBF_W.png  21th---  1: 89
+2: 59
+3: 59
+4: 59
+
+2023-02-14 16:42:48/Users/liuhe/Desktop/progress/TInfineonAgencyStock2/IC_hot_image/04/IRFR7540TRPBF_W.png  49th---  1: 89
+2: 59
+3: 59
+4: 59
+
+2023-02-14 16:43:16/Users/liuhe/Desktop/progress/TInfineonAgencyStock2/IC_hot_image/04/IRFS3006TRL7PP_W.png  33th---  1: 82
+2: 52
+3: 52
+4: 52
+
+2023-02-14 16:44:26/Users/liuhe/Desktop/progress/TInfineonAgencyStock2/IC_hot_image/04/IRFS4410ZTRLPBF_M.png  4th---  1: 7
+2: 77
+3: 79
+4: 77
+
+2023-02-14 16:44:32/Users/liuhe/Desktop/progress/TInfineonAgencyStock2/IC_hot_image/04/IRFS4410ZTRLPBF_W.png  14th---  1: 82
+2: 52
+3: 52
+4: 52
+
+2023-02-14 16:44:37/Users/liuhe/Desktop/progress/TInfineonAgencyStock2/IC_hot_image/04/IRFS4410ZTRLPBF_W.png  34th---  1: 82
+2: 52
+3: 52
+4: 52
+
+2023-02-14 16:44:54/Users/liuhe/Desktop/progress/TInfineonAgencyStock2/IC_hot_image/04/IRFS7534TRLPBF_W.png  40th---  1: 82
+2: 52
+3: 52
+4: 52
+
+2023-02-14 16:45:36/Users/liuhe/Desktop/progress/TInfineonAgencyStock2/IC_hot_image/04/IRLR3636TRPBF_W.png  12th---  1: 83
+2: 53
+3: 53
+4: 53
+
+2023-02-14 16:45:38/Users/liuhe/Desktop/progress/TInfineonAgencyStock2/IC_hot_image/04/IRLR3636TRPBF_W.png  20th---  1: 82
+2: 52
+3: 52
+4: 52
+
+2023-02-14 16:45:43/Users/liuhe/Desktop/progress/TInfineonAgencyStock2/IC_hot_image/04/IRLR3636TRPBF_W.png  41th---  1: 66
+2: 66
+3: 86
+4: 66
+
+2023-02-14 16:45:43/Users/liuhe/Desktop/progress/TInfineonAgencyStock2/IC_hot_image/04/IRLR3636TRPBF_W.png  43th---  1: 74
+2: 14
+3: 14
+4: 14
+
+2023-02-14 20:17:46/Users/liuhe/Desktop/progress/TSemiStar/IC_hot/TInfineionAgencyStock2_SemiStart_IC_hot/MT25QU512ABB8E12-0AAT_W.png  3th---  1: 80
+2: 60
+3: 60
+4: 60
+
+2023-02-14 20:20:04/Users/liuhe/Desktop/progress/TSemiStar/IC_hot/TInfineionAgencyStock2_SemiStart_IC_hot/IS25LP080D-JBLE-TR_M.png  6th---  1: 26
+2: 26
+3: 28
+4: 26
+
+2023-02-14 20:20:06/Users/liuhe/Desktop/progress/TSemiStar/IC_hot/TInfineionAgencyStock2_SemiStart_IC_hot/IS25LP080D-JBLE-TR_W.png  2th---  1: 4
+2: 1
+3: 1
+4: 1
+
+2023-02-14 20:20:15/Users/liuhe/Desktop/progress/TSemiStar/IC_hot/TInfineionAgencyStock2_SemiStart_IC_hot/IS25LP080D-JBLE-TR_W.png  39th---  1: 4
+2: 1
+3: 1
+4: 1
+
+2023-02-14 20:20:20/Users/liuhe/Desktop/progress/TSemiStar/IC_hot/TInfineionAgencyStock2_SemiStart_IC_hot/IS25LP080D-JULA3-TR_M.png  3th---  1: 9
+2: 3: 3
+4: 
+2023-02-14 20:20:35/Users/liuhe/Desktop/progress/TSemiStar/IC_hot/TInfineionAgencyStock2_SemiStart_IC_hot/IS25LP080D-JULE-TR_M.png  0th---  1: 5
+2: 5
+3: 8
+4: 5
+
+2023-02-14 20:20:38/Users/liuhe/Desktop/progress/TSemiStar/IC_hot/TInfineionAgencyStock2_SemiStart_IC_hot/IS25LP080D-JULE-TR_W.png  2th---  1: 4
+2: 1
+3: 1
+4: 1
+
+2023-02-14 20:20:38/Users/liuhe/Desktop/progress/TSemiStar/IC_hot/TInfineionAgencyStock2_SemiStart_IC_hot/IS25LP080D-JULE-TR_W.png  3th---  1: 4
+2: 1
+3: 1
+4: 1
+
+2023-02-14 20:20:39/Users/liuhe/Desktop/progress/TSemiStar/IC_hot/TInfineionAgencyStock2_SemiStart_IC_hot/IS25LP080D-JULE-TR_W.png  4th---  1: 4
+2: 1
+3: 1
+4: 1
+
+2023-02-14 20:20:39/Users/liuhe/Desktop/progress/TSemiStar/IC_hot/TInfineionAgencyStock2_SemiStart_IC_hot/IS25LP080D-JULE-TR_W.png  6th---  1: 4
+2: 1
+3: 1
+4: 1
+
+2023-02-14 20:20:40/Users/liuhe/Desktop/progress/TSemiStar/IC_hot/TInfineionAgencyStock2_SemiStart_IC_hot/IS25LP080D-JULE-TR_W.png  9th---  1: 4
+2: 1
+3: 1
+4: 1
+
+2023-02-14 20:20:42/Users/liuhe/Desktop/progress/TSemiStar/IC_hot/TInfineionAgencyStock2_SemiStart_IC_hot/IS25LP080D-JULE-TR_W.png  16th---  1: 4
+2: 1
+3: 1
+4: 1
+
+2023-02-14 20:20:43/Users/liuhe/Desktop/progress/TSemiStar/IC_hot/TInfineionAgencyStock2_SemiStart_IC_hot/IS25LP080D-JULE-TR_W.png  22th---  1: 4
+2: 1
+3: 1
+4: 1
+
+2023-02-14 20:20:45/Users/liuhe/Desktop/progress/TSemiStar/IC_hot/TInfineionAgencyStock2_SemiStart_IC_hot/IS25LP080D-JULE-TR_W.png  32th---  1: 4
+2: 1
+3: 1
+4: 1
+
+2023-02-14 20:20:53/Users/liuhe/Desktop/progress/TSemiStar/IC_hot/TInfineionAgencyStock2_SemiStart_IC_hot/IS25LQ040B-JBLE-TR_W.png  0th---  1: 4
+2: 1
+3: 1
+4: 1
+
+2023-02-14 20:20:54/Users/liuhe/Desktop/progress/TSemiStar/IC_hot/TInfineionAgencyStock2_SemiStart_IC_hot/IS25LQ040B-JBLE-TR_W.png  2th---  1: 4
+2: 1
+3: 1
+4: 1
+
+2023-02-14 20:20:54/Users/liuhe/Desktop/progress/TSemiStar/IC_hot/TInfineionAgencyStock2_SemiStart_IC_hot/IS25LQ040B-JBLE-TR_W.png  3th---  1: 4
+2: 1
+3: 1
+4: 1
+
+2023-02-14 20:20:55/Users/liuhe/Desktop/progress/TSemiStar/IC_hot/TInfineionAgencyStock2_SemiStart_IC_hot/IS25LQ040B-JBLE-TR_W.png  5th---  1: 4
+2: 1
+3: 1
+4: 1
+
+2023-02-14 20:20:55/Users/liuhe/Desktop/progress/TSemiStar/IC_hot/TInfineionAgencyStock2_SemiStart_IC_hot/IS25LQ040B-JBLE-TR_W.png  6th---  1: 4
+2: 1
+3: 1
+4: 1
+
+2023-02-14 20:20:55/Users/liuhe/Desktop/progress/TSemiStar/IC_hot/TInfineionAgencyStock2_SemiStart_IC_hot/IS25LQ040B-JBLE-TR_W.png  8th---  1: 4
+2: 1
+3: 1
+4: 1
+
+2023-02-14 20:20:56/Users/liuhe/Desktop/progress/TSemiStar/IC_hot/TInfineionAgencyStock2_SemiStart_IC_hot/IS25LQ040B-JBLE-TR_W.png  9th---  1: 4
+2: 1
+3: 1
+4: 1
+
+2023-02-14 20:20:56/Users/liuhe/Desktop/progress/TSemiStar/IC_hot/TInfineionAgencyStock2_SemiStart_IC_hot/IS25LQ040B-JBLE-TR_W.png  10th---  1: 4
+2: 1
+3: 1
+4: 1
+
+2023-02-14 20:20:57/Users/liuhe/Desktop/progress/TSemiStar/IC_hot/TInfineionAgencyStock2_SemiStart_IC_hot/IS25LQ040B-JBLE-TR_W.png  14th---  1: 4
+2: 1
+3: 1
+4: 1
+
+2023-02-14 20:20:58/Users/liuhe/Desktop/progress/TSemiStar/IC_hot/TInfineionAgencyStock2_SemiStart_IC_hot/IS25LQ040B-JBLE-TR_W.png  17th---  1: 4
+2: 1
+3: 1
+4: 1
+
+2023-02-14 20:20:58/Users/liuhe/Desktop/progress/TSemiStar/IC_hot/TInfineionAgencyStock2_SemiStart_IC_hot/IS25LQ040B-JBLE-TR_W.png  18th---  1: 4
+2: 1
+3: 1
+4: 1
+
+2023-02-14 20:20:58/Users/liuhe/Desktop/progress/TSemiStar/IC_hot/TInfineionAgencyStock2_SemiStart_IC_hot/IS25LQ040B-JBLE-TR_W.png  20th---  1: 4
+2: 1
+3: 1
+4: 1
+
+2023-02-14 20:20:59/Users/liuhe/Desktop/progress/TSemiStar/IC_hot/TInfineionAgencyStock2_SemiStart_IC_hot/IS25LQ040B-JBLE-TR_W.png  21th---  1: 4
+2: 1
+3: 1
+4: 1
+
+2023-02-14 20:20:59/Users/liuhe/Desktop/progress/TSemiStar/IC_hot/TInfineionAgencyStock2_SemiStart_IC_hot/IS25LQ040B-JBLE-TR_W.png  24th---  1: 4
+2: 1
+3: 1
+4: 1
+
+2023-02-14 20:21:00/Users/liuhe/Desktop/progress/TSemiStar/IC_hot/TInfineionAgencyStock2_SemiStart_IC_hot/IS25LQ040B-JBLE-TR_W.png  26th---  1: 4
+2: 1
+3: 1
+4: 1
+
+2023-02-14 20:21:01/Users/liuhe/Desktop/progress/TSemiStar/IC_hot/TInfineionAgencyStock2_SemiStart_IC_hot/IS25LQ040B-JBLE-TR_W.png  30th---  1: 4
+2: 1
+3: 1
+4: 1
+
+2023-02-14 20:21:02/Users/liuhe/Desktop/progress/TSemiStar/IC_hot/TInfineionAgencyStock2_SemiStart_IC_hot/IS25LQ040B-JBLE-TR_W.png  34th---  1: 4
+2: 1
+3: 1
+4: 1
+
+2023-02-14 20:21:02/Users/liuhe/Desktop/progress/TSemiStar/IC_hot/TInfineionAgencyStock2_SemiStart_IC_hot/IS25LQ040B-JBLE-TR_W.png  35th---  1: 4
+2: 1
+3: 1
+4: 1
+
+2023-02-14 20:21:04/Users/liuhe/Desktop/progress/TSemiStar/IC_hot/TInfineionAgencyStock2_SemiStart_IC_hot/IS25LQ040B-JBLE-TR_W.png  42th---  1: 4
+2: 1
+3: 1
+4: 1
+
+2023-02-14 20:21:05/Users/liuhe/Desktop/progress/TSemiStar/IC_hot/TInfineionAgencyStock2_SemiStart_IC_hot/IS25LQ040B-JBLE-TR_W.png  46th---  1: 4
+2: 1
+3: 1
+4: 1
+
+2023-02-14 20:21:09/Users/liuhe/Desktop/progress/TSemiStar/IC_hot/TInfineionAgencyStock2_SemiStart_IC_hot/IS25WP128F-JKLE-TR_W.png  0th---  1: 4
+2: 1
+3: 1
+4: 1
+
+2023-02-14 20:21:10/Users/liuhe/Desktop/progress/TSemiStar/IC_hot/TInfineionAgencyStock2_SemiStart_IC_hot/IS25WP128F-JKLE-TR_W.png  3th---  1: 4
+2: 1
+3: 1
+4: 1
+
+2023-02-14 20:21:12/Users/liuhe/Desktop/progress/TSemiStar/IC_hot/TInfineionAgencyStock2_SemiStart_IC_hot/IS25WP128F-JKLE-TR_W.png  12th---  1: 4
+2: 1
+3: 1
+4: 1
+
+2023-02-14 20:21:13/Users/liuhe/Desktop/progress/TSemiStar/IC_hot/TInfineionAgencyStock2_SemiStart_IC_hot/IS25WP128F-JKLE-TR_W.png  16th---  1: 4
+2: 1
+3: 1
+4: 1
+
+2023-02-14 20:21:14/Users/liuhe/Desktop/progress/TSemiStar/IC_hot/TInfineionAgencyStock2_SemiStart_IC_hot/IS25WP128F-JKLE-TR_W.png  21th---  1: 4
+2: 1
+3: 1
+4: 1
+
+2023-02-14 20:21:16/Users/liuhe/Desktop/progress/TSemiStar/IC_hot/TInfineionAgencyStock2_SemiStart_IC_hot/IS25WP128F-JKLE-TR_W.png  28th---  1: 4
+2: 1
+3: 1
+4: 1
+
+2023-02-14 20:21:17/Users/liuhe/Desktop/progress/TSemiStar/IC_hot/TInfineionAgencyStock2_SemiStart_IC_hot/IS25WP128F-JKLE-TR_W.png  31th---  1: 4
+2: 1
+3: 1
+4: 1
+
+2023-02-14 20:21:17/Users/liuhe/Desktop/progress/TSemiStar/IC_hot/TInfineionAgencyStock2_SemiStart_IC_hot/IS25WP128F-JKLE-TR_W.png  32th---  1: 4
+2: 1
+3: 1
+4: 1
+
+2023-02-14 20:21:18/Users/liuhe/Desktop/progress/TSemiStar/IC_hot/TInfineionAgencyStock2_SemiStart_IC_hot/IS25WP128F-JKLE-TR_W.png  37th---  1: 4
+2: 1
+3: 1
+4: 1
+
+2023-02-14 20:21:20/Users/liuhe/Desktop/progress/TSemiStar/IC_hot/TInfineionAgencyStock2_SemiStart_IC_hot/IS25WP128F-JKLE-TR_W.png  43th---  1: 4
+2: 1
+3: 1
+4: 1
+
+2023-02-14 20:21:21/Users/liuhe/Desktop/progress/TSemiStar/IC_hot/TInfineionAgencyStock2_SemiStart_IC_hot/IS25WP128F-JKLE-TR_W.png  48th---  1: 4
+2: 1
+3: 1
+4: 1
+
+2023-02-14 20:21:25/Users/liuhe/Desktop/progress/TSemiStar/IC_hot/TInfineionAgencyStock2_SemiStart_IC_hot/IS31FL3199-QFLS2-TR_M.png  11th---  1: 26
+2: 26
+3: 28
+4: 26
+
+2023-02-14 20:21:25/Users/liuhe/Desktop/progress/TSemiStar/IC_hot/TInfineionAgencyStock2_SemiStart_IC_hot/IS31FL3199-QFLS2-TR_W.png  0th---  1: 4
+2: 1
+3: 1
+4: 1
+
+2023-02-14 20:21:26/Users/liuhe/Desktop/progress/TSemiStar/IC_hot/TInfineionAgencyStock2_SemiStart_IC_hot/IS31FL3199-QFLS2-TR_W.png  2th---  1: 4
+2: 1
+3: 1
+4: 1
+
+2023-02-14 20:21:26/Users/liuhe/Desktop/progress/TSemiStar/IC_hot/TInfineionAgencyStock2_SemiStart_IC_hot/IS31FL3199-QFLS2-TR_W.png  5th---  1: 4
+2: 1
+3: 1
+4: 1
+
+2023-02-14 20:21:31/Users/liuhe/Desktop/progress/TSemiStar/IC_hot/TInfineionAgencyStock2_SemiStart_IC_hot/IS31FL3199-QFLS2-TR_W.png  22th---  1: 4
+2: 1
+3: 1
+4: 1
+
+2023-02-14 20:21:31/Users/liuhe/Desktop/progress/TSemiStar/IC_hot/TInfineionAgencyStock2_SemiStart_IC_hot/IS31FL3199-QFLS2-TR_W.png  25th---  1: 4
+2: 1
+3: 1
+4: 1
+
+2023-02-14 20:21:34/Users/liuhe/Desktop/progress/TSemiStar/IC_hot/TInfineionAgencyStock2_SemiStart_IC_hot/IS31FL3199-QFLS2-TR_W.png  38th---  1: 4
+2: 1
+3: 1
+4: 1
+
+2023-02-14 20:21:35/Users/liuhe/Desktop/progress/TSemiStar/IC_hot/TInfineionAgencyStock2_SemiStart_IC_hot/IS31FL3199-QFLS2-TR_W.png  39th---  1: 4
+2: 1
+3: 1
+4: 1
+
+2023-02-14 20:21:36/Users/liuhe/Desktop/progress/TSemiStar/IC_hot/TInfineionAgencyStock2_SemiStart_IC_hot/IS31FL3199-QFLS2-TR_W.png  45th---  1: 4
+2: 1
+3: 1
+4: 1
+
+2023-02-14 20:21:54/Users/liuhe/Desktop/progress/TSemiStar/IC_hot/TInfineionAgencyStock2_SemiStart_IC_hot/IS31FL3236A-QFLS2-TR_M.png  2th---  1: 183
+2: 153
+3: 153
+4: 153
+
+2023-02-14 20:22:01/Users/liuhe/Desktop/progress/TSemiStar/IC_hot/TInfineionAgencyStock2_SemiStart_IC_hot/IS31FL3236A-QFLS2-TR_W.png  19th---  1: 78
+2: 76
+3: 4: 76
+
+2023-02-14 20:22:15/Users/liuhe/Desktop/progress/TSemiStar/IC_hot/TInfineionAgencyStock2_SemiStart_IC_hot/IS31FL3729-TQLS4-TR_W.png  8th---  1: 4
+2: 1
+3: 1
+4: 1
+
+2023-02-14 20:22:18/Users/liuhe/Desktop/progress/TSemiStar/IC_hot/TInfineionAgencyStock2_SemiStart_IC_hot/IS31FL3729-TQLS4-TR_W.png  19th---  1: 4
+2: 1
+3: 1
+4: 1
+
+2023-02-14 20:22:18/Users/liuhe/Desktop/progress/TSemiStar/IC_hot/TInfineionAgencyStock2_SemiStart_IC_hot/IS31FL3729-TQLS4-TR_W.png  22th---  1: 4
+2: 1
+3: 1
+4: 1
+
+2023-02-14 20:22:20/Users/liuhe/Desktop/progress/TSemiStar/IC_hot/TInfineionAgencyStock2_SemiStart_IC_hot/IS31FL3729-TQLS4-TR_W.png  27th---  1: 4
+2: 1
+3: 1
+4: 1
+
+2023-02-14 20:22:20/Users/liuhe/Desktop/progress/TSemiStar/IC_hot/TInfineionAgencyStock2_SemiStart_IC_hot/IS31FL3729-TQLS4-TR_W.png  30th---  1: 4
+2: 1
+3: 1
+4: 1
+
+2023-02-14 20:22:22/Users/liuhe/Desktop/progress/TSemiStar/IC_hot/TInfineionAgencyStock2_SemiStart_IC_hot/IS31FL3729-TQLS4-TR_W.png  36th---  1: 4
+2: 1
+3: 1
+4: 1
+
+2023-02-14 20:22:24/Users/liuhe/Desktop/progress/TSemiStar/IC_hot/TInfineionAgencyStock2_SemiStart_IC_hot/IS31FL3729-TQLS4-TR_W.png  45th---  1: 4
+2: 1
+3: 1
+4: 1
+
+2023-02-14 20:22:25/Users/liuhe/Desktop/progress/TSemiStar/IC_hot/TInfineionAgencyStock2_SemiStart_IC_hot/IS31FL3729-TQLS4-TR_W.png  50th---  1: 4
+2: 1
+3: 1
+4: 1
+
+2023-02-14 20:22:27/Users/liuhe/Desktop/progress/TSemiStar/IC_hot/TInfineionAgencyStock2_SemiStart_IC_hot/IS31FL3731-QFLS2-TR_M.png  4th---  1: 78
+2: 75
+3: 4: 75
+
+2023-02-14 20:22:42/Users/liuhe/Desktop/progress/TSemiStar/IC_hot/TInfineionAgencyStock2_SemiStart_IC_hot/IS31FL3733-QFLS4-TR_M.png  3th---  1: 26
+2: 26
+3: 28
+4: 26
+
+2023-02-14 20:22:43/Users/liuhe/Desktop/progress/TSemiStar/IC_hot/TInfineionAgencyStock2_SemiStart_IC_hot/IS31FL3733-QFLS4-TR_M.png  4th---  1: 26
+2: 26
+3: 28
+4: 26
+
+2023-02-14 20:22:45/Users/liuhe/Desktop/progress/TSemiStar/IC_hot/TInfineionAgencyStock2_SemiStart_IC_hot/IS31FL3733-QFLS4-TR_W.png  2th---  1: 4
+2: 1
+3: 1
+4: 1
+
+2023-02-14 20:22:46/Users/liuhe/Desktop/progress/TSemiStar/IC_hot/TInfineionAgencyStock2_SemiStart_IC_hot/IS31FL3733-QFLS4-TR_W.png  3th---  1: 4
+2: 1
+3: 1
+4: 1
+
+2023-02-14 20:22:46/Users/liuhe/Desktop/progress/TSemiStar/IC_hot/TInfineionAgencyStock2_SemiStart_IC_hot/IS31FL3733-QFLS4-TR_W.png  5th---  1: 4
+2: 1
+3: 1
+4: 1
+
+2023-02-14 20:22:48/Users/liuhe/Desktop/progress/TSemiStar/IC_hot/TInfineionAgencyStock2_SemiStart_IC_hot/IS31FL3733-QFLS4-TR_W.png  13th---  1: 4
+2: 1
+3: 1
+4: 1
+
+2023-02-14 20:22:56/Users/liuhe/Desktop/progress/TSemiStar/IC_hot/TInfineionAgencyStock2_SemiStart_IC_hot/IS31FL3733-QFLS4-TR_W.png  44th---  1: 4
+2: 1
+3: 1
+4: 1
+
+2023-02-14 20:23:01/Users/liuhe/Desktop/progress/TSemiStar/IC_hot/TInfineionAgencyStock2_SemiStart_IC_hot/IS31FL3743B-QULS4-TR_W.png  2th---  1: 4
+2: 1
+3: 1
+4: 1
+
+2023-02-14 20:23:06/Users/liuhe/Desktop/progress/TSemiStar/IC_hot/TInfineionAgencyStock2_SemiStart_IC_hot/IS31FL3743B-QULS4-TR_W.png  21th---  1: 4
+2: 1
+3: 1
+4: 1
+
+2023-02-14 20:23:06/Users/liuhe/Desktop/progress/TSemiStar/IC_hot/TInfineionAgencyStock2_SemiStart_IC_hot/IS31FL3743B-QULS4-TR_W.png  22th---  1: 4
+2: 1
+3: 1
+4: 1
+
+2023-02-14 20:23:09/Users/liuhe/Desktop/progress/TSemiStar/IC_hot/TInfineionAgencyStock2_SemiStart_IC_hot/IS31FL3743B-QULS4-TR_W.png  35th---  1: 4
+2: 1
+3: 1
+4: 1
+
+2023-02-14 20:23:12/Users/liuhe/Desktop/progress/TSemiStar/IC_hot/TInfineionAgencyStock2_SemiStart_IC_hot/IS31FL3743B-QULS4-TR_W.png  44th---  1: 4
+2: 1
+3: 1
+4: 1
+
+2023-02-14 20:23:17/Users/liuhe/Desktop/progress/TSemiStar/IC_hot/TInfineionAgencyStock2_SemiStart_IC_hot/IS31LT3360-SDLS3-TR_W.png  2th---  1: 4
+2: 1
+3: 1
+4: 1
+
+2023-02-14 20:23:17/Users/liuhe/Desktop/progress/TSemiStar/IC_hot/TInfineionAgencyStock2_SemiStart_IC_hot/IS31LT3360-SDLS3-TR_W.png  3th---  1: 4
+2: 1
+3: 1
+4: 1
+
+2023-02-14 20:23:18/Users/liuhe/Desktop/progress/TSemiStar/IC_hot/TInfineionAgencyStock2_SemiStart_IC_hot/IS31LT3360-SDLS3-TR_W.png  4th---  1: 4
+2: 1
+3: 1
+4: 1
+
+2023-02-14 20:23:18/Users/liuhe/Desktop/progress/TSemiStar/IC_hot/TInfineionAgencyStock2_SemiStart_IC_hot/IS31LT3360-SDLS3-TR_W.png  5th---  1: 4
+2: 1
+3: 1
+4: 1
+
+2023-02-14 20:23:18/Users/liuhe/Desktop/progress/TSemiStar/IC_hot/TInfineionAgencyStock2_SemiStart_IC_hot/IS31LT3360-SDLS3-TR_W.png  6th---  1: 4
+2: 1
+3: 1
+4: 1
+
+2023-02-14 20:23:23/Users/liuhe/Desktop/progress/TSemiStar/IC_hot/TInfineionAgencyStock2_SemiStart_IC_hot/IS31LT3360-SDLS3-TR_W.png  25th---  1: 4
+2: 1
+3: 1
+4: 1
+
+2023-02-14 20:23:25/Users/liuhe/Desktop/progress/TSemiStar/IC_hot/TInfineionAgencyStock2_SemiStart_IC_hot/IS31LT3360-SDLS3-TR_W.png  34th---  1: 4
+2: 1
+3: 1
+4: 1
+
+2023-02-14 20:23:25/Users/liuhe/Desktop/progress/TSemiStar/IC_hot/TInfineionAgencyStock2_SemiStart_IC_hot/IS31LT3360-SDLS3-TR_W.png  35th---  1: 4
+2: 1
+3: 1
+4: 1
+
+2023-02-14 20:23:30/Users/liuhe/Desktop/progress/TSemiStar/IC_hot/TInfineionAgencyStock2_SemiStart_IC_hot/IS42S16320F-7TLI_M.png  2th---  1: 460
+2: 460
+3: 480
+4: 460
+
+2023-02-14 20:23:32/Users/liuhe/Desktop/progress/TSemiStar/IC_hot/TInfineionAgencyStock2_SemiStart_IC_hot/IS42S16320F-7TLI_M.png  10th---  1: 282
+2: 252
+3: 252
+4: 252
+
+2023-02-14 20:23:32/Users/liuhe/Desktop/progress/TSemiStar/IC_hot/TInfineionAgencyStock2_SemiStart_IC_hot/IS42S16320F-7TLI_M.png  11th---  1: 282
+2: 252
+3: 252
+4: 252
+
+2023-02-14 20:23:37/Users/liuhe/Desktop/progress/TSemiStar/IC_hot/TInfineionAgencyStock2_SemiStart_IC_hot/IS42S16320F-7TLI_W.png  18th---  1: 421
+2: 121
+3: 121
+4: 121
+
+2023-02-14 20:23:43/Users/liuhe/Desktop/progress/TSemiStar/IC_hot/TInfineionAgencyStock2_SemiStart_IC_hot/IS42S16320F-7TLI_W.png  41th---  1: 75
+2: 15
+3: 15
+4: 15
+
+2023-02-14 20:24:07/Users/liuhe/Desktop/progress/TSemiStar/IC_hot/TInfineionAgencyStock2_SemiStart_IC_hot/IS43DR86400E-25DBLI-TR_W.png  8th---  1: 4
+2: 1
+3: 1
+4: 1
+
+2023-02-14 20:24:09/Users/liuhe/Desktop/progress/TSemiStar/IC_hot/TInfineionAgencyStock2_SemiStart_IC_hot/IS43DR86400E-25DBLI-TR_W.png  16th---  1: 4
+2: 1
+3: 1
+4: 1
+
+2023-02-14 20:24:10/Users/liuhe/Desktop/progress/TSemiStar/IC_hot/TInfineionAgencyStock2_SemiStart_IC_hot/IS43DR86400E-25DBLI-TR_W.png  19th---  1: 4
+2: 1
+3: 1
+4: 1
+
+2023-02-14 20:24:11/Users/liuhe/Desktop/progress/TSemiStar/IC_hot/TInfineionAgencyStock2_SemiStart_IC_hot/IS43DR86400E-25DBLI-TR_W.png  23th---  1: 4
+2: 1
+3: 1
+4: 1
+
+2023-02-14 20:24:12/Users/liuhe/Desktop/progress/TSemiStar/IC_hot/TInfineionAgencyStock2_SemiStart_IC_hot/IS43DR86400E-25DBLI-TR_W.png  27th---  1: 4
+2: 1
+3: 1
+4: 1
+
+2023-02-14 20:24:15/Users/liuhe/Desktop/progress/TSemiStar/IC_hot/TInfineionAgencyStock2_SemiStart_IC_hot/IS43DR86400E-25DBLI-TR_W.png  40th---  1: 4
+2: 1
+3: 1
+4: 1
+
+2023-02-14 20:24:15/Users/liuhe/Desktop/progress/TSemiStar/IC_hot/TInfineionAgencyStock2_SemiStart_IC_hot/IS43DR86400E-25DBLI-TR_W.png  41th---  1: 4
+2: 1
+3: 1
+4: 1
+
+2023-02-14 20:24:16/Users/liuhe/Desktop/progress/TSemiStar/IC_hot/TInfineionAgencyStock2_SemiStart_IC_hot/IS43DR86400E-25DBLI-TR_W.png  43th---  1: 4
+2: 1
+3: 1
+4: 1
+
+2023-02-14 20:24:16/Users/liuhe/Desktop/progress/TSemiStar/IC_hot/TInfineionAgencyStock2_SemiStart_IC_hot/IS43DR86400E-25DBLI-TR_W.png  45th---  1: 4
+2: 1
+3: 1
+4: 1
+
+2023-02-14 20:24:17/Users/liuhe/Desktop/progress/TSemiStar/IC_hot/TInfineionAgencyStock2_SemiStart_IC_hot/IS43DR86400E-25DBLI-TR_W.png  48th---  1: 4
+2: 1
+3: 1
+4: 1
+
+2023-02-14 20:24:24/Users/liuhe/Desktop/progress/TSemiStar/IC_hot/TInfineionAgencyStock2_SemiStart_IC_hot/IS43TR16128DL-125KBLI-TR_W.png  14th---  1: 4
+2: 1
+3: 1
+4: 1
+
+2023-02-14 20:24:27/Users/liuhe/Desktop/progress/TSemiStar/IC_hot/TInfineionAgencyStock2_SemiStart_IC_hot/IS43TR16128DL-125KBLI-TR_W.png  24th---  1: 4
+2: 1
+3: 1
+4: 1
+
+2023-02-14 20:24:27/Users/liuhe/Desktop/progress/TSemiStar/IC_hot/TInfineionAgencyStock2_SemiStart_IC_hot/IS43TR16128DL-125KBLI-TR_W.png  27th---  1: 4
+2: 1
+3: 1
+4: 1
+
+2023-02-14 20:24:29/Users/liuhe/Desktop/progress/TSemiStar/IC_hot/TInfineionAgencyStock2_SemiStart_IC_hot/IS43TR16128DL-125KBLI-TR_W.png  35th---  1: 4
+2: 1
+3: 1
+4: 1
+
+2023-02-14 20:24:30/Users/liuhe/Desktop/progress/TSemiStar/IC_hot/TInfineionAgencyStock2_SemiStart_IC_hot/IS43TR16128DL-125KBLI-TR_W.png  36th---  1: 4
+2: 1
+3: 1
+4: 1
+
+2023-02-14 20:24:30/Users/liuhe/Desktop/progress/TSemiStar/IC_hot/TInfineionAgencyStock2_SemiStart_IC_hot/IS43TR16128DL-125KBLI-TR_W.png  37th---  1: 4
+2: 1
+3: 1
+4: 1
+
+2023-02-14 20:24:30/Users/liuhe/Desktop/progress/TSemiStar/IC_hot/TInfineionAgencyStock2_SemiStart_IC_hot/IS43TR16128DL-125KBLI-TR_W.png  38th---  1: 4
+2: 1
+3: 1
+4: 1
+
+2023-02-14 20:24:37/Users/liuhe/Desktop/progress/TSemiStar/IC_hot/TInfineionAgencyStock2_SemiStart_IC_hot/IS43TR16256BL-125KBLI-TR_W.png  0th---  1: 4
+2: 1
+3: 1
+4: 1
+
+2023-02-14 20:24:38/Users/liuhe/Desktop/progress/TSemiStar/IC_hot/TInfineionAgencyStock2_SemiStart_IC_hot/IS43TR16256BL-125KBLI-TR_W.png  6th---  1: 4
+2: 1
+3: 1
+4: 1
+
+2023-02-14 20:24:40/Users/liuhe/Desktop/progress/TSemiStar/IC_hot/TInfineionAgencyStock2_SemiStart_IC_hot/IS43TR16256BL-125KBLI-TR_W.png  14th---  1: 4
+2: 1
+3: 1
+4: 1
+
+2023-02-14 20:24:41/Users/liuhe/Desktop/progress/TSemiStar/IC_hot/TInfineionAgencyStock2_SemiStart_IC_hot/IS43TR16256BL-125KBLI-TR_W.png  16th---  1: 4
+2: 1
+3: 1
+4: 1
+
+2023-02-14 20:24:42/Users/liuhe/Desktop/progress/TSemiStar/IC_hot/TInfineionAgencyStock2_SemiStart_IC_hot/IS43TR16256BL-125KBLI-TR_W.png  22th---  1: 4
+2: 1
+3: 1
+4: 1
+
+2023-02-14 20:24:44/Users/liuhe/Desktop/progress/TSemiStar/IC_hot/TInfineionAgencyStock2_SemiStart_IC_hot/IS43TR16256BL-125KBLI-TR_W.png  30th---  1: 4
+2: 1
+3: 1
+4: 1
+
+2023-02-14 20:24:46/Users/liuhe/Desktop/progress/TSemiStar/IC_hot/TInfineionAgencyStock2_SemiStart_IC_hot/IS43TR16256BL-125KBLI-TR_W.png  39th---  1: 4
+2: 1
+3: 1
+4: 1
+
+2023-02-14 20:24:47/Users/liuhe/Desktop/progress/TSemiStar/IC_hot/TInfineionAgencyStock2_SemiStart_IC_hot/IS43TR16256BL-125KBLI-TR_W.png  42th---  1: 4
+2: 1
+3: 1
+4: 1
+
+2023-02-14 20:24:49/Users/liuhe/Desktop/progress/TSemiStar/IC_hot/TInfineionAgencyStock2_SemiStart_IC_hot/IS43TR16256BL-125KBLI-TR_W.png  50th---  1: 4
+2: 1
+3: 1
+4: 1
+
+2023-02-14 20:24:52/Users/liuhe/Desktop/progress/TSemiStar/IC_hot/TInfineionAgencyStock2_SemiStart_IC_hot/IS45S16160J-7TLA1-TR_M.png  9th---  1: 28
+2: 2
+3: 23
+4: 2
+
+2023-02-14 20:24:53/Users/liuhe/Desktop/progress/TSemiStar/IC_hot/TInfineionAgencyStock2_SemiStart_IC_hot/IS45S16160J-7TLA1-TR_W.png  3th---  1: 4
+2: 1
+3: 1
+4: 1
+
+2023-02-14 20:24:54/Users/liuhe/Desktop/progress/TSemiStar/IC_hot/TInfineionAgencyStock2_SemiStart_IC_hot/IS45S16160J-7TLA1-TR_W.png  7th---  1: 4
+2: 1
+3: 1
+4: 1
+
+2023-02-14 20:24:55/Users/liuhe/Desktop/progress/TSemiStar/IC_hot/TInfineionAgencyStock2_SemiStart_IC_hot/IS45S16160J-7TLA1-TR_W.png  11th---  1: 4
+2: 1
+3: 1
+4: 1
+
+2023-02-14 20:24:55/Users/liuhe/Desktop/progress/TSemiStar/IC_hot/TInfineionAgencyStock2_SemiStart_IC_hot/IS45S16160J-7TLA1-TR_W.png  12th---  1: 4
+2: 1
+3: 1
+4: 1
+
+2023-02-14 20:24:57/Users/liuhe/Desktop/progress/TSemiStar/IC_hot/TInfineionAgencyStock2_SemiStart_IC_hot/IS45S16160J-7TLA1-TR_W.png  19th---  1: 4
+2: 1
+3: 1
+4: 1
+
+2023-02-14 20:24:58/Users/liuhe/Desktop/progress/TSemiStar/IC_hot/TInfineionAgencyStock2_SemiStart_IC_hot/IS45S16160J-7TLA1-TR_W.png  23th---  1: 4
+2: 1
+3: 1
+4: 1
+
+2023-02-14 20:24:59/Users/liuhe/Desktop/progress/TSemiStar/IC_hot/TInfineionAgencyStock2_SemiStart_IC_hot/IS45S16160J-7TLA1-TR_W.png  27th---  1: 4
+2: 1
+3: 1
+4: 1
+
+2023-02-14 20:25:00/Users/liuhe/Desktop/progress/TSemiStar/IC_hot/TInfineionAgencyStock2_SemiStart_IC_hot/IS45S16160J-7TLA1-TR_W.png  32th---  1: 4
+2: 1
+3: 1
+4: 1
+
+2023-02-14 20:25:06/Users/liuhe/Desktop/progress/TSemiStar/IC_hot/TInfineionAgencyStock2_SemiStart_IC_hot/IS61WV102416BLL-10TLI_M.png  1th---  1: 544
+2: 544
+3: 844
+4: 544
+
+2023-02-14 20:25:10/Users/liuhe/Desktop/progress/TSemiStar/IC_hot/TInfineionAgencyStock2_SemiStart_IC_hot/IS61WV102416BLL-10TLI_W.png  6th---  1: 75
+2: 15
+3: 15
+4: 15
+
+2023-02-14 20:25:27/Users/liuhe/Desktop/progress/TSemiStar/IC_hot/TInfineionAgencyStock2_SemiStart_IC_hot/IS62WV2568BLL-55TLI_W.png  11th---  1: 4
+2: 1
+3: 1
+4: 1
+
+2023-02-14 20:25:28/Users/liuhe/Desktop/progress/TSemiStar/IC_hot/TInfineionAgencyStock2_SemiStart_IC_hot/IS62WV2568BLL-55TLI_W.png  14th---  1: 4
+2: 1
+3: 1
+4: 1
+
+2023-02-14 20:25:28/Users/liuhe/Desktop/progress/TSemiStar/IC_hot/TInfineionAgencyStock2_SemiStart_IC_hot/IS62WV2568BLL-55TLI_W.png  15th---  1: 4
+2: 1
+3: 1
+4: 1
+
+2023-02-14 20:25:29/Users/liuhe/Desktop/progress/TSemiStar/IC_hot/TInfineionAgencyStock2_SemiStart_IC_hot/IS62WV2568BLL-55TLI_W.png  17th---  1: 4
+2: 1
+3: 1
+4: 1
+
+2023-02-14 20:25:29/Users/liuhe/Desktop/progress/TSemiStar/IC_hot/TInfineionAgencyStock2_SemiStart_IC_hot/IS62WV2568BLL-55TLI_W.png  19th---  1: 4
+2: 1
+3: 1
+4: 1
+
+2023-02-14 20:25:32/Users/liuhe/Desktop/progress/TSemiStar/IC_hot/TInfineionAgencyStock2_SemiStart_IC_hot/IS62WV2568BLL-55TLI_W.png  32th---  1: 4
+2: 1
+3: 1
+4: 1
+
+2023-02-14 20:25:32/Users/liuhe/Desktop/progress/TSemiStar/IC_hot/TInfineionAgencyStock2_SemiStart_IC_hot/IS62WV2568BLL-55TLI_W.png  33th---  1: 4
+2: 1
+3: 1
+4: 1
+
+2023-02-14 20:25:33/Users/liuhe/Desktop/progress/TSemiStar/IC_hot/TInfineionAgencyStock2_SemiStart_IC_hot/IS62WV2568BLL-55TLI_W.png  35th---  1: 4
+2: 1
+3: 1
+4: 1
+
+2023-02-14 20:25:33/Users/liuhe/Desktop/progress/TSemiStar/IC_hot/TInfineionAgencyStock2_SemiStart_IC_hot/IS62WV2568BLL-55TLI_W.png  37th---  1: 4
+2: 1
+3: 1
+4: 1
+
+2023-02-14 20:25:35/Users/liuhe/Desktop/progress/TSemiStar/IC_hot/TInfineionAgencyStock2_SemiStart_IC_hot/IS62WV2568BLL-55TLI_W.png  44th---  1: 4
+2: 1
+3: 1
+4: 1
+
+2023-02-14 20:25:39/Users/liuhe/Desktop/progress/TSemiStar/IC_hot/TInfineionAgencyStock2_SemiStart_IC_hot/IS62WV51216HBLL-45TLI_M.png  8th---  1: 183
+2: 153
+3: 153
+4: 153
+
+2023-02-14 20:25:54/Users/liuhe/Desktop/progress/TSemiStar/IC_hot/TInfineionAgencyStock2_SemiStart_IC_hot/MT25QU01GBBB8ESF-0SIT_M.png  4th---  1: 282
+2: 252
+3: 252
+4: 252
+
+2023-02-14 20:25:55/Users/liuhe/Desktop/progress/TSemiStar/IC_hot/TInfineionAgencyStock2_SemiStart_IC_hot/MT25QU01GBBB8ESF-0SIT_M.png  6th---  1: 460
+2: 460
+3: 480
+4: 460
+
+2023-02-14 20:26:00/Users/liuhe/Desktop/progress/TSemiStar/IC_hot/TInfineionAgencyStock2_SemiStart_IC_hot/MT25QU01GBBB8ESF-0SIT_W.png  15th---  1: 88
+2: 86
+3: 86
+4: 86
+
+2023-02-14 20:26:02/Users/liuhe/Desktop/progress/TSemiStar/IC_hot/TInfineionAgencyStock2_SemiStart_IC_hot/MT25QU01GBBB8ESF-0SIT_W.png  25th---  1: 75
+2: 15
+3: 15
+4: 15
+
+2023-02-14 20:26:06/Users/liuhe/Desktop/progress/TSemiStar/IC_hot/TInfineionAgencyStock2_SemiStart_IC_hot/MT25QU01GBBB8ESF-0SIT_W.png  40th---  1: 75
+2: 15
+3: 15
+4: 15
+
+2023-02-14 20:26:29/Users/liuhe/Desktop/progress/TSemiStar/IC_hot/TInfineionAgencyStock2_SemiStart_IC_hot/MT29F2G01ABAGDWB-IT_W.png  2th---  1: 4
+2: 1
+3: 1
+4: 1
+
+2023-02-14 20:26:32/Users/liuhe/Desktop/progress/TSemiStar/IC_hot/TInfineionAgencyStock2_SemiStart_IC_hot/MT29F2G01ABAGDWB-IT_W.png  18th---  1: 88
+2: 86
+3: 86
+4: 86
+
+2023-02-14 20:26:36/Users/liuhe/Desktop/progress/TSemiStar/IC_hot/TInfineionAgencyStock2_SemiStart_IC_hot/MT29F2G01ABAGDWB-IT_W.png  33th---  1: 75
+2: 15
+3: 15
+4: 15
+
+2023-02-14 20:26:43/Users/liuhe/Desktop/progress/TSemiStar/IC_hot/TInfineionAgencyStock2_SemiStart_IC_hot/MT35XU256ABA1G12-0AAT_M.png  8th---  1: 460
+2: 460
+3: 480
+4: 460
+
+2023-02-14 20:26:44/Users/liuhe/Desktop/progress/TSemiStar/IC_hot/TInfineionAgencyStock2_SemiStart_IC_hot/MT35XU256ABA1G12-0AAT_M.png  11th---  1: 5
+2: 5
+3: 8
+4: 5
+
+2023-02-14 20:26:45/Users/liuhe/Desktop/progress/TSemiStar/IC_hot/TInfineionAgencyStock2_SemiStart_IC_hot/MT35XU256ABA1G12-0AAT_W.png  5th---  1: 4
+2: 1
+3: 1
+4: 1
+
+2023-02-14 20:26:48/Users/liuhe/Desktop/progress/TSemiStar/IC_hot/TInfineionAgencyStock2_SemiStart_IC_hot/MT35XU256ABA1G12-0AAT_W.png  17th---  1: 4
+2: 1
+3: 1
+4: 1
+
+2023-02-14 20:26:59/Users/liuhe/Desktop/progress/TSemiStar/IC_hot/TInfineionAgencyStock2_SemiStart_IC_hot/MT41K128M16JT-125 AAT:K_M.png  10th---  1: 183
+2: 153
+3: 153
+4: 153
+
+2023-02-14 20:27:15/Users/liuhe/Desktop/progress/TSemiStar/IC_hot/TInfineionAgencyStock2_SemiStart_IC_hot/MT41K128M16JT-125 IT:K_M.png  11th---  1: 81
+2: 561
+3: 581
+4: 561
+
+2023-02-14 20:27:25/Users/liuhe/Desktop/progress/TSemiStar/IC_hot/TInfineionAgencyStock2_SemiStart_IC_hot/MT41K128M16JT-125 IT:K_W.png  38th---  1: 181
+2: 151
+3: 151
+4: 151
+
+2023-02-14 20:27:27/Users/liuhe/Desktop/progress/TSemiStar/IC_hot/TInfineionAgencyStock2_SemiStart_IC_hot/MT41K128M16JT-125 IT:K_W.png  45th---  1: 181
+2: 151
+3: 151
+4: 151
+
+2023-02-14 20:27:29/Users/liuhe/Desktop/progress/TSemiStar/IC_hot/TInfineionAgencyStock2_SemiStart_IC_hot/MT41K256M16TW-107 IT_M.png  0th---  1: 551
+2: 51
+3: 851
+4: 51
+
+2023-02-14 20:27:33/Users/liuhe/Desktop/progress/TSemiStar/IC_hot/TInfineionAgencyStock2_SemiStart_IC_hot/MT41K256M16TW-107 IT_W.png  4th---  1: 421
+2: 121
+3: 121
+4: 121
+
+2023-02-14 20:27:48/Users/liuhe/Desktop/progress/TSemiStar/IC_hot/TInfineionAgencyStock2_SemiStart_IC_hot/MT41K512M8DA-107 AIT:P_W.png  1th---  1: 4
+2: 1
+3: 1
+4: 1
+
+2023-02-14 20:27:50/Users/liuhe/Desktop/progress/TSemiStar/IC_hot/TInfineionAgencyStock2_SemiStart_IC_hot/MT41K512M8DA-107 AIT:P_W.png  7th---  1: 4
+2: 1
+3: 1
+4: 1
+
+2023-02-14 20:27:54/Users/liuhe/Desktop/progress/TSemiStar/IC_hot/TInfineionAgencyStock2_SemiStart_IC_hot/MT41K512M8DA-107 AIT:P_W.png  24th---  1: 4
+2: 1
+3: 1
+4: 1
+
+2023-02-14 20:27:55/Users/liuhe/Desktop/progress/TSemiStar/IC_hot/TInfineionAgencyStock2_SemiStart_IC_hot/MT41K512M8DA-107 AIT:P_W.png  31th---  1: 4
+2: 1
+3: 1
+4: 1
+
+2023-02-14 20:29:05/Users/liuhe/Desktop/progress/TSemiStar/IC_hot/TInfineionAgencyStock2_SemiStart_IC_hot/MTFC8GAKAJCN-4M IT_M.png  4th---  1: 785
+2: 755
+3: 755
+4: 755
+
+2023-02-15 23:09:08/Users/liuhe/PycharmProjects/SeleniumDemo/TInfenion_5H/IC_hot_images/CY62148ELL-55SXIT_W.png  8th---  1: 43
+2: 28
+3: 28
+4: 28
+
+2023-02-15 23:09:14/Users/liuhe/PycharmProjects/SeleniumDemo/TInfenion_5H/IC_hot_images/CY62148ELL-55SXIT_W.png  34th---  1: 43
+2: 28
+3: 28
+4: 28
+
+2023-02-15 23:10:45/Users/liuhe/PycharmProjects/SeleniumDemo/TInfenion_5H/IC_hot_images/CY62148EV30LL-45ZSXIT_M.png  4th---  1: 43
+2: 28
+3: 28
+4: 28
+
+2023-02-15 23:11:25/Users/liuhe/PycharmProjects/SeleniumDemo/TInfenion_5H/IC_hot_images/CY62148EV30LL-55SXIT_W.png  13th---  1: 43
+2: 28
+3: 28
+4: 28
+
+2023-02-15 23:13:41/Users/liuhe/PycharmProjects/SeleniumDemo/TInfenion_5H/IC_hot_images/CY62157ELL-45ZSXIT_W.png  22th---  1: 43
+2: 28
+3: 28
+4: 28
+
+2023-02-15 23:15:01/Users/liuhe/PycharmProjects/SeleniumDemo/TInfenion_5H/IC_hot_images/CY62157ESL-45ZSXI_W.png  4th---  1: 43
+2: 28
+3: 28
+4: 28
+
+2023-02-15 23:17:22/Users/liuhe/PycharmProjects/SeleniumDemo/TInfenion_5H/IC_hot_images/CY62157EV30LL-45BVXI_W.png  30th---  1: 43
+2: 28
+3: 28
+4: 28
+
+2023-02-15 23:20:27/Users/liuhe/PycharmProjects/SeleniumDemo/TInfenion_5H/IC_hot_images/CY62158ELL-45ZSXI_W.png  21th---  1: 43
+2: 28
+3: 28
+4: 28
+
+2023-02-15 23:20:58/Users/liuhe/PycharmProjects/SeleniumDemo/TInfenion_5H/IC_hot_images/CY62158EV30LL-45BVXI_W.png  13th---  1: 43
+2: 28
+3: 28
+4: 28
+
+2023-02-15 23:21:11/Users/liuhe/PycharmProjects/SeleniumDemo/TInfenion_5H/IC_hot_images/CY62158EV30LL-45ZSXIT_M.png  9th---  1: 43
+2: 28
+3: 28
+4: 28
+
+2023-02-15 23:22:41/Users/liuhe/PycharmProjects/SeleniumDemo/TInfenion_5H/IC_hot_images/CY62167DV30LL-55ZXIT_W.png  13th---  1: 43
+2: 28
+3: 28
+4: 28
+
+2023-02-15 23:23:50/Users/liuhe/PycharmProjects/SeleniumDemo/TInfenion_5H/IC_hot_images/CY62167ELL-45ZXI_W.png  12th---  1: 43
+2: 28
+3: 28
+4: 28
+
+2023-02-15 23:24:28/Users/liuhe/PycharmProjects/SeleniumDemo/TInfenion_5H/IC_hot_images/CY62167EV18LL-55BVXI_W.png  25th---  1: 43
+2: 28
+3: 28
+4: 28
+
+2023-02-15 23:24:29/Users/liuhe/PycharmProjects/SeleniumDemo/TInfenion_5H/IC_hot_images/CY62167EV18LL-55BVXI_W.png  29th---  1: 43
+2: 28
+3: 28
+4: 28
+
+2023-02-15 23:25:03/Users/liuhe/PycharmProjects/SeleniumDemo/TInfenion_5H/IC_hot_images/CY62167EV30LL-45BVI_W.png  24th---  1: 43
+2: 28
+3: 28
+4: 28
+
+2023-02-15 23:25:15/Users/liuhe/PycharmProjects/SeleniumDemo/TInfenion_5H/IC_hot_images/CY62167EV30LL-45BVXA_W.png  5th---  1: 43
+2: 28
+3: 28
+4: 28
+
+2023-02-15 23:25:26/Users/liuhe/PycharmProjects/SeleniumDemo/TInfenion_5H/IC_hot_images/CY62167EV30LL-45BVXA_W.png  46th---  1: 43
+2: 28
+3: 28
+4: 28
+
+2023-02-15 23:26:06/Users/liuhe/PycharmProjects/SeleniumDemo/TInfenion_5H/IC_hot_images/CY62167EV30LL-45ZXA_M.png  10th---  1: 43
+2: 28
+3: 28
+4: 28
+
+2023-02-15 23:26:09/Users/liuhe/PycharmProjects/SeleniumDemo/TInfenion_5H/IC_hot_images/CY62167EV30LL-45ZXA_W.png  10th---  1: 43
+2: 28
+3: 28
+4: 28
+
+2023-02-17 00:37:17/Users/liuhe/Desktop/progress/TInfineon/10H/hot_images/mac/CY7C1320KV18-250BZXI_W.png  25th---  1: 43
+2: 28
+3: 28
+4: 28
+

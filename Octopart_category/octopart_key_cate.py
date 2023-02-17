@@ -1,4 +1,4 @@
-# 根据关键字查找P/N, manu
+# beautifusoup 根据关键字查找P/N, manu
 import ssl
 import string
 import time

@@ -166,7 +166,7 @@ def get_jsonAndGradeA_cates() -> list:
 def new_jsonAndGradeA_cates() -> list:
     gradeA_file = '/Users/liuhe/PycharmProjects/SeleniumDemo/TgardeA.xlsx'
     json_file = '/Users/liuhe/PycharmProjects/SeleniumDemo/TJson_recommand.xlsx'
-    new_gradeA_cates = IC_stock_excel_read.get_cate_name_arr(file_name=gradeA_file, sheet_name='before0910',
+    new_gradeA_cates = IC_stock_excel_read.get_cate_name_arr(file_name=gradeA_file, sheet_name='all',
                                                              col_index=1)
     jsonRecommand_cates = IC_stock_excel_read.get_cate_name_arr(file_name=json_file, sheet_name='all', col_index=1)
     black_cates = IC_stock_excel_read.get_cate_name_arr(file_name=json_file, sheet_name='blacklist', col_index=1)

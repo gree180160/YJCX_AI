@@ -16,6 +16,10 @@ def get_file_path(super_path, file_name) -> str:
     return result
 
 
+def get_IC_hot_image_fold():
+    return "/Users/liuhe/Downloads"
+
+
 if __name__ == "__main__":
     keyword_source_file = get_file_path(super_path=None, file_name='TKeywords.xlsx')
     log_file = get_file_path(super_path='Octopart_category', file_name='octopart_key_cate_log.txt')
