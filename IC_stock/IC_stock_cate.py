@@ -13,13 +13,13 @@ from WRTools import IPHelper, UserAgentHelper, ExcelHelp, WaitHelp, PathHelp
 
 # ssl._create_default_https_context = ssl._create_unverified_context
 
-sourceFile_dic = {'fileName': PathHelp.get_file_path("TInfenion_30H", 'TInfenion_30H.xlsx'),
+sourceFile_dic = {'fileName': PathHelp.get_file_path("TInfenion_35H", 'Task.xlsx'),
                   'sourceSheet': 'ppn',
                   'colIndex': 1,
                   'startIndex': 0,
                   'endIndex': 100}   #
 
-result_file = PathHelp.get_file_path(super_path="TInfenion_30H", file_name='IC_stock.xlsx')
+result_file = PathHelp.get_file_path(super_path="TInfenion_35H", file_name='IC_stock.xlsx')
 
 total_page = 1
 

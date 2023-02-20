@@ -58,7 +58,7 @@ def login_action(aim_url):
 # 获取单个型号热度信息
 # cate_name：型号
 # isWeek：【周/月】搜索指数
-def search_hotInfo(cate_name, isWeek):
+def search_hotInfo(cate_name,cate_index, isWeek):
     if isWeek:
         search_url = f'https://icpi.ic.net.cn/icpi/detail.php?key={cate_name}'
     else:
@@ -69,29 +69,29 @@ def search_hotInfo(cate_name, isWeek):
         return  # 如果周没有数据，月搜索指数不查询
     elif driver.current_url == login_url:
         login_action(search_url)
-    saveImageAndRename(ppn=cate_name, isWeek=isWeek)
+    saveImageAndRename(ppn_index=cate_index, isWeek=isWeek)
     time.sleep(2.0)
-    save_hot_record(ppn=cate_name, isWeek=isWeek, save_file=sourceFile_dic['fileName'])
+    save_hot_record(ppn=cate_name,ppn_index=cate_index, isWeek=isWeek, save_file=sourceFile_dic['fileName'])
     if isWeek:
-        search_hotInfo(cate_name, False)
+        search_hotInfo(cate_name,cate_index=cate_index, isWeek=False)
 
 
 # 保存截图+关闭页面+修改保存图的名称
-def saveImageAndRename(ppn, is_week):
-    # todo 保存完把焦点切换到火狐
+def saveImageAndRename(ppn_index, is_week):
+    # 保存完把焦点切换到火狐
     UserInput.screenShot_saveAndClose()
     # rename
     fold_path = PathHelp.get_IC_hot_image_fold()
     file_list = os.listdir(fold_path)
-    if file_list and file_list.__len__()>0:
+    if file_list and file_list.__len__() > 0:
         aim_file_path = fold_path + '/' + file_list[-1]
-        new_name = imageName_new = ppn + ('_W' if is_week else '_M') + '.png'
+        new_name = imageName_new = str(ppn_index) + ('_W' if is_week else '_M') + '.png'
         os.rename(aim_file_path, fold_path + '/' + imageName_new)
 
 
 # 根据ppn 和is_week 计算截图名称，根据名称，获取图片中的数据, 并保存
-def save_hot_record(ppn, is_week, save_file):
-    image_file_path = PathHelp.get_IC_hot_image_fold() + '/' + ppn + ('_W' if is_week else '_M') + '.png'
+def save_hot_record(ppn, ppn_index, is_week, save_file):
+    image_file_path = PathHelp.get_IC_hot_image_fold() + '/' + str(ppn_index) + ('_W' if is_week else '_M') + '.png'
     if is_week:
         image_hot_data = ChracterReconition.SplitPic_month(image_file_path)
         image_hot_data.insert(0, ppn)
@@ -110,7 +110,7 @@ def main():
                                            col_index=sourceFile_dic['colIndex'])
     for (ppn_index, ppn_name) in enumerate(ppns):
         print(f'index is: {ppn_index}  index is: {ppn_name}')
-        search_hotInfo(cate_name=ppn_name, isWeek=True)
+        search_hotInfo(cate_name=ppn_name,cate_index=ppn_index, isWeek=True)
 
 
 # print('识别到的中文')
