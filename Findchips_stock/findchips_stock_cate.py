@@ -123,5 +123,5 @@ def main():
 
 
 if __name__ == '__main__':
-    main()
-    # combine_result(["/Users/liuhe/Desktop/progress/TInfineon/25H/11/findchip_stock.xlsx", "/Users/liuhe/Desktop/progress/TInfineon/25H/sz/findchip_stock.xlsx", "/Users/liuhe/Desktop/progress/TInfineon/25H/04/findchip_stock.xlsx"], PathHelp.get_file_path('TInfenion_25H', 'findchip_stock.xlsx'))
+    # main()
+    combine_result(["/Users/liuhe/Desktop/progress/TInfineon/30H/11/findchip_stock.xlsx", "/Users/liuhe/Desktop/progress/TInfineon/30H/sz/findchip_stock.xlsx", "/Users/liuhe/Desktop/progress/TInfineon/30H/04/findchip_stock.xlsx"], PathHelp.get_file_path('TInfenion_30H', 'findchip_stock.xlsx'))

@@ -143,22 +143,22 @@ def SplitPic_week(source_pic: str):
     wid = img_size[0]  # 图片宽度
     hei = img_size[1]  # 图片高度
     # mac
-    if hei < 3200:
-        # wid ，标准1312， x 440
-        x = wid/2 - 100 - 116
-        y = 982 * scale
-        w = 116 * scale
-        h = 30 * scale
-        space = 36 * scale
-    else:
-        x = 533 * scale
-        y = 978 * scale
-        w = 116 * scale
-        h = 30 * scale
-        space = 36 * scale
+    # if hei < 3200:
+    #     # wid ，标准1312， x 440
+    #     x = wid/2 - 100 - 116
+    #     y = 982 * scale
+    #     w = 116 * scale
+    #     h = 30 * scale
+    #     space = 36 * scale
+    # else:
+    #     x = 533 * scale
+    #     y = 978 * scale
+    #     w = 116 * scale
+    #     h = 30 * scale
+    #     space = 36 * scale
     # #11&SZ-02
     # x = wid / 2 - 100 - 116
-    # y = 978 * scale
+    # y = 985 * scale
     # w = 116 * scale
     # h = 30 * scale
     # space = 36 * scale
@@ -169,11 +169,11 @@ def SplitPic_week(source_pic: str):
     # h = 26.5 * scale
     # space = 32.5 * scale
     # after 0215
-    # x = wid / 2 - 100 - 116
-    # y = 978 * scale
-    # w = 116 * scale
-    # h = 30 * scale
-    # space = 36 * scale
+    x = wid / 2 - 100 - 116
+    y = 978 * scale
+    w = 116 * scale
+    h = 30 * scale
+    space = 36 * scale
     search_record = []
     for index in range(0, 52):
         # 开始截取
@@ -194,27 +194,27 @@ def SplitPic_month(source_pic: str):
     wid = img_size[0]  # 图片宽度
     hei = img_size[1]  # 图片高度
     # mac 高清
-    if 3400 <= hei:
-        x = 532.735 * scale
-        y = 982 * scale
-        w = 116 * scale
-        h = 30 * scale
-        space = 36 * scale
-    elif 1730 <= hei <= 3400:
-        x = 420.9
-        y = 979.7
-        w = 116 * scale
-        h = 30 * scale
-        space = 36 * scale
-    else:
-        x = wid / 2 - 100 - 116
-        y = 981.446 * scale
-        w = 116 * scale
-        h = 30 * scale
-        space = 36 * scale
+    # if 3400 <= hei:
+    #     x = 532.735 * scale
+    #     y = 982 * scale
+    #     w = 116 * scale
+    #     h = 30 * scale
+    #     space = 36 * scale
+    # elif 1730 <= hei <= 3400:
+    #     x = 420.9
+    #     y = 979.7
+    #     w = 116 * scale
+    #     h = 30 * scale
+    #     space = 36 * scale
+    # else:
+    #     x = wid / 2 - 100 - 116
+    #     y = 981.446 * scale
+    #     w = 116 * scale
+    #     h = 30 * scale
+    #     space = 36 * scale
     # 11-01,sz
     # x = wid/2 - 100.00 - 116
-    # y = 978 * scale
+    # y = 985 * scale
     # w = 116 * scale
     # h = 30 * scale
     # space = 36 * scale
@@ -226,11 +226,11 @@ def SplitPic_month(source_pic: str):
     # h = 26.5 * scale
     # space = 32.5 * scale
     # after 0215
-    # x = wid/2 - 100.00 - 116
-    # y = 980 * scale
-    # w = 116 * scale
-    # h = 30 * scale
-    # space = 36 * scale
+    x = wid/2 - 100.00 - 116
+    y = 980 * scale
+    w = 116 * scale
+    h = 30 * scale
+    space = 36 * scale
     search_record = []
     for index in range(0, 12):
         # 开始截取
@@ -249,8 +249,8 @@ def test_ppn_value(fold_path: str):
 
 
 def test_hot_value(fold_path: str):
-    temp = 'CY7C1312KV18-250BZI_M.png' # 1911×1724
-    #temp = 'CY7C1312KV18-250BZI_W.png' # 1911×3164
+    #temp = 'CY8C3244AXI-153_M.png' # 1911×1724
+    temp = 'CY8C3244AXI-153_W.png' # 1911×3164
     if temp.endswith('_M.png'):
         image_hot_data = SplitPic_month(fold_path + '/' + temp)
     elif temp.endswith('_W.png'):
@@ -263,5 +263,5 @@ if __name__ == "__main__":
     # useFold('/Users/liuhe/Desktop/hot_img')
     # print(result_str)
     # SplitPic('/Users/liuhe/Desktop/识图test/88.png')
-    result = test_hot_value(fold_path='/Users/liuhe/Desktop/progress/TInfineon/10H/hot_images/mac')
+    result = test_hot_value(fold_path='/Users/liuhe/Desktop/progress/TInfineon/15H/hot_images/04')
     print(result)

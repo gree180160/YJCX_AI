@@ -1886,3 +1886,387 @@
 3: 28
 4: 28
 
+2023-02-17 23:17:25/Users/liuhe/Desktop/progress/TInfineon/15H/hot_images/mac/CY7C1565KV18-450BZI_M.png  9th---  1: 43
+2: 28
+3: 28
+4: 28
+
+2023-02-17 23:17:49/Users/liuhe/Desktop/progress/TInfineon/15H/hot_images/mac/CY7C1565KV18-450BZXC_W.png  16th---  1: 43
+2: 28
+3: 28
+4: 28
+
+2023-02-17 23:22:09/Users/liuhe/Desktop/progress/TInfineon/15H/hot_images/mac/CY7C1612KV18-300BZXI_M.png  10th---  1: 43
+2: 28
+3: 28
+4: 28
+
+2023-02-17 23:30:46/Users/liuhe/Desktop/progress/TInfineon/15H/hot_images/mac/CY7C25632KV18-400BZXI_M.png  11th---  1: 43
+2: 28
+3: 28
+4: 28
+
+2023-02-17 23:51:12/Users/liuhe/Desktop/progress/TInfineon/15H/hot_images/11/CY8C20110-SX2IT_W.png  34th---  1: 43
+2: 13
+3: 13
+4: 13
+
+2023-02-17 23:51:30/Users/liuhe/Desktop/progress/TInfineon/15H/hot_images/11/CY8C20110-SX2I_W.png  26th---  1: 43
+2: 13
+3: 13
+4: 13
+
+2023-02-17 23:54:37/Users/liuhe/Desktop/progress/TInfineon/15H/hot_images/11/CY8C20237-24LKXI_M.png  0th---  1: 488
+2: 188
+3: 188
+4: 188
+
+2023-02-17 23:55:34/Users/liuhe/Desktop/progress/TInfineon/15H/hot_images/11/CY8C20247S-24LKXI_W.png  49th---  1: 43
+2: 13
+3: 13
+4: 13
+
+2023-02-18 00:09:42/Users/liuhe/Desktop/progress/TInfineon/15H/hot_images/sz/CY8C20396A-24LQXI_M.png  1th---  1: 32
+2: 22
+3: 22
+4: 22
+
+2023-02-18 00:09:57/Users/liuhe/Desktop/progress/TInfineon/15H/hot_images/sz/CY8C20396A-24LQXI_W.png  44th---  1: 43
+2: 40
+3: 42
+4: 40
+
+2023-02-18 00:09:58/Users/liuhe/Desktop/progress/TInfineon/15H/hot_images/sz/CY8C20396A-24LQXI_W.png  47th---  1: 74
+2: 71
+3: 71
+4: 71
+
+2023-02-18 00:12:05/Users/liuhe/Desktop/progress/TInfineon/15H/hot_images/sz/CY8C20436A-24LQXIT_W.png  1th---  1: 32
+2: 22
+3: 4: 22
+
+2023-02-18 00:12:06/Users/liuhe/Desktop/progress/TInfineon/15H/hot_images/sz/CY8C20436A-24LQXIT_W.png  4th---  1: 30
+2: 30
+3: 39
+4: 30
+
+2023-02-18 00:12:20/Users/liuhe/Desktop/progress/TInfineon/15H/hot_images/sz/CY8C20436A-24LQXI_M.png  0th---  1: 468
+2: 46
+3: 169
+4: 46
+
+2023-02-18 00:12:21/Users/liuhe/Desktop/progress/TInfineon/15H/hot_images/sz/CY8C20436A-24LQXI_M.png  4th---  1: 39
+2: 29
+3: 29
+4: 29
+
+2023-02-18 00:12:22/Users/liuhe/Desktop/progress/TInfineon/15H/hot_images/sz/CY8C20436A-24LQXI_M.png  10th---  1: 474
+2: 471
+3: 471
+4: 471
+
+2023-02-18 00:12:23/Users/liuhe/Desktop/progress/TInfineon/15H/hot_images/sz/CY8C20436A-24LQXI_M.png  11th---  1: 30
+2: 2
+3: 25
+4: 2
+
+2023-02-18 00:12:25/Users/liuhe/Desktop/progress/TInfineon/15H/hot_images/sz/CY8C20436A-24LQXI_W.png  1th---  1: 198
+2: 498
+3: 499
+4: 498
+
+2023-02-18 00:12:31/Users/liuhe/Desktop/progress/TInfineon/15H/hot_images/sz/CY8C20436A-24LQXI_W.png  23th---  1: 43
+2: 40
+3: 42
+4: 40
+
+2023-02-18 00:12:35/Users/liuhe/Desktop/progress/TInfineon/15H/hot_images/sz/CY8C20436A-24LQXI_W.png  41th---  1: 43
+2: 40
+3: 42
+4: 40
+
+2023-02-18 00:12:36/Users/liuhe/Desktop/progress/TInfineon/15H/hot_images/sz/CY8C20436A-24LQXI_W.png  45th---  1: 36
+2: 26
+3: 26
+4: 26
+
+2023-02-18 00:12:38/Users/liuhe/Desktop/progress/TInfineon/15H/hot_images/sz/CY8C20436A-24LQXI_W.png  51th---  1: 43
+2: 40
+3: 42
+4: 40
+
+2023-02-18 00:12:41/Users/liuhe/Desktop/progress/TInfineon/15H/hot_images/sz/CY8C20437-24LQXI_M.png  3th---  1: 36
+2: 26
+3: 26
+4: 26
+
+2023-02-18 00:12:43/Users/liuhe/Desktop/progress/TInfineon/15H/hot_images/sz/CY8C20437-24LQXI_M.png  9th---  1: 30
+2: 20
+3: 3
+4: 20
+
+2023-02-18 00:12:47/Users/liuhe/Desktop/progress/TInfineon/15H/hot_images/sz/CY8C20437-24LQXI_W.png  8th---  1: 3
+2: 2
+3: 2
+4: 2
+
+2023-02-18 00:12:49/Users/liuhe/Desktop/progress/TInfineon/15H/hot_images/sz/CY8C20437-24LQXI_W.png  13th---  1: 490
+2: 490
+3: 499
+4: 490
+
+2023-02-18 00:13:01/Users/liuhe/Desktop/progress/TInfineon/15H/hot_images/sz/CY8C20447S-24LQXI_M.png  0th---  1: 43
+2: 40
+3: 42
+4: 40
+
+2023-02-18 00:13:01/Users/liuhe/Desktop/progress/TInfineon/15H/hot_images/sz/CY8C20447S-24LQXI_M.png  3th---  1: 477
+2: 477
+3: 497
+4: 477
+
+2023-02-18 00:13:02/Users/liuhe/Desktop/progress/TInfineon/15H/hot_images/sz/CY8C20447S-24LQXI_M.png  4th---  1: 36
+2: 26
+3: 26
+4: 26
+
+2023-02-18 00:13:10/Users/liuhe/Desktop/progress/TInfineon/15H/hot_images/sz/CY8C20447S-24LQXI_W.png  16th---  1: 3
+2: 2
+3: 2
+4: 2
+
+2023-02-18 00:13:11/Users/liuhe/Desktop/progress/TInfineon/15H/hot_images/sz/CY8C20447S-24LQXI_W.png  19th---  1: 30
+2: 20
+3: 3
+4: 20
+
+2023-02-18 00:13:14/Users/liuhe/Desktop/progress/TInfineon/15H/hot_images/sz/CY8C20447S-24LQXI_W.png  30th---  1: 30
+2: 20
+3: 3
+4: 20
+
+2023-02-18 00:13:22/Users/liuhe/Desktop/progress/TInfineon/15H/hot_images/sz/CY8C20466A-24LQXIT_M.png  2th---  1: 32
+2: 22
+3: 4: 22
+
+2023-02-18 00:13:23/Users/liuhe/Desktop/progress/TInfineon/15H/hot_images/sz/CY8C20466A-24LQXIT_M.png  7th---  1: 30
+2: 30
+3: 39
+4: 30
+
+2023-02-18 00:14:02/Users/liuhe/Desktop/progress/TInfineon/15H/hot_images/sz/CY8C20496A-24LQXI_M.png  4th---  1: 43
+2: 40
+3: 42
+4: 40
+
+2023-02-18 00:14:11/Users/liuhe/Desktop/progress/TInfineon/15H/hot_images/sz/CY8C20496A-24LQXI_W.png  17th---  1: 43
+2: 40
+3: 42
+4: 40
+
+2023-02-18 00:15:50/Users/liuhe/Desktop/progress/TInfineon/15H/hot_images/sz/CY8C20536A-24PVXIT_W.png  14th---  1: 43
+2: 40
+3: 42
+4: 40
+
+2023-02-18 00:15:51/Users/liuhe/Desktop/progress/TInfineon/15H/hot_images/sz/CY8C20536A-24PVXIT_W.png  17th---  1: 43
+2: 40
+3: 42
+4: 40
+
+2023-02-18 00:16:03/Users/liuhe/Desktop/progress/TInfineon/15H/hot_images/sz/CY8C20536A-24PVXI_M.png  4th---  1: 43
+2: 40
+3: 42
+4: 40
+
+2023-02-18 00:16:10/Users/liuhe/Desktop/progress/TInfineon/15H/hot_images/sz/CY8C20536A-24PVXI_W.png  11th---  1: 30
+2: 20
+3: 3
+4: 20
+
+2023-02-18 00:16:11/Users/liuhe/Desktop/progress/TInfineon/15H/hot_images/sz/CY8C20536A-24PVXI_W.png  16th---  1: 32
+2: 22
+3: 4: 22
+
+2023-02-18 00:16:18/Users/liuhe/Desktop/progress/TInfineon/15H/hot_images/sz/CY8C20536A-24PVXI_W.png  42th---  1: 30
+2: 2
+3: 25
+4: 2
+
+2023-02-18 00:16:18/Users/liuhe/Desktop/progress/TInfineon/15H/hot_images/sz/CY8C20536A-24PVXI_W.png  43th---  1: 30
+2: 30
+3: 39
+4: 30
+
+2023-02-18 00:16:19/Users/liuhe/Desktop/progress/TInfineon/15H/hot_images/sz/CY8C20536A-24PVXI_W.png  47th---  1: 43
+2: 40
+3: 42
+4: 40
+
+2023-02-18 00:16:43/Users/liuhe/Desktop/progress/TInfineon/15H/hot_images/sz/CY8C20546A-24PVXI_M.png  7th---  1: 32
+2: 22
+3: 4: 22
+
+2023-02-18 00:17:02/Users/liuhe/Desktop/progress/TInfineon/15H/hot_images/sz/CY8C20636A-24LQXIT_M.png  0th---  1: 30
+2: 2
+3: 25
+4: 2
+
+2023-02-18 00:17:04/Users/liuhe/Desktop/progress/TInfineon/15H/hot_images/sz/CY8C20636A-24LQXIT_M.png  7th---  1: 30
+2: 30
+3: 39
+4: 30
+
+2023-02-18 00:17:07/Users/liuhe/Desktop/progress/TInfineon/15H/hot_images/sz/CY8C20636A-24LQXIT_W.png  1th---  1: 30
+2: 30
+3: 39
+4: 30
+
+2023-02-18 00:17:24/Users/liuhe/Desktop/progress/TInfineon/15H/hot_images/sz/CY8C20636A-24LQXI_M.png  8th---  1: 30
+2: 20
+3: 3
+4: 20
+
+2023-02-18 00:17:35/Users/liuhe/Desktop/progress/TInfineon/15H/hot_images/sz/CY8C20636A-24LQXI_W.png  32th---  1: 30
+2: 20
+3: 3
+4: 20
+
+2023-02-18 00:17:43/Users/liuhe/Desktop/progress/TInfineon/15H/hot_images/sz/CY8C20636A-24LTXI_M.png  8th---  1: 32
+2: 22
+3: 22
+4: 22
+
+2023-02-18 00:17:44/Users/liuhe/Desktop/progress/TInfineon/15H/hot_images/sz/CY8C20636A-24LTXI_M.png  10th---  1: 30
+2: 30
+3: 39
+4: 30
+
+2023-02-18 00:18:04/Users/liuhe/Desktop/progress/TInfineon/15H/hot_images/sz/CY8C20637-24LQXI_M.png  10th---  1: 34
+2: 4
+3: 24
+4: 4
+
+2023-02-18 00:18:18/Users/liuhe/Desktop/progress/TInfineon/15H/hot_images/sz/CY8C20637-24LQXI_W.png  47th---  1: 3
+2: 2
+3: 2
+4: 2
+
+2023-02-18 00:18:22/Users/liuhe/Desktop/progress/TInfineon/15H/hot_images/sz/CY8C20646A-24LQXI_M.png  5th---  1: 32
+2: 22
+3: 4: 22
+
+2023-02-18 00:40:14/Users/liuhe/Desktop/progress/TInfineon/15H/hot_images/sz/CY8C20396A-24LQXI_W.png  44th---  1: 43
+2: 40
+3: 42
+4: 40
+
+2023-02-18 00:40:15/Users/liuhe/Desktop/progress/TInfineon/15H/hot_images/sz/CY8C20396A-24LQXI_W.png  47th---  1: 74
+2: 71
+3: 71
+4: 71
+
+2023-02-18 00:44:07/Users/liuhe/Desktop/progress/TInfineon/15H/hot_images/sz/CY8C20424-12LQXIT_M.png  6th---  1: 2
+2: 3
+3: 5
+4: 3
+
+2023-02-18 00:44:36/Users/liuhe/Desktop/progress/TInfineon/15H/hot_images/sz/CY8C20424-12LQXI_W.png  21th---  1: 2
+2: 3
+3: 5
+4: 3
+
+2023-02-18 00:44:41/Users/liuhe/Desktop/progress/TInfineon/15H/hot_images/sz/CY8C20424-12LQXI_W.png  42th---  1: 2
+2: 3
+3: 5
+4: 3
+
+2023-02-18 00:45:27/Users/liuhe/Desktop/progress/TInfineon/15H/hot_images/sz/CY8C20434-12LQXI_M.png  6th---  1: 160
+2: 100
+3: 100
+4: 100
+
+2023-02-18 00:46:08/Users/liuhe/Desktop/progress/TInfineon/15H/hot_images/sz/CY8C20436A-24LQXI_M.png  10th---  1: 471
+2: 171
+3: 171
+4: 171
+
+2023-02-18 00:48:24/Users/liuhe/Desktop/progress/TInfineon/15H/hot_images/sz/CY8C20524-12PVXI_M.png  1th---  1: 2
+2: 3
+3: 5
+4: 3
+
+2023-02-18 00:48:27/Users/liuhe/Desktop/progress/TInfineon/15H/hot_images/sz/CY8C20524-12PVXI_M.png  11th---  1: 2
+2: 3
+3: 5
+4: 3
+
+2023-02-18 00:48:32/Users/liuhe/Desktop/progress/TInfineon/15H/hot_images/sz/CY8C20524-12PVXI_W.png  11th---  1: 2
+2: 3
+3: 5
+4: 3
+
+2023-02-18 00:48:38/Users/liuhe/Desktop/progress/TInfineon/15H/hot_images/sz/CY8C20524-12PVXI_W.png  35th---  1: 2
+2: 3
+3: 5
+4: 3
+
+2023-02-18 00:58:00/Users/liuhe/Desktop/progress/TInfineon/15H/hot_images/sz/CY8C20436A-24LQXIT_M.png  3th---  1: 414
+2: 114
+3: 114
+4: 114
+
+2023-02-18 00:58:46/Users/liuhe/Desktop/progress/TInfineon/15H/hot_images/sz/CY8C20437-24LQXI_W.png  13th---  1: 422
+2: 122
+3: 122
+4: 122
+
+2023-02-18 01:06:10/Users/liuhe/Desktop/progress/TInfineon/15H/hot_images/sz/CY8C21234-24SXI_M.png  0th---  1: 91
+2: 31
+3: 4: 31
+
+2023-02-18 01:06:18/Users/liuhe/Desktop/progress/TInfineon/15H/hot_images/sz/CY8C21234-24SXI_W.png  14th---  1: 53
+2: 53
+3: 83
+4: 53
+
+2023-02-18 01:11:28/Users/liuhe/Desktop/progress/TInfineon/15H/hot_images/sz/CY8C21434-24LTXI_M.png  9th---  1: 724
+2: 721
+3: 721
+4: 721
+
+2023-02-18 01:11:38/Users/liuhe/Desktop/progress/TInfineon/15H/hot_images/sz/CY8C21434-24LTXI_W.png  27th---  1: 53
+2: 53
+3: 83
+4: 53
+
+2023-02-18 01:30:22/Users/liuhe/Desktop/progress/TInfineon/15H/hot_images/04/CY8C27443-24PVXIT_M.png  10th---  1: 308
+2: 303
+3: 303
+4: 303
+
+2023-02-18 01:30:29/Users/liuhe/Desktop/progress/TInfineon/15H/hot_images/04/CY8C27443-24PVXIT_W.png  17th---  1: 415
+2: 115
+3: 115
+4: 115
+
+2023-02-18 01:31:35/Users/liuhe/Desktop/progress/TInfineon/15H/hot_images/04/CY8C27443-24SXI_W.png  41th---  1: 415
+2: 115
+3: 115
+4: 115
+
+2023-02-18 01:36:41/Users/liuhe/Desktop/progress/TInfineon/15H/hot_images/04/CY8C29666-24LTXI_M.png  9th---  1: 308
+2: 303
+3: 303
+4: 303
+
+2023-02-18 01:43:16/Users/liuhe/Desktop/progress/TInfineon/15H/hot_images/04/CY8C3246LTI-128T_M.png  5th---  1: 308
+2: 303
+3: 303
+4: 303
+
+2023-02-18 01:43:21/Users/liuhe/Desktop/progress/TInfineon/15H/hot_images/04/CY8C3246LTI-128T_W.png  5th---  1: 308
+2: 303
+3: 303
+4: 303
+

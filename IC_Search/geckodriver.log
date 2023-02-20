@@ -150,3 +150,38 @@ UNSUPPORTED (log once): POSSIBLE ISSUE: unit 1 GLD_TEXTURE_INDEX_2D is unloadabl
 console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /var/folders/jc/x8nf5scd28v4wrbkt9l72vd00000gn/T/rust_mozprofile6SutrR/search.json.mozlz4", (void 0)))
 DevTools listening on ws://127.0.0.1:53916/devtools/browser/ff481fdb-4190-46ad-a63a-080765cb4ff6
 JavaScript warning: https://hectorstatic.baidu.com/96c9c06653ba892e.js, line 3: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1676659629281	Sync.ErrorHandler	ERROR	Sync encountered a login error
+console.error: "Sync encountered an error - see about:sync-log for the log file."
+1676674056796	Sync.ErrorHandler	ERROR	Sync encountered a login error
+console.error: "Sync encountered an error - see about:sync-log for the log file."
+1676723912057	Sync.ErrorHandler	ERROR	Sync encountered a login error
+console.error: "Sync encountered an error - see about:sync-log for the log file."
+1676781295175	Sync.ErrorHandler	ERROR	Sync encountered a login error
+console.error: "Sync encountered an error - see about:sync-log for the log file."
+1676848320230	Sync.ErrorHandler	ERROR	Sync encountered a login error
+console.error: "Sync encountered an error - see about:sync-log for the log file."
+console.error: "Problem getting stored prefs for TopSites"
+JavaScript error: , line 0: uncaught exception: null
+1676855101210	Sync.ErrorHandler	ERROR	Sync encountered a login error
+console.error: "Sync encountered an error - see about:sync-log for the log file."
+console.error: "Problem getting stored prefs for TopSites"
+JavaScript error: , line 0: uncaught exception: null
+console.error: "Problem getting stored prefs for TopSites"
+JavaScript error: , line 0: uncaught exception: null
+JavaScript error: , line 0: NotFoundError: Could not move source file(/var/folders/jc/x8nf5scd28v4wrbkt9l72vd00000gn/T/rust_mozprofile6SutrR/bookmarkbackups/bookmarks-2023-02-19_26_TGVH5ulEslVOLbSZU3UH1w==.jsonlz4) because it does not exist
+console.error: "Problem getting stored prefs for TopSites"
+JavaScript error: , line 0: uncaught exception: null
+console.error: "Problem getting stored prefs for TopSites"
+JavaScript error: , line 0: uncaught exception: null
+console.error: "Problem getting stored prefs for TopSites"
+JavaScript error: , line 0: uncaught exception: null
+console.error: "Problem getting stored prefs for TopSites"
+JavaScript error: , line 0: uncaught exception: null
+console.error: "Problem getting stored prefs for TopSites"
+JavaScript error: , line 0: uncaught exception: null
+console.error: "Problem getting stored prefs for TopSites"
+JavaScript error: , line 0: uncaught exception: null
+console.error: "Problem getting stored prefs for TopSites"
+JavaScript error: , line 0: uncaught exception: null
+console.error: "Problem getting stored prefs for TopSites"
+JavaScript error: , line 0: uncaught exception: null

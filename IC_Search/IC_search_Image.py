@@ -7,8 +7,8 @@ from WRTools import ChracterReconition, ExcelHelp, PathHelp
 # （推荐ppn过多，看
 # 根据图片高度，<1000，说明没有数据），1700-1800， 月指数，3000-35000，周指数
 def rule_image_names(fold_path):
-    source_file = PathHelp.get_file_path(None, 'TSemiStart.xlsx')
-    source_ppn_list = ExcelHelp.read_col_content(file_name=source_file, sheet_name='ppn', col_index=1)[0:100]
+    source_file = PathHelp.get_file_path("TInfenion_15H", 'TInfenion_15H.xlsx')
+    source_ppn_list = ExcelHelp.read_col_content(file_name=source_file, sheet_name='ppn', col_index=1)[37:73]
     check_ppn_list = []
     for temp in source_ppn_list:
         if temp:
@@ -17,14 +17,14 @@ def rule_image_names(fold_path):
     file_name_list.sort()
     unmatch_image = []
     for temp in file_name_list:
-        if temp.startswith('火狐截图_'):
+        if temp.endswith('.png'):
             file_path = fold_path + '/' + temp
             rec_ppn = ChracterReconition.get_ppn(fold_path=fold_path, image_name=file_path)
             rec_ppn = rec_ppn.replace('.', '')
             rec_ppn = rec_ppn.strip()
             if rec_ppn in source_ppn_list:
                 is_week_data = is_week_search(file_path)
-                imageName_new = rec_ppn + ('_W' if is_week_data else '_M') + '.png'
+                imageName_new = rec_ppn + ('__W' if is_week_data else '__M') + '.png'
                 os.rename(fold_path + '/' + temp, fold_path + '/' + imageName_new)
                 # print(f'  match---- file : {temp} , ppn: {ppn}')
             else:
@@ -32,7 +32,7 @@ def rule_image_names(fold_path):
                 if check_changedppn in check_ppn_list and check_ppn_list.count(check_changedppn) == 1:
                     is_week_data = is_week_search(file_path)
                     check_right_index = check_ppn_list.index(check_changedppn)
-                    imageName_new = source_ppn_list[check_right_index] + ('_W' if is_week_data else '_M') + '.png'
+                    imageName_new = source_ppn_list[check_right_index] + ('__W' if is_week_data else '__M') + '.png'
                     os.rename(fold_path + '/' + temp, fold_path + '/' + imageName_new)
                     # print(f'  changed match---- file : {temp} , ppn: {ppn}')
                 else:
@@ -98,9 +98,13 @@ def change_error_image_name(fold_path):
     file_name_list = os.listdir(fold_path)
     file_name_list.sort()
     for temp in file_name_list:
-        if temp.startswith('M_') or temp.startswith("W_"):
-            imageName_new = temp[2:-4] + "_" + temp[0:1] + ".png"
+        if temp.endswith('__M.png'):
+            imageName_new = temp.replace('__M.png', "_M.png")
             os.rename(fold_path + '/' + temp, fold_path + '/' + imageName_new)
+        elif temp.endswith('__W.png'):
+            imageName_new = temp.replace('__W.png', "_W.png")
+            os.rename(fold_path + '/' + temp, fold_path + '/' + imageName_new)
+
 
 
 # 更具url，修改火狐截图_ 开头到图片的名称
@@ -120,7 +124,7 @@ def change_screenShotName(fold_path):
 
 # 识别IC——hot 图片里的热度信息并保存到数据库
 def rec_image(fold_path):
-    source_file = PathHelp.get_file_path('TInfenion_10H', 'TInfenion_10H.xlsx')
+    source_file = PathHelp.get_file_path('TInfenion_15H', 'TInfenion_15H.xlsx')
     file_name_list = os.listdir(fold_path)
     file_name_list.sort()
     print(f"file count is: {file_name_list.__len__()}")
@@ -139,14 +143,10 @@ def rec_image(fold_path):
 
 
 if __name__ == "__main__":
-    # rule_image_names(fold_path='/Users/liuhe/Desktop/progress/TSemiStar/IC_hot/TInfineionAgencyStock2_SemiStart_IC_hot')
-    rec_image(fold_path='/Users/liuhe/Desktop/progress/TInfineon/10H/hot_images/mac')
+    # rule_image_names(fold_path='/Users/liuhe/Desktop/1')
+    rec_image(fold_path='/Users/liuhe/Desktop/progress/TInfineon/15H/hot_images/04')
     # removepng(fold_path='/Users/liuhe/Desktop/IC_Hot_images')
     # rec_image("/Users/liuhe/Desktop/team_file/11hot/01IC_Hot_ACS")
-    # rec_image("/Users/liuhe/Desktop/team_file/11hot/01IC_Hot_ACS2")
-    # rec_image("/Users/liuhe/Desktop/team_file/SZ_Image/IC_Hot_ACS_SZ1")
-    # rec_image("/Users/liuhe/Desktop/team_file/SZ_Image/IC_Hot_ACS_SZ2")
-    # rec_image("/Users/liuhe/Desktop/team_file/04Hot_image/")
-    # change_screenShotName("/Users/liuhe/Desktop/progress/TDiscontinue/finished/ACS/IC_hot_Images/sz/2")
+    #  change_error_image_name(fold_path='/Users/liuhe/Desktop/1')
 
 

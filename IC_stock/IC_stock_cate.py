@@ -16,8 +16,8 @@ from WRTools import IPHelper, UserAgentHelper, ExcelHelp, WaitHelp, PathHelp
 sourceFile_dic = {'fileName': PathHelp.get_file_path("TInfenion_30H", 'TInfenion_30H.xlsx'),
                   'sourceSheet': 'ppn',
                   'colIndex': 1,
-                  'startIndex': 119,
-                  'endIndex': 125}   #
+                  'startIndex': 0,
+                  'endIndex': 100}   #
 
 result_file = PathHelp.get_file_path(super_path="TInfenion_30H", file_name='IC_stock.xlsx')
 
