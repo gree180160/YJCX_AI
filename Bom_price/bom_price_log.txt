@@ -9185,3 +9185,9 @@
 2023-02-22 11:41:25NVMFD5489NLT3G html 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"[id="yunexg"]"}
   (Session info: chrome=110.0.5481.100)
 
+2023-02-22 11:43:30NVMFD5489NLWFT1G html 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"[id="yunexg"]"}
+  (Session info: chrome=110.0.5481.100)
+
+2023-02-22 11:45:16NVMFD5489NLWFT3G html 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"[id="yunexg"]"}
+  (Session info: chrome=110.0.5481.100)
+
