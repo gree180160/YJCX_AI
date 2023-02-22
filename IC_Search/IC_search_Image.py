@@ -124,7 +124,7 @@ def change_screenShotName(fold_path):
 
 # 识别IC——hot 图片里的热度信息并保存到数据库
 def rec_image(fold_path):
-    source_file = PathHelp.get_file_path('TInfenion_15H', 'TInfenion_15H.xlsx')
+    source_file = PathHelp.get_file_path('TInfenion_20H', 'TInfenion_20H.xlsx')
     file_name_list = os.listdir(fold_path)
     file_name_list.sort()
     print(f"file count is: {file_name_list.__len__()}")
@@ -144,7 +144,7 @@ def rec_image(fold_path):
 
 if __name__ == "__main__":
     # rule_image_names(fold_path='/Users/liuhe/Desktop/1')
-    rec_image(fold_path='/Users/liuhe/Desktop/progress/TInfineon/15H/hot_images/04')
+    rec_image(fold_path='/Users/liuhe/Desktop/progress/TInfineon/20H/04TInfenion_20H/IC_hot_images')
     # removepng(fold_path='/Users/liuhe/Desktop/IC_Hot_images')
     # rec_image("/Users/liuhe/Desktop/team_file/11hot/01IC_Hot_ACS")
     #  change_error_image_name(fold_path='/Users/liuhe/Desktop/1')

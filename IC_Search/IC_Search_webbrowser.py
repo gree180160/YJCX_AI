@@ -13,10 +13,10 @@ def get_url(cate_name, isWeek) -> str:
 
 
 def open_url(isWeek):
-    pn_file = PathHelp.get_file_path('TInfenion_20H', 'TInfenion_20H.xlsx')
+    pn_file = PathHelp.get_file_path('TSumNvmNdt', 'Task.xlsx')
     ppn_list = ExcelHelp.read_col_content(file_name=pn_file, sheet_name='ppn', col_index=1)
     for (index, ppn) in enumerate(ppn_list):
-        if index in range(0, 100): #
+        if index in range(0, 74): #
             url = get_url(cate_name=ppn, isWeek=isWeek)
             print(f'index is：{index} USL is: {url}')
             # UserInput.input_url(url, wait_time_kind=1)
@@ -47,8 +47,8 @@ def input_cate(isWeek):
 
 
 def change_screenShotName(fold_path):
-    pn_file = PathHelp.get_file_path('TInfenion_20H', 'TInfenion_20H.xlsx')
-    ppn_list = ExcelHelp.read_col_content(file_name=pn_file, sheet_name='ppn', col_index=1)[94:125]
+    pn_file = PathHelp.get_file_path('TSumNvmNdt', 'Task.xlsx')
+    ppn_list = ExcelHelp.read_col_content(file_name=pn_file, sheet_name='ppn', col_index=1)[0:74]
     file_name_list = os.listdir(fold_path)
     valid_files = []
     for (index, temp) in enumerate(file_name_list):
@@ -67,6 +67,6 @@ def change_screenShotName(fold_path):
 
 if __name__ == '__main__':
     open_url(isWeek=True)
-    # change_screenShotName(fold_path='/Users/liuhe/Desktop/3')
+    # change_screenShotName(fold_path='/Users/liuhe/Desktop/temp_hot')
     # input_cate(True)
     # input_cate(False)

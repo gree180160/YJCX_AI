@@ -99,7 +99,7 @@ def createDayTask(project_file: str, start_index:int, end_index:int, aim_file):
     ExcelHelp.add_arr_to_sheet(file_name=aim_file, sheet_name='ppn', dim_arr=result)
 
 def get_unfinished_IC_hot_cates():
-    source_file = PathHelp.get_file_path('TInfineionAgencyStock2', 'TInfineonAgencyStock2.xlsx')
+    source_file = PathHelp.get_file_path('TSumNvmNdt', 'Task.xlsx')
     source_cates = ExcelHelp.read_col_content(file_name=source_file, sheet_name='source', col_index=1)
     unfinished_cates = source_cates
 
@@ -109,7 +109,13 @@ def get_unfinished_IC_hot_cates():
                       '/Users/liuhe/Desktop/progress/TDiscontinue/finished/TS25_IC_Hot.xlsx',
                       '/Users/liuhe/Desktop/progress/TDiscontinue/finished/TS29.xlsx',
                       '/Users/liuhe/Desktop/progress/TDiscontinue/finished/TMMS_NRV/TMMS_NRV.xlsx',
-                      '/Users/liuhe/Desktop/progress/TDiscontinue/finished/ACS/TACS_SI7.xlsx']
+                      '/Users/liuhe/Desktop/progress/TDiscontinue/finished/ACS/TACS_SI7.xlsx',
+                      '/Users/liuhe/Desktop/progress/TSemiStar/TSemiStart.xlsx',
+                      '/Users/liuhe/Desktop/progress/TMegSensor/TMagneticSensor.xlsx',
+                      '/Users/liuhe/Desktop/progress/TInfineon/5H/TInfenion_5H.xlsx',
+                      '/Users/liuhe/Desktop/progress/TInfineon/10H/TInfenion_10H.xlsx',
+                      '/Users/liuhe/Desktop/progress/TInfineon/15H/TInfenion_15H.xlsx',
+                      '/Users/liuhe/Desktop/progress/TInfineon/20H/TInfenion_20H.xlsx']
     finished_sets = set()
     for temp_file in finished_files:
         print(temp_file)
@@ -167,4 +173,4 @@ if __name__ == "__main__":
     # projectf_ile = PathHelp.get_file_path(None, 'TInfineon_keywords.xlsx')
     # current_task = PathHelp.get_file_path(None, 'TInfenion_20H.xlsx')
     # createDayTask(project_file=projectf_ile, start_index=1500, end_index=2000, aim_file=current_task)
-    get_finished_ppn()
+    get_unfinished_IC_hot_cates()

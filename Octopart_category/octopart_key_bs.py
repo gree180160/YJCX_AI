@@ -34,10 +34,10 @@ current_page = 1
 security_times = 0
 
 
-def get_url(key_name, page, alpha, manu_ids) -> str:
+def get_url(key_name, page, manu_ids) -> str:
     manu_param = '&manufacturer_id=' + manu_ids.replace(';', '&manufacturer_id=')
     page_param = '' if page == 1 else '&start=' + str(page*10 - 10)
-    url = f'https://octopart.com/search?q={key_name}{alpha}&currency=USD&specs=0{manu_param}{page_param}'
+    url = f'https://octopart.com/search?q={key_name}&currency=USD&specs=0{manu_param}{page_param}'
     return url
 
 
@@ -83,18 +83,18 @@ def has_content(soup) -> bool:
     return result
 
 
-def get_category(key_index, key_name,manu_ids, alpha):
+def get_category(key_index, key_name,manu_ids):
     global headers
     global current_page
     headers['User-Agent'] = UserAgentHelper.getRandowUA()
     headers['Connection'] = "close"
     QGHelp.reset_tunnel_proxy_headers()
     while current_page <= totol_page:
-        print(f'key_index is: {key_index} key_name is: {key_name} alpha is: {alpha} page is: {current_page}, toalpage is:{totol_page}')
-        url = get_url(key_name=key_name, page=current_page, alpha=alpha, manu_ids=manu_ids)
+        print(f'key_index is: {key_index} key_name is: {key_name} page is: {current_page}, toalpage is:{totol_page}')
+        url = get_url(key_name=key_name, page=current_page, manu_ids=manu_ids)
         try:
             se = QGHelp.new_session()
-            QGHelp.update_tunnel_proxy_headers("Proxy-TunnelID", key_name+alpha)
+            QGHelp.update_tunnel_proxy_headers("Proxy-TunnelID", key_name)
             respond = se.get(url, proxies=QGHelp.proxy, headers=headers)
             WaitHelp.waitfor(True, isDebug=False)  # todo test
             respond.encoding = 'utf-8'
@@ -114,12 +114,12 @@ def get_category(key_index, key_name,manu_ids, alpha):
             current_page += 1
             break
         set_totalpage(soup)
-        analyth_html(key_name=key_name, soup=soup, alpha=alpha)
+        analyth_html(key_name=key_name, soup=soup)
         current_page += 1
 
 
 # 解析html，获取cate，manu
-def analyth_html(key_name, soup, alpha):
+def analyth_html(key_name, soup):
     try:
         table = soup.select('div.jsx-2172888034.prices-view')[0]
         cate_first = table.select('div.jsx-2172888034')
@@ -146,18 +146,15 @@ def analyth_html(key_name, soup, alpha):
 
 
 def main():
-    add_alphabet_list = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U',
-                'V', 'W', 'X', 'Y', 'Z', '0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
     key_list = IC_stock_excel_read.get_cate_name_arr(file_name=keyword_source_file, sheet_name='all', col_index=2)
     manuid_list = ExcelHelp.read_col_content(file_name=keyword_source_file, sheet_name='all', col_index=3)
     for (key_index, key_name) in enumerate(key_list):
         if security_times > 3:
             return
         if key_index % 6 == 0 or key_index % 6 == 1:
-            for alpha in add_alphabet_list:
-                if security_times > 3:
-                    return
-                get_category(key_index=key_index, key_name=key_name, manu_ids=str(manuid_list[key_index]), alpha=alpha)
+            if security_times > 3:
+                return
+            get_category(key_index=key_index, key_name=key_name, manu_ids=str(manuid_list[key_index]))
 
 
 if __name__ == "__main__":

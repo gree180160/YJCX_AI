@@ -9,12 +9,12 @@ from findchips_stock_info import findchips_stock_info_onePart, findchips_stock_i
 
 ssl._create_default_https_context = ssl._create_unverified_context
 
-sourceFile_dic = {'fileName': PathHelp.get_file_path('TInfenion_35H', 'Task.xlsx'),
+sourceFile_dic = {'fileName': PathHelp.get_file_path('TSumNvmNdt', 'Task.xlsx'),
                   'sourceSheet': 'ppn',
                   'colIndex': 1,
                   'startIndex': 0,
-                  'endIndex': 100}
-result_save_file = PathHelp.get_file_path('TInfenion_35H', 'findchip_stock.xlsx')
+                  'endIndex': 74}
+result_save_file = PathHelp.get_file_path('TSumNvmNdt', 'findchip_stock.xlsx')
 
 log_file = '/Users/liuhe/PycharmProjects/SeleniumDemo/Findchips_stock/findchips_stock_log.txt'
 cookies = {'fc_locale':'zh-CN', 'fc_timezone':'Asia%2FShanghai'}
@@ -124,4 +124,4 @@ def main():
 
 if __name__ == '__main__':
     main()
-    # combine_result(["/Users/liuhe/Desktop/progress/TInfineon/30H/11/findchip_stock.xlsx", "/Users/liuhe/Desktop/progress/TInfineon/30H/sz/findchip_stock.xlsx", "/Users/liuhe/Desktop/progress/TInfineon/30H/04/findchip_stock.xlsx"], PathHelp.get_file_path('TInfenion_35H', 'findchip_stock.xlsx'))
+    # combine_result(["/Users/liuhe/Desktop/progress/TInfineon/35H/11/findchip_stock.xlsx", "/Users/liuhe/Desktop/progress/TInfineon/35H/sz/findchip_stock.xlsx", "/Users/liuhe/Desktop/progress/TInfineon/35H/04/findchip_stock.xlsx"], PathHelp.get_file_path('TInfenion_35H', 'findchip_stock.xlsx'))

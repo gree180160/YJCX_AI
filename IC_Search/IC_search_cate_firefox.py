@@ -22,12 +22,12 @@ driver = webdriver.Firefox()
 # driver.set_window_size(height=800, width=1200)
 current_cate_has_date = True
 
-sourceFile_dic = {'fileName': PathHelp.get_file_path('TInfenion_30H', 'TInfenion_30H.xlsx'),
+sourceFile_dic = {'fileName': PathHelp.get_file_path('TInfenion_25H', 'TInfenion_25H.xlsx'),
                   'sourceSheet': 'ppn',
                   'colIndex': 1,
                   'startIndex': 0,
-                  'endIndex': 125}
-result_save_file = PathHelp.get_file_path('TInfenion_30H', 'findchip_stock.xlsx')
+                  'endIndex': 2}
+result_save_file = PathHelp.get_file_path('TInfenion_25H', 'findchip_stock.xlsx')
 login_url = "https://member.ic.net.cn/login.php"
 no_data_url = 'https://icpi.ic.net.cn/'
 
@@ -53,12 +53,10 @@ def login_action(aim_url):
         WaitHelp.waitfor_octopart(False, False)
 
 
-
-
 # 获取单个型号热度信息
 # cate_name：型号
 # isWeek：【周/月】搜索指数
-def search_hotInfo(cate_name,cate_index, isWeek):
+def search_hotInfo(cate_name, cate_index, isWeek):
     if isWeek:
         search_url = f'https://icpi.ic.net.cn/icpi/detail.php?key={cate_name}'
     else:
@@ -110,7 +108,7 @@ def main():
                                            col_index=sourceFile_dic['colIndex'])
     for (ppn_index, ppn_name) in enumerate(ppns):
         print(f'index is: {ppn_index}  index is: {ppn_name}')
-        search_hotInfo(cate_name=ppn_name,cate_index=ppn_index, isWeek=True)
+        search_hotInfo(cate_name=ppn_name, cate_index=ppn_index, isWeek=True)
 
 
 # print('识别到的中文')

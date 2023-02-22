@@ -13,13 +13,13 @@ from WRTools import IPHelper, UserAgentHelper, ExcelHelp, WaitHelp, PathHelp
 
 # ssl._create_default_https_context = ssl._create_unverified_context
 
-sourceFile_dic = {'fileName': PathHelp.get_file_path("TInfenion_35H", 'Task.xlsx'),
+sourceFile_dic = {'fileName': PathHelp.get_file_path("TSumNvmNdt", 'Task.xlsx'),
                   'sourceSheet': 'ppn',
                   'colIndex': 1,
                   'startIndex': 0,
-                  'endIndex': 100}   #
+                  'endIndex': 74}   #
 
-result_file = PathHelp.get_file_path(super_path="TInfenion_35H", file_name='IC_stock.xlsx')
+result_file = PathHelp.get_file_path(super_path="TSumNvmNdt", file_name='IC_stock.xlsx')
 
 total_page = 1
 
@@ -73,7 +73,7 @@ def login_action(aim_url):
             driver.get(aim_url)
         elif driver.current_url.startswith('https://www.ic.net.cn/search'): # 查询过程中出现登录
             driver.get(aim_url)
-        WaitHelp.waitfor_octopart(False, False)
+        WaitHelp.waitfor_account_import(False, False)
 
 
 # 转换cate 中的特殊字符
@@ -93,7 +93,7 @@ def get_stock(cate_index, cate_name):
     driver.get(search_url)
     login_action(search_url)
     # 延时几秒确保页面加载完毕
-    WaitHelp.waitfor_account_import(False, False)
+    WaitHelp.waitfor_account_import(True, False)
     checkVerificationCodePage()
     # page_content = driver.page_source
     # print("page content is：", page_content)

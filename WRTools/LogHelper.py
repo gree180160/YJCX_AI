@@ -6,11 +6,14 @@ import time
 # 写入日志
 def write_log(log_file_name, content):
     print(content)
-    save_content = befor_anchor(content, 'Stacktrace:')
-    save_content = time.strftime('%Y-%m-%d %H:%M:%S', time.localtime()) + save_content
-    file = open(log_file_name, 'a+')
-    file.write(save_content + "\n")
-    file.close()
+    try:
+        save_content = befor_anchor(content, 'Stacktrace:')
+        save_content = time.strftime('%Y-%m-%d %H:%M:%S', time.localtime()) + save_content
+        file = open(log_file_name, 'a+')
+        file.write(save_content + "\n")
+        file.close()
+    except:
+        print(f'{log_file_name} ! write error log error')
 
 
 def befor_anchor(source, anchor) -> string:

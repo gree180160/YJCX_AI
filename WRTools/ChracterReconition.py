@@ -157,11 +157,11 @@ def SplitPic_week(source_pic: str):
     #     h = 30 * scale
     #     space = 36 * scale
     # #11&SZ-02
-    # x = wid / 2 - 100 - 116
-    # y = 985 * scale
-    # w = 116 * scale
-    # h = 30 * scale
-    # space = 36 * scale
+    x = wid / 2 - 100 - 116
+    y = 980 * scale
+    w = 116 * scale
+    h = 30 * scale
+    space = 36 * scale
     # 04
     # x = wid / 2 - 80 - 116
     # y = 890 * scale - (2852*scale - hei)
@@ -169,11 +169,11 @@ def SplitPic_week(source_pic: str):
     # h = 26.5 * scale
     # space = 32.5 * scale
     # after 0215
-    x = wid / 2 - 100 - 116
-    y = 978 * scale
-    w = 116 * scale
-    h = 30 * scale
-    space = 36 * scale
+    # x = wid / 2 - 100 - 116
+    # y = 978 * scale
+    # w = 116 * scale
+    # h = 30 * scale
+    # space = 36 * scale
     search_record = []
     for index in range(0, 52):
         # 开始截取
@@ -213,11 +213,11 @@ def SplitPic_month(source_pic: str):
     #     h = 30 * scale
     #     space = 36 * scale
     # 11-01,sz
-    # x = wid/2 - 100.00 - 116
-    # y = 985 * scale
-    # w = 116 * scale
-    # h = 30 * scale
-    # space = 36 * scale
+    x = wid/2 - 100.00 - 116
+    y = 980 * scale
+    w = 116 * scale
+    h = 30 * scale
+    space = 36 * scale
 
     # 04
     # x = wid/2 - 200*scale
@@ -226,11 +226,11 @@ def SplitPic_month(source_pic: str):
     # h = 26.5 * scale
     # space = 32.5 * scale
     # after 0215
-    x = wid/2 - 100.00 - 116
-    y = 980 * scale
-    w = 116 * scale
-    h = 30 * scale
-    space = 36 * scale
+    # x = wid/2 - 100.00 - 116
+    # y = 980 * scale
+    # w = 116 * scale
+    # h = 30 * scale
+    # space = 36 * scale
     search_record = []
     for index in range(0, 12):
         # 开始截取
@@ -244,13 +244,13 @@ def SplitPic_month(source_pic: str):
 
 def test_ppn_value(fold_path: str):
     temp = '火狐截图_2023-02-11T07-17-21.748Z.png'
-    # temp = 'TLE493DW2B6A0HTSA1_M.png'
+    #temp = 'TLE493DW2B6A0HTSA1_M.png'
     return get_ppn(fold_path=fold_path, image_name=fold_path + '/' + temp)
 
 
 def test_hot_value(fold_path: str):
-    #temp = 'CY8C3244AXI-153_M.png' # 1911×1724
-    temp = 'CY8C3244AXI-153_W.png' # 1911×3164
+    temp = 'CY8C4125LQI-S433_M.png' # 1911×1724
+    # temp = 'CY8C4125LQI-S433_W.png' # 1911×3164
     if temp.endswith('_M.png'):
         image_hot_data = SplitPic_month(fold_path + '/' + temp)
     elif temp.endswith('_W.png'):
@@ -263,5 +263,5 @@ if __name__ == "__main__":
     # useFold('/Users/liuhe/Desktop/hot_img')
     # print(result_str)
     # SplitPic('/Users/liuhe/Desktop/识图test/88.png')
-    result = test_hot_value(fold_path='/Users/liuhe/Desktop/progress/TInfineon/15H/hot_images/04')
+    result = test_hot_value(fold_path='/Users/liuhe/Desktop/progress/TInfineon/20H/04TInfenion_20H/IC_hot_images')
     print(result)

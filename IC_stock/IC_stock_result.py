@@ -12,12 +12,12 @@ import time
 from WRTools import PathHelp
 
 
-cate_source_file = PathHelp.get_file_path("TInfenion_30H", 'TInfenion_30H.xlsx')
+cate_source_file = PathHelp.get_file_path("TInfenion_35H", 'Task.xlsx')
 result_save_file = cate_source_file
-ICStock_file_arr = ['/Users/liuhe/Desktop/progress/TInfineon/30H/11/IC_stock.xlsx',
-                '/Users/liuhe/Desktop/progress/TInfineon/30H/04/IC_stock.xlsx',
-                '/Users/liuhe/Desktop/progress/TInfineon/30H/sz/IC_stock.xlsx',
-                '/Users/liuhe/PycharmProjects/SeleniumDemo/TInfenion_30H/IC_stock.xlsx']
+ICStock_file_arr = ['/Users/liuhe/Desktop/progress/TInfineon/35H/11/IC_stock.xlsx',
+                '/Users/liuhe/Desktop/progress/TInfineon/35H/04/IC_stock.xlsx',
+                '/Users/liuhe/Desktop/progress/TInfineon/35H/sz/IC_stock.xlsx',
+                '/Users/liuhe/PycharmProjects/SeleniumDemo/TInfenion_35H/IC_stock.xlsx']
 
 
 
