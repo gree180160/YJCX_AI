@@ -1,14 +1,12 @@
 # 根据关键字查找P/N, manu
 from bs4 import BeautifulSoup
-import time
-from WRTools import IPHelper, UserAgentHelper, LogHelper, PathHelp, EmailHelper, ExcelHelp
-from IC_stock import IC_stock_excel_read, IC_Stock_excel_write
-from urllib.parse import urlparse, parse_qs, parse_qsl
+from WRTools import LogHelper, PathHelp, ExcelHelp
+from Manager import URLManager
+from urllib.parse import parse_qs
 import os
 import re
 from urllib.parse import urlparse
-import html5lib
-import json
+
 
 default_url = 'https://octopart.com/'
 keyword_source_file = PathHelp.get_file_path('TInfineionAgencyStock2', 'TInfineonAgencyStock2.xlsx')
@@ -21,13 +19,6 @@ current_page = 1
 security_times = 0
 
 
-def get_url(key_name, page, alpha, manu_ids) -> str:
-    manu_param = '&manufacturer_id=' + manu_ids.replace(';', '&manufacturer_id=')
-    page_param = '' if page == 1 else '&start=' + str(page * 10 - 10)
-    url = f'view-source:https://octopart.com/search?q={key_name}{alpha}&currency=USD&specs=0{manu_param}{page_param}'
-    return url
-
-
 # 验证是否处于验证IP 页面
 def is_security_check(soup) -> bool:
     global security_times
@@ -37,7 +28,7 @@ def is_security_check(soup) -> bool:
         if alert and len(alert) > 0:
             result = True
             security_times += 1
-            EmailHelper.mail_ip_error("mac")
+            # EmailHelper.mail_ip_error("mac")
             # QGHelp.maintainWhiteList()
             # time.sleep(60)
     except:
@@ -77,18 +68,6 @@ def get_category(fold_path, file_name, key_name, alpha):
     soup = BeautifulSoup(htmlhandle, 'html5lib')
     set_totalpage(soup)
     analyth_html(key_name=key_name, soup=soup, alpha=alpha, htmlhandle=htmlhandle)
-
-
-# 验证是否处于验证IP 页面
-def is_security_check(soup) -> bool:
-    result = False
-    try:
-        alert = soup.select('div.inner.narrow')
-        if alert and len(alert) > 0:
-            result = True
-    except:
-        result = False
-    return result
 
 
 # 解析html，获取cate，manu
@@ -188,9 +167,7 @@ def main():
         print(f'file name is: {file_name}')
         dic = getInfoByFileName(file_name)
         try:
-            keyAndalpha = dic['q'][0]
-            key = keyAndalpha[0:-1]
-            alpha = keyAndalpha[-1]
+            key = dic['q'][0]
         except:
             LogHelper.write_log(log_file_name=log_file, content='parameter q is none')
             continue
@@ -202,8 +179,7 @@ def main():
                 page = '0'
         except:
             page = '0'
-        get_category(fold_path=fold_path, file_name=file_name, key_name=key,
-                     alpha=alpha)
+        get_category(fold_path=fold_path, file_name=file_name, key_name=key)
 
 
 # 比较两个url 是否相同
@@ -228,7 +204,11 @@ def get_unfinished_urls(keyword_source_file: str, finished_html_files_fold: str)
     finished_ppn = get_finished_ppn(fold_path=finished_html_files_fold)
     for (ppn_index, temp_ppn) in enumerate(all_ppn):
         if not temp_ppn in finished_ppn:
-            url = get_url(key_name=temp_ppn, alpha='', page=0, manu_ids='453;202;706;12547;196')
+            if temp_ppn.startswith("SUM"):
+                manu_ids = ''
+            else:
+                manu = URLManager.Octopart_manu.NoManu
+                url = URLManager.octopart_get_page_url(key_name=temp_ppn, page=1, manu=manu)
             result.append([url])
     print(result)
     ExcelHelp.add_arr_to_sheet(file_name=keyword_source_file, sheet_name='unfinished_url', dim_arr=result)
@@ -237,4 +217,4 @@ def get_unfinished_urls(keyword_source_file: str, finished_html_files_fold: str)
 if __name__ == "__main__":
     # main()
     # get_category(fold_path=fold_path, file_name='https __octopart.com_search q=TLE493DW2B6&currency=USD&specs=0&manufacturer_id=453&manufacturer_id=202&manufacturer_id=706&manufacturer_id=12547&manufacturer_id=196.html', key_name='TLE4961-1', alpha='L')
-    get_unfinished_urls(keyword_source_file=PathHelp.get_file_path('TInfineionAgencyStock2', 'TInfineonAgencyStock2.xlsx') , finished_html_files_fold ='/Users/liuhe/Desktop/progress/TInfineonAgencyStock2/octopart_html_files')
+    get_unfinished_urls(keyword_source_file=PathHelp.get_file_path('TSumNvmNdt', 'Task.xlsx') , finished_html_files_fold ='/Users/liuhe/Desktop/progress/TDiscontinue/TSumNvmNdt/octopart_html_files')

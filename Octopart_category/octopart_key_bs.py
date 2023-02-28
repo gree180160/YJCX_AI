@@ -34,13 +34,6 @@ current_page = 1
 security_times = 0
 
 
-def get_url(key_name, page, manu_ids) -> str:
-    manu_param = '&manufacturer_id=' + manu_ids.replace(';', '&manufacturer_id=')
-    page_param = '' if page == 1 else '&start=' + str(page*10 - 10)
-    url = f'https://octopart.com/search?q={key_name}&currency=USD&specs=0{manu_param}{page_param}'
-    return url
-
-
 # 验证是否处于验证IP 页面
 def is_security_check(soup) -> bool:
     global security_times

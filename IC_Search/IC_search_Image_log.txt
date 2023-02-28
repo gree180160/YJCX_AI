@@ -2603,3 +2603,198 @@
 3: 303
 4: 303
 
+2023-02-22 22:31:04/Users/liuhe/Desktop/progress/TDiscontinue/TSumNvmNdt/11/IC_hot_images/CY8C4014SXS-421Z_M.png  5th---  1: 20
+2: 20
+3: 29
+4: 20
+
+2023-02-22 22:31:04/Users/liuhe/Desktop/progress/TDiscontinue/TSumNvmNdt/11/IC_hot_images/CY8C4014SXS-421Z_M.png  6th---  1: 20
+2: 20
+3: 29
+4: 20
+
+2023-02-22 22:31:05/Users/liuhe/Desktop/progress/TDiscontinue/TSumNvmNdt/11/IC_hot_images/CY8C4014SXS-421Z_M.png  9th---  1: 3
+2: 83
+3: 93
+4: 83
+
+2023-02-22 22:33:39/Users/liuhe/Desktop/progress/TDiscontinue/TSumNvmNdt/11/IC_hot_images/CY8C4014SXS-421Z_W.png  46th---  1: 51
+2: 51
+3: 61
+4: 51
+
+2023-02-22 23:25:25/Users/liuhe/PycharmProjects/SeleniumDemo/TSumNvmNdt/IC_hot_images/NDT454P_W.png  28th---  1: 411
+2: 41
+3: 441
+4: 41
+
+2023-02-22 23:26:16/Users/liuhe/PycharmProjects/SeleniumDemo/TSumNvmNdt/IC_hot_images/NDT454P_W.png  28th---  1: 411
+2: 41
+3: 441
+4: 41
+
+2023-02-22 23:37:58/Users/liuhe/PycharmProjects/SeleniumDemo/TSumNvmNdt/IC_hot_images/NVMFD5853NT1G_M.png  11th---  1: 43
+2: 28
+3: 28
+4: 28
+
+2023-02-22 23:39:04/Users/liuhe/PycharmProjects/SeleniumDemo/TSumNvmNdt/IC_hot_images/NVMFD5877NLT1G_W.png  1th---  1: 43
+2: 28
+3: 28
+4: 28
+
+2023-02-22 23:39:56/Users/liuhe/PycharmProjects/SeleniumDemo/TSumNvmNdt/IC_hot_images/NVMFD5877NLWFT3G_W.png  18th---  1: 43
+2: 28
+3: 28
+4: 28
+
+2023-02-22 23:40:54/Users/liuhe/PycharmProjects/SeleniumDemo/TSumNvmNdt/IC_hot_images/NVMFS5826NLT1G_M.png  0th---  1: 43
+2: 28
+3: 28
+4: 28
+
+2023-02-24 15:06:35/Users/liuhe/Desktop/progress/TInfineon/25H/04/IC_hot_images/CY8C4A45AZI-483_M.png  8th---  1: 28
+2: 23
+3: 22
+4: 23
+
+2023-02-24 15:07:26/Users/liuhe/Desktop/progress/TInfineon/25H/04/IC_hot_images/CY8C4A45AZI-483_M.png  8th---  1: 28
+2: 23
+3: 22
+4: 23
+
+2023-02-24 15:22:41/Users/liuhe/Desktop/progress/TInfineon/25H/04/IC_hot_images/CY8C5266FNI-LP205T_M.png  4th---  1: 308
+2: 303
+3: 303
+4: 303
+
+2023-02-24 15:23:14/Users/liuhe/Desktop/progress/TInfineon/25H/04/IC_hot_images/CY8C5267LTI-LP089_M.png  5th---  1: 1254
+2: 1254
+3: 4254
+4: 1254
+
+2023-02-24 15:29:39/Users/liuhe/Desktop/progress/TInfineon/25H/04/IC_hot_images/CY8C5668LTI-LP014_M.png  4th---  1: 308
+2: 303
+3: 303
+4: 303
+
+2023-02-24 16:16:20/Users/liuhe/Desktop/progress/TInfineon/25H/11/IC_hot_images/CY8C4245AXI-483_M.png  5th---  1: 1584
+2: 1584
+3: 4584
+4: 1584
+
+2023-02-24 16:48:57/Users/liuhe/PycharmProjects/SeleniumDemo/TInfenion_25H/IC_hot_images/CY8C4147AZI-S475_W.png  2th---  1: 49
+2: 45
+3: 43
+4: 45
+
+2023-02-24 16:48:59/Users/liuhe/PycharmProjects/SeleniumDemo/TInfenion_25H/IC_hot_images/CY8C4147AZI-S475_W.png  8th---  1: 53
+2: 33
+3: 33
+4: 33
+
+2023-02-24 16:49:01/Users/liuhe/PycharmProjects/SeleniumDemo/TInfenion_25H/IC_hot_images/CY8C4147AZI-S475_W.png  17th---  1: 30
+2: 30
+3: 90
+4: 30
+
+2023-02-24 16:49:01/Users/liuhe/PycharmProjects/SeleniumDemo/TInfenion_25H/IC_hot_images/CY8C4147AZI-S475_W.png  19th---  1: 30
+2: 30
+3: 90
+4: 30
+
+2023-02-24 16:49:04/Users/liuhe/PycharmProjects/SeleniumDemo/TInfenion_25H/IC_hot_images/CY8C4147AZI-S475_W.png  31th---  1: 53
+2: 33
+3: 33
+4: 33
+
+2023-02-24 16:49:09/Users/liuhe/PycharmProjects/SeleniumDemo/TInfenion_25H/IC_hot_images/CY8C4147AZI-S475_W.png  51th---  1: 98
+2: 38
+3: 38
+4: 38
+
+2023-02-24 16:59:49/Users/liuhe/PycharmProjects/SeleniumDemo/TInfenion_25H/IC_hot_images/CY8C4147AZS-S475_W.png  46th---  1: 308
+2: 303
+3: 303
+4: 303
+
+2023-02-24 17:01:54/Users/liuhe/PycharmProjects/SeleniumDemo/TInfenion_25H/IC_hot_images/CY8C5867LTI-LP028_M.png  8th---  1: 43
+2: 28
+3: 28
+4: 28
+
+2023-02-24 17:03:05/Users/liuhe/PycharmProjects/SeleniumDemo/TInfenion_25H/IC_hot_images/CY8C5868LTI-LP038_W.png  4th---  1: 43
+2: 28
+3: 28
+4: 28
+
+2023-02-24 17:04:00/Users/liuhe/PycharmProjects/SeleniumDemo/TInfenion_25H/IC_hot_images/CY8C5888AXQ-LP096_W.png  16th---  1: 43
+2: 28
+3: 28
+4: 28
+
+2023-02-24 17:05:10/Users/liuhe/PycharmProjects/SeleniumDemo/TInfenion_25H/IC_hot_images/CY8C5888LTQ-LP097_W.png  24th---  1: 43
+2: 28
+3: 28
+4: 28
+
+2023-02-27 10:19:26/Users/liuhe/PycharmProjects/SeleniumDemo/TInfenion_30H/IC_hot_images/CY8C6247BZI-D54_W.png  48th---  1: 43
+2: 28
+3: 28
+4: 28
+
+2023-02-27 10:22:35/Users/liuhe/PycharmProjects/SeleniumDemo/TInfenion_30H/IC_hot_images/CY8C6347BZI-BLD53_W.png  24th---  1: 43
+2: 28
+3: 28
+4: 28
+
+2023-02-27 10:22:39/Users/liuhe/PycharmProjects/SeleniumDemo/TInfenion_30H/IC_hot_images/CY8C6347BZI-BLD53_W.png  39th---  1: 43
+2: 28
+3: 28
+4: 28
+
+2023-02-27 10:23:31/Users/liuhe/PycharmProjects/SeleniumDemo/TInfenion_30H/IC_hot_images/CY8C6347FMI-BLD53T_W.png  39th---  1: 43
+2: 28
+3: 28
+4: 28
+
+2023-02-27 10:24:45/Users/liuhe/PycharmProjects/SeleniumDemo/TInfenion_30H/IC_hot_images/CY8C9540A-24PVXIT_M.png  6th---  1: 43
+2: 28
+3: 28
+4: 28
+
+2023-02-27 10:25:50/Users/liuhe/PycharmProjects/SeleniumDemo/TInfenion_30H/IC_hot_images/CY8C9560A-24AXI_W.png  45th---  1: 43
+2: 28
+3: 28
+4: 28
+
+2023-02-27 10:25:51/Users/liuhe/PycharmProjects/SeleniumDemo/TInfenion_30H/IC_hot_images/CY8C9560A-24AXI_W.png  48th---  1: 43
+2: 28
+3: 28
+4: 28
+
+2023-02-27 10:25:51/Users/liuhe/PycharmProjects/SeleniumDemo/TInfenion_30H/IC_hot_images/CY8C9560A-24AXI_W.png  49th---  1: 43
+2: 28
+3: 28
+4: 28
+
+2023-02-27 10:25:52/Users/liuhe/PycharmProjects/SeleniumDemo/TInfenion_30H/IC_hot_images/CY8C9560A-24AXI_W.png  51th---  1: 43
+2: 28
+3: 28
+4: 28
+
+2023-02-27 10:28:04/Users/liuhe/PycharmProjects/SeleniumDemo/TInfenion_30H/IC_hot_images/CY8CMBR3102-SX1IT_M.png  10th---  1: 215
+2: 215
+3: 715
+4: 215
+
+2023-02-27 10:30:57/Users/liuhe/PycharmProjects/SeleniumDemo/TInfenion_30H/IC_hot_images/CY8CMBR3116-LQXIT_W.png  51th---  1: 215
+2: 215
+3: 715
+4: 215
+
+2023-02-27 11:36:11/Users/liuhe/Desktop/progress/TInfineon/30H/11/IC_hot_images/CYAT81658-64AS48_W.png  12th---  1: 28
+2: 23
+3: 22
+4: 23
+

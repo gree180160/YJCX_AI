@@ -13,19 +13,18 @@ from WRTools import IPHelper, UserAgentHelper, ExcelHelp, WaitHelp, PathHelp
 
 # ssl._create_default_https_context = ssl._create_unverified_context
 
-sourceFile_dic = {'fileName': PathHelp.get_file_path("TSumNvmNdt", 'Task.xlsx'),
+sourceFile_dic = {'fileName': PathHelp.get_file_path("TInfenion_50H", 'Task.xlsx'),
                   'sourceSheet': 'ppn',
                   'colIndex': 1,
-                  'startIndex': 0,
-                  'endIndex': 74}   #
+                  'startIndex': 32,
+                  'endIndex': 125}   #
 
-result_file = PathHelp.get_file_path(super_path="TSumNvmNdt", file_name='IC_stock.xlsx')
+result_file = PathHelp.get_file_path(super_path="TInfenion_50H", file_name='IC_stock.xlsx')
 
 total_page = 1
 
 current_page = 1
 VerificationCodePage = 0
-# accouts_arr = [["18571227953", "Yjcx123"]]
 accouts_arr = [[AccountMange.IC_stock['n'], AccountMange.IC_stock['p']]]
 # driver_option = webdriver.ChromeOptions()
 # driver_option.add_argument(f'--proxy-server=http://{IPHelper.getRandowCityIP()}')

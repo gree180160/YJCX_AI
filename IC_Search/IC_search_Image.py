@@ -97,13 +97,19 @@ def ppn_checkChange(ppn: str):
 def change_error_image_name(fold_path):
     file_name_list = os.listdir(fold_path)
     file_name_list.sort()
+    T20H_ppn = ExcelHelp.read_col_content(file_name='/Users/liuhe/Desktop/progress/TInfineon/20H/TInfenion_20H.xlsx', sheet_name='ppn', col_index=1)
+    TNV_ppn = ExcelHelp.read_col_content(file_name=PathHelp.get_file_path('TSumNvmNdt', 'Task.xlsx'), sheet_name='ppn', col_index=1)
     for temp in file_name_list:
-        if temp.endswith('__M.png'):
-            imageName_new = temp.replace('__M.png', "_M.png")
-            os.rename(fold_path + '/' + temp, fold_path + '/' + imageName_new)
-        elif temp.endswith('__W.png'):
-            imageName_new = temp.replace('__W.png', "_W.png")
-            os.rename(fold_path + '/' + temp, fold_path + '/' + imageName_new)
+        if temp.endswith('.png'):
+            error_ppn = temp[0:-6]
+            right_index = T20H_ppn.index(error_ppn)
+            new_ppn = TNV_ppn[right_index]
+            if temp.endswith('_M.png'):
+                imageName_new = new_ppn + "_M.png"
+                os.rename(fold_path + '/' + temp, fold_path + '/' + imageName_new)
+            elif temp.endswith('_W.png'):
+                imageName_new = new_ppn + "_W.png"
+                os.rename(fold_path + '/' + temp, fold_path + '/' + imageName_new)
 
 
 
@@ -124,7 +130,7 @@ def change_screenShotName(fold_path):
 
 # 识别IC——hot 图片里的热度信息并保存到数据库
 def rec_image(fold_path):
-    source_file = PathHelp.get_file_path('TInfenion_20H', 'TInfenion_20H.xlsx')
+    source_file = PathHelp.get_file_path('TAlice_stock', 'Task.xlsx')
     file_name_list = os.listdir(fold_path)
     file_name_list.sort()
     print(f"file count is: {file_name_list.__len__()}")
@@ -144,9 +150,9 @@ def rec_image(fold_path):
 
 if __name__ == "__main__":
     # rule_image_names(fold_path='/Users/liuhe/Desktop/1')
-    rec_image(fold_path='/Users/liuhe/Desktop/progress/TInfineon/20H/04TInfenion_20H/IC_hot_images')
+    rec_image(fold_path='/Users/liuhe/PycharmProjects/SeleniumDemo/TAlice_stock/IC_hot_images')
     # removepng(fold_path='/Users/liuhe/Desktop/IC_Hot_images')
     # rec_image("/Users/liuhe/Desktop/team_file/11hot/01IC_Hot_ACS")
-    #  change_error_image_name(fold_path='/Users/liuhe/Desktop/1')
+    # change_error_image_name(fold_path='/Users/liuhe/Desktop/progress/TDiscontinue/TSumNvmNdt/11/IC_hot_images')
 
 

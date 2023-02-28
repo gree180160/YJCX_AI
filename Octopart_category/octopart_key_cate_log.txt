@@ -755,3 +755,28 @@
 2023-02-16 15:43:56IRFB3207ZPBF 默认打开的内容解析异常：list index out of range 
 2023-02-16 15:43:57IRF6785MTRPBF 默认打开的内容解析异常：list index out of range 
 2023-02-16 15:43:59IRFR9024NTRPBF 默认打开的内容解析异常：list index out of range 
+2023-02-23 11:05:21https __octopart.com_search q=NDT451AN_J23Z&currency=USD&specs=0&manufacturer_id=278.html all_cates exception:list index out of range
+2023-02-23 11:05:22https __octopart.com_search q=NVMFS6B03NLWFT3G&currency=USD&specs=0&manufacturer_id=278.htm all_cates exception:list index out of range
+2023-02-23 11:05:29NVMFS4C310NT3G 默认打开的内容解析异常：list index out of range 
+2023-02-23 11:05:38REPLACE TO SUM85N03-06P-E3 默认打开的内容解析异常：list index out of range 
+2023-02-23 11:05:46NVMFS4C310NWFT3G 默认打开的内容解析异常：list index out of range 
+2023-02-23 11:05:47NVMFS5C404NWFT1G-M 默认打开的内容解析异常：list index out of range 
+2023-02-23 11:05:48SUM60N02-3M9P=E3 默认打开的内容解析异常：list index out of range 
+2023-02-23 11:05:52NVMFS5C404NWFT3G-K 默认打开的内容解析异常：list index out of range 
+2023-02-23 11:06:00NVMFS5C404NWFT1G-M 默认打开的内容解析异常：list index out of range 
+2023-02-23 11:06:02https __octopart.com_search q=SUM40N02-12P-E3&currency=USD&specs=0&manufacturer_id=30.htm all_cates exception:list index out of range
+2023-02-23 11:06:27NVMFS5C404NWFT3G-K 默认打开的内容解析异常：list index out of range 
+2023-02-28 09:47:49MAX3373EEKATG077 默认打开的内容解析异常：list index out of range 
+2023-02-28 09:47:49SX1262IMLTRT-CUT 默认打开的内容解析异常：list index out of range 
+2023-02-28 09:47:51MAX5969BETBTDKRND 默认打开的内容解析异常：list index out of range 
+2023-02-28 09:47:51MAX5969BETBTCTND 默认打开的内容解析异常：list index out of range 
+2023-02-28 09:47:51MAX5969BETBTTRND 默认打开的内容解析异常：list index out of range 
+2023-02-28 09:47:55MAX823REUKTG075 默认打开的内容解析异常：list index out of range 
+2023-02-28 09:47:55MAX823REUKTT 默认打开的内容解析异常：list index out of range 
+2023-02-28 10:58:01MAX3373EEKATG077 默认打开的内容解析异常：list index out of range 
+2023-02-28 10:58:02SX1262IMLTRT-CUT 默认打开的内容解析异常：list index out of range 
+2023-02-28 10:58:03MAX5969BETBTDKRND 默认打开的内容解析异常：list index out of range 
+2023-02-28 10:58:04MAX5969BETBTCTND 默认打开的内容解析异常：list index out of range 
+2023-02-28 10:58:04MAX5969BETBTTRND 默认打开的内容解析异常：list index out of range 
+2023-02-28 10:58:08MAX823REUKTG075 默认打开的内容解析异常：list index out of range 
+2023-02-28 10:58:08MAX823REUKTT 默认打开的内容解析异常：list index out of range 

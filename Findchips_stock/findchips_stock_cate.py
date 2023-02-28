@@ -9,12 +9,12 @@ from findchips_stock_info import findchips_stock_info_onePart, findchips_stock_i
 
 ssl._create_default_https_context = ssl._create_unverified_context
 
-sourceFile_dic = {'fileName': PathHelp.get_file_path('TSumNvmNdt', 'Task.xlsx'),
+sourceFile_dic = {'fileName': PathHelp.get_file_path('TInfenion_50H', 'Task.xlsx'),
                   'sourceSheet': 'ppn',
                   'colIndex': 1,
                   'startIndex': 0,
-                  'endIndex': 74}
-result_save_file = PathHelp.get_file_path('TSumNvmNdt', 'findchip_stock.xlsx')
+                  'endIndex': 125}
+result_save_file = PathHelp.get_file_path('TInfenion_50H', 'findchip_stock.xlsx')
 
 log_file = '/Users/liuhe/PycharmProjects/SeleniumDemo/Findchips_stock/findchips_stock_log.txt'
 cookies = {'fc_locale':'zh-CN', 'fc_timezone':'Asia%2FShanghai'}
@@ -104,7 +104,7 @@ def get_findchips_stock(cate_index, cate_name, send_email):
 def combine_result(source_files:[], aim_file):
     source_result = []
     for temp in source_files:
-        data = ExcelHelp.read_sheet_content_by_name(file_name=temp, sheet_name='findchips_stock')
+        data = ExcelHelp.read_sheet_content_by_name(file_name=temp, sheet_name='findchip_stock')
         ExcelHelp.add_arr_to_sheet(file_name=aim_file, sheet_name='findchip_stock', dim_arr=data)
         time.sleep(2.0)
 
@@ -124,4 +124,4 @@ def main():
 
 if __name__ == '__main__':
     main()
-    # combine_result(["/Users/liuhe/Desktop/progress/TInfineon/35H/11/findchip_stock.xlsx", "/Users/liuhe/Desktop/progress/TInfineon/35H/sz/findchip_stock.xlsx", "/Users/liuhe/Desktop/progress/TInfineon/35H/04/findchip_stock.xlsx"], PathHelp.get_file_path('TInfenion_35H', 'findchip_stock.xlsx'))
+    # combine_result(["/Users/liuhe/Desktop/progress/TInfineon/45H/11/findchip_stock.xlsx", "/Users/liuhe/Desktop/progress/TInfineon/45H/sz/findchip_stock.xlsx", "/Users/liuhe/Desktop/progress/TInfineon/45H/04/findchip_stock.xlsx"], PathHelp.get_file_path('TInfenion_45H', 'findchip_stock.xlsx'))

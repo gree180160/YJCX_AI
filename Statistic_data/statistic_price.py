@@ -16,11 +16,15 @@ import Bom_price.bom_price_info
 ssl._create_default_https_context = ssl._create_unverified_context
 
 
-cate_source_file = PathHelp.get_file_path(super_path="TInfineionAgencyStock2", file_name='TInfineonAgencyStock2.xlsx')
+cate_source_file = PathHelp.get_file_path(super_path="TAlice_stock", file_name='Task.xlsx')
 result_save_file = cate_source_file
-bom_file_arr = [PathHelp.get_file_path('TInfineionAgencyStock2', 'bom_price_TInfineionAgencyStock2.xlsx')]
-octopart_file_arr = [PathHelp.get_file_path('TInfineionAgencyStock2', 'octopart_price.xlsx')]
-
+# bom_file_arr = [PathHelp.get_file_path('TSumNvmNdt', 'bom_price.xlsx'),
+#                 '/Users/liuhe/Desktop/progress/TDiscontinue/TSumNvmNdt/04/bom_price.xlsx',
+#                 '/Users/liuhe/Desktop/progress/TDiscontinue/TSumNvmNdt/sz/bom_price.xlsx',
+#                 '/Users/liuhe/Desktop/progress/TDiscontinue/TSumNvmNdt/11/bom_price.xlsx']
+# octopart_file_arr = [PathHelp.get_file_path('TSumNvmNdt', 'octopart_price.xlsx')]
+bom_file_arr = [PathHelp.get_file_path('TAlice_stock', 'bom_price.xlsx')]
+octopart_file_arr = [PathHelp.get_file_path('TAlice_stock', 'octopart_price.xlsx')]
 
 # 一次汇总bom 的所有sheets， 二维数组，文件列表+sheet 列表
 def get_bom_sheets() -> list:
@@ -47,7 +51,7 @@ def get_pm(file_index, sheet_index, rate) -> float:
         has_supplier = True  # 记录是否有报价
     for i in range(ws.min_row, ws.max_row + 1):
         print(f'是否有报价记录 is: {ws.cell(i, 10).value}')
-        valid_supplier = (ws.cell(i, 10).value == "TRUE")
+        valid_supplier = (ws.cell(i, 10).value == "TRUE" or ws.cell(i, 10).value)
         # valid_supplier = False
         # # 以汇总价格的当前的一周内判断为准
         # if ws.cell(i, 7).value is not None:

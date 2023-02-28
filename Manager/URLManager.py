@@ -1,0 +1,89 @@
+from WRTools import ExcelHelp, PathHelp
+from enum import Enum
+
+
+class Octopart_manu(Enum):
+    NoManu = 0
+    Allegro = 1
+    Infineon = 2
+    Holt = 3
+    Renesas = 4
+    ADI = 5
+    NXP = 6
+    Skyworks = 7
+    Texas_Instruments = 8
+    Vishay = 9
+    Vicor = 10
+    Microchip = 11
+    VPT = 12
+    Altera = 13
+    XILINX = 14
+    Onsemi = 15
+    STMicroelectronics = 16
+
+    def get_manu(self) -> str:
+        manuid_list = [
+            '',
+            '8330',
+            '453;202;706;12547;196',
+            '1279',
+            '572;203;833',
+            '26;244;12048;2274',
+            '561;296;145',
+            '1967;583',
+            '262;370;1148',
+            '',
+            '2089',
+            '252;45;523;2631;1047;1727',
+            '12444',
+            '199;14939',
+            '7;404',
+            '278;473',
+            '355',
+        ]
+        return manuid_list[self.value]
+
+
+# octopart
+def octopart_get_page_url(key_name, page, manu: Octopart_manu) -> str:
+    if manu.value > 0:
+        manu_str = manu.get_manu()
+        manu_param = '&manufacturer_id=' + manu_str.replace(';', '&manufacturer_id=')
+    else:
+        manu_param = ''
+    page_param = '' if page == 1 else '&start=' + str(page*10 - 10)
+    url = f'https://octopart.com/search?q={key_name}&currency=USD&specs=0{manu_param}{page_param}'
+    return url
+
+
+# 根据keyname page 0 的数据获取total page ，然后获取page 0 之后的页面的url并保存
+def octopart_page_more_url(sourcefile: str, page0_sheet: str, manu: Octopart_manu):
+    pn_file = sourcefile
+    pninfo_list = ExcelHelp.read_sheet_content_by_name(file_name=pn_file, sheet_name=page0_sheet)
+    last_search_param = ''
+    for pnInfo in pninfo_list:
+        pninfo_url_list = []
+        try:
+            if pnInfo is None:
+                continue
+            key_name = str(pnInfo[2]) + str(pnInfo[3])
+            if key_name is None:
+                continue
+            current_search_param = key_name
+            if current_search_param == last_search_param:
+                continue
+            else:
+                last_search_param = current_search_param
+            total_p = int(pnInfo[4])
+            current_p = 2
+            if total_p > 1:
+                while current_p <= total_p:
+                    url = octopart_get_page_url(key_name=key_name, page=current_p, alpha='', manu=manu)
+                    pninfo_url_list.append([url])
+                    current_p += 1
+        except:
+            print(pnInfo + "exception")
+        ExcelHelp.add_arr_to_sheet(file_name=pn_file, sheet_name='url_pagemore', dim_arr=pninfo_url_list)
+    print('over')
+
+

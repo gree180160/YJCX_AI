@@ -143,19 +143,11 @@ def SplitPic_week(source_pic: str):
     wid = img_size[0]  # 图片宽度
     hei = img_size[1]  # 图片高度
     # mac
-    # if hei < 3200:
-    #     # wid ，标准1312， x 440
-    #     x = wid/2 - 100 - 116
-    #     y = 982 * scale
-    #     w = 116 * scale
-    #     h = 30 * scale
-    #     space = 36 * scale
-    # else:
-    #     x = 533 * scale
-    #     y = 978 * scale
-    #     w = 116 * scale
-    #     h = 30 * scale
-    #     space = 36 * scale
+    # x = wid/2 - 216*scale
+    # y = 980 * scale
+    # w = 116 * scale
+    # h = 30 * scale
+    # space = 36 * scale
     # #11&SZ-02
     x = wid / 2 - 100 - 116
     y = 980 * scale
@@ -170,7 +162,7 @@ def SplitPic_week(source_pic: str):
     # space = 32.5 * scale
     # after 0215
     # x = wid / 2 - 100 - 116
-    # y = 978 * scale
+    # y = 980 * scale
     # w = 116 * scale
     # h = 30 * scale
     # space = 36 * scale
@@ -194,31 +186,17 @@ def SplitPic_month(source_pic: str):
     wid = img_size[0]  # 图片宽度
     hei = img_size[1]  # 图片高度
     # mac 高清
-    # if 3400 <= hei:
-    #     x = 532.735 * scale
-    #     y = 982 * scale
-    #     w = 116 * scale
-    #     h = 30 * scale
-    #     space = 36 * scale
-    # elif 1730 <= hei <= 3400:
-    #     x = 420.9
-    #     y = 979.7
-    #     w = 116 * scale
-    #     h = 30 * scale
-    #     space = 36 * scale
-    # else:
-    #     x = wid / 2 - 100 - 116
-    #     y = 981.446 * scale
-    #     w = 116 * scale
-    #     h = 30 * scale
-    #     space = 36 * scale
+    # x = wid / 2 - 216 * scale
+    # y = 980 * scale
+    # w = 116 * scale
+    # h = 30 * scale
+    # space = 36 * scale
     # 11-01,sz
     x = wid/2 - 100.00 - 116
     y = 980 * scale
     w = 116 * scale
     h = 30 * scale
     space = 36 * scale
-
     # 04
     # x = wid/2 - 200*scale
     # y = 889.2 * scale - (1553*scale - hei)
@@ -249,8 +227,8 @@ def test_ppn_value(fold_path: str):
 
 
 def test_hot_value(fold_path: str):
-    temp = 'CY8C4125LQI-S433_M.png' # 1911×1724
-    # temp = 'CY8C4125LQI-S433_W.png' # 1911×3164
+    temp = 'SX1262IMLTRT_M.png' # 1911×1724
+    # temp = 'SX1262IMLTRT_W.png' # 1911×3164
     if temp.endswith('_M.png'):
         image_hot_data = SplitPic_month(fold_path + '/' + temp)
     elif temp.endswith('_W.png'):
@@ -263,5 +241,5 @@ if __name__ == "__main__":
     # useFold('/Users/liuhe/Desktop/hot_img')
     # print(result_str)
     # SplitPic('/Users/liuhe/Desktop/识图test/88.png')
-    result = test_hot_value(fold_path='/Users/liuhe/Desktop/progress/TInfineon/20H/04TInfenion_20H/IC_hot_images')
+    result = test_hot_value(fold_path='/Users/liuhe/PycharmProjects/SeleniumDemo/TAlice_stock/IC_hot_images')
     print(result)

@@ -180,11 +180,10 @@ def move_IC_hot(source_file: str):
 
 
 if __name__ == "__main__":
-    source_file = PathHelp.get_file_path('TInfenion_35H', 'Task.xlsx')
-    # findchip_stock_unfinished_ppn(source_ppn_file=source_file, finished_ppn_file="/Users/liuhe/Desktop/progress/TInfineon/15H/findchips_TInfenion_15H.xlsx")
+    source_file = PathHelp.get_file_path('TInfenion_45H', 'Task.xlsx')
     # move_ppn_to_allInfo(source_file=source_file)
-    # move_IC_stock_to_allInfo(source_file=source_file)
+    move_IC_stock_to_allInfo(source_file=source_file)
     # move_BomOct_to_allInfo(source_file=source_file)
-    move_findchip_to_allInfo(source_file=source_file, findchip_file=PathHelp.get_file_path('TInfenion_35H', 'findchip_stock.xlsx'))
+    # move_findchip_to_allInfo(source_file=source_file, findchip_file=PathHelp.get_file_path('TAlice_stock', 'findchip_stock.xlsx'))
     # move_IC_hot(source_file=source_file)
 
