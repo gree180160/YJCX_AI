@@ -178,12 +178,36 @@ def move_IC_hot(source_file: str):
         aim_sheet='all_info',
         start_col=10)
 
+def move_DijiKey(source_file: str, dijikey_file: str):
+    ppns = ExcelHelp.read_col_content(file_name=source_file, sheet_name='ppn', col_index=1)
+    dijikey_data = ExcelHelp.read_sheet_content_by_name(file_name=dijikey_file, sheet_name='dijikey_status')
+    result = []
+    for (index, ppn) in enumerate(ppns):
+        diji_record = [ppn, '//', '//']
+        for (diji_index, diji_info) in enumerate(dijikey_data):
+            if ppn == diji_info[0]:
+                diji_record = diji_info
+                break
+        result.append(diji_record)
+    ExcelHelp.add_arr_to_sheet(file_name=source_file, sheet_name='dijikey_status', dim_arr=result)
+    move_part_to_part(
+        source_file=source_file,
+        source_sheet='dijikey_status',
+        from_col=2,
+        to_col=3,
+        aim_file=source_file,
+        aim_sheet='all_info',
+        start_col=18)
+
+
 
 if __name__ == "__main__":
-    source_file = PathHelp.get_file_path('TInfenion_45H', 'Task.xlsx')
-    # move_ppn_to_allInfo(source_file=source_file)
+    source_file = PathHelp.get_file_path('TInfenion_55H', 'Task.xlsx')
+    move_ppn_to_allInfo(source_file=source_file)
     move_IC_stock_to_allInfo(source_file=source_file)
-    # move_BomOct_to_allInfo(source_file=source_file)
-    # move_findchip_to_allInfo(source_file=source_file, findchip_file=PathHelp.get_file_path('TAlice_stock', 'findchip_stock.xlsx'))
-    # move_IC_hot(source_file=source_file)
+    move_BomOct_to_allInfo(source_file=source_file)
+    move_findchip_to_allInfo(source_file=source_file, findchip_file=PathHelp.get_file_path('TInfenion_50H', 'findchip_stock.xlsx'))
+    move_DijiKey(source_file=source_file, dijikey_file=PathHelp.get_file_path('TInfenion_50H', 'dijikey_status.xlsx'))
+    move_IC_hot(source_file=source_file)
+
 

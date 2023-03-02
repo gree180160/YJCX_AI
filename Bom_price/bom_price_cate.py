@@ -18,12 +18,12 @@ driver.set_page_load_timeout(120)
 # accouts_arr = [["深圳市元极创新电子有限公司", "caigou01", "Yjcx123"]]
 accouts_arr = [[AccountMange.Bom['c'], AccountMange.Bom['n'], AccountMange.Bom['p']]]
 
-sourceFile_dic = {'fileName': PathHelp.get_file_path('TSumNvmNdt', 'Task.xlsx'),
+sourceFile_dic = {'fileName': PathHelp.get_file_path('TInfenion_60H', 'Task.xlsx'),
                   'sourceSheet': 'ppn',
                   'colIndex': 1,
                   'startIndex': 0,
-                  'endIndex': 74}
-result_save_file = PathHelp.get_file_path('TSumNvmNdt', 'bom_price.xlsx')
+                  'endIndex': 125}
+result_save_file = PathHelp.get_file_path('TInfenion_60H', 'bom_price.xlsx')
 default_url = 'https://www.bom.ai/ic/74LVX4245MTCX.html'
 log_file = PathHelp.get_file_path('Bom_price', 'bom_price_log.txt')
 

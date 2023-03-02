@@ -2798,3 +2798,709 @@
 3: 22
 4: 23
 
+2023-03-01 15:28:27/Users/liuhe/PycharmProjects/SeleniumDemo/TAlice_stock/IC_hot_images/ICL7662CBA+T_M.png  2th---  1: 4523
+2: 4153
+3: 153
+4: 4153
+
+2023-03-01 15:28:28/Users/liuhe/PycharmProjects/SeleniumDemo/TAlice_stock/IC_hot_images/ICL7662CBA+T_M.png  4th---  1: 416
+2: 116
+3: 116
+4: 116
+
+2023-03-01 15:28:38/Users/liuhe/PycharmProjects/SeleniumDemo/TAlice_stock/IC_hot_images/ICL7662CBA+T_W.png  30th---  1: 51
+2: 51
+3: 61
+4: 51
+
+2023-03-01 15:28:38/Users/liuhe/PycharmProjects/SeleniumDemo/TAlice_stock/IC_hot_images/ICL7662CBA+T_W.png  32th---  1: 20
+2: 20
+3: 29
+4: 20
+
+2023-03-01 15:29:18/Users/liuhe/PycharmProjects/SeleniumDemo/TAlice_stock/IC_hot_images/MAX13085EESA+T_M.png  1th---  1: 544
+2: 544
+3: 644
+4: 544
+
+2023-03-01 15:29:22/Users/liuhe/PycharmProjects/SeleniumDemo/TAlice_stock/IC_hot_images/MAX13085EESA+T_W.png  3th---  1: 428
+2: 128
+3: 128
+4: 128
+
+2023-03-01 15:29:25/Users/liuhe/PycharmProjects/SeleniumDemo/TAlice_stock/IC_hot_images/MAX13085EESA+T_W.png  13th---  1: 428
+2: 128
+3: 128
+4: 128
+
+2023-03-01 15:29:26/Users/liuhe/PycharmProjects/SeleniumDemo/TAlice_stock/IC_hot_images/MAX13085EESA+T_W.png  18th---  1: 429
+2: 129
+3: 420
+4: 129
+
+2023-03-01 15:29:28/Users/liuhe/PycharmProjects/SeleniumDemo/TAlice_stock/IC_hot_images/MAX13085EESA+T_W.png  24th---  1: 7
+2: 3: 4
+4: 
+2023-03-01 15:29:28/Users/liuhe/PycharmProjects/SeleniumDemo/TAlice_stock/IC_hot_images/MAX13085EESA+T_W.png  25th---  1: 20
+2: 20
+3: 29
+4: 20
+
+2023-03-01 15:29:29/Users/liuhe/PycharmProjects/SeleniumDemo/TAlice_stock/IC_hot_images/MAX13085EESA+T_W.png  28th---  1: 3
+2: 83
+3: 93
+4: 83
+
+2023-03-01 15:29:30/Users/liuhe/PycharmProjects/SeleniumDemo/TAlice_stock/IC_hot_images/MAX13085EESA+T_W.png  34th---  1: 5
+2: 58
+3: 68
+4: 58
+
+2023-03-01 15:29:30/Users/liuhe/PycharmProjects/SeleniumDemo/TAlice_stock/IC_hot_images/MAX13085EESA+T_W.png  35th---  1: 7
+2: 3: 4
+4: 
+2023-03-01 15:29:31/Users/liuhe/PycharmProjects/SeleniumDemo/TAlice_stock/IC_hot_images/MAX13085EESA+T_W.png  37th---  1: 3
+2: 83
+3: 93
+4: 83
+
+2023-03-01 15:29:45/Users/liuhe/PycharmProjects/SeleniumDemo/TAlice_stock/IC_hot_images/MAX13485EESA+T_W.png  28th---  1: 404
+2: 104
+3: 104
+4: 104
+
+2023-03-01 15:29:50/Users/liuhe/PycharmProjects/SeleniumDemo/TAlice_stock/IC_hot_images/MAX13485EESA+T_W.png  44th---  1: 20
+2: 20
+3: 29
+4: 20
+
+2023-03-01 15:30:29/Users/liuhe/PycharmProjects/SeleniumDemo/TAlice_stock/IC_hot_images/MAX232CSE+T_W.png  2th---  1: 4523
+2: 4153
+3: 153
+4: 4153
+
+2023-03-01 15:30:31/Users/liuhe/PycharmProjects/SeleniumDemo/TAlice_stock/IC_hot_images/MAX232CSE+T_W.png  9th---  1: 20
+2: 20
+3: 29
+4: 20
+
+2023-03-01 15:30:34/Users/liuhe/PycharmProjects/SeleniumDemo/TAlice_stock/IC_hot_images/MAX232CSE+T_W.png  22th---  1: 5
+2: 58
+3: 68
+4: 58
+
+2023-03-01 15:30:35/Users/liuhe/PycharmProjects/SeleniumDemo/TAlice_stock/IC_hot_images/MAX232CSE+T_W.png  23th---  1: 36
+2: 6
+3: 26
+4: 6
+
+2023-03-01 15:30:36/Users/liuhe/PycharmProjects/SeleniumDemo/TAlice_stock/IC_hot_images/MAX232CSE+T_W.png  29th---  1: 3
+2: 83
+3: 93
+4: 83
+
+2023-03-01 15:30:40/Users/liuhe/PycharmProjects/SeleniumDemo/TAlice_stock/IC_hot_images/MAX232CSE+T_W.png  45th---  1: 5
+2: 58
+3: 68
+4: 58
+
+2023-03-01 15:30:42/Users/liuhe/PycharmProjects/SeleniumDemo/TAlice_stock/IC_hot_images/MAX3082CSA+T_M.png  0th---  1: 36
+2: 6
+3: 26
+4: 6
+
+2023-03-01 15:30:42/Users/liuhe/PycharmProjects/SeleniumDemo/TAlice_stock/IC_hot_images/MAX3082CSA+T_M.png  1th---  1: 36
+2: 6
+3: 26
+4: 6
+
+2023-03-01 15:30:43/Users/liuhe/PycharmProjects/SeleniumDemo/TAlice_stock/IC_hot_images/MAX3082CSA+T_M.png  2th---  1: 7
+2: 3: 4
+4: 
+2023-03-01 15:30:57/Users/liuhe/PycharmProjects/SeleniumDemo/TAlice_stock/IC_hot_images/MAX3082CSA+T_W.png  45th---  1: 51
+2: 51
+3: 61
+4: 51
+
+2023-03-01 15:30:59/Users/liuhe/PycharmProjects/SeleniumDemo/TAlice_stock/IC_hot_images/MAX3082ESA+T_M.png  0th---  1: 20
+2: 20
+3: 29
+4: 20
+
+2023-03-01 15:31:01/Users/liuhe/PycharmProjects/SeleniumDemo/TAlice_stock/IC_hot_images/MAX3082ESA+T_M.png  9th---  1: 416
+2: 116
+3: 116
+4: 116
+
+2023-03-01 15:31:06/Users/liuhe/PycharmProjects/SeleniumDemo/TAlice_stock/IC_hot_images/MAX3082ESA+T_W.png  15th---  1: 416
+2: 116
+3: 116
+4: 116
+
+2023-03-01 15:31:12/Users/liuhe/PycharmProjects/SeleniumDemo/TAlice_stock/IC_hot_images/MAX3082ESA+T_W.png  41th---  1: 51
+2: 51
+3: 61
+4: 51
+
+2023-03-01 15:31:15/Users/liuhe/PycharmProjects/SeleniumDemo/TAlice_stock/IC_hot_images/MAX3095CSE+T_M.png  1th---  1: 36
+2: 6
+3: 26
+4: 6
+
+2023-03-01 15:31:16/Users/liuhe/PycharmProjects/SeleniumDemo/TAlice_stock/IC_hot_images/MAX3095CSE+T_M.png  3th---  1: 51
+2: 51
+3: 61
+4: 51
+
+2023-03-01 15:31:28/Users/liuhe/PycharmProjects/SeleniumDemo/TAlice_stock/IC_hot_images/MAX3095CSE+T_W.png  40th---  1: 20
+2: 20
+3: 29
+4: 20
+
+2023-03-01 15:31:49/Users/liuhe/PycharmProjects/SeleniumDemo/TAlice_stock/IC_hot_images/MAX3373EEKA+T_M.png  3th---  1: 446
+2: 146
+3: 146
+4: 146
+
+2023-03-01 15:32:07/Users/liuhe/PycharmProjects/SeleniumDemo/TAlice_stock/IC_hot_images/MAX3485CSA+T_M.png  11th---  1: 78
+2: 74
+3: 73
+4: 74
+
+2023-03-01 15:32:17/Users/liuhe/PycharmProjects/SeleniumDemo/TAlice_stock/IC_hot_images/MAX3485CSA+T_W.png  33th---  1: 20
+2: 20
+3: 29
+4: 20
+
+2023-03-01 15:32:18/Users/liuhe/PycharmProjects/SeleniumDemo/TAlice_stock/IC_hot_images/MAX3485CSA+T_W.png  39th---  1: 36
+2: 6
+3: 26
+4: 6
+
+2023-03-01 15:32:23/Users/liuhe/PycharmProjects/SeleniumDemo/TAlice_stock/IC_hot_images/MAX3485EESA+T_M.png  4th---  1: 527
+2: 527
+3: 627
+4: 527
+
+2023-03-01 15:32:25/Users/liuhe/PycharmProjects/SeleniumDemo/TAlice_stock/IC_hot_images/MAX3485EESA+T_M.png  11th---  1: 52
+2: 583
+3: 683
+4: 583
+
+2023-03-01 15:32:28/Users/liuhe/PycharmProjects/SeleniumDemo/TAlice_stock/IC_hot_images/MAX3485EESA+T_W.png  6th---  1: 404
+2: 104
+3: 104
+4: 104
+
+2023-03-01 15:32:30/Users/liuhe/PycharmProjects/SeleniumDemo/TAlice_stock/IC_hot_images/MAX3485EESA+T_W.png  14th---  1: 473
+2: 173
+3: 173
+4: 173
+
+2023-03-01 15:32:31/Users/liuhe/PycharmProjects/SeleniumDemo/TAlice_stock/IC_hot_images/MAX3485EESA+T_W.png  17th---  1: 484
+2: 184
+3: 184
+4: 184
+
+2023-03-01 15:32:32/Users/liuhe/PycharmProjects/SeleniumDemo/TAlice_stock/IC_hot_images/MAX3485EESA+T_W.png  21th---  1: 423
+2: 123
+3: 123
+4: 123
+
+2023-03-01 15:32:33/Users/liuhe/PycharmProjects/SeleniumDemo/TAlice_stock/IC_hot_images/MAX3485EESA+T_W.png  23th---  1: 429
+2: 129
+3: 420
+4: 129
+
+2023-03-01 15:32:33/Users/liuhe/PycharmProjects/SeleniumDemo/TAlice_stock/IC_hot_images/MAX3485EESA+T_W.png  25th---  1: 404
+2: 104
+3: 104
+4: 104
+
+2023-03-01 15:32:36/Users/liuhe/PycharmProjects/SeleniumDemo/TAlice_stock/IC_hot_images/MAX3485EESA+T_W.png  34th---  1: 4523
+2: 4153
+3: 153
+4: 4153
+
+2023-03-01 15:32:36/Users/liuhe/PycharmProjects/SeleniumDemo/TAlice_stock/IC_hot_images/MAX3485EESA+T_W.png  36th---  1: 423
+2: 123
+3: 123
+4: 123
+
+2023-03-01 15:32:38/Users/liuhe/PycharmProjects/SeleniumDemo/TAlice_stock/IC_hot_images/MAX3485EESA+T_W.png  43th---  1: 404
+2: 104
+3: 104
+4: 104
+
+2023-03-01 15:32:41/Users/liuhe/PycharmProjects/SeleniumDemo/TAlice_stock/IC_hot_images/MAX44248ASA+T_M.png  0th---  1: 78
+2: 74
+3: 73
+4: 74
+
+2023-03-01 15:32:50/Users/liuhe/PycharmProjects/SeleniumDemo/TAlice_stock/IC_hot_images/MAX44248ASA+T_W.png  14th---  1: 5
+2: 58
+3: 68
+4: 58
+
+2023-03-01 15:32:51/Users/liuhe/PycharmProjects/SeleniumDemo/TAlice_stock/IC_hot_images/MAX44248ASA+T_W.png  18th---  1: 5
+2: 58
+3: 68
+4: 58
+
+2023-03-01 15:32:55/Users/liuhe/PycharmProjects/SeleniumDemo/TAlice_stock/IC_hot_images/MAX44248ASA+T_W.png  32th---  1: 5
+2: 58
+3: 68
+4: 58
+
+2023-03-01 15:33:11/Users/liuhe/PycharmProjects/SeleniumDemo/TAlice_stock/IC_hot_images/MAX4715EXK+T_W.png  23th---  1: 20
+2: 20
+3: 29
+4: 20
+
+2023-03-01 15:33:20/Users/liuhe/PycharmProjects/SeleniumDemo/TAlice_stock/IC_hot_images/MAX487EESA+T_M.png  1th---  1: 428
+2: 128
+3: 128
+4: 128
+
+2023-03-01 15:33:25/Users/liuhe/PycharmProjects/SeleniumDemo/TAlice_stock/IC_hot_images/MAX487EESA+T_W.png  6th---  1: 20
+2: 20
+3: 29
+4: 20
+
+2023-03-01 15:33:44/Users/liuhe/PycharmProjects/SeleniumDemo/TAlice_stock/IC_hot_images/MAX490ESA+T_W.png  16th---  1: 20
+2: 20
+3: 29
+4: 20
+
+2023-03-01 15:33:53/Users/liuhe/PycharmProjects/SeleniumDemo/TAlice_stock/IC_hot_images/MAX490ESA+T_W.png  49th---  1: 20
+2: 20
+3: 29
+4: 20
+
+2023-03-01 15:33:57/Users/liuhe/PycharmProjects/SeleniumDemo/TAlice_stock/IC_hot_images/MAX5969BETB+T_W.png  2th---  1: 36
+2: 6
+3: 26
+4: 6
+
+2023-03-01 15:34:02/Users/liuhe/PycharmProjects/SeleniumDemo/TAlice_stock/IC_hot_images/MAX5969BETB+T_W.png  20th---  1: 5
+2: 58
+3: 68
+4: 58
+
+2023-03-01 15:34:03/Users/liuhe/PycharmProjects/SeleniumDemo/TAlice_stock/IC_hot_images/MAX5969BETB+T_W.png  22th---  1: 20
+2: 20
+3: 29
+4: 20
+
+2023-03-01 15:34:04/Users/liuhe/PycharmProjects/SeleniumDemo/TAlice_stock/IC_hot_images/MAX5969BETB+T_W.png  29th---  1: 4523
+2: 4153
+3: 153
+4: 4153
+
+2023-03-01 15:34:05/Users/liuhe/PycharmProjects/SeleniumDemo/TAlice_stock/IC_hot_images/MAX5969BETB+T_W.png  32th---  1: 51
+2: 51
+3: 61
+4: 51
+
+2023-03-01 15:34:07/Users/liuhe/PycharmProjects/SeleniumDemo/TAlice_stock/IC_hot_images/MAX5969BETB+T_W.png  38th---  1: 36
+2: 6
+3: 26
+4: 6
+
+2023-03-01 15:34:09/Users/liuhe/PycharmProjects/SeleniumDemo/TAlice_stock/IC_hot_images/MAX5969BETB+T_W.png  45th---  1: 473
+2: 173
+3: 173
+4: 173
+
+2023-03-01 15:34:10/Users/liuhe/PycharmProjects/SeleniumDemo/TAlice_stock/IC_hot_images/MAX5969BETB+T_W.png  51th---  1: 7
+2: 3: 4
+4: 
+2023-03-01 15:34:21/Users/liuhe/PycharmProjects/SeleniumDemo/TAlice_stock/IC_hot_images/MAX5974AETE+T_W.png  29th---  1: 51
+2: 51
+3: 61
+4: 51
+
+2023-03-01 15:34:24/Users/liuhe/PycharmProjects/SeleniumDemo/TAlice_stock/IC_hot_images/MAX5974AETE+T_W.png  41th---  1: 20
+2: 20
+3: 29
+4: 20
+
+2023-03-01 15:34:25/Users/liuhe/PycharmProjects/SeleniumDemo/TAlice_stock/IC_hot_images/MAX5974AETE+T_W.png  43th---  1: 36
+2: 6
+3: 26
+4: 6
+
+2023-03-01 15:34:25/Users/liuhe/PycharmProjects/SeleniumDemo/TAlice_stock/IC_hot_images/MAX5974AETE+T_W.png  45th---  1: 3
+2: 83
+3: 93
+4: 83
+
+2023-03-01 15:34:26/Users/liuhe/PycharmProjects/SeleniumDemo/TAlice_stock/IC_hot_images/MAX5974AETE+T_W.png  46th---  1: 7
+2: 3: 4
+4: 
+2023-03-01 15:34:26/Users/liuhe/PycharmProjects/SeleniumDemo/TAlice_stock/IC_hot_images/MAX5974AETE+T_W.png  48th---  1: 7
+2: 3: 4
+4: 
+2023-03-01 15:35:50/Users/liuhe/PycharmProjects/SeleniumDemo/TAlice_stock/IC_hot_images/MAX828EUK+T_M.png  2th---  1: 3
+2: 83
+3: 93
+4: 83
+
+2023-03-01 15:35:51/Users/liuhe/PycharmProjects/SeleniumDemo/TAlice_stock/IC_hot_images/MAX828EUK+T_M.png  4th---  1: 484
+2: 184
+3: 184
+4: 184
+
+2023-03-01 15:35:51/Users/liuhe/PycharmProjects/SeleniumDemo/TAlice_stock/IC_hot_images/MAX828EUK+T_M.png  6th---  1: 416
+2: 116
+3: 116
+4: 116
+
+2023-03-01 15:35:53/Users/liuhe/PycharmProjects/SeleniumDemo/TAlice_stock/IC_hot_images/MAX828EUK+T_M.png  11th---  1: 428
+2: 128
+3: 128
+4: 128
+
+2023-03-01 15:35:58/Users/liuhe/PycharmProjects/SeleniumDemo/TAlice_stock/IC_hot_images/MAX828EUK+T_W.png  19th---  1: 20
+2: 20
+3: 29
+4: 20
+
+2023-03-01 15:36:02/Users/liuhe/PycharmProjects/SeleniumDemo/TAlice_stock/IC_hot_images/MAX828EUK+T_W.png  34th---  1: 20
+2: 20
+3: 29
+4: 20
+
+2023-03-01 15:36:06/Users/liuhe/PycharmProjects/SeleniumDemo/TAlice_stock/IC_hot_images/MAX828EUK+T_W.png  50th---  1: 7
+2: 3: 4
+4: 
+2023-03-01 18:09:22/Users/liuhe/Desktop/progress/TInfineon/35H/11/IC_hot_images/IR3883MTRPBF_W.png  5th---  1: 7
+2: 3: 4
+4: 
+2023-03-01 18:09:29/Users/liuhe/Desktop/progress/TInfineon/35H/11/IC_hot_images/IR3883MTRPBF_W.png  31th---  1: 36
+2: 6
+3: 26
+4: 6
+
+2023-03-01 18:09:31/Users/liuhe/Desktop/progress/TInfineon/35H/11/IC_hot_images/IR3883MTRPBF_W.png  40th---  1: 55
+2: 55
+3: 65
+4: 55
+
+2023-03-01 18:10:20/Users/liuhe/Desktop/progress/TInfineon/35H/11/IC_hot_images/IRF1018EPBF_W.png  7th---  1: 55
+2: 55
+3: 65
+4: 55
+
+2023-03-01 18:12:56/Users/liuhe/Desktop/progress/TInfineon/35H/11/IC_hot_images/IR38163MTRPBF_W.png  1th---  1: 5
+2: 5
+3: 6
+4: 5
+
+2023-03-01 18:12:57/Users/liuhe/Desktop/progress/TInfineon/35H/11/IC_hot_images/IR38163MTRPBF_W.png  8th---  1: 5
+2: 5
+3: 6
+4: 5
+
+2023-03-01 18:12:58/Users/liuhe/Desktop/progress/TInfineon/35H/11/IC_hot_images/IR38163MTRPBF_W.png  9th---  1: 5
+2: 5
+3: 6
+4: 5
+
+2023-03-01 18:13:01/Users/liuhe/Desktop/progress/TInfineon/35H/11/IC_hot_images/IR38163MTRPBF_W.png  23th---  1: 5
+2: 5
+3: 6
+4: 5
+
+2023-03-01 18:13:03/Users/liuhe/Desktop/progress/TInfineon/35H/11/IC_hot_images/IR38163MTRPBF_W.png  30th---  1: 5
+2: 5
+3: 6
+4: 5
+
+2023-03-01 18:13:06/Users/liuhe/Desktop/progress/TInfineon/35H/11/IC_hot_images/IR38163MTRPBF_W.png  43th---  1: 5
+2: 5
+3: 6
+4: 5
+
+2023-03-01 18:13:08/Users/liuhe/Desktop/progress/TInfineon/35H/11/IC_hot_images/IR38163MTRPBF_W.png  50th---  1: 5
+2: 5
+3: 6
+4: 5
+
+2023-03-01 18:13:37/Users/liuhe/Desktop/progress/TInfineon/35H/11/IC_hot_images/IR38164MTRPBF_W.png  30th---  1: 3
+2: 32
+3: 39
+4: 32
+
+2023-03-01 18:14:46/Users/liuhe/Desktop/progress/TInfineon/35H/11/IC_hot_images/IR38263MTRPBF_W.png  34th---  1: 3
+2: 32
+3: 39
+4: 32
+
+2023-03-01 18:14:48/Users/liuhe/Desktop/progress/TInfineon/35H/11/IC_hot_images/IR38263MTRPBF_W.png  40th---  1: 28
+2: 23
+3: 22
+4: 23
+
+2023-03-01 18:15:10/Users/liuhe/Desktop/progress/TInfineon/35H/11/IC_hot_images/IR38363MTRPBF_M.png  9th---  1: 28
+2: 23
+3: 22
+4: 23
+
+2023-03-01 18:51:10/Users/liuhe/Desktop/progress/TInfineon/35H/sz/IC_hot_images/IRF4905PBF_M.png  11th---  1: 4110
+2: 1410
+3: 1110
+4: 1410
+
+2023-03-01 19:18:29/Users/liuhe/Desktop/progress/TInfineon/35H/04/IC_hot_images/IRF60SC241ARMA1_M.png  3th---  1: 73
+2: 43
+3: 4: 43
+
+2023-03-01 19:27:29/Users/liuhe/Desktop/progress/TInfineon/35H/04/IC_hot_images/IRF7103TR_M.png  10th---  1: 28
+2: 23
+3: 22
+4: 23
+
+2023-03-01 19:29:09/Users/liuhe/Desktop/progress/TInfineon/35H/04/IC_hot_images/IRF7240TRPBF_W.png  43th---  1: 1112
+2: 1412
+3: 4412
+4: 1412
+
+2023-03-01 20:02:33/Users/liuhe/PycharmProjects/SeleniumDemo/TInfenion_35H/IC_hot_images/DD390N16SHPSA1_W.png  10th---  1: 1
+2: 3: 4
+4: 
+2023-03-01 20:10:28/Users/liuhe/PycharmProjects/SeleniumDemo/TInfenion_35H/IC_hot_images/IPZ65R065C7XKSA1_W.png  32th---  1: 43
+2: 28
+3: 28
+4: 28
+
+2023-03-01 20:15:25/Users/liuhe/PycharmProjects/SeleniumDemo/TInfenion_35H/IC_hot_images/IPZ65R065C7XKSA1_W.png  32th---  1: 43
+2: 28
+3: 28
+4: 28
+
+2023-03-01 20:22:35/Users/liuhe/PycharmProjects/SeleniumDemo/TInfenion_35H/IC_hot_images/IR11672ASPBF_W.png  47th---  1: 43
+2: 28
+3: 28
+4: 28
+
+2023-03-01 20:24:11/Users/liuhe/PycharmProjects/SeleniumDemo/TInfenion_35H/IC_hot_images/IR21834SPBF_M.png  2th---  1: 43
+2: 28
+3: 28
+4: 28
+
+2023-03-01 20:25:33/Users/liuhe/PycharmProjects/SeleniumDemo/TInfenion_35H/IC_hot_images/IR35201MTRPBF_W.png  31th---  1: 43
+2: 28
+3: 28
+4: 28
+
+2023-03-01 20:25:36/Users/liuhe/PycharmProjects/SeleniumDemo/TInfenion_35H/IC_hot_images/IR35201MTRPBF_W.png  42th---  1: 43
+2: 28
+3: 28
+4: 28
+
+2023-03-01 20:25:37/Users/liuhe/PycharmProjects/SeleniumDemo/TInfenion_35H/IC_hot_images/IR35201MTRPBF_W.png  45th---  1: 43
+2: 28
+3: 28
+4: 28
+
+2023-03-01 20:26:16/Users/liuhe/PycharmProjects/SeleniumDemo/TInfenion_35H/IC_hot_images/IR38060MBC01TRP_M.png  5th---  1: 43
+2: 28
+3: 28
+4: 28
+
+2023-03-01 20:26:51/Users/liuhe/PycharmProjects/SeleniumDemo/TInfenion_35H/IC_hot_images/IR38062MTRPBF_M.png  1th---  1: 43
+2: 28
+3: 28
+4: 28
+
+2023-03-01 20:27:34/Users/liuhe/PycharmProjects/SeleniumDemo/TInfenion_35H/IC_hot_images/IR38063MTRPBF_W.png  16th---  1: 43
+2: 28
+3: 28
+4: 28
+
+2023-03-01 20:27:40/Users/liuhe/PycharmProjects/SeleniumDemo/TInfenion_35H/IC_hot_images/IR38063MTRPBF_W.png  37th---  1: 43
+2: 28
+3: 28
+4: 28
+
+2023-03-01 20:27:48/Users/liuhe/PycharmProjects/SeleniumDemo/TInfenion_35H/IC_hot_images/IR38064MTRPBF_W.png  0th---  1: 43
+2: 28
+3: 28
+4: 28
+
+2023-03-01 20:27:49/Users/liuhe/PycharmProjects/SeleniumDemo/TInfenion_35H/IC_hot_images/IR38064MTRPBF_W.png  1th---  1: 43
+2: 28
+3: 28
+4: 28
+
+2023-03-02 11:59:29/Users/liuhe/Desktop/progress/TInfineon/40H/04/IC_hot_images/IRFI540NPBF_M.png  3th---  1: 308
+2: 303
+3: 303
+4: 303
+
+2023-03-02 12:02:53/Users/liuhe/Desktop/progress/TInfineon/40H/04/IC_hot_images/IRFP150NPBF_M.png  7th---  1: 308
+2: 303
+3: 303
+4: 303
+
+2023-03-02 12:36:27/Users/liuhe/Desktop/progress/TInfineon/40H/11/IC_hot_images/IRF7493TRPBF_M.png  8th---  1: 849
+2: 849
+3: 949
+4: 849
+
+2023-03-02 12:48:16/Users/liuhe/Desktop/progress/TInfineon/40H/11/IC_hot_images/IRF9317TRPBF_M.png  5th---  1: 308
+2: 303
+3: 303
+4: 303
+
+2023-03-02 12:48:17/Users/liuhe/Desktop/progress/TInfineon/40H/11/IC_hot_images/IRF9317TRPBF_M.png  8th---  1: 308
+2: 303
+3: 303
+4: 303
+
+2023-03-02 13:58:10/Users/liuhe/Desktop/progress/TInfineon/40H/sz/IC_hot_images/IRFB4332PBF_W.png  44th---  1: 308
+2: 303
+3: 303
+4: 303
+
+2023-03-02 14:15:25/Users/liuhe/PycharmProjects/SeleniumDemo/TInfenion_40H/IC_hot_images/IRF7303TRPBF_M.png  11th---  1: 43
+2: 28
+3: 28
+4: 28
+
+2023-03-02 14:17:56/Users/liuhe/PycharmProjects/SeleniumDemo/TInfenion_40H/IC_hot_images/IRF7303TRPBF_W.png  3th---  1: 299
+2: 399
+3: 999
+4: 399
+
+2023-03-02 15:03:46/Users/liuhe/PycharmProjects/SeleniumDemo/TInfenion_40H/IC_hot_images/IRF7303TRPBF_W.png  11th---  1: 43
+2: 28
+3: 28
+4: 28
+
+2023-03-02 15:04:54/Users/liuhe/PycharmProjects/SeleniumDemo/TInfenion_40H/IC_hot_images/IRF7303TRPBF_W.png  11th---  1: 43
+2: 28
+3: 28
+4: 28
+
+2023-03-02 15:05:59/Users/liuhe/PycharmProjects/SeleniumDemo/TInfenion_40H/IC_hot_images/IRF7306TRPBF_W.png  31th---  1: 43
+2: 28
+3: 28
+4: 28
+
+2023-03-02 15:07:49/Users/liuhe/PycharmProjects/SeleniumDemo/TInfenion_40H/IC_hot_images/IRF7303TRPBF_W.png  11th---  1: 43
+2: 28
+3: 28
+4: 28
+
+2023-03-02 15:08:14/Users/liuhe/PycharmProjects/SeleniumDemo/TInfenion_40H/IC_hot_images/IRF7306TRPBF_W.png  31th---  1: 43
+2: 28
+3: 28
+4: 28
+
+2023-03-02 15:10:50/Users/liuhe/PycharmProjects/SeleniumDemo/TInfenion_40H/IC_hot_images/IRF7316PBF_M.png  5th---  1: 43
+2: 28
+3: 28
+4: 28
+
+2023-03-02 15:11:28/Users/liuhe/PycharmProjects/SeleniumDemo/TInfenion_40H/IC_hot_images/IRF7316TRPBF_W.png  49th---  1: 43
+2: 28
+3: 28
+4: 28
+
+2023-03-02 15:12:10/Users/liuhe/PycharmProjects/SeleniumDemo/TInfenion_40H/IC_hot_images/IRF7317TRPBF_W.png  30th---  1: 43
+2: 28
+3: 28
+4: 28
+
+2023-03-02 15:12:15/Users/liuhe/PycharmProjects/SeleniumDemo/TInfenion_40H/IC_hot_images/IRF7317TRPBF_W.png  43th---  1: 43
+2: 28
+3: 28
+4: 28
+
+2023-03-02 15:12:57/Users/liuhe/PycharmProjects/SeleniumDemo/TInfenion_40H/IC_hot_images/IRF7319TRPBF_W.png  27th---  1: 43
+2: 28
+3: 28
+4: 28
+
+2023-03-02 15:13:53/Users/liuhe/PycharmProjects/SeleniumDemo/TInfenion_40H/IC_hot_images/IRF7328TRPBF_W.png  8th---  1: 43
+2: 28
+3: 28
+4: 28
+
+2023-03-02 15:14:50/Users/liuhe/PycharmProjects/SeleniumDemo/TInfenion_40H/IC_hot_images/IRF7329TRPBF_W.png  14th---  1: 43
+2: 28
+3: 28
+4: 28
+
+2023-03-02 15:14:53/Users/liuhe/PycharmProjects/SeleniumDemo/TInfenion_40H/IC_hot_images/IRF7329TRPBF_W.png  24th---  1: 43
+2: 28
+3: 28
+4: 28
+
+2023-03-02 15:14:58/Users/liuhe/PycharmProjects/SeleniumDemo/TInfenion_40H/IC_hot_images/IRF7329TRPBF_W.png  44th---  1: 43
+2: 28
+3: 28
+4: 28
+
+2023-03-02 15:15:57/Users/liuhe/PycharmProjects/SeleniumDemo/TInfenion_40H/IC_hot_images/IRF7341TR_M.png  2th---  1: 43
+2: 28
+3: 28
+4: 28
+
+2023-03-02 15:16:13/Users/liuhe/PycharmProjects/SeleniumDemo/TInfenion_40H/IC_hot_images/IRF7341TR_W.png  46th---  1: 43
+2: 28
+3: 28
+4: 28
+
+2023-03-02 15:18:41/Users/liuhe/PycharmProjects/SeleniumDemo/TInfenion_40H/IC_hot_images/IRF7389TRPBF_W.png  31th---  1: 43
+2: 28
+3: 28
+4: 28
+
+2023-03-02 15:20:03/Users/liuhe/PycharmProjects/SeleniumDemo/TInfenion_40H/IC_hot_images/IRF7410TRPBF_W.png  49th---  1: 43
+2: 28
+3: 28
+4: 28
+
+2023-03-02 15:20:05/Users/liuhe/PycharmProjects/SeleniumDemo/TInfenion_40H/IC_hot_images/IRF7410TR_M.png  0th---  1: 43
+2: 28
+3: 28
+4: 28
+
+2023-03-02 15:20:41/Users/liuhe/PycharmProjects/SeleniumDemo/TInfenion_40H/IC_hot_images/IRF7413ZTRPBF_W.png  40th---  1: 43
+2: 28
+3: 28
+4: 28
+
+2023-03-02 15:20:42/Users/liuhe/PycharmProjects/SeleniumDemo/TInfenion_40H/IC_hot_images/IRF7413ZTRPBF_W.png  45th---  1: 43
+2: 28
+3: 28
+4: 28
+
+2023-03-02 15:22:37/Users/liuhe/PycharmProjects/SeleniumDemo/TInfenion_40H/IC_hot_images/IRF7424TRPBF_W.png  9th---  1: 43
+2: 28
+3: 28
+4: 28
+
+2023-03-02 15:23:50/Users/liuhe/PycharmProjects/SeleniumDemo/TInfenion_40H/IC_hot_images/IRF7425TR_W.png  10th---  1: 43
+2: 28
+3: 28
+4: 28
+
+2023-03-02 15:23:51/Users/liuhe/PycharmProjects/SeleniumDemo/TInfenion_40H/IC_hot_images/IRF7425TR_W.png  11th---  1: 43
+2: 28
+3: 28
+4: 28
+
+2023-03-02 15:23:54/Users/liuhe/PycharmProjects/SeleniumDemo/TInfenion_40H/IC_hot_images/IRF7425TR_W.png  20th---  1: 43
+2: 28
+3: 28
+4: 28
+
+2023-03-02 15:25:00/Users/liuhe/PycharmProjects/SeleniumDemo/TInfenion_40H/IC_hot_images/IRF7465TRPBF_W.png  15th---  1: 43
+2: 28
+3: 28
+4: 28
+

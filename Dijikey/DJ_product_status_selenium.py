@@ -11,16 +11,16 @@ from Manager import AccountMange
 ssl._create_default_https_context = ssl._create_unverified_context
 
 driver = uc.Chrome(use_subprocess=True)
-driver.set_page_load_timeout(300)
+driver.set_page_load_timeout(360)
 # logic
 
 
-sourceFile_dic = {'fileName': PathHelp.get_file_path('TInfenion_50H', 'Task.xlsx'),
+sourceFile_dic = {'fileName': PathHelp.get_file_path('TInfenion_55H', 'Task.xlsx'),
                   'sourceSheet': 'ppn',
                   'colIndex': 1,
-                  'startIndex': 33,
+                  'startIndex': 51,
                   'endIndex': 125}
-result_save_file = PathHelp.get_file_path('TInfenion_50H', 'dijikey_status.xlsx')
+result_save_file = PathHelp.get_file_path('TInfenion_55H', 'dijikey_status.xlsx')
 default_url = 'https://www.digikey.com/'
 log_file = PathHelp.get_file_path('Dijikey', 'DJ_product_status_log.txt')
 
@@ -50,7 +50,7 @@ def go_to_cate(cate_index, cate_name):
         search_button = header_area.find_element(by=By.CLASS_NAME, value='search-button')
         search_button.click()
     except Exception as e:
-        LogHelper.write_log(log_file_name=log_file, content=f'go_to_cate exception is: {e}')
+        LogHelper.write_log(log_file_name=log_file, content=f'go_to_cate {cate_name} exception is: {e}')
 
 
 # 解析某个型号的页面信息，先看未折叠的前三行，判断是否需要展开，展开，解析，再判断，再展开，再解析。。。。

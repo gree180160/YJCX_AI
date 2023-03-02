@@ -143,26 +143,14 @@ def SplitPic_week(source_pic: str):
     wid = img_size[0]  # 图片宽度
     hei = img_size[1]  # 图片高度
     # mac
-    # x = wid/2 - 216*scale
-    # y = 980 * scale
-    # w = 116 * scale
-    # h = 30 * scale
-    # space = 36 * scale
-    # #11&SZ-02
-    x = wid / 2 - 100 - 116
-    y = 980 * scale
+    x = wid/2 - 216*scale
+    y = (988 * scale) if hei > (6320) else (978*scale)
     w = 116 * scale
     h = 30 * scale
     space = 36 * scale
-    # 04
-    # x = wid / 2 - 80 - 116
-    # y = 890 * scale - (2852*scale - hei)
-    # w = 116 * scale
-    # h = 26.5 * scale
-    # space = 32.5 * scale
-    # after 0215
+    # #11&SZ-02
     # x = wid / 2 - 100 - 116
-    # y = 980 * scale
+    # y = (988 * scale) if hei > (3160.0*scale) else (978*scale)
     # w = 116 * scale
     # h = 30 * scale
     # space = 36 * scale
@@ -186,26 +174,14 @@ def SplitPic_month(source_pic: str):
     wid = img_size[0]  # 图片宽度
     hei = img_size[1]  # 图片高度
     # mac 高清
-    # x = wid / 2 - 216 * scale
-    # y = 980 * scale
-    # w = 116 * scale
-    # h = 30 * scale
-    # space = 36 * scale
-    # 11-01,sz
-    x = wid/2 - 100.00 - 116
-    y = 980 * scale
+    x = wid / 2 - 216 * scale
+    y = (988 * scale) if hei > (3440) else (978*scale)
     w = 116 * scale
     h = 30 * scale
     space = 36 * scale
-    # 04
-    # x = wid/2 - 200*scale
-    # y = 889.2 * scale - (1553*scale - hei)
-    # w = 116 * scale
-    # h = 26.5 * scale
-    # space = 32.5 * scale
-    # after 0215
+    # 11-01,sz
     # x = wid/2 - 100.00 - 116
-    # y = 980 * scale
+    # y = (988 * scale) if hei > (1720.0*scale) else (978*scale)
     # w = 116 * scale
     # h = 30 * scale
     # space = 36 * scale
@@ -227,8 +203,8 @@ def test_ppn_value(fold_path: str):
 
 
 def test_hot_value(fold_path: str):
-    temp = 'SX1262IMLTRT_M.png' # 1911×1724
-    # temp = 'SX1262IMLTRT_W.png' # 1911×3164
+    temp = 'IRF7303TRPBF_M.png' # 1911×1724
+    # temp = 'IRF7306TRPBF_W.png' # 1911×3164
     if temp.endswith('_M.png'):
         image_hot_data = SplitPic_month(fold_path + '/' + temp)
     elif temp.endswith('_W.png'):
@@ -241,5 +217,5 @@ if __name__ == "__main__":
     # useFold('/Users/liuhe/Desktop/hot_img')
     # print(result_str)
     # SplitPic('/Users/liuhe/Desktop/识图test/88.png')
-    result = test_hot_value(fold_path='/Users/liuhe/PycharmProjects/SeleniumDemo/TAlice_stock/IC_hot_images')
+    result = test_hot_value(fold_path='/Users/liuhe/PycharmProjects/SeleniumDemo/TInfenion_40H/IC_hot_images')
     print(result)

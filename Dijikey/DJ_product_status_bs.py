@@ -82,6 +82,13 @@ def get_dj_product_status(cate_index, cate_name):
             dim_arr=[result])
 
 
+def combine_result(source_files:[], aim_file):
+    for temp in source_files:
+        data = ExcelHelp.read_sheet_content_by_name(file_name=temp, sheet_name='dijikey_status')
+        ExcelHelp.add_arr_to_sheet(file_name=aim_file, sheet_name='dijikey_status', dim_arr=data)
+        time.sleep(2.0)
+
+
 def main():
     all_cates = ExcelHelp.read_col_content(file_name=sourceFile_dic['fileName'],
                                            sheet_name=sourceFile_dic['sourceSheet'],
@@ -95,4 +102,5 @@ def main():
 
 
 if __name__ == '__main__':
-    main()
+    # main()
+    combine_result(["/Users/liuhe/Desktop/progress/TInfineon/50H/11/dijikey_status.xlsx", "/Users/liuhe/Desktop/progress/TInfineon/50H/sz/dijikey_status.xlsx", "/Users/liuhe/Desktop/progress/TInfineon/50H/04/dijikey_status.xlsx"], PathHelp.get_file_path('TInfenion_50H', 'dijikey_status.xlsx'))
