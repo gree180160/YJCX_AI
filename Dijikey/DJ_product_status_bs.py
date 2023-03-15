@@ -103,4 +103,4 @@ def main():
 
 if __name__ == '__main__':
     # main()
-    combine_result(["/Users/liuhe/Desktop/progress/TInfineon/50H/11/dijikey_status.xlsx", "/Users/liuhe/Desktop/progress/TInfineon/50H/sz/dijikey_status.xlsx", "/Users/liuhe/Desktop/progress/TInfineon/50H/04/dijikey_status.xlsx"], PathHelp.get_file_path('TInfenion_50H', 'dijikey_status.xlsx'))
+    combine_result(["/Users/liuhe/Desktop/progress/TInfineon/55H/11/dijikey_status.xlsx", "/Users/liuhe/Desktop/progress/TInfineon/55H/sz/dijikey_status.xlsx", "/Users/liuhe/Desktop/progress/TInfineon/55H/04/dijikey_status.xlsx"], PathHelp.get_file_path('TInfenion_55H', 'dijikey_status.xlsx'))

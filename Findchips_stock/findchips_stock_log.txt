@@ -1159,3 +1159,4 @@
 2023-02-08 01:05:32CY8C28433-24PVXI request get exception: HTTPSConnectionPool(host='www.findchips.com', port=443): Read timed out. (read timeout=240)
 2023-02-08 01:48:23CY8C29466-24SXIT(PROG) request get exception: HTTPSConnectionPool(host='www.findchips.com', port=443): Read timed out. (read timeout=240)
 2023-02-17 14:17:15CY8CMBR3116-LQXIT(/HQ/6NRX) req.status_code: 404
+2023-03-06 12:14:21S29GL128P90TFIR20/HSD/TR/BAE req.status_code: 404

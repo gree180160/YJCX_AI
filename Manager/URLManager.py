@@ -52,7 +52,7 @@ def octopart_get_page_url(key_name, page, manu: Octopart_manu) -> str:
     else:
         manu_param = ''
     page_param = '' if page == 1 else '&start=' + str(page*10 - 10)
-    url = f'https://octopart.com/search?q={key_name}&currency=USD&specs=0{manu_param}{page_param}'
+    url = f'view-source:https://octopart.com/search?q={key_name}&currency=USD&specs=0{manu_param}{page_param}'
     return url
 
 
@@ -66,7 +66,7 @@ def octopart_page_more_url(sourcefile: str, page0_sheet: str, manu: Octopart_man
         try:
             if pnInfo is None:
                 continue
-            key_name = str(pnInfo[2]) + str(pnInfo[3])
+            key_name = str(pnInfo[2])
             if key_name is None:
                 continue
             current_search_param = key_name
@@ -74,16 +74,43 @@ def octopart_page_more_url(sourcefile: str, page0_sheet: str, manu: Octopart_man
                 continue
             else:
                 last_search_param = current_search_param
-            total_p = int(pnInfo[4])
+            total_p = int(pnInfo[3])
             current_p = 2
             if total_p > 1:
                 while current_p <= total_p:
-                    url = octopart_get_page_url(key_name=key_name, page=current_p, alpha='', manu=manu)
+                    url = octopart_get_page_url(key_name=key_name, page=current_p, manu=manu)
                     pninfo_url_list.append([url])
                     current_p += 1
         except:
             print(pnInfo + "exception")
         ExcelHelp.add_arr_to_sheet(file_name=pn_file, sheet_name='url_pagemore', dim_arr=pninfo_url_list)
     print('over')
+
+
+# IC 交易网
+def IC_stock_url(ppn: str):
+    cate_str = str(ppn)
+    cate_str = cate_str.replace('/', '%2F')
+    cate_str = cate_str.replace('#', '%23')
+    cate_str = cate_str.replace('+', '%2B')
+    cate_str = cate_str.replace(',', '%2C')
+    return f"https://www.ic.net.cn/search/{cate_str}.html"
+
+
+def IC_hot_url(ppn: str, isWeek):
+    cate_str = str(ppn)
+    cate_str = cate_str.replace('/', '%2F')
+    cate_str = cate_str.replace('#', '%23')
+    cate_str = cate_str.replace('+', '%2B')
+    cate_str = cate_str.replace(',', '%2C')
+    if isWeek:
+        search_url = f'https://icpi.ic.net.cn/icpi/detail.php?key={cate_str}'
+    else:
+        search_url = f'https://icpi.ic.net.cn/icpi/detail_month.php?key={cate_str}'
+    return search_url
+
+
+if __name__ == "__main__":
+    octopart_page_more_url(sourcefile = PathHelp.get_file_path(None, file_name='TRenesa.xlsx'), page0_sheet='page0_pn', manu=Octopart_manu.Renesas)
 
 

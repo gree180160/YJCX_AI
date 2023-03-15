@@ -238,3 +238,699 @@
 2023-03-02 15:34:26go_to_cate S25FL128SAGMFIG11 exception is: Message: timeout: Timed out receiving message from renderer: 360.000
   (Session info: chrome=110.0.5481.177)
 
+2023-03-02 18:13:50go_to_cate S25FL128SAGNFA000 exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-02 19:33:01go_to_cate S25FL128SAGNFI011 exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-02 22:21:40go_to_cate S25FL128SDSMFBG10 exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-02 22:49:51go_to_cate S25FL128SDSMFN003 exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-03 09:36:07go_to_cate S26KS512SDPBHV020 exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-03 10:32:47go_to_cate S28HL512TFPBHI013 exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-03 10:52:31go_to_cate S28HL512TFPBHV013 exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-03 12:01:41go_to_cate S28HS01GTGZBHI033 exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-03 12:27:01go_to_cate S28HS01GTGZBHM030 exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-03 12:52:56go_to_cate S28HS01GTGZBHM033 exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-03 13:18:16go_to_cate S28HS01GTGZBHV030 exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-03 13:44:11go_to_cate S28HS01GTGZBHV033 exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-03 14:16:11go_to_cate S28HS02GTFPBHB050 exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-03 14:41:44go_to_cate S28HS02GTFPBHB053 exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-03 15:07:14go_to_cate S28HS02GTFPBHM050 exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-03 15:33:02go_to_cate S28HS02GTFPBHM053 exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-06 10:26:40go_to_cate S29GL128P10FFI013 exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (909, 47). Other element would receive the click: <div tabindex="-1" id="auto-modal-mask" class="dk-site__mask visible"></div>
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-06 10:28:27go_to_cate S29GL128P10FFI020 exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (909, 47). Other element would receive the click: <div tabindex="-1" id="auto-modal-mask" class="dk-site__mask visible"></div>
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-06 10:30:20go_to_cate S29GL128P10FFI0202 exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (909, 47). Other element would receive the click: <div tabindex="-1" id="auto-modal-mask" class="dk-site__mask visible"></div>
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-06 10:32:08go_to_cate S29GL128P10FFI020A exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (909, 47). Other element would receive the click: <div tabindex="-1" id="auto-modal-mask" class="dk-site__mask visible"></div>
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-06 10:34:09go_to_cate S29GL128P10FFI022 exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (909, 47). Other element would receive the click: <div tabindex="-1" id="auto-modal-mask" class="dk-site__mask visible"></div>
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-06 10:35:26go_to_cate S29GL128P10TFI010 exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (909, 47). Other element would receive the click: <div tabindex="-1" id="auto-modal-mask" class="dk-site__mask visible"></div>
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-06 10:36:54go_to_cate S29GL128P10TFI010(TSTDTS) exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (909, 47). Other element would receive the click: <div tabindex="-1" id="auto-modal-mask" class="dk-site__mask visible"></div>
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-06 10:39:00go_to_cate S29GL128P10TFI0105 exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (909, 47). Other element would receive the click: <div tabindex="-1" id="auto-modal-mask" class="dk-site__mask visible"></div>
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-06 10:40:47go_to_cate S29GL128P10TFI010-AU exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (909, 47). Other element would receive the click: <div tabindex="-1" id="auto-modal-mask" class="dk-site__mask visible"></div>
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-06 10:42:50go_to_cate S29GL128P10TFI013 exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (909, 47). Other element would receive the click: <div tabindex="-1" id="auto-modal-mask" class="dk-site__mask visible"></div>
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-06 10:44:10go_to_cate S29GL128P10TFI020 exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (909, 47). Other element would receive the click: <div tabindex="-1" id="auto-modal-mask" class="dk-site__mask visible"></div>
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-06 10:46:13go_to_cate S29GL128P10TFI0205 exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (909, 47). Other element would receive the click: <div tabindex="-1" id="auto-modal-mask" class="dk-site__mask visible"></div>
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-06 10:48:09go_to_cate S29GL128P10TFI020D exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (909, 47). Other element would receive the click: <div tabindex="-1" id="auto-modal-mask" class="dk-site__mask visible"></div>
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-06 10:49:59go_to_cate S29GL128P10TFI023 exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (909, 47). Other element would receive the click: <div tabindex="-1" id="auto-modal-mask" class="dk-site__mask visible"></div>
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-06 10:51:28go_to_cate S29GL128P11FFI010 exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (909, 47). Other element would receive the click: <div tabindex="-1" id="auto-modal-mask" class="dk-site__mask visible"></div>
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-06 10:59:29go_to_cate S29GL128P11FFI0102 exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (909, 47). Other element would receive the click: <div tabindex="-1" id="auto-modal-mask" class="dk-site__mask visible"></div>
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-06 11:00:50go_to_cate S29GL128P11FFI010A exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (909, 47). Other element would receive the click: <div tabindex="-1" id="auto-modal-mask" class="dk-site__mask visible"></div>
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-06 11:02:26go_to_cate S29GL128P11FFI010-DNU exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (909, 47). Other element would receive the click: <div tabindex="-1" id="auto-modal-mask" class="dk-site__mask visible"></div>
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-06 11:04:00go_to_cate S29GL128P11FFI020 exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (909, 47). Other element would receive the click: <div tabindex="-1" id="auto-modal-mask" class="dk-site__mask visible"></div>
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-06 11:05:32go_to_cate S29GL128P11FFI0202 exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (909, 47). Other element would receive the click: <div tabindex="-1" id="auto-modal-mask" class="dk-site__mask visible"></div>
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-06 11:07:06go_to_cate S29GL128P11FFI020A exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (909, 47). Other element would receive the click: <div tabindex="-1" id="auto-modal-mask" class="dk-site__mask visible"></div>
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-06 11:08:23go_to_cate S29GL128P11FFI022 exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (909, 47). Other element would receive the click: <div tabindex="-1" id="auto-modal-mask" class="dk-site__mask visible"></div>
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-06 11:10:22go_to_cate S29GL128P11FFIV10 exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (909, 47). Other element would receive the click: <div tabindex="-1" id="auto-modal-mask" class="dk-site__mask visible"></div>
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-06 11:11:45go_to_cate S29GL128P11FFIV13 exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (909, 47). Other element would receive the click: <div tabindex="-1" id="auto-modal-mask" class="dk-site__mask visible"></div>
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-06 11:13:31go_to_cate S29GL128P11FFIV20 exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (909, 47). Other element would receive the click: <div tabindex="-1" id="auto-modal-mask" class="dk-site__mask visible"></div>
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-06 11:15:24go_to_cate S29GL128P11FFIV20A exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (909, 47). Other element would receive the click: <div tabindex="-1" id="auto-modal-mask" class="dk-site__mask visible"></div>
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-06 11:17:04go_to_cate S29GL128P11FFIV22 exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (909, 47). Other element would receive the click: <div tabindex="-1" id="auto-modal-mask" class="dk-site__mask visible"></div>
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-06 11:18:37go_to_cate S29GL128P11FFIV22A exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (909, 47). Other element would receive the click: <div tabindex="-1" id="auto-modal-mask" class="dk-site__mask visible"></div>
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-06 11:20:05go_to_cate S29GL128P11FFIV23 exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (909, 47). Other element would receive the click: <div tabindex="-1" id="auto-modal-mask" class="dk-site__mask visible"></div>
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-06 11:21:38go_to_cate S29GL128P11TFI010 exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (909, 47). Other element would receive the click: <div tabindex="-1" id="auto-modal-mask" class="dk-site__mask visible"></div>
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-06 11:29:40go_to_cate S29GL128P11TFI0105 exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (909, 47). Other element would receive the click: <div tabindex="-1" id="auto-modal-mask" class="dk-site__mask visible"></div>
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-06 11:31:39go_to_cate S29GL128P11TFI010D exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (909, 47). Other element would receive the click: <div tabindex="-1" id="auto-modal-mask" class="dk-site__mask visible"></div>
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-06 11:33:26go_to_cate S29GL128P11TFI013 exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (909, 47). Other element would receive the click: <div tabindex="-1" id="auto-modal-mask" class="dk-site__mask visible"></div>
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-06 11:35:20go_to_cate S29GL128P11TFI020 exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (909, 47). Other element would receive the click: <div tabindex="-1" id="auto-modal-mask" class="dk-site__mask visible"></div>
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-06 11:36:44go_to_cate S29GL128P11TFI0205 exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (909, 47). Other element would receive the click: <div tabindex="-1" id="auto-modal-mask" class="dk-site__mask visible"></div>
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-06 11:38:04go_to_cate S29GL128P11TFI023 exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (909, 47). Other element would receive the click: <div tabindex="-1" id="auto-modal-mask" class="dk-site__mask visible"></div>
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-06 11:39:23go_to_cate S29GL128P11TFIV10 exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (909, 47). Other element would receive the click: <div tabindex="-1" id="auto-modal-mask" class="dk-site__mask visible"></div>
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-06 11:40:54go_to_cate S29GL128P11TFIV13 exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (909, 47). Other element would receive the click: <div tabindex="-1" id="auto-modal-mask" class="dk-site__mask visible"></div>
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-06 11:42:55go_to_cate S29GL128P11TFIV20 exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (909, 47). Other element would receive the click: <div tabindex="-1" id="auto-modal-mask" class="dk-site__mask visible"></div>
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-06 11:45:00go_to_cate S29GL128P11TFIV23 exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (909, 47). Other element would receive the click: <div tabindex="-1" id="auto-modal-mask" class="dk-site__mask visible"></div>
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-06 11:46:59go_to_cate S29GL128P90FAIR10 exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (909, 47). Other element would receive the click: <div tabindex="-1" id="auto-modal-mask" class="dk-site__mask visible"></div>
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-06 11:48:46go_to_cate S29GL128P90FAIR12 exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (909, 47). Other element would receive the click: <div tabindex="-1" id="auto-modal-mask" class="dk-site__mask visible"></div>
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-06 11:50:03go_to_cate S29GL128P90FAIR20 exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (909, 47). Other element would receive the click: <div tabindex="-1" id="auto-modal-mask" class="dk-site__mask visible"></div>
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-06 11:51:50go_to_cate S29GL128P90FFCR10 exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (909, 47). Other element would receive the click: <div tabindex="-1" id="auto-modal-mask" class="dk-site__mask visible"></div>
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-06 11:53:46go_to_cate S29GL128P90FFCR102 exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (909, 47). Other element would receive the click: <div tabindex="-1" id="auto-modal-mask" class="dk-site__mask visible"></div>
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-06 12:01:47go_to_cate S29GL128P90FFCR10A exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (909, 47). Other element would receive the click: <div tabindex="-1" id="auto-modal-mask" class="dk-site__mask visible"></div>
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-06 12:03:46go_to_cate S29GL128P90FFCR20 exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (909, 47). Other element would receive the click: <div tabindex="-1" id="auto-modal-mask" class="dk-site__mask visible"></div>
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-06 12:05:29go_to_cate S29GL128P90FFCR202 exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (909, 47). Other element would receive the click: <div tabindex="-1" id="auto-modal-mask" class="dk-site__mask visible"></div>
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-06 12:07:20go_to_cate S29GL128P90FFCR20A exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (909, 47). Other element would receive the click: <div tabindex="-1" id="auto-modal-mask" class="dk-site__mask visible"></div>
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-06 12:09:22go_to_cate S29GL128P90FFIR10 exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (909, 47). Other element would receive the click: <div tabindex="-1" id="auto-modal-mask" class="dk-site__mask visible"></div>
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-06 12:11:05go_to_cate S29GL128P90FFIR10 (ROHS) exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (909, 47). Other element would receive the click: <div tabindex="-1" id="auto-modal-mask" class="dk-site__mask visible"></div>
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-06 12:13:07go_to_cate S29GL128P90FFIR10A exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (909, 47). Other element would receive the click: <div tabindex="-1" id="auto-modal-mask" class="dk-site__mask visible"></div>
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-06 12:14:43go_to_cate S29GL128P90FFIR12 exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (909, 47). Other element would receive the click: <div tabindex="-1" id="auto-modal-mask" class="dk-site__mask visible"></div>
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-06 12:16:20go_to_cate S29GL128P90FFIR13 exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (909, 47). Other element would receive the click: <div tabindex="-1" id="auto-modal-mask" class="dk-site__mask visible"></div>
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-06 12:17:44go_to_cate S29GL128P90FFIR20 exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (909, 47). Other element would receive the click: <div tabindex="-1" id="auto-modal-mask" class="dk-site__mask visible"></div>
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-06 12:19:25go_to_cate S29GL128P90FFIR202 exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (909, 47). Other element would receive the click: <div tabindex="-1" id="auto-modal-mask" class="dk-site__mask visible"></div>
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-06 12:21:15go_to_cate S29GL128P90FFIR20A exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (909, 47). Other element would receive the click: <div tabindex="-1" id="auto-modal-mask" class="dk-site__mask visible"></div>
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-06 12:22:58go_to_cate S29GL128P90FFIR22 exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (909, 47). Other element would receive the click: <div tabindex="-1" id="auto-modal-mask" class="dk-site__mask visible"></div>
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-06 12:24:45go_to_cate S29GL128P90FFIR23 exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (909, 47). Other element would receive the click: <div tabindex="-1" id="auto-modal-mask" class="dk-site__mask visible"></div>
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-06 12:26:09go_to_cate S29GL128P90TFCR10 exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (909, 47). Other element would receive the click: <div tabindex="-1" id="auto-modal-mask" class="dk-site__mask visible"></div>
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-06 12:34:10go_to_cate S29GL128P90TFCR105 exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (909, 47). Other element would receive the click: <div tabindex="-1" id="auto-modal-mask" class="dk-site__mask visible"></div>
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-06 12:35:32go_to_cate S29GL128P90TFCR10A exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (909, 47). Other element would receive the click: <div tabindex="-1" id="auto-modal-mask" class="dk-site__mask visible"></div>
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-06 12:36:55go_to_cate S29GL128P90TFCR10D exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (909, 47). Other element would receive the click: <div tabindex="-1" id="auto-modal-mask" class="dk-site__mask visible"></div>
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-06 12:38:24go_to_cate S29GL128P90TFCR20 exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (909, 47). Other element would receive the click: <div tabindex="-1" id="auto-modal-mask" class="dk-site__mask visible"></div>
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-06 12:40:01go_to_cate S29GL128P90TFCR205 exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (909, 47). Other element would receive the click: <div tabindex="-1" id="auto-modal-mask" class="dk-site__mask visible"></div>
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-06 12:41:47go_to_cate S29GL128P90TFCR20D exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (909, 47). Other element would receive the click: <div tabindex="-1" id="auto-modal-mask" class="dk-site__mask visible"></div>
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-06 12:43:43go_to_cate S29GL128P90TFIR10 exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (909, 47). Other element would receive the click: <div tabindex="-1" id="auto-modal-mask" class="dk-site__mask visible"></div>
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-06 12:45:13go_to_cate S29GL128P90TFIR105 exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (909, 47). Other element would receive the click: <div tabindex="-1" id="auto-modal-mask" class="dk-site__mask visible"></div>
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-06 12:47:17go_to_cate S29GL128P90TFIR10D exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (909, 47). Other element would receive the click: <div tabindex="-1" id="auto-modal-mask" class="dk-site__mask visible"></div>
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-06 12:49:04go_to_cate S29GL128P90TFIR13 exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (909, 47). Other element would receive the click: <div tabindex="-1" id="auto-modal-mask" class="dk-site__mask visible"></div>
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-06 12:51:01go_to_cate S29GL128P90TFIR20 exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (909, 47). Other element would receive the click: <div tabindex="-1" id="auto-modal-mask" class="dk-site__mask visible"></div>
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-06 12:52:17go_to_cate S29GL128P90TFIR20/HSD/TR/BAE exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (909, 47). Other element would receive the click: <div tabindex="-1" id="auto-modal-mask" class="dk-site__mask visible"></div>
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-06 12:53:54go_to_cate S29GL128P90TFIR20D exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (909, 47). Other element would receive the click: <div tabindex="-1" id="auto-modal-mask" class="dk-site__mask visible"></div>
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-06 12:55:37go_to_cate S29GL128P90TFIR23 exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (909, 47). Other element would receive the click: <div tabindex="-1" id="auto-modal-mask" class="dk-site__mask visible"></div>
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-06 12:57:06go_to_cate S29GL128P90TFIR23D exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (909, 47). Other element would receive the click: <div tabindex="-1" id="auto-modal-mask" class="dk-site__mask visible"></div>
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-06 13:05:07go_to_cate S29GL128S10DHB010 exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (909, 47). Other element would receive the click: <div tabindex="-1" id="auto-modal-mask" class="dk-site__mask visible"></div>
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-06 13:06:55go_to_cate S29GL128S10DHB013 exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (909, 47). Other element would receive the click: <div tabindex="-1" id="auto-modal-mask" class="dk-site__mask visible"></div>
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-06 13:08:24go_to_cate S29GL128S10DHB020 exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (909, 47). Other element would receive the click: <div tabindex="-1" id="auto-modal-mask" class="dk-site__mask visible"></div>
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-06 13:09:45go_to_cate S29GL128S10DHB023 exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (909, 47). Other element would receive the click: <div tabindex="-1" id="auto-modal-mask" class="dk-site__mask visible"></div>
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-06 13:11:44go_to_cate S29GL128S10DHI010 exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (909, 47). Other element would receive the click: <div tabindex="-1" id="auto-modal-mask" class="dk-site__mask visible"></div>
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-06 13:13:09go_to_cate S29GL128S10DHI013 exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (909, 47). Other element would receive the click: <div tabindex="-1" id="auto-modal-mask" class="dk-site__mask visible"></div>
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-06 13:14:43go_to_cate S29GL128S10DHI020 exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (909, 47). Other element would receive the click: <div tabindex="-1" id="auto-modal-mask" class="dk-site__mask visible"></div>
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-06 13:16:49go_to_cate S29GL128S10DHI023 exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (909, 47). Other element would receive the click: <div tabindex="-1" id="auto-modal-mask" class="dk-site__mask visible"></div>
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-06 13:18:35go_to_cate S29GL128S10DHIV10 exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (909, 47). Other element would receive the click: <div tabindex="-1" id="auto-modal-mask" class="dk-site__mask visible"></div>
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-06 13:20:24go_to_cate S29GL128S10DHIV13 exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (909, 47). Other element would receive the click: <div tabindex="-1" id="auto-modal-mask" class="dk-site__mask visible"></div>
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-06 13:22:02go_to_cate S29GL128S10DHIV20 exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (909, 47). Other element would receive the click: <div tabindex="-1" id="auto-modal-mask" class="dk-site__mask visible"></div>
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-06 13:23:20go_to_cate S29GL128S10DHIV23 exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (909, 47). Other element would receive the click: <div tabindex="-1" id="auto-modal-mask" class="dk-site__mask visible"></div>
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-06 13:25:02go_to_cate S29GL128S10DHV010 exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (909, 47). Other element would receive the click: <div tabindex="-1" id="auto-modal-mask" class="dk-site__mask visible"></div>
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-06 13:26:45go_to_cate S29GL128S10DHV013 exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (909, 47). Other element would receive the click: <div tabindex="-1" id="auto-modal-mask" class="dk-site__mask visible"></div>
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-06 13:28:44go_to_cate S29GL128S10DHV020 exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (909, 47). Other element would receive the click: <div tabindex="-1" id="auto-modal-mask" class="dk-site__mask visible"></div>
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-06 13:36:46go_to_cate S29GL128S10DHV023 exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (909, 47). Other element would receive the click: <div tabindex="-1" id="auto-modal-mask" class="dk-site__mask visible"></div>
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-06 13:49:10go_to_cate S29GL128S10FAIV13 exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-06 14:38:44go_to_cate S29GL128S10GHB010 exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-06 15:42:20go_to_cate S29GL128S10TFV020 exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-06 16:25:25go_to_cate S29GL128S11DHIV20 exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-06 16:50:42go_to_cate S29GL128S11DHIV20A exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-06 22:30:38go_to_cate 1EDN7550BXTSA1 exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-06 23:28:30go_to_cate BSC010N04LSATMA1 exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-07 00:55:58go_to_cate ICE5AR4770BZSXKLA1 exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-07 02:06:17go_to_cate IKW50N60DTPXKSA1 exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-07 14:37:02go_to_cate S29GL512T12TFVV23 exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-07 14:47:38go_to_cate S29GL512T13DHNV13 exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-07 15:11:27go_to_cate S29GL512T13TFNV23 exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-07 17:15:18go_to_cate S29PL127J60BFA043 exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-07 17:44:08go_to_cate S70FL01GSAGBAEC10 exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-07 18:16:08go_to_cate S70FL01GSAGBHAC10 exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-07 18:42:01go_to_cate S70FL01GSAGBHAC13 exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-07 19:08:02go_to_cate S70FL01GSAGBHBC10 exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-07 19:33:17go_to_cate S70FL01GSAGBHEC10 exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-07 19:58:48go_to_cate S70FL01GSAGBHEC13 exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-07 20:24:38go_to_cate S70FL01GSAGBHIC10 exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-07 20:50:05go_to_cate S70FL01GSAGBHIC13 exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-07 21:15:42go_to_cate S70FL01GSAGBHMC10 exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-07 21:41:22go_to_cate S70FL01GSAGBHMC13 exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-07 22:06:54go_to_cate S70FL01GSAGBHVC10 exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-07 22:13:43go_to_cate S70FL01GSAGBHVC13 exception is: HTTPConnectionPool(host='localhost', port=54895): Max retries exceeded with url: /session/3467f8bc4643738e6e84e53e0b6066f8/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x11ed95240>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2023-03-08 00:23:12go_to_cate S70FL01GSAGMFA010 exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-08 03:17:56go_to_cate S70FS01GSAGBHB213 exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-08 03:56:37go_to_cate S70FS01GSAGMFV010 exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-08 05:23:50go_to_cate S70GL02GS11FHI013 exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-08 05:43:16go_to_cate S70GL02GS11FHV020 exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-08 10:49:08go_to_cate TD215N22KOF exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-08 11:50:30go_to_cate TD250N16KOF exception is: Message: no such element: Unable to locate element: {"method":"css selector","selector":".header__search"}
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-08 12:11:26go_to_cate TD250N16KOF-EUPC exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-08 14:55:33go_to_cate TD500N12KOFS01HPSA1 exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-08 15:21:06go_to_cate TD500N16KOF-EUPC exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-08 15:46:50go_to_cate TD500N16KOFHOSA1 exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-08 16:12:45go_to_cate TD500N16KOFHPSA1 exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-08 16:38:19go_to_cate TD500N16KOFHPSA2 exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-08 17:04:12go_to_cate TD500N16KOFTIMHPSA1 exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-08 17:30:04go_to_cate TD500N18KOF exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-08 17:55:39go_to_cate TD500N18KOFHPSA1 exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-08 18:21:37go_to_cate TD520N22KOFHPSA2 exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-10 22:43:02go_to_cate CY7S1049G30-10VXIT exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=111.0.5563.64)
+
+2023-03-11 08:49:10go_to_cate CY8C21312-24PVXA exception is: Message: disconnected: Unable to receive message from renderer
+  (failed to check if window was closed: disconnected: not connected to DevTools)
+  (Session info: chrome=111.0.5563.64)
+
+2023-03-11 09:16:05go_to_cate CY8C21312-24PVXAT exception is: Message: disconnected: not connected to DevTools
+  (failed to check if window was closed: disconnected: not connected to DevTools)
+  (Session info: chrome=111.0.5563.64)
+
+2023-03-11 09:17:45go_to_cate CY8C21323-24LQXI exception is: Message: disconnected: not connected to DevTools
+  (failed to check if window was closed: disconnected: not connected to DevTools)
+  (Session info: chrome=111.0.5563.64)
+
+2023-03-11 11:14:00go_to_cate TD570N18KOF exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=111.0.5563.64)
+
+2023-03-11 13:29:38go_to_cate TDA38840AUMA1 exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=111.0.5563.64)
+
+2023-03-11 13:50:18go_to_cate TDB6HK124N16RR-EUPC exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=111.0.5563.64)
+
+2023-03-11 14:15:41go_to_cate TDB6HK180N16RRB11BOSA1 exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=111.0.5563.64)
+
+2023-03-11 14:47:42go_to_cate TDB6HK180N16RRB11BPSA1 exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=111.0.5563.64)
+
+2023-03-11 15:13:10go_to_cate TDB6HK180N16RR-B11-EUPC exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=111.0.5563.64)
+
+2023-03-11 15:38:59go_to_cate TDB6HK180N16RRB21BOSA1 exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=111.0.5563.64)
+
+2023-03-11 16:04:19go_to_cate TDB6HK180N16RRB48BPSA1 exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=111.0.5563.64)
+
+2023-03-11 16:29:37go_to_cate TDB6HK180N16RRB48BPSA2 exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=111.0.5563.64)
+
+2023-03-11 16:55:06go_to_cate TDB6HK180N16RRBOSA1 exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=111.0.5563.64)
+
+2023-03-11 17:21:05go_to_cate TDB6HK180N16RRBPSA1 exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=111.0.5563.64)
+
+2023-03-11 17:46:57go_to_cate TDB6HK180N16RRPB11BPSA1 exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=111.0.5563.64)
+
+2023-03-11 18:12:20go_to_cate TDB6HK240N16PBOSA1 exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=111.0.5563.64)
+
+2023-03-11 18:38:10go_to_cate TDB6HK360N16P exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=111.0.5563.64)
+
+2023-03-11 19:04:10go_to_cate TDB6HK95N16LOFHOSA1 exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=111.0.5563.64)
+
+2023-03-11 20:41:55go_to_cate TDB6HK180N16RRB48BPSA1 exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=111.0.5563.64)
+
+2023-03-11 22:22:49go_to_cate CY7C1021DV33-10ZSXI exception is: HTTPConnectionPool(host='localhost', port=58451): Max retries exceeded with url: /session/ca9c70831fed19ca17c60992478d3a08/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x11fcd0040>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2023-03-11 23:41:08go_to_cate TDB6HK180N16RRB11BOSA1 exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=111.0.5563.64)
+
+2023-03-12 00:09:38go_to_cate TDB6HK180N16RRB48BPSA1 exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=111.0.5563.64)
+
+2023-03-12 01:42:39go_to_cate TLE4905LXA exception is: Message: no such element: Unable to locate element: {"method":"css selector","selector":".header__search"}
+  (Session info: chrome=111.0.5563.64)
+
+2023-03-12 01:44:44go_to_cate TLE4906K/SN exception is: Message: no such element: Unable to locate element: {"method":"css selector","selector":".header__search"}
+  (Session info: chrome=111.0.5563.64)
+
+2023-03-12 01:46:20go_to_cate TLE4906KHTSA1 exception is: Message: no such element: Unable to locate element: {"method":"css selector","selector":".header__search"}
+  (Session info: chrome=111.0.5563.64)
+
+2023-03-12 16:10:12go_to_cate TLE4906KHTSA1 exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=111.0.5563.64)
+
+2023-03-12 17:46:02go_to_cate TZ800N14KOFHPSA3 exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=111.0.5563.64)
+
+2023-03-13 17:51:36go_to_cate CYRS2643KV18-250GCMB exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=111.0.5563.64)
+
+2023-03-14 12:57:48go_to_cate R5F1007AANA#W0 exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=111.0.5563.64)
+
+2023-03-14 14:38:56go_to_cate R5F1007EGNA#U0 exception is: Message: no such element: Unable to locate element: {"method":"css selector","selector":".header__search"}
+  (Session info: chrome=111.0.5563.64)
+
+2023-03-14 14:40:23go_to_cate R5F1007EGNA#W0 exception is: Message: no such element: Unable to locate element: {"method":"css selector","selector":".header__search"}
+  (Session info: chrome=111.0.5563.64)
+
+2023-03-14 14:46:27go_to_cate R5F100AAA100SP#X0 exception is: Message: no such element: Unable to locate element: {"method":"css selector","selector":".header__search"}
+  (Session info: chrome=111.0.5563.64)
+
+2023-03-14 14:47:53go_to_cate R5F100AAASP#V0 exception is: Message: no such element: Unable to locate element: {"method":"css selector","selector":".header__search"}
+  (Session info: chrome=111.0.5563.64)
+
+2023-03-14 14:49:25go_to_cate R5F100AAASP#X0 exception is: Message: no such element: Unable to locate element: {"method":"css selector","selector":".header__search"}
+  (Session info: chrome=111.0.5563.64)
+
+2023-03-14 17:13:21go_to_cate R5F100BADNA#U0 exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=111.0.5563.64)
+
+2023-03-14 17:57:34go_to_cate R5F100BCGNA#U0 exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=111.0.5563.64)
+
+2023-03-14 18:15:10go_to_cate R5F100BDANA#W0 exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=111.0.5563.64)
+
+2023-03-14 19:17:36go_to_cate R5F100BDGNA#U0 exception is: Message: disconnected: not connected to DevTools
+  (failed to check if window was closed: disconnected: not connected to DevTools)
+  (Session info: chrome=111.0.5563.64)
+
+2023-03-14 19:41:26go_to_cate R5F100BDGNA#W0 exception is: Message: disconnected: not connected to DevTools
+  (failed to check if window was closed: disconnected: not connected to DevTools)
+  (Session info: chrome=111.0.5563.64)
+
+2023-03-14 19:43:27go_to_cate R5F100BEANA#U0 exception is: Message: disconnected: not connected to DevTools
+  (failed to check if window was closed: disconnected: not connected to DevTools)
+  (Session info: chrome=111.0.5563.64)
+
+2023-03-14 19:45:04go_to_cate R5F100BEANA#W0 exception is: Message: disconnected: not connected to DevTools
+  (failed to check if window was closed: disconnected: not connected to DevTools)
+  (Session info: chrome=111.0.5563.64)
+
+2023-03-14 19:46:26go_to_cate R5F100BEDNA#U0 exception is: Message: disconnected: not connected to DevTools
+  (failed to check if window was closed: disconnected: not connected to DevTools)
+  (Session info: chrome=111.0.5563.64)
+
+2023-03-14 19:47:43go_to_cate R5F100BEDNA#W0 exception is: Message: disconnected: not connected to DevTools
+  (failed to check if window was closed: disconnected: not connected to DevTools)
+  (Session info: chrome=111.0.5563.64)
+
+2023-03-14 19:49:36go_to_cate R5F100BEGNA#U0 exception is: Message: disconnected: not connected to DevTools
+  (failed to check if window was closed: disconnected: not connected to DevTools)
+  (Session info: chrome=111.0.5563.64)
+
+2023-03-14 19:51:41go_to_cate R5F100BEGNA#W0 exception is: Message: disconnected: not connected to DevTools
+  (failed to check if window was closed: disconnected: not connected to DevTools)
+  (Session info: chrome=111.0.5563.64)
+
+2023-03-14 19:53:39go_to_cate R5F100BFANA#U0 exception is: Message: disconnected: not connected to DevTools
+  (failed to check if window was closed: disconnected: not connected to DevTools)
+  (Session info: chrome=111.0.5563.64)
+
+2023-03-14 19:55:20go_to_cate R5F100BFANA#W0 exception is: Message: disconnected: not connected to DevTools
+  (failed to check if window was closed: disconnected: not connected to DevTools)
+  (Session info: chrome=111.0.5563.64)
+
+2023-03-14 19:56:35go_to_cate R5F100BFDNA#U0 exception is: Message: disconnected: not connected to DevTools
+  (failed to check if window was closed: disconnected: not connected to DevTools)
+  (Session info: chrome=111.0.5563.64)
+
+2023-03-14 19:57:50go_to_cate R5F100BFDNA#W0 exception is: Message: disconnected: not connected to DevTools
+  (failed to check if window was closed: disconnected: not connected to DevTools)
+  (Session info: chrome=111.0.5563.64)
+
+2023-03-14 19:59:43go_to_cate R5F100BFGNA#U0 exception is: Message: disconnected: not connected to DevTools
+  (failed to check if window was closed: disconnected: not connected to DevTools)
+  (Session info: chrome=111.0.5563.64)
+
+2023-03-14 20:01:02go_to_cate R5F100BFGNA#W0 exception is: Message: disconnected: not connected to DevTools
+  (failed to check if window was closed: disconnected: not connected to DevTools)
+  (Session info: chrome=111.0.5563.64)
+
+2023-03-14 20:02:21go_to_cate R5F100BGANA#U0 exception is: Message: disconnected: not connected to DevTools
+  (failed to check if window was closed: disconnected: not connected to DevTools)
+  (Session info: chrome=111.0.5563.64)
+
+2023-03-14 20:10:21go_to_cate R5F100BGANA#W0 exception is: Message: disconnected: not connected to DevTools
+  (failed to check if window was closed: disconnected: not connected to DevTools)
+  (Session info: chrome=111.0.5563.64)
+
+2023-03-14 20:11:39go_to_cate R5F100BGDNA#U0 exception is: Message: disconnected: not connected to DevTools
+  (failed to check if window was closed: disconnected: not connected to DevTools)
+  (Session info: chrome=111.0.5563.64)
+
+2023-03-14 20:13:43go_to_cate R5F100BGDNA#W0 exception is: Message: disconnected: not connected to DevTools
+  (failed to check if window was closed: disconnected: not connected to DevTools)
+  (Session info: chrome=111.0.5563.64)
+
+2023-03-14 20:15:27go_to_cate R5F100BGGNA#U0 exception is: Message: disconnected: not connected to DevTools
+  (failed to check if window was closed: disconnected: not connected to DevTools)
+  (Session info: chrome=111.0.5563.64)
+
+2023-03-14 20:17:25go_to_cate R5F100BGGNA#W0 exception is: Message: disconnected: not connected to DevTools
+  (failed to check if window was closed: disconnected: not connected to DevTools)
+  (Session info: chrome=111.0.5563.64)
+
+2023-03-14 20:19:26go_to_cate R5F100CDALA#W0 exception is: Message: disconnected: not connected to DevTools
+  (failed to check if window was closed: disconnected: not connected to DevTools)
+  (Session info: chrome=111.0.5563.64)
+
+2023-03-14 20:21:10go_to_cate R5F100CEALA#YE exception is: Message: disconnected: not connected to DevTools
+  (failed to check if window was closed: disconnected: not connected to DevTools)
+  (Session info: chrome=111.0.5563.64)
+
+2023-03-14 20:22:37go_to_cate R5F100CEALA#YW exception is: Message: disconnected: not connected to DevTools
+  (failed to check if window was closed: disconnected: not connected to DevTools)
+  (Session info: chrome=111.0.5563.64)
+
+2023-03-14 20:24:15go_to_cate R5F100CGALA#YE exception is: Message: disconnected: not connected to DevTools
+  (failed to check if window was closed: disconnected: not connected to DevTools)
+  (Session info: chrome=111.0.5563.64)
+
+2023-03-14 20:25:41go_to_cate R5F100CGALA#YW exception is: Message: disconnected: not connected to DevTools
+  (failed to check if window was closed: disconnected: not connected to DevTools)
+  (Session info: chrome=111.0.5563.64)
+
+2023-03-14 20:27:27go_to_cate R5F100EAANA#U0 exception is: Message: disconnected: not connected to DevTools
+  (failed to check if window was closed: disconnected: not connected to DevTools)
+  (Session info: chrome=111.0.5563.64)
+
+2023-03-14 20:28:51go_to_cate R5F100EAANA#W0 exception is: Message: disconnected: not connected to DevTools
+  (failed to check if window was closed: disconnected: not connected to DevTools)
+  (Session info: chrome=111.0.5563.64)
+
+2023-03-14 20:30:11go_to_cate R5F100EAAXXXNA#U0 exception is: Message: disconnected: not connected to DevTools
+  (failed to check if window was closed: disconnected: not connected to DevTools)
+  (Session info: chrome=111.0.5563.64)
+
+2023-03-14 20:31:32go_to_cate R5F100EADNA#U0 exception is: Message: disconnected: not connected to DevTools
+  (failed to check if window was closed: disconnected: not connected to DevTools)
+  (Session info: chrome=111.0.5563.64)
+
+2023-03-14 20:32:53go_to_cate R5F100EADNA#W0 exception is: Message: disconnected: not connected to DevTools
+  (failed to check if window was closed: disconnected: not connected to DevTools)
+  (Session info: chrome=111.0.5563.64)
+
+2023-03-14 20:40:53go_to_cate R5F100EAGNA#U0 exception is: Message: disconnected: not connected to DevTools
+  (failed to check if window was closed: disconnected: not connected to DevTools)
+  (Session info: chrome=111.0.5563.64)
+
+2023-03-14 20:42:42go_to_cate R5F100EAGNA#W0 exception is: Message: disconnected: not connected to DevTools
+  (failed to check if window was closed: disconnected: not connected to DevTools)
+  (Session info: chrome=111.0.5563.64)
+
+2023-03-14 20:44:16go_to_cate R5F100ECANA#U0 exception is: Message: disconnected: not connected to DevTools
+  (failed to check if window was closed: disconnected: not connected to DevTools)
+  (Session info: chrome=111.0.5563.64)
+
+2023-03-14 20:46:08go_to_cate R5F100ECANA#W0 exception is: Message: disconnected: not connected to DevTools
+  (failed to check if window was closed: disconnected: not connected to DevTools)
+  (Session info: chrome=111.0.5563.64)
+

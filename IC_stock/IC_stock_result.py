@@ -5,29 +5,27 @@
 
 from openpyxl import workbook, load_workbook, Workbook
 import base64
-import IC_Stock_Info
-import IC_stock_excel_read
-import IC_Stock_excel_write
+import IC_stock.IC_Stock_Info
 import time
-from WRTools import PathHelp
+from WRTools import PathHelp, ExcelHelp
 
 
-cate_source_file = PathHelp.get_file_path("TInfenion_50H", 'Task.xlsx')
+cate_source_file = PathHelp.get_file_path("TInfenion_55H", 'Task.xlsx')
 result_save_file = cate_source_file
-ICStock_file_arr = ['/Users/liuhe/Desktop/progress/TInfineon/50H/11/IC_stock.xlsx',
-                '/Users/liuhe/Desktop/progress/TInfineon/50H/04/IC_stock.xlsx',
-                '/Users/liuhe/Desktop/progress/TInfineon/50H/sz/IC_stock.xlsx',
-                '/Users/liuhe/PycharmProjects/SeleniumDemo/TInfenion_50H/IC_stock.xlsx']
+ICStock_file_arr = ['/Users/liuhe/Desktop/progress/TInfineon/55H/11/IC_stock.xlsx',
+                '/Users/liuhe/Desktop/progress/TInfineon/55H/04/IC_stock.xlsx',
+                '/Users/liuhe/Desktop/progress/TInfineon/55H/sz/IC_stock.xlsx',
+                '/Users/liuhe/PycharmProjects/SeleniumDemo/TInfenion_55H/IC_stock.xlsx']
 
 
 
 
 # 根据file_index, sheet_index 获取cate 在IC 中的记录, [cate_name, manu, valid_supplier, valid_stock]
-def get_cate_stock(file_index, sheet_index, cate_name, manu) -> list:
+def get_cate_stock(source_files, file_index, sheet_index, cate_name, manu) -> list:
     # 获取工作簿对象
     valid_supplier_sum = 0
     valid_stock_sum = 0
-    file_name = ICStock_file_arr[file_index]
+    file_name = source_files[file_index]
     wb = load_workbook(filename=file_name)
     sheet = wb.worksheets[sheet_index]
     used_supplier_arr = []
@@ -49,7 +47,7 @@ def get_cate_stock(file_index, sheet_index, cate_name, manu) -> list:
             manufacturer = sheet.cell(row, 7).value
             stock_num = sheet.cell(row, 8).value
             search_date = sheet.cell(row, 9).value
-            ic_Stock_Info = IC_Stock_Info.IC_Stock_Info(supplier=supplier, isICCP=isICCP, isSSCP=isSSCP,
+            ic_Stock_Info = IC_stock.IC_Stock_Info.IC_Stock_Info(supplier=supplier, isICCP=isICCP, isSSCP=isSSCP,
                                                         model=model,
                                                         isSpotRanking=isSpotRanking, isHotSell=isHotSell,
                                                         manufacturer=manufacturer, stock_num=stock_num,
@@ -103,9 +101,9 @@ def get_cate_by_sheet_name(sheet_name):
 
 
 # 获取ICStock_file_arr 中的所有sheet
-def get_ICStock_sheets():
+def get_ICStock_sheets(source_files):
     result = []
-    for file in ICStock_file_arr:
+    for file in source_files:
         # 获取工作簿对象
         wb = load_workbook(filename=file)
         # 获取sheet
@@ -125,27 +123,27 @@ def get_indexs(source_arr, cate_name) -> list:
 
 
 #  统计ppn的IC stock info
-def staticstic_IC_stock():
-    all_cates = IC_stock_excel_read.get_cate_name_arr(cate_source_file, 'ppn', 1)
+def staticstic_IC_stock(source_files:list, aim_file:str):
+    all_cates = ExcelHelp.read_col_content(file_name=aim_file, sheet_name='ppn', col_index=1)
     sub_cates = all_cates[0:]
-    all_ic_sheets = get_ICStock_sheets()
+    all_ic_sheets = get_ICStock_sheets(source_files)
     for (cate_index, cate_name) in enumerate(sub_cates):
         if cate_name is None:
             continue
         print(f'index is: {cate_index}, pn is :{cate_name}')
         ic_index_arr = get_indexs(all_ic_sheets, str(cate_name))
-        manu_name = IC_stock_excel_read.get_cell_content(file_name=cate_source_file, sheet_name='ppn',
+        manu_name = ExcelHelp.read_cell_content(file_name=aim_file, sheet_name='ppn',
                                                          row=cate_index + 1, col=2)
         if ic_index_arr is not None:
-            ic_info_arr = get_cate_stock(file_index=ic_index_arr[0], sheet_index=ic_index_arr[1], cate_name=str(cate_name), manu=manu_name)
+            ic_info_arr = get_cate_stock(source_files=source_files, file_index=ic_index_arr[0], sheet_index=ic_index_arr[1], cate_name=str(cate_name), manu=manu_name)
         else:
             ic_info_arr = [str(cate_name), manu_name, '--', '--', time.strftime('%Y-%m-%d', time.localtime())]
         row_arr = [ic_info_arr]
-        IC_Stock_excel_write.add_arr_to_sheet(file_name=result_save_file, sheet_name='IC_Stock', dim_arr=row_arr)
+        ExcelHelp.add_arr_to_sheet(file_name=aim_file, sheet_name='IC_Stock', dim_arr=row_arr)
 
 
 if __name__ == "__main__":
-    staticstic_IC_stock()
+    staticstic_IC_stock(source_files=ICStock_file_arr, aim_file=cate_source_file)
 
 
 

@@ -22,7 +22,7 @@ def waitfor_octopart(is_load_page, isDebug):
     else:
         # load new page
         if is_load_page:
-            time.sleep(26 + random.randint(5, 55))
+            time.sleep(65 + random.randint(5, 55))
         else:
             time.sleep(15 + random.randint(2, 22))
 

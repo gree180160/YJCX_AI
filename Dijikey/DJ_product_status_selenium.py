@@ -15,12 +15,20 @@ driver.set_page_load_timeout(360)
 # logic
 
 
-sourceFile_dic = {'fileName': PathHelp.get_file_path('TInfenion_55H', 'Task.xlsx'),
+sourceFile_dic = {'fileName': PathHelp.get_file_path('TRL78_5H', 'Task.xlsx'),
                   'sourceSheet': 'ppn',
                   'colIndex': 1,
-                  'startIndex': 51,
-                  'endIndex': 125}
-result_save_file = PathHelp.get_file_path('TInfenion_55H', 'dijikey_status.xlsx')
+                  'startIndex': 0,
+                  'endIndex': 125} # 45 unfinished
+result_save_file = PathHelp.get_file_path('TRL78_5H', 'dijikey_status.xlsx')
+
+# sourceFile_dic = {'fileName': PathHelp.get_file_path("TInfenion_80H", 'Task.xlsx'),
+#                   'sourceSheet': 'ppn',
+#                   'colIndex': 1,
+#                   'startIndex': 393,
+#                   'endIndex': 430} # 101 unfinished
+# result_save_file = PathHelp.get_file_path("TInfenion_80H", 'dijikey_status.xlsx')
+
 default_url = 'https://www.digikey.com/'
 log_file = PathHelp.get_file_path('Dijikey', 'DJ_product_status_log.txt')
 
@@ -59,7 +67,7 @@ def analy_html(cate_index, cate_name):
     try:
        ppn = driver.find_element(By.CLASS_NAME, 'jss116').text
        if ppn == cate_name:
-           detail_a =  driver.find_element(By.CLASS_NAME, 'jss111 jss113')
+           detail_a = driver.find_element(By.CLASS_NAME, 'jss111.jss113')
            detail_button = detail_a.find_element(By.TAG_NAME, 'button')
            detail_button.click()
            WaitHelp.waitfor(True, False)

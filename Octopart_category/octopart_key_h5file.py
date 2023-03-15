@@ -9,9 +9,9 @@ from urllib.parse import urlparse
 
 
 default_url = 'https://octopart.com/'
-keyword_source_file = PathHelp.get_file_path('TInfineionAgencyStock2', 'TInfineonAgencyStock2.xlsx')
+keyword_source_file = PathHelp.get_file_path(None, 'TRenesa.xlsx')
 log_file = '/Users/liuhe/PycharmProjects/SeleniumDemo/Octopart_category/octopart_key_cate_log.txt'
-fold_path = "/Users/liuhe/Desktop/progress/TMegSensor/octopart_html_files"
+fold_path = '/Users/liuhe/Desktop/progress/TReneseas_all/Reneseas_html_files'
 
 total_page = 1
 current_page = 1
@@ -61,17 +61,17 @@ def has_content(soup) -> bool:
     return result
 
 
-def get_category(fold_path, file_name, key_name, alpha):
+def get_category(fold_path, file_name, key_name):
     path = fold_path + f'/{file_name}'
     htmlfile = open(path, 'r', encoding='utf-8')
     htmlhandle = htmlfile.read()
     soup = BeautifulSoup(htmlhandle, 'html5lib')
     set_totalpage(soup)
-    analyth_html(key_name=key_name, soup=soup, alpha=alpha, htmlhandle=htmlhandle)
+    analyth_html(key_name=key_name, soup=soup, htmlhandle=htmlhandle)
 
 
 # 解析html，获取cate，manu
-def analyth_html(key_name, soup, alpha, htmlhandle):
+def analyth_html(key_name, soup, htmlhandle):
     if is_security_check(soup=soup):
         LogHelper.write_log(log_file_name=log_file, content=f'alert happens in :{key_name} \n')
         return
@@ -93,14 +93,14 @@ def analyth_html(key_name, soup, alpha, htmlhandle):
                 cate_name = None
             if cate_name and manu:
                 if cate_name.startswith(key_name):
-                    info_list.append([cate_name, manu, key_name, alpha, total_page])
+                    info_list.append([cate_name, manu, key_name, total_page])
         if len(info_list) > 0:
-            IC_Stock_excel_write.add_arr_to_sheet(file_name=keyword_source_file, sheet_name='page0_pn',
+            ExcelHelp.add_arr_to_sheet(file_name=keyword_source_file, sheet_name='page0_pn',
                                                   dim_arr=info_list)
     except Exception as e:
         info_arr = getSKUByRE(html_txt=htmlhandle, key_name=key_name)
         if len(info_arr) > 0:
-            IC_Stock_excel_write.add_arr_to_sheet(file_name=keyword_source_file, sheet_name='page0_pn',
+            ExcelHelp.add_arr_to_sheet(file_name=keyword_source_file, sheet_name='page0_pn',
                                                   dim_arr=info_arr)
         else:
             LogHelper.write_log(log_file, f'{key_name} analyth_html exception: {e}')
@@ -199,22 +199,20 @@ def queryToUrl(url1, url2, para1, para2) -> bool:
 
 # 查找遗漏的html——文件,并保存
 def get_unfinished_urls(keyword_source_file: str, finished_html_files_fold: str):
-    result = []
-    all_ppn = ExcelHelp.read_col_content(file_name=keyword_source_file, sheet_name='ppn', col_index=1)
+    unfinished_url = []
+    unfinished_pn = []
+    all_ppn = ExcelHelp.read_col_content(file_name=keyword_source_file, sheet_name='Sheet1', col_index=1)
     finished_ppn = get_finished_ppn(fold_path=finished_html_files_fold)
     for (ppn_index, temp_ppn) in enumerate(all_ppn):
         if not temp_ppn in finished_ppn:
-            if temp_ppn.startswith("SUM"):
-                manu_ids = ''
-            else:
-                manu = URLManager.Octopart_manu.NoManu
-                url = URLManager.octopart_get_page_url(key_name=temp_ppn, page=1, manu=manu)
-            result.append([url])
-    print(result)
-    ExcelHelp.add_arr_to_sheet(file_name=keyword_source_file, sheet_name='unfinished_url', dim_arr=result)
+            manu = URLManager.Octopart_manu.Renesas
+            url = URLManager.octopart_get_page_url(key_name=temp_ppn, page=1, manu=manu)
+            unfinished_url.append([url])
+            unfinished_pn.append([temp_ppn])
+    ExcelHelp.add_arr_to_sheet(file_name=keyword_source_file, sheet_name='unfinished_url', dim_arr=unfinished_url)
+    ExcelHelp.add_arr_to_sheet(file_name=keyword_source_file, sheet_name='unfinished_pn', dim_arr=unfinished_pn)
 
 
 if __name__ == "__main__":
-    # main()
-    # get_category(fold_path=fold_path, file_name='https __octopart.com_search q=TLE493DW2B6&currency=USD&specs=0&manufacturer_id=453&manufacturer_id=202&manufacturer_id=706&manufacturer_id=12547&manufacturer_id=196.html', key_name='TLE4961-1', alpha='L')
-    get_unfinished_urls(keyword_source_file=PathHelp.get_file_path('TSumNvmNdt', 'Task.xlsx') , finished_html_files_fold ='/Users/liuhe/Desktop/progress/TDiscontinue/TSumNvmNdt/octopart_html_files')
+     main()
+    # get_unfinished_urls(keyword_source_file=PathHelp.get_file_path(None, 'TRenesa.xlsx') , finished_html_files_fold ='/Users/liuhe/Desktop/Reneseas_html_files')

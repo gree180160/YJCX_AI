@@ -125,8 +125,11 @@ def getHotValue(sourceImage, row_image_name, index):
     if may_result[2] > 0 and may_result[3] > 0:
         if may_result[2] != may_result[3] and str(may_result[2]).__len__() == str(may_result[3]).__len__():
             search_num = f'{may_result[2]} ? {may_result[3]}'
-            log_file = PathHelp.get_file_path(super_path='IC_Search', file_name='IC_search_Image_log.txt')
-            LogHelper.write_log(log_file, des_str)
+            if search_num == '28 ? 43':
+                search_num = '28'
+            else:
+                log_file = PathHelp.get_file_path(super_path='IC_Search', file_name='IC_search_Image_log.txt')
+                LogHelper.write_log(log_file, des_str)
         else:
             search_num = str(may_result[0])
     else:
@@ -144,13 +147,13 @@ def SplitPic_week(source_pic: str):
     hei = img_size[1]  # 图片高度
     # mac
     x = wid/2 - 216*scale
-    y = (988 * scale) if hei > (6320) else (978*scale)
+    y = (988 * scale) if hei > (3160.0*scale) else (980*scale)
     w = 116 * scale
     h = 30 * scale
     space = 36 * scale
     # #11&SZ-02
     # x = wid / 2 - 100 - 116
-    # y = (988 * scale) if hei > (3160.0*scale) else (978*scale)
+    # y = (988 * scale) if hei > (3160.0*scale) else (980*scale)
     # w = 116 * scale
     # h = 30 * scale
     # space = 36 * scale
@@ -175,18 +178,19 @@ def SplitPic_month(source_pic: str):
     hei = img_size[1]  # 图片高度
     # mac 高清
     x = wid / 2 - 216 * scale
-    y = (988 * scale) if hei > (3440) else (978*scale)
+    y = (988 * scale) if hei > (1720.0*scale) else (980*scale)
     w = 116 * scale
     h = 30 * scale
     space = 36 * scale
     # 11-01,sz
     # x = wid/2 - 100.00 - 116
-    # y = (988 * scale) if hei > (1720.0*scale) else (978*scale)
+    # y = (988 * scale) if hei > (1720.0*scale) else (980*scale)
     # w = 116 * scale
     # h = 30 * scale
     # space = 36 * scale
     search_record = []
     for index in range(0, 12):
+
         # 开始截取
         region = img.crop((x, y+space*index, x + w, y+space*index + h))
         # 保存图片
@@ -196,15 +200,9 @@ def SplitPic_month(source_pic: str):
     return search_record
 
 
-def test_ppn_value(fold_path: str):
-    temp = '火狐截图_2023-02-11T07-17-21.748Z.png'
-    #temp = 'TLE493DW2B6A0HTSA1_M.png'
-    return get_ppn(fold_path=fold_path, image_name=fold_path + '/' + temp)
-
-
 def test_hot_value(fold_path: str):
-    temp = 'IRF7303TRPBF_M.png' # 1911×1724
-    # temp = 'IRF7306TRPBF_W.png' # 1911×3164
+    # temp = 'TT162N16KOF-K_M.png' # 1911×1724
+    temp = 'TT162N16KOF-K_W.png' # 1911×3164
     if temp.endswith('_M.png'):
         image_hot_data = SplitPic_month(fold_path + '/' + temp)
     elif temp.endswith('_W.png'):
@@ -213,9 +211,6 @@ def test_hot_value(fold_path: str):
 
 
 if __name__ == "__main__":
-    # result = test_ppn_value(fold_path='/Users/liuhe/Desktop/progress/TSemiStar/IC_hot/TInfineionAgencyStock2_SemiStart_IC_hot')
-    # useFold('/Users/liuhe/Desktop/hot_img')
-    # print(result_str)
-    # SplitPic('/Users/liuhe/Desktop/识图test/88.png')
-    result = test_hot_value(fold_path='/Users/liuhe/PycharmProjects/SeleniumDemo/TInfenion_40H/IC_hot_images')
+    result = test_hot_value(fold_path='/Users/liuhe/Desktop/progress/TInfineon/80H/11/IC_hot_images')
+    # result = test_hot_value(fold_path='/Users/liuhe/PycharmProjects/SeleniumDemo/TInfenion_80H/IC_hot_images')
     print(result)

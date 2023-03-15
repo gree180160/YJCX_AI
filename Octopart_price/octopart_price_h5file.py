@@ -7,9 +7,9 @@ import re
 import base64
 import octopart_price_info
 
-result_save_file = PathHelp.get_file_path('TAlice_stock', 'octopart_price.xlsx')
+result_save_file = PathHelp.get_file_path('TSpeedReneseas', 'octopart_price.xlsx')
 log_file = '/Users/liuhe/PycharmProjects/SeleniumDemo/Octopart_category/octopart_key_cate_log.txt'
-html_file_path = "/Users/liuhe/Desktop/progress/TDiscontinue/TAlice_stock/html_files"
+html_file_path = "/Users/liuhe/PycharmProjects/SeleniumDemo/TSpeedReneseas/html"
 
 
 # 获取所有octopart 的html文件

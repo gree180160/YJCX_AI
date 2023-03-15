@@ -8,18 +8,18 @@ import random
 import undetected_chromedriver as uc
 # import ssl
 from IC_stock.IC_Stock_Info import IC_Stock_Info
-from Manager import AccountMange
+from Manager import AccountMange, URLManager
 from WRTools import IPHelper, UserAgentHelper, ExcelHelp, WaitHelp, PathHelp
 
 # ssl._create_default_https_context = ssl._create_unverified_context
 
-sourceFile_dic = {'fileName': PathHelp.get_file_path("TInfenion_60H", 'Task.xlsx'),
+sourceFile_dic = {'fileName': PathHelp.get_file_path("TRL78_5H", 'Task.xlsx'),
                   'sourceSheet': 'ppn',
                   'colIndex': 1,
-                  'startIndex': 0,
-                  'endIndex': 75}   #0-75 ，unfinished
+                  'startIndex': 92,
+                  'endIndex': 125}   #0-75 ，unfinished
 
-result_file = PathHelp.get_file_path(super_path="TInfenion_60H", file_name='IC_stock.xlsx')
+result_file = PathHelp.get_file_path(super_path="TRL78_5H", file_name='IC_stock.xlsx')
 total_page = 1
 
 current_page = 1
@@ -67,28 +67,17 @@ def login_action(aim_url):
         WaitHelp.waitfor_account_import(False, False)
         driver.find_element(by=By.ID, value='btn_login').click()
         WaitHelp.waitfor_account_import(True, False)
-        if driver.current_url.startswith('https://www.ic.net.cn/member/'): # 首次登录
-            driver.get(aim_url)
-        elif driver.current_url.startswith('https://www.ic.net.cn/search'): # 查询过程中出现登录
-            driver.get(aim_url)
-        WaitHelp.waitfor_account_import(False, False)
-
-
-# 转换cate 中的特殊字符
-def get_url(cate: str) -> str:
-    cate_str = str(cate)
-    cate_str = cate_str.replace('/', '%2F')
-    cate_str = cate_str.replace('#', '%23')
-    cate_str = cate_str.replace('+', '%2B')
-    cate_str = cate_str.replace(',', '%2C')
-    return f"https://www.ic.net.cn/search/{cate_str}.html"
+    if driver.current_url.startswith('https://member.ic.net'):  # 首次登录
+        driver.get(aim_url)
+    elif driver.current_url.startswith('https://www.ic.net.cn/search'):  # 查询过程中出现登录
+        driver.get(aim_url)
 
 
 #   二维数组，page 列表， table 列表
 def get_stock(cate_index, cate_name):
     global current_page
-    search_url = get_url(cate_name)
-    driver.get(search_url)
+    search_url = URLManager.IC_stock_url(cate_name)
+
     login_action(search_url)
     # 延时几秒确保页面加载完毕
     WaitHelp.waitfor_account_import(True, False)

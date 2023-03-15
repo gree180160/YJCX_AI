@@ -2,6 +2,10 @@
 import time
 
 from WRTools import ExcelHelp, PathHelp
+from IC_stock import IC_Stock_Info, IC_stock_result
+from Dijikey import DJ_product_status_bs
+from Findchips_stock import findchips_stock_info, findchips_stock_cate
+
 
 # ------------findchip----------------------
 # 将临时保存的数据转移到汇总数据到excel
@@ -81,7 +85,7 @@ def move_BomOct_to_allInfo(source_file: str):
         source_file=source_file,
         source_sheet='bom_octopart_price',
         from_col=7,
-        to_col=7,
+        to_col=8,
         aim_file=source_file,
         aim_sheet='all_info',
         start_col=5)
@@ -93,7 +97,7 @@ def move_BomOct_to_allInfo(source_file: str):
         to_col=4,
         aim_file=source_file,
         aim_sheet='all_info',
-        start_col=6)
+        start_col=7)
     # grade
     move_part_to_part(
         source_file=source_file,
@@ -102,7 +106,7 @@ def move_BomOct_to_allInfo(source_file: str):
         to_col=6,
         aim_file=source_file,
         aim_sheet='all_info',
-        start_col=8)
+        start_col=9)
 
 
 #   将ppnd的stock sum, 复制到all——info sheet 中
@@ -117,7 +121,7 @@ def move_findchip_to_allInfo(source_file: str, findchip_file:str):
         to_col=2,
         aim_file=source_file,
         aim_sheet='all_info',
-        start_col=9)
+        start_col=10)
 
 
 # 结算IC—hot,并倒入all_info
@@ -176,7 +180,7 @@ def move_IC_hot(source_file: str):
         to_col=9,
         aim_file=source_file,
         aim_sheet='all_info',
-        start_col=10)
+        start_col=13)
 
 def move_DijiKey(source_file: str, dijikey_file: str):
     ppns = ExcelHelp.read_col_content(file_name=source_file, sheet_name='ppn', col_index=1)
@@ -197,17 +201,90 @@ def move_DijiKey(source_file: str, dijikey_file: str):
         to_col=3,
         aim_file=source_file,
         aim_sheet='all_info',
-        start_col=18)
+        start_col=11)
 
+
+#合并数据前的预处理，IC 结果统计，findchips 合计，dijikey 合计
+def pre_combine_data():
+    cate_source_file = PathHelp.get_file_path("TInfenion_80H", 'Task.xlsx')
+    ICStock_file_arr = ['/Users/liuhe/Desktop/progress/TInfineon/80H/11/IC_stock.xlsx',
+                        '/Users/liuhe/Desktop/progress/TInfineon/80H/04/IC_stock.xlsx',
+                        '/Users/liuhe/Desktop/progress/TInfineon/80H/sz/IC_stock.xlsx',
+                        '/Users/liuhe/PycharmProjects/SeleniumDemo/TInfenion_80H/IC_stock.xlsx']
+    IC_stock_result.staticstic_IC_stock(source_files=ICStock_file_arr, aim_file=cate_source_file)
+    findchips_stock_cate.combine_result(["/Users/liuhe/Desktop/progress/TInfineon/80H/11/findchip_stock.xlsx",
+                                         "/Users/liuhe/Desktop/progress/TInfineon/80H/sz/findchip_stock.xlsx",
+                                         "/Users/liuhe/Desktop/progress/TInfineon/80H/04/findchip_stock.xlsx"],
+                                        PathHelp.get_file_path('TInfenion_80H', 'findchip_stock.xlsx'))
+    DJ_product_status_bs.combine_result(["/Users/liuhe/Desktop/progress/TInfineon/80H/11/dijikey_status.xlsx",
+                                                 "/Users/liuhe/Desktop/progress/TInfineon/80H/sz/dijikey_status.xlsx",
+                                                 "/Users/liuhe/Desktop/progress/TInfineon/80H/04/dijikey_status.xlsx"],
+                                                PathHelp.get_file_path('TInfenion_80H', 'dijikey_status.xlsx'))
+
+
+
+# 统计汇总结果
+def statistic_data():
+    source_file = PathHelp.get_file_path('TInfenion_80H', 'Task.xlsx')
+    # move_ppn_to_allInfo(source_file=source_file)
+    # move_IC_stock_to_allInfo(source_file=source_file)
+    # move_BomOct_to_allInfo(source_file=source_file)
+    # move_findchip_to_allInfo(source_file=source_file, findchip_file=PathHelp.get_file_path('TInfenion_80H', 'findchip_stock.xlsx'))
+    move_DijiKey(source_file=source_file, dijikey_file=PathHelp.get_file_path('TInfenion_80H', 'dijikey_status.xlsx'))
+    #move_IC_hot(source_file=source_file)
+
+
+def IC_hot():
+    source_file = PathHelp.get_file_path('TInfenion_80H', 'Task.xlsx')
+    move_IC_hot(source_file=source_file)
+
+
+def dijikey():
+    source_file = '/Users/liuhe/Desktop/DJKey.xlsx'
+    unfinished_ppn = ExcelHelp.read_col_content(file_name=source_file, sheet_name='unfinished', col_index=1)
+    finished_ppn = ExcelHelp.read_col_content(file_name=source_file, sheet_name='finished', col_index=1)
+    need = []
+    for temp in unfinished_ppn:
+        if not finished_ppn.__contains__(temp):
+            need.append([temp])
+    ExcelHelp.add_arr_to_sheet(file_name=source_file, sheet_name='ppn', dim_arr=need)
+
+
+def statistic_UP():
+    source_file = "/Users/liuhe/Desktop/progress/TInfineon/TInfineon_keywords.xlsx"
+    ppns = ExcelHelp.read_col_content(file_name=source_file, sheet_name='all_info', col_index=1)[1:4501]
+    dijikey_file = PathHelp.get_file_path(None, 'DJKey.xlsx')
+    dijikey_data = ExcelHelp.read_sheet_content_by_name(file_name=dijikey_file, sheet_name='dijikey_status')
+    result = []
+    for (index, ppn) in enumerate(ppns):
+        diji_record = [ppn, '//', '//']
+        star_index = 0
+        for (diji_index, diji_info) in enumerate(dijikey_data):
+            if diji_index < star_index:
+                continue
+            if ppn == diji_info[0]:
+                star_index = diji_index
+                diji_record = diji_info
+                if diji_info[2] != '//':
+                    break
+        result.append(diji_record)
+    ExcelHelp.add_arr_to_sheet(file_name=source_file, sheet_name='dijikey_status', dim_arr=result)
+    # move_part_to_part(
+    #     source_file=source_file,
+    #     source_sheet='dijikey_status',
+    #     from_col=2,
+    #     to_col=3,
+    #     aim_file=source_file,
+    #     aim_sheet='all_info',
+    #     start_col=11)
 
 
 if __name__ == "__main__":
-    source_file = PathHelp.get_file_path('TInfenion_55H', 'Task.xlsx')
-    move_ppn_to_allInfo(source_file=source_file)
-    move_IC_stock_to_allInfo(source_file=source_file)
-    move_BomOct_to_allInfo(source_file=source_file)
-    move_findchip_to_allInfo(source_file=source_file, findchip_file=PathHelp.get_file_path('TInfenion_50H', 'findchip_stock.xlsx'))
-    move_DijiKey(source_file=source_file, dijikey_file=PathHelp.get_file_path('TInfenion_50H', 'dijikey_status.xlsx'))
-    move_IC_hot(source_file=source_file)
+     # pre_combine_data()
+     # time.sleep(1.0)
+     # statistic_data()
+     # IC_hot()
+    # dijikey()
+     statistic_UP()
 
 

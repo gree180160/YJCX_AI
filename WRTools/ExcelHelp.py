@@ -117,6 +117,24 @@ def add_arr_to_sheet(file_name, sheet_name: object, dim_arr: object):
     wb.close()
 
 
+# 将库存数据保存到sheet 中
+# sheet_name
+# arr 是一维数组[cate1_name, cate2_name]
+def add_arr_to_col(file_name, sheet_name: object, dim_arr: object):
+    print('arr is:', dim_arr)
+    if os.path.exists(file_name):
+        wb = load_workbook(file_name)
+    else:
+        wb = Workbook()
+    if not isSheetExist(sheet_name, wb):
+        create_sheet(sheet_name, wb)
+    sheet = wb[sheet_name]
+    for ele in dim_arr:
+        sheet.append([ele])
+    wb.save(file_name)
+    wb.close()
+
+
 # 把一个数组保存到某一列中
 # 从第二行开始写入，skip_row_count = 1
 def save_one_col(file_name: str, sheet_name: str, col_index: int, dim_arr: list, skip_row_count:int):

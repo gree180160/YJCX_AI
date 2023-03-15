@@ -8,26 +8,29 @@ from selenium import webdriver
 import base64
 from selenium.webdriver.common.by import By
 import ssl
-import re
-import shutil
 import os
-from Manager import AccountMange
+from Manager import AccountMange,URLManager
 
 
 ssl._create_default_https_context = ssl._create_unverified_context
 total_page = 1
 current_page = 1
 accouts_arr = [[AccountMange.IC_hot['n'], AccountMange.IC_hot['p']]]
-driver = webdriver.Firefox()
+# driver_option = webdriver.ChromeOptions()
+# driver_option.add_argument(f'--proxy-server=http://{IPHelper.getRandowCityIP()}')
+fire_options = webdriver.FirefoxOptions()
+fire_options.add_argument('--headless')
+fire_options.add_argument('blink-settings=imagesEnabled=false')
+driver = webdriver.Firefox(options=fire_options)
 # driver.set_window_size(height=800, width=1200)
 current_cate_has_date = True
 
-sourceFile_dic = {'fileName': PathHelp.get_file_path('TInfenion_25H', 'TInfenion_25H.xlsx'),
+sourceFile_dic = {'fileName': PathHelp.get_file_path('TSpeedReneseas', 'Task.xlsx'),
                   'sourceSheet': 'ppn',
                   'colIndex': 1,
                   'startIndex': 0,
                   'endIndex': 2}
-result_save_file = PathHelp.get_file_path('TInfenion_25H', 'findchip_stock.xlsx')
+result_save_file = PathHelp.get_file_path('TSpeedReneseas', 'findchip_stock.xlsx')
 login_url = "https://member.ic.net.cn/login.php"
 no_data_url = 'https://icpi.ic.net.cn/'
 
@@ -35,7 +38,7 @@ no_data_url = 'https://icpi.ic.net.cn/'
 # login
 def login_action(aim_url):
     current_url = driver.current_url
-    if current_url == "https://member.ic.net.cn/login.php":
+    if current_url == login_url:
         WaitHelp.waitfor_account_import(False, False)
         # begin login
         accout_current = random.choice(accouts_arr)
@@ -57,10 +60,7 @@ def login_action(aim_url):
 # cate_name：型号
 # isWeek：【周/月】搜索指数
 def search_hotInfo(cate_name, cate_index, isWeek):
-    if isWeek:
-        search_url = f'https://icpi.ic.net.cn/icpi/detail.php?key={cate_name}'
-    else:
-        search_url = f'https://icpi.ic.net.cn/icpi/detail_month.php?key={cate_name}'
+    search_url = URLManager.IC_hot_url(cate_name, isWeek)
     driver.get(search_url)
     WaitHelp.waitfor_account_import(True, False)
     if driver.current_url == no_data_url:
@@ -113,6 +113,7 @@ def main():
 
 # print('识别到的中文')
 if __name__ == "__main__":
+    driver.get(login_url)
     login_action("https://member.ic.net.cn/member/member_index.php")
     main()
 

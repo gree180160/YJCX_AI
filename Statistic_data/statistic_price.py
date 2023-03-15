@@ -1,8 +1,9 @@
 # 计算price
-# 输入型号，从bom，获取pm，从octopart 获取pr， 输出grade
+# 输入型号，从bom，获取pm，从octopart 获取pr， 输出grade, s_price 是bom的一周内的最高价
 # （1） pm = 一周内k_price 平均价
 # （2） pr = 各个supplier 的最低价
 #  (3) grade = pm/pr -> [10, ++]->A, [5,10]->B, [1-5]->C, [0.5-1.0]->D, [0.1-0.5]->E, [--, 0.1]->F
+#  s_price=max_price
 
 from openpyxl import load_workbook
 import base64
@@ -16,15 +17,23 @@ import Bom_price.bom_price_info
 ssl._create_default_https_context = ssl._create_unverified_context
 
 
-cate_source_file = PathHelp.get_file_path(super_path="TAlice_stock", file_name='Task.xlsx')
+cate_source_file = PathHelp.get_file_path(super_path='TSpeedReneseas', file_name='Task.xlsx')
 result_save_file = cate_source_file
-# bom_file_arr = [PathHelp.get_file_path('TSumNvmNdt', 'bom_price.xlsx'),
-#                 '/Users/liuhe/Desktop/progress/TDiscontinue/TSumNvmNdt/04/bom_price.xlsx',
-#                 '/Users/liuhe/Desktop/progress/TDiscontinue/TSumNvmNdt/sz/bom_price.xlsx',
-#                 '/Users/liuhe/Desktop/progress/TDiscontinue/TSumNvmNdt/11/bom_price.xlsx']
-# octopart_file_arr = [PathHelp.get_file_path('TSumNvmNdt', 'octopart_price.xlsx')]
-bom_file_arr = [PathHelp.get_file_path('TAlice_stock', 'bom_price.xlsx')]
-octopart_file_arr = [PathHelp.get_file_path('TAlice_stock', 'octopart_price.xlsx')]
+# bom_file_arr = ['/Users/liuhe/Desktop/progress/TInfineon/bomOctopart/bom_price_cate_Infenion_13k.xlsx',
+#                 '/Users/liuhe/Desktop/progress/TInfineon/bomOctopart/bom_price_cate_Infenion_26k.xlsx',
+#                 '/Users/liuhe/Desktop/progress/TInfineon/bomOctopart/bom_price_cate_Infineon.xlsx',
+#                 '/Users/liuhe/Desktop/progress/TInfineon/bomOctopart/bom_price_cate_Infineon4_5K.xlsx',
+#                 '/Users/liuhe/Desktop/progress/TInfineon/bomOctopart/bom_price_cate_Infineon7_8K.xlsx']
+# octopart_file_arr = ['/Users/liuhe/Desktop/progress/TInfineon/bomOctopart/octopart_price_h5file6k.xlsx',
+#                      '/Users/liuhe/Desktop/progress/TInfineon/bomOctopart/octopart_price_h5file7k.xlsx',
+#                      '/Users/liuhe/Desktop/progress/TInfineon/bomOctopart/octopart_price_h5file8k.xlsx',
+#                      '/Users/liuhe/Desktop/progress/TInfineon/bomOctopart/octopart_price_h5file9k.xlsx',
+#                      '/Users/liuhe/Desktop/progress/TInfineon/bomOctopart/octopart_price_h5file10k.xlsx',
+#                      '/Users/liuhe/Desktop/progress/TInfineon/bomOctopart/octopart_price_h5file11k.xlsx',
+#                      '/Users/liuhe/Desktop/progress/TInfineon/bomOctopart/octopart_price_h5file1213k.xlsx']
+bom_file_arr = ['/Users/liuhe/Desktop/progress/TSpeed_Reneseas/04/bom_price.xlsx']
+octopart_file_arr = [PathHelp.get_file_path('TSpeedReneseas', 'octopart_price.xlsx')]
+
 
 # 一次汇总bom 的所有sheets， 二维数组，文件列表+sheet 列表
 def get_bom_sheets() -> list:
@@ -39,7 +48,7 @@ def get_bom_sheets() -> list:
 
 
 # 从bom获取pm us dollar, supplier invalid 忽略掉， 并返回是否有报价
-def get_pm(file_index, sheet_index, rate) -> float:
+def get_pm(file_index, sheet_index, rate):
     bom_price = 0
     has_supplier = False
     # 获取工作簿对象
@@ -47,6 +56,7 @@ def get_pm(file_index, sheet_index, rate) -> float:
     # 获取sheet
     ws = wb.worksheets[sheet_index]
     price_arr = []
+    max_price = 0
     if ws.cell(1, 1).value is not None:
         has_supplier = True  # 记录是否有报价
     for i in range(ws.min_row, ws.max_row + 1):
@@ -76,12 +86,16 @@ def get_pm(file_index, sheet_index, rate) -> float:
                     price_str = price_str.replace('＄', '')
                     price_str = price_str.replace(',', '')
                     price_float = float(price_str)*rate
+                else:
+                    price_str = price_str.replace(',', '')
+                    price_float = float(price_str)
                 if price_float > 0:
                     price_arr.append(price_float)
     if len(price_arr) > 0:
         bom_price = np.mean(price_arr)
+        max_price = np.max(price_arr)
     print(f'pm is:{bom_price}')
-    result_dic = {"bom_price": bom_price, "has_supplier": has_supplier}
+    result_dic = {"bom_price": bom_price, "has_supplier": has_supplier, "max_price": max_price}
     return result_dic
 
 
@@ -143,7 +157,7 @@ def get_grade(c_value: float) -> str:
 
 # 计算汇率
 def get_rate():
-    result = 6.85  # default cate
+    result = 6.94  # default cate
     try:
         url = "https://api.exchangerate-api.com/v4/latest/USD"
         json_str = ''
@@ -172,7 +186,7 @@ def get_indexs(source_arr, cate_name) -> list:
 def calculater_price():
     rate = get_rate()
     all_cates = IC_stock_excel_read.get_cate_name_arr(cate_source_file, 'ppn', 1)
-    sub_cates = all_cates[0:2000]
+    sub_cates = all_cates[0:]
     all_bom_sheets = get_bom_sheets()
     all_octopart_sheets = get_octopart_sheets()
     for (cate_index, cate_name) in enumerate(sub_cates):
@@ -184,9 +198,10 @@ def calculater_price():
         if bom_index is not None:
             pm_dic = get_pm(file_index=bom_index[0], sheet_index=bom_index[1], rate=rate)
         else:
-            pm_dic = {"bom_price": 0, "has_supplier": False}
+            pm_dic = {"bom_price": 0, "has_supplier": False, 'max_price': 0}
         pm = pm_dic['bom_price']
         bom_has_supplier = pm_dic['has_supplier']
+        bom_max_price = pm_dic['max_price']
         if oct_index is not None:
             pr = get_pr(file_index=oct_index[0], sheet_index=oct_index[1], rate=rate)
         else:
@@ -197,7 +212,7 @@ def calculater_price():
             c = pm/pr
         grade = get_grade(c)
         manu_name = IC_stock_excel_read.get_cell_content(file_name=cate_source_file, sheet_name='ppn', row=cate_index + 1, col=2)
-        row_arr = [[cate_name, manu_name, pm, pr, c, grade, '有' if bom_has_supplier else '无']]  # 从bom，获取pm，从octopart 获取pr
+        row_arr = [[cate_name, manu_name, pm, pr, c, grade, '有' if bom_has_supplier else '无', str(bom_max_price)]]  # 从bom，获取pm，从octopart 获取pr
         IC_Stock_excel_write.add_arr_to_sheet(file_name=result_save_file, sheet_name='bom_octopart_price', dim_arr=row_arr)
 
 
