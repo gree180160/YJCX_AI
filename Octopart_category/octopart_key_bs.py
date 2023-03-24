@@ -12,8 +12,8 @@ import json
 
 ssl._create_default_https_context = ssl._create_unverified_context
 default_url = 'https://octopart.com/'
-keyword_source_file = '/Users/liuhe/PycharmProjects/SeleniumDemo/TKeywords.xlsx'
-log_file = '/Users/liuhe/PycharmProjects/SeleniumDemo/Octopart_category/octopart_key_cate_log.txt'
+keyword_source_file = '//TKeywords.xlsx'
+log_file = '//Octopart_category/octopart_key_cate_log.txt'
 cookies = {'__insp_norec_sesstrue':'true',
            '__insp_nvtrue':'true',
            '_pxhd':'i06js1ixb-jfqH0l1dRNSfXXJjjqmmB4m2-9q8e33PQ4JCNy5Jb4oVFGim3/rhAjpiQMGLgLuvN3J0qVTcJQnQ==:7ezmrvu/9WaQ4RP661-hFMhaW99W2Tt-YP4yp22ruHsC5uZE/sUbMMcjjw5gn5qre98SbyNxizO8yon/0GsSTPTMJ7KRt7X5cVwnp-TW0Ao=',

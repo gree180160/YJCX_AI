@@ -15,7 +15,7 @@ result_save_file = cate_source_file
 ICStock_file_arr = ['/Users/liuhe/Desktop/progress/TInfineon/55H/11/IC_stock.xlsx',
                 '/Users/liuhe/Desktop/progress/TInfineon/55H/04/IC_stock.xlsx',
                 '/Users/liuhe/Desktop/progress/TInfineon/55H/sz/IC_stock.xlsx',
-                '/Users/liuhe/PycharmProjects/SeleniumDemo/TInfenion_55H/IC_stock.xlsx']
+                '/Users/liuhe/PycharmProjects/YJCX_AI/TInfenion_55H/IC_stock.xlsx']
 
 
 

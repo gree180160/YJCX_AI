@@ -1,8 +1,8 @@
 import random
-from WRTools import ExcelHelp
+from WRTools import ExcelHelp, PathHelp
 
 
-user_agent_arr = ExcelHelp.read_col_content(file_name='/Users/liuhe/PycharmProjects/SeleniumDemo/WRTools/IP&UA.xlsx', sheet_name="UA", col_index=1)
+user_agent_arr = ExcelHelp.read_col_content(file_name=PathHelp.get_file_path('WRTools', 'IP&UA.xlsx'), sheet_name="UA", col_index=1)
 
 
 def getRandowUA() -> str:

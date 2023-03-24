@@ -206,85 +206,43 @@ def move_DijiKey(source_file: str, dijikey_file: str):
 
 #合并数据前的预处理，IC 结果统计，findchips 合计，dijikey 合计
 def pre_combine_data():
-    cate_source_file = PathHelp.get_file_path("TInfenion_80H", 'Task.xlsx')
-    ICStock_file_arr = ['/Users/liuhe/Desktop/progress/TInfineon/80H/11/IC_stock.xlsx',
-                        '/Users/liuhe/Desktop/progress/TInfineon/80H/04/IC_stock.xlsx',
-                        '/Users/liuhe/Desktop/progress/TInfineon/80H/sz/IC_stock.xlsx',
-                        '/Users/liuhe/PycharmProjects/SeleniumDemo/TInfenion_80H/IC_stock.xlsx']
+    cate_source_file = PathHelp.get_file_path("TRenesasAll_20H", 'Task.xlsx')
+    ICStock_file_arr = ["/Users/liuhe/Desktop/progress/TReneseas_all/20H/11/IC_stock.xlsx",
+                                         "/Users/liuhe/Desktop/progress/TReneseas_all/20H/sz/IC_stock.xlsx",
+                                         "/Users/liuhe/Desktop/progress/TReneseas_all/20H/04/IC_stock.xlsx",
+                        '/Users/liuhe/PycharmProjects/YJCX_AI/TRenesasAll_20H/IC_stock.xlsx']
     IC_stock_result.staticstic_IC_stock(source_files=ICStock_file_arr, aim_file=cate_source_file)
-    findchips_stock_cate.combine_result(["/Users/liuhe/Desktop/progress/TInfineon/80H/11/findchip_stock.xlsx",
-                                         "/Users/liuhe/Desktop/progress/TInfineon/80H/sz/findchip_stock.xlsx",
-                                         "/Users/liuhe/Desktop/progress/TInfineon/80H/04/findchip_stock.xlsx"],
-                                        PathHelp.get_file_path('TInfenion_80H', 'findchip_stock.xlsx'))
-    DJ_product_status_bs.combine_result(["/Users/liuhe/Desktop/progress/TInfineon/80H/11/dijikey_status.xlsx",
-                                                 "/Users/liuhe/Desktop/progress/TInfineon/80H/sz/dijikey_status.xlsx",
-                                                 "/Users/liuhe/Desktop/progress/TInfineon/80H/04/dijikey_status.xlsx"],
-                                                PathHelp.get_file_path('TInfenion_80H', 'dijikey_status.xlsx'))
-
+    findchips_stock_cate.combine_result(["/Users/liuhe/Desktop/progress/TReneseas_all/20H/11/findchip_stock.xlsx",
+                                         "/Users/liuhe/Desktop/progress/TReneseas_all/20H/sz/findchip_stock.xlsx",
+                                         "/Users/liuhe/Desktop/progress/TReneseas_all/20H/04/findchip_stock.xlsx"],
+                                        PathHelp.get_file_path('TRenesasAll_20H', 'findchip_stock.xlsx'))
+    DJ_product_status_bs.combine_result(["/Users/liuhe/Desktop/progress/TReneseas_all/20H/11/dijikey_status.xlsx",
+                                                 "/Users/liuhe/Desktop/progress/TReneseas_all/20H/sz/dijikey_status.xlsx",
+                                                 "/Users/liuhe/Desktop/progress/TReneseas_all/20H/04/dijikey_status.xlsx"],
+                                                PathHelp.get_file_path('TRenesasAll_20H', 'dijikey_status.xlsx'))
 
 
 # 统计汇总结果
 def statistic_data():
-    source_file = PathHelp.get_file_path('TInfenion_80H', 'Task.xlsx')
-    # move_ppn_to_allInfo(source_file=source_file)
-    # move_IC_stock_to_allInfo(source_file=source_file)
-    # move_BomOct_to_allInfo(source_file=source_file)
-    # move_findchip_to_allInfo(source_file=source_file, findchip_file=PathHelp.get_file_path('TInfenion_80H', 'findchip_stock.xlsx'))
-    move_DijiKey(source_file=source_file, dijikey_file=PathHelp.get_file_path('TInfenion_80H', 'dijikey_status.xlsx'))
-    #move_IC_hot(source_file=source_file)
-
-
-def IC_hot():
-    source_file = PathHelp.get_file_path('TInfenion_80H', 'Task.xlsx')
+    source_file = PathHelp.get_file_path('TRenesasAll_20H', 'Task.xlsx')
+    move_ppn_to_allInfo(source_file=source_file)
+    move_IC_stock_to_allInfo(source_file=source_file)
+    move_BomOct_to_allInfo(source_file=source_file)
+    move_findchip_to_allInfo(source_file=source_file, findchip_file=PathHelp.get_file_path('TRenesasAll_20H', 'findchip_stock.xlsx'))
+    move_DijiKey(source_file=source_file, dijikey_file=PathHelp.get_file_path('TRenesasAll_20H', 'dijikey_status.xlsx'))
     move_IC_hot(source_file=source_file)
 
 
-def dijikey():
-    source_file = '/Users/liuhe/Desktop/DJKey.xlsx'
-    unfinished_ppn = ExcelHelp.read_col_content(file_name=source_file, sheet_name='unfinished', col_index=1)
-    finished_ppn = ExcelHelp.read_col_content(file_name=source_file, sheet_name='finished', col_index=1)
-    need = []
-    for temp in unfinished_ppn:
-        if not finished_ppn.__contains__(temp):
-            need.append([temp])
-    ExcelHelp.add_arr_to_sheet(file_name=source_file, sheet_name='ppn', dim_arr=need)
-
-
-def statistic_UP():
-    source_file = "/Users/liuhe/Desktop/progress/TInfineon/TInfineon_keywords.xlsx"
-    ppns = ExcelHelp.read_col_content(file_name=source_file, sheet_name='all_info', col_index=1)[1:4501]
-    dijikey_file = PathHelp.get_file_path(None, 'DJKey.xlsx')
-    dijikey_data = ExcelHelp.read_sheet_content_by_name(file_name=dijikey_file, sheet_name='dijikey_status')
-    result = []
-    for (index, ppn) in enumerate(ppns):
-        diji_record = [ppn, '//', '//']
-        star_index = 0
-        for (diji_index, diji_info) in enumerate(dijikey_data):
-            if diji_index < star_index:
-                continue
-            if ppn == diji_info[0]:
-                star_index = diji_index
-                diji_record = diji_info
-                if diji_info[2] != '//':
-                    break
-        result.append(diji_record)
-    ExcelHelp.add_arr_to_sheet(file_name=source_file, sheet_name='dijikey_status', dim_arr=result)
-    # move_part_to_part(
-    #     source_file=source_file,
-    #     source_sheet='dijikey_status',
-    #     from_col=2,
-    #     to_col=3,
-    #     aim_file=source_file,
-    #     aim_sheet='all_info',
-    #     start_col=11)
+# def IC_hot():
+#     source_file = PathHelp.get_file_path('TRenesasAll_20H', 'Task.xlsx')
+#     move_IC_hot(source_file=source_file)
 
 
 if __name__ == "__main__":
-     # pre_combine_data()
-     # time.sleep(1.0)
-     # statistic_data()
-     # IC_hot()
-    # dijikey()
-     statistic_UP()
+     pre_combine_data()
+     time.sleep(1.0)
+     statistic_data()
+
+
 
 

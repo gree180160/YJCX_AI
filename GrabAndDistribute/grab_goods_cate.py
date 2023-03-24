@@ -37,10 +37,10 @@ def get_need_cates(a_source_fils: list, manu_file, finish_file):
 
 
 def get_findchips_left():
-    finished_file = '/Users/liuhe/PycharmProjects/SeleniumDemo/T0806.xlsx'
-    cate_source_file_list = ['/Users/liuhe/PycharmProjects/SeleniumDemo/T0829zmz.xlsx',
-                             '/Users/liuhe/PycharmProjects/SeleniumDemo/T0815.xlsx']
-    json_file = '/Users/liuhe/PycharmProjects/SeleniumDemo/T0906.xlsx'
+    finished_file = '//T0806.xlsx'
+    cate_source_file_list = ['/Users/liuhe/PycharmProjects/YJCX_AI/T0829zmz.xlsx',
+                             '/Users/liuhe/PycharmProjects/YJCX_AI/T0815.xlsx']
+    json_file = '//T0906.xlsx'
     findchips_cates = get_need_cates(a_source_fils=cate_source_file_list, manu_file=json_file,
                                      finish_file=finished_file)
     IC_Stock_excel_write.add_arr_to_sheet(file_name=json_file, sheet_name="FindchipsLeft",
@@ -48,10 +48,10 @@ def get_findchips_left():
 
 
 def get_arrow_left():
-    json_file = '/Users/liuhe/PycharmProjects/SeleniumDemo/T0906.xlsx'
-    cate_source_file_list = ['/Users/liuhe/PycharmProjects/SeleniumDemo/T0829zmz.xlsx',
-                             '/Users/liuhe/PycharmProjects/SeleniumDemo/T0815.xlsx',
-                             '/Users/liuhe/PycharmProjects/SeleniumDemo/T0806.xlsx']
+    json_file = '//T0906.xlsx'
+    cate_source_file_list = ['/Users/liuhe/PycharmProjects/YJCX_AI/T0829zmz.xlsx',
+                             '/Users/liuhe/PycharmProjects/YJCX_AI/T0815.xlsx',
+                             '/Users/liuhe/PycharmProjects/YJCX_AI/T0806.xlsx']
     json_cates = IC_stock_excel_read.get_cate_name_arr(file_name=json_file, sheet_name='json', col_index=1)
     a_cates = get_A_cate(cate_source_file_list)
     # print(f'finished_cates count is:{len(a_cates)}')
@@ -65,28 +65,28 @@ def get_arrow_left():
 
 # 将0808/15/29的结果中cate——garde 为A的结果和findchips left 的结果汇总到一个sheet
 def combine_findchips_08():
-    T0906_cates_file = '/Users/liuhe/PycharmProjects/SeleniumDemo/T0906.xlsx'
+    T0906_cates_file = '//T0906.xlsx'
     aim_cates = IC_stock_excel_read.get_cate_name_arr(file_name=T0906_cates_file, sheet_name='ArrowLeft', col_index=1)
     # 1.将0806的有用结果汇总到 T0906_cates_file
     for (cate_index, cate_name) in enumerate(aim_cates):
         if cate_name is None:
             continue
         IC_Stock_excel_write.move_sheet_to_row(source_file_list=[
-            '/Users/liuhe/PycharmProjects/SeleniumDemo/Findchips_stock/findchips_stock_cate_0806.xlsx',
-            '/Users/liuhe/PycharmProjects/SeleniumDemo/Findchips_stock/findchips_stock_cate_08062.xlsx',
-            '/Users/liuhe/PycharmProjects/SeleniumDemo/Findchips_stock/findchips_stock_cate_0906.xlsx',
-            '/Users/liuhe/PycharmProjects/SeleniumDemo/Findchips_stock/findchips_stock_cate_09062.xlsx'],
-                                               aim_file='/Users/liuhe/PycharmProjects/SeleniumDemo/Grab_goods/grab_goods_0906.xlsx',
+            '/Users/liuhe/PycharmProjects/YJCX_AI/Findchips_stock/findchips_stock_cate_0806.xlsx',
+            '/Users/liuhe/PycharmProjects/YJCX_AI/Findchips_stock/findchips_stock_cate_08062.xlsx',
+            '/Users/liuhe/PycharmProjects/YJCX_AI/Findchips_stock/findchips_stock_cate_0906.xlsx',
+            '/Users/liuhe/PycharmProjects/YJCX_AI/Findchips_stock/findchips_stock_cate_09062.xlsx'],
+                                               aim_file='//Grab_goods/grab_goods_0906.xlsx',
                                                aim_sheet='findchips',
                                                cate_name=cate_name)
     print('08 over')
 
 
 def combine_findchips_0906():
-    T0906_cates_files = ['/Users/liuhe/PycharmProjects/SeleniumDemo/Findchips_stock/findchips_stock_cate_0906.xlsx',
-                         '/Users/liuhe/PycharmProjects/SeleniumDemo/Findchips_stock/findchips_stock_cate_09062.xlsx']
-    result_file = '/Users/liuhe/PycharmProjects/SeleniumDemo/Grab_goods/grab_goods_0906.xlsx'
-    T0906_cates_file = '/Users/liuhe/PycharmProjects/SeleniumDemo/T0906.xlsx'
+    T0906_cates_files = ['/Users/liuhe/PycharmProjects/YJCX_AI/Findchips_stock/findchips_stock_cate_0906.xlsx',
+                         '/Users/liuhe/PycharmProjects/YJCX_AI/Findchips_stock/findchips_stock_cate_09062.xlsx']
+    result_file = '//Grab_goods/grab_goods_0906.xlsx'
+    T0906_cates_file = '//T0906.xlsx'
     aim_cates = IC_stock_excel_read.get_cate_name_arr(file_name=T0906_cates_file, sheet_name='ArrowLeft', col_index=1)
     for file in T0906_cates_files:
         wb = load_workbook(file)
@@ -99,10 +99,10 @@ def combine_findchips_0906():
 
 
 def get0907left():
-    source_file = '/Users/liuhe/PycharmProjects/SeleniumDemo/T0907zmz.xlsx'
-    finish_files = ['/Users/liuhe/PycharmProjects/SeleniumDemo/T0829zmz.xlsx',
-                    '/Users/liuhe/PycharmProjects/SeleniumDemo/T0815.xlsx',
-                    '/Users/liuhe/PycharmProjects/SeleniumDemo/T0806.xlsx']
+    source_file = '//T0907zmz.xlsx'
+    finish_files = ['/Users/liuhe/PycharmProjects/YJCX_AI/T0829zmz.xlsx',
+                    '/Users/liuhe/PycharmProjects/YJCX_AI/T0815.xlsx',
+                    '/Users/liuhe/PycharmProjects/YJCX_AI/T0806.xlsx']
     T29 = IC_stock_excel_read.get_cate_name_arr(file_name=finish_files[0], sheet_name='all', col_index=1)
     T15 = IC_stock_excel_read.get_cate_name_arr(file_name=finish_files[0], sheet_name='all', col_index=1)
     T06 = IC_stock_excel_read.get_cate_name_arr(file_name=finish_files[0], sheet_name='all', col_index=1)
@@ -121,12 +121,12 @@ def get0907left():
 def where_error():
     error_cate = 'ACS712ELCTR-20A-T'
     error_md5 = 'QUNTNzEyRUxDVFItMjBBLVQ='
-    file1 = '/Users/liuhe/PycharmProjects/SeleniumDemo/Findchips_stock/findchips_stock_cate_0906.xlsx'
+    file1 = '/Users/liuhe/PycharmProjects/YJCX_AI/Findchips_stock/findchips_stock_cate_0906.xlsx'
     wb1 = load_workbook(file1)
     sheets1 = wb1.sheetnames
     if error_md5 in sheets1:
         print('error in 1')
-    file2 = '/Users/liuhe/PycharmProjects/SeleniumDemo/Findchips_stock/findchips_stock_cate_09062.xlsx'
+    file2 = '/Users/liuhe/PycharmProjects/YJCX_AI/Findchips_stock/findchips_stock_cate_09062.xlsx'
     wb2 = load_workbook(file2)
     sheets2 = wb2.sheetnames
     if error_md5 in sheets2:
@@ -135,11 +135,11 @@ def where_error():
 
 #  查找grade 为A的cate， 然后保存到指定文件
 def saveA(save_file, save_sheet):
-    all_A_cates = get_A_cate(['/Users/liuhe/PycharmProjects/SeleniumDemo/T0806.xlsx',
-                              '/Users/liuhe/PycharmProjects/SeleniumDemo/T0815.xlsx',
-                              '/Users/liuhe/PycharmProjects/SeleniumDemo/T0829zmz.xlsx',
-                              '/Users/liuhe/PycharmProjects/SeleniumDemo/T0907zmz.xlsx',
-                              '/Users/liuhe/PycharmProjects/SeleniumDemo/T0909.xlsx'])
+    all_A_cates = get_A_cate(['/Users/liuhe/PycharmProjects/YJCX_AI/T0806.xlsx',
+                              '/Users/liuhe/PycharmProjects/YJCX_AI/T0815.xlsx',
+                              '/Users/liuhe/PycharmProjects/YJCX_AI/T0829zmz.xlsx',
+                              '/Users/liuhe/PycharmProjects/YJCX_AI/T0907zmz.xlsx',
+                              '/Users/liuhe/PycharmProjects/YJCX_AI/T0909.xlsx'])
     result = []
     for cate_name in all_A_cates:
         result.append([cate_name])
@@ -149,13 +149,13 @@ def saveA(save_file, save_sheet):
 
 # 从型号表price 中gradeA的cate ，union TJson_recommand 中的cates
 def get_jsonAndGradeA_cates() -> list:
-    task_cates_files = ['/Users/liuhe/PycharmProjects/SeleniumDemo/T0806.xlsx',
-                        '/Users/liuhe/PycharmProjects/SeleniumDemo/T0815.xlsx',
-                        '/Users/liuhe/PycharmProjects/SeleniumDemo/T0829zmz.xlsx',
-                        '/Users/liuhe/PycharmProjects/SeleniumDemo/T0907zmz.xlsx',
-                        '/Users/liuhe/PycharmProjects/SeleniumDemo/T0909.xlsx']
+    task_cates_files = ['/Users/liuhe/PycharmProjects/YJCX_AI/T0806.xlsx',
+                        '/Users/liuhe/PycharmProjects/YJCX_AI/T0815.xlsx',
+                        '/Users/liuhe/PycharmProjects/YJCX_AI/T0829zmz.xlsx',
+                        '/Users/liuhe/PycharmProjects/YJCX_AI/T0907zmz.xlsx',
+                        '/Users/liuhe/PycharmProjects/YJCX_AI/T0909.xlsx']
     gradeA_cates = get_A_cate(file_name_arr=task_cates_files)
-    jsonRecommnad_file = '/Users/liuhe/PycharmProjects/SeleniumDemo/TJson_recommand.xlsx'
+    jsonRecommnad_file = '//TJson_recommand.xlsx'
     jsonRecommand_cates = IC_stock_excel_read.get_cate_name_arr(file_name=jsonRecommnad_file, sheet_name='all',
                                                                 col_index=1)
     result = list(set(gradeA_cates).union(set(jsonRecommand_cates)))
@@ -164,8 +164,8 @@ def get_jsonAndGradeA_cates() -> list:
 
 # 更新后的gradeA 汇总名单
 def new_jsonAndGradeA_cates() -> list:
-    gradeA_file = '/Users/liuhe/PycharmProjects/SeleniumDemo/TgardeA.xlsx'
-    json_file = '/Users/liuhe/PycharmProjects/SeleniumDemo/TJson_recommand.xlsx'
+    gradeA_file = '//TgardeA.xlsx'
+    json_file = '//TJson_recommand.xlsx'
     new_gradeA_cates = IC_stock_excel_read.get_cate_name_arr(file_name=gradeA_file, sheet_name='all',
                                                              col_index=1)
     jsonRecommand_cates = IC_stock_excel_read.get_cate_name_arr(file_name=json_file, sheet_name='all', col_index=1)
@@ -180,4 +180,4 @@ if __name__ == '__main__':
     # combine_findchips_08()
     # where_error()
     # get0907left()
-    saveA(save_file='/Users/liuhe/PycharmProjects/SeleniumDemo/TgardeA.xlsx', save_sheet='sum')
+    saveA(save_file='//TgardeA.xlsx', save_sheet='sum')

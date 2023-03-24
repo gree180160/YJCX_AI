@@ -14,12 +14,12 @@ def get_zmz_cate():
     all_lists = list(filter(None, all_lists))
     all_lists.sort()
     # used
-    used_cate_files = ["/Users/liuhe/PycharmProjects/SeleniumDemo/T0806.xlsx",
-                       "/Users/liuhe/PycharmProjects/SeleniumDemo/T0815.xlsx",
-                       "/Users/liuhe/PycharmProjects/SeleniumDemo/T0829zmz.xlsx",
-                       "/Users/liuhe/PycharmProjects/SeleniumDemo/T0907zmz.xlsx",
-                       "/Users/liuhe/PycharmProjects/SeleniumDemo/T0909.xlsx",
-                       "/Users/liuhe/PycharmProjects/SeleniumDemo/T0921.xlsx"
+    used_cate_files = ["/Users/liuhe/PycharmProjects/YJCX_AI/T0806.xlsx",
+                       "/Users/liuhe/PycharmProjects/YJCX_AI/T0815.xlsx",
+                       "/Users/liuhe/PycharmProjects/YJCX_AI/T0829zmz.xlsx",
+                       "/Users/liuhe/PycharmProjects/YJCX_AI/T0907zmz.xlsx",
+                       "/Users/liuhe/PycharmProjects/YJCX_AI/T0909.xlsx",
+                       "/Users/liuhe/PycharmProjects/YJCX_AI/T0921.xlsx"
                        ]
     used_lists = []
     for temp_file in used_cate_files:
@@ -29,7 +29,7 @@ def get_zmz_cate():
     used_lists.sort()
     # valid
     result_list = list(set(all_lists).difference(set(used_lists)))
-    ExcelHelp.save_one_col(file_name='/Users/liuhe/PycharmProjects/SeleniumDemo/T0927.xlsx', sheet_name='all', dim_arr=result_list)
+    ExcelHelp.save_one_col(file_name='//T0927.xlsx', sheet_name='all', dim_arr=result_list)
 
 
 def change_file_name():
@@ -49,10 +49,10 @@ def batch_rename(file_dir, new_ext):
 
 # get page_more PN
 def get_page_more_PN():
-    page0_PNS = ExcelHelp.read_col_content(file_name='/Users/liuhe/PycharmProjects/SeleniumDemo/TKWPage0.xlsx',
+    page0_PNS = ExcelHelp.read_col_content(file_name='//TKWPage0.xlsx',
                                            sheet_name='all', col_index=1)
     all_PNInfo_arr = ExcelHelp.read_sheet_content_by_index(
-        file_name='/Users/liuhe/PycharmProjects/SeleniumDemo/TKWPageMore.xlsx', sheet_index=2)
+        file_name='//TKWPageMore.xlsx', sheet_index=2)
     page_more_arr = []
     for PNInfo_ele in all_PNInfo_arr:
         pn = PNInfo_ele[0]
@@ -61,7 +61,7 @@ def get_page_more_PN():
         else:
             info_arr = [PNInfo_ele[0], PNInfo_ele[1]]
             page_more_arr.append(info_arr)
-    ExcelHelp.add_arr_to_sheet(file_name='/Users/liuhe/PycharmProjects/SeleniumDemo/TKWPageMore.xlsx',
+    ExcelHelp.add_arr_to_sheet(file_name='//TKWPageMore.xlsx',
                                sheet_name='page_more', dim_arr=page_more_arr)
 
 
@@ -98,79 +98,44 @@ def createDayTask(project_file: str, start_index:int, end_index:int, aim_file):
             break
     ExcelHelp.add_arr_to_sheet(file_name=aim_file, sheet_name='ppn', dim_arr=result)
 
-def get_unfinished_IC_hot_cates():
-    source_file = PathHelp.get_file_path('TSumNvmNdt', 'Task.xlsx')
-    source_cates = ExcelHelp.read_col_content(file_name=source_file, sheet_name='source', col_index=1)
+
+def get_unfinished_RenesasPPN():
+    source_file = PathHelp.get_file_path(None, 'TRenesa.xlsx')
+    source_cates = ExcelHelp.read_col_content(file_name=source_file, sheet_name='repeat_ppn', col_index=1)
     unfinished_cates = source_cates
 
-    finished_files = ['/Users/liuhe/Desktop/progress/TDiscontinue/finished/TCY7C.xlsx',
-                      '/Users/liuhe/Desktop/progress/TDiscontinue/finished/TCY8C/TCY8C_IC_Hot.xlsx',
-                      '/Users/liuhe/Desktop/progress/TDiscontinue/finished/TFDC_FDD_VNH_VNQ_XMC/TFDC_FDD_VNH_VNQ_XMC.xlsx',
-                      '/Users/liuhe/Desktop/progress/TDiscontinue/finished/TS25_IC_Hot.xlsx',
-                      '/Users/liuhe/Desktop/progress/TDiscontinue/finished/TS29.xlsx',
-                      '/Users/liuhe/Desktop/progress/TDiscontinue/finished/TMMS_NRV/TMMS_NRV.xlsx',
-                      '/Users/liuhe/Desktop/progress/TDiscontinue/finished/ACS/TACS_SI7.xlsx',
-                      '/Users/liuhe/Desktop/progress/TSemiStar/TSemiStart.xlsx',
-                      '/Users/liuhe/Desktop/progress/TMegSensor/TMagneticSensor.xlsx',
-                      '/Users/liuhe/Desktop/progress/TInfineon/5H/TInfenion_5H.xlsx',
-                      '/Users/liuhe/Desktop/progress/TInfineon/10H/TInfenion_10H.xlsx',
-                      '/Users/liuhe/Desktop/progress/TInfineon/15H/TInfenion_15H.xlsx',
-                      '/Users/liuhe/Desktop/progress/TInfineon/20H/TInfenion_20H.xlsx']
+    finished_files = [
+                      '/Users/liuhe/Desktop/progress/TRenesas_RL78/5H/mac/Task.xlsx',
+                      '/Users/liuhe/Desktop/progress/TRenesas_RL78/10H/mac/Task.xlsx',
+                      '/Users/liuhe/Desktop/progress/TRenesas_RL78/15H/mac/Task.xlsx',
+                      '/Users/liuhe/Desktop/progress/TReneseas_Speed/mac/Task.xlsx',
+    '/Users/liuhe/PycharmProjects/YJCX_AI/TRenesas_Inspur/Task.xlsx']
     finished_sets = set()
     for temp_file in finished_files:
         print(temp_file)
         temp_ppns = ExcelHelp.read_col_content(file_name=temp_file, sheet_name='ppn', col_index=1)
         finished_sets = set(temp_ppns).union(finished_sets)
-    need_search_arr = list(set(source_cates) - finished_sets)
-    need_search_col = []
-    for temp_ppn in need_search_arr:
-        need_search_col.append([temp_ppn])
-    ExcelHelp.add_arr_to_sheet(file_name=source_file, sheet_name='ppn', dim_arr=need_search_col)
+    repeated = list(finished_sets.difference(set(source_cates))) # list(set(source_cates).difference(finished_sets))
+    ExcelHelp.add_arr_to_col(file_name=source_file, sheet_name='difference', dim_arr=repeated)
 
 
-def getMagSensor():
-    finished_opn = ExcelHelp.read_col_content(file_name=PathHelp.get_file_path(None, 'TInfineon_keywords.xlsx'), sheet_name='opn', col_index=1)
-    wait_opn = ExcelHelp.read_col_content(file_name="/Users/liuhe/Desktop/TMagneticSensor.xlsx", sheet_name='source', col_index=1)
-    copy_opn = list(set(finished_opn) & set(wait_opn))
-    opn = list(set(wait_opn) - set(finished_opn))
-    copy_list = []
-    for temp in copy_opn:
-        copy_list.append([temp])
-    ExcelHelp.add_arr_to_sheet(file_name="/Users/liuhe/Desktop/TMagneticSensor.xlsx", sheet_name='copy', dim_arr=copy_list)
-    opn_list = []
-    for temp_opn in opn:
-        opn_list.append([temp_opn])
-    ExcelHelp.add_arr_to_sheet(file_name="/Users/liuhe/Desktop/TMagneticSensor.xlsx", sheet_name='opn',
-                               dim_arr=opn_list)
-
-
-def get_finished_ppn():
-    finished_opn = ExcelHelp.read_col_content(file_name="/Users/liuhe/Desktop/TMagneticSensor.xlsx", sheet_name='copy', col_index=1)
-    finished_ppn = []
-    source = ExcelHelp.read_sheet_content_by_name(file_name=PathHelp.get_file_path(None, 'TInfineon_keywords.xlsx'), sheet_name='repeat_ppn')
-    for (index, row_content) in enumerate(source):
-        print(f'index is: {index}')
-        ppn = str(row_content[0])
-        opn = str(row_content[2]) + str(row_content[3])
-        if ppn and opn:
-            if opn in finished_opn:
-                finished_ppn.append([ppn, 'Infineon', opn])
-        else:
-            break
-    ExcelHelp.add_arr_to_sheet(file_name="/Users/liuhe/Desktop/TMagneticSensor.xlsx", sheet_name='finished_ppn',
-                               dim_arr=finished_ppn)
-
-
-
+def renesas_file_ByFindchips():
+    source_file = PathHelp.get_file_path(None, 'TRenesa.xlsx')
+    all_ppn = ExcelHelp.read_col_content(file_name=source_file, sheet_name='ppn', col_index=1)
+    current_ppn = all_ppn[2998:6000]
+    findchips_files = ['/Users/liuhe/Desktop/progress/TReneseas_all/findchip_stock/TRenesa_findchips-04.xlsx',
+                       '/Users/liuhe/Desktop/progress/TReneseas_all/findchip_stock/TRenesa_findchips-mac.xlsx']
+    unvalid_ppn = []
+    for temp_file in findchips_files:
+        sheetContent = ExcelHelp.read_sheet_content_by_name(file_name=temp_file, sheet_name='findchip_stock')
+        for row in sheetContent:
+            if row[3] == 'False' or row[3] == False:
+                unvalid_ppn.append(str(row[0]))
+    print(unvalid_ppn)
+    result = list(set(current_ppn).difference(set(unvalid_ppn)))
+    result.sort()
+    ExcelHelp.add_arr_to_col(file_name=source_file, sheet_name='filted_ppn', dim_arr=result)
 
 
 if __name__ == "__main__":
-    # get_zmz_cate()
-    # change_file_name()
-    # get_page_more_PN()
-    # get_unfinished_IC_hot_cates()
-    # decompositionPPN(1000)
-    # projectf_ile = PathHelp.get_file_path(None, 'TInfineon_keywords.xlsx')
-    # current_task = PathHelp.get_file_path(None, 'TInfenion_20H.xlsx')
-    # createDayTask(project_file=projectf_ile, start_index=1500, end_index=2000, aim_file=current_task)
-    get_unfinished_IC_hot_cates()
+    get_unfinished_RenesasPPN()

@@ -5,8 +5,10 @@ import time
 
 import undetected_chromedriver as uc
 from selenium.webdriver.common.by import By
-from WRTools import IPHelper, UserAgentHelper, LogHelper, PathHelp, ExcelHelp, WaitHelp
+from WRTools import IPHelper, UserAgentHelper, LogHelper, PathHelp, ExcelHelp, WaitHelp, StringChange
+from selenium.common.exceptions import TimeoutException
 from Manager import AccountMange
+
 
 ssl._create_default_https_context = ssl._create_unverified_context
 
@@ -15,12 +17,12 @@ driver.set_page_load_timeout(360)
 # logic
 
 
-sourceFile_dic = {'fileName': PathHelp.get_file_path('TRL78_5H', 'Task.xlsx'),
+sourceFile_dic = {'fileName': PathHelp.get_file_path('TRenesasAll_25H', 'Task.xlsx'),
                   'sourceSheet': 'ppn',
                   'colIndex': 1,
                   'startIndex': 0,
-                  'endIndex': 125} # 45 unfinished
-result_save_file = PathHelp.get_file_path('TRL78_5H', 'dijikey_status.xlsx')
+                  'endIndex': 125}
+result_save_file = PathHelp.get_file_path('TRenesasAll_25H', 'dijikey_status.xlsx')
 
 # sourceFile_dic = {'fileName': PathHelp.get_file_path("TInfenion_80H", 'Task.xlsx'),
 #                   'sourceSheet': 'ppn',
@@ -31,7 +33,7 @@ result_save_file = PathHelp.get_file_path('TRL78_5H', 'dijikey_status.xlsx')
 
 default_url = 'https://www.digikey.com/'
 log_file = PathHelp.get_file_path('Dijikey', 'DJ_product_status_log.txt')
-
+timeout_ppn = None
 
 # 收获地点选择美国
 def select_usa():
@@ -50,6 +52,8 @@ def select_usa():
 
 # 跳转到下一个指定的型号
 def go_to_cate(cate_index, cate_name):
+    global timeout_ppn
+    timeout_ppn = None
     try:
         header_area = driver.find_element(by=By.CLASS_NAME, value='header__search')
         input = header_area.find_element(by=By.TAG_NAME, value='input')
@@ -57,8 +61,11 @@ def go_to_cate(cate_index, cate_name):
         input.send_keys(cate_name)
         search_button = header_area.find_element(by=By.CLASS_NAME, value='search-button')
         search_button.click()
+    except TimeoutException:
+        timeout_ppn = cate_name
     except Exception as e:
         LogHelper.write_log(log_file_name=log_file, content=f'go_to_cate {cate_name} exception is: {e}')
+
 
 
 # 解析某个型号的页面信息，先看未折叠的前三行，判断是否需要展开，展开，解析，再判断，再展开，再解析。。。。
@@ -99,7 +106,7 @@ def analy_html(cate_index, cate_name):
             status_content = '//'
     except:
         status_content = '//'
-    result = [cate_name, des_content, status_content]
+    result = [cate_name, des_content, status_content, time.strftime('%Y-%m-%d', time.localtime())]
     print('begin write data ')
     ExcelHelp.add_arr_to_sheet(
     file_name=result_save_file,
@@ -129,3 +136,4 @@ if __name__ == "__main__":
     driver.get(default_url)
     select_usa()
     main()
+

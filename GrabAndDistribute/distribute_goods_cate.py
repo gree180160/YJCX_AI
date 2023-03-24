@@ -6,7 +6,7 @@ from openpyxl import load_workbook
 
 def arrow_data_combine():
     source_file = '/Users/liuhe/Desktop/progress/0906/myarrow/arrow_transition_cate_0906.xlsx'
-    aim_file = '/Users/liuhe/PycharmProjects/SeleniumDemo/GrabAndDistribute/grab_Distribute_cate_0906.xlsx'
+    aim_file = '//GrabAndDistribute/grab_Distribute_cate_0906.xlsx'
     aim_sheet = 'myarrow'
     wb = load_workbook(source_file)
     for (index, sheet) in enumerate(wb.worksheets):

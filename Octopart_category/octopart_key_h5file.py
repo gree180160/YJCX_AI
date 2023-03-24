@@ -10,8 +10,8 @@ from urllib.parse import urlparse
 
 default_url = 'https://octopart.com/'
 keyword_source_file = PathHelp.get_file_path(None, 'TRenesa.xlsx')
-log_file = '/Users/liuhe/PycharmProjects/SeleniumDemo/Octopart_category/octopart_key_cate_log.txt'
-fold_path = '/Users/liuhe/Desktop/progress/TReneseas_all/Reneseas_html_files'
+log_file = '//Octopart_category/octopart_key_cate_log.txt'
+fold_path = '/Users/liuhe/Desktop/progress/TReneseas_all/pageMore_htmlFiles'
 
 total_page = 1
 current_page = 1
@@ -95,12 +95,12 @@ def analyth_html(key_name, soup, htmlhandle):
                 if cate_name.startswith(key_name):
                     info_list.append([cate_name, manu, key_name, total_page])
         if len(info_list) > 0:
-            ExcelHelp.add_arr_to_sheet(file_name=keyword_source_file, sheet_name='page0_pn',
+            ExcelHelp.add_arr_to_sheet(file_name=keyword_source_file, sheet_name='pageMore_pn',
                                                   dim_arr=info_list)
     except Exception as e:
         info_arr = getSKUByRE(html_txt=htmlhandle, key_name=key_name)
         if len(info_arr) > 0:
-            ExcelHelp.add_arr_to_sheet(file_name=keyword_source_file, sheet_name='page0_pn',
+            ExcelHelp.add_arr_to_sheet(file_name=keyword_source_file, sheet_name='pageMore_pn',
                                                   dim_arr=info_arr)
         else:
             LogHelper.write_log(log_file, f'{key_name} analyth_html exception: {e}')
@@ -139,7 +139,7 @@ def get_files(fold_path: str):
     return result
 
 
-# 获取指定文件下的html files，并将结果转化为url输出
+# 获取指定文件下的html files，并将结果转化为ppn输出
 def get_finished_ppn(fold_path: str):
     file_name_list = os.listdir(fold_path)
     result = []
@@ -157,6 +157,27 @@ def get_ppn_from_filename(filename: str):
         for (index, char) in enumerate(filename):
             if index in range(index1 + 3, index2):
                 result += char
+    return result
+
+
+def get_url_from_filename(filename: str):
+    url = filename.replace('https __octopart.com_search q=',
+                           'view-source:https://octopart.com/search?q=')
+    result = url.replace(
+        '.htm', ''
+    )
+    result = result.replace(
+        '.html', ''
+    )
+    return result
+
+
+# 获取指定文件下的html files，并将结果转化为url输出
+def get_finished_urls(fold_path: str):
+    file_name_list = os.listdir(fold_path)
+    result = []
+    for temp in file_name_list:
+        result.append(get_url_from_filename(temp))
     return result
 
 
@@ -198,21 +219,30 @@ def queryToUrl(url1, url2, para1, para2) -> bool:
 
 
 # 查找遗漏的html——文件,并保存
-def get_unfinished_urls(keyword_source_file: str, finished_html_files_fold: str):
+def get_unfinished_pn(keyword_source_file: str, finished_html_files_fold: str):
     unfinished_url = []
-    unfinished_pn = []
-    all_ppn = ExcelHelp.read_col_content(file_name=keyword_source_file, sheet_name='Sheet1', col_index=1)
+    all_ppn = ExcelHelp.read_col_content(file_name=keyword_source_file, sheet_name='ppn', col_index=1)
     finished_ppn = get_finished_ppn(fold_path=finished_html_files_fold)
     for (ppn_index, temp_ppn) in enumerate(all_ppn):
         if not temp_ppn in finished_ppn:
             manu = URLManager.Octopart_manu.Renesas
             url = URLManager.octopart_get_page_url(key_name=temp_ppn, page=1, manu=manu)
-            unfinished_url.append([url])
-            unfinished_pn.append([temp_ppn])
+            unfinished_url.append([temp_ppn, url])
     ExcelHelp.add_arr_to_sheet(file_name=keyword_source_file, sheet_name='unfinished_url', dim_arr=unfinished_url)
-    ExcelHelp.add_arr_to_sheet(file_name=keyword_source_file, sheet_name='unfinished_pn', dim_arr=unfinished_pn)
+
+
+# 查找遗漏的html——文件,并保存
+def get_unfinished_pageMore(keyword_source_file: str, finished_html_files_fold: str):
+    unfinished_url = []
+    url_pageMore = ExcelHelp.read_col_content(file_name=keyword_source_file, sheet_name='url_pagemore', col_index=1)
+    finished_url = get_finished_urls(finished_html_files_fold)
+    for (ppn_index, tempURL) in enumerate(url_pageMore):
+        if not tempURL in finished_url:
+            url = tempURL
+            unfinished_url.append([url])
+    ExcelHelp.add_arr_to_sheet(file_name=keyword_source_file, sheet_name='unfinished_url_pagemore', dim_arr=unfinished_url)
 
 
 if __name__ == "__main__":
-     main()
-    # get_unfinished_urls(keyword_source_file=PathHelp.get_file_path(None, 'TRenesa.xlsx') , finished_html_files_fold ='/Users/liuhe/Desktop/Reneseas_html_files')
+    # main()
+    get_unfinished_pn(keyword_source_file=PathHelp.get_file_path('TRL78_15H', 'Task.xlsx') , finished_html_files_fold = "/Users/liuhe/PycharmProjects/YJCX_AI/TRL78_15H/html_files")

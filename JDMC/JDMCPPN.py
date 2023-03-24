@@ -110,13 +110,24 @@ def anly_webdriver(url_index, url_value):
                     # PPN INFO
                     baseInfo = productInfo_arr[0]
                     goods_baseInfo = baseInfo.find_element(by=By.CSS_SELECTOR, value='div.goods-info')
+                    try:
+                        prodcut_des = goods_baseInfo.find_elements(by=By.CSS_SELECTOR, value='p.info-title')[0].text
+                    except:
+                        prodcut_des = '--'
                     info_items = goods_baseInfo.find_elements(by=By.CSS_SELECTOR, value='em.sub-title')
                     if info_items and info_items.__len__() > 0:
+                        tec_info = info_items[0].text
                         ppn_all = info_items[-2].text[3:]  # 型号：MY2N-GS DC24 BY OMZ/C
                     else:
                         LogHelper.write_log(log_file_name=logFile, content=f'{url_value} base info error can find ppn')
+                        tec_info = '--'
                         ppn_all = '--'
                     print(f'ppn is :{ppn_all}')
+                    # price INFO
+                    try:
+                        price = productInfo_arr[1].find_element(by=By.CSS_SELECTOR, value='p.p-m-price').text
+                    except:
+                        price = '--'
                     # STOCK INFO
                     stock_info = productInfo_arr[2].find_element(by=By.CSS_SELECTOR, value='div.search-stock-box')
                     # get stock_num = 总库存/ 分库存只和
@@ -143,7 +154,7 @@ def anly_webdriver(url_index, url_value):
                     except:
                         stock_num_feng = 0
                     stock_num = stock_num_zong + stock_num_feng
-                    info_arr = [ppn_all, stock_num, manuID, manuName]
+                    info_arr = [ppn_all, stock_num, manuID, manuName, prodcut_des, tec_info, price]
                     page_ppn_arr.append(info_arr)
                 else:
                     LogHelper.write_log(log_file_name=logFile, content=f'{url_value} row info error')
@@ -176,7 +187,7 @@ def get_stcok_num(source_str: str) -> int:
 def main():
     page_urls = ExcelHelp.read_col_content(file_name=sourceFile, sheet_name='all_url', col_index=1)
     for (url_index, url_value) in enumerate(page_urls):
-        if url_index in range(0, 4):
+        if url_index in range(0, 18) and url_value:
             driver.get(url_value)
             anly_webdriver(url_index=url_index, url_value=url_value)
             WaitHelp.waitfor(True, False)

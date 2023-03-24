@@ -14,7 +14,7 @@ sourceFile_dic = {'fileName': PathHelp.get_file_path('TInfenion_40H', 'Task.xlsx
                   'startIndex': 0,
                   'endIndex': 2}
 result_save_file = PathHelp.get_file_path('TInfenion_40H', 'dijikey_status.xlsx')
-log_file = '/Users/liuhe/PycharmProjects/SeleniumDemo/Octopart_category/octopart_key_cate_log.txt'
+log_file = '//Octopart_category/octopart_key_cate_log.txt'
 
 cookies = {'fc_locale':'zh-CN', 'fc_timezone':'Asia%2FShanghai'}
 headers = {'User-Agent': UserAgentHelper.getRandowUA(),

@@ -934,3 +934,365 @@
   (failed to check if window was closed: disconnected: not connected to DevTools)
   (Session info: chrome=111.0.5563.64)
 
+2023-03-15 12:43:07go_to_cate R5F100PGGFB#X0 exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=111.0.5563.64)
+
+2023-03-15 13:59:16go_to_cate R5F100PJAFA#X0 exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=111.0.5563.64)
+
+2023-03-15 14:24:31go_to_cate R5F100PJAFB#V0 exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=111.0.5563.64)
+
+2023-03-15 14:50:11go_to_cate R5F100PJAFB#X0 exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=111.0.5563.64)
+
+2023-03-15 15:15:33go_to_cate R5F100PJDFA#30 exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=111.0.5563.64)
+
+2023-03-15 15:40:55go_to_cate R5F100PJDFA#V0 exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=111.0.5563.64)
+
+2023-03-15 16:06:57go_to_cate R5F100PJDFA#X0 exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=111.0.5563.64)
+
+2023-03-15 16:32:59go_to_cate R5F100PJDFB#V0 exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=111.0.5563.64)
+
+2023-03-15 16:58:34go_to_cate R5F100PJDFB#X0 exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=111.0.5563.64)
+
+2023-03-15 17:24:38go_to_cate R5F100PJGFA#V0 exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=111.0.5563.64)
+
+2023-03-15 17:50:14go_to_cate R5F100PJGFB#V0 exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=111.0.5563.64)
+
+2023-03-15 18:15:38go_to_cate R5F100PJGFB#X0 exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=111.0.5563.64)
+
+2023-03-15 18:41:39go_to_cate R5F100PKAFA#X0 exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=111.0.5563.64)
+
+2023-03-15 19:01:34go_to_cate R5F100PKAFB#V0 exception is: Message: disconnected: not connected to DevTools
+  (failed to check if window was closed: disconnected: not connected to DevTools)
+  (Session info: chrome=111.0.5563.64)
+
+2023-03-15 19:38:36go_to_cate R5F100PKDFA#V0 exception is: Message: disconnected: not connected to DevTools
+  (failed to check if window was closed: disconnected: not connected to DevTools)
+  (Session info: chrome=111.0.5563.64)
+
+2023-03-15 22:16:25go_to_cate R5F100PKDFA#X0 exception is: Message: disconnected: not connected to DevTools
+  (failed to check if window was closed: disconnected: not connected to DevTools)
+  (Session info: chrome=111.0.5563.64)
+
+2023-03-15 22:17:58go_to_cate R5F100PKDFB#V0 exception is: Message: disconnected: not connected to DevTools
+  (failed to check if window was closed: disconnected: not connected to DevTools)
+  (Session info: chrome=111.0.5563.64)
+
+2023-03-15 23:52:09go_to_cate R5F100PKDFA#X0 exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=111.0.5563.64)
+
+2023-03-16 00:14:58go_to_cate R5F100PKGFB#V0 exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=111.0.5563.64)
+
+2023-03-16 00:42:50go_to_cate R5F100PLDFA#X0 exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=111.0.5563.64)
+
+2023-03-16 10:10:00go_to_cate R5F104BEANA#U0 exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=111.0.5563.64)
+
+2023-03-16 10:36:56go_to_cate R5F104BEGNA#U0 exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=111.0.5563.64)
+
+2023-03-16 13:02:29go_to_cate R5F104ECANA#W0 exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=111.0.5563.64)
+
+2023-03-16 13:27:57go_to_cate R5F104ECGNA#U0 exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=111.0.5563.64)
+
+2023-03-16 13:37:16go_to_cate R5F104ECGNA#W0 exception is: HTTPConnectionPool(host='localhost', port=53814): Max retries exceeded with url: /session/76680c3681f443b8fb73214b51e9ae15/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x112de2aa0>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2023-03-16 14:32:19go_to_cate R5F104EEGNA#U0 exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=111.0.5563.64)
+
+2023-03-20 00:03:46go_to_cate 9ZXL0451EKILFT exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=111.0.5563.64)
+
+2023-03-20 01:20:45go_to_cate 5P49V5901B750NLGI8 exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=111.0.5563.64)
+
+2023-03-20 11:50:40go_to_cate 1338-18DVGI8 exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=111.0.5563.64)
+
+2023-03-20 12:20:50go_to_cate 1338679 exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=111.0.5563.64)
+
+2023-03-20 13:05:01go_to_cate 1338AC-31SRGI8 exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=111.0.5563.64)
+
+2023-03-20 15:23:06go_to_cate 1339AC-31SRGI8 exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=111.0.5563.64)
+
+2023-03-20 16:05:52go_to_cate 1339D-31DVGI exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=111.0.5563.64)
+
+2023-03-20 17:01:31go_to_cate 2304NZLPGGI8 exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=111.0.5563.64)
+
+2023-03-20 17:30:06go_to_cate 2305-1DCGI exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=111.0.5563.64)
+
+2023-03-20 17:52:02go_to_cate 2305-1HDC exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=111.0.5563.64)
+
+2023-03-20 19:12:55go_to_cate 2305A-1DCG8 exception is: Message: disconnected: not connected to DevTools
+  (failed to check if window was closed: disconnected: not connected to DevTools)
+  (Session info: chrome=111.0.5563.64)
+
+2023-03-20 20:09:19go_to_cate 2305A-1DCGI exception is: Message: disconnected: not connected to DevTools
+  (failed to check if window was closed: disconnected: not connected to DevTools)
+  (Session info: chrome=111.0.5563.64)
+
+2023-03-20 22:09:50go_to_cate 2305A-1DCGI8 exception is: Message: disconnected: not connected to DevTools
+  (failed to check if window was closed: disconnected: not connected to DevTools)
+  (Session info: chrome=111.0.5563.64)
+
+2023-03-20 23:02:59go_to_cate 2305A-1DCI exception is: Message: disconnected: not connected to DevTools
+  (failed to check if window was closed: disconnected: not connected to DevTools)
+  (Session info: chrome=111.0.5563.64)
+
+2023-03-20 23:04:30go_to_cate 2305A-1HDC exception is: Message: disconnected: not connected to DevTools
+  (failed to check if window was closed: disconnected: not connected to DevTools)
+  (Session info: chrome=111.0.5563.64)
+
+2023-03-20 23:12:30go_to_cate 2305A-1HDCG exception is: Message: disconnected: not connected to DevTools
+  (failed to check if window was closed: disconnected: not connected to DevTools)
+  (Session info: chrome=111.0.5563.64)
+
+2023-03-20 23:14:12go_to_cate 2305A-1HDCG8 exception is: Message: disconnected: not connected to DevTools
+  (failed to check if window was closed: disconnected: not connected to DevTools)
+  (Session info: chrome=111.0.5563.64)
+
+2023-03-20 23:15:32go_to_cate 2305A-1HDCGI exception is: Message: disconnected: not connected to DevTools
+  (failed to check if window was closed: disconnected: not connected to DevTools)
+  (Session info: chrome=111.0.5563.64)
+
+2023-03-20 23:16:56go_to_cate 2305A-1HDCGI8 exception is: Message: disconnected: not connected to DevTools
+  (failed to check if window was closed: disconnected: not connected to DevTools)
+  (Session info: chrome=111.0.5563.64)
+
+2023-03-20 23:18:34go_to_cate 2305A1HDCI exception is: Message: disconnected: not connected to DevTools
+  (failed to check if window was closed: disconnected: not connected to DevTools)
+  (Session info: chrome=111.0.5563.64)
+
+2023-03-20 23:20:32go_to_cate 2305B-1DCG exception is: Message: disconnected: not connected to DevTools
+  (failed to check if window was closed: disconnected: not connected to DevTools)
+  (Session info: chrome=111.0.5563.64)
+
+2023-03-20 23:22:29go_to_cate 2305B-1DCGI exception is: Message: disconnected: not connected to DevTools
+  (failed to check if window was closed: disconnected: not connected to DevTools)
+  (Session info: chrome=111.0.5563.64)
+
+2023-03-20 23:23:49go_to_cate 2305B-1DCGI8 exception is: Message: disconnected: not connected to DevTools
+  (failed to check if window was closed: disconnected: not connected to DevTools)
+  (Session info: chrome=111.0.5563.64)
+
+2023-03-21 02:38:30go_to_cate 2305MI-1LFT exception is: Message: disconnected: Unable to receive message from renderer
+  (failed to check if window was closed: disconnected: not connected to DevTools)
+  (Session info: chrome=111.0.5563.64)
+
+2023-03-21 10:07:59go_to_cate 2309-1DCG8 exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=111.0.5563.64)
+
+2023-03-21 13:52:28go_to_cate 5962-8953605YA exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=111.0.5563.64)
+
+2023-03-22 13:29:11go_to_cate 5P35023B-619NLGI8 exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (966, 47). Other element would receive the click: <div class="jss210" data-testid="loadingCover"></div>
+  (Session info: chrome=111.0.5563.110)
+
+2023-03-22 13:30:59go_to_cate 5P35023B-629NLGI exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (966, 47). Other element would receive the click: <div class="jss210" data-testid="loadingCover"></div>
+  (Session info: chrome=111.0.5563.110)
+
+2023-03-22 13:32:17go_to_cate 5P35023NBGI exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (966, 47). Other element would receive the click: <div class="jss210" data-testid="loadingCover"></div>
+  (Session info: chrome=111.0.5563.110)
+
+2023-03-22 13:33:50go_to_cate 5P35023NBGI8 exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (966, 47). Other element would receive the click: <div class="jss210" data-testid="loadingCover"></div>
+  (Session info: chrome=111.0.5563.110)
+
+2023-03-22 13:35:14go_to_cate 5P35023NLGI exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (966, 47). Other element would receive the click: <div class="jss210" data-testid="loadingCover"></div>
+  (Session info: chrome=111.0.5563.110)
+
+2023-03-22 13:39:04go_to_cate 5P49V60A000NLG2 exception is: HTTPConnectionPool(host='localhost', port=55989): Max retries exceeded with url: /session/e7a2e95ea730d94e81111272d6f0dca1/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x12ccfbe80>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2023-03-23 15:43:45go_to_cate 7005S25JG8 exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (997, 47). Other element would receive the click: <div class="jss210" data-testid="loadingCover"></div>
+  (Session info: chrome=111.0.5563.110)
+
+2023-03-23 15:51:46go_to_cate 7005S25PF exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (997, 47). Other element would receive the click: <div class="jss210" data-testid="loadingCover"></div>
+  (Session info: chrome=111.0.5563.110)
+
+2023-03-23 15:53:42go_to_cate 7005S25PF8 exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (997, 47). Other element would receive the click: <div class="jss210" data-testid="loadingCover"></div>
+  (Session info: chrome=111.0.5563.110)
+
+2023-03-23 15:55:13go_to_cate 7005S25PFG exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (997, 47). Other element would receive the click: <div class="jss210" data-testid="loadingCover"></div>
+  (Session info: chrome=111.0.5563.110)
+
+2023-03-23 16:37:17go_to_cate 7005S35J/2594 exception is: Message: no such element: Unable to locate element: {"method":"css selector","selector":".header__search"}
+  (Session info: chrome=111.0.5563.110)
+
+2023-03-23 18:52:19go_to_cate 7005S55J8 exception is: HTTPConnectionPool(host='localhost', port=53896): Max retries exceeded with url: /session/e0663d9b23338859c9a0c89f609ffd45/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x1043b8970>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2023-03-23 19:28:23go_to_cate 7005S55JI exception is: HTTPConnectionPool(host='localhost', port=53896): Max retries exceeded with url: /session/e0663d9b23338859c9a0c89f609ffd45/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x104424760>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2023-03-23 20:40:27go_to_cate 7005S55JI8 exception is: HTTPConnectionPool(host='localhost', port=53896): Max retries exceeded with url: /session/e0663d9b23338859c9a0c89f609ffd45/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x1178aa620>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2023-03-24 10:55:13go_to_cate 7024S55PFI exception is: Message: no such element: Unable to locate element: {"method":"css selector","selector":".header__search"}
+  (Session info: chrome=111.0.5563.110)
+
+2023-03-24 10:56:44go_to_cate 7024S55PFI8 exception is: Message: no such element: Unable to locate element: {"method":"css selector","selector":".header__search"}
+  (Session info: chrome=111.0.5563.110)
+
+2023-03-24 10:58:28go_to_cate 7024S70FB exception is: Message: no such element: Unable to locate element: {"method":"css selector","selector":".header__search"}
+  (Session info: chrome=111.0.5563.110)
+
+2023-03-24 11:00:24go_to_cate 7024S70GB exception is: Message: no such element: Unable to locate element: {"method":"css selector","selector":".header__search"}
+  (Session info: chrome=111.0.5563.110)
+
+2023-03-24 11:02:19go_to_cate 7025L12J exception is: Message: no such element: Unable to locate element: {"method":"css selector","selector":".header__search"}
+  (Session info: chrome=111.0.5563.110)
+
+2023-03-24 11:03:48go_to_cate 7025L12J8 exception is: Message: no such element: Unable to locate element: {"method":"css selector","selector":".header__search"}
+  (Session info: chrome=111.0.5563.110)
+
+2023-03-24 11:05:49go_to_cate 7025L12PF exception is: Message: no such element: Unable to locate element: {"method":"css selector","selector":".header__search"}
+  (Session info: chrome=111.0.5563.110)
+
+2023-03-24 11:07:11go_to_cate 7025L12PF8 exception is: Message: no such element: Unable to locate element: {"method":"css selector","selector":".header__search"}
+  (Session info: chrome=111.0.5563.110)
+
+2023-03-24 11:08:53go_to_cate 7025L12PFI exception is: Message: no such element: Unable to locate element: {"method":"css selector","selector":".header__search"}
+  (Session info: chrome=111.0.5563.110)
+
+2023-03-24 11:10:53go_to_cate 7025L12PFI8 exception is: Message: no such element: Unable to locate element: {"method":"css selector","selector":".header__search"}
+  (Session info: chrome=111.0.5563.110)
+
+2023-03-24 11:12:33go_to_cate 7025L15J exception is: Message: no such element: Unable to locate element: {"method":"css selector","selector":".header__search"}
+  (Session info: chrome=111.0.5563.110)
+
+2023-03-24 11:13:52go_to_cate 7025L15J8 exception is: Message: no such element: Unable to locate element: {"method":"css selector","selector":".header__search"}
+  (Session info: chrome=111.0.5563.110)
+
+2023-03-24 14:10:26go_to_cate 7025L25PF8 exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (896, 47). Other element would receive the click: <div class="jss210" data-testid="loadingCover"></div>
+  (Session info: chrome=111.0.5563.110)
+
+2023-03-24 14:12:00go_to_cate 7025L25PFG exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (896, 47). Other element would receive the click: <div class="jss210" data-testid="loadingCover"></div>
+  (Session info: chrome=111.0.5563.110)
+
+2023-03-24 14:13:18go_to_cate 7025L25PFG8 exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (896, 47). Other element would receive the click: <div class="jss210" data-testid="loadingCover"></div>
+  (Session info: chrome=111.0.5563.110)
+
+2023-03-24 14:15:13go_to_cate 7025L25PFI exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (896, 47). Other element would receive the click: <div class="jss210" data-testid="loadingCover"></div>
+  (Session info: chrome=111.0.5563.110)
+
+2023-03-24 14:16:29go_to_cate 7025L25PFI8 exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (896, 47). Other element would receive the click: <div class="jss210" data-testid="loadingCover"></div>
+  (Session info: chrome=111.0.5563.110)
+
+2023-03-24 14:17:49go_to_cate 7025L30J exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (896, 47). Other element would receive the click: <div class="jss210" data-testid="loadingCover"></div>
+  (Session info: chrome=111.0.5563.110)
+
+2023-03-24 14:19:24go_to_cate 7025L30J8 exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (896, 47). Other element would receive the click: <div class="jss210" data-testid="loadingCover"></div>
+  (Session info: chrome=111.0.5563.110)
+
+2023-03-24 14:21:06go_to_cate 7025L35FB exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (896, 47). Other element would receive the click: <div class="jss210" data-testid="loadingCover"></div>
+  (Session info: chrome=111.0.5563.110)
+
+2023-03-24 14:29:07go_to_cate 7025L35G exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (896, 47). Other element would receive the click: <div class="jss210" data-testid="loadingCover"></div>
+  (Session info: chrome=111.0.5563.110)
+
+2023-03-24 14:30:32go_to_cate 7025L35GB exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (896, 47). Other element would receive the click: <div class="jss210" data-testid="loadingCover"></div>
+  (Session info: chrome=111.0.5563.110)
+
+2023-03-24 14:32:29go_to_cate 7025L35GI exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (896, 47). Other element would receive the click: <div class="jss210" data-testid="loadingCover"></div>
+  (Session info: chrome=111.0.5563.110)
+
+2023-03-24 14:34:21go_to_cate 7025L35GI/2703 exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (896, 47). Other element would receive the click: <div class="jss210" data-testid="loadingCover"></div>
+  (Session info: chrome=111.0.5563.110)
+
+2023-03-24 14:36:04go_to_cate 7025L35J exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (896, 47). Other element would receive the click: <div class="jss210" data-testid="loadingCover"></div>
+  (Session info: chrome=111.0.5563.110)
+
+2023-03-24 14:38:07go_to_cate 7025L35J8 exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (896, 47). Other element would receive the click: <div class="jss210" data-testid="loadingCover"></div>
+  (Session info: chrome=111.0.5563.110)
+
+2023-03-24 14:39:25go_to_cate 7025L35JI exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (896, 47). Other element would receive the click: <div class="jss210" data-testid="loadingCover"></div>
+  (Session info: chrome=111.0.5563.110)
+
+2023-03-24 14:40:58go_to_cate 7025L35JI8 exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (896, 47). Other element would receive the click: <div class="jss210" data-testid="loadingCover"></div>
+  (Session info: chrome=111.0.5563.110)
+
+2023-03-24 14:42:59go_to_cate 7025L35PF exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (896, 47). Other element would receive the click: <div class="jss210" data-testid="loadingCover"></div>
+  (Session info: chrome=111.0.5563.110)
+
+2023-03-24 14:44:33go_to_cate 7025L35PF8 exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (896, 47). Other element would receive the click: <div class="jss210" data-testid="loadingCover"></div>
+  (Session info: chrome=111.0.5563.110)
+
+2023-03-24 14:46:19go_to_cate 7025L35PFI exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (896, 47). Other element would receive the click: <div class="jss210" data-testid="loadingCover"></div>
+  (Session info: chrome=111.0.5563.110)
+
+2023-03-24 14:48:02go_to_cate 7025L35PFI8 exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (896, 47). Other element would receive the click: <div class="jss210" data-testid="loadingCover"></div>
+  (Session info: chrome=111.0.5563.110)
+
+2023-03-24 14:49:45go_to_cate 7025L45FB exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (896, 47). Other element would receive the click: <div class="jss210" data-testid="loadingCover"></div>
+  (Session info: chrome=111.0.5563.110)
+
+2023-03-24 14:51:41go_to_cate 7025L45J exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (896, 47). Other element would receive the click: <div class="jss210" data-testid="loadingCover"></div>
+  (Session info: chrome=111.0.5563.110)
+
+2023-03-24 14:53:43go_to_cate 7025L45J8 exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (896, 47). Other element would receive the click: <div class="jss210" data-testid="loadingCover"></div>
+  (Session info: chrome=111.0.5563.110)
+
+2023-03-24 15:01:44go_to_cate 7025L45PF exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (896, 47). Other element would receive the click: <div class="jss210" data-testid="loadingCover"></div>
+  (Session info: chrome=111.0.5563.110)
+
+2023-03-24 15:03:37go_to_cate 7025L45PF8 exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (896, 47). Other element would receive the click: <div class="jss210" data-testid="loadingCover"></div>
+  (Session info: chrome=111.0.5563.110)
+
+2023-03-24 15:05:35go_to_cate 7025L45PFI exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (896, 47). Other element would receive the click: <div class="jss210" data-testid="loadingCover"></div>
+  (Session info: chrome=111.0.5563.110)
+
+2023-03-24 15:07:33go_to_cate 7025L45PFI8 exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (896, 47). Other element would receive the click: <div class="jss210" data-testid="loadingCover"></div>
+  (Session info: chrome=111.0.5563.110)
+
+2023-03-24 15:09:26go_to_cate 7025L55FB exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (896, 47). Other element would receive the click: <div class="jss210" data-testid="loadingCover"></div>
+  (Session info: chrome=111.0.5563.110)
+
+2023-03-24 15:11:04go_to_cate 7025L55G exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (896, 47). Other element would receive the click: <div class="jss210" data-testid="loadingCover"></div>
+  (Session info: chrome=111.0.5563.110)
+
+2023-03-24 15:12:20go_to_cate 7025L55GB exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (896, 47). Other element would receive the click: <div class="jss210" data-testid="loadingCover"></div>
+  (Session info: chrome=111.0.5563.110)
+
+2023-03-24 15:13:53go_to_cate 7025L55J exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (896, 47). Other element would receive the click: <div class="jss210" data-testid="loadingCover"></div>
+  (Session info: chrome=111.0.5563.110)
+
+2023-03-24 15:15:32go_to_cate 7025L55J8 exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (896, 47). Other element would receive the click: <div class="jss210" data-testid="loadingCover"></div>
+  (Session info: chrome=111.0.5563.110)
+
+2023-03-24 15:16:57go_to_cate 7025L55JI exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (896, 47). Other element would receive the click: <div class="jss210" data-testid="loadingCover"></div>
+  (Session info: chrome=111.0.5563.110)
+
+2023-03-24 15:18:39go_to_cate 7025L55JI8 exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (896, 47). Other element would receive the click: <div class="jss210" data-testid="loadingCover"></div>
+  (Session info: chrome=111.0.5563.110)
+
+2023-03-24 15:20:17go_to_cate 7025L55PF exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (896, 47). Other element would receive the click: <div class="jss210" data-testid="loadingCover"></div>
+  (Session info: chrome=111.0.5563.110)
+
+2023-03-24 15:21:54go_to_cate 7025L55PF8 exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (896, 47). Other element would receive the click: <div class="jss210" data-testid="loadingCover"></div>
+  (Session info: chrome=111.0.5563.110)
+
+2023-03-24 15:23:42go_to_cate 7025L55PFI exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (896, 47). Other element would receive the click: <div class="jss210" data-testid="loadingCover"></div>
+  (Session info: chrome=111.0.5563.110)
+
+2023-03-24 15:25:10go_to_cate 7025L55PFI8 exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (896, 47). Other element would receive the click: <div class="jss210" data-testid="loadingCover"></div>
+  (Session info: chrome=111.0.5563.110)
+
+2023-03-24 15:33:11go_to_cate 7025L70FB exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (896, 47). Other element would receive the click: <div class="jss210" data-testid="loadingCover"></div>
+  (Session info: chrome=111.0.5563.110)
+
+2023-03-24 15:35:13go_to_cate 7025L70GB exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (896, 47). Other element would receive the click: <div class="jss210" data-testid="loadingCover"></div>
+  (Session info: chrome=111.0.5563.110)
+

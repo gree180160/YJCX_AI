@@ -158,7 +158,7 @@ def getReduValue(image_name):
 
 # copy image and rename
 def savaImage(new_image_name):
-    path = '/Users/liuhe/PycharmProjects/SeleniumDemo/IC_Search'
+    path = '//IC_Search'
     new_path = '/Users/liuhe/Desktop/TestLogImage'
     item = 'temp.png'
     src = os.path.join(os.path.abspath(path), item)
@@ -169,7 +169,7 @@ def savaImage(new_image_name):
 
 # 保存型号的搜索信息[[2022.07, 165][2022.08, 250]]
 def saveSearchInfo(info_arr, isWeek, cate_name):
-    file_name = "/Users/liuhe/PycharmProjects/SeleniumDemo/IC_Search/T0815_week.xlsx" if isWeek else "/Users/liuhe/PycharmProjects/SeleniumDemo/IC_Search/T0815_month.xlsx"
+    file_name = "/Users/liuhe/PycharmProjects/YJCX_AI/IC_Search/T0815_week.xlsx" if isWeek else "/Users/liuhe/PycharmProjects/YJCX_AI/IC_Search/T0815_month.xlsx"
     sheet_name_base64str = str(base64.b64encode(cate_name.encode('utf-8')), 'utf-8')
     ExcelHelp.add_arr_to_sheet(file_name=file_name, sheet_name=sheet_name_base64str,
                                           dim_arr=info_arr)
@@ -178,7 +178,7 @@ def saveSearchInfo(info_arr, isWeek, cate_name):
 # 查询列表中所有需要查询的型号的搜索指数
 def main():
     global current_cate_has_date
-    cate_ids = ExcelHelp.read_col_content('/Users/liuhe/PycharmProjects/SeleniumDemo/IC_Search/T0815.xlsx',
+    cate_ids = ExcelHelp.read_col_content('//IC_Search/T0815.xlsx',
                                                      'left', 1)
     for (cate_index, cate_name) in enumerate(cate_ids):
         current_cate_has_date = True

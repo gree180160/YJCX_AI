@@ -11,7 +11,7 @@ import ssl
 ssl._create_default_https_context = ssl._create_unverified_context
 
 result_save_file = PathHelp.get_file_path('ADI', 'ADI_URLS&PNS.xlsx')
-log_file = '/Users/liuhe/PycharmProjects/SeleniumDemo/ADI/ADI_pn_log.txt'
+log_file = '//ADI/ADI_pn_log.txt'
 html_file_path = '/Users/liuhe/Desktop/ADI_html_files'
 headers = {'User-Agent': UserAgentHelper.getRandowUA(),
                'Accept-Language': 'en,zh;q=0.9,en-US;q=0.8,zh-CN;q=0.7',

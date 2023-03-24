@@ -2,13 +2,13 @@ import random
 import re
 
 import requests
-from WRTools import ExcelHelp, UserAgentHelper
+from WRTools import ExcelHelp, UserAgentHelper, PathHelp
 import undetected_chromedriver as uc
 from selenium import webdriver
 import ssl
 ssl._create_default_https_context = ssl._create_unverified_context
 
-ip_file = '/Users/liuhe/PycharmProjects/SeleniumDemo/WRTools/IP&UA.xlsx'
+ip_file = PathHelp.get_file_path('WRTools', 'IP&UA.xlsx')
 ip_sheet = 'IP'
 
 ip_arr_city = ExcelHelp.read_col_content(file_name=ip_file, sheet_name=ip_sheet, col_index=1)[622:634]
@@ -103,7 +103,7 @@ def check_all(ip_arr):
 
 
 def check_ip():
-    ip_arr = ExcelHelp.read_col_content(file_name='/Users/liuhe/PycharmProjects/SeleniumDemo/WRTools/IP&UA.xlsx', sheet_name="IP", col_index=1)
+    ip_arr = ExcelHelp.read_col_content(file_name='//WRTools/IP&UA.xlsx', sheet_name="IP", col_index=1)
     ip_arr = ['103.145.151.130:8080', '35.188.141.76:3128', '112.14.40.137:9091'] # ip_arr
     for ip in ip_arr:
         randow_ip = {'http:': f"http://{ip}"}
@@ -161,7 +161,7 @@ def pinyi_test():
 
 
 if __name__ == '__main__':
-    ip_arr = ExcelHelp.read_col_content(file_name='/Users/liuhe/PycharmProjects/SeleniumDemo/WRTools/IP&UA.xlsx',
+    ip_arr = ExcelHelp.read_col_content(file_name='//WRTools/IP&UA.xlsx',
                                         sheet_name="IP", col_index=1)
     # check_all(ip_arr)
     # check_ip()

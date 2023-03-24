@@ -17,22 +17,18 @@ import Bom_price.bom_price_info
 ssl._create_default_https_context = ssl._create_unverified_context
 
 
-cate_source_file = PathHelp.get_file_path(super_path='TSpeedReneseas', file_name='Task.xlsx')
+cate_source_file = PathHelp.get_file_path(super_path='TRenesasAll_20H', file_name='Task.xlsx')
 result_save_file = cate_source_file
-# bom_file_arr = ['/Users/liuhe/Desktop/progress/TInfineon/bomOctopart/bom_price_cate_Infenion_13k.xlsx',
-#                 '/Users/liuhe/Desktop/progress/TInfineon/bomOctopart/bom_price_cate_Infenion_26k.xlsx',
-#                 '/Users/liuhe/Desktop/progress/TInfineon/bomOctopart/bom_price_cate_Infineon.xlsx',
-#                 '/Users/liuhe/Desktop/progress/TInfineon/bomOctopart/bom_price_cate_Infineon4_5K.xlsx',
-#                 '/Users/liuhe/Desktop/progress/TInfineon/bomOctopart/bom_price_cate_Infineon7_8K.xlsx']
-# octopart_file_arr = ['/Users/liuhe/Desktop/progress/TInfineon/bomOctopart/octopart_price_h5file6k.xlsx',
-#                      '/Users/liuhe/Desktop/progress/TInfineon/bomOctopart/octopart_price_h5file7k.xlsx',
-#                      '/Users/liuhe/Desktop/progress/TInfineon/bomOctopart/octopart_price_h5file8k.xlsx',
-#                      '/Users/liuhe/Desktop/progress/TInfineon/bomOctopart/octopart_price_h5file9k.xlsx',
-#                      '/Users/liuhe/Desktop/progress/TInfineon/bomOctopart/octopart_price_h5file10k.xlsx',
-#                      '/Users/liuhe/Desktop/progress/TInfineon/bomOctopart/octopart_price_h5file11k.xlsx',
-#                      '/Users/liuhe/Desktop/progress/TInfineon/bomOctopart/octopart_price_h5file1213k.xlsx']
-bom_file_arr = ['/Users/liuhe/Desktop/progress/TSpeed_Reneseas/04/bom_price.xlsx']
-octopart_file_arr = [PathHelp.get_file_path('TSpeedReneseas', 'octopart_price.xlsx')]
+
+octopart_file_arr = ['/Users/liuhe/Desktop/progress/TReneseas_all/Octopart_page0_price0_809.xlsx',
+                     '/Users/liuhe/Desktop/progress/TReneseas_all/Octopart_page0_price0.xlsx',
+                     '/Users/liuhe/Desktop/progress/TReneseas_all/Octopart_page0_price1.xlsx',
+                     '/Users/liuhe/Desktop/progress/TReneseas_all/Octopart_page0_price2.xlsx',
+                     '/Users/liuhe/Desktop/progress/TReneseas_all/Octopart_page0_price3.xlsx']
+bom_file_arr = ['/Users/liuhe/Desktop/progress/TReneseas_all/20H/04/bom_price.xlsx',
+                '/Users/liuhe/Desktop/progress/TReneseas_all/20H/11/bom_price.xlsx',
+                '/Users/liuhe/Desktop/progress/TReneseas_all/20H/sz/bom_price.xlsx',
+                PathHelp.get_file_path('TRenesasAll_20H', 'bom_price.xlsx')]
 
 
 # 一次汇总bom 的所有sheets， 二维数组，文件列表+sheet 列表
@@ -124,7 +120,7 @@ def get_pr(file_index, sheet_index, rate) -> float:
         if authore_status == -1:  # 未授权supplier
             continue
         price_str = ws.cell(i, 9).value
-        if price_str is not None and len(price_str) > 0:
+        if price_str and price_str != 'None' and len(price_str) > 0:
             price_str = price_str.replace(',', '')
             price_float = float(price_str) * rate
             if price_float > 0:

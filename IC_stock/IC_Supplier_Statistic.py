@@ -8,7 +8,7 @@ from Supplier_analyth import Manu_supp
 import time
 
 
-cate_source_file = '/Users/liuhe/PycharmProjects/SeleniumDemo/T1203IC_Stock.xlsx'
+cate_source_file = '//T1203IC_Stock.xlsx'
 result_save_file = cate_source_file
 ICStock_file_arr = ['/Users/liuhe/Desktop/progress/T1203IC_stock/T1203_ICStock_1k.xlsx',
                     '/Users/liuhe/Desktop/progress/T1203IC_stock/T1203_ICStock_2k.xlsx',

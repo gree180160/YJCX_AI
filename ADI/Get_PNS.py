@@ -9,7 +9,7 @@ import ssl
 ssl._create_default_https_context = ssl._create_unverified_context
 
 url_file = PathHelp.get_file_path('ADI', 'ADI_URLS&PNS.xlsx')
-log_file = '/Users/liuhe/PycharmProjects/SeleniumDemo/ADI/ADI_pn_log.txt'
+log_file = '//ADI/ADI_pn_log.txt'
 default_url = 'https://www.analog.com/cn/index.html'
 
 # driver_option = webdriver.ChromeOptions()

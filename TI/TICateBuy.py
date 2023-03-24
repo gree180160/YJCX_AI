@@ -9,13 +9,13 @@ from IC_stock import IC_stock_excel_read, IC_Stock_excel_write
 from openpyxl import load_workbook
 import json
 
-cate_source_file = '/Users/liuhe/PycharmProjects/SeleniumDemo/TJson_recommand.xlsx'
-result_save_file = '/Users/liuhe/PycharmProjects/SeleniumDemo/TI/TI_cate_add.xlsx'
-gradeA_file_arr = ['/Users/liuhe/PycharmProjects/SeleniumDemo/T0806.xlsx',
-                   '/Users/liuhe/PycharmProjects/SeleniumDemo/T0815.xlsx',
-                   '/Users/liuhe/PycharmProjects/SeleniumDemo/T0829zmz.xlsx',
-                   '/Users/liuhe/PycharmProjects/SeleniumDemo/T0907zmz.xlsx']
-log_file = '/Users/liuhe/PycharmProjects/SeleniumDemo/TI/TI_buy_log.txt'
+cate_source_file = '//TJson_recommand.xlsx'
+result_save_file = '//TI/TI_cate_add.xlsx'
+gradeA_file_arr = ['/Users/liuhe/PycharmProjects/YJCX_AI/T0806.xlsx',
+                   '/Users/liuhe/PycharmProjects/YJCX_AI/T0815.xlsx',
+                   '/Users/liuhe/PycharmProjects/YJCX_AI/T0829zmz.xlsx',
+                   '/Users/liuhe/PycharmProjects/YJCX_AI/T0907zmz.xlsx']
+log_file = '//TI/TI_buy_log.txt'
 
 ssl._create_default_https_context = ssl._create_unverified_context
 option = webdriver.ChromeOptions()
@@ -197,7 +197,7 @@ def close_add_cart():
 
 # 记录库存查询结果
 def record_stock_info(stock_number, cate_name, detail_data):
-    save_file = '/Users/liuhe/PycharmProjects/SeleniumDemo/TI/TI_cate_add.xlsx'
+    save_file = '//TI/TI_cate_add.xlsx'
     IC_Stock_excel_write.add_arr_to_sheet(file_name=save_file, sheet_name='stock', dim_arr=[[cate_name,
                                                                                              stock_number,
                                                                                              time.strftime("%Y-%m-%d %H:%M:%S", time.localtime()),
@@ -207,7 +207,7 @@ def record_stock_info(stock_number, cate_name, detail_data):
 # 获取garde == A 的所有[[cate_name, manufacture]]
 def get_A_cateAndManu() -> list:
     result = []
-    gradeA_file = '/Users/liuhe/PycharmProjects/SeleniumDemo/TgardeA.xlsx'
+    gradeA_file = '//TgardeA.xlsx'
     wb = load_workbook(filename=gradeA_file)
     ws = wb['before0910']
     # 根据单元格名称获取单元格对象

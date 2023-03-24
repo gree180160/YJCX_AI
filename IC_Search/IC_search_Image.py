@@ -9,7 +9,7 @@ from WRTools import ChracterReconition, ExcelHelp, PathHelp
 # （推荐ppn过多，看
 # 根据图片高度，<1000，说明没有数据），1700-1800， 月指数，3000-35000，周指数
 def rule_image_names(fold_path):
-    source_file = PathHelp.get_file_path("TInfenion_15H", 'TInfenion_15H.xlsx')
+    source_file = PathHelp.get_file_path("TInfenion_20H", 'TInfenion_20H.xlsx')
     source_ppn_list = ExcelHelp.read_col_content(file_name=source_file, sheet_name='ppn', col_index=1)[37:73]
     check_ppn_list = []
     for temp in source_ppn_list:
@@ -114,25 +114,25 @@ def change_error_image_name(fold_path):
                 os.rename(fold_path + '/' + temp, fold_path + '/' + imageName_new)
 
 
-
-# 更具url，修改火狐截图_ 开头到图片的名称
-def change_screenShotName(fold_path):
-    url_list = []
+#  删除没有热度数据的图片
+def filert_useless_image(fold_path):
     file_name_list = os.listdir(fold_path)
-    file_name_list.sort()
-    source_file = PathHelp.get_file_path(None, 'TACS_SI7.xlsx')
-    source_ppn_list = ExcelHelp.read_col_content(file_name=source_file, sheet_name='ppn', col_index=1)[540:720]
-    for temp in file_name_list:
-        if temp.endswith('_M.png') or temp.endswith('_W.png'):
-            image_ppn = temp[0:-6]
-            if not image_ppn in source_ppn_list:
-                print(f"{image_ppn} not in : {fold_path}/{temp}")
-
+    for (index, temp) in enumerate(file_name_list):
+        if temp.endswith('.png'):
+            # 打开一张图
+            img = Image.open(fold_path + '/' + temp)
+            # 图片尺寸
+            img_size = img.size
+            h = img_size[1]  # 图片高度
+            w = img_size[0]  # 图片高度
+            if h/w < 0.63:
+                os.remove(fold_path + '/' + temp)
 
 
 # 识别IC——hot 图片里的热度信息并保存到数据库
 def rec_image(fold_path):
-    source_file = PathHelp.get_file_path('TInfenion_80H', 'Task.xlsx')
+    filert_useless_image(fold_path)
+    source_file = PathHelp.get_file_path('TRenesasAll_20H', 'Task.xlsx')
     file_name_list = os.listdir(fold_path)
     file_name_list.sort()
     print(f"file count is: {file_name_list.__len__()}")
@@ -151,12 +151,12 @@ def rec_image(fold_path):
 
 
 if __name__ == "__main__":
-    rec_image(fold_path='/Users/liuhe/Desktop/progress/TInfineon/80H/04/IC_hot_images')
+    rec_image(fold_path='/Users/liuhe/Desktop/progress/TReneseas_all/20H/04/IC_hot_images')
     time.sleep(2.0)
-    rec_image(fold_path='/Users/liuhe/Desktop/progress/TInfineon/80H/11/IC_hot_images')
+    rec_image(fold_path='/Users/liuhe/Desktop/progress/TReneseas_all/20H/11/IC_hot_images')
     time.sleep(2.0)
-    rec_image(fold_path='/Users/liuhe/Desktop/progress/TInfineon/80H/sz/IC_hot_images')
-    time.sleep(2.0)
-    # rec_image(fold_path='/Users/liuhe/PycharmProjects/SeleniumDemo/TInfenion_80H/IC_hot_images')
+    rec_image(fold_path='/Users/liuhe/Desktop/progress/TReneseas_all/20H/sz/IC_hot_images')
+    # time.sleep(2.0)
+    rec_image(fold_path=PathHelp.get_IC_hot_image_fold('TRenesasAll_20H'))
 
 

@@ -287,12 +287,28 @@ def sheet_isEmpty(file_name, sheet_name1, sheet_name2):
     print(f'ws2 value {ws2.cell(1, 1).value}')
 
 
+def mergeExcel(source_files, aim_file):
+    # 获取工作簿对象
+    aim_wb = load_workbook(filename=aim_file)
+    for temp_file in source_files:
+        # 获取工作簿对象
+        temp_wb = load_workbook(filename=temp_file)
+        # 获取sheet
+        temp_sheets_arr = temp_wb.sheetnames
+        for temp_sheet in temp_sheets_arr:
+            sheet_content = read_sheet_content_by_name(file_name=temp_file, sheet_name=temp_sheet)
+            add_arr_to_sheet(file_name=aim_file, sheet_name=temp_sheet, dim_arr=sheet_content)
+
+
 if __name__ == "__main__":
-    active_excel('/Users/liuhe/PycharmProjects/SeleniumDemo/TInfenion_5H.xlsx', "Sheet1")
-    # remove_sheets('/Users/liuhe/PycharmProjects/SeleniumDemo/Octopart_price/octopart_price_cate_MMS.xlsx')
+    # active_excel('/Users/liuhe/PycharmProjects/YJCX_AI/TInfenion_5H.xlsx', "Sheet1")
+    # remove_sheets('/Users/liuhe/Desktop/progress/TReneseas_all/Octopart_page0_price.xlsx')
     # deal_keyword_result()
-    # row_value = read_col_content(file_name='/Users/liuhe/PycharmProjects/SeleniumDemo/TKWPage0.xlsx', sheet_name='hot_month', col_index=1)
+    # row_value = read_col_content(file_name='/Users/liuhe/PycharmProjects/YJCX_AI/TKWPage0.xlsx', sheet_name='hot_month', col_index=1)
     # index = row_value.index('46546546546545645')
     # result_save_file = PathHelp.get_file_path(None, 'TCY8C_IC_Hot.xlsx')
     # active_excel(result_save_file, 'Sheet1')
-    # sheet_isEmpty(file_name='/Users/liuhe/PycharmProjects/SeleniumDemo/TKWPage0.xlsx', sheet_name1='Sheet1', sheet_name2='Sheet2')
+    # sheet_isEmpty(file_name='/Users/liuhe/PycharmProjects/YJCX_AI/TKWPage0.xlsx', sheet_name1='Sheet1', sheet_name2='Sheet2')
+    mergeExcel(source_files=['/Users/liuhe/Desktop/progress/TReneseas_all/Octopart_page0_price4.xlsx',
+                        '/Users/liuhe/Desktop/progress/TReneseas_all/Octopart_page0_price5.xlsx',
+                        '/Users/liuhe/Desktop/progress/TReneseas_all/Octopart_page0_price6.xlsx'], aim_file='/Users/liuhe/Desktop/progress/TReneseas_all/Octopart_page0_price0_809.xlsx')

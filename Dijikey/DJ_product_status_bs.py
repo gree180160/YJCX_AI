@@ -4,6 +4,9 @@ import time
 from bs4 import BeautifulSoup
 import requests
 from WRTools import IPHelper, UserAgentHelper, LogHelper, WaitHelp, ExcelHelp, PathHelp
+import os
+import digikey
+from digikey.v3.productinformation import KeywordSearchRequest
 
 
 
@@ -16,7 +19,7 @@ sourceFile_dic = {'fileName': PathHelp.get_file_path('TInfenion_40H', 'Task.xlsx
                   'endIndex': 2}
 result_save_file = PathHelp.get_file_path('TInfenion_40H', 'dijikey_status.xlsx')
 
-log_file = '/Users/liuhe/PycharmProjects/SeleniumDemo/Dijikey/DJ_product_status_log.txt'
+log_file = '//Dijikey/DJ_product_status_log.txt'
 cookies = {'fc_locale':'zh-CN', 'fc_timezone':'Asia%2FShanghai'}
 headers = {'User-Agent': UserAgentHelper.getRandowUA(),
                'Accept-Language': 'zh-CN,zh-Hans;q=0.9',
@@ -24,7 +27,6 @@ headers = {'User-Agent': UserAgentHelper.getRandowUA(),
                'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
                'Connection': 'keep-alive'}
 default_url = 'https://www.digikey.com/'
-
 
 def get_dj_product_status(cate_index, cate_name):
     headers['User-Agent'] = UserAgentHelper.getRandowUA_Mac()
@@ -101,6 +103,24 @@ def main():
             get_dj_product_status(cate_index, cate_name)
 
 
+def testDigikey():
+    os.environ['DIGIKEY_CLIENT_ID'] = 'G2LPNfi9s5dalamAEx1jzZ6VKtga6jTS'
+    os.environ['DIGIKEY_CLIENT_SECRET'] = 'PjIFbMXbWLwpcqY4'
+    os.environ['DIGIKEY_CLIENT_SANDBOX'] = 'True'
+    os.environ['DIGIKEY_STORAGE_PATH'] = '/Users/liuhe/Library/Caches/Firefox/Profiles/p7u49s1s.default-release-1/cache2'
+    os.environ['DIGIKEY_REDIRECT_URI'] = 'https://molies.net/'
+
+    # Query product number
+    dkpn = '296-6501-1-ND'
+    part = digikey.product_details(dkpn)
+
+    # Search for parts
+    search_request = KeywordSearchRequest(keywords='CRCW080510K0FKEA', record_count=10)
+    result = digikey.keyword_search(body=search_request)
+    print(result)
+
+
 if __name__ == '__main__':
+    testDigikey()
     # main()
-    combine_result(["/Users/liuhe/Desktop/progress/TInfineon/55H/11/dijikey_status.xlsx", "/Users/liuhe/Desktop/progress/TInfineon/55H/sz/dijikey_status.xlsx", "/Users/liuhe/Desktop/progress/TInfineon/55H/04/dijikey_status.xlsx"], PathHelp.get_file_path('TInfenion_55H', 'dijikey_status.xlsx'))
+    # combine_result(["/Users/liuhe/Desktop/progress/TReneseas_all/5H/11/dijikey_status.xlsx", "/Users/liuhe/Desktop/progress/TReneseas_all/5H/sz/dijikey_status.xlsx", "/Users/liuhe/Desktop/progress/TReneseas_all/5H/04/dijikey_status.xlsx"], PathHelp.get_file_path('TRenesasAll_5H', 'dijikey_status.xlsx'))

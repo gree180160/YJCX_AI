@@ -14,10 +14,10 @@ import os
 
 
 def open_url(isWeek):
-    pn_file = PathHelp.get_file_path('TRL78_5H', 'Task.xlsx')
+    pn_file = PathHelp.get_file_path('TRenesasAll_25H', 'Task.xlsx')
     ppn_list = ExcelHelp.read_col_content(file_name=pn_file, sheet_name='ppn', col_index=1)
     for (index, ppn) in enumerate(ppn_list):
-        if index in range(106, 125): #114 unfinished
+        if index in range(0, 125): #114 unfinished
             url = Manager.URLManager.IC_hot_url(ppn, isWeek)
             print(f'index is：{index} USL is: {url}')
             # UserInput.input_url(url, wait_time_kind=1)
@@ -27,8 +27,9 @@ def open_url(isWeek):
 
 
 def change_screenShotName(fold_path):
-    pn_file = PathHelp.get_file_path('TRL78_5H', 'Task.xlsx')
-    ppn_list = ExcelHelp.read_col_content(file_name=pn_file, sheet_name='ppn', col_index=1)[29:106]
+    pn_file = PathHelp.get_file_path('TRenesasAll_25H', 'Task.xlsx')
+    ppn_list = ExcelHelp.read_col_content(file_name=pn_file, sheet_name='ppn', col_index=1)[0:125]
+    ppn_list = ['7025L15PFG', '7025L15PFG8', '7025L20JGI', '7025L20JGI8', '7025L20PFGI', '7025L55G', '7025L55GB']
     file_name_list = os.listdir(fold_path)
     valid_files = []
     for (index, temp) in enumerate(file_name_list):
@@ -46,5 +47,5 @@ def change_screenShotName(fold_path):
 
 
 if __name__ == '__main__':
-    open_url(isWeek=True)
-    # change_screenShotName(fold_path='/Users/liuhe/Desktop/temp_hot')
+    # open_url(isWeek=True)
+    change_screenShotName(fold_path='/Users/liuhe/Desktop/temp_hot')

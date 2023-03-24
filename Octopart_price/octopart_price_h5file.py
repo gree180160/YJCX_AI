@@ -7,9 +7,11 @@ import re
 import base64
 import octopart_price_info
 
-result_save_file = PathHelp.get_file_path('TSpeedReneseas', 'octopart_price.xlsx')
-log_file = '/Users/liuhe/PycharmProjects/SeleniumDemo/Octopart_category/octopart_key_cate_log.txt'
-html_file_path = "/Users/liuhe/PycharmProjects/SeleniumDemo/TSpeedReneseas/html"
+result_save_file_arr = ['/Users/liuhe/Desktop/progress/TReneseas_all/Octopart_page0_price4.xlsx',
+                        '/Users/liuhe/Desktop/progress/TReneseas_all/Octopart_page0_price5.xlsx',
+                        '/Users/liuhe/Desktop/progress/TReneseas_all/Octopart_page0_price6.xlsx']
+log_file = '//Octopart_category/octopart_key_cate_log.txt'
+html_file_path = '/Users/liuhe/Desktop/progress/TReneseas_all/Reneseas_html_files'
 
 
 # 获取所有octopart 的html文件
@@ -30,11 +32,11 @@ def manu_get_price(file_name_index, file_name):
     htmlfile = open(path, 'r', encoding='utf-8')
     htmlhandle = htmlfile.read()
     soup = BeautifulSoup(htmlhandle, 'html5lib')
-    manu_analy_html(soup=soup, htmlhandle=htmlhandle, fileName=file_name)
+    manu_analy_html(soup=soup, htmlhandle=htmlhandle, fileName=file_name, file_name_index=file_name_index)
 
 
 # 解析某个型号的页面信息，如果有更多，直接点击，然后只选择start ， 遇到第一个不是star 的就返回
-def manu_analy_html(soup, htmlhandle, fileName):
+def manu_analy_html(soup, htmlhandle, fileName, file_name_index):
     # 是否需要继续展开。 出现第一条非start数据后不再展开
     try:
         # all_cates = soup.select('div.jsx-922694994.results')[0]
@@ -74,7 +76,7 @@ def manu_analy_html(soup, htmlhandle, fileName):
             LogHelper.write_log(log_file_name=log_file, content=f'{cate_name} 默认打开的内容解析异常：{e} ')
         sheet_name_base64str = str(base64.b64encode(cate_name.encode('utf-8')), 'utf-8')
         ExcelHelp.add_arr_to_sheet(
-            file_name=result_save_file,
+            file_name=result_save_file_arr[file_name_index % result_save_file_arr.__len__()],
             sheet_name=sheet_name_base64str,
             dim_arr=valid_supplier_arr)
         valid_supplier_arr.clear()
@@ -164,24 +166,14 @@ def manu_get_supplier_info(tr, cate_name, manu_name) -> octopart_price_info:
     return octopart_price_ele
 
 
-# https __octopart.com_search q=CY7C2665KV18-550BZXI&currency=USD&specs=0&manufacturer_id=453&manufacturer_id=202&manufacturer_id=706&manufacturer_id=12547&manufacturer_id=196.htm
-def file_index():
-    file_name_list = get_files()
-    print(f'file count is :{file_name_list.__len__()}')
-    sublist = file_name_list[0:]
-    for (file_name_index, file_name) in enumerate(sublist):
-        print(f'index is:{file_name_index}')
-        manu_get_price(file_name_index, file_name)
-        break;
-
-
 def main():
     file_name_list = get_files()
     print(f'file count is :{file_name_list.__len__()}')
-    sublist = file_name_list[0:]
+    sublist = file_name_list
     for (file_name_index, file_name) in enumerate(sublist):
-        print(f'file_index is: {file_name_index}, file name is: {file_name}')
-        manu_get_price(file_name_index, file_name)
+        if file_name_index in range(3503, 10000):
+            print(f'file_index is: {file_name_index}, file name is: {file_name}')
+            manu_get_price(file_name_index, file_name)
 
 
 if __name__ == "__main__":
