@@ -10,12 +10,12 @@ from Findchips_stock.findchips_stock_info import findchips_stock_info_onePart, f
 
 ssl._create_default_https_context = ssl._create_unverified_context
 
-sourceFile_dic = {'fileName': PathHelp.get_file_path('TRenesasAll_25H', 'Task.xlsx'),
+sourceFile_dic = {'fileName': PathHelp.get_file_path('TRenesasAll_35H', 'Task.xlsx'),
                   'sourceSheet': 'ppn',
                   'colIndex': 1,
                   'startIndex': 0,
                   'endIndex': 125}
-result_save_file = PathHelp.get_file_path('TRenesasAll_25H', 'findchip_stock.xlsx')
+result_save_file = PathHelp.get_file_path('TRenesasAll_35H', 'findchip_stock.xlsx')
 
 # sourceFile_dic = {'fileName': PathHelp.get_file_path(None, 'TRenesa.xlsx'),
 #                   'sourceSheet': 'ppn',

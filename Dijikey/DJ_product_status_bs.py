@@ -120,7 +120,27 @@ def testDigikey():
     print(result)
 
 
+def combine_upload_result():
+    source_file = PathHelp.get_file_path(None, 'TRenesa.xlsx')
+    files = ["/Users/liuhe/Desktop/progress/TReneseas_all/digikey/1.xlsx",
+             "/Users/liuhe/Desktop/progress/TReneseas_all/digikey/2.xlsx",
+             "/Users/liuhe/Desktop/progress/TReneseas_all/digikey/5.xlsx",
+             "/Users/liuhe/Desktop/progress/TReneseas_all/digikey/8.xlsx",
+             "/Users/liuhe/Desktop/progress/TReneseas_all/digikey/11.xlsx"]
+    result = []
+    for temp in files:
+        sheet_content = ExcelHelp.read_sheet_content_by_name(file_name=temp, sheet_name='My Lists Worksheet')
+        for (row_index, row) in enumerate(sheet_content):
+            if row_index > 0:
+                if str(row[1]).__len__() > 0:
+                    if str(row[2]).__len__() > 0:
+                        result.append([str(row[1]), str(row[3]), str(row[4]), str(row[5])])
+                    else:
+                        result.append([str(row[1]), "/", "/", "/"])
+    ExcelHelp.add_arr_to_sheet(file_name=source_file, sheet_name='filted_ppn_dg', dim_arr=result)
+
+
 if __name__ == '__main__':
-    testDigikey()
+    combine_upload_result()
     # main()
     # combine_result(["/Users/liuhe/Desktop/progress/TReneseas_all/5H/11/dijikey_status.xlsx", "/Users/liuhe/Desktop/progress/TReneseas_all/5H/sz/dijikey_status.xlsx", "/Users/liuhe/Desktop/progress/TReneseas_all/5H/04/dijikey_status.xlsx"], PathHelp.get_file_path('TRenesasAll_5H', 'dijikey_status.xlsx'))

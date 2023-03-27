@@ -2,3 +2,36 @@
 from unknown error: web view not found
   (Session info: chrome=106.0.5249.119)
 
+2023-03-27 16:14:5815C01M-TL-E all_cates exception:Message: no such element: Unable to locate element: {"method":"css selector","selector":".jsx-922694994.results"}
+  (Session info: chrome=111.0.5563.110)
+
+2023-03-27 16:14:5815C01SS-TL-E go_to_cate except: Message: no such element: Unable to locate element: {"method":"css selector","selector":".jsx-4214615671.search-box"}
+  (Session info: chrome=111.0.5563.110)
+
+2023-03-27 16:16:1815C01SS-TL-E all_cates exception:Message: no such element: Unable to locate element: {"method":"css selector","selector":".jsx-922694994.results"}
+  (Session info: chrome=111.0.5563.110)
+
+2023-03-27 16:16:1815GN03CA-TB-E go_to_cate except: Message: no such element: Unable to locate element: {"method":"css selector","selector":".jsx-4214615671.search-box"}
+  (Session info: chrome=111.0.5563.110)
+
+2023-03-27 16:18:0215GN03CA-TB-E all_cates exception:Message: no such element: Unable to locate element: {"method":"css selector","selector":".jsx-922694994.results"}
+  (Session info: chrome=111.0.5563.110)
+
+2023-03-27 16:18:0215GN03MA-TL-E go_to_cate except: Message: no such element: Unable to locate element: {"method":"css selector","selector":".jsx-4214615671.search-box"}
+  (Session info: chrome=111.0.5563.110)
+
+2023-03-27 16:21:0015C01M-TL-E all_cates exception:Message: no such element: Unable to locate element: {"method":"css selector","selector":".div.jsx-2172888034.prices-view"}
+  (Session info: chrome=111.0.5563.110)
+
+2023-03-27 16:21:0015C01SS-TL-E go_to_cate except: Message: no such element: Unable to locate element: {"method":"css selector","selector":".jsx-4214615671.search-box"}
+  (Session info: chrome=111.0.5563.110)
+
+2023-03-27 16:22:4815C01SS-TL-E all_cates exception:Message: no such element: Unable to locate element: {"method":"css selector","selector":".div.jsx-2172888034.prices-view"}
+  (Session info: chrome=111.0.5563.110)
+
+2023-03-27 16:24:2515GN03CA-TB-E all_cates exception:Message: no such element: Unable to locate element: {"method":"css selector","selector":".div.jsx-2172888034.prices-view"}
+  (Session info: chrome=111.0.5563.110)
+
+2023-03-27 16:25:5215GN03MA-TL-E all_cates exception:Message: no such element: Unable to locate element: {"method":"css selector","selector":".div.jsx-2172888034.prices-view"}
+  (Session info: chrome=111.0.5563.110)
+

@@ -1,5 +1,3 @@
-import base64
-import random
 import ssl
 import time
 import undetected_chromedriver as uc
@@ -7,34 +5,31 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 
 import Manager.URLManager
-from WRTools import UserAgentHelper, LogHelper, ExcelHelp, WaitHelp, EmailHelper, PathHelp
+from WRTools import LogHelper, ExcelHelp, WaitHelp, EmailHelper, PathHelp
 
 ssl._create_default_https_context = ssl._create_unverified_context
 
-driver_option = webdriver.ChromeOptions()
-# 青果proxy
-proxyAddr = "http://tunnel5.qg.net:18716"
-driver_option.add_argument('--proxy-server=%(server)s' % {"server": proxyAddr})
+# driver_option = webdriver.ChromeOptions()
 # driver_option.add_argument("–incognito")  #隐身模式
 # 等待初始HTML文档完全加载和解析，
 # driver_option.page_load_strategy = 'eager'
-driver = uc.Chrome(use_subprocess=True, options=driver_option)
+driver = uc.Chrome(use_subprocess=True)
 # logic
-
 default_url = 'https://octopart.com/'
 
-keyword_source_file = PathHelp.get_file_path(super_path=None, file_name='TMMS_NRV.xlsx')
+sourceFile_dic = {'fileName': PathHelp.get_file_path(None, 'TOnsemi.xlsx'),
+                  'sourceSheet': 'opn',
+                  'colIndex': 1,
+                  'startIndex': 0,
+                  'endIndex': 125}
+result_save_file = PathHelp.get_file_path('TRenesasAll_25H', 'octopart_price.xlsx')
+
 log_file = PathHelp.get_file_path(super_path='Octopart_category', file_name='octopart_key_cate_log.txt')
 
-totol_page = 1
+total_page = 1
 current_page = 1
 # 出现安全验证的次数，连续三次则关闭webdriver
 security_times = 0
-# 无效的key，终止查询
-last_unvalid_key = ''
-# 判断key是否有必要查询
-def check_valid_key(key_name):
-    return key_name != last_unvalid_key
 
 
 # 验证是否处于验证IP 页面
@@ -59,14 +54,14 @@ def is_security_check(driver) -> bool:
 
 # 获取总页数
 def set_totalpage(driver):
-    global totol_page
+    global total_page
     try:
         ul = driver.find_element(by=By.CSS_SELECTOR, value='ul.jsx-4126298714.jumps')
         li_last = ul.find_elements(by=By.CSS_SELECTOR, value='li.jsx-4126298714')[-1]
         a = li_last.find_element(by=By.CSS_SELECTOR, value='a')
-        totol_page = int(a.text)
+        total_page = int(a.text)
     except:
-        totol_page = 1
+        total_page = 1
 
 
 # 确定根据key 是否有匹配的结果，避开建议性的结果
@@ -96,9 +91,6 @@ def go_to_cate(key, url):
 
 def go_next_page(key_name):
     global current_page
-    if not check_valid_key(key_name):
-        current_page = totol_page
-        return
     try:
         next_button = driver.find_element(by=By.CSS_SELECTOR, value='a.jsx-1876408219.next')
         next_button.click()
@@ -108,19 +100,21 @@ def go_next_page(key_name):
 
 
 def get_category(key_index, key_name, manu):
-    global current_page, totol_page
+    global current_page, total_page
     current_page = 1
-    totol_page = 1
-    while current_page <= totol_page:
-        print(f'key_index is: {key_index} key_name is: {key_name} page is: {current_page} totalpage is : {totol_page}')
+    total_page = 1
+    while current_page <= total_page:
+        print(f'key_index is: {key_index} key_name is: {key_name} page is: {current_page} totalpage is : {total_page}')
         try:
-            driver.execute_cdp_cmd('Network.setUserAgentOverride', {
-                "userAgent": f"{UserAgentHelper.getRandowUA_Mac()}",
-                "platform": "macOS"})
+            # driver.execute_cdp_cmd('Network.setUserAgentOverride', {
+            #     "userAgent": f"{UserAgentHelper.getRandowUA_Mac()}",
+            #     "platform": "macOS"})
             url = Manager.URLManager.octopart_get_page_url(key_name=key_name, page=current_page, manu=manu)
-            go_to_cate(key_and_alpha=key_name, url=url)
+            url = url.replace('view-source:', '')
+            print(f'url is: {url}')
+            go_to_cate(key=key_name, url=url)
             if current_page > 1 and current_page%15 == 0:
-                time.sleep(500)
+                time.sleep(240)
             else:
                 WaitHelp.waitfor_octopart(is_load_page=True, isDebug=False)
         except Exception as e:
@@ -142,7 +136,6 @@ def get_category(key_index, key_name, manu):
 
 # 解析html，获取cate，manu
 def analyth_html(key_name):
-    global last_unvalid_key
     try:
         table = driver.find_element(by=By.CSS_SELECTOR, value='div.jsx-2172888034.prices-view')
         cate_first = table.find_elements(by=By.CSS_SELECTOR, value='div.jsx-2172888034')
@@ -152,35 +145,35 @@ def analyth_html(key_name):
         for temp_cate in cates_all:
             header = temp_cate.find_element(by=By.CSS_SELECTOR, value='div.jsx-3355510592.header')
             try:
-                manu = header.find_element(by=By.CSS_SELECTOR, value='div.jsx-312275976.jsx-2649123136.manufacturer-name-and-possible-tooltip').text
+                manu = header.find_element(by=By.CSS_SELECTOR, value='div.jsx-312275976.jsx-2018853745.manufacturer-name-and-possible-tooltip').text
             except:
                 manu = None
             try:
-                cate_name = header.find_element(by=By.CSS_SELECTOR, value='div.jsx-312275976.jsx-2649123136.mpn').text
+                cate_name = header.find_element(by=By.CSS_SELECTOR, value='div.jsx-312275976.jsx-2018853745.mpn').text
             except:
                 cate_name = None
             if cate_name and manu:
                 if cate_name.startswith(key_name):
-                    info_list.append([cate_name, manu, key_name, current_page])
-                else:
-                    last_unvalid_key = key_name
-                    ExcelHelp.add_arr_to_sheet(file_name=keyword_source_file, sheet_name='unvalid', dim_arr=[[key_name]])
+                    info_list.append([cate_name, manu, key_name, total_page])
         if len(info_list) > 0:
-            ExcelHelp.add_arr_to_sheet(file_name=f'{key_name}.xlsx', sheet_name='all', dim_arr=info_list)
+            ExcelHelp.add_arr_to_sheet(file_name=result_save_file, sheet_name='ppn', dim_arr=info_list)
     except Exception as e:
         LogHelper.write_log(log_file, f'{key_name} analyth_html exception: {e}')
 
 
 def main():
-    key_list = ExcelHelp.read_col_content(file_name=keyword_source_file, sheet_name='all', col_index=1)
-    for (key_index, key_name) in enumerate(key_list):
-        if key_index in range(0, 500):
-            manu = Manager.URLManager.Octopart_manu.Texas_Instruments
-            get_category(key_index=key_index, key_name=key_name, manu_ids=manu)
+    all_cates = ExcelHelp.read_col_content(file_name=sourceFile_dic['fileName'],
+                                           sheet_name=sourceFile_dic['sourceSheet'],
+                                           col_index=sourceFile_dic['colIndex'])
+    for (cate_index, cate_name) in enumerate(all_cates):
+        if cate_name is None or cate_name.__contains__('?'):
+            continue
+        elif cate_index in range(sourceFile_dic['startIndex'], sourceFile_dic['endIndex']):
+            manu = Manager.URLManager.Octopart_manu.Onsemi
+            get_category(key_index=cate_index, key_name=cate_name, manu=manu)
 
 
 if __name__ == "__main__":
-    UserAgentHelper.driver_update_UA(webdriver=driver)
     driver.get(default_url)
     WaitHelp.waitfor_octopart(True, False)
     main()

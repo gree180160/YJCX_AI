@@ -67,22 +67,23 @@ def get_page_more_PN():
 
 # 分解数量大的ppn列表
 def decompositionPPN(unit: int):
-    ppn_all = ExcelHelp.read_col_content(file_name='/Users/liuhe/Desktop/NXP_files/TNXP.xlsx', sheet_name='ppn',
+    ppn_all = ExcelHelp.read_col_content(file_name='/Users/liuhe/Desktop/progress/TReneseas_all/digikey/TRenesa.xlsx', sheet_name='filted_ppn',
                                          col_index=1)
+    ppn_all = ppn_all[2500:]
     stop_quotient = 0
     result = []
     for (index, ppn) in enumerate(ppn_all):
         quotient = int(index / unit)
         if quotient > stop_quotient:
-            file_name = f'TNXP_sub的副本{quotient}.xlsx'
-            file_path = f'/Users/liuhe/Desktop/NXP_files/{file_name}'
+            file_name = f'TReneseas_sub_{quotient}.xlsx'
+            file_path = f'/Users/liuhe/Desktop/progress/TReneseas_all/digikey/{file_name}'
             ExcelHelp.add_arr_to_sheet(file_name=file_path, sheet_name='ppn', dim_arr=result)
             result.clear()
             stop_quotient = quotient
         result.append([ppn])
     # 保存最后的尾巴
-    file_name = f'TNXP_sub的副本{stop_quotient+1}.xlsx'
-    file_path = f'/Users/liuhe/Desktop/NXP_files/{file_name}'
+    file_name = f'TReneseas_sub_{quotient}.xlsx'
+    file_path = f'/Users/liuhe/Desktop/progress/TReneseas_all/digikey/{file_name}'
     ExcelHelp.add_arr_to_sheet(file_name=file_path, sheet_name='ppn', dim_arr=result)
 
 
@@ -138,4 +139,5 @@ def renesas_file_ByFindchips():
 
 
 if __name__ == "__main__":
-    get_unfinished_RenesasPPN()
+    # get_unfinished_RenesasPPN()
+    decompositionPPN(unit=300)

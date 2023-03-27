@@ -17,7 +17,7 @@ import Bom_price.bom_price_info
 ssl._create_default_https_context = ssl._create_unverified_context
 
 
-cate_source_file = PathHelp.get_file_path(super_path='TRenesasAll_20H', file_name='Task.xlsx')
+cate_source_file = PathHelp.get_file_path(super_path='TRenesasAll_30H', file_name='Task.xlsx')
 result_save_file = cate_source_file
 
 octopart_file_arr = ['/Users/liuhe/Desktop/progress/TReneseas_all/Octopart_page0_price0_809.xlsx',
@@ -25,10 +25,10 @@ octopart_file_arr = ['/Users/liuhe/Desktop/progress/TReneseas_all/Octopart_page0
                      '/Users/liuhe/Desktop/progress/TReneseas_all/Octopart_page0_price1.xlsx',
                      '/Users/liuhe/Desktop/progress/TReneseas_all/Octopart_page0_price2.xlsx',
                      '/Users/liuhe/Desktop/progress/TReneseas_all/Octopart_page0_price3.xlsx']
-bom_file_arr = ['/Users/liuhe/Desktop/progress/TReneseas_all/20H/04/bom_price.xlsx',
-                '/Users/liuhe/Desktop/progress/TReneseas_all/20H/11/bom_price.xlsx',
-                '/Users/liuhe/Desktop/progress/TReneseas_all/20H/sz/bom_price.xlsx',
-                PathHelp.get_file_path('TRenesasAll_20H', 'bom_price.xlsx')]
+bom_file_arr = ['/Users/liuhe/Desktop/progress/TReneseas_all/30H/04/bom_price.xlsx',
+                '/Users/liuhe/Desktop/progress/TReneseas_all/30H/11/bom_price.xlsx',
+                '/Users/liuhe/Desktop/progress/TReneseas_all/30H/sz/bom_price.xlsx',
+                PathHelp.get_file_path('TRenesasAll_30H', 'bom_price.xlsx')]
 
 
 # 一次汇总bom 的所有sheets， 二维数组，文件列表+sheet 列表

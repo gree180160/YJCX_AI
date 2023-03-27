@@ -1,31 +1,28 @@
 import base64
-import random
 import ssl
-import time
 
 import undetected_chromedriver as uc
 from selenium import webdriver
 from selenium.webdriver.common.by import By
-from WRTools import IPHelper, UserAgentHelper, LogHelper, PathHelp, WaitHelp
+from WRTools import ExcelHelp, UserAgentHelper, LogHelper, PathHelp, WaitHelp
 import octopart_price_info
-from IC_stock import IC_stock_excel_read, IC_Stock_excel_write
 import re
 
 ssl._create_default_https_context = ssl._create_unverified_context
 
 driver_option = webdriver.ChromeOptions()
-# driver_option.add_argument(f'--proxy-server=http://{IPHelper.getRandowIP_country()}')
-# driver_option.add_argument("–incognito")
-#  等待初始HTML文档完全加载和解析，
-driver_option.page_load_strategy = 'eager'
-proxyAddr = "tunnel3.qg.net:15404" #代理IP地址和端口号
-driver_option.add_argument('--proxy-server=%(server)s' % {"server": proxyAddr})
-driver = uc.Chrome(use_subprocess=True, options=driver_option)
-driver.set_page_load_timeout(100)
+driver = uc.Chrome(use_subprocess=True)
+driver.set_page_load_timeout(180)
 # logic
 default_url = 'https://octopart.com/what-is-octopart'
-cate_source_file = PathHelp.get_file_path(None, 'TInfineonAgencyInventory.xlsx')
-result_save_file = PathHelp.get_file_path('Octopart_price', 'octopart_price_cate_InfineionAgency.xlsx')
+
+sourceFile_dic = {'fileName': PathHelp.get_file_path(None, 'TOnsemi.xlsx'),
+                  'sourceSheet': 'opn',
+                  'colIndex': 1,
+                  'startIndex': 0,
+                  'endIndex': 125}
+result_save_file = PathHelp.get_file_path('TRenesasAll_25H', 'octopart_price.xlsx')
+
 log_file = PathHelp.get_file_path('Octopart_price', 'ocopar_price_log.txt')
 
 
@@ -52,7 +49,7 @@ def go_to_cate(cate_index, cate_name):
 def analy_html(cate_index, cate_name):
     # 是否需要继续展开。 出现第一条非start数据后不再展开
     try:
-        all_cates = driver.find_element(by=By.CLASS_NAME, value='jsx-922694994.results')
+        all_cates = driver.find_element(by=By.CLASS_NAME, value='jsx-2172888034.prices-view')
     except Exception as e:
         LogHelper.write_log(log_file_name=log_file, content=f'{cate_name} all_cates exception:{e}')
         return
@@ -110,7 +107,7 @@ def analy_html(cate_index, cate_name):
     except Exception as e:
         LogHelper.write_log(log_file_name=log_file, content=f'{cate_name} more 解析异常：{e} ')
     sheet_name_base64str = str(base64.b64encode(cate_name.encode('utf-8')), 'utf-8')
-    IC_Stock_excel_write.add_arr_to_sheet(
+    ExcelHelp.add_arr_to_sheet(
         file_name=result_save_file,
         sheet_name=sheet_name_base64str,
         dim_arr=valid_supplier_arr)
@@ -121,7 +118,7 @@ def analy_html(cate_index, cate_name):
 def cate_valid(cate_name, first_row) -> bool:
     result = False
     try:
-        cate_div = first_row.find_element(by=By.CLASS_NAME, value='jsx-312275976.jsx-2649123136.mpn')
+        cate_div = first_row.find_element(by=By.CLASS_NAME, value='jsx-312275976.jsx-2018853745.mpn')
         html_cate_name = cate_div.text
         # 去掉中间的空格防止，导入的cate 格式误差
         cate_name = cate_name.replace(" ", "")
@@ -223,25 +220,21 @@ def close_alert():
 
 
 def main():
-    all_cates = IC_stock_excel_read.get_cate_name_arr(cate_source_file, 'all', 1)
+    all_cates = ExcelHelp.read_col_content(file_name=sourceFile_dic['fileName'],
+                                           sheet_name=sourceFile_dic['sourceSheet'],
+                                           col_index=sourceFile_dic['colIndex'])
     for (cate_index, cate_name) in enumerate(all_cates):
-        if cate_index < 730:
+        if cate_name is None or cate_name.__contains__('?'):
             continue
-        if cate_index%2 != 0:
-            continue
-        if cate_name is None:
-            continue
-        print(f'cate_index is: {cate_index}  cate_name is: {cate_name}')
-        UserAgentHelper.driver_update_UA(driver)
-        go_to_cate(cate_index, cate_name)
-        WaitHelp.waitfor_octopart(True, False)
-        close_alert()
-        analy_html(cate_index, cate_name)
-
+        elif cate_index in range(sourceFile_dic['startIndex'], sourceFile_dic['endIndex']):
+            print(f'cate_index is: {cate_index}  cate_name is: {cate_name}')
+            go_to_cate(cate_index, cate_name)
+            WaitHelp.waitfor_octopart(True, False)
+            close_alert()
+            analy_html(cate_index, cate_name)
 
 
 if __name__ == "__main__":
-    UserAgentHelper.driver_update_UA(driver)
     driver.get(default_url)
     WaitHelp.waitfor_octopart(False, False)
     main()

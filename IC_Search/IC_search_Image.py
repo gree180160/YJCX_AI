@@ -9,7 +9,7 @@ from WRTools import ChracterReconition, ExcelHelp, PathHelp
 # （推荐ppn过多，看
 # 根据图片高度，<1000，说明没有数据），1700-1800， 月指数，3000-35000，周指数
 def rule_image_names(fold_path):
-    source_file = PathHelp.get_file_path("TInfenion_20H", 'TInfenion_20H.xlsx')
+    source_file = PathHelp.get_file_path("TInfenion_30H", 'TInfenion_30H.xlsx')
     source_ppn_list = ExcelHelp.read_col_content(file_name=source_file, sheet_name='ppn', col_index=1)[37:73]
     check_ppn_list = []
     for temp in source_ppn_list:
@@ -99,12 +99,12 @@ def ppn_checkChange(ppn: str):
 def change_error_image_name(fold_path):
     file_name_list = os.listdir(fold_path)
     file_name_list.sort()
-    T20H_ppn = ExcelHelp.read_col_content(file_name='/Users/liuhe/Desktop/progress/TInfineon/20H/TInfenion_20H.xlsx', sheet_name='ppn', col_index=1)
+    T30H_ppn = ExcelHelp.read_col_content(file_name='/Users/liuhe/Desktop/progress/TInfineon/30H/TInfenion_30H.xlsx', sheet_name='ppn', col_index=1)
     TNV_ppn = ExcelHelp.read_col_content(file_name=PathHelp.get_file_path('TSumNvmNdt', 'Task.xlsx'), sheet_name='ppn', col_index=1)
     for temp in file_name_list:
         if temp.endswith('.png'):
             error_ppn = temp[0:-6]
-            right_index = T20H_ppn.index(error_ppn)
+            right_index = T30H_ppn.index(error_ppn)
             new_ppn = TNV_ppn[right_index]
             if temp.endswith('_M.png'):
                 imageName_new = new_ppn + "_M.png"
@@ -132,7 +132,7 @@ def filert_useless_image(fold_path):
 # 识别IC——hot 图片里的热度信息并保存到数据库
 def rec_image(fold_path):
     filert_useless_image(fold_path)
-    source_file = PathHelp.get_file_path('TRenesasAll_20H', 'Task.xlsx')
+    source_file = PathHelp.get_file_path('TRenesasAll_30H', 'Task.xlsx')
     file_name_list = os.listdir(fold_path)
     file_name_list.sort()
     print(f"file count is: {file_name_list.__len__()}")
@@ -151,12 +151,12 @@ def rec_image(fold_path):
 
 
 if __name__ == "__main__":
-    rec_image(fold_path='/Users/liuhe/Desktop/progress/TReneseas_all/20H/04/IC_hot_images')
+    rec_image(fold_path='/Users/liuhe/Desktop/progress/TReneseas_all/30H/04/IC_hot_images')
     time.sleep(2.0)
-    rec_image(fold_path='/Users/liuhe/Desktop/progress/TReneseas_all/20H/11/IC_hot_images')
+    rec_image(fold_path='/Users/liuhe/Desktop/progress/TReneseas_all/30H/11/IC_hot_images')
     time.sleep(2.0)
-    rec_image(fold_path='/Users/liuhe/Desktop/progress/TReneseas_all/20H/sz/IC_hot_images')
+    rec_image(fold_path='/Users/liuhe/Desktop/progress/TReneseas_all/30H/sz/IC_hot_images')
     # time.sleep(2.0)
-    rec_image(fold_path=PathHelp.get_IC_hot_image_fold('TRenesasAll_20H'))
+    rec_image(fold_path=PathHelp.get_IC_hot_image_fold('TRenesasAll_30H'))
 
 
