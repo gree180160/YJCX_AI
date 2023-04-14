@@ -206,6 +206,15 @@ def active_excel(file_name, sheet_name):
     add_arr_to_sheet(file_name=file_name, sheet_name=sheet_name, dim_arr=arr)
 
 
+def remove_sheet(file_name, sheet_name):
+    wb = load_workbook(file_name)
+    for (index, sheet) in enumerate(wb.worksheets):
+        if sheet.title == sheet_name:
+            wb.remove(sheet)
+    wb.save(file_name)
+    wb.close()
+
+
 # 将Excel 除第一个sheet 外的所哟sheet 删除
 def remove_sheets(file_name):
     wb = load_workbook(file_name)

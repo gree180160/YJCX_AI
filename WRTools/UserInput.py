@@ -103,7 +103,43 @@ def test_open_save():
         webpage_saveAndClose()
 
 
+def save_firfox_image(count: int):
+    if platform.startswith('win'):
+        time.sleep(3)
+        k.press_keys([k.control_key, k.tab_key])
+        k.release_key(k.control_key)
+        for index in range(0, count):
+            print(f'index is: {index}')
+            time.sleep(2.0)
+            k.press_keys([k.control_key, 'q'])
+            k.release_key(k.control_key)
+            time.sleep(5.0)
+            k.tap_key('s')
+            time.sleep(5.0)
+            m.click(350, 160)
+            time.sleep(2.0)
+            k.press_keys([k.control_key, k.tab_key])
+            k.release_key(k.control_key)
+    else:
+        time.sleep(3)
+        k.press_keys(['control', 'tab'])
+        k.release_key('control')
+        for index in range(0, count):
+            print(f'index is: {index}')
+            time.sleep(2.0)
+            k.press_keys(['Alternate', 'a'])
+            k.release_key('Alternate')
+            time.sleep(5.0)
+            k.tap_key('s')
+            time.sleep(5.0)
+            m.click(463.171875, 305.9609375, 1)
+            time.sleep(2.0)
+            k.press_keys(['control', 'tab'])
+            k.release_key('control')
+
+
 if __name__ == "__main__":
     # test_open_save()
-    time.sleep(3)
-    screenShot_saveAndClose()
+    # time.sleep(3)
+    # screenShot_saveAndClose()
+    save_firfox_image(125)

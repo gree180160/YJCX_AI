@@ -1,24 +1,24 @@
 
 #  记录Task 提供的型号，在IC 中的库存信息
 import base64
-from selenium import webdriver
 from selenium.webdriver.common.by import By
 import time
 import random
 import undetected_chromedriver as uc
-# import ssl
+import ssl
 from IC_stock.IC_Stock_Info import IC_Stock_Info
-from Manager import AccountMange, URLManager
-from WRTools import IPHelper, UserAgentHelper, ExcelHelp, WaitHelp, PathHelp
+from Manager import AccountMange, URLManager, TaskManager
+from WRTools import ExcelHelp, WaitHelp, PathHelp
 
-# ssl._create_default_https_context = ssl._create_unverified_context
 
-sourceFile_dic = {'fileName': PathHelp.get_file_path("TRenesasAll_35H", 'Task.xlsx'),
+ssl._create_default_https_context = ssl._create_unverified_context
+
+sourceFile_dic = {'fileName': PathHelp.get_file_path(TaskManager.Taskmanger().task_name, 'Task.xlsx'),
                   'sourceSheet': 'ppn',
                   'colIndex': 1,
-                  'startIndex': 104,
-                  'endIndex': 125}
-result_file = PathHelp.get_file_path(super_path="TRenesasAll_35H", file_name='IC_stock.xlsx')
+                  'startIndex': TaskManager.Taskmanger().start_index,
+                  'endIndex': TaskManager.Taskmanger().end_index}
+result_file = PathHelp.get_file_path(super_path=TaskManager.Taskmanger().task_name, file_name='IC_stock.xlsx')
 
 
 total_page = 1

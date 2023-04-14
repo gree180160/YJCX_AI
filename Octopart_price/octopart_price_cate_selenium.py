@@ -6,140 +6,132 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 from WRTools import ExcelHelp, UserAgentHelper, LogHelper, PathHelp, WaitHelp
 import octopart_price_info
+from Manager import TaskManager
 import re
 
 ssl._create_default_https_context = ssl._create_unverified_context
 
 driver_option = webdriver.ChromeOptions()
 driver = uc.Chrome(use_subprocess=True)
-driver.set_page_load_timeout(180)
+driver.set_page_load_timeout(480)
 # logic
 default_url = 'https://octopart.com/what-is-octopart'
 
-sourceFile_dic = {'fileName': PathHelp.get_file_path(None, 'TOnsemi.xlsx'),
-                  'sourceSheet': 'opn',
+sourceFile_dic = {'fileName': PathHelp.get_file_path(TaskManager.Taskmanger().task_name, 'Task.xlsx'),
+                  'sourceSheet': 'ppn',
                   'colIndex': 1,
-                  'startIndex': 0,
-                  'endIndex': 125}
-result_save_file = PathHelp.get_file_path('TRenesasAll_25H', 'octopart_price.xlsx')
+                  'startIndex': TaskManager.Taskmanger().start_index,
+                  'endIndex': TaskManager.Taskmanger().end_index}
+result_save_file = PathHelp.get_file_path(TaskManager.Taskmanger().task_name, 'octopart_price.xlsx')
 
 log_file = PathHelp.get_file_path('Octopart_price', 'ocopar_price_log.txt')
 
 
 # 跳转到下一个指定的型号
-def go_to_cate(cate_index, cate_name):
+def go_to_cate(pn_index, pn):
     try:
-        if driver.current_url.startswith('https://octopart.com/search?q='):
-            if driver.current_url == f"https://octopart.com/search?q={cate_name}&currency=USD&specs=0":
-                return
-            input_area = driver.find_element(by=By.TAG_NAME, value='input')
-            input_area.clear()
-            input_area.send_keys(cate_name)
-            input_box = driver.find_element(by=By.CLASS_NAME, value='jsx-4214615671.search-box')
-            search_button = input_box.find_element(by=By.TAG_NAME, value='button')
-            search_button.click()
-        else:
-            driver.get(f"https://octopart.com/search?q={cate_name}&currency=USD&specs=0")
-            go_to_cate(cate_index, cate_name)
+        driver.get(f"https://octopart.com/search?q={pn}&currency=USD&specs=0")
     except Exception as e:
-        LogHelper.write_log(log_file_name=log_file, content=f'{cate_name} go_to_cate except: {e}')
+        LogHelper.write_log(log_file_name=log_file, content=f'{pn} go_to_cate except: {e}')
 
 
 # 解析某个型号的页面信息，如果有更多，直接点击，然后只选择start ， 遇到第一个不是star 的就返回
-def analy_html(cate_index, cate_name):
-    # 是否需要继续展开。 出现第一条非start数据后不再展开
-    try:
-        all_cates = driver.find_element(by=By.CLASS_NAME, value='jsx-2172888034.prices-view')
-    except Exception as e:
-        LogHelper.write_log(log_file_name=log_file, content=f'{cate_name} all_cates exception:{e}')
-        return
-    try:
-        first_cate = all_cates.find_element(by=By.CLASS_NAME, value='jsx-2172888034')  # jsx-2400378105 part
-    except:
-        first_cate = all_cates.find_element(by=By.CLASS_NAME, value='jsx-2172888034 part')
-    if not cate_valid(cate_name, first_cate):
-        return
-    need_more = True
-    # 默认直接显示的row
+def analy_html(pn_index, pn):
     valid_supplier_arr = []
-    tr_arr = []
     try:
-        cate_table = first_cate.find_element(by=By.TAG_NAME, value='tbody')
-        tr_arr = cate_table.find_elements(by=By.TAG_NAME, value='tr')
-        for tr in tr_arr:
-            if not need_more:
-                break
-            cate_price_ele = get_supplier_info(tr=tr, cate_index=cate_index, cate_name=cate_name)
-            # 只有实心(1)数据才是有效的，只有空心(-1)才需要停止loop
-            if cate_price_ele.is_valid_supplier():
-                valid_supplier_arr.append(cate_price_ele.descritpion_arr())
-            else:
-                print(f'supplier invalid: {cate_price_ele.description_str()}')
-                if cate_price_ele.stop_loop():
-                    need_more = False
+        all_cates_table = driver.find_elements(By.CSS_SELECTOR, 'div.jsx-2906236790.prices-view')
+        if all_cates_table.__len__() > 0:
+            first_row = all_cates_table[0].find_elements(By.CSS_SELECTOR, 'div.jsx-2906236790')
+            left_rows = all_cates_table[0].find_elements(By.CSS_SELECTOR, 'div.jsx-1681079743.part')
+            showed_rows = first_row + left_rows
+        # 默认直接显示的row
+        for temp_cate_row in showed_rows:
+            try:
+                if not cate_valid(pn, temp_cate_row):
+                    continue
+                need_more = True  # click more button
+                info_table_body = temp_cate_row.find_element(By.CSS_SELECTOR, 'tbody.jsx-4253165187')
+                tr_arr = info_table_body.find_elements(by=By.TAG_NAME, value='tr')
+                ppn = get_cate_name(cate_area=temp_cate_row, opn=pn)
+                manu = get_manufacture_name(cate_area=temp_cate_row, opn=pn)
+                for tr in tr_arr:
+                    if not need_more:
+                        break
+                    cate_price_ele = get_supplier_info(tr=tr, ppn=ppn, manu_name=manu)
+                    # 只有实心(1)数据才是有效的，只有空心(-1)才需要停止loop
+                    if cate_price_ele.is_valid_supplier():
+                        valid_supplier_arr.append(cate_price_ele.descritpion_arr())
+                    else:
+                        print(f'supplier invalid: {cate_price_ele.description_str()}')
+                        need_more = False
+                click_more_row(temp_cate_row, cate_price_ele.cate)
+                finished_count = tr_arr.__len__()
+                new_tr_arr = info_table_body.find_elements(by=By.TAG_NAME, value='tr')
+                unfinished_arr = new_tr_arr[finished_count:]
+                for tr in unfinished_arr:
+                    cate_price_ele = get_supplier_info(tr=tr, ppn=ppn, manu_name=manu)
+                    # 只有实心(1)数据才是有效的，只有空心(-1)才需要停止loop
+                    if cate_price_ele.is_valid_supplier():
+                        valid_supplier_arr.append(cate_price_ele.descritpion_arr())
+                    else:
+                        print(f'supplier invalid: {cate_price_ele.description_str()}')
+            except Exception as e:
+                LogHelper.write_log(log_file_name=log_file, content=f'{pn} 当个cate 解析异常：{e} ')
     except Exception as e:
-        need_more = False
-        LogHelper.write_log(log_file_name=log_file, content=f'{cate_name} 默认打开的内容解析异常：{e} ')
-
-    if need_more:
-        click_more_row(cate_html=first_cate, cate_name=cate_name)
-    # 折叠的row ##########################################################################################################
-    dealed_count = len(tr_arr)
-    all_cates2 = driver.find_element(by=By.CLASS_NAME, value='jsx-2172888034.prices-view')
-    try:
-        first_cate2 = all_cates2.find_element(by=By.CLASS_NAME, value='jsx-2172888034')  # jsx-2400378105 part
-    except:
-        first_cate2 = all_cates2.find_element(by=By.CLASS_NAME, value='jsx-2172888034 part')
-    try:
-        cate_table2 = first_cate2.find_element(by=By.TAG_NAME, value='tbody')
-        tr_arr2 = cate_table2.find_elements(by=By.TAG_NAME, value='tr')
-        left_tr_arr = tr_arr2[dealed_count:-1]
-        for tr in left_tr_arr:
-            if not need_more:
-                break
-            cate_price_ele2 = get_supplier_info(tr=tr, cate_index=cate_index, cate_name=cate_name)
-            if cate_price_ele2.is_valid_supplier():
-                valid_supplier_arr.append(cate_price_ele2.descritpion_arr())
-            else:
-                print(f'supplier invalid: {cate_price_ele2.description_str()}')
-                if cate_price_ele2.stop_loop():
-                    need_more = False
-    except Exception as e:
-        LogHelper.write_log(log_file_name=log_file, content=f'{cate_name} more 解析异常：{e} ')
-    sheet_name_base64str = str(base64.b64encode(cate_name.encode('utf-8')), 'utf-8')
+        LogHelper.write_log(log_file_name=log_file, content=f'{pn} 页面 解析异常：{e} ')
     ExcelHelp.add_arr_to_sheet(
         file_name=result_save_file,
-        sheet_name=sheet_name_base64str,
+        sheet_name='octopart_price',
         dim_arr=valid_supplier_arr)
     valid_supplier_arr.clear()
 
 
-# 判断当前内容是否和cate_name 一致
-def cate_valid(cate_name, first_row) -> bool:
+# 判断当前内容是否和pn 一致,忽略大小写，和最后一位的加号
+def cate_valid(pn, first_row) -> bool:
     result = False
     try:
-        cate_div = first_row.find_element(by=By.CLASS_NAME, value='jsx-312275976.jsx-2018853745.mpn')
-        html_cate_name = cate_div.text
-        # 去掉中间的空格防止，导入的cate 格式误差
-        cate_name = cate_name.replace(" ", "")
-        html_cate_name = html_cate_name.replace(" ", "")
-        # 去掉结尾的+，因为cate_name ,结尾有无+都是一个型号
-        if cate_name.endswith('+'):
-            cate_name = cate_name[0:-1]
-        if html_cate_name.endswith('+'):
-            html_cate_name = html_cate_name[0:-1]
-        result = bool(re.search(cate_name, html_cate_name, re.IGNORECASE))
+        html_pn = get_cate_name(cate_area=first_row, opn=pn)
+        pn = pn.replace(" ", "")
+        html_pn = html_pn.replace(" ", "")
+        # 去掉结尾的+，因为pn ,结尾有无+都是一个型号
+        if pn.endswith('+'):
+            pn = pn[0:-1]
+        if html_pn.endswith('+'):
+            html_pn = html_pn[0:-1]
+        result = bool(re.search(pn, html_pn, re.IGNORECASE))
         if not result:
-            LogHelper.write_log(log_file_name=log_file, content=f'{cate_name} cannot match')
+            LogHelper.write_log(log_file_name=log_file, content=f'{pn} cannot match')
     except Exception as e:
-        LogHelper.write_log(log_file_name=log_file, content=f'{cate_name} cannot check name: {e}')
+        LogHelper.write_log(log_file_name=log_file, content=f'{pn} cannot check name: {e}')
         result = False
     return result
 
 
+# 获取cate
+def get_cate_name(cate_area, opn) -> str:
+    cate_name = ''
+    try:
+        header = cate_area.find_elements(By.CSS_SELECTOR, 'div.jsx-2471764431.header')[0]
+        cate_name = header.find_elements(By.CSS_SELECTOR, 'div.jsx-312275976.jsx-1485186546')[2].text
+    except Exception as e:
+        LogHelper.write_log(log_file_name=log_file, content=f'{opn} cannot check keyname: {e}')
+    return cate_name
+
+
+# 获取manu
+def get_manufacture_name(cate_area, opn) -> str:
+    manu_name = ''
+    try:
+        header = cate_area.find_element(By.CSS_SELECTOR, 'div.jsx-2471764431.header')
+        manu_name = header.find_elements(By.CSS_SELECTOR, 'div.jsx-312275976.jsx-1485186546.manufacturer-name-and-possible-tooltip')[0].text
+    except Exception as e:
+        LogHelper.write_log(log_file_name=log_file, content=f'{opn} cannot check manufacture: {e}')
+    return manu_name
+
+
 # 将页面tr的内容 转化成octopart_price_info
 # tr: contain row info
-def get_supplier_info(tr, cate_index, cate_name) -> octopart_price_info:
+def get_supplier_info(tr, ppn, manu_name) -> octopart_price_info:
     td_arr = tr.find_elements(by=By.TAG_NAME, value='td')
     star_td = td_arr[0]
     is_star = 0
@@ -190,8 +182,8 @@ def get_supplier_info(tr, cate_index, cate_name) -> octopart_price_info:
         updated = updated_span.text
     except:
         updated = '--'
-    manu_name = "--"
-    octopart_price_ele = octopart_price_info.Octopart_price_info(cate=cate_name, manu=manu_name, is_star=is_star,
+    manu_name = manu_name
+    octopart_price_ele = octopart_price_info.Octopart_price_info(cate=ppn, manu=manu_name, is_star=is_star,
                                                                  distribute=distribute_name, SKU=sku, stock=stock,
                                                                  MOQ=moq, currency_type=currency_type, k_price=k_price,
                                                                  updated=updated)
@@ -199,15 +191,13 @@ def get_supplier_info(tr, cate_index, cate_name) -> octopart_price_info:
 
 
 # 展开这个cate的更多distribute info
-def click_more_row(cate_html, cate_name):
+def click_more_row(row, ppn):
     try:
-        footer_ele = cate_html.find_element(by=By.CLASS_NAME, value='jsx-3623225293.footer')
-        more_button_div = footer_ele.find_element(by=By.CLASS_NAME, value='jsx-3623225293')
-        more_button = more_button_div.find_element(by=By.TAG_NAME, value='button')
-        more_button.click()
-        WaitHelp.waitfor_octopart(True, False)
+        button = row.find_element(By.CSS_SELECTOR, 'button.jsx-1990075996.show-button')
+        button.click()
+        WaitHelp.waitfor_octopart(False, False)
     except Exception as e:
-        LogHelper.write_log(log_file_name=log_file, content=f'{cate_name} click more exception: {e}')
+        LogHelper.write_log(log_file_name=log_file, content=f'{ppn} click more exception: ')
 
 
 #  请求频繁，导致出现弹框，有则关闭，无则异常
@@ -223,18 +213,19 @@ def main():
     all_cates = ExcelHelp.read_col_content(file_name=sourceFile_dic['fileName'],
                                            sheet_name=sourceFile_dic['sourceSheet'],
                                            col_index=sourceFile_dic['colIndex'])
-    for (cate_index, cate_name) in enumerate(all_cates):
-        if cate_name is None or cate_name.__contains__('?'):
+    for (pn_index, pn) in enumerate(all_cates):
+        if pn is None or pn.__contains__('?'):
             continue
-        elif cate_index in range(sourceFile_dic['startIndex'], sourceFile_dic['endIndex']):
-            print(f'cate_index is: {cate_index}  cate_name is: {cate_name}')
-            go_to_cate(cate_index, cate_name)
+        elif pn_index in range(sourceFile_dic['startIndex'], sourceFile_dic['endIndex']):
+            print(f'pn_index is: {pn_index}  pn is: {pn}')
+            go_to_cate(pn_index, pn)
             WaitHelp.waitfor_octopart(True, False)
             close_alert()
-            analy_html(cate_index, cate_name)
+            analy_html(pn_index, pn)
 
 
 if __name__ == "__main__":
     driver.get(default_url)
     WaitHelp.waitfor_octopart(False, False)
     main()
+

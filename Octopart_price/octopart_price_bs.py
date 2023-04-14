@@ -64,8 +64,7 @@ def analy_html(cate_name, soup):
                 valid_supplier_arr.append(cate_price_ele.descritpion_arr())
             else:
                 print(f'supplier invalid: {cate_price_ele.description_str()}')
-                if cate_price_ele.stop_loop():
-                    need_more = False
+                need_more = False
     except Exception as e:
         need_more = False
         LogHelper.write_log(log_file_name=log_file, content=f'{cate_name} 默认打开的内容解析异常：{e} ')

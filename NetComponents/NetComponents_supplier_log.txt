@@ -1,0 +1,4 @@
+net component log
+2023-03-31 16:16:31cate_index 0 cate_name STM32F103C8T6 find page element error Message: stale element reference: element is not attached to the page document
+  (Session info: chrome=111.0.5563.146)
+

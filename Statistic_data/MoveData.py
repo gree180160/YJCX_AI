@@ -3,7 +3,7 @@ import time
 
 from WRTools import ExcelHelp, PathHelp
 from IC_stock import IC_Stock_Info, IC_stock_result
-from Dijikey import DJ_product_status_bs
+from Digikey import DJ_product_status_bs
 from Findchips_stock import findchips_stock_info, findchips_stock_cate
 
 
@@ -182,21 +182,33 @@ def move_IC_hot(source_file: str):
         aim_sheet='all_info',
         start_col=13)
 
-def move_DijiKey(source_file: str, dijikey_file: str):
+def move_digiKey(source_file: str, digikey_file: str, source_sheet: str):
     ppns = ExcelHelp.read_col_content(file_name=source_file, sheet_name='ppn', col_index=1)
-    dijikey_data = ExcelHelp.read_sheet_content_by_name(file_name=dijikey_file, sheet_name='filted_ppn_dg')
+    digikey_data = ExcelHelp.read_sheet_content_by_name(file_name=digikey_file, sheet_name=source_sheet)
     result = []
-    for (index, ppn) in enumerate(ppns):
-        diji_record = [ppn, '/', '/']
-        for (diji_index, diji_info) in enumerate(dijikey_data):
-            if ppn == diji_info[0]:
-                diji_record = diji_info
-                break
-        result.append(diji_record)
-    ExcelHelp.add_arr_to_sheet(file_name=source_file, sheet_name='dijikey_status', dim_arr=result)
+    solved = (digikey_data[0][0] != 'index')
+    # 适合未处理的digikey 数据
+    if solved:
+        for (index, ppn) in enumerate(ppns):
+            digi_record = [ppn, '/', '/']
+            for (digi_index, digi_info) in enumerate(digikey_data):
+                if ppn == digi_info[0]:
+                    digi_record = digi_info
+                    break
+            result.append(digi_record)
+    else:
+        for (index, ppn) in enumerate(ppns):
+            digi_record = [ppn, '/', '/']
+            for (digi_index, digi_info) in enumerate(digikey_data):
+                    if ppn == digi_info[3]:
+                        digi_record = [digi_info[3], digi_info[1], digi_info[2], digi_info[4]]
+                        break
+            result.append(digi_record)
+
+    ExcelHelp.add_arr_to_sheet(file_name=source_file, sheet_name='digikey_status', dim_arr=result)
     move_part_to_part(
         source_file=source_file,
-        source_sheet='dijikey_status',
+        source_sheet='digikey_status',
         from_col=3,
         to_col=4,
         aim_file=source_file,
@@ -204,44 +216,41 @@ def move_DijiKey(source_file: str, dijikey_file: str):
         start_col=11)
 
 
-#合并数据前的预处理，IC 结果统计，findchips 合计，dijikey 合计
+#合并数据前的预处理，IC 结果统计，findchips 合计，digikey 合计
 def pre_combine_data():
-    cate_source_file = PathHelp.get_file_path("TRenesasAll_30H", 'Task.xlsx')
-    ICStock_file_arr = ["/Users/liuhe/Desktop/progress/TReneseas_all/30H/11/IC_stock.xlsx",
-                                         "/Users/liuhe/Desktop/progress/TReneseas_all/30H/sz/IC_stock.xlsx",
-                                         "/Users/liuhe/Desktop/progress/TReneseas_all/30H/04/IC_stock.xlsx",
-                        '/Users/liuhe/PycharmProjects/YJCX_AI/TRenesasAll_30H/IC_stock.xlsx']
+    cate_source_file = PathHelp.get_file_path("TSTM_discontiueP1", 'Task.xlsx')
+    ICStock_file_arr = ["/Users/liuhe/Desktop/progress/TSTM/discontiue/TSTM_discontiueP1/11/IC_stock.xlsx",
+                        "/Users/liuhe/Desktop/progress/TSTM/discontiue/TSTM_discontiueP1/sz/IC_stock.xlsx",
+                        "/Users/liuhe/Desktop/progress/TSTM/discontiue/TSTM_discontiueP1/04/IC_stock.xlsx",
+                       PathHelp.get_file_path('TSTM_discontiueP1', 'IC_stock.xlsx')]
     IC_stock_result.staticstic_IC_stock(source_files=ICStock_file_arr, aim_file=cate_source_file)
-    findchips_stock_cate.combine_result(["/Users/liuhe/Desktop/progress/TReneseas_all/30H/11/findchip_stock.xlsx",
-                                         "/Users/liuhe/Desktop/progress/TReneseas_all/30H/sz/findchip_stock.xlsx",
-                                         "/Users/liuhe/Desktop/progress/TReneseas_all/30H/04/findchip_stock.xlsx"],
-                                        PathHelp.get_file_path('TRenesasAll_30H', 'findchip_stock.xlsx'))
-    # DJ_product_status_bs.combine_result(["/Users/liuhe/Desktop/progress/TReneseas_all/30H/11/dijikey_status.xlsx",
-    #                                              "/Users/liuhe/Desktop/progress/TReneseas_all/30H/sz/dijikey_status.xlsx",
-    #                                              "/Users/liuhe/Desktop/progress/TReneseas_all/30H/04/dijikey_status.xlsx"],
-    #                                             PathHelp.get_file_path('TRenesasAll_30H', 'dijikey_status.xlsx'))
+    findchips_stock_cate.combine_result(["/Users/liuhe/Desktop/progress/TSTM/discontiue/TSTM_discontiueP1/11/findchip_stock.xlsx",
+                                         "/Users/liuhe/Desktop/progress/TSTM/discontiue/TSTM_discontiueP1/sz/findchip_stock.xlsx",
+                                         "/Users/liuhe/Desktop/progress/TSTM/discontiue/TSTM_discontiueP1/04/findchip_stock.xlsx"],
+                                        PathHelp.get_file_path('TSTM_discontiueP1', 'findchip_stock.xlsx'))
+    # DJ_product_status_bs.combine_result(["/Users/liuhe/Desktop/progress/TSTM/discontiue/TSTM_discontiueP1/11/digikey_status.xlsx",
+    #                                              "/Users/liuhe/Desktop/progress/TSTM/discontiue/TSTM_discontiueP1/sz/digikey_status.xlsx",
+    #                                              "/Users/liuhe/Desktop/progress/TSTM/discontiue/TSTM_discontiueP1/04/digikey_status.xlsx"],
+    #                                             PathHelp.get_file_path('TSTM_discontiueP1', 'digikey_status.xlsx'))
 
 
 # 统计汇总结果
 def statistic_data():
-    source_file = PathHelp.get_file_path('TRenesasAll_30H', 'Task.xlsx')
+    source_file = PathHelp.get_file_path('TSTM_discontiueP1', 'Task.xlsx')
     move_ppn_to_allInfo(source_file=source_file)
     move_IC_stock_to_allInfo(source_file=source_file)
     move_BomOct_to_allInfo(source_file=source_file)
-    move_findchip_to_allInfo(source_file=source_file, findchip_file=PathHelp.get_file_path('TRenesasAll_30H', 'findchip_stock.xlsx'))
-    move_DijiKey(source_file=source_file, dijikey_file=PathHelp.get_file_path(None, 'TRenesa.xlsx'))
+    move_findchip_to_allInfo(source_file=source_file, findchip_file=PathHelp.get_file_path('TSTM_discontiueP1', 'findchip_stock.xlsx'))
+    move_digiKey(source_file=source_file, digikey_file=PathHelp.get_file_path(None, 'TRenesa.xlsx'), source_sheet = 'filted_ppn_dg')
+    move_digiKey(source_file=source_file, digikey_file=PathHelp.get_file_path(None, 'TSTM.xlsx'),
+                 source_sheet='My Lists Worksheet')
     move_IC_hot(source_file=source_file)
 
 
-# def IC_hot():
-#     source_file = PathHelp.get_file_path('TRenesasAll_30H', 'Task.xlsx')
-#     move_IC_hot(source_file=source_file)
-
-
 if __name__ == "__main__":
-     pre_combine_data()
-     time.sleep(1.0)
-     statistic_data()
+    pre_combine_data()
+    time.sleep(1.0)
+    statistic_data()
 
 
 

@@ -5,8 +5,8 @@ import time
 
 import undetected_chromedriver as uc
 from selenium.webdriver.common.by import By
-from WRTools import IPHelper, UserAgentHelper, LogHelper, PathHelp, ExcelHelp, WaitHelp
-from Manager import AccountMange
+from WRTools import LogHelper, PathHelp, ExcelHelp, WaitHelp
+from Manager import AccountMange, TaskManager
 import bom_price_info
 
 ssl._create_default_https_context = ssl._create_unverified_context
@@ -18,12 +18,13 @@ driver.set_page_load_timeout(120)
 # accouts_arr = [["深圳市元极创新电子有限公司", "caigou01", "Yjcx123"]]
 accouts_arr = [[AccountMange.Bom['c'], AccountMange.Bom['n'], AccountMange.Bom['p']]]
 
-sourceFile_dic = {'fileName': PathHelp.get_file_path('TRenesasAll_35H', 'Task.xlsx'),
+sourceFile_dic = {'fileName': PathHelp.get_file_path(TaskManager.Taskmanger().task_name, 'Task.xlsx'),
                   'sourceSheet': 'ppn',
                   'colIndex': 1,
-                  'startIndex': 0,
-                  'endIndex': 125}
-result_save_file = PathHelp.get_file_path('TRenesasAll_35H', 'bom_price.xlsx')
+                  'startIndex': TaskManager.Taskmanger().start_index,
+                  'endIndex': TaskManager.Taskmanger().end_index}
+result_save_file = PathHelp.get_file_path(TaskManager.Taskmanger().task_name, 'bom_price.xlsx')
+
 default_url = 'https://www.bom.ai/ic/74LVX4245MTCX.html'
 log_file = PathHelp.get_file_path('Bom_price', 'bom_price_log.txt')
 
@@ -90,7 +91,7 @@ def go_to_cate(cate_index, cate_name):
 
 
 # 解析某个型号的页面信息，先看未折叠的前三行，判断是否需要展开，展开，解析，再判断，再展开，再解析。。。。
-def analy_html(cate_index, cate_name):
+def analy_html(cate_index, ppn, manu):
     # 是否需要继续展开。 出现第一条非本周数据后不再展开
     need_more = True
     # 默认直接现实的row
@@ -102,14 +103,14 @@ def analy_html(cate_index, cate_name):
             if not need_more:
                 break
             aside = ul.find_element(by=By.TAG_NAME, value='aside')
-            bom_price_ele = get_supplier_info(aside=aside, cate_index=cate_index, cate_name=cate_name)
+            bom_price_ele = get_supplier_info(aside=aside, cate_index=cate_index, ppn=ppn, manu=manu)
             if not bom_price_ele.is_valid_supplier():
                 print(f'supplier invalid: {bom_price_ele.description_str()}')
                 need_more = False
             valid_supplier_arr.append(bom_price_ele.descritpion_arr())
     except Exception as e:
         need_more = False
-        LogHelper.write_log(log_file_name=log_file, content=f'{cate_name} html 解析异常：{e} or nodata')
+        LogHelper.write_log(log_file_name=log_file, content=f'{ppn} html 解析异常：{e} or nodata')
     # 折叠的row ##########################################################################################################
     while need_more:
         try:
@@ -128,31 +129,36 @@ def analy_html(cate_index, cate_name):
             for (aside_index, aside) in enumerate(aside_arr):
                 if not need_more:
                     break
-                bom_price_ele = get_supplier_info(aside=aside, cate_index=cate_index, cate_name=cate_name)
+                bom_price_ele = get_supplier_info(aside=aside, cate_index=cate_index, ppn=ppn, manu=manu)
                 if not bom_price_ele.is_valid_supplier():
                     print(f'supplier invalid: {bom_price_ele.description_str()}')
                     need_more = False
                 valid_supplier_arr.append(bom_price_ele.descritpion_arr())
         except Exception as e:
             need_more = False  # may be no load more
-            LogHelper.write_log(log_file_name=log_file, content=f'{cate_name} load more 解析异常：{e}')
-    sheet_name_base64str = str(base64.b64encode(cate_name.encode('utf-8')), 'utf-8')
+            LogHelper.write_log(log_file_name=log_file, content=f'{ppn} load more 解析异常：{e}')
     ExcelHelp.add_arr_to_sheet(
     file_name=result_save_file,
-    sheet_name=sheet_name_base64str,
+    sheet_name='bom_price',
     dim_arr=valid_supplier_arr)
     valid_supplier_arr.clear()
 
 
 # 将页面row的内容 转化成Bom_price_info
 # aside: contain row info
-def get_supplier_info(aside, cate_index, cate_name) -> bom_price_info.Bom_price_info:
+def get_supplier_info(aside, cate_index, ppn, manu) -> bom_price_info.Bom_price_info:
     section_arr = aside.find_elements(by=By.TAG_NAME, value='section')
     supplier_section = section_arr[1]
     try:
         supplier_name = supplier_section.find_element(by=By.TAG_NAME, value='a').text
     except:
         supplier_name = '--'
+    cate_name_section = section_arr[2]
+    try:
+        cate_name = cate_name_section.find_element(by=By.TAG_NAME, value='a').text
+        # 无需做ppn 和 bom 获取的cate_name 的匹配验证
+    except:
+        cate_name = '--'
     pakage_section = section_arr[4]
     try:
         pakage_name = pakage_section.find_element(by=By.TAG_NAME, value='p').text
@@ -179,7 +185,7 @@ def get_supplier_info(aside, cate_index, cate_name) -> bom_price_info.Bom_price_
     except:
         stock_num = '--'
     manu_name = '--'
-    bom_price_ele = bom_price_info.Bom_price_info(cate=cate_name, manu=manu_name, supplier=supplier_name,
+    bom_price_ele = bom_price_info.Bom_price_info(cate=cate_name, manu=manu, supplier=supplier_name,
                                                   package=pakage_name, year=year_str, quoted_price=price_str,
                                                   release_time=release_time, stock_num=stock_num)
     return bom_price_ele
@@ -189,18 +195,21 @@ def main():
     all_cates = ExcelHelp.read_col_content(file_name=sourceFile_dic['fileName'],
                                            sheet_name=sourceFile_dic['sourceSheet'],
                                            col_index=sourceFile_dic['colIndex'])
-    for (cate_index, cate_name) in enumerate(all_cates):
-        if cate_name is None or cate_name.__contains__('?'):
+    all_manus =  ExcelHelp.read_col_content(file_name=sourceFile_dic['fileName'],
+                                           sheet_name=sourceFile_dic['sourceSheet'],
+                                           col_index=sourceFile_dic['colIndex']+1)
+    for (ppn_index, ppn) in enumerate(all_cates):
+        if ppn is None or ppn.__contains__('?'):
             continue
-        elif cate_index in range(sourceFile_dic['startIndex'], sourceFile_dic['endIndex']):
-            print(f'cate_index is: {cate_index}  cate_name is: {cate_name}')
-            go_to_cate(cate_index, str(cate_name))
-            if cate_index > 0 and cate_index % 15 == 0:
+        elif ppn_index in range(sourceFile_dic['startIndex'], sourceFile_dic['endIndex']):
+            print(f'cate_index is: {ppn_index}  cate_name is: {ppn}')
+            go_to_cate(ppn_index, str(ppn))
+            if ppn_index > 0 and ppn_index % 15 == 0:
                 time.sleep(480)
             else:
                 WaitHelp.waitfor(True, False)
             current_need_login()
-            analy_html(cate_index, str(cate_name))
+            analy_html(cate_index=ppn_index, ppn=str(ppn), manu=all_manus[ppn_index])
 
 
 if __name__ == "__main__":

@@ -201,7 +201,7 @@ def SplitPic_month(source_pic: str):
 
 
 def test_hot_value(fold_path: str):
-    temp = 'R5F100AAASP#X0_M.png' # 1911×1724
+    temp = '1_M.png' # 1911×1724
     # temp = 'R5F100AAASP#X0_W.png' # 1911×3164
     if temp.endswith('_M.png'):
         image_hot_data = SplitPic_month(fold_path + '/' + temp)
@@ -212,5 +212,5 @@ def test_hot_value(fold_path: str):
 
 if __name__ == "__main__":
     # result = test_hot_value(fold_path='/Users/liuhe/Desktop/progress/TRenesas_RL78/5H/11/IC_hot_images')
-    result = test_hot_value(fold_path='//TRL78_5H/IC_hot_images')
+    result = test_hot_value(fold_path='/Users/liuhe/Downloads')
     print(result)

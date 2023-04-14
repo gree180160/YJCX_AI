@@ -9,9 +9,10 @@ from urllib.parse import urlparse
 
 
 default_url = 'https://octopart.com/'
-keyword_source_file = PathHelp.get_file_path(None, 'TRenesa.xlsx')
-log_file = '//Octopart_category/octopart_key_cate_log.txt'
-fold_path = '/Users/liuhe/Desktop/progress/TReneseas_all/pageMore_htmlFiles'
+keyword_source_file = PathHelp.get_file_path(None, 'TSTM.xlsx')
+sheet_name = "page0_pn2"
+fold_path = '/Users/liuhe/Desktop/progress/TSTM/html2'
+log_file = '/Octopart_category/octopart_key_cate_log.txt'
 
 total_page = 1
 current_page = 1
@@ -67,54 +68,60 @@ def get_category(fold_path, file_name, key_name):
     htmlhandle = htmlfile.read()
     soup = BeautifulSoup(htmlhandle, 'html5lib')
     set_totalpage(soup)
-    analyth_html(key_name=key_name, soup=soup, htmlhandle=htmlhandle)
+    analyth_html(key_name=key_name, soup=soup)
 
 
 # 解析html，获取cate，manu
-def analyth_html(key_name, soup, htmlhandle):
+def analyth_html(key_name, soup):
     if is_security_check(soup=soup):
         LogHelper.write_log(log_file_name=log_file, content=f'alert happens in :{key_name} \n')
         return
+    info_list = []
     try:
-        table = soup.select('div.jsx-2172888034.prices-view')[0]
-        cate_first = table.select('div.jsx-2172888034')
-        cate_left = table.select('div.jsx-2400378105.part')
-        cates_all = cate_first + cate_left
-        info_list = []
-        for temp_cate in cates_all:
-            header = temp_cate.select('div.jsx-3355510592.header')[0]
-            try:
-                manu = header.select('div.jsx-312275976.jsx-2018853745.manufacturer-name-and-possible-tooltip')[0].text
-            except:
-                manu = None
-            try:
-                cate_name = header.select('div.jsx-312275976.jsx-2018853745.mpn')[0].text
-            except:
-                cate_name = None
-            if cate_name and manu:
-                if cate_name.startswith(key_name):
-                    info_list.append([cate_name, manu, key_name, total_page])
-        if len(info_list) > 0:
-            ExcelHelp.add_arr_to_sheet(file_name=keyword_source_file, sheet_name='pageMore_pn',
-                                                  dim_arr=info_list)
-    except Exception as e:
-        info_arr = getSKUByRE(html_txt=htmlhandle, key_name=key_name)
-        if len(info_arr) > 0:
-            ExcelHelp.add_arr_to_sheet(file_name=keyword_source_file, sheet_name='pageMore_pn',
-                                                  dim_arr=info_arr)
+        if soup.select('div.jsx-2172888034.prices-view').__len__() > 0:
+            # style plain
+            table = soup.select('div.jsx-2172888034.prices-view')[0]
+            cate_first = table.select('div.jsx-2172888034')
+            cate_left = table.select('div.jsx-2400378105.part')
+            cates_all = cate_first + cate_left
+            for temp_cate in cates_all:
+                header = temp_cate.select('div.jsx-3355510592.header')[0]
+                try:
+                    manu = header.select('div.jsx-312275976.jsx-2018853745.manufacturer-name-and-possible-tooltip')[
+                        0].text
+                except:
+                    manu = None
+                try:
+                    cate_name = header.select('div.jsx-312275976.jsx-2018853745.mpn')[0].text
+                except:
+                    cate_name = None
+                if cate_name and manu:
+                    if check_htmlPPN_valid(html_ppn=cate_name, opn=key_name):
+                        info_list.append([cate_name, manu, key_name, total_page])
         else:
-            LogHelper.write_log(log_file, f'{key_name} analyth_html exception: {e}')
-
-
-# 正则"sku":"SAK-TC1367A-264F150EBAA","updated" ，直接强行获取
-def getSKUByRE(html_txt, key_name) -> list:
-    result = []
-    rag = 'sku":"([A-Za-z0-9-]*?)","updated'
-    cate_arr = re.findall(rag, html_txt)
-    for temp_cate in cate_arr:
-        cate = temp_cate[3:-3]
-        result.append([cate, '', key_name, total_page])
-    return result
+            # style container
+            table = soup.select('div.jsx-2906236790.prices-view')[0]
+            cate_first = table.select('div.jsx-2906236790')
+            cate_left = table.select('div.jsx-1681079743.part')
+            cates_all = cate_first + cate_left
+            for temp_cate in cates_all:
+                header = temp_cate.select('div.jsx-2471764431.header')[0]
+                try:
+                    manu = header.select('div.jsx-312275976.jsx-1485186546.manufacturer-name-and-possible-tooltip')[0].text
+                except:
+                    manu = None
+                try:
+                    cate_name = header.select('div.jsx-312275976.jsx-1485186546')[2].text
+                except:
+                    cate_name = None
+                if cate_name and manu:
+                    if check_htmlPPN_valid(html_ppn=cate_name, opn=key_name):
+                        info_list.append([cate_name, manu, key_name, total_page])
+    except Exception as e:
+        LogHelper.write_log(log_file, f'{key_name} analyth_html exception: {e}')
+    if len(info_list) > 0:
+        ExcelHelp.add_arr_to_sheet(file_name=keyword_source_file, sheet_name=sheet_name,
+                                       dim_arr=info_list)
 
 
 # 获取url 查询参数dic
@@ -122,6 +129,8 @@ def getInfoByFileName(fileName):
     # eg = 'view-source_https___octopart.com_search_q=TPS13&currency=USD&specs=0&manufacturer_id=370'
     url = fileName.replace('https __octopart.com_search currency=',
                            'view-source:https://octopart.com/search?currency=')
+    url = url.replace('view-source-https- octopart.com search q=', 'https://octopart.com/search?q=')
+    url = url.replace('https __octopart.com_search q=', 'https://octopart.com/search?q=')
     url = url.replace('view-source_', '')
     url = url.replace('___', '://')
     url = url.replace('octopart.com_search_q', 'octopart.com/search?q')
@@ -140,35 +149,31 @@ def get_files(fold_path: str):
 
 
 # 获取指定文件下的html files，并将结果转化为ppn输出
-def get_finished_ppn(fold_path: str):
-    file_name_list = os.listdir(fold_path)
+def get_finished_ppn(fold_paths: list):
     result = []
-    for temp in file_name_list:
-        result.append(get_ppn_from_filename(temp))
+    for fold_path in fold_paths:
+        file_name_list = os.listdir(fold_path)
+        for temp in file_name_list:
+            result.append(get_ppn_from_filename(temp))
     return result
 
 
 def get_ppn_from_filename(filename: str):
-    result = ""
-    if ' q=' in filename and '&currency=' in filename:
-        index1: int = filename.index(' q=')
-        index2: int = filename.index('&currency=')
-        s = ''
-        for (index, char) in enumerate(filename):
-            if index in range(index1 + 3, index2):
-                result += char
-    return result
+    dic = getInfoByFileName(filename)
+    try:
+        key = dic['q'][0]
+        key = key.replace('.html', '')
+        key = key.replace('.htm', '')
+    except:
+        LogHelper.write_log(log_file_name=log_file, content='parameter q is none')
+        key = ''
+    return key
 
 
 def get_url_from_filename(filename: str):
-    url = filename.replace('https __octopart.com_search q=',
-                           'view-source:https://octopart.com/search?q=')
-    result = url.replace(
-        '.htm', ''
-    )
-    result = result.replace(
-        '.html', ''
-    )
+    url = filename.replace('https __octopart.com_search q=', 'view-source:https://octopart.com/search?q=')
+    result = url.replace('.htm', '')
+    result = result.replace('.html', '')
     return result
 
 
@@ -181,26 +186,43 @@ def get_finished_urls(fold_path: str):
     return result
 
 
+# 验证获取的ppn 是否与opn 相关
+def check_htmlPPN_valid(html_ppn, opn):
+    opn = opn.replace(" ", "")
+    html_ppn = html_ppn.replace(" ", "")
+    # 去掉结尾的+，因为pn ,结尾有无+都是一个型号
+    if opn.endswith('+'):
+        pn = opn[0:-1]
+    if html_ppn.endswith('+'):
+        html_pn = html_ppn[0:-1]
+    result = bool(re.search(opn, html_ppn, re.IGNORECASE))
+    return result
+
+
 def main():
     # fold_path = fold_path
     file_name_list = get_files(fold_path=fold_path)
+    file_name_list.sort()
     for (file_name_index, file_name) in enumerate(file_name_list):
-        print(f'file name is: {file_name}')
-        dic = getInfoByFileName(file_name)
-        try:
-            key = dic['q'][0]
-        except:
-            LogHelper.write_log(log_file_name=log_file, content='parameter q is none')
-            continue
-        try:
-            page_str = dic['start'][0]
-            if page_str:
-                page = page_str.split('.')[0]
-            else:
+        if file_name_index in range(0, 10000):
+            print(f'file_index is: {file_name_index}, file name is: {file_name}')
+            dic = getInfoByFileName(file_name)
+            try:
+                key = dic['q'][0]
+                key = key.replace('.html', '')
+                key = key.replace('.htm', '')
+            except:
+                LogHelper.write_log(log_file_name=log_file, content='parameter q is none')
+                continue
+            try:
+                page_str = dic['start'][0]
+                if page_str:
+                    page = page_str.split('.')[0]
+                else:
+                    page = '0'
+            except:
                 page = '0'
-        except:
-            page = '0'
-        get_category(fold_path=fold_path, file_name=file_name, key_name=key)
+            get_category(fold_path=fold_path, file_name=file_name, key_name=key)
 
 
 # 比较两个url 是否相同
@@ -219,16 +241,16 @@ def queryToUrl(url1, url2, para1, para2) -> bool:
 
 
 # 查找遗漏的html——文件,并保存
-def get_unfinished_pn(keyword_source_file: str, finished_html_files_fold: str):
+def get_unfinished_pn(keyword_source_file: str, finished_html_files_folds: list):
     unfinished_url = []
-    all_ppn = ExcelHelp.read_col_content(file_name=keyword_source_file, sheet_name='ppn', col_index=1)
-    finished_ppn = get_finished_ppn(fold_path=finished_html_files_fold)
+    all_ppn = ExcelHelp.read_col_content(file_name=keyword_source_file, sheet_name='opn', col_index=1)
+    finished_ppn = get_finished_ppn(fold_paths=finished_html_files_folds)
     for (ppn_index, temp_ppn) in enumerate(all_ppn):
         if not temp_ppn in finished_ppn:
-            manu = URLManager.Octopart_manu.Renesas
+            manu = URLManager.Octopart_manu.Onsemi
             url = URLManager.octopart_get_page_url(key_name=temp_ppn, page=1, manu=manu)
             unfinished_url.append([temp_ppn, url])
-    ExcelHelp.add_arr_to_sheet(file_name=keyword_source_file, sheet_name='unfinished_url', dim_arr=unfinished_url)
+    ExcelHelp.add_arr_to_sheet(file_name=keyword_source_file, sheet_name='unfinished_url2', dim_arr=unfinished_url)
 
 
 # 查找遗漏的html——文件,并保存
@@ -243,6 +265,25 @@ def get_unfinished_pageMore(keyword_source_file: str, finished_html_files_fold: 
     ExcelHelp.add_arr_to_sheet(file_name=keyword_source_file, sheet_name='unfinished_url_pagemore', dim_arr=unfinished_url)
 
 
+def get_Onsemi_ppn():
+    finished_ppn1 = ExcelHelp.read_col_content(file_name=PathHelp.get_file_path(None, 'TOnsemi.xlsx'), sheet_name='ppn1', col_index=1)
+    finished_ppn2 = ExcelHelp.read_col_content(file_name=PathHelp.get_file_path(None, 'TOnsemi.xlsx'),
+                                               sheet_name='ppn2', col_index=1)
+    finished_ppn3 = ExcelHelp.read_col_content(file_name=PathHelp.get_file_path(None, 'TOnsemi.xlsx'),
+                                               sheet_name='ppn3', col_index=1)
+    unfinished_ppn4 = ExcelHelp.read_col_content(file_name=PathHelp.get_file_path(None, 'TOnsemi_ppn.xlsx'),
+                                               sheet_name='page0_pn4', col_index=1)
+    all_finish = set(finished_ppn1).union(set(finished_ppn2)).union(set(finished_ppn3))
+    ppn4 = list(set(unfinished_ppn4).difference(all_finish))
+    ExcelHelp.add_arr_to_col(file_name=PathHelp.get_file_path(None, 'TOnsemi_ppn.xlsx'), sheet_name='ppn4', dim_arr=ppn4)
+
+
 if __name__ == "__main__":
-    # main()
-    get_unfinished_pn(keyword_source_file=PathHelp.get_file_path('TRL78_15H', 'Task.xlsx') , finished_html_files_fold = "/Users/liuhe/PycharmProjects/YJCX_AI/TRL78_15H/html_files")
+    # get_Onsemi_ppn()
+    # get_category(fold_path="/Users/liuhe/Desktop", file_name="https __octopart.com_search q=LM293DR2&currency=USD&specs=0.html", key_name="LM293DR2")
+    main()
+    # get_unfinished_pn(keyword_source_file=PathHelp.get_file_path(None, 'TOnsemi.xlsx'),
+    #                   finished_html_files_folds = ["/Users/liuhe/Desktop/progress/TOnsemi/Octopart_html1",
+    #                                                "/Users/liuhe/Desktop/progress/TOnsemi/Octopart_html2",
+    #                                                "/Users/liuhe/Desktop/progress/TOnsemi/Octopart_html3",
+    #                                                "/Users/liuhe/Desktop/progress/TOnsemi/Octopart_html4"])

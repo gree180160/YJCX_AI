@@ -38,7 +38,7 @@ class Octopart_manu(Enum):
             '12444',
             '199;14939',
             '7;404',
-            '278;473',
+            '278;473;1595',
             '355',
         ]
         return manuid_list[self.value]
@@ -83,7 +83,8 @@ def octopart_page_more_url(sourcefile: str, page0_sheet: str, manu: Octopart_man
                     current_p += 1
         except:
             print(pnInfo + "exception")
-        ExcelHelp.add_arr_to_sheet(file_name=pn_file, sheet_name='url_pagemore', dim_arr=pninfo_url_list)
+        if pninfo_url_list.__len__() > 0:
+            ExcelHelp.add_arr_to_sheet(file_name=pn_file, sheet_name='url_pagemore2', dim_arr=pninfo_url_list)
     print('over')
 
 
@@ -111,6 +112,6 @@ def IC_hot_url(ppn: str, isWeek):
 
 
 if __name__ == "__main__":
-    octopart_page_more_url(sourcefile = PathHelp.get_file_path(None, file_name='TRenesa.xlsx'), page0_sheet='page0_pn', manu=Octopart_manu.Renesas)
+    octopart_page_more_url(sourcefile = PathHelp.get_file_path(None, file_name='TSTM.xlsx'), page0_sheet='page0_pn2', manu=Octopart_manu.STMicroelectronics)
 
 

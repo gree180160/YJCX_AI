@@ -1,7 +1,7 @@
 import ssl
 import time
 import undetected_chromedriver as uc
-from selenium import webdriver
+import re
 from selenium.webdriver.common.by import By
 
 import Manager.URLManager
@@ -153,12 +153,25 @@ def analyth_html(key_name):
             except:
                 cate_name = None
             if cate_name and manu:
-                if cate_name.startswith(key_name):
+                if check_htmlPPN_valid(html_ppn=cate_name, opn=key_name):
                     info_list.append([cate_name, manu, key_name, total_page])
         if len(info_list) > 0:
             ExcelHelp.add_arr_to_sheet(file_name=result_save_file, sheet_name='ppn', dim_arr=info_list)
     except Exception as e:
         LogHelper.write_log(log_file, f'{key_name} analyth_html exception: {e}')
+
+
+# 验证获取的ppn 是否与opn 相关
+def check_htmlPPN_valid(html_ppn, opn):
+    opn = opn.replace(" ", "")
+    html_ppn = html_ppn.replace(" ", "")
+    # 去掉结尾的+，因为pn ,结尾有无+都是一个型号
+    if opn.endswith('+'):
+        pn = opn[0:-1]
+    if html_ppn.endswith('+'):
+        html_pn = html_ppn[0:-1]
+    result = bool(re.search(opn, html_ppn, re.IGNORECASE))
+    return result
 
 
 def main():

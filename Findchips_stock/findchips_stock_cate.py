@@ -5,24 +5,17 @@ from bs4 import BeautifulSoup
 import requests
 from WRTools import IPHelper, UserAgentHelper, LogHelper, WaitHelp, ExcelHelp, PathHelp
 from Findchips_stock.findchips_stock_info import findchips_stock_info_onePart, findchips_stock_info_oneSupplier
-
+from Manager import TaskManager
 
 
 ssl._create_default_https_context = ssl._create_unverified_context
 
-sourceFile_dic = {'fileName': PathHelp.get_file_path('TRenesasAll_35H', 'Task.xlsx'),
+sourceFile_dic = {'fileName': PathHelp.get_file_path(TaskManager.Taskmanger().task_name, 'Task.xlsx'),
                   'sourceSheet': 'ppn',
                   'colIndex': 1,
-                  'startIndex': 0,
-                  'endIndex': 125}
-result_save_file = PathHelp.get_file_path('TRenesasAll_35H', 'findchip_stock.xlsx')
-
-# sourceFile_dic = {'fileName': PathHelp.get_file_path(None, 'TRenesa.xlsx'),
-#                   'sourceSheet': 'ppn',
-#                   'colIndex': 1,
-#                   'startIndex': 5896,
-#                   'endIndex': 6000}
-# result_save_file = PathHelp.get_file_path(None, 'TRenesa_findchips.xlsx')
+                  'startIndex': TaskManager.Taskmanger().start_index,
+                  'endIndex': TaskManager.Taskmanger().end_index}
+result_save_file = PathHelp.get_file_path(TaskManager.Taskmanger().task_name, 'findchip_stock.xlsx')
 
 log_file = PathHelp.get_file_path('Findchips_stock', 'findchips_stock_log.txt')
 cookies = {'fc_locale':'zh-CN', 'fc_timezone':'Asia%2FShanghai'}
