@@ -7,7 +7,7 @@ def open_ppn():
     keyword_source_file = PathHelp.get_file_path(super_path=None, file_name='TSTM.xlsx')
     ppn_list = ExcelHelp.read_col_content(file_name=keyword_source_file, sheet_name='opn', col_index=1)
     for (index, ppn) in enumerate(ppn_list):
-        if index in range(3597, 4000):
+        if index in range(3989, 4000):
             manu = URLManager.Octopart_manu.STMicroelectronics
             url = URLManager.octopart_get_page_url(key_name=ppn, page=1, manu=manu)
             print(f'index is: {index} url is: {url}')
@@ -16,10 +16,10 @@ def open_ppn():
 
 
 def open_url():
-    keyword_source_file = PathHelp.get_file_path(super_path=None, file_name='TRenesa.xlsx')
-    ppn_list = ExcelHelp.read_col_content(file_name=keyword_source_file, sheet_name='unfinished_url_pagemore', col_index=1)
+    keyword_source_file = PathHelp.get_file_path(super_path=None, file_name='TSTM.xlsx')
+    ppn_list = ExcelHelp.read_col_content(file_name=keyword_source_file, sheet_name='url_pagemore2', col_index=1)
     for (index, url) in enumerate(ppn_list):
-        if index in range(0, 20):  # 0-450, 450-900,900-1350,1350-1800
+        if index in range(0, 100):  # 0-450, 450-900,900-1350,1350-1800
             print(f'index is: {index} url is: {url}')
             UserInput.input_url(url, wait_time_kind=-1)
             UserInput.webpage_saveAndClose()
@@ -27,3 +27,4 @@ def open_url():
 
 if __name__ == "__main__":
     open_ppn()
+    # open_url()

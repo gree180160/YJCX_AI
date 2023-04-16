@@ -1935,3 +1935,140 @@ from unknown error: web view not found
 
 2023-04-14 15:51:51STPS3030CG 页面 解析异常：local variable 'showed_rows' referenced before assignment 
 2023-04-14 16:02:12TDA7560A click more exception: 
+2023-04-14 16:02:47ETDA7560 click more exception: 
+2023-04-14 16:11:57TDA2004R 当个cate 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"tbody.jsx-4253165187"}
+  (Session info: chrome=112.0.5615.49)
+
+2023-04-14 16:11:57TDA2004R 当个cate 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"tbody.jsx-4253165187"}
+  (Session info: chrome=112.0.5615.49)
+
+2023-04-14 16:11:57TDA2004R cannot match
+2023-04-14 16:17:08L6206N cannot match
+2023-04-14 16:17:08L6206N 当个cate 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"tbody.jsx-4253165187"}
+  (Session info: chrome=112.0.5615.49)
+
+2023-04-14 16:22:06E-L5991AD13TR click more exception: 
+2023-04-14 16:26:16TDA2005M 当个cate 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"tbody.jsx-4253165187"}
+  (Session info: chrome=112.0.5615.49)
+
+2023-04-14 16:31:57HCF4093M 当个cate 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"tbody.jsx-4253165187"}
+  (Session info: chrome=112.0.5615.49)
+
+2023-04-14 16:31:57HCF4093M cannot match
+2023-04-14 16:40:37STPS30SM120ST 当个cate 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"tbody.jsx-4253165187"}
+  (Session info: chrome=112.0.5615.49)
+
+2023-04-14 16:54:20STPS30H60CR 当个cate 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"tbody.jsx-4253165187"}
+  (Session info: chrome=112.0.5615.49)
+
+2023-04-14 17:02:27EVAL6205N click more exception: 
+2023-04-14 17:02:27EVAL6205N click more exception: 
+2023-04-14 17:15:47STD9NM50N-1 click more exception: 
+2023-04-14 17:15:47STD9NM50N-1 click more exception: 
+2023-04-14 17:20:17STPS30M60CT 当个cate 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"tbody.jsx-4253165187"}
+  (Session info: chrome=112.0.5615.49)
+
+2023-04-14 17:24:29BUL416T 当个cate 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"tbody.jsx-4253165187"}
+  (Session info: chrome=112.0.5615.49)
+
+2023-04-14 17:30:00L4963D 当个cate 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"tbody.jsx-4253165187"}
+  (Session info: chrome=112.0.5615.49)
+
+2023-04-14 17:30:00L4963D 当个cate 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"tbody.jsx-4253165187"}
+  (Session info: chrome=112.0.5615.49)
+
+2023-04-14 17:37:30EVAL6928Q1 click more exception: 
+2023-04-14 17:37:30EVAL6928Q1 click more exception: 
+2023-04-14 17:43:20TEA3718DP 当个cate 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"tbody.jsx-4253165187"}
+  (Session info: chrome=112.0.5615.49)
+
+2023-04-14 17:46:26STPS40120CR click more exception: 
+2023-04-14 17:46:26STPS40120CR click more exception: 
+2023-04-14 17:46:27STPS40120CR 当个cate 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"tbody.jsx-4253165187"}
+  (Session info: chrome=112.0.5615.49)
+
+2023-04-14 17:54:27STPS340B-TR go_to_cate except: Message: timeout: Timed out receiving message from renderer: -0.009
+  (Session info: chrome=112.0.5615.49)
+
+2023-04-14 18:13:43STPS340B-TR 页面 解析异常：Message: timeout: Timed out receiving message from renderer: 480.000
+  (Session info: chrome=112.0.5615.49)
+
+2023-04-14 18:21:43STTH10R04BTR go_to_cate except: Message: timeout: Timed out receiving message from renderer: 480.000
+  (Session info: chrome=112.0.5615.49)
+
+2023-04-14 18:40:24STTH10R04BTR 页面 解析异常：Message: timeout: Timed out receiving message from renderer: 480.000
+  (Session info: chrome=112.0.5615.49)
+
+2023-04-14 18:48:24ESDA14V2-1BF3 go_to_cate except: Message: timeout: Timed out receiving message from renderer: 480.000
+  (Session info: chrome=112.0.5615.49)
+
+2023-04-14 19:07:11ESDA14V2-1BF3 页面 解析异常：Message: timeout: Timed out receiving message from renderer: 480.000
+  (Session info: chrome=112.0.5615.49)
+
+2023-04-14 19:15:11TDA7498L go_to_cate except: Message: timeout: Timed out receiving message from renderer: 480.000
+  (Session info: chrome=112.0.5615.49)
+
+2023-04-14 19:34:25TDA7498L 页面 解析异常：Message: timeout: Timed out receiving message from renderer: 480.000
+  (Session info: chrome=112.0.5615.49)
+
+2023-04-14 19:42:26STPS2H100RL go_to_cate except: Message: timeout: Timed out receiving message from renderer: 480.000
+  (Session info: chrome=112.0.5615.49)
+
+2023-04-14 20:01:48STPS2H100RL 页面 解析异常：Message: timeout: Timed out receiving message from renderer: 480.000
+  (Session info: chrome=112.0.5615.49)
+
+2023-04-14 20:13:57STTH10R04BTR click more exception: 
+2023-04-14 20:13:57STTH10R04BTR click more exception: 
+2023-04-14 20:18:05ESDA14V2-1BF3 cannot match
+2023-04-14 20:31:47T1210T-8FP 当个cate 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"tbody.jsx-4253165187"}
+  (Session info: chrome=112.0.5615.49)
+
+2023-04-14 20:35:25BUL741FP click more exception: 
+2023-04-14 20:35:25BUL741FP click more exception: 
+2023-04-14 20:40:04E-L6598D013TR cannot match
+2023-04-14 22:16:17L6375D cannot match
+2023-04-14 22:16:17L6375D cannot match
+2023-04-14 22:16:17L6375D cannot match
+2023-04-14 22:16:17L6375D cannot match
+2023-04-14 22:16:17L6375D cannot match
+2023-04-14 22:16:17L6375D cannot match
+2023-04-14 22:16:17L6375D cannot match
+2023-04-14 22:16:17L6375D cannot match
+2023-04-14 22:29:43STPS30SM60SR 当个cate 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"tbody.jsx-4253165187"}
+  (Session info: chrome=112.0.5615.49)
+
+2023-04-14 22:49:51STPS640CB 当个cate 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"tbody.jsx-4253165187"}
+  (Session info: chrome=112.0.5615.49)
+
+2023-04-14 22:49:51STPS640CB cannot match
+2023-04-14 22:49:51STPS640CB 当个cate 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"tbody.jsx-4253165187"}
+  (Session info: chrome=112.0.5615.49)
+
+2023-04-14 22:57:13STGD14NC60K click more exception: 
+2023-04-14 23:14:38E-L6926 cannot match
+2023-04-14 23:26:35STF13NM60N-H cannot match
+2023-04-14 23:30:02EVALSTSR30-60W click more exception: 
+2023-04-14 23:30:02EVALSTSR30-60W click more exception: 
+2023-04-14 23:47:44STPSC12H065DY 当个cate 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"tbody.jsx-4253165187"}
+  (Session info: chrome=112.0.5615.49)
+
+2023-04-14 23:52:14STPS4045CT 当个cate 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"tbody.jsx-4253165187"}
+  (Session info: chrome=112.0.5615.49)
+
+2023-04-15 00:08:36TDA7492 cannot match
+2023-04-15 00:08:36TDA7492 cannot match
+2023-04-15 00:12:48EVAL6926D 当个cate 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"tbody.jsx-4253165187"}
+  (Session info: chrome=112.0.5615.49)
+
+2023-04-15 00:12:48EVAL6926D 当个cate 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"tbody.jsx-4253165187"}
+  (Session info: chrome=112.0.5615.49)
+
+2023-04-15 00:18:16L4981AD click more exception: 
+2023-04-15 00:20:18L4981A cannot match
+2023-04-15 00:20:46L4981AD-LF click more exception: 
+2023-04-15 00:20:46L4981A 当个cate 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"tbody.jsx-4253165187"}
+  (Session info: chrome=112.0.5615.49)
+
+2023-04-15 00:30:23DSL04-022SC6 click more exception: 
+2023-04-15 00:30:23DSL04-022SC6 click more exception: 
+2023-04-15 00:36:22HCF4093BEY click more exception: 

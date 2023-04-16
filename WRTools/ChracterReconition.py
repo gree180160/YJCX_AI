@@ -79,13 +79,11 @@ def getHotValue(sourceImage, row_image_name, index):
     _, img_binarized = cv2.threshold(gray, min_value, 255, cv2.THRESH_BINARY_INV)
     pil_img = Image.fromarray(img_binarized)
     config = '--psm 6 digitsdot'
-    #1
     try:
         result_str1 = pytesseract.image_to_string(pil_img, lang='eng', config=config)
         result_str1 = result_str1.replace(",", '')
         int1 = int(result_str1)
     except:
-        result_str1 = ""
         int1 = 0
     # 2
     _, img_binarized2 = cv2.threshold(gray, min_value, 255, cv2.THRESH_BINARY_INV + cv2.THRESH_OTSU)
@@ -95,7 +93,6 @@ def getHotValue(sourceImage, row_image_name, index):
         result_str2 = result_str2.replace(",", '')
         int2 = int(result_str2)
     except:
-        result_str2 = ""
         int2 = 0
     # 3
     _, img_binarized3 = cv2.threshold(gray, 180, 255, cv2.THRESH_BINARY_INV)
@@ -105,7 +102,6 @@ def getHotValue(sourceImage, row_image_name, index):
         result_str3 = result_str3.replace(",", '')
         int3 = int(result_str3)
     except:
-        result_str3 = ""
         int3 = 0
     # 4
     _, img_binarized4 = cv2.threshold(gray, 180, 255, cv2.THRESH_BINARY_INV + cv2.THRESH_OTSU)
@@ -115,10 +111,9 @@ def getHotValue(sourceImage, row_image_name, index):
         result_str4 = result_str4.replace(",", '')
         int4 = int(result_str4)
     except:
-        result_str4 = ""
         int4 = 0
     des_str = sourceImage + "  " + str(index) + 'th---  ' + "1: " + result_str1 + "2: " + result_str2 + "3: " + result_str3 + "4: " + result_str4
-    # print(f'结果{index + 1}:  {des_str}')
+    print(f'结果{index + 1}:  {des_str}')
     may_result = [int1, int2, int3, int4]
     may_result.sort()
     search_num = ''
@@ -201,7 +196,7 @@ def SplitPic_month(source_pic: str):
 
 
 def test_hot_value(fold_path: str):
-    temp = '1_M.png' # 1911×1724
+    temp = '2STR1160_M.png' # 1911×1724
     # temp = 'R5F100AAASP#X0_W.png' # 1911×3164
     if temp.endswith('_M.png'):
         image_hot_data = SplitPic_month(fold_path + '/' + temp)
@@ -212,5 +207,5 @@ def test_hot_value(fold_path: str):
 
 if __name__ == "__main__":
     # result = test_hot_value(fold_path='/Users/liuhe/Desktop/progress/TRenesas_RL78/5H/11/IC_hot_images')
-    result = test_hot_value(fold_path='/Users/liuhe/Downloads')
+    result = test_hot_value(fold_path='/Users/liuhe/Desktop')
     print(result)
