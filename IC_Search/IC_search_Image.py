@@ -152,12 +152,12 @@ def rec_image(fold_path):
 
 
 if __name__ == "__main__":
-    rec_image(fold_path='/Users/liuhe/Desktop/progress/TSTM/discontiue/TSTM_discontiueP4/04/IC_hot_images')
-    time.sleep(2.0)
-    rec_image(fold_path='/Users/liuhe/Desktop/progress/TSTM/discontiue/TSTM_discontiueP4/11/IC_hot_images')
-    time.sleep(2.0)
-    rec_image(fold_path='/Users/liuhe/Desktop/progress/TSTM/discontiue/TSTM_discontiueP4/sz/IC_hot_images')
-    time.sleep(2.0)
+    # rec_image(fold_path='/Users/liuhe/Desktop/progress/TSTM/discontiue/TSTM_discontiueP4/04/IC_hot_images')
+    # time.sleep(2.0)
+    # rec_image(fold_path='/Users/liuhe/Desktop/progress/TSTM/discontiue/TSTM_discontiueP4/11/IC_hot_images')
+    # time.sleep(2.0)
+    # rec_image(fold_path='/Users/liuhe/Desktop/progress/TSTM/discontiue/TSTM_discontiueP4/sz/IC_hot_images')
+    # time.sleep(2.0)
     rec_image(fold_path=PathHelp.get_IC_hot_image_fold('TSTM_discontiueP4'))
 
 

@@ -234,18 +234,18 @@ def pre_combine_data():
 # 统计汇总结果
 def statistic_data():
     source_file = PathHelp.get_file_path('TSTM_discontiueP4', 'Task.xlsx')
-    move_ppn_to_allInfo(source_file=source_file)
-    move_IC_stock_to_allInfo(source_file=source_file)
-    move_BomOct_to_allInfo(source_file=source_file)
-    move_findchip_to_allInfo(source_file=source_file, findchip_file=PathHelp.get_file_path('TSTM_discontiueP4', 'findchip_stock.xlsx'))
-    move_digiKey(source_file=source_file, digikey_file=PathHelp.get_file_path(None, 'TSTM.xlsx'), source_sheet = 'My Lists Worksheet')
+    # move_ppn_to_allInfo(source_file=source_file)
+    # move_IC_stock_to_allInfo(source_file=source_file)
+    # move_BomOct_to_allInfo(source_file=source_file)
+    # move_findchip_to_allInfo(source_file=source_file, findchip_file=PathHelp.get_file_path('TSTM_discontiueP4', 'findchip_stock.xlsx'))
+    # move_digiKey(source_file=source_file, digikey_file=PathHelp.get_file_path(None, 'TSTM.xlsx'), source_sheet = 'My Lists Worksheet')
     # move_digiKey(source_file=source_file, digikey_file=PathHelp.get_file_path("TSTM_discontiueP4", 'dijikey_status.xlsx'), source_sheet='My Lists Worksheet')
     move_IC_hot(source_file=source_file)
 
 
 if __name__ == "__main__":
-    pre_combine_data()
-    time.sleep(1.0)
+    # pre_combine_data()
+    # time.sleep(1.0)
     statistic_data()
 
 
