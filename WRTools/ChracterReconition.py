@@ -113,7 +113,7 @@ def getHotValue(sourceImage, row_image_name, index):
     except:
         int4 = 0
     des_str = sourceImage + "  " + str(index) + 'th---  ' + "1: " + result_str1 + "2: " + result_str2 + "3: " + result_str3 + "4: " + result_str4
-    print(f'结果{index + 1}:  {des_str}')
+    # print(f'结果{index + 1}:  {des_str}')
     may_result = [int1, int2, int3, int4]
     may_result.sort()
     search_num = ''
@@ -196,8 +196,8 @@ def SplitPic_month(source_pic: str):
 
 
 def test_hot_value(fold_path: str):
-    temp = '2STR1160_M.png' # 1911×1724
-    # temp = 'R5F100AAASP#X0_W.png' # 1911×3164
+    # temp = 'HXR6112-DNT_W.png' # 1911×1724
+    temp = 'HXR6112-DNT_M.png' # 1911×3164
     if temp.endswith('_M.png'):
         image_hot_data = SplitPic_month(fold_path + '/' + temp)
     elif temp.endswith('_W.png'):
@@ -206,6 +206,5 @@ def test_hot_value(fold_path: str):
 
 
 if __name__ == "__main__":
-    # result = test_hot_value(fold_path='/Users/liuhe/Desktop/progress/TRenesas_RL78/5H/11/IC_hot_images')
-    result = test_hot_value(fold_path='/Users/liuhe/Desktop')
+    result = test_hot_value(fold_path='/Users/liuhe/Desktop/progress/TSTM/discontiue/TSTM_discontiueP4/04/IC_hot_images')
     print(result)

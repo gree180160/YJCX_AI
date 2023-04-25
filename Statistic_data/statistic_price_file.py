@@ -248,7 +248,7 @@ def update_gradeA():
 
 
 if __name__ == "__main__":
-    # calculater_price()
+    calculater_price()
     # update_gradeA()
     print('over')
 

@@ -122,12 +122,9 @@ def testDigikey():
 
 def combine_upload_result():
     source_file = PathHelp.get_file_path(None, 'TSTM.xlsx')
-    files = ["/Users/liuhe/Desktop/progress/TSTM/discontiue/digikey/p2/result/04141.xlsx",
-             "/Users/liuhe/Desktop/progress/TSTM/discontiue/digikey/p2/result/04144.xlsx",
-             "/Users/liuhe/Desktop/progress/TSTM/discontiue/digikey/p2/result/04147.xlsx",
-             "/Users/liuhe/Desktop/progress/TSTM/discontiue/digikey/p2/result/041410.xlsx",
-             "/Users/liuhe/Desktop/progress/TSTM/discontiue/digikey/p2/result/041413.xlsx",
-             "/Users/liuhe/Desktop/progress/TSTM/discontiue/digikey/p2/result/041416.xlsx"
+    files = ["/Users/liuhe/Desktop/progress/TSTM/discontiue/digikey/P4/result/1901.xlsx",
+             "/Users/liuhe/Desktop/progress/TSTM/discontiue/digikey/P4/result/1904.xlsx",
+             "/Users/liuhe/Desktop/progress/TSTM/discontiue/digikey/P4/result/1907.xlsx"
              ]
     result = []
     for temp in files:

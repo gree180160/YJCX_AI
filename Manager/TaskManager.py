@@ -2,10 +2,10 @@ from Manager import AccountMange
 
 
 class Taskmanger:
-    task_name = 'TSTM_discontiueP2'
+    task_name = 'TSTM_discontiueP4'
     if AccountMange.Device_ID == 'Mac':
         start_index = 0
-        end_index = 125
+        end_index = 80
     elif AccountMange.Device_ID == '11':
         start_index = 125
         end_index = 250

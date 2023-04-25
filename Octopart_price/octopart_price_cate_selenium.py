@@ -20,7 +20,7 @@ default_url = 'https://octopart.com/what-is-octopart'
 sourceFile_dic = {'fileName': PathHelp.get_file_path(TaskManager.Taskmanger().task_name, 'Task.xlsx'),
                   'sourceSheet': 'ppn',
                   'colIndex': 1,
-                  'startIndex': 95,
+                  'startIndex': TaskManager.Taskmanger().start_index,
                   'endIndex': TaskManager.Taskmanger().end_index}
 result_save_file = PathHelp.get_file_path(TaskManager.Taskmanger().task_name, 'octopart_price.xlsx')
 
@@ -64,7 +64,8 @@ def analy_html(pn_index, pn):
                     else:
                         print(f'supplier invalid: {cate_price_ele.description_str()}')
                         need_more = False
-                click_more_row(temp_cate_row, cate_price_ele.cate)
+                if need_more:
+                    click_more_row(temp_cate_row, cate_price_ele.cate)
                 finished_count = tr_arr.__len__()
                 new_tr_arr = info_table_body.find_elements(by=By.TAG_NAME, value='tr')
                 unfinished_arr = new_tr_arr[finished_count:]

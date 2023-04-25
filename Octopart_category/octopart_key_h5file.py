@@ -10,8 +10,8 @@ from urllib.parse import urlparse
 
 default_url = 'https://octopart.com/'
 keyword_source_file = PathHelp.get_file_path(None, 'TSTM.xlsx')
-sheet_name = "page0_pn2"
-fold_path = '/Users/liuhe/Desktop/progress/TSTM/html2'
+sheet_name = "page0_pn4"
+fold_path = '/Users/liuhe/Desktop/progress/TSTM/html4'
 log_file = '/Octopart_category/octopart_key_cate_log.txt'
 
 total_page = 1
@@ -282,8 +282,8 @@ if __name__ == "__main__":
     # get_Onsemi_ppn()
     # get_category(fold_path="/Users/liuhe/Desktop", file_name="https __octopart.com_search q=LM293DR2&currency=USD&specs=0.html", key_name="LM293DR2")
     main()
-    # get_unfinished_pn(keyword_source_file=PathHelp.get_file_path(None, 'TOnsemi.xlsx'),
-    #                   finished_html_files_folds = ["/Users/liuhe/Desktop/progress/TOnsemi/Octopart_html1",
-    #                                                "/Users/liuhe/Desktop/progress/TOnsemi/Octopart_html2",
-    #                                                "/Users/liuhe/Desktop/progress/TOnsemi/Octopart_html3",
-    #                                                "/Users/liuhe/Desktop/progress/TOnsemi/Octopart_html4"])
+    # get_unfinished_pn(keyword_source_file=PathHelp.get_file_path(None, 'TSTM.xlsx'),
+    #                   finished_html_files_folds = ["/Users/liuhe/Desktop/progress/TSTM/html1",
+    #                                                "/Users/liuhe/Desktop/progress/TSTM/html2",
+    #                                                "/Users/liuhe/Desktop/progress/TSTM/html3",
+    #                                                "/Users/liuhe/Desktop/progress/TSTM/html4"])

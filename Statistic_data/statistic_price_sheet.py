@@ -16,27 +16,24 @@ import Bom_price.bom_price_info
 ssl._create_default_https_context = ssl._create_unverified_context
 
 
-cate_source_file = PathHelp.get_file_path(super_path='TSTM_discontiueP1', file_name='Task.xlsx')
+cate_source_file = PathHelp.get_file_path(super_path='TSTM_discontiueP4', file_name='Task.xlsx')
 result_save_file = cate_source_file
 octopart_sheet_name = 'octopart_price'
 bom_sheet_name = 'bom_price'
 
-# renesas
-octopart_file_arr = ['/Users/liuhe/Desktop/progress/TSTM/discontiue/TSTM_discontiueP1/04/octopart_price.xlsx',
-                    '/Users/liuhe/Desktop/progress/TSTM/discontiue/TSTM_discontiueP1/11/octopart_price.xlsx',
-                    '/Users/liuhe/Desktop/progress/TSTM/discontiue/TSTM_discontiueP1/sz/octopart_price.xlsx',
-                    PathHelp.get_file_path('TSTM_discontiueP1', 'octopart_price.xlsx')]
-bom_file_arr = ['/Users/liuhe/Desktop/progress/TSTM/discontiue/TSTM_discontiueP1/04/bom_price.xlsx',
-                '/Users/liuhe/Desktop/progress/TSTM/discontiue/TSTM_discontiueP1/11/bom_price.xlsx',
-                '/Users/liuhe/Desktop/progress/TSTM/discontiue/TSTM_discontiueP1/sz/bom_price.xlsx',
-                PathHelp.get_file_path('TSTM_discontiueP1', 'bom_price.xlsx')]
+
+octopart_file_arr = ['/Users/liuhe/Desktop/progress/TSTM/discontiue/TSTM_discontiueP4/04/octopart_price.xlsx',
+                    '/Users/liuhe/Desktop/progress/TSTM/discontiue/TSTM_discontiueP4/11/octopart_price.xlsx',
+                    '/Users/liuhe/Desktop/progress/TSTM/discontiue/TSTM_discontiueP4/sz/octopart_price.xlsx',
+                    PathHelp.get_file_path('TSTM_discontiueP4', 'octopart_price.xlsx')]
+bom_file_arr = ['/Users/liuhe/Desktop/progress/TSTM/discontiue/TSTM_discontiueP4/04/bom_price.xlsx',
+                '/Users/liuhe/Desktop/progress/TSTM/discontiue/TSTM_discontiueP4/11/bom_price.xlsx',
+                '/Users/liuhe/Desktop/progress/TSTM/discontiue/TSTM_discontiueP4/sz/bom_price.xlsx',
+                PathHelp.get_file_path('TSTM_discontiueP4', 'bom_price.xlsx')]
 
 # onsemi
-# octopart_file_arr = ['/Users/liuhe/PycharmProjects/YJCX_AI/TSTM_discontiueP1/octopart_price.xlsx']
-# bom_file_arr = ['/Users/liuhe/Desktop/progress/TSTM_discontiueP1/second/04/bom_price.xlsx',
-#                 '/Users/liuhe/Desktop/progress/TSTM_discontiueP1/second/11/bom_price.xlsx',
-#                 '/Users/liuhe/Desktop/progress/TSTM_discontiueP1/second/sz/bom_price.xlsx',
-#                 PathHelp.get_file_path('TSTM_discontiueP1', 'bom_price.xlsx')]
+# octopart_file_arr = [PathHelp.get_file_path('TSTM_discontiueP4', 'octopart_price.xlsx')]
+# bom_file_arr = [PathHelp.get_file_path('TSTM_discontiueP4', 'bom_price.xlsx')]
 
 
 # 一次汇总bom 的所有pps， 2维数组，文件列表+ppns 列表

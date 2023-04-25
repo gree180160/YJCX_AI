@@ -84,7 +84,7 @@ def octopart_page_more_url(sourcefile: str, page0_sheet: str, manu: Octopart_man
         except:
             print(pnInfo + "exception")
         if pninfo_url_list.__len__() > 0:
-            ExcelHelp.add_arr_to_sheet(file_name=pn_file, sheet_name='url_pagemore2', dim_arr=pninfo_url_list)
+            ExcelHelp.add_arr_to_sheet(file_name=pn_file, sheet_name='url_pagemore4', dim_arr=pninfo_url_list)
     print('over')
 
 
@@ -112,6 +112,6 @@ def IC_hot_url(ppn: str, isWeek):
 
 
 if __name__ == "__main__":
-    octopart_page_more_url(sourcefile = PathHelp.get_file_path(None, file_name='TSTM.xlsx'), page0_sheet='page0_pn2', manu=Octopart_manu.STMicroelectronics)
+    octopart_page_more_url(sourcefile = PathHelp.get_file_path(None, file_name='TSTM.xlsx'), page0_sheet='page0_pn4', manu=Octopart_manu.STMicroelectronics)
 
 
