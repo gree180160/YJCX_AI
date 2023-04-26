@@ -9,9 +9,9 @@ from urllib.parse import urlparse
 
 
 default_url = 'https://octopart.com/'
-keyword_source_file = PathHelp.get_file_path(None, 'TSTM.xlsx')
-sheet_name = "page0_pn4"
-fold_path = '/Users/liuhe/Desktop/progress/TSTM/html4'
+keyword_source_file = PathHelp.get_file_path(None, 'TSkyworks.xlsx')
+sheet_name = "page0_ppn_1"
+fold_path = '/Users/liuhe/Desktop/progress/TSkyworks/html_files/p1'
 log_file = '/Octopart_category/octopart_key_cate_log.txt'
 
 total_page = 1
@@ -188,6 +188,8 @@ def get_finished_urls(fold_path: str):
 
 # 验证获取的ppn 是否与opn 相关
 def check_htmlPPN_valid(html_ppn, opn):
+    if opn.startswith('_20'):
+        opn = opn.replace('_20', '')
     opn = opn.replace(" ", "")
     html_ppn = html_ppn.replace(" ", "")
     # 去掉结尾的+，因为pn ,结尾有无+都是一个型号

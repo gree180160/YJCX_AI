@@ -1,4 +1,4 @@
-# 根据ppn获取buyer
+# 根据buyer 获取supplier
 import time
 '''
 # 链接：https://app.51wheatsearch.com/gs/index.html#/login
@@ -18,12 +18,12 @@ import time
 ssl._create_default_https_context = ssl._create_unverified_context
 
 sourceFile_dic = {'fileName': PathHelp.get_file_path('TSTM_discontiueP4', 'Task.xlsx'),
-                  'sourceSheet': 'ppn',
+                  'sourceSheet': 'buyer',
                   'colIndex': 1,
-                  'startIndex': 11,
+                  'startIndex': 0,
                   'endIndex': 100}
 result_save_file = PathHelp.get_file_path('TSTM_discontiueP4', 'wheat_buyer.xlsx')
-logFile = PathHelp.get_file_path('Wheat', 'Wheat_buyer_log.txt.txt')
+logFile = PathHelp.get_file_path('Wheat', 'Wheat_buyer_log.txt')
 
 login_url = 'https://app.51wheatsearch.com/gs/index.html#/login'
 default_url = 'https://app.51wheatsearch.com/gs/index.html#/resource/gather/customs'
@@ -47,21 +47,21 @@ def loginAction(aim_url):
     WaitHelp.waitfor_account_import(True, False)
 
 
-# search one ppn
-def goToPPN(ppn: str):
+# search one buyer
+def goToBuyer(buyer: str):
     try:
         try:
-            clear_button = driver.find_elements(By.CSS_SELECTOR, "span.ant-input-clear-icon.ant-input-clear-icon-has-suffix")[0]
+            clear_button = driver.find_elements(By.CSS_SELECTOR, "span.ant-input-clear-icon.ant-input-clear-icon-has-suffix")[3]
             svg = clear_button.find_element(By.TAG_NAME,'svg')
             svg.click()
         except:
             print('can not click clear button')
-        input_area = driver.find_elements(By.CSS_SELECTOR, value='input.ant-input')[1]
-        input_area.send_keys(ppn)
+        input_area = driver.find_elements(By.CSS_SELECTOR, value='input.ant-input')[3]
+        input_area.send_keys(buyer)
         search_button = driver.find_elements(By.CSS_SELECTOR, 'button.ant-btn.ant-btn-primary')[2]
         search_button.click()
     except:
-        print('input ppn error')
+        print('input buyer error')
 
 
 def get_page_info(for_current):
@@ -88,20 +88,20 @@ def get_page_info(for_current):
             print('get total page error')
 
 
-def go_to_next_page(cate_index, cate_name):
+def go_to_next_page(buyer_index, buyer_name):
     if current_page < total_page:
         try:
             next_page_li = driver.find_element(By.CSS_SELECTOR, 'li.ant-pagination-next')
             next_button = next_page_li.find_element(By.CSS_SELECTOR, 'button.ant-pagination-item-link')
             next_button.click()
             WaitHelp.waitfor_account_import(True, False)
-            anly_webdriver(cate_index, cate_name)
+            anly_webdriver(buyer_index, buyer_name)
         except:
             print('click next page button error')
 
 
 # 分析html 文件
-def anly_webdriver(cate_index, cate_name):
+def anly_webdriver(buyer_index, buyer_name):
     get_page_info(for_current=True)
     if total_page == 1:
         get_page_info(for_current=False)
@@ -114,19 +114,19 @@ def anly_webdriver(cate_index, cate_name):
         tbody = table.find_element(By.CSS_SELECTOR, 'tbody.ant-table-tbody')
         row_list = tbody.find_elements(By.CSS_SELECTOR, 'tr.ant-table-row.ant-table-row-level-0')
         for row in row_list:
-            row_info = get_rowInfo(cate_name, row)
+            row_info = get_rowInfo(buyer_name, row)
             result.append(row_info)
         if row_list.__len__() > 0 and current_page < total_page:
-            go_to_next_page(cate_index, cate_name)
+            go_to_next_page(buyer_index, buyer_name)
     except Exception as e:
         print('anly_webdriver error')
     ExcelHelp.add_arr_to_sheet(file_name=result_save_file, sheet_name='wheat_buyer', dim_arr=result)
 
 
-def get_rowInfo(cate_name, row):
-    # ['cate_name', 'data', 'buyer', 'supplier', 'des', 'buy_contry', 'supplier_contry', current_time]
+def get_rowInfo(buyer_name, row):
+    # ['buyer_name', 'data', 'buyer', 'supplier', 'des', 'buy_contry', 'supplier_contry', current_time]
     td_list = row.find_elements(By.TAG_NAME, 'td')
-    result = [cate_name, td_list[0].text, td_list[1].text.replace('/', '%2F'), td_list[2].text, td_list[3].text, td_list[4].text, td_list[5].text, time.strftime('%Y-%m-%d', time.localtime())]
+    result = [buyer_name, td_list[0].text, td_list[1].text.replace('/', '%2F'), td_list[2].text, td_list[3].text, td_list[4].text, td_list[5].text, time.strftime('%Y-%m-%d', time.localtime())]
     return result
 
 
@@ -135,15 +135,15 @@ def main():
     all_cates = ExcelHelp.read_col_content(file_name=sourceFile_dic['fileName'],
                                            sheet_name=sourceFile_dic['sourceSheet'],
                                            col_index=sourceFile_dic['colIndex'])
-    for (cate_index, cate_name) in enumerate(all_cates):
-        if cate_name is None or cate_name.__contains__('?'):
+    for (buyer_index, buyer_name) in enumerate(all_cates):
+        if buyer_name is None or buyer_name.__contains__('?'):
             continue
-        elif cate_index in range(sourceFile_dic['startIndex'], sourceFile_dic['endIndex']) or cate_index == 2:
-            print(f'cate_index is: {cate_index}  cate_name is: {cate_name}')
-            goToPPN(ppn=cate_name)
+        elif buyer_index in range(sourceFile_dic['startIndex'], sourceFile_dic['endIndex']) or buyer_index == 2:
+            print(f'buyer_index is: {buyer_index}  buyer_name is: {buyer_name}')
+            goToBuyer(buyer=buyer_name)
             WaitHelp.waitfor_account_import(True, False)
             current_page = total_page = 1
-            anly_webdriver(cate_index=cate_index, cate_name=cate_name)
+            anly_webdriver(buyer_index=buyer_index, buyer_name=buyer_name)
 
 
 if __name__ == "__main__":

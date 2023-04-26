@@ -121,10 +121,10 @@ def testDigikey():
 
 
 def combine_upload_result():
-    source_file = PathHelp.get_file_path(None, 'TSTM.xlsx')
-    files = ["/Users/liuhe/Desktop/progress/TSTM/discontiue/digikey/P4/result/1901.xlsx",
-             "/Users/liuhe/Desktop/progress/TSTM/discontiue/digikey/P4/result/1904.xlsx",
-             "/Users/liuhe/Desktop/progress/TSTM/discontiue/digikey/P4/result/1907.xlsx"
+    source_file = PathHelp.get_file_path(None, 'TSkyworks.xlsx')
+    files = ["/Users/liuhe/Desktop/progress/TSkyworks/digikey/p1/result/1.xlsx",
+             "/Users/liuhe/Desktop/progress/TSkyworks/digikey/p1/result/2.xlsx",
+             "/Users/liuhe/Desktop/progress/TSkyworks/digikey/p1/result/3.xlsx"
              ]
     result = []
     for temp in files:
@@ -162,4 +162,3 @@ def partion(source_file, source_sheet):
 if __name__ == '__main__':
     combine_upload_result()
     # main()
-    # combine_result(["/Users/liuhe/Desktop/progress/TReneseas_all/5H/11/digikey_status.xlsx", "/Users/liuhe/Desktop/progress/TReneseas_all/5H/sz/digikey_status.xlsx", "/Users/liuhe/Desktop/progress/TReneseas_all/5H/04/digikey_status.xlsx"], PathHelp.get_file_path('TRenesasAll_5H', 'digikey_status.xlsx'))

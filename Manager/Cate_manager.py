@@ -57,14 +57,15 @@ def createDayTask():
 
 # 分解数量大的ppn列表
 def decompositionPPN(unit: int):
-    source_file = PathHelp.get_file_path(None, 'TSTM.xlsx')
-    source_ppn = ExcelHelp.read_col_content(file_name=source_file, sheet_name='ppn4', col_index=1)
-    history_sheets = ['ppn1', 'ppn2', 'ppn3']
+    source_file = PathHelp.get_file_path(None, 'TSkyworks.xlsx')
+    source_ppn = ExcelHelp.read_col_content(file_name=source_file, sheet_name='ppn1', col_index=1)
+    history_sheets = []
     history_ppn = set()
     for sheet_name in history_sheets:
         history_ppn = history_ppn.union(set(ExcelHelp.read_col_content(file_name=source_file, sheet_name=sheet_name, col_index=1)))
-    sava_fold = '/Users/liuhe/Desktop/progress/TSTM/discontiue/digikey/p4/'
+    sava_fold = '/Users/liuhe/Desktop/progress/TSkyworks/digikey/p1'
     ppn_all = list(set(source_ppn).difference(set(history_ppn)))
+
     ppn_all = ppn_all[0:]
     stop_quotient = 0
     result = []
@@ -151,15 +152,22 @@ def get_wheat():
     ExcelHelp.add_arr_to_sheet(file_name=source_file, sheet_name='ppn', dim_arr=result)
 
 
+def adjustopn():
+    file = PathHelp.get_file_path(None, 'TSkyworks.xlsx')
+    source_opn = ExcelHelp.read_col_content(file_name=file, sheet_name='opn', col_index=1)
+    result = []
+    for opn in source_opn:
+        arr = str(opn).split('-')
+        if arr and arr.__len__() > 0:
+            if not (arr[0] in source_opn):
+                result.append(arr[0].strip())
+    ExcelHelp.add_arr_to_col(file, 'opn2', result)
+
+
 if __name__ == "__main__":
     # get_unfinished_RenesasPPN()
     # decompositionPPN(unit=300)
     # createDayTask()
     # get_ICSupplierAndHot(20, 300)
     # get_wheat()
-    result_save_file = PathHelp.get_file_path('Wheat', 'wheat_buyer.xlsx')
-    arr = [
-        ['IRF3710STRLPBF', '2021-06-15', 'Ао Нпотэл Digtel%23x1eАо Нпотэл%23x1eАо Нпотэл Digtel', 'Infineon Technologies',
-         'ТРАНЗИСТОР irf3710strlpbf - ПОЛЕВОЙ МДП (МЕТАЛ-ДИЭЛЕКТРИК-ПОЛУПРОВОДНИК) ТРАНЗИСТОР, n-КАНАЛЬНЫЙ, БОЛЬШОЙ МОЩНОСТИ ( 1ВТ). НАПРЯЖЕНИЕ ПРОБОЯ СТОК-ИСТОК - 100 В, НАПРЯЖЕНИЕ ПРОБОЯ ЗАТВОР-ИСТОК - 20 В НЕПРЕРЫВНЫЙ ТОК СТОКА - 57 А, РАССЕЯНИЕ МОЩНОСТИ',
-         '俄罗斯', '荷兰', '2023-04-24']]
-    ExcelHelp.add_arr_to_sheet(file_name=result_save_file, sheet_name='NetComponent_sup', dim_arr=arr)
+    adjustopn()
