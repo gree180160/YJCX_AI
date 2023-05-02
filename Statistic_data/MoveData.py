@@ -219,33 +219,33 @@ def move_digiKey(source_file: str, digikey_file: str, source_sheet: str):
 
 #合并数据前的预处理，IC 结果统计，findchips 合计，digikey 合计
 def pre_combine_data():
-    cate_source_file = PathHelp.get_file_path("TSTM_discontiueP4", 'Task.xlsx')
-    ICStock_file_arr = ["/Users/liuhe/Desktop/progress/TSTM/discontiue/TSTM_discontiueP4/11/IC_stock.xlsx",
-    "/Users/liuhe/Desktop/progress/TSTM/discontiue/TSTM_discontiueP4/sz/IC_stock.xlsx",
-    "/Users/liuhe/Desktop/progress/TSTM/discontiue/TSTM_discontiueP4/04/IC_stock.xlsx",
-                       PathHelp.get_file_path('TSTM_discontiueP4', 'IC_stock.xlsx')]
+    cate_source_file = PathHelp.get_file_path("TSkyworksP1", 'Task.xlsx')
+    ICStock_file_arr = ["/Users/liuhe/Desktop/progress/TSkyworks/discontiue/TSkyworksP1/11/IC_stock.xlsx",
+    "/Users/liuhe/Desktop/progress/TSkyworks/discontiue/TSkyworksP1/sz/IC_stock.xlsx",
+    "/Users/liuhe/Desktop/progress/TSkyworks/discontiue/TSkyworksP1/04/IC_stock.xlsx",
+                       PathHelp.get_file_path('TSkyworksP1', 'IC_stock.xlsx')]
     IC_stock_result.staticstic_IC_stock(source_files=ICStock_file_arr, aim_file=cate_source_file)
-    findchips_stock_cate.combine_result(["/Users/liuhe/Desktop/progress/TSTM/discontiue/TSTM_discontiueP4/11/findchip_stock.xlsx",
-                                         "/Users/liuhe/Desktop/progress/TSTM/discontiue/TSTM_discontiueP4/sz/findchip_stock.xlsx",
-                                         "/Users/liuhe/Desktop/progress/TSTM/discontiue/TSTM_discontiueP4/04/findchip_stock.xlsx"],
-                                        PathHelp.get_file_path('TSTM_discontiueP4', 'findchip_stock.xlsx'))
+    findchips_stock_cate.combine_result(["/Users/liuhe/Desktop/progress/TSkyworks/discontiue/TSkyworksP1/11/findchip_stock.xlsx",
+                                         "/Users/liuhe/Desktop/progress/TSkyworks/discontiue/TSkyworksP1/sz/findchip_stock.xlsx",
+                                         "/Users/liuhe/Desktop/progress/TSkyworks/discontiue/TSkyworksP1/04/findchip_stock.xlsx"],
+                                        PathHelp.get_file_path('TSkyworksP1', 'findchip_stock.xlsx'))
 
 
 # 统计汇总结果
 def statistic_data():
-    source_file = PathHelp.get_file_path('TSTM_discontiueP4', 'Task.xlsx')
-    # move_ppn_to_allInfo(source_file=source_file)
-    # move_IC_stock_to_allInfo(source_file=source_file)
-    # move_BomOct_to_allInfo(source_file=source_file)
-    # move_findchip_to_allInfo(source_file=source_file, findchip_file=PathHelp.get_file_path('TSTM_discontiueP4', 'findchip_stock.xlsx'))
-    # move_digiKey(source_file=source_file, digikey_file=PathHelp.get_file_path(None, 'TSTM.xlsx'), source_sheet = 'My Lists Worksheet')
-    # move_digiKey(source_file=source_file, digikey_file=PathHelp.get_file_path("TSTM_discontiueP4", 'dijikey_status.xlsx'), source_sheet='My Lists Worksheet')
+    source_file = PathHelp.get_file_path('TSkyworksP1', 'Task.xlsx')
+    move_ppn_to_allInfo(source_file=source_file)
+    move_IC_stock_to_allInfo(source_file=source_file)
+    move_BomOct_to_allInfo(source_file=source_file)
+    move_findchip_to_allInfo(source_file=source_file, findchip_file=PathHelp.get_file_path('TSkyworksP1', 'findchip_stock.xlsx'))
+    move_digiKey(source_file=source_file, digikey_file=PathHelp.get_file_path(None, 'TSkyworks.xlsx'), source_sheet = 'My Lists Worksheet')
+    # move_digiKey(source_file=source_file, digikey_file=PathHelp.get_file_path("TSkyworksP1", 'dijikey_status.xlsx'), source_sheet='My Lists Worksheet')
     move_IC_hot(source_file=source_file)
 
 
 if __name__ == "__main__":
-    # pre_combine_data()
-    # time.sleep(1.0)
+    pre_combine_data()
+    time.sleep(1.0)
     statistic_data()
 
 

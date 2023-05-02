@@ -19,6 +19,7 @@ def batch_rename(file_dir, new_ext):
 
 # get page_more PN
 def get_page_more_PN():
+    source_file = ''
     page0_PNS = ExcelHelp.read_col_content(file_name='//TKWPage0.xlsx',
                                            sheet_name='all', col_index=1)
     all_PNInfo_arr = ExcelHelp.read_sheet_content_by_index(file_name='//TKWPageMore.xlsx', sheet_index=2)
@@ -58,12 +59,12 @@ def createDayTask():
 # 分解数量大的ppn列表
 def decompositionPPN(unit: int):
     source_file = PathHelp.get_file_path(None, 'TSkyworks.xlsx')
-    source_ppn = ExcelHelp.read_col_content(file_name=source_file, sheet_name='ppn1', col_index=1)
-    history_sheets = []
+    source_ppn = ExcelHelp.read_col_content(file_name=source_file, sheet_name='ppn2', col_index=1)
+    history_sheets = ['ppn1']
     history_ppn = set()
     for sheet_name in history_sheets:
         history_ppn = history_ppn.union(set(ExcelHelp.read_col_content(file_name=source_file, sheet_name=sheet_name, col_index=1)))
-    sava_fold = '/Users/liuhe/Desktop/progress/TSkyworks/digikey/p1'
+    sava_fold = '/Users/liuhe/Desktop/progress/TSkyworks/digikey/p2/'
     ppn_all = list(set(source_ppn).difference(set(history_ppn)))
 
     ppn_all = ppn_all[0:]
@@ -165,9 +166,8 @@ def adjustopn():
 
 
 if __name__ == "__main__":
-    # get_unfinished_RenesasPPN()
-    # decompositionPPN(unit=300)
+    decompositionPPN(unit=300)
     # createDayTask()
     # get_ICSupplierAndHot(20, 300)
     # get_wheat()
-    adjustopn()
+    # adjustopn()

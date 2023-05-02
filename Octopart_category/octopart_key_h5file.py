@@ -10,8 +10,8 @@ from urllib.parse import urlparse
 
 default_url = 'https://octopart.com/'
 keyword_source_file = PathHelp.get_file_path(None, 'TSkyworks.xlsx')
-sheet_name = "page0_ppn_1"
-fold_path = '/Users/liuhe/Desktop/progress/TSkyworks/html_files/p1'
+sheet_name = "page0_ppn_3"
+fold_path = '/Users/liuhe/Desktop/progress/TSkyworks/html_files3'
 log_file = '/Octopart_category/octopart_key_cate_log.txt'
 
 total_page = 1
@@ -252,7 +252,7 @@ def get_unfinished_pn(keyword_source_file: str, finished_html_files_folds: list)
             manu = URLManager.Octopart_manu.Onsemi
             url = URLManager.octopart_get_page_url(key_name=temp_ppn, page=1, manu=manu)
             unfinished_url.append([temp_ppn, url])
-    ExcelHelp.add_arr_to_sheet(file_name=keyword_source_file, sheet_name='unfinished_url2', dim_arr=unfinished_url)
+    ExcelHelp.add_arr_to_sheet(file_name=keyword_source_file, sheet_name='unfinished_url', dim_arr=unfinished_url)
 
 
 # 查找遗漏的html——文件,并保存
@@ -280,12 +280,22 @@ def get_Onsemi_ppn():
     ExcelHelp.add_arr_to_col(file_name=PathHelp.get_file_path(None, 'TOnsemi_ppn.xlsx'), sheet_name='ppn4', dim_arr=ppn4)
 
 
+def change_name():
+    finished_html_files_folds = ["/Users/liuhe/Desktop/progress/TSkyworks/html_files1",
+                                 "/Users/liuhe/Desktop/progress/TSkyworks/html_files2"]
+    for temp_fold in finished_html_files_folds:
+        file_name_list = os.listdir(temp_fold)
+        for temp_file in file_name_list:
+            if temp_file.__contains__('q=_20S'):
+                new_name = temp_file.replace("q=_20S", 'q=S')
+                os.rename(temp_fold + '/' + temp_file, temp_fold + '/' + new_name)
+
+
+
 if __name__ == "__main__":
     # get_Onsemi_ppn()
     # get_category(fold_path="/Users/liuhe/Desktop", file_name="https __octopart.com_search q=LM293DR2&currency=USD&specs=0.html", key_name="LM293DR2")
     main()
-    # get_unfinished_pn(keyword_source_file=PathHelp.get_file_path(None, 'TSTM.xlsx'),
-    #                   finished_html_files_folds = ["/Users/liuhe/Desktop/progress/TSTM/html1",
-    #                                                "/Users/liuhe/Desktop/progress/TSTM/html2",
-    #                                                "/Users/liuhe/Desktop/progress/TSTM/html3",
-    #                                                "/Users/liuhe/Desktop/progress/TSTM/html4"])
+    # get_unfinished_pn(keyword_source_file=PathHelp.get_file_path(None, 'TSkyworks.xlsx'),
+    #                   finished_html_files_folds = ["/Users/liuhe/Desktop/progress/TSkyworks/html_files1",
+    #                                                "/Users/liuhe/Desktop/progress/TSkyworks/html_files2"])

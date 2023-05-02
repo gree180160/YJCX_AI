@@ -2,10 +2,10 @@ from Manager import AccountMange
 
 
 class Taskmanger:
-    task_name = 'TRenesasAll_95H'
+    task_name = 'TSkyworksP1'
     if AccountMange.Device_ID == 'Mac':
         start_index = 0
-        end_index = 125
+        end_index = 60
     elif AccountMange.Device_ID == '11':
         start_index = 125
         end_index = 250

@@ -206,5 +206,5 @@ def test_hot_value(fold_path: str):
 
 
 if __name__ == "__main__":
-    result = test_hot_value(fold_path='/Users/liuhe/Desktop/progress/TSTM/discontiue/TSTM_discontiueP4/04/IC_hot_images')
+    result = test_hot_value(fold_path='/Users/liuhe/Desktop/progress/TSkyworks/discontiue/TSkyworksP1/04/IC_hot_images')
     print(result)
