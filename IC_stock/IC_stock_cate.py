@@ -194,4 +194,3 @@ if __name__ == "__main__":
     driver.get("https://member.ic.net.cn/login.php")
     login_action("https://member.ic.net.cn/member/member_index.php")
     main()
-

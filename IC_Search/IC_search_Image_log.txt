@@ -1,40 +1,40 @@
 
-2023-04-20 10:39:23/Users/liuhe/Desktop/progress/TSkyworks/discontiue/TSkyworksP1/11/IC_hot_images/VNQ5050AK-E_M.png  10th---  1: 842
+2023-04-20 10:39:23/Users/liuhe/Desktop/progress/TSkyworks/discontiue/TSkyworksP3/11/IC_hot_images/VNQ5050AK-E_M.png  10th---  1: 842
 2: 842
 3: 942
 4: 842
 
-2023-04-20 10:39:42/Users/liuhe/Desktop/progress/TSkyworks/discontiue/TSkyworksP1/sz/IC_hot_images/L78L05ACD_M.png  7th---  1: 308
+2023-04-20 10:39:42/Users/liuhe/Desktop/progress/TSkyworks/discontiue/TSkyworksP3/sz/IC_hot_images/L78L05ACD_M.png  7th---  1: 308
 2: 303
 3: 303
 4: 303
 
-2023-04-20 10:41:28/Users/liuhe/Desktop/progress/TSkyworks/discontiue/TSkyworksP1/sz/IC_hot_images/LIS2DHTR_M.png  7th---  1: 1215
+2023-04-20 10:41:28/Users/liuhe/Desktop/progress/TSkyworks/discontiue/TSkyworksP3/sz/IC_hot_images/LIS2DHTR_M.png  7th---  1: 1215
 2: 1215
 3: 1218
 4: 1215
 
-2023-04-20 10:41:46/Users/liuhe/Desktop/progress/TSkyworks/discontiue/TSkyworksP1/sz/IC_hot_images/LIS3DH_M.png  5th---  1: 932
+2023-04-20 10:41:46/Users/liuhe/Desktop/progress/TSkyworks/discontiue/TSkyworksP3/sz/IC_hot_images/LIS3DH_M.png  5th---  1: 932
 2: 832
 3: 832
 4: 832
 
-2023-04-20 10:42:03/Users/liuhe/Desktop/progress/TSkyworks/discontiue/TSkyworksP1/sz/IC_hot_images/LIS3DH_W.png  48th---  1: 308
+2023-04-20 10:42:03/Users/liuhe/Desktop/progress/TSkyworks/discontiue/TSkyworksP3/sz/IC_hot_images/LIS3DH_W.png  48th---  1: 308
 2: 303
 3: 303
 4: 303
 
-2023-04-21 14:52:26/Users/liuhe/Desktop/progress/TSkyworks/discontiue/TSkyworksP1/sz/IC_hot_images/HIP4082IBZT_M.png  10th---  1: 1317
+2023-04-21 14:52:26/Users/liuhe/Desktop/progress/TSkyworks/discontiue/TSkyworksP3/sz/IC_hot_images/HIP4082IBZT_M.png  10th---  1: 1317
 2: 1317
 3: 4317
 4: 1317
 
-2023-04-21 15:37:08/Users/liuhe/Desktop/progress/TSkyworks/discontiue/TSkyworksP1/04/IC_hot_images/R9A06G037GNP#AA0_M.png  9th---  1: 2
+2023-04-21 15:37:08/Users/liuhe/Desktop/progress/TSkyworks/discontiue/TSkyworksP3/04/IC_hot_images/R9A06G037GNP#AA0_M.png  9th---  1: 2
 2: 2
 3: 3
 4: 2
 
-2023-04-25 18:05:01/Users/liuhe/Desktop/progress/TSkyworks/discontiue/TSkyworksP1/sz/IC_hot_images/TL431_M.png  4th---  1: 1584
+2023-04-25 18:05:01/Users/liuhe/Desktop/progress/TSkyworks/discontiue/TSkyworksP3/sz/IC_hot_images/TL431_M.png  4th---  1: 1584
 2: 1584
 3: 4584
 4: 1584

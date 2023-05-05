@@ -59,12 +59,12 @@ def createDayTask():
 # 分解数量大的ppn列表
 def decompositionPPN(unit: int):
     source_file = PathHelp.get_file_path(None, 'TSkyworks.xlsx')
-    source_ppn = ExcelHelp.read_col_content(file_name=source_file, sheet_name='ppn2', col_index=1)
-    history_sheets = ['ppn1']
+    source_ppn = ExcelHelp.read_col_content(file_name=source_file, sheet_name='ppn3', col_index=1)
+    history_sheets = ['ppn1', 'ppn2']
     history_ppn = set()
     for sheet_name in history_sheets:
         history_ppn = history_ppn.union(set(ExcelHelp.read_col_content(file_name=source_file, sheet_name=sheet_name, col_index=1)))
-    sava_fold = '/Users/liuhe/Desktop/progress/TSkyworks/digikey/p2/'
+    sava_fold = '/Users/liuhe/Desktop/progress/TSkyworks/discontiue/digikey/p3/'
     ppn_all = list(set(source_ppn).difference(set(history_ppn)))
 
     ppn_all = ppn_all[0:]

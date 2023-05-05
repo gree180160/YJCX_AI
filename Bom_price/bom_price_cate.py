@@ -184,7 +184,6 @@ def get_supplier_info(aside, cate_index, ppn, manu) -> bom_price_info.Bom_price_
         stock_num = stock_num_section.find_element(by=By.TAG_NAME, value='p').text
     except:
         stock_num = '--'
-    manu_name = '--'
     bom_price_ele = bom_price_info.Bom_price_info(cate=cate_name, manu=manu, supplier=supplier_name,
                                                   package=pakage_name, year=year_str, quoted_price=price_str,
                                                   release_time=release_time, stock_num=stock_num)
@@ -215,5 +214,5 @@ def main():
 if __name__ == "__main__":
     driver.get(default_url)
     current_need_login()
-    WaitHelp.waitfor(False, False)
+    WaitHelp.waitfor(False, True)
     main()

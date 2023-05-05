@@ -4,13 +4,11 @@ from Manager import URLManager
 
 
 def open_ppn():
-    keyword_source_file = PathHelp.get_file_path(super_path=None, file_name='TSkyworks.xlsx')
+    keyword_source_file = PathHelp.get_file_path(super_path=None, file_name='TNXP.xlsx')
     ppn_list = ExcelHelp.read_col_content(file_name=keyword_source_file, sheet_name='opn', col_index=1)
     for (index, ppn) in enumerate(ppn_list):
-        if index in range(2140, 2200):
-            if str(ppn).__contains__('-'):
-                continue
-            manu = URLManager.Octopart_manu.Skyworks
+        if index in range(0, 2500):
+            manu = URLManager.Octopart_manu.NXP
             url = URLManager.octopart_get_page_url(key_name=ppn, page=1, manu=manu)
             print(f'index is: {index} url is: {url}')
             UserInput.input_url(url, wait_time_kind=-1)
@@ -28,5 +26,5 @@ def open_url():
 
 
 if __name__ == "__main__":
-    # open_ppn()
-     open_url()
+    open_ppn()
+    #  open_url()

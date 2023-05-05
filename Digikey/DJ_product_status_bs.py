@@ -122,10 +122,15 @@ def testDigikey():
 
 def combine_upload_result():
     source_file = PathHelp.get_file_path(None, 'TSkyworks.xlsx')
-    files = ["/Users/liuhe/Desktop/progress/TSkyworks/digikey/p2/result/1.xlsx",
-             "/Users/liuhe/Desktop/progress/TSkyworks/digikey/p2/result/2.xlsx",
-             "/Users/liuhe/Desktop/progress/TSkyworks/digikey/p2/result/3.xlsx",
-             "/Users/liuhe/Desktop/progress/TSkyworks/digikey/p2/result/4.xlsx"
+    files = ["/Users/liuhe/Desktop/progress/TSkyworks/discontiue/digikey/p3/result/050401.xlsx",
+             "/Users/liuhe/Desktop/progress/TSkyworks/discontiue/digikey/p3/result/050404.xlsx",
+             "/Users/liuhe/Desktop/progress/TSkyworks/discontiue/digikey/p3/result/050407.xlsx",
+             "/Users/liuhe/Desktop/progress/TSkyworks/discontiue/digikey/p3/result/050410.xlsx",
+             "/Users/liuhe/Desktop/progress/TSkyworks/discontiue/digikey/p3/result/050413.xlsx",
+             "/Users/liuhe/Desktop/progress/TSkyworks/discontiue/digikey/p3/result/050416.xlsx",
+             "/Users/liuhe/Desktop/progress/TSkyworks/discontiue/digikey/p3/result/050419.xlsx",
+             "/Users/liuhe/Desktop/progress/TSkyworks/discontiue/digikey/p3/result/050422.xlsx",
+             "/Users/liuhe/Desktop/progress/TSkyworks/discontiue/digikey/p3/result/050425.xlsx",
              ]
     result = []
     for temp in files:
@@ -150,7 +155,7 @@ def partion(source_file, source_sheet):
     making_result = []
     for row in sheet_content:
         if row.__len__() > 4:
-            if row[3] == 'Obsolete' or row[3] == 'Last Time Buy':
+            if row[3] == 'Obsolete' or row[3] == 'Last Time Buy' or row[3] == '停产' or row[3] == '最后售卖':
                 if not (row[0] in history_continue):
                     discontiue_result.append([row[0], row[1], row[4]])
             else:

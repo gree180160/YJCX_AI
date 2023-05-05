@@ -132,7 +132,7 @@ def filert_useless_image(fold_path):
 # 识别IC——hot 图片里的热度信息并保存到数据库
 def rec_image(fold_path):
     filert_useless_image(fold_path)
-    source_file = PathHelp.get_file_path('TSkyworksP1', 'Task.xlsx')
+    source_file = PathHelp.get_file_path('TSkyworksP3', 'Task.xlsx')
     file_name_list = os.listdir(fold_path)
     file_name_list.sort()
     print(f"file count is: {file_name_list.__len__()}")
@@ -152,12 +152,12 @@ def rec_image(fold_path):
 
 
 if __name__ == "__main__":
-    rec_image(fold_path='/Users/liuhe/Desktop/progress/TSkyworks/discontiue/TSkyworksP1/04/IC_hot_images')
+    rec_image(fold_path='/Users/liuhe/Desktop/progress/TSkyworks/discontiue/TSkyworksP3/04/IC_hot_images')
     time.sleep(2.0)
-    rec_image(fold_path='/Users/liuhe/Desktop/progress/TSkyworks/discontiue/TSkyworksP1/11/IC_hot_images')
+    rec_image(fold_path='/Users/liuhe/Desktop/progress/TSkyworks/discontiue/TSkyworksP3/11/IC_hot_images')
     time.sleep(2.0)
-    rec_image(fold_path='/Users/liuhe/Desktop/progress/TSkyworks/discontiue/TSkyworksP1/sz/IC_hot_images')
+    rec_image(fold_path='/Users/liuhe/Desktop/progress/TSkyworks/discontiue/TSkyworksP3/sz/IC_hot_images')
     time.sleep(2.0)
-    rec_image(fold_path=PathHelp.get_IC_hot_image_fold('TSkyworksP1'))
+    rec_image(fold_path=PathHelp.get_IC_hot_image_fold('TSkyworksP3'))
 
 

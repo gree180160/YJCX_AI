@@ -17,12 +17,12 @@ import time
 
 ssl._create_default_https_context = ssl._create_unverified_context
 
-sourceFile_dic = {'fileName': PathHelp.get_file_path('TSkyworksP1', 'Task.xlsx'),
-                  'sourceSheet': 'ppn',
+sourceFile_dic = {'fileName': PathHelp.get_file_path('Wheat', 'Task.xlsx'),
+                  'sourceSheet': 'manu',
                   'colIndex': 1,
-                  'startIndex': 11,
-                  'endIndex': 100}
-result_save_file = PathHelp.get_file_path('TSkyworksP1', 'wheat_buyer.xlsx')
+                  'startIndex': 0,
+                  'endIndex': 15}
+result_save_file = PathHelp.get_file_path('Wheat', 'wheat_buyer.xlsx')
 logFile = PathHelp.get_file_path('Wheat', 'Wheat_buyer_log.txt.txt')
 
 login_url = 'https://app.51wheatsearch.com/gs/index.html#/login'
@@ -120,7 +120,7 @@ def anly_webdriver(cate_index, cate_name):
             go_to_next_page(cate_index, cate_name)
     except Exception as e:
         print('anly_webdriver error')
-    ExcelHelp.add_arr_to_sheet(file_name=result_save_file, sheet_name='wheat_buyer', dim_arr=result)
+    ExcelHelp.add_arr_to_sheet(file_name=result_save_file, sheet_name='manu_record', dim_arr=result)
 
 
 def get_rowInfo(cate_name, row):

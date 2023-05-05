@@ -42,41 +42,22 @@ def analy_html(pn_index, pn):
     try:
         all_cates_table = driver.find_elements(By.CSS_SELECTOR, 'div.jsx-2906236790.prices-view')
         if all_cates_table.__len__() > 0:
-            first_row = all_cates_table[0].find_elements(By.CSS_SELECTOR, 'div.jsx-2906236790')
             left_rows = all_cates_table[0].find_elements(By.CSS_SELECTOR, 'div.jsx-1681079743.part')
-            showed_rows = first_row + left_rows
+            showed_rows = left_rows
         # 默认直接显示的row
         for temp_cate_row in showed_rows:
             try:
-                if not cate_valid(pn, temp_cate_row):
-                    continue
-                need_more = True  # click more button
-                info_table_body = temp_cate_row.find_element(By.CSS_SELECTOR, 'tbody.jsx-4253165187')
-                tr_arr = info_table_body.find_elements(by=By.TAG_NAME, value='tr')
                 ppn = get_cate_name(cate_area=temp_cate_row, opn=pn)
                 manu = get_manufacture_name(cate_area=temp_cate_row, opn=pn)
-                for tr in tr_arr:
-                    if not need_more:
-                        break
-                    cate_price_ele = get_supplier_info(tr=tr, ppn=ppn, manu_name=manu)
-                    # 只有实心(1)数据才是有效的，只有空心(-1)才需要停止loop
-                    if cate_price_ele.is_valid_supplier():
-                        valid_supplier_arr.append(cate_price_ele.descritpion_arr())
-                    else:
-                        print(f'supplier invalid: {cate_price_ele.description_str()}')
-                        need_more = False
-                if need_more:
-                    click_more_row(temp_cate_row, cate_price_ele.cate)
-                finished_count = tr_arr.__len__()
-                new_tr_arr = info_table_body.find_elements(by=By.TAG_NAME, value='tr')
-                unfinished_arr = new_tr_arr[finished_count:]
-                for tr in unfinished_arr:
-                    cate_price_ele = get_supplier_info(tr=tr, ppn=ppn, manu_name=manu)
-                    # 只有实心(1)数据才是有效的，只有空心(-1)才需要停止loop
-                    if cate_price_ele.is_valid_supplier():
-                        valid_supplier_arr.append(cate_price_ele.descritpion_arr())
-                    else:
-                        print(f'supplier invalid: {cate_price_ele.description_str()}')
+                tables = temp_cate_row.find_elements(By.CSS_SELECTOR, 'table')
+                for temp_table in tables:
+                    first_th_text = temp_table.find_elements(By.TAG_NAME, 'th')[1].text
+                    if first_th_text == 'Authorized Distributors':
+                        tbody = temp_table.find_element(By.TAG_NAME, 'tbody')
+                        tr_list = tbody.find_elements(By.TAG_NAME, 'tr')
+                        for tr_temp in tr_list:
+                            cate_price_ele = get_supplier_info(tr=tr_temp, ppn=ppn, manu_name=manu)
+                            valid_supplier_arr.append(cate_price_ele.descritpion_arr())
             except Exception as e:
                 LogHelper.write_log(log_file_name=log_file, content=f'{pn} 当个cate 解析异常：{e} ')
     except Exception as e:
@@ -230,4 +211,34 @@ if __name__ == "__main__":
     driver.get(default_url)
     WaitHelp.waitfor_octopart(False, False)
     main()
-
+# 解析某个型号的页面信息，如果有更多，直接点击，然后只选择start ， 遇到第一个不是star 的就返回
+def analy_html(pn_index, pn):
+    valid_supplier_arr = []
+    try:
+        all_cates_table = driver.find_elements(By.CSS_SELECTOR, 'div.jsx-2906236790.prices-view')
+        if all_cates_table.__len__() > 0:
+            left_rows = all_cates_table[0].find_elements(By.CSS_SELECTOR, 'div.jsx-1681079743.part')
+            showed_rows = left_rows
+        # 默认直接显示的row
+        for temp_cate_row in showed_rows:
+            try:
+                ppn = get_cate_name(cate_area=temp_cate_row, opn=pn)
+                manu = get_manufacture_name(cate_area=temp_cate_row, opn=pn)
+                tables = temp_cate_row.find_elements(By.CSS_SELECTOR, 'table')
+                for temp_table in tables:
+                    first_th_text = temp_table.find_elements(By.TAG_NAME, 'th')[1].text
+                    if first_th_text == 'Authorized Distributors':
+                        tbody = temp_table.find_element(By.TAG_NAME, 'tbody')
+                        tr_list = tbody.find_elements(By.TAG_NAME, 'tr')
+                        for tr_temp in tr_list:
+                            cate_price_ele = get_supplier_info(tr=tr_temp, ppn=ppn, manu_name=manu)
+                            valid_supplier_arr.append(cate_price_ele.descritpion_arr())
+            except Exception as e:
+                LogHelper.write_log(log_file_name=log_file, content=f'{pn} 当个cate 解析异常：{e} ')
+    except Exception as e:
+        LogHelper.write_log(log_file_name=log_file, content=f'{pn} 页面 解析异常：{e} ')
+    ExcelHelp.add_arr_to_sheet(
+        file_name=result_save_file,
+        sheet_name='octopart_price',
+        dim_arr=valid_supplier_arr)
+    valid_supplier_arr.clear()

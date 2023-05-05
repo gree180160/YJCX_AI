@@ -48,5 +48,5 @@ def change_screenShotName(fold_path):
 
 
 if __name__ == '__main__':
-     # open_url(isWeek=True)
-    change_screenShotName(fold_path='/Users/liuhe/Desktop/temp_hot')
+     open_url(isWeek=True)
+    # change_screenShotName(fold_path='/Users/liuhe/Desktop/temp_hot')
