@@ -7,7 +7,7 @@ def open_ppn():
     keyword_source_file = PathHelp.get_file_path(super_path=None, file_name='TNXP.xlsx')
     ppn_list = ExcelHelp.read_col_content(file_name=keyword_source_file, sheet_name='opn', col_index=1)
     for (index, ppn) in enumerate(ppn_list):
-        if index in range(0, 2500):
+        if index in range(163, 2500):
             manu = URLManager.Octopart_manu.NXP
             url = URLManager.octopart_get_page_url(key_name=ppn, page=1, manu=manu)
             print(f'index is: {index} url is: {url}')

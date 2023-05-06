@@ -9,14 +9,14 @@ class Bom_price_info:
         self.supplier = supplier
         self.package = package  # 封装
         self.year = year
-        self.quoted_price = quoted_price
+        self.quoted_price = quoted_price.replace('官\n', '')
         self.release_time = release_time
         self.stock_num = stock_num
         self.search_date = time.strftime('%Y-%m-%d', time.localtime())
         self.valid_supplier = self.is_valid_supplier()
 
     def is_valid_supplier(self) -> bool:
-        valid_time_arr = ['3天内', '1周内']
+        valid_time_arr = ['3天内', '1周内', '今天', '昨天']
         if valid_time_arr.__contains__(self.release_time):
             return True
         else:

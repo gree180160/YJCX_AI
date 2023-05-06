@@ -1,11 +1,12 @@
 # 根据ppn获取buyer
+import datetime
 import time
 '''
 # 链接：https://app.51wheatsearch.com/gs/index.html#/login
 # 选择子账号登录
 # 公司名称：深圳市元极创新电子有限公司
-# 账号： 19805243800   密码：Yjcx12345!
-# 账号： 15976988260   密码：Yjcx12345!
+#  19805243800   Yjcx12345!
+#  13316837463    Yjcx12345!
 '''
 
 from selenium import webdriver
@@ -17,10 +18,10 @@ import time
 
 ssl._create_default_https_context = ssl._create_unverified_context
 
-sourceFile_dic = {'fileName': PathHelp.get_file_path('Wheat', 'Task.xlsx'),
+sourceFile_dic = {'fileName': PathHelp.get_file_path('Wheat', 'WheatTask.xlsx'),
                   'sourceSheet': 'manu',
                   'colIndex': 1,
-                  'startIndex': 0,
+                  'startIndex': 2,
                   'endIndex': 15}
 result_save_file = PathHelp.get_file_path('Wheat', 'wheat_buyer.xlsx')
 logFile = PathHelp.get_file_path('Wheat', 'Wheat_buyer_log.txt.txt')
@@ -28,7 +29,7 @@ logFile = PathHelp.get_file_path('Wheat', 'Wheat_buyer_log.txt.txt')
 login_url = 'https://app.51wheatsearch.com/gs/index.html#/login'
 default_url = 'https://app.51wheatsearch.com/gs/index.html#/resource/gather/customs'
 total_page = 1
-current_page = 1
+current_page = 1 # infenion 15
 
 driver_option = webdriver.ChromeOptions()
 driver_option.add_argument(f'--proxy-server=http://{IPHelper.getRandowCityIP()}')
@@ -48,16 +49,28 @@ def loginAction(aim_url):
 
 
 # search one ppn
-def goToPPN(ppn: str):
+def goToPPN(ppn: str, manu: str):
     try:
+        #set ppn
         try:
             clear_button = driver.find_elements(By.CSS_SELECTOR, "span.ant-input-clear-icon.ant-input-clear-icon-has-suffix")[0]
             svg = clear_button.find_element(By.TAG_NAME,'svg')
             svg.click()
         except:
-            print('can not click clear button')
-        input_area = driver.find_elements(By.CSS_SELECTOR, value='input.ant-input')[1]
-        input_area.send_keys(ppn)
+            print('can not click keyword clear button')
+        input_area_keyword = driver.find_elements(By.CSS_SELECTOR, value='input.ant-input')[1]
+        input_area_keyword.send_keys(ppn)
+        # set supplier
+        if manu and manu.__len__() > 0:
+            try:
+                clear_button = \
+                driver.find_elements(By.CSS_SELECTOR, "span.ant-input-clear-icon")[4]
+                svg = clear_button.find_element(By.TAG_NAME, 'svg')
+                svg.click()
+            except:
+                print('can not click supplier clear button')
+            input_area_supplier = driver.find_elements(By.CSS_SELECTOR, value='input.ant-input')[4]
+            input_area_supplier.send_keys(manu)
         search_button = driver.find_elements(By.CSS_SELECTOR, 'button.ant-btn.ant-btn-primary')[2]
         search_button.click()
     except:
@@ -89,6 +102,10 @@ def get_page_info(for_current):
 
 
 def go_to_next_page(cate_index, cate_name):
+    now = datetime.datetime.now()
+    h_value = (now.hour)
+    if h_value >= 22 or h_value <= 9:
+        return
     if current_page < total_page:
         try:
             next_page_li = driver.find_element(By.CSS_SELECTOR, 'li.ant-pagination-next')
@@ -116,11 +133,13 @@ def anly_webdriver(cate_index, cate_name):
         for row in row_list:
             row_info = get_rowInfo(cate_name, row)
             result.append(row_info)
-        if row_list.__len__() > 0 and current_page < total_page:
-            go_to_next_page(cate_index, cate_name)
+        if row_list.__len__() > 0:
+            ExcelHelp.add_arr_to_sheet(file_name=result_save_file, sheet_name='manu_record', dim_arr=result)
+            if current_page < total_page:
+                go_to_next_page(cate_index, cate_name)
     except Exception as e:
         print('anly_webdriver error')
-    ExcelHelp.add_arr_to_sheet(file_name=result_save_file, sheet_name='manu_record', dim_arr=result)
+
 
 
 def get_rowInfo(cate_name, row):
@@ -136,11 +155,15 @@ def main():
                                            sheet_name=sourceFile_dic['sourceSheet'],
                                            col_index=sourceFile_dic['colIndex'])
     for (cate_index, cate_name) in enumerate(all_cates):
+        now = datetime.datetime.now()
+        h_value = now.hour
+        if h_value >= 22 or h_value <= 9:
+            continue
         if cate_name is None or cate_name.__contains__('?'):
             continue
-        elif cate_index in range(sourceFile_dic['startIndex'], sourceFile_dic['endIndex']) or cate_index == 2:
+        elif cate_index in range(sourceFile_dic['startIndex'], sourceFile_dic['endIndex']):
             print(f'cate_index is: {cate_index}  cate_name is: {cate_name}')
-            goToPPN(ppn=cate_name)
+            goToPPN(ppn=cate_name, manu=cate_name)
             WaitHelp.waitfor_account_import(True, False)
             current_page = total_page = 1
             anly_webdriver(cate_index=cate_index, cate_name=cate_name)

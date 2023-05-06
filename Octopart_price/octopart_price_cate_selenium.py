@@ -4,9 +4,9 @@ import ssl
 import undetected_chromedriver as uc
 from selenium import webdriver
 from selenium.webdriver.common.by import By
-from WRTools import ExcelHelp, UserAgentHelper, LogHelper, PathHelp, WaitHelp
+from WRTools import ExcelHelp, LogHelper, PathHelp, WaitHelp
 import octopart_price_info
-from Manager import TaskManager
+from Manager import TaskManager, URLManager
 import re
 
 ssl._create_default_https_context = ssl._create_unverified_context
@@ -21,7 +21,7 @@ default_url = 'https://octopart.com/what-is-octopart'
 sourceFile_dic = {'fileName': PathHelp.get_file_path(TaskManager.Taskmanger().task_name, 'Task.xlsx'),
                   'sourceSheet': 'ppn',
                   'colIndex': 1,
-                  'startIndex': 0,
+                  'startIndex': 76,
                   'endIndex': TaskManager.Taskmanger().end_index}
 result_save_file = PathHelp.get_file_path(TaskManager.Taskmanger().task_name, 'octopart_price.xlsx')
 
@@ -31,7 +31,8 @@ log_file = PathHelp.get_file_path('Octopart_price', 'ocopar_price_log.txt')
 # 跳转到下一个指定的型号
 def go_to_cate(pn_index, pn):
     try:
-        driver.get(f"https://octopart.com/search?q={pn}&currency=USD&specs=0")
+        url = URLManager.octopart_get_page_url(pn, 1, URLManager.Octopart_manu.Renesas)
+        driver.get(url)
     except Exception as e:
         LogHelper.write_log(log_file_name=log_file, content=f'{pn} go_to_cate except: {e}')
 

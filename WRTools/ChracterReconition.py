@@ -8,7 +8,7 @@ import re
 import os
 from WRTools import LogHelper, PathHelp
 
-
+corp_path = PathHelp.get_file_path('IC_Search', 'CroppedImages')
 
 # 是否是mac 高清图
 def get_image_scale(image_name):
@@ -157,8 +157,8 @@ def SplitPic_week(source_pic: str):
         # 开始截取
         region = img.crop((x, y+space*index, x + w, y+space*index + h))
         # 保存图片
-        region.save(f'/Users/liuhe/Desktop/识图test/w_{index+1}.png')
-        reco_value = getHotValue(sourceImage=source_pic, row_image_name=f'/Users/liuhe/Desktop/识图test/w_{index+1}.png', index=index)
+        region.save(f'{corp_path}/w_{index+1}.png')
+        reco_value = getHotValue(sourceImage=source_pic, row_image_name=f'{corp_path}/w_{index+1}.png', index=index)
         search_record.append(reco_value)
     return search_record
 
@@ -189,8 +189,8 @@ def SplitPic_month(source_pic: str):
         # 开始截取
         region = img.crop((x, y+space*index, x + w, y+space*index + h))
         # 保存图片
-        region.save(f'/Users/liuhe/Desktop/识图test/M_{index+1}.png')
-        rec_value = getHotValue(sourceImage=source_pic, row_image_name=f'/Users/liuhe/Desktop/识图test/M_{index+1}.png', index=index)
+        region.save(f'{corp_path}/M_{index+1}.png')
+        rec_value = getHotValue(sourceImage=source_pic, row_image_name=f'{corp_path}/M_{index+1}.png', index=index)
         search_record.append(rec_value)
     return search_record
 
@@ -206,5 +206,5 @@ def test_hot_value(fold_path: str):
 
 
 if __name__ == "__main__":
-    result = test_hot_value(fold_path='/Users/liuhe/Desktop/progress/TSkyworks/discontiue/TSkyworksP3/04/IC_hot_images')
+    result = test_hot_value(fold_path='/Users/liuhe/Desktop/progress/TReneseas_all/105H/04/IC_hot_images')
     print(result)

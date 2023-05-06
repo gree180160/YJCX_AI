@@ -89,85 +89,10 @@ def decompositionPPN(unit: int):
         ExcelHelp.add_arr_to_sheet(file_name=file_path, sheet_name='Sheet', dim_arr=result)
 
 
-def get_ICSupplierAndHot(IC_supplier_max, hot_min):
-    '''
-    / Users / liuhe / Desktop / progress / TInfineon / 5 H / TInfenion_5H.xlsx, .....80H
-    / Users / liuhe / Desktop / progress / TReneseas_all / 5H / mac / Task.xlsx....90H
-    '''
-    index = 5
-    result = []
-    while index <= 75:
-        try:
-            file = f'/Users/liuhe/Desktop/progress/TReneseas_all/{index}H/mac/Task.xlsx'
-            sheet_content = ExcelHelp.read_sheet_content_by_name(file_name=file, sheet_name='all_info')
-            default_max_row = 14
-            for (row_index, row) in enumerate(sheet_content):
-                if row_index == 0:
-                    if str(row[14]) != 'max_month1':
-                        for (cell_index, cell) in enumerate(row):
-                            if str(cell) == 'max_month1':
-                                default_max_row = cell_index
-                    print(f'max month index is :{default_max_row}')
-                else:
-                    try:
-                        max_m_value = int(row[default_max_row])
-                        print(f'max_m_value is:{max_m_value}')
-                    except:
-                        max_m_value = 0
-                        print(f'change to int error : {str(row[default_max_row])}')
-                    if max_m_value >= 300:
-                        try:
-                            IC_supplier = int(row[2])
-                        except:
-                            IC_supplier = 0
-
-                        if IC_supplier <= IC_supplier_max:
-                            result.append([row[0], row[1], row[default_max_row]])
-                            print(f'+ ic supplier is : {IC_supplier}')
-                        else:
-                            print(f'ic supplier is : {IC_supplier}')
-        except Exception as e:
-            print(f'1 get max_m error file is: {file}')
-        index += 5
-    ExcelHelp.add_arr_to_sheet('/Users/liuhe/Desktop/TWheat.xlsx', 'Sheet3', result)
-
-
-def get_wheat():
-    source_file = '/Users/liuhe/Desktop/TWheat.xlsx'
-    sheet1 = ExcelHelp.read_sheet_content_by_name(file_name=source_file, sheet_name='Sheet1')
-    sheet2 = ExcelHelp.read_sheet_content_by_name(file_name=source_file, sheet_name='Sheet3')
-    sheet3 = ExcelHelp.read_sheet_content_by_name(file_name=source_file, sheet_name='Sheet3')
-    sheet_all = sheet1 + sheet2 + sheet3
-    result = []
-    for row in sheet_all:
-        try:
-            hot_value = int(row[2])
-        except:
-            hot_value = 0
-        if hot_value >= 500:
-            result.append(row)
-        elif hot_value >= 400 and str(row[1]).__contains__('Infineon'):
-            result.append(row)
-        elif hot_value >= 300 and str(row[1]).__contains__('Renesas'):
-            result.append(row)
-    ExcelHelp.add_arr_to_sheet(file_name=source_file, sheet_name='ppn', dim_arr=result)
-
-
-def adjustopn():
-    file = PathHelp.get_file_path(None, 'TSkyworks.xlsx')
-    source_opn = ExcelHelp.read_col_content(file_name=file, sheet_name='opn', col_index=1)
-    result = []
-    for opn in source_opn:
-        arr = str(opn).split('-')
-        if arr and arr.__len__() > 0:
-            if not (arr[0] in source_opn):
-                result.append(arr[0].strip())
-    ExcelHelp.add_arr_to_col(file, 'opn2', result)
-
-
 if __name__ == "__main__":
-    decompositionPPN(unit=300)
+    # decompositionPPN(unit=300)
     # createDayTask()
     # get_ICSupplierAndHot(20, 300)
     # get_wheat()
     # adjustopn()
+    get_wheat()

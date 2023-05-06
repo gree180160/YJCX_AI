@@ -97,11 +97,14 @@ def analy_html(cate_index, ppn, manu):
     # 默认直接现实的row
     valid_supplier_arr = []
     try:
-        yun_exg = driver.find_element(by=By.ID, value='yunexg')
-        ul_arr = yun_exg.find_elements(by=By.TAG_NAME, value='ul')
-        for ul in ul_arr:
-            if not need_more:
-                break
+        # yun_exg = driver.find_element(by=By.ID, value='yunexg')
+        # ul_arr = yun_exg.find_elements(by=By.TAG_NAME, value='ul')
+        guwangMore()
+        time.sleep(10.0)
+        ur_arr = driver.find_elements(By.CSS_SELECTOR, 'ul.alt.bom_cloud_h')
+        for ul in ur_arr:
+            # if not need_more:
+            #     break
             aside = ul.find_element(by=By.TAG_NAME, value='aside')
             bom_price_ele = get_supplier_info(aside=aside, cate_index=cate_index, ppn=ppn, manu=manu)
             if not bom_price_ele.is_valid_supplier():
@@ -142,6 +145,15 @@ def analy_html(cate_index, ppn, manu):
     sheet_name='bom_price',
     dim_arr=valid_supplier_arr)
     valid_supplier_arr.clear()
+
+
+def guwangMore():
+    try:
+        guwangmore_nav = driver.find_element(By.CSS_SELECTOR, 'nav.bom_yun_agens.bomID_yun_agens.guanwangMore')
+        a = guwangmore_nav.find_element(By.TAG_NAME, 'a')
+        a.click()
+    except:
+        print('click gu wang more error')
 
 
 # 将页面row的内容 转化成Bom_price_info

@@ -17,12 +17,12 @@ import time
 
 ssl._create_default_https_context = ssl._create_unverified_context
 
-sourceFile_dic = {'fileName': PathHelp.get_file_path('TSkyworksP3', 'Task.xlsx'),
+sourceFile_dic = {'fileName': PathHelp.get_file_path('TRenesasAll_105H', 'Task.xlsx'),
                   'sourceSheet': 'buyer',
                   'colIndex': 1,
                   'startIndex': 0,
                   'endIndex': 100}
-result_save_file = PathHelp.get_file_path('TSkyworksP3', 'wheat_buyer.xlsx')
+result_save_file = PathHelp.get_file_path('TRenesasAll_105H', 'wheat_buyer.xlsx')
 logFile = PathHelp.get_file_path('Wheat', 'Wheat_buyer_log.txt')
 
 login_url = 'https://app.51wheatsearch.com/gs/index.html#/login'
@@ -56,8 +56,8 @@ def goToBuyer(buyer: str):
             svg.click()
         except:
             print('can not click clear button')
-        input_area = driver.find_elements(By.CSS_SELECTOR, value='input.ant-input')[3]
-        input_area.send_keys(buyer)
+        input_area_buyer = driver.find_elements(By.CSS_SELECTOR, value='input.ant-input')[3]
+        input_area_buyer.send_keys(buyer)
         search_button = driver.find_elements(By.CSS_SELECTOR, 'button.ant-btn.ant-btn-primary')[2]
         search_button.click()
     except:
@@ -138,7 +138,7 @@ def main():
     for (buyer_index, buyer_name) in enumerate(all_cates):
         if buyer_name is None or buyer_name.__contains__('?'):
             continue
-        elif buyer_index in range(sourceFile_dic['startIndex'], sourceFile_dic['endIndex']) or buyer_index == 2:
+        elif buyer_index in range(sourceFile_dic['startIndex'], sourceFile_dic['endIndex']):
             print(f'buyer_index is: {buyer_index}  buyer_name is: {buyer_name}')
             goToBuyer(buyer=buyer_name)
             WaitHelp.waitfor_account_import(True, False)

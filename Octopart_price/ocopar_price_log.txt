@@ -8057,3 +8057,25 @@ from unknown error: web view not found
   (Session info: chrome=113.0.5672.63)
 
 2023-05-05 10:53:19STM32F429IGT6 当个cate 解析异常：get_supplier_info() got an unexpected keyword argument 'cate_name' 
+2023-05-05 16:02:3871V67703S80BQGI8 go_to_cate except: Message: timeout: Timed out receiving message from renderer: -0.009
+  (Session info: chrome=113.0.5672.63)
+
+2023-05-05 16:21:2471V67703S80BQGI8 页面 解析异常：Message: timeout: Timed out receiving message from renderer: 480.000
+  (Session info: chrome=113.0.5672.63)
+
+2023-05-05 16:29:2471V67703S80BQI go_to_cate except: Message: timeout: Timed out receiving message from renderer: 480.000
+  (Session info: chrome=113.0.5672.63)
+
+2023-05-06 11:14:537204L35P 页面 解析异常：local variable 'showed_rows' referenced before assignment 
+2023-05-06 14:25:587205L30TDB 页面 解析异常：Message: timeout: Timed out receiving message from renderer: 480.000
+  (Session info: chrome=113.0.5672.63)
+
+2023-05-06 14:33:587205L35J go_to_cate except: Message: timeout: Timed out receiving message from renderer: 480.000
+  (Session info: chrome=113.0.5672.63)
+
+2023-05-06 14:52:597205L35J 页面 解析异常：Message: timeout: Timed out receiving message from renderer: 480.000
+  (Session info: chrome=113.0.5672.63)
+
+2023-05-06 15:00:597205L35J/6280 go_to_cate except: Message: timeout: Timed out receiving message from renderer: 480.000
+  (Session info: chrome=113.0.5672.63)
+

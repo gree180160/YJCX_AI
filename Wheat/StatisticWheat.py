@@ -2,8 +2,8 @@ from WRTools import ExcelHelp, PathHelp
 
 
 def statistic_buy():
-    ppn_list = ExcelHelp.read_col_content(file_name=PathHelp.get_file_path('TSkyworksP3', 'Task.xlsx'), sheet_name='ppn', col_index=1)
-    source_file = PathHelp.get_file_path('TSkyworksP3', 'wheat_buyer.xlsx')
+    ppn_list = ExcelHelp.read_col_content(file_name=PathHelp.get_file_path('TRenesasAll_105H', 'Task.xlsx'), sheet_name='ppn', col_index=1)
+    source_file = PathHelp.get_file_path('TRenesasAll_105H', 'wheat_buyer.xlsx')
     sheet_content = ExcelHelp.read_sheet_content_by_name(file_name=source_file, sheet_name='wheat_buyer')
     all_info = []
     for ppn in ppn_list:

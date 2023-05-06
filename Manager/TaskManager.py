@@ -2,7 +2,7 @@ from Manager import AccountMange
 
 
 class Taskmanger:
-    task_name = 'TRenesasAll_105H'
+    task_name = 'TRenesasAll_110H'
     if AccountMange.Device_ID == 'Mac':
         start_index = 0
         end_index = 125
