@@ -9,13 +9,13 @@ import base64
 from selenium.webdriver.common.by import By
 import ssl
 import os
-from Manager import AccountMange,URLManager
+from Manager import AccManage,URLManager
 
 
 ssl._create_default_https_context = ssl._create_unverified_context
 total_page = 1
 current_page = 1
-accouts_arr = [[AccountMange.IC_hot['n'], AccountMange.IC_hot['p']]]
+accouts_arr = [[AccManage.IC_hot['n'], AccManage.IC_hot['p']]]
 # driver_option = webdriver.ChromeOptions()
 # driver_option.add_argument(f'--proxy-server=http://{IPHelper.getRandowCityIP()}')
 fire_options = webdriver.FirefoxOptions()

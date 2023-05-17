@@ -16,24 +16,24 @@ import Bom_price.bom_price_info
 ssl._create_default_https_context = ssl._create_unverified_context
 
 
-cate_source_file = PathHelp.get_file_path(super_path='TRenesasAll_105H', file_name='Task.xlsx')
+cate_source_file = PathHelp.get_file_path(super_path='TRenesasAll_145H', file_name='Task.xlsx')
 result_save_file = cate_source_file
 octopart_sheet_name = 'octopart_price'
 bom_sheet_name = 'bom_price'
 
 
-octopart_file_arr = ['/Users/liuhe/Desktop/progress/TReneseas_all/105H/04/octopart_price.xlsx',
-                    '/Users/liuhe/Desktop/progress/TReneseas_all/105H/11/octopart_price.xlsx',
-                    '/Users/liuhe/Desktop/progress/TReneseas_all/105H/sz/octopart_price.xlsx',
-                    PathHelp.get_file_path('TRenesasAll_105H', 'octopart_price.xlsx')]
-bom_file_arr = ['/Users/liuhe/Desktop/progress/TReneseas_all/105H/04/bom_price.xlsx',
-                '/Users/liuhe/Desktop/progress/TReneseas_all/105H/11/bom_price.xlsx',
-                '/Users/liuhe/Desktop/progress/TReneseas_all/105H/sz/bom_price.xlsx',
-                PathHelp.get_file_path('TRenesasAll_105H', 'bom_price.xlsx')]
+octopart_file_arr = ['/Users/liuhe/Desktop/progress/TReneseas_all/145H/04/octopart_price.xlsx',
+                    '/Users/liuhe/Desktop/progress/TReneseas_all/145H/11/octopart_price.xlsx',
+                    '/Users/liuhe/Desktop/progress/TReneseas_all/145H/sz/octopart_price.xlsx',
+                    PathHelp.get_file_path('TRenesasAll_145H', 'octopart_price.xlsx')]
+bom_file_arr = ['/Users/liuhe/Desktop/progress/TReneseas_all/145H/04/bom_price.xlsx',
+                '/Users/liuhe/Desktop/progress/TReneseas_all/145H/11/bom_price.xlsx',
+                '/Users/liuhe/Desktop/progress/TReneseas_all/145H/sz/bom_price.xlsx',
+                PathHelp.get_file_path('TRenesasAll_145H', 'bom_price.xlsx')]
 
 # little ppn
-# octopart_file_arr = [PathHelp.get_file_path('TRenesasAll_105H', 'octopart_price.xlsx')]
-# bom_file_arr = [PathHelp.get_file_path('TRenesasAll_105H', 'bom_price.xlsx')]
+# octopart_file_arr = [PathHelp.get_file_path('TRenesasAll_145H', 'octopart_price.xlsx')]
+# bom_file_arr = [PathHelp.get_file_path('TRenesasAll_145H', 'bom_price.xlsx')]
 
 
 # 一次汇总bom 的所有pps， 2维数组，文件列表+ppns 列表
@@ -64,13 +64,14 @@ def get_bom_price(file_index, ppn_index, ppn, rate):
     for row_content in sheet_content:
         if str(row_content[0]) == ppn:
             manu = row_content[1]
-            print(f'是否有报价记录 is: {row_content[9]}')
+            # print(f'是否有报价记录 is: {row_content[9]}')
             valid_supplier = (row_content[9] == "TRUE" or row_content[9])
             if not valid_supplier:  # 只需要三天内，一周内掉报价
                 break
             price_str = row_content[5]
             if price_str is not None:
                 if len(price_str) > 0:
+                    price_str = price_str.replace('官\n', '')
                     if '￥' in price_str:
                         price_str = price_str.replace('￥', '')
                         price_str = price_str.replace(',', '')

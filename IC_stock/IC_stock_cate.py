@@ -7,7 +7,7 @@ import random
 import undetected_chromedriver as uc
 import ssl
 from IC_stock.IC_Stock_Info import IC_Stock_Info
-from Manager import AccountMange, URLManager, TaskManager
+from Manager import AccManage, URLManager, TaskManager
 from WRTools import ExcelHelp, WaitHelp, PathHelp
 
 
@@ -16,7 +16,7 @@ ssl._create_default_https_context = ssl._create_unverified_context
 sourceFile_dic = {'fileName': PathHelp.get_file_path(TaskManager.Taskmanger().task_name, 'Task.xlsx'),
                   'sourceSheet': 'ppn',
                   'colIndex': 1,
-                  'startIndex': 86,
+                  'startIndex': 0,
                   'endIndex': TaskManager.Taskmanger().end_index}
 result_file = PathHelp.get_file_path(super_path=TaskManager.Taskmanger().task_name, file_name='IC_stock.xlsx')
 
@@ -25,7 +25,7 @@ total_page = 1
 
 current_page = 1
 VerificationCodePage = 0
-accouts_arr = [[AccountMange.IC_stock['n'], AccountMange.IC_stock['p']]]
+accouts_arr = [[AccManage.IC_stock['n'], AccManage.IC_stock['p']]]
 # driver_option = webdriver.ChromeOptions()
 # driver_option.add_argument(f'--proxy-server=http://{IPHelper.getRandowCityIP()}')
 # driver_option.add_argument("–incognito")
@@ -70,7 +70,7 @@ def login_action(aim_url):
         WaitHelp.waitfor_account_import(True, False)
     if driver.current_url.startswith('https://member.ic.net'):  # 首次登录
         driver.get(aim_url)
-    elif driver.current_url.startswith('https://www.ic.net.cn/search'):  # 查询过程中出现登录
+    elif driver.current_url.startswith('https://ST.ic.net.cn/search'):  # 查询过程中出现登录
         driver.get(aim_url)
 
 
@@ -172,7 +172,7 @@ def get_stock(cate_index, cate_name):
 # 验证当前页面是否正在等待用户验证，连续三次请求出现验证码页面，则关闭页面
 def checkVerificationCodePage():
     global VerificationCodePage
-    if driver.current_url == 'https://www.ic.net.cn/searchPnCode.php':
+    if driver.current_url == 'https://ST.ic.net.cn/searchPnCode.php':
         VerificationCodePage += 1
     else:
         VerificationCodePage = 0

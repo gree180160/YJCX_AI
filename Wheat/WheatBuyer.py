@@ -1,6 +1,7 @@
-# 根据ppn获取buyer
-import datetime
-import time
+# 根据ppn获取buyer index 4 page 134 goon;
+# ['Siemens', '2022-02-24', 'Ооо Сименс', 'Siemens Building Technologies Ltd', 'ИЗДЕЛИЕ ИЗ ПЛАСТМАСС (ШТАМПОВКА):', '俄罗斯', '德国', '2023-05-14', '42']
+# 2021-07-16
+
 '''
 # 链接：https://app.51wheatsearch.com/gs/index.html#/login
 # 选择子账号登录
@@ -8,28 +9,35 @@ import time
 #  19805243800   Yjcx12345!
 #  13316837463    Yjcx12345!
 '''
-
+import datetime
+import sys
 from selenium import webdriver
 from selenium.webdriver.common.by import By
+from selenium.webdriver.common.keys import Keys
+from selenium.webdriver.common.action_chains import ActionChains
 import undetected_chromedriver as uc
 import ssl
+from Manager import AccManage
 from WRTools import IPHelper, UserAgentHelper, ExcelHelp, WaitHelp, PathHelp, LogHelper
 import time
 
+
+accouts_arr = [AccManage.Wheat['c'], AccManage.Wheat['n'], AccManage.Wheat['p']]
 ssl._create_default_https_context = ssl._create_unverified_context
 
 sourceFile_dic = {'fileName': PathHelp.get_file_path('Wheat', 'WheatTask.xlsx'),
-                  'sourceSheet': 'manu',
+                  'sourceSheet': 'ppn_active',
                   'colIndex': 1,
-                  'startIndex': 2,
-                  'endIndex': 15}
+                  'startIndex': 3,
+                  'endIndex': 115}
 result_save_file = PathHelp.get_file_path('Wheat', 'wheat_buyer.xlsx')
-logFile = PathHelp.get_file_path('Wheat', 'Wheat_buyer_log.txt.txt')
+result_save_sheet = 'ppn2_record'
+logFile = PathHelp.get_file_path('Wheat', 'Wheat_log.txt.txt')
 
 login_url = 'https://app.51wheatsearch.com/gs/index.html#/login'
 default_url = 'https://app.51wheatsearch.com/gs/index.html#/resource/gather/customs'
 total_page = 1
-current_page = 1 # infenion 15
+current_page = 1 # infenion 305
 
 driver_option = webdriver.ChromeOptions()
 driver_option.add_argument(f'--proxy-server=http://{IPHelper.getRandowCityIP()}')
@@ -45,36 +53,100 @@ driver.set_page_load_timeout(1000)
 
 # 登陆
 def loginAction(aim_url):
-    WaitHelp.waitfor_account_import(True, False)
+    driver.get(aim_url)
+    login_types = driver.find_elements(By.CSS_SELECTOR, 'div.ant-tabs-tab')
+    if login_types.__len__() > 0:
+        sub_long = login_types[1]
+        sub_long.click()
+        time.sleep(3.0)
+        company_name = driver.find_element(By.CSS_SELECTOR, '#mobileOrName')
+        company_name.clear()
+        company_name.send_keys(accouts_arr[0])
+        use_name = driver.find_element(By.CSS_SELECTOR, '#emailOrMobile')
+        use_name.clear()
+        use_name.send_keys(accouts_arr[1])
+        pw = driver.find_element(By.CSS_SELECTOR, '#password')
+        pw.clear()
+        pw.send_keys(accouts_arr[2])
+        time.sleep(3.0)
+        login_button = driver.find_elements(By.TAG_NAME, 'button')[-1]
+        login_button.click()
+        WaitHelp.waitfor(True, False)
+    else:
+        print('login error')
+        sys.exit()
+
+
+def set_filter(start_date:str, end_date:str):
+    driver.get(default_url)
+    WaitHelp.waitfor(True, False)
+    #submit form
+    card_one = driver.find_elements(By.CSS_SELECTOR, 'div.ant-card-body')[0]
+    sub_form = card_one.find_elements(By.CSS_SELECTOR, 'div.ant-space-item')[2]
+    sub_form.click()
+    WaitHelp.waitfor(False, False)
+    #set filters
+    # contry
+    select_contry = driver.find_element(By.CSS_SELECTOR, '#resourceCountry')
+    select_contry.click()
+    time.sleep(3.0)
+    russian_div = driver.find_elements(By.CSS_SELECTOR, 'div.ant-col.ant-col-lg-12.ant-col-xl-8.ant-col-xxl-6')[2]
+    button = russian_div.find_element(By.TAG_NAME, 'button')
+    button.click()
+    # from date
+    # clear default date
+    ac = ActionChains(driver)
+    pick_start = driver.find_elements(By.CSS_SELECTOR, 'span.ant-picker-suffix')[0]
+    ac.move_to_element(pick_start)
+    ac.click(pick_start).perform()
+    start_picker = driver.find_elements(By.CSS_SELECTOR, 'div.ant-picker')[0]
+    start_input = start_picker.find_element(By.TAG_NAME, 'input')
+    start_input.send_keys(start_date)
+    # end date
+    # clear default date
+    pick_end = driver.find_elements(By.CSS_SELECTOR, 'span.ant-picker-suffix')[1]
+    ac.move_to_element(pick_end)
+    ac.click(pick_end).perform()
+    end_picker = driver.find_elements(By.CSS_SELECTOR, 'div.ant-picker')[1]
+    end_picker = end_picker.find_element(By.TAG_NAME, 'input')
+    end_picker.send_keys(end_date)
+    # 为了让结束日期有效，假装设置提单号，让日历选择器结束工作
+    input_card_content(0, '')
 
 
 # search one ppn
 def goToPPN(ppn: str, manu: str):
     try:
-        #set ppn
-        try:
-            clear_button = driver.find_elements(By.CSS_SELECTOR, "span.ant-input-clear-icon.ant-input-clear-icon-has-suffix")[0]
-            svg = clear_button.find_element(By.TAG_NAME,'svg')
-            svg.click()
-        except:
-            print('can not click keyword clear button')
-        input_area_keyword = driver.find_elements(By.CSS_SELECTOR, value='input.ant-input')[1]
-        input_area_keyword.send_keys(ppn)
-        # set supplier
+        input_card_content(1, ppn)
         if manu and manu.__len__() > 0:
-            try:
-                clear_button = \
-                driver.find_elements(By.CSS_SELECTOR, "span.ant-input-clear-icon")[4]
-                svg = clear_button.find_element(By.TAG_NAME, 'svg')
-                svg.click()
-            except:
-                print('can not click supplier clear button')
-            input_area_supplier = driver.find_elements(By.CSS_SELECTOR, value='input.ant-input')[4]
-            input_area_supplier.send_keys(manu)
+            input_card_content(4, manu)
+        time.sleep(2.0)
         search_button = driver.find_elements(By.CSS_SELECTOR, 'button.ant-btn.ant-btn-primary')[2]
         search_button.click()
-    except:
-        print('input ppn error')
+    except Exception as e:
+        LogHelper.write_log(logFile, f'input ppn error {e}')
+
+
+# 在input 中delete old content ,input new content
+# item: [提单号, 产品关键词, 产品关键词HS, 采购商名称, 供应商名称]
+def input_card_content(item_index: int , new_content: str):
+    try:
+        filter_form_area = driver.find_element(By.CSS_SELECTOR, value='form.ant-form.ant-form-vertical')
+        input_item = filter_form_area.find_elements(By.CSS_SELECTOR, value='input.ant-input')[item_index]
+        old_keyword = input_item.get_attribute('value')
+        if old_keyword and old_keyword.__len__() > 0:
+            ac = ActionChains(driver)
+            try:
+                clear_button = filter_form_area.find_elements(By.CSS_SELECTOR, value='span.ant-input-clear-icon')[
+                    item_index]
+                svg = clear_button.find_element(By.TAG_NAME, 'svg')
+                ac.move_to_element(svg)
+                ac.click(svg).perform()
+            except:
+                print('can not click keyword clear button')
+        input_item.send_keys(new_content)
+    except Exception as e:
+        LogHelper.write_log(f'set input content error item_index is: {item_index}, new content is :{new_content} {e}')
 
 
 def get_page_info(for_current):
@@ -96,15 +168,30 @@ def get_page_info(for_current):
                 total_page_li = page_elements[-3]
                 total_page = int(total_page_li.text)
             print(f'total_page is: {total_page}')
-        except:
+        except Exception as e:
             total_page = 0
-            print('get total page error')
+            LogHelper.write_log(logFile, f'get total page error {e}')
+
+
+def set_page_count():
+    page_area = driver.find_elements(By.CSS_SELECTOR, 'li.ant-pagination-options')
+    if page_area.__len__() > 0:
+        selection_item = page_area[0].find_element(By.CSS_SELECTOR, 'span.ant-select-selection-item')
+        selection_item.click()
+        time.sleep(2.0)
+        select_options = driver.find_elements(By.CSS_SELECTOR, 'div.ant-select-item.ant-select-item-option')
+        if select_options.__len__()>0:
+            max_option = select_options[-1]
+            max_option.click()
+            WaitHelp.waitfor(True, False)
+    else:
+        print('no page selection')
 
 
 def go_to_next_page(cate_index, cate_name):
     now = datetime.datetime.now()
     h_value = (now.hour)
-    if h_value >= 22 or h_value <= 9:
+    if h_value >= 22 or h_value <= 8:
         return
     if current_page < total_page:
         try:
@@ -115,6 +202,7 @@ def go_to_next_page(cate_index, cate_name):
             anly_webdriver(cate_index, cate_name)
         except:
             print('click next page button error')
+            sys.exit()
 
 
 # 分析html 文件
@@ -134,18 +222,19 @@ def anly_webdriver(cate_index, cate_name):
             row_info = get_rowInfo(cate_name, row)
             result.append(row_info)
         if row_list.__len__() > 0:
-            ExcelHelp.add_arr_to_sheet(file_name=result_save_file, sheet_name='manu_record', dim_arr=result)
+            ExcelHelp.add_arr_to_sheet(file_name=result_save_file, sheet_name=result_save_sheet, dim_arr=result)
             if current_page < total_page:
                 go_to_next_page(cate_index, cate_name)
     except Exception as e:
-        print('anly_webdriver error')
-
+        LogHelper.write_log(logFile, f'anly_webdriver error {e}')
 
 
 def get_rowInfo(cate_name, row):
     # ['cate_name', 'data', 'buyer', 'supplier', 'des', 'buy_contry', 'supplier_contry', current_time]
     td_list = row.find_elements(By.TAG_NAME, 'td')
-    result = [cate_name, td_list[0].text, td_list[1].text.replace('/', '%2F'), td_list[2].text, td_list[3].text, td_list[4].text, td_list[5].text, time.strftime('%Y-%m-%d', time.localtime())]
+    buyer = td_list[1].text.replace('/', '%2F')
+    buyer = buyer.replace('\x1e', ' (tim)')
+    result = [cate_name, td_list[0].text, buyer, td_list[2].text, td_list[3].text, td_list[4].text, td_list[5].text, time.strftime('%Y-%m-%d', time.localtime()), str(current_page)]
     return result
 
 
@@ -157,19 +246,21 @@ def main():
     for (cate_index, cate_name) in enumerate(all_cates):
         now = datetime.datetime.now()
         h_value = now.hour
-        if h_value >= 22 or h_value <= 9:
+        if h_value >= 22 or h_value <= 8:
             continue
         if cate_name is None or cate_name.__contains__('?'):
             continue
         elif cate_index in range(sourceFile_dic['startIndex'], sourceFile_dic['endIndex']):
             print(f'cate_index is: {cate_index}  cate_name is: {cate_name}')
-            goToPPN(ppn=cate_name, manu=cate_name)
+            goToPPN(ppn=cate_name, manu="")
             WaitHelp.waitfor_account_import(True, False)
+            set_page_count()
             current_page = total_page = 1
             anly_webdriver(cate_index=cate_index, cate_name=cate_name)
 
 
 if __name__ == "__main__":
-    driver.get(default_url)
     loginAction(default_url)
+    driver.get(default_url)
+    set_filter(start_date='2020-04-30', end_date='2023-04-30')
     main()

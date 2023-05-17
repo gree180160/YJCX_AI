@@ -22,6 +22,7 @@ def open_url(isWeek):
             url = Manager.URLManager.IC_hot_url(ppn, isWeek)
             print(f'index is：{index} USL is: {url}')
             # UserInput.input_url(url, wait_time_kind=1)
+
             webbrowser.open(url)
             WaitHelp.waitfor_account_import(is_load_page=True, isDebug=False)
             # UserInput.webpage_saveAndClose()
@@ -48,5 +49,5 @@ def change_screenShotName(fold_path):
 
 
 if __name__ == '__main__':
-     # open_url(isWeek=True)
-    change_screenShotName(fold_path='/Users/liuhe/Desktop/temp_hot')
+     open_url(isWeek=True)
+    # change_screenShotName(fold_path='/Users/liuhe/Desktop/temp_hot')

@@ -1,5 +1,6 @@
 import base64
 import ssl
+import sys
 
 import undetected_chromedriver as uc
 from selenium import webdriver
@@ -15,13 +16,13 @@ driver_option = webdriver.ChromeOptions()
 driver = uc.Chrome(use_subprocess=True)
 driver.set_page_load_timeout(480)
 # logic
-
+# https://octopart.com/search?q=8P34S1204NLGI8&currency=USD&specs=0
 default_url = 'https://octopart.com/what-is-octopart'
 
 sourceFile_dic = {'fileName': PathHelp.get_file_path(TaskManager.Taskmanger().task_name, 'Task.xlsx'),
                   'sourceSheet': 'ppn',
                   'colIndex': 1,
-                  'startIndex': 76,
+                  'startIndex': 0,
                   'endIndex': TaskManager.Taskmanger().end_index}
 result_save_file = PathHelp.get_file_path(TaskManager.Taskmanger().task_name, 'octopart_price.xlsx')
 
@@ -31,10 +32,13 @@ log_file = PathHelp.get_file_path('Octopart_price', 'ocopar_price_log.txt')
 # 跳转到下一个指定的型号
 def go_to_cate(pn_index, pn):
     try:
-        url = URLManager.octopart_get_page_url(pn, 1, URLManager.Octopart_manu.Renesas)
+        url = URLManager.octopart_get_page_url(pn, 1, URLManager.Octopart_manu.NoManu)
+        url.replace(' ', '')
         driver.get(url)
     except Exception as e:
         LogHelper.write_log(log_file_name=log_file, content=f'{pn} go_to_cate except: {e}')
+        if str(e.msg).__contains__('Timed out'):
+            sys.exit()
 
 
 # 解析某个型号的页面信息，如果有更多，直接点击，然后只选择start ， 遇到第一个不是star 的就返回
@@ -42,6 +46,7 @@ def analy_html(pn_index, pn):
     valid_supplier_arr = []
     try:
         all_cates_table = driver.find_elements(By.CSS_SELECTOR, 'div.jsx-2906236790.prices-view')
+        showed_rows = []
         if all_cates_table.__len__() > 0:
             left_rows = all_cates_table[0].find_elements(By.CSS_SELECTOR, 'div.jsx-1681079743.part')
             showed_rows = left_rows
@@ -192,26 +197,6 @@ def close_alert():
     except Exception as e:
         return
 
-
-def main():
-    all_cates = ExcelHelp.read_col_content(file_name=sourceFile_dic['fileName'],
-                                           sheet_name=sourceFile_dic['sourceSheet'],
-                                           col_index=sourceFile_dic['colIndex'])
-    for (pn_index, pn) in enumerate(all_cates):
-        if pn is None or pn.__contains__('?'):
-            continue
-        elif pn_index in range(sourceFile_dic['startIndex'], sourceFile_dic['endIndex']):
-            print(f'pn_index is: {pn_index}  pn is: {pn}')
-            go_to_cate(pn_index, pn)
-            WaitHelp.waitfor_octopart(True, False)
-            close_alert()
-            analy_html(pn_index, pn)
-
-
-if __name__ == "__main__":
-    driver.get(default_url)
-    WaitHelp.waitfor_octopart(False, False)
-    main()
 # 解析某个型号的页面信息，如果有更多，直接点击，然后只选择start ， 遇到第一个不是star 的就返回
 def analy_html(pn_index, pn):
     valid_supplier_arr = []
@@ -243,3 +228,25 @@ def analy_html(pn_index, pn):
         sheet_name='octopart_price',
         dim_arr=valid_supplier_arr)
     valid_supplier_arr.clear()
+
+
+def main():
+    all_cates = ExcelHelp.read_col_content(file_name=sourceFile_dic['fileName'],
+                                           sheet_name=sourceFile_dic['sourceSheet'],
+                                           col_index=sourceFile_dic['colIndex'])
+    for (pn_index, pn) in enumerate(all_cates):
+        if pn is None or pn.__contains__('?'):
+            continue
+        elif pn_index in range(sourceFile_dic['startIndex'], sourceFile_dic['endIndex']):
+            print(f'pn_index is: {pn_index}  pn is: {pn}')
+            go_to_cate(pn_index, pn)
+            WaitHelp.waitfor_octopart(True, False)
+            close_alert()
+            analy_html(pn_index, pn)
+
+
+if __name__ == "__main__":
+    driver.get(default_url)
+    WaitHelp.waitfor_octopart(False, False)
+    main()
+

@@ -37,15 +37,15 @@ def get_page_more_PN():
 
 # 将大项目拆分成一天天的任务
 def createDayTask():
-    i = 75  # 删除ppn 里面的历史数据
-    while i < 125:
+    i = 145  # 删除ppn 里面的历史数据
+    while i < 165:
         file_name = PathHelp.get_file_path(f'TRenesasAll_{i}H', 'Task.xlsx')
         ExcelHelp.remove_sheet(file_name, 'ppn')
         i += 5
     sheet_content = ExcelHelp.read_sheet_content_by_name(file_name=PathHelp.get_file_path(None, 'TRenesa.xlsx'), sheet_name='ppn')
-    sheet_content = sheet_content[7500:12000]
+    sheet_content = sheet_content[14000:16000]
     task_value = []
-    start_index = 75
+    start_index = 145
     for (row_index, row_value) in enumerate(sheet_content):
         if row_value[0] and str(row_value[2]) != '1':
             task_value.append(row_value)
@@ -58,16 +58,16 @@ def createDayTask():
 
 # 分解数量大的ppn列表
 def decompositionPPN(unit: int):
-    source_file = PathHelp.get_file_path(None, 'TSkyworks.xlsx')
-    source_ppn = ExcelHelp.read_col_content(file_name=source_file, sheet_name='ppn3', col_index=1)
-    history_sheets = ['ppn1', 'ppn2']
+    source_file = PathHelp.get_file_path(None, 'TRenesa.xlsx')
+    source_ppn = ExcelHelp.read_col_content(file_name=source_file, sheet_name='ppn', col_index=1)
+    history_sheets = []
     history_ppn = set()
     for sheet_name in history_sheets:
         history_ppn = history_ppn.union(set(ExcelHelp.read_col_content(file_name=source_file, sheet_name=sheet_name, col_index=1)))
-    sava_fold = '/Users/liuhe/Desktop/progress/TSkyworks/discontiue/digikey/p3/'
+    sava_fold = '/Users/liuhe/Desktop/progress/TReneseas_all/digikey/p4/'
     ppn_all = list(set(source_ppn).difference(set(history_ppn)))
 
-    ppn_all = ppn_all[0:]
+    ppn_all = ppn_all[16000:24981]
     stop_quotient = 0
     result = []
     for (index, ppn) in enumerate(ppn_all):
@@ -90,9 +90,8 @@ def decompositionPPN(unit: int):
 
 
 if __name__ == "__main__":
-    # decompositionPPN(unit=300)
     # createDayTask()
     # get_ICSupplierAndHot(20, 300)
     # get_wheat()
     # adjustopn()
-    get_wheat()
+    decompositionPPN(500)

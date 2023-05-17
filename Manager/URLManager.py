@@ -45,7 +45,19 @@ class Octopart_manu(Enum):
 
 
 # octopart
+# https://octopart.com/search?q=8P34S1204NLGI8&currency=USD&specs=0
 def octopart_get_page_url(key_name, page, manu: Octopart_manu) -> str:
+    if manu.value > 0:
+        manu_str = manu.get_manu()
+        manu_param = '&manufacturer_id=' + manu_str.replace(';', '&manufacturer_id=')
+    else:
+        manu_param = ''
+    page_param = '' if page == 1 else '&start=' + str(page*10 - 10)
+    url = f'https://octopart.com/search?q={key_name}&currency=USD&specs=0{manu_param}{page_param}'
+    return url
+
+# octopart
+def octopart_get_code_url(key_name, page, manu: Octopart_manu) -> str:
     if manu.value > 0:
         manu_str = manu.get_manu()
         manu_param = '&manufacturer_id=' + manu_str.replace(';', '&manufacturer_id=')
@@ -95,7 +107,7 @@ def IC_stock_url(ppn: str):
     cate_str = cate_str.replace('#', '%23')
     cate_str = cate_str.replace('+', '%2B')
     cate_str = cate_str.replace(',', '%2C')
-    return f"https://www.ic.net.cn/search/{cate_str}.html"
+    return f"https://ST.ic.net.cn/search/{cate_str}.html"
 
 
 def IC_hot_url(ppn: str, isWeek):

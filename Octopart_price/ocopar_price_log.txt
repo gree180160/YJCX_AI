@@ -8079,3 +8079,144 @@ from unknown error: web view not found
 2023-05-06 15:00:597205L35J/6280 go_to_cate except: Message: timeout: Timed out receiving message from renderer: 480.000
   (Session info: chrome=113.0.5672.63)
 
+2023-05-08 09:24:2972V2113L7-5PF8 页面 解析异常：local variable 'showed_rows' referenced before assignment 
+2023-05-08 09:27:5472V2113L7-5PF9 页面 解析异常：local variable 'showed_rows' referenced before assignment 
+2023-05-08 09:31:2372V2113L7-5PFGI 页面 解析异常：local variable 'showed_rows' referenced before assignment 
+2023-05-08 09:35:0472V2113L7-5PFGI8 页面 解析异常：local variable 'showed_rows' referenced before assignment 
+2023-05-08 09:38:4072V2113L7-5PFI 页面 解析异常：local variable 'showed_rows' referenced before assignment 
+2023-05-08 09:42:1572V211L10J8 页面 解析异常：local variable 'showed_rows' referenced before assignment 
+2023-05-08 09:45:3872V211L10PF 页面 解析异常：local variable 'showed_rows' referenced before assignment 
+2023-05-08 09:49:3272V211L10PF8 页面 解析异常：local variable 'showed_rows' referenced before assignment 
+2023-05-08 09:53:2272V211L10PFG 页面 解析异常：local variable 'showed_rows' referenced before assignment 
+2023-05-08 09:56:4772V211L10PFG8 页面 解析异常：local variable 'showed_rows' referenced before assignment 
+2023-05-08 10:00:1572V211L10PFGI 页面 解析异常：local variable 'showed_rows' referenced before assignment 
+2023-05-08 15:21:4672V243L6BCG 页面 解析异常：Message: timeout: Timed out receiving message from renderer: 480.000
+  (Session info: chrome=113.0.5672.63)
+
+2023-05-08 15:29:4672V243L6PF go_to_cate except: Message: timeout: Timed out receiving message from renderer: 480.000
+  (Session info: chrome=113.0.5672.63)
+
+2023-05-08 15:49:0972V243L6PF 页面 解析异常：Message: timeout: Timed out receiving message from renderer: 480.000
+  (Session info: chrome=113.0.5672.63)
+
+2023-05-08 15:57:0972V243L6PF8 go_to_cate except: Message: timeout: Timed out receiving message from renderer: 480.000
+  (Session info: chrome=113.0.5672.63)
+
+2023-05-08 16:16:1572V243L6PF8 页面 解析异常：Message: timeout: Timed out receiving message from renderer: 480.000
+  (Session info: chrome=113.0.5672.63)
+
+2023-05-08 16:24:1572V243L6PFG8 go_to_cate except: Message: timeout: Timed out receiving message from renderer: 480.000
+  (Session info: chrome=113.0.5672.63)
+
+2023-05-09 13:43:4072V835L15PF8 页面 解析异常：Message: timeout: Timed out receiving message from renderer: 480.000
+  (Session info: chrome=113.0.5672.63)
+
+2023-05-09 13:51:4072V835L15PF9 go_to_cate except: Message: timeout: Timed out receiving message from renderer: 480.000
+  (Session info: chrome=113.0.5672.63)
+
+2023-05-09 15:54:1772V841L15PFG8 go_to_cate except: Message: timeout: Timed out receiving message from renderer: 477.942
+  (Session info: chrome=113.0.5672.63)
+
+2023-05-10 09:21:1974LVC162245APAG go_to_cate except: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=113.0.5672.63)
+
+2023-05-10 14:14:5380HCPS1848CHMI go_to_cate except: Message: timeout: Timed out receiving message from renderer: 478.955
+  (Session info: chrome=113.0.5672.63)
+
+2023-05-10 14:33:5480HCPS1848CHMI 页面 解析异常：Message: timeout: Timed out receiving message from renderer: 480.000
+  (Session info: chrome=113.0.5672.63)
+
+2023-05-10 14:41:5580HCPS1848CRM go_to_cate except: Message: timeout: Timed out receiving message from renderer: 480.000
+  (Session info: chrome=113.0.5672.63)
+
+2023-05-12 12:21:548N3DV85FC-0174CDI go_to_cate except: Message: unknown error: net::ERR_CONNECTION_TIMED_OUT
+  (Session info: chrome=113.0.5672.92)
+
+2023-05-12 12:52:438N3DV85KC-0001CDI go_to_cate except: Message: unknown error: net::ERR_CONNECTION_CLOSED
+  (Session info: chrome=113.0.5672.92)
+
+2023-05-12 13:05:468N3DV85KC-0003CDI8 go_to_cate except: Message: timeout: Timed out receiving message from renderer: -0.008
+  (Session info: chrome=113.0.5672.92)
+
+2023-05-12 13:09:098N3DV85KC-0003CDI8 页面 解析异常：Message: invalid session id
+
+2023-05-12 13:09:098N3DV85KC-0004CDI8 go_to_cate except: Message: invalid session id
+
+2023-05-12 13:11:588N3DV85KC-0004CDI8 页面 解析异常：Message: invalid session id
+
+2023-05-12 13:11:588N3DV85KC-0006CDI go_to_cate except: Message: invalid session id
+
+2023-05-12 13:14:408N3DV85KC-0006CDI 页面 解析异常：Message: invalid session id
+
+2023-05-12 13:14:408N3DV85KC-0007CDI8 go_to_cate except: Message: invalid session id
+
+2023-05-12 13:17:208N3DV85KC-0007CDI8 页面 解析异常：Message: invalid session id
+
+2023-05-12 13:17:208N3DV85KC-0008CDI go_to_cate except: Message: invalid session id
+
+2023-05-12 13:20:388N3DV85KC-0008CDI 页面 解析异常：Message: invalid session id
+
+2023-05-12 13:20:388N3DV85KC-0008CDI8 go_to_cate except: Message: invalid session id
+
+2023-05-12 13:23:328N3DV85KC-0008CDI8 页面 解析异常：Message: invalid session id
+
+2023-05-12 13:23:328N3DV85KC-0010CDI go_to_cate except: Message: invalid session id
+
+2023-05-12 13:26:158N3DV85KC-0010CDI 页面 解析异常：Message: invalid session id
+
+2023-05-12 13:26:158N3DV85KC-0011CDI go_to_cate except: Message: invalid session id
+
+2023-05-12 13:29:388N3DV85KC-0011CDI 页面 解析异常：Message: invalid session id
+
+2023-05-12 13:29:388N3DV85KC-0012CDI8 go_to_cate except: Message: invalid session id
+
+2023-05-12 13:32:238N3DV85KC-0012CDI8 页面 解析异常：Message: invalid session id
+
+2023-05-12 13:32:238N3DV85KC-0013CDI8 go_to_cate except: Message: invalid session id
+
+2023-05-12 13:35:118N3DV85KC-0013CDI8 页面 解析异常：Message: invalid session id
+
+2023-05-12 13:35:118N3DV85KC-0015CDI go_to_cate except: Message: invalid session id
+
+2023-05-12 13:37:488N3DV85KC-0015CDI 页面 解析异常：Message: invalid session id
+
+2023-05-12 13:37:498N3DV85KC-0017CDI8 go_to_cate except: Message: invalid session id
+
+2023-05-12 13:41:068N3DV85KC-0017CDI8 页面 解析异常：Message: invalid session id
+
+2023-05-12 13:41:068N3DV85KC-0019CDI go_to_cate except: Message: invalid session id
+
+2023-05-12 13:43:508N3DV85KC-0019CDI 页面 解析异常：Message: invalid session id
+
+2023-05-12 13:43:508N3DV85KC-0019CDI8 go_to_cate except: Message: invalid session id
+
+2023-05-12 13:46:478N3DV85KC-0019CDI8 页面 解析异常：Message: invalid session id
+
+2023-05-12 13:46:478N3DV85KC-0020CDI go_to_cate except: Message: invalid session id
+
+2023-05-12 13:50:048N3DV85KC-0020CDI 页面 解析异常：Message: invalid session id
+
+2023-05-12 13:50:048N3DV85KC-0021CDI go_to_cate except: Message: invalid session id
+
+2023-05-12 14:48:178N3DV85FC-0175CDI 页面 解析异常：Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=113.0.5672.92)
+
+2023-05-12 14:48:178N3DV85FC-0175CDI8 go_to_cate except: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=113.0.5672.92)
+
+2023-05-12 17:13:578N3DV85FC-0175CDI go_to_cate except: Message: unknown error: net::ERR_CONNECTION_TIMED_OUT
+  (Session info: chrome=113.0.5672.92)
+
+2023-05-12 17:28:008N3DV85FC-0176CDI go_to_cate except: Message: unknown error: net::ERR_CONNECTION_CLOSED
+  (Session info: chrome=113.0.5672.92)
+
+2023-05-16 15:23:049FGL0451BKILF 页面 解析异常：Message: timeout: Timed out receiving message from renderer: 480.000
+  (Session info: chrome=113.0.5672.92)
+
+2023-05-16 15:31:049FGL0451BKILFT go_to_cate except: Message: timeout: Timed out receiving message from renderer: 480.000
+  (Session info: chrome=113.0.5672.92)
+
+2023-05-17 13:07:439FGV1006B209LTGI 页面 解析异常：local variable 'showed_rows' referenced before assignment 

@@ -7,7 +7,7 @@ import undetected_chromedriver as uc
 from selenium.webdriver.common.by import By
 from WRTools import IPHelper, UserAgentHelper, LogHelper, PathHelp, ExcelHelp, WaitHelp, StringChange
 from selenium.common.exceptions import TimeoutException
-from Manager import AccountMange
+from Manager import AccManage
 
 
 ssl._create_default_https_context = ssl._create_unverified_context

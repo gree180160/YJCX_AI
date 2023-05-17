@@ -121,16 +121,11 @@ def testDigikey():
 
 
 def combine_upload_result():
-    source_file = PathHelp.get_file_path(None, 'TSkyworks.xlsx')
-    files = ["/Users/liuhe/Desktop/progress/TSkyworks/discontiue/digikey/p3/result/050401.xlsx",
-             "/Users/liuhe/Desktop/progress/TSkyworks/discontiue/digikey/p3/result/050404.xlsx",
-             "/Users/liuhe/Desktop/progress/TSkyworks/discontiue/digikey/p3/result/050407.xlsx",
-             "/Users/liuhe/Desktop/progress/TSkyworks/discontiue/digikey/p3/result/050410.xlsx",
-             "/Users/liuhe/Desktop/progress/TSkyworks/discontiue/digikey/p3/result/050413.xlsx",
-             "/Users/liuhe/Desktop/progress/TSkyworks/discontiue/digikey/p3/result/050416.xlsx",
-             "/Users/liuhe/Desktop/progress/TSkyworks/discontiue/digikey/p3/result/050419.xlsx",
-             "/Users/liuhe/Desktop/progress/TSkyworks/discontiue/digikey/p3/result/050422.xlsx",
-             "/Users/liuhe/Desktop/progress/TSkyworks/discontiue/digikey/p3/result/050425.xlsx",
+    source_file = PathHelp.get_file_path(None, 'TNXP.xlsx')
+    files = ["/Users/liuhe/Desktop/progress/TNXP/discontiue/p2/digikey/dgNXP1.xlsx",
+             "/Users/liuhe/Desktop/progress/TNXP/discontiue/p2/digikey/dgNXP3.xlsx",
+             "/Users/liuhe/Desktop/progress/TNXP/discontiue/p2/digikey/dgNXP5.xlsx",
+             "/Users/liuhe/Desktop/progress/TNXP/discontiue/p2/digikey/dgNXP7.xlsx"
              ]
     result = []
     for temp in files:

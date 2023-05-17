@@ -132,7 +132,7 @@ def filert_useless_image(fold_path):
 # 识别IC——hot 图片里的热度信息并保存到数据库
 def rec_image(fold_path):
     filert_useless_image(fold_path)
-    source_file = PathHelp.get_file_path('TRenesasAll_105H', 'Task.xlsx')
+    source_file = PathHelp.get_file_path('TRenesasAll_145H', 'Task.xlsx')
     file_name_list = os.listdir(fold_path)
     file_name_list.sort()
     print(f"file count is: {file_name_list.__len__()}")
@@ -152,12 +152,13 @@ def rec_image(fold_path):
 
 
 if __name__ == "__main__":
-    rec_image(fold_path='/Users/liuhe/Desktop/progress/TReneseas_all/105H/04/IC_hot_images')
+    # 9DB833AGILFT_M.png
+    rec_image(fold_path='/Users/liuhe/Desktop/progress/TReneseas_all/145H/04/IC_hot_images')
     time.sleep(2.0)
-    rec_image(fold_path='/Users/liuhe/Desktop/progress/TReneseas_all/105H/11/IC_hot_images')
+    rec_image(fold_path='/Users/liuhe/Desktop/progress/TReneseas_all/145H/11/IC_hot_images')
     time.sleep(2.0)
-    rec_image(fold_path='/Users/liuhe/Desktop/progress/TReneseas_all/105H/sz/IC_hot_images')
+    rec_image(fold_path='/Users/liuhe/Desktop/progress/TReneseas_all/145H/sz/IC_hot_images')
     time.sleep(2.0)
-    rec_image(fold_path=PathHelp.get_IC_hot_image_fold('TRenesasAll_105H'))
+    rec_image(fold_path=PathHelp.get_IC_hot_image_fold('TRenesasAll_145H'))
 
 

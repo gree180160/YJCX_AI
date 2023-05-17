@@ -6,7 +6,7 @@ import time
 import undetected_chromedriver as uc
 from selenium.webdriver.common.by import By
 from WRTools import LogHelper, PathHelp, ExcelHelp, WaitHelp
-from Manager import AccountMange, TaskManager
+from Manager import AccManage, TaskManager
 import bom_price_info
 
 ssl._create_default_https_context = ssl._create_unverified_context
@@ -16,7 +16,7 @@ driver.set_page_load_timeout(120)
 # logic
 
 # accouts_arr = [["深圳市元极创新电子有限公司", "caigou01", "Yjcx123"]]
-accouts_arr = [[AccountMange.Bom['c'], AccountMange.Bom['n'], AccountMange.Bom['p']]]
+accouts_arr = [[AccManage.Bom['c'], AccManage.Bom['n'], AccManage.Bom['p']]]
 
 sourceFile_dic = {'fileName': PathHelp.get_file_path(TaskManager.Taskmanger().task_name, 'Task.xlsx'),
                   'sourceSheet': 'ppn',

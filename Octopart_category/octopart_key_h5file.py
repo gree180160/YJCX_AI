@@ -9,9 +9,9 @@ from urllib.parse import urlparse
 
 
 default_url = 'https://octopart.com/'
-keyword_source_file = PathHelp.get_file_path(None, 'TSkyworks.xlsx')
-sheet_name = "page0_ppn_3"
-fold_path = '/Users/liuhe/Desktop/progress/TSkyworks/html_files3'
+keyword_source_file = PathHelp.get_file_path(None, 'TNXP.xlsx')
+sheet_name = "page0_ppn_2"
+fold_path = '/Users/liuhe/Desktop/progress/TNXP/discontiue/p2/html'
 log_file = '/Octopart_category/octopart_key_cate_log.txt'
 
 total_page = 1
