@@ -2,3 +2,6 @@
 /WRTools/UserAgentHelper.py
 /Bom_price/bom_price_log.txt
 /WRTools/_pycache_/*
+/__pycache__/*
+*.pyc
+.idea/
