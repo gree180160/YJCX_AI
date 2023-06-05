@@ -123,7 +123,7 @@ def get_indexs(source_arr, cate_name) -> list:
 
 
 #  统计ppn的IC stock info
-def staticstic_IC_stock(source_files:list, aim_file:str):
+def staticstic_IC_stock(source_files: list, aim_file:str):
     all_cates = ExcelHelp.read_col_content(file_name=aim_file, sheet_name='ppn', col_index=1)
     sub_cates = all_cates[0:]
     all_ic_sheets = get_ICStock_sheets(source_files)

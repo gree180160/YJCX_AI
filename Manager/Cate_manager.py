@@ -37,29 +37,31 @@ def get_page_more_PN():
 
 # 将大项目拆分成一天天的任务
 def createDayTask():
-    i = 145  # 删除ppn 里面的历史数据
-    while i < 165:
-        file_name = PathHelp.get_file_path(f'TRenesasAll_{i}H', 'Task.xlsx')
+    i = 1  # 删除ppn 里面的历史数据,TRenesas_MCU_30H
+    while i < 8:
+        file_name = PathHelp.get_file_path(f'TNXP_Discontiue_{i}H', 'Task.xlsx')
         ExcelHelp.remove_sheet(file_name, 'ppn')
-        i += 5
-    sheet_content = ExcelHelp.read_sheet_content_by_name(file_name=PathHelp.get_file_path(None, 'TRenesa.xlsx'), sheet_name='ppn')
-    sheet_content = sheet_content[14000:16000]
+        i += 1
+    sheet_content = ExcelHelp.read_sheet_content_by_name(file_name=PathHelp.get_file_path(None, 'TNXP.xlsx'), sheet_name='discontinue')
+    sheet_content = sheet_content[0:700]
     task_value = []
-    start_index = 145
+    start_index = 1
     for (row_index, row_value) in enumerate(sheet_content):
-        if row_value[0] and str(row_value[2]) != '1':
-            task_value.append(row_value)
-            if task_value.__len__() == 500:
-                file_name = PathHelp.get_file_path(f'TRenesasAll_{start_index}H', 'Task.xlsx')
+        row_info = [row_value[0], 'NXP Semiconductors']
+        if row_value[0]:
+            task_value.append(row_info)
+            if task_value.__len__() == 100:
+                file_name = PathHelp.get_file_path(f'TNXP_Discontiue_{i}H', 'Task.xlsx')
                 ExcelHelp.add_arr_to_sheet(file_name=file_name, sheet_name='ppn', dim_arr=task_value)
                 task_value = []
-                start_index += 5
+                start_index += 1
 
 
 # 分解数量大的ppn列表
 def decompositionPPN(unit: int):
     source_file = PathHelp.get_file_path(None, 'TRenesa.xlsx')
     source_ppn = ExcelHelp.read_col_content(file_name=source_file, sheet_name='ppn', col_index=1)
+    source_ppn = source_ppn[16000:24981]
     history_sheets = []
     history_ppn = set()
     for sheet_name in history_sheets:
@@ -67,7 +69,8 @@ def decompositionPPN(unit: int):
     sava_fold = '/Users/liuhe/Desktop/progress/TReneseas_all/digikey/p4/'
     ppn_all = list(set(source_ppn).difference(set(history_ppn)))
 
-    ppn_all = ppn_all[16000:24981]
+    ppn_all = ppn_all[0:]
+    ppn_all.sort()
     stop_quotient = 0
     result = []
     for (index, ppn) in enumerate(ppn_all):
@@ -89,9 +92,29 @@ def decompositionPPN(unit: int):
         ExcelHelp.add_arr_to_sheet(file_name=file_path, sheet_name='Sheet', dim_arr=result)
 
 
+def adi_stock():
+    source_file = PathHelp.get_file_path(None, 'TADIStock.xlsx')
+    arr1 = ExcelHelp.read_col_content(source_file, sheet_name='Sheet1', col_index=1)
+    arr2 = ExcelHelp.read_col_content(source_file, sheet_name='Sheet2', col_index=1)
+    source = arr1 + arr2
+    result = list(set(source))
+    result.sort()
+    ExcelHelp.add_arr_to_col(file_name=source_file, sheet_name='ppn', dim_arr=result)
+
+
+def mcu2():
+    mcu_source = ExcelHelp.read_col_content(file_name='/Users/liuhe/Desktop/JunLongMCU.xlsx', sheet_name='Sheet1', col_index=1)
+    jm_MCU = ExcelHelp.read_col_content(file_name=PathHelp.get_file_path(None, 'TRenesas_MCU.xlsx'), sheet_name='ppn', col_index=1)
+    result = set(mcu_source).intersection(set(jm_MCU))
+    # ExcelHelp.add_arr_to_col('/Users/liuhe/Desktop/ppnTask/MCU.xlsx', sheet_name='ppn', dim_arr=result)
+    print(result)
+
+
 if __name__ == "__main__":
     # createDayTask()
     # get_ICSupplierAndHot(20, 300)
     # get_wheat()
     # adjustopn()
-    decompositionPPN(500)
+    # decompositionPPN(500)
+    createDayTask()
+    # createDayTask()

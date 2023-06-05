@@ -28,7 +28,7 @@ ssl._create_default_https_context = ssl._create_unverified_context
 sourceFile_dic = {'fileName': PathHelp.get_file_path('Wheat', 'WheatTask.xlsx'),
                   'sourceSheet': 'ppn_active',
                   'colIndex': 1,
-                  'startIndex': 3,
+                  'startIndex': 82,
                   'endIndex': 115}
 result_save_file = PathHelp.get_file_path('Wheat', 'wheat_buyer.xlsx')
 result_save_sheet = 'ppn2_record'
@@ -56,6 +56,7 @@ def loginAction(aim_url):
     driver.get(aim_url)
     login_types = driver.find_elements(By.CSS_SELECTOR, 'div.ant-tabs-tab')
     if login_types.__len__() > 0:
+        time.sleep(10.0)
         sub_long = login_types[1]
         sub_long.click()
         time.sleep(3.0)
@@ -146,7 +147,7 @@ def input_card_content(item_index: int , new_content: str):
                 print('can not click keyword clear button')
         input_item.send_keys(new_content)
     except Exception as e:
-        LogHelper.write_log(f'set input content error item_index is: {item_index}, new content is :{new_content} {e}')
+        LogHelper.write_log(logFile, f'set input content error item_index is: {item_index}, new content is :{new_content} {e}')
 
 
 def get_page_info(for_current):
@@ -174,18 +175,21 @@ def get_page_info(for_current):
 
 
 def set_page_count():
-    page_area = driver.find_elements(By.CSS_SELECTOR, 'li.ant-pagination-options')
-    if page_area.__len__() > 0:
-        selection_item = page_area[0].find_element(By.CSS_SELECTOR, 'span.ant-select-selection-item')
-        selection_item.click()
-        time.sleep(2.0)
-        select_options = driver.find_elements(By.CSS_SELECTOR, 'div.ant-select-item.ant-select-item-option')
-        if select_options.__len__()>0:
-            max_option = select_options[-1]
-            max_option.click()
-            WaitHelp.waitfor(True, False)
-    else:
-        print('no page selection')
+    try:
+        page_area = driver.find_elements(By.CSS_SELECTOR, 'li.ant-pagination-options')
+        if page_area.__len__() > 0:
+            selection_item = page_area[0].find_element(By.CSS_SELECTOR, 'span.ant-select-selection-item')
+            selection_item.click()
+            time.sleep(2.0)
+            select_options = driver.find_elements(By.CSS_SELECTOR, 'div.ant-select-item.ant-select-item-option')
+            if select_options.__len__() > 0:
+                max_option = select_options[-1]
+                max_option.click()
+                WaitHelp.waitfor(True, False)
+        else:
+            print('no page selection')
+    except Exception as e:
+        LogHelper.write_log(logFile, f'set_page_count error {e}')
 
 
 def go_to_next_page(cate_index, cate_name):
@@ -200,9 +204,9 @@ def go_to_next_page(cate_index, cate_name):
             next_button.click()
             WaitHelp.waitfor_account_import(True, False)
             anly_webdriver(cate_index, cate_name)
-        except:
-            print('click next page button error')
-            sys.exit()
+        except Exception as e:
+            LogHelper.write_log(f'click next page button error {e}')
+            return
 
 
 # 分析html 文件

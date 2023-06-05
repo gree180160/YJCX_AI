@@ -22,7 +22,7 @@ default_url = 'https://octopart.com/what-is-octopart'
 sourceFile_dic = {'fileName': PathHelp.get_file_path(TaskManager.Taskmanger().task_name, 'Task.xlsx'),
                   'sourceSheet': 'ppn',
                   'colIndex': 1,
-                  'startIndex': 0,
+                  'startIndex': TaskManager.Taskmanger().start_index,
                   'endIndex': TaskManager.Taskmanger().end_index}
 result_save_file = PathHelp.get_file_path(TaskManager.Taskmanger().task_name, 'octopart_price.xlsx')
 
@@ -38,6 +38,7 @@ def go_to_cate(pn_index, pn):
     except Exception as e:
         LogHelper.write_log(log_file_name=log_file, content=f'{pn} go_to_cate except: {e}')
         if str(e.msg).__contains__('Timed out'):
+            driver.reconnect()
             sys.exit()
 
 

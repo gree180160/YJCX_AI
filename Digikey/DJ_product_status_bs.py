@@ -121,19 +121,24 @@ def testDigikey():
 
 
 def combine_upload_result():
-    source_file = PathHelp.get_file_path(None, 'TNXP.xlsx')
-    files = ["/Users/liuhe/Desktop/progress/TNXP/discontiue/p2/digikey/dgNXP1.xlsx",
-             "/Users/liuhe/Desktop/progress/TNXP/discontiue/p2/digikey/dgNXP3.xlsx",
-             "/Users/liuhe/Desktop/progress/TNXP/discontiue/p2/digikey/dgNXP5.xlsx",
-             "/Users/liuhe/Desktop/progress/TNXP/discontiue/p2/digikey/dgNXP7.xlsx"
+    source_file = PathHelp.get_file_path(None, 'TRenesa.xlsx')
+    files = ["/Users/liuhe/Desktop/progress/TReneseas_all/digikey/p4/p4s1.xlsx",
+             "/Users/liuhe/Desktop/progress/TReneseas_all/digikey/p4/p4s3.xlsx",
+             "/Users/liuhe/Desktop/progress/TReneseas_all/digikey/p4/p4s5.xlsx",
+             "/Users/liuhe/Desktop/progress/TReneseas_all/digikey/p4/p4s7.xlsx",
+             "/Users/liuhe/Desktop/progress/TReneseas_all/digikey/p4/p4s9.xlsx",
+             "/Users/liuhe/Desktop/progress/TReneseas_all/digikey/p4/p4s11.xlsx",
+             "/Users/liuhe/Desktop/progress/TReneseas_all/digikey/p4/p4s13.xlsx",
+             "/Users/liuhe/Desktop/progress/TReneseas_all/digikey/p4/p4s15.xlsx",
+             "/Users/liuhe/Desktop/progress/TReneseas_all/digikey/p4/p4s17.xlsx"
              ]
     result = []
     for temp in files:
         sheet_content = ExcelHelp.read_sheet_content_by_name(file_name=temp, sheet_name='My Lists Worksheet')
         for (row_index, row) in enumerate(sheet_content):
             if row_index > 0:
-                if str(row[1]).__len__() > 0:
-                    if str(row[2]).__len__() > 0:
+                if str(row[1]).__len__() >= 0:
+                    if str(row[2]).__len__() >= 0:
                         result.append([str(row[3]), str(row[1]), str(row[2]), str(row[4]), time.strftime('%Y-%m-%d', time.localtime())])
                     else:
                         result.append([str(row[1]), "/", "/", "/", time.strftime('%Y-%m-%d', time.localtime())])
@@ -146,18 +151,25 @@ def partion(source_file, source_sheet):
     sheet_content = ExcelHelp.read_sheet_content_by_name(file_name=source_file, sheet_name=source_sheet)
     history_continue = ExcelHelp.read_col_content(file_name=source_file, sheet_name='discontinue', col_index=1)
     history_making = ExcelHelp.read_col_content(file_name=source_file, sheet_name='making', col_index=1)
+    history_noData = ExcelHelp.read_col_content(file_name=source_file, sheet_name='noData', col_index=1)
     discontiue_result = []
     making_result = []
+    noData_result = []
     for row in sheet_content:
         if row.__len__() > 4:
-            if row[3] == 'Obsolete' or row[3] == 'Last Time Buy' or row[3] == '停产' or row[3] == '最后售卖':
+            if str(row[3]).__len__() == 0:
+                if not (row[0] in history_noData):
+                    noData_result.append([row[0], row[1], row[4]])
+            elif row[3] == 'Obsolete' or row[3] == 'Last Time Buy' or row[3] == '停产' or row[3] == '最后售卖':
                 if not (row[0] in history_continue):
                     discontiue_result.append([row[0], row[1], row[4]])
             else:
                 if not (row[0] in history_making):
                     making_result.append([row[0], row[1], row[4]])
+
     ExcelHelp.add_arr_to_sheet(file_name=source_file, sheet_name='discontinue', dim_arr=discontiue_result)
     ExcelHelp.add_arr_to_sheet(file_name=source_file, sheet_name='making', dim_arr=making_result)
+    ExcelHelp.add_arr_to_sheet(file_name=source_file, sheet_name='noData', dim_arr=noData_result)
 
 
 if __name__ == '__main__':

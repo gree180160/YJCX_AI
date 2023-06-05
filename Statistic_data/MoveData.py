@@ -219,30 +219,30 @@ def move_digiKey(source_file: str, digikey_file: str, source_sheet: str):
 
 #合并数据前的预处理，IC 结果统计，findchips 合计，digikey 合计
 def pre_combine_data():
-    cate_source_file = PathHelp.get_file_path("TRenesasAll_145H", 'Task.xlsx')
-    ICStock_file_arr = ["/Users/liuhe/Desktop/progress/TReneseas_all/145H/11/IC_stock.xlsx",
-    "/Users/liuhe/Desktop/progress/TReneseas_all/145H/sz/IC_stock.xlsx",
-    "/Users/liuhe/Desktop/progress/TReneseas_all/145H/04/IC_stock.xlsx",
-                       PathHelp.get_file_path('TRenesasAll_145H', 'IC_stock.xlsx')]
+    cate_source_file = PathHelp.get_file_path("TRenesas_MCU_30H", 'Task.xlsx')
+    ICStock_file_arr = ["/Users/liuhe/Desktop/progress/TRenesas_MCU/Renesas_MCU_30H/11/IC_stock.xlsx",
+                        "/Users/liuhe/Desktop/progress/TRenesas_MCU/Renesas_MCU_30H/sz/IC_stock.xlsx",
+                        "/Users/liuhe/Desktop/progress/TRenesas_MCU/Renesas_MCU_30H/04/IC_stock.xlsx",
+                       PathHelp.get_file_path('TRenesas_MCU_30H', 'IC_stock.xlsx')]
     IC_stock_result.staticstic_IC_stock(source_files=ICStock_file_arr, aim_file=cate_source_file)
-    findchips_stock_cate.combine_result(["/Users/liuhe/Desktop/progress/TReneseas_all/145H/11/findchip_stock.xlsx",
-                                         "/Users/liuhe/Desktop/progress/TReneseas_all/145H/sz/findchip_stock.xlsx",
-                                         "/Users/liuhe/Desktop/progress/TReneseas_all/145H/04/findchip_stock.xlsx"],
-                                        PathHelp.get_file_path('TRenesasAll_145H', 'findchip_stock.xlsx'))
+    findchips_stock_cate.combine_result(["/Users/liuhe/Desktop/progress/TRenesas_MCU/Renesas_MCU_30H/11/findchip_stock.xlsx",
+                                         "/Users/liuhe/Desktop/progress/TRenesas_MCU/Renesas_MCU_30H/sz/findchip_stock.xlsx",
+                                         "/Users/liuhe/Desktop/progress/TRenesas_MCU/Renesas_MCU_30H/04/findchip_stock.xlsx"],
+                                        PathHelp.get_file_path('TRenesas_MCU_30H', 'findchip_stock.xlsx'))
     # ICStock_file_arr = [
-    #                    PathHelp.get_file_path('TRenesasAll_145H', 'IC_stock.xlsx')]
+    #                    PathHelp.get_file_path('TRenesas_MCU_30H', 'IC_stock.xlsx')]
     # IC_stock_result.staticstic_IC_stock(source_files=ICStock_file_arr, aim_file=cate_source_file)
 
 
 # 统计汇总结果
 def statistic_data():
-    source_file = PathHelp.get_file_path('TRenesasAll_145H', 'Task.xlsx')
+    source_file = PathHelp.get_file_path('TRenesas_MCU_30H', 'Task.xlsx')
     move_ppn_to_allInfo(source_file=source_file)
     move_IC_stock_to_allInfo(source_file=source_file)
     move_BomOct_to_allInfo(source_file=source_file)
-    move_findchip_to_allInfo(source_file=source_file, findchip_file=PathHelp.get_file_path('TRenesasAll_145H', 'findchip_stock.xlsx'))
+    move_findchip_to_allInfo(source_file=source_file, findchip_file=PathHelp.get_file_path('TRenesas_MCU_30H', 'findchip_stock.xlsx'))
     # move_digiKey(source_file=source_file, digikey_file=PathHelp.get_file_path(None, 'TSkyworks.xlsx'), source_sheet = 'My Lists Worksheet')
-    move_digiKey(source_file=source_file, digikey_file=PathHelp.get_file_path("TRenesasAll_145H", 'dijikey_status.xlsx'), source_sheet='My Lists Worksheet')
+    move_digiKey(source_file=source_file, digikey_file=PathHelp.get_file_path("TRenesas_MCU_30H", 'dijikey_status.xlsx'), source_sheet='My Lists Worksheet')
     move_IC_hot(source_file=source_file)
 
 

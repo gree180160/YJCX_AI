@@ -141,17 +141,18 @@ def SplitPic_week(source_pic: str):
     wid = img_size[0]  # 图片宽度
     hei = img_size[1]  # 图片高度
     # mac
-    x = wid/2 - 216*scale
-    y = (988 * scale) if hei > (3160.0*scale) else (980*scale)
-    w = 116 * scale
-    h = 30 * scale
-    space = 36 * scale
-    # #11&SZ-02
-    # x = wid / 2 - 100 - 116
-    # y = (988 * scale) if hei > (3160.0*scale) else (980*scale)
-    # w = 116 * scale
-    # h = 30 * scale
-    # space = 36 * scale
+    if not source_pic.__contains__('/11/'):
+        x = wid / 2 - 216 * scale
+        y = (988 * scale) if hei > (3160.0 * scale) else (980 * scale)
+        w = 116 * scale
+        h = 30 * scale
+        space = 36 * scale
+    else:
+        x = wid / 2 - 216 * scale + 20 * scale
+        y = (988 * scale) if hei > (3160.0 * scale) else ((980-98) * scale)
+        w = 116 * scale
+        h = 30 * scale
+        space = 32.5 * scale
     search_record = []
     for index in range(0, 52):
         # 开始截取
@@ -171,18 +172,18 @@ def SplitPic_month(source_pic: str):
     img_size = img.size
     wid = img_size[0]  # 图片宽度
     hei = img_size[1]  # 图片高度
-    # mac 高清
-    x = wid / 2 - 216 * scale
-    y = (988 * scale) if hei > (1720.0*scale) else (980*scale)
-    w = 116 * scale
-    h = 30 * scale
-    space = 36 * scale
-    # 11-01,sz
-    # x = wid/2 - 100.00 - 116
-    # y = (988 * scale) if hei > (1720.0*scale) else (980*scale)
-    # w = 116 * scale
-    # h = 30 * scale
-    # space = 36 * scale
+    if not source_pic.__contains__('/11/'):
+        x = wid / 2 - 216 * scale
+        y = (988 * scale) if hei > (1720.0 * scale) else (980 * scale)
+        w = 116 * scale
+        h = 30 * scale
+        space = 36 * scale
+    else:
+        x = wid / 2 - 216 * scale + 20 * scale
+        y = (988 * scale) if hei > (1720.0 * scale) else (980 - 98)
+        w = 116 * scale
+        h = 30 * scale
+        space = 32.5 * scale
     search_record = []
     for index in range(0, 12):
 
@@ -196,8 +197,8 @@ def SplitPic_month(source_pic: str):
 
 
 def test_hot_value(fold_path: str):
-    # temp = 'HXR6112-DNT_W.png' # 1911×1724
-    temp = 'HXR6112-DNT_M.png' # 1911×3164
+    temp = 'R5F10RLCAFB#10_W.png' # 1911×1724
+    # temp = 'R5F10RLCAFB#10_M.png' # 1911×3164
     if temp.endswith('_M.png'):
         image_hot_data = SplitPic_month(fold_path + '/' + temp)
     elif temp.endswith('_W.png'):
@@ -206,5 +207,5 @@ def test_hot_value(fold_path: str):
 
 
 if __name__ == "__main__":
-    result = test_hot_value(fold_path='/Users/liuhe/Desktop/progress/TReneseas_all/145H/04/IC_hot_images')
+    result = test_hot_value(fold_path='/Users/liuhe/Desktop/progress/TRenesas_MCU/Renesas_MCU_30H/11/IC_hot_images')
     print(result)

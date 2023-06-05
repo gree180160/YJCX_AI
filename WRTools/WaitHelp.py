@@ -10,7 +10,7 @@ def waitfor(is_load_page, isDebug):
     else:
         # load new page
         if is_load_page:
-            time.sleep(70 + random.randint(5, 55))
+            time.sleep(100 + random.randint(5, 55))
         else:
             time.sleep(20 + random.randint(2, 22))
 
@@ -55,7 +55,7 @@ def daysPassed(thatDay: str) -> int:
     try:
         now = datetime.now()
         past = thatDay
-        past = list(map(int, past.split('-')))
+        past = list(map(int, pawww.split('-')))
         past = datetime(past[0], past[1], past[2])
         delta = now - past
         result = delta.days

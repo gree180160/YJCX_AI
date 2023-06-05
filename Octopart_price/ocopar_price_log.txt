@@ -8220,3 +8220,180 @@ from unknown error: web view not found
   (Session info: chrome=113.0.5672.92)
 
 2023-05-17 13:07:439FGV1006B209LTGI 页面 解析异常：local variable 'showed_rows' referenced before assignment 
+2023-05-17 15:59:579FGV1006C201LTGI8 go_to_cate except: Message: timeout: Timed out receiving message from renderer: 479.591
+  (Session info: chrome=113.0.5672.92)
+
+2023-05-18 14:30:24AT25XE081D-DWF 页面 解析异常：Message: timeout: Timed out receiving message from renderer: 480.000
+  (Session info: chrome=113.0.5672.92)
+
+2023-05-18 14:38:24AT25XE081D-MAHN-T go_to_cate except: Message: timeout: Timed out receiving message from renderer: 480.000
+  (Session info: chrome=113.0.5672.92)
+
+2023-05-22 16:45:53R5F563NYDDFB#10 页面 解析异常：Message: timeout: Timed out receiving message from renderer: 480.000
+  (Session info: chrome=113.0.5672.126)
+
+2023-05-22 16:53:53UPD70F4016M2GJA-GAE-G go_to_cate except: Message: timeout: Timed out receiving message from renderer: 480.000
+  (Session info: chrome=113.0.5672.126)
+
+2023-05-22 17:37:08UPD70F4016M2GJA-GAE-G 页面 解析异常：Message: invalid session id
+
+2023-05-22 17:37:08R5F100GCAFB#30 go_to_cate except: Message: invalid session id
+
+2023-05-22 17:39:45R5F100GCAFB#30 页面 解析异常：Message: invalid session id
+
+2023-05-22 17:39:45R5F10378ANA#W0 go_to_cate except: Message: invalid session id
+
+2023-05-22 17:42:45R5F10378ANA#W0 页面 解析异常：Message: invalid session id
+
+2023-05-22 17:42:45R5F51406ADNE#10 go_to_cate except: Message: invalid session id
+
+2023-05-22 17:45:59R5F51406ADNE#10 页面 解析异常：Message: invalid session id
+
+2023-05-22 17:45:59R5F51305AGFM#10 go_to_cate except: Message: invalid session id
+
+2023-05-22 17:49:01R5F51305AGFM#10 页面 解析异常：Message: invalid session id
+
+2023-05-22 17:49:02R5F100EDANA#W0 go_to_cate except: Message: invalid session id
+
+2023-05-22 17:51:57R5F100EDANA#W0 页面 解析异常：Message: invalid session id
+
+2023-05-22 17:51:57R5F12018ASP#10 go_to_cate except: Message: invalid session id
+
+2023-05-22 17:55:05R5F12018ASP#10 页面 解析异常：Message: invalid session id
+
+2023-05-22 17:55:05R5F52317AGNE#00 go_to_cate except: Message: invalid session id
+
+2023-05-22 17:58:14R5F52317AGNE#00 页面 解析异常：Message: invalid session id
+
+2023-05-22 17:58:14R7FA6T1AB3CFP#HA0 go_to_cate except: Message: invalid session id
+
+2023-05-30 12:42:34R5F572NDDDFB#10 go_to_cate except: Message: timeout: Timed out receiving message from renderer: 479.680
+  (Session info: chrome=113.0.5672.126)
+
+2023-05-30 13:25:35R5F572NDDDFB#10 页面 解析异常：Message: invalid session id
+
+2023-05-30 13:25:35R5F100GLDFB#30 go_to_cate except: Message: invalid session id
+
+2023-05-30 13:28:12R5F100GLDFB#30 页面 解析异常：Message: invalid session id
+
+2023-05-30 13:28:12R5F101GJAFB#V0 go_to_cate except: Message: invalid session id
+
+2023-05-30 13:30:53R5F101GJAFB#V0 页面 解析异常：Message: invalid session id
+
+2023-05-30 13:30:53R5F100LHAFB#X0 go_to_cate except: Message: invalid session id
+
+2023-05-30 13:33:56R5F100LHAFB#X0 页面 解析异常：Message: invalid session id
+
+2023-05-30 13:33:56R5F100GGAFB#30 go_to_cate except: Message: invalid session id
+
+2023-05-30 13:37:09R5F100GGAFB#30 页面 解析异常：Message: invalid session id
+
+2023-05-30 13:37:09R5F571MGCDFP#V0 go_to_cate except: Message: invalid session id
+
+2023-05-30 13:40:29R5F571MGCDFP#V0 页面 解析异常：Message: invalid session id
+
+2023-05-30 13:40:29R5F51101ADNE#00 go_to_cate except: Message: invalid session id
+
+2023-05-30 13:43:47R5F51101ADNE#00 页面 解析异常：Message: invalid session id
+
+2023-05-30 13:43:47R5F571MLCDLK#20 go_to_cate except: Message: invalid session id
+
+2023-05-30 13:47:11R5F571MLCDLK#20 页面 解析异常：Message: invalid session id
+
+2023-05-30 13:47:11R5F572MDDGBG#20 go_to_cate except: Message: invalid session id
+
+2023-05-30 13:50:13R5F572MDDGBG#20 页面 解析异常：Message: invalid session id
+
+2023-05-30 13:50:13R5F113GKKFB#X5 go_to_cate except: Message: invalid session id
+
+2023-05-30 13:53:13R5F113GKKFB#X5 页面 解析异常：Message: invalid session id
+
+2023-05-30 13:53:13R7F100GGL2DFB#AA0 go_to_cate except: Message: invalid session id
+
+2023-05-30 13:55:53R7F100GGL2DFB#AA0 页面 解析异常：Message: invalid session id
+
+2023-05-30 13:55:53R5F101GEAFB#V0 go_to_cate except: Message: invalid session id
+
+2023-05-30 13:58:58R5F101GEAFB#V0 页面 解析异常：Message: invalid session id
+
+2023-05-30 13:58:58R5F100JLAFA#10 go_to_cate except: Message: invalid session id
+
+2023-05-30 14:01:54R5F100JLAFA#10 页面 解析异常：Message: invalid session id
+
+2023-05-30 14:01:54R5F100AEASP#50 go_to_cate except: Message: invalid session id
+
+2023-05-30 14:04:40R5F100AEASP#50 页面 解析异常：Message: invalid session id
+
+2023-05-30 14:04:40R5F100LKDFB#X0 go_to_cate except: Message: invalid session id
+
+2023-05-30 14:07:27R5F100LKDFB#X0 页面 解析异常：Message: invalid session id
+
+2023-05-30 14:07:27R5F100EDDNA#W0 go_to_cate except: Message: invalid session id
+
+2023-05-30 14:10:36R5F100EDDNA#W0 页面 解析异常：Message: invalid session id
+
+2023-05-30 14:10:36R5F100JKDFA#10 go_to_cate except: Message: invalid session id
+
+2023-05-30 14:13:11R5F100JKDFA#10 页面 解析异常：Message: invalid session id
+
+2023-05-30 14:13:11R5F563NDCDLK#U0 go_to_cate except: Message: invalid session id
+
+2023-05-30 14:15:50R5F563NDCDLK#U0 页面 解析异常：Message: invalid session id
+
+2023-05-30 14:15:50R5F10AGACLFB#55 go_to_cate except: Message: invalid session id
+
+2023-05-30 14:18:53R5F10AGACLFB#55 页面 解析异常：Message: invalid session id
+
+2023-05-30 14:18:54R5F5634EYDFB#30 go_to_cate except: Message: invalid session id
+
+2023-05-30 14:22:17R5F5634EYDFB#30 页面 解析异常：Message: invalid session id
+
+2023-05-30 14:22:17R5F565N9BGFP#30 go_to_cate except: Message: invalid session id
+
+2023-05-30 14:25:41R5F565N9BGFP#30 页面 解析异常：Message: invalid session id
+
+2023-05-30 14:25:41UPD703213GC-XXX-8EU-A go_to_cate except: Message: invalid session id
+
+2023-05-30 14:28:46UPD703213GC-XXX-8EU-A 页面 解析异常：Message: invalid session id
+
+2023-05-30 14:28:46R5F100FCAFP#10 go_to_cate except: Message: invalid session id
+
+2023-05-30 14:32:05R5F100FCAFP#10 页面 解析异常：Message: invalid session id
+
+2023-05-30 14:32:05R5F5671CHDBP#20 go_to_cate except: Message: invalid session id
+
+2023-05-30 14:34:40R5F5671CHDBP#20 页面 解析异常：Message: invalid session id
+
+2023-05-30 14:34:40R5F10BACYSP#W5 go_to_cate except: Message: invalid session id
+
+2023-05-30 14:37:41R5F10BACYSP#W5 页面 解析异常：Message: invalid session id
+
+2023-05-30 14:37:41R5F10AGCKFB#H5 go_to_cate except: Message: invalid session id
+
+2023-05-30 14:40:38R5F10AGCKFB#H5 页面 解析异常：Message: invalid session id
+
+2023-05-30 14:40:38R5F565N7BDFP#30 go_to_cate except: Message: invalid session id
+
+2023-05-30 14:43:47R5F565N7BDFP#30 页面 解析异常：Message: invalid session id
+
+2023-05-30 14:43:47R5F56719HDBP#20 go_to_cate except: Message: invalid session id
+
+2023-05-30 14:47:06R5F56719HDBP#20 页面 解析异常：Message: invalid session id
+
+2023-05-30 14:47:06R9A07G044L13GBG#AC0 go_to_cate except: Message: invalid session id
+
+2023-05-31 17:05:46R7F7010443AFP 页面 解析异常：local variable 'showed_rows' referenced before assignment 
+2023-06-01 13:17:19R5F11CCCGBG#W0 页面 解析异常：local variable 'showed_rows' referenced before assignment 
+2023-06-01 13:19:58R5F104LEGFA#50 页面 解析异常：local variable 'showed_rows' referenced before assignment 
+2023-06-01 14:00:24R7FA6M5AG3CFP#AA0 页面 解析异常：local variable 'showed_rows' referenced before assignment 
+2023-06-01 14:10:54R5F110NEGLA#W0 页面 解析异常：local variable 'showed_rows' referenced before assignment 
+2023-06-01 14:25:18UPD70F3932AGJA-GAE-G 页面 解析异常：local variable 'showed_rows' referenced before assignment 
+2023-06-01 14:34:54R5F101SKDFB#50 页面 解析异常：local variable 'showed_rows' referenced before assignment 
+2023-06-01 14:40:40R7F100GGG2DFB#AA0 页面 解析异常：local variable 'showed_rows' referenced before assignment 
+2023-06-02 15:01:00R7F102GEC2DNP#AA0 页面 解析异常：local variable 'showed_rows' referenced before assignment 
+2023-06-03 09:45:52R7F102GBC3CNP#HA0 页面 解析异常：local variable 'showed_rows' referenced before assignment 
+2023-06-03 10:22:46R5F562T6EDFF#V3 页面 解析异常：local variable 'showed_rows' referenced before assignment 
+2023-06-03 10:30:00R7FS3A77C2A01CLK#AC1 页面 解析异常：local variable 'showed_rows' referenced before assignment 
+2023-06-03 11:25:28R5F117BCGFP#10 页面 解析异常：local variable 'showed_rows' referenced before assignment 
+2023-06-03 15:37:00R5F56604CGFP#10 页面 解析异常：local variable 'showed_rows' referenced before assignment 
+2023-06-03 16:07:28R7F102GCE2DLA#BC0 页面 解析异常：local variable 'showed_rows' referenced before assignment 

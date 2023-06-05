@@ -3,3 +3,81 @@
 2023-05-17 14:28:04get total page error list index out of range
 2023-05-17 14:41:31get total page error list index out of range
 2023-05-17 14:45:55get total page error list index out of range
+2023-05-17 14:49:50get total page error list index out of range
+2023-05-17 14:54:19get total page error list index out of range
+2023-05-17 14:57:57get total page error list index out of range
+2023-05-17 15:01:05get total page error list index out of range
+2023-05-17 15:03:56get total page error list index out of range
+2023-05-17 15:12:25get total page error list index out of range
+2023-05-17 15:19:30get total page error list index out of range
+2023-05-17 15:27:49input ppn error write_log() missing 1 required positional argument: 'content'
+2023-05-17 15:31:43get total page error list index out of range
+2023-05-17 15:31:43input ppn error write_log() missing 1 required positional argument: 'content'
+2023-05-17 15:34:50get total page error list index out of range
+2023-05-17 15:34:50input ppn error write_log() missing 1 required positional argument: 'content'
+2023-05-17 15:39:21get total page error list index out of range
+2023-05-17 15:39:21input ppn error write_log() missing 1 required positional argument: 'content'
+2023-05-17 15:43:16get total page error list index out of range
+2023-05-17 15:43:16input ppn error write_log() missing 1 required positional argument: 'content'
+2023-05-17 15:56:34get total page error list index out of range
+2023-05-17 16:23:43get total page error list index out of range
+2023-05-17 16:31:07get total page error list index out of range
+2023-05-17 16:46:57get total page error list index out of range
+2023-05-17 16:49:49get total page error list index out of range
+2023-05-17 17:01:53get total page error list index out of range
+2023-05-17 20:41:53get total page error list index out of range
+2023-05-17 20:46:23get total page error list index out of range
+2023-05-17 21:04:31get total page error list index out of range
+2023-05-17 21:08:15get total page error list index out of range
+2023-05-17 21:12:57get total page error list index out of range
+2023-05-17 21:17:37get total page error list index out of range
+2023-05-17 21:21:05get total page error list index out of range
+2023-05-17 21:29:10get total page error list index out of range
+2023-05-17 21:32:47get total page error list index out of range
+2023-05-17 21:36:30get total page error list index out of range
+2023-05-17 21:53:25get total page error list index out of range
+2023-05-17 22:01:50get total page error list index out of range
+2023-05-18 09:34:41get total page error list index out of range
+2023-05-18 09:38:15get total page error list index out of range
+2023-05-18 09:42:30get total page error list index out of range
+2023-05-18 09:47:11get total page error list index out of range
+2023-05-18 09:51:35get total page error list index out of range
+2023-05-18 10:00:06get total page error list index out of range
+2023-05-18 10:03:58get total page error list index out of range
+2023-05-18 10:07:41get total page error list index out of range
+2023-05-18 10:15:34get total page error list index out of range
+2023-05-18 10:18:54get total page error list index out of range
+2023-05-18 10:22:33get total page error list index out of range
+2023-05-18 10:26:58get total page error list index out of range
+2023-05-18 10:31:36get total page error list index out of range
+2023-05-18 10:34:25get total page error list index out of range
+2023-05-18 10:37:33get total page error list index out of range
+2023-05-18 10:40:25get total page error list index out of range
+2023-05-18 10:43:31get total page error list index out of range
+2023-05-18 10:54:42input ppn error write_log() missing 1 required positional argument: 'content'
+2023-05-18 10:58:29get total page error list index out of range
+2023-05-18 11:03:12anly_webdriver error Message: no such element: Unable to locate element: {"method":"css selector","selector":"div.ant-table.ant-table-ping-right.ant-table-fixed-column.ant-table-scroll-horizontal.ant-table-has-fix-right"}
+  (Session info: chrome=113.0.5672.92)
+
+2023-05-18 11:21:50get total page error list index out of range
+2023-05-18 11:37:33get total page error list index out of range
+2023-05-18 11:40:42get total page error list index out of range
+2023-05-18 11:43:33get total page error list index out of range
+2023-05-18 11:46:40get total page error list index out of range
+2023-05-18 11:50:29get total page error list index out of range
+2023-05-18 12:09:47get total page error list index out of range
+2023-05-18 12:13:07get total page error list index out of range
+2023-05-18 12:16:23get total page error list index out of range
+2023-05-18 12:23:27get total page error list index out of range
+2023-05-18 12:27:31get total page error list index out of range
+2023-05-18 12:30:49get total page error list index out of range
+2023-05-18 12:34:49get total page error list index out of range
+2023-05-18 12:37:34get total page error list index out of range
+2023-05-18 12:40:32get total page error list index out of range
+2023-05-18 12:44:17get total page error list index out of range
+2023-05-18 12:47:28get total page error list index out of range
+2023-05-18 12:51:49get total page error list index out of range
+2023-05-18 12:54:35get total page error list index out of range
+2023-05-18 12:57:44get total page error list index out of range
+2023-05-18 13:05:27get total page error list index out of range
+2023-05-18 13:10:03get total page error list index out of range

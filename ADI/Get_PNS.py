@@ -64,7 +64,7 @@ def analy_webdriver(wdriver, url):
             pn_detail = details[index]
             try:
                 pst = pn_detail.find_element(by=By.CSS_SELECTOR, value='div.checkbox.parameter')
-                inventory_value = pst.find_element(by=By.TAG_NAME, value='a').text
+                inventory_value = pwww.find_element(by=By.TAG_NAME, value='a').text
             except:
                 inventory_value = '--'
             try:

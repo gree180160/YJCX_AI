@@ -44,7 +44,7 @@ def set_totalpage(soup):
     try:
         ul = soup.select('ul.jsx-4126298714.jumps')[0]
         li_last = ul.select('li.jsx-4126298714')[-1]
-        a = li_last.select('a')[0]
+        a = li_lawww.select('a')[0]
         total_page = a.text
     except:
         total_page = 1

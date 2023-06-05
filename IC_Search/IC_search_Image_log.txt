@@ -1,0 +1,68 @@
+
+2023-06-02 01:13:49/Users/liuhe/Desktop/progress/TRenesas_MCU/Renesas_MCU_30H/11/IC_hot_images/R5F10WMEAFB#30_W.png  33th---  1: 9
+2: 2
+3: 4: 2
+
+2023-06-02 01:14:32/Users/liuhe/Desktop/progress/TRenesas_MCU/Renesas_MCU_30H/11/IC_hot_images/R5F56519ADFP#10_W.png  5th---  1: 42
+2: 3: 43
+4: 
+2023-06-02 09:39:25/Users/liuhe/Desktop/progress/TRenesas_MCU/Renesas_MCU_30H/11/IC_hot_images/R7FA2E1A93CFM#AA0_W.png  1th---  1: 83
+2: 53
+3: 53
+4: 53
+
+2023-06-02 10:19:03/Users/liuhe/Desktop/progress/TRenesas_MCU/Renesas_MCU_30H/11/IC_hot_images/R5F111PGAFB#30_W.png  14th---  1: 82
+2: 52
+3: 52
+4: 52
+
+2023-06-03 09:16:11/Users/liuhe/Desktop/progress/TRenesas_MCU/Renesas_MCU_30H/11/IC_hot_images/R5F1007AANA#U0_M.png  5th---  1: 82
+2: 52
+3: 52
+4: 52
+
+2023-06-03 09:16:16/Users/liuhe/Desktop/progress/TRenesas_MCU/Renesas_MCU_30H/11/IC_hot_images/R5F1007AANA#U0_W.png  11th---  1: 83
+2: 53
+3: 53
+4: 53
+
+2023-06-03 09:16:33/Users/liuhe/Desktop/progress/TRenesas_MCU/Renesas_MCU_30H/11/IC_hot_images/R5F100PJAFB#10_W.png  15th---  1: 83
+2: 53
+3: 53
+4: 53
+
+2023-06-03 09:17:34/Users/liuhe/Desktop/progress/TRenesas_MCU/Renesas_MCU_30H/11/IC_hot_images/R5F10Y46ASP#10_W.png  0th---  1: 16
+2: 15
+3: 15
+4: 15
+
+2023-06-03 21:23:30/Users/liuhe/Desktop/progress/TRenesas_MCU/Renesas_MCU_30H/11/IC_hot_images/R5F52106BDFP#30_M.png  10th---  1: 129
+2: 123
+3: 123
+4: 123
+
+2023-06-03 21:24:38/Users/liuhe/Desktop/progress/TRenesas_MCU/Renesas_MCU_30H/11/IC_hot_images/R7F7010343AFP_W.png  12th---  1: 1
+2: 1
+3: 7
+4: 1
+
+2023-06-03 21:24:41/Users/liuhe/Desktop/progress/TRenesas_MCU/Renesas_MCU_30H/11/IC_hot_images/R7F7010343AFP_W.png  25th---  1: 82
+2: 52
+3: 52
+4: 52
+
+2023-06-03 21:24:41/Users/liuhe/Desktop/progress/TRenesas_MCU/Renesas_MCU_30H/11/IC_hot_images/R7F7010343AFP_W.png  26th---  1: 129
+2: 123
+3: 123
+4: 123
+
+2023-06-03 21:24:44/Users/liuhe/Desktop/progress/TRenesas_MCU/Renesas_MCU_30H/11/IC_hot_images/R7F7010343AFP_W.png  39th---  1: 66
+2: 66
+3: 86
+4: 66
+
+2023-06-03 21:24:47/Users/liuhe/Desktop/progress/TRenesas_MCU/Renesas_MCU_30H/11/IC_hot_images/R7F7010343AFP_W.png  50th---  1: 109
+2: 103
+3: 103
+4: 103
+

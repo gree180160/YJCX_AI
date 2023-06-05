@@ -309,13 +309,13 @@ def mergeExcel(source_files, aim_file):
 
 if __name__ == "__main__":
     # active_excel('/Users/liuhe/PycharmProjects/YJCX_AI/TInfenion_5H.xlsx', "Sheet1")
-    # remove_sheets('/Users/liuhe/Desktop/progress/TReneseas_all/Octopart_page0_price.xlsx')
+    remove_sheets('/Users/liuhe/PycharmProjects/YJCX_AI/TRenesas_MCU_30H/IC_stock.xlsx')
     # deal_keyword_result()
     # row_value = read_col_content(file_name='/Users/liuhe/PycharmProjects/YJCX_AI/TKWPage0.xlsx', sheet_name='hot_month', col_index=1)
     # index = row_value.index('46546546546545645')
     # result_save_file = PathHelp.get_file_path(None, 'TCY8C_IC_Hot.xlsx')
     # active_excel(result_save_file, 'Sheet1')
     # sheet_isEmpty(file_name='/Users/liuhe/PycharmProjects/YJCX_AI/TKWPage0.xlsx', sheet_name1='Sheet1', sheet_name2='Sheet2')
-    mergeExcel(source_files=['/Users/liuhe/Desktop/progress/TReneseas_all/Octopart_page0_price4.xlsx',
-                        '/Users/liuhe/Desktop/progress/TReneseas_all/Octopart_page0_price5.xlsx',
-                        '/Users/liuhe/Desktop/progress/TReneseas_all/Octopart_page0_price6.xlsx'], aim_file='/Users/liuhe/Desktop/progress/TReneseas_all/Octopart_page0_price0_809.xlsx')
+    # mergeExcel(source_files=['/Users/liuhe/Desktop/progress/TReneseas_all/Octopart_page0_price4.xlsx',
+    #                     '/Users/liuhe/Desktop/progress/TReneseas_all/Octopart_page0_price5.xlsx',
+    #                     '/Users/liuhe/Desktop/progress/TReneseas_all/Octopart_page0_price6.xlsx'], aim_file='/Users/liuhe/Desktop/progress/TReneseas_all/Octopart_page0_price0_809.xlsx')

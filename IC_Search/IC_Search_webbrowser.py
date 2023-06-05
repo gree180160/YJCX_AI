@@ -36,8 +36,8 @@ def change_screenShotName(fold_path):
     for (index, temp) in enumerate(file_name_list):
         if temp.startswith("火狐截图_"):
             valid_files.append(temp)
-    print(valid_files)
     valid_files.sort()
+    print(valid_files)
     for (index, temp) in enumerate(valid_files):
         print(temp)
         if True:

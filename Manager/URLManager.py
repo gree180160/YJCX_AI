@@ -107,7 +107,7 @@ def IC_stock_url(ppn: str):
     cate_str = cate_str.replace('#', '%23')
     cate_str = cate_str.replace('+', '%2B')
     cate_str = cate_str.replace(',', '%2C')
-    return f"https://ST.ic.net.cn/search/{cate_str}.html"
+    return f"https://www.ic.net.cn/search/{cate_str}.html"
 
 
 def IC_hot_url(ppn: str, isWeek):

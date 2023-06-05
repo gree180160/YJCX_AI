@@ -3,6 +3,7 @@ import time
 import undetected_chromedriver as uc
 import re
 from selenium.webdriver.common.by import By
+from selenium import webdriver
 
 import Manager.URLManager
 from WRTools import LogHelper, ExcelHelp, WaitHelp, EmailHelper, PathHelp
@@ -13,16 +14,21 @@ ssl._create_default_https_context = ssl._create_unverified_context
 # driver_option.add_argument("–incognito")  #隐身模式
 # 等待初始HTML文档完全加载和解析，
 # driver_option.page_load_strategy = 'eager'
+# fire_options = webdriver.FirefoxOptions()
+# fire_options.add_argument('--headless')
+# fire_options.add_argument('blink-settings=imagesEnabled=false')
+# driver = webdriver.Firefox(options=fire_options)
 driver = uc.Chrome(use_subprocess=True)
+driver.set_page_load_timeout(1000)
 # logic
 default_url = 'https://octopart.com/'
 
-sourceFile_dic = {'fileName': PathHelp.get_file_path(None, 'TOnsemi.xlsx'),
+sourceFile_dic = {'fileName': PathHelp.get_file_path(None, 'TNXP.xlsx'),
                   'sourceSheet': 'opn',
                   'colIndex': 1,
-                  'startIndex': 0,
-                  'endIndex': 125}
-result_save_file = PathHelp.get_file_path('TRenesasAll_25H', 'octopart_price.xlsx')
+                  'startIndex': 1720,
+                  'endIndex': 2500}
+result_save_file = PathHelp.get_file_path(None, 'TNXP.xlsx')
 
 log_file = PathHelp.get_file_path(super_path='Octopart_category', file_name='octopart_key_cate_log.txt')
 
@@ -53,15 +59,26 @@ def is_security_check(driver) -> bool:
 
 
 # 获取总页数
-def set_totalpage(driver):
+def set_totalpage():
     global total_page
     try:
         ul = driver.find_element(by=By.CSS_SELECTOR, value='ul.jsx-4126298714.jumps')
         li_last = ul.find_elements(by=By.CSS_SELECTOR, value='li.jsx-4126298714')[-1]
-        a = li_last.find_element(by=By.CSS_SELECTOR, value='a')
+        a = li_lawww.find_element(by=By.CSS_SELECTOR, value='a')
         total_page = int(a.text)
     except:
         total_page = 1
+
+
+# 获取总页数
+def set_current_page():
+    global current_page
+    try:
+        li = driver.find_element(by=By.CSS_SELECTOR, value='li.jsx-4126298714.is-active')
+        span = li.find_element(By.TAG_NAME, value='span')
+        current_page = int(span.text)
+    except:
+        current_page = 1
 
 
 # 确定根据key 是否有匹配的结果，避开建议性的结果
@@ -79,14 +96,11 @@ def has_content(driver) -> bool:
 # 跳转到下一个指定的型号 page , 的那一页
 def go_to_cate(key, url):
     try:
-        if driver.current_url.startswith('https://octopart.com/search?q='):
-            if driver.current_url == url:
-                return
-            driver.get(url)
-        else:
-            driver.get(url)
+        driver.get(url)
     except Exception as e:
         LogHelper.write_log(log_file_name=log_file, content=f'{key} go_to_cate except: {e}')
+        if str(e.msg).__contains__('Timed out'):
+            driver.reconnect()
 
 
 def go_next_page(key_name):
@@ -103,74 +117,90 @@ def get_category(key_index, key_name, manu):
     global current_page, total_page
     current_page = 1
     total_page = 1
-    while current_page <= total_page:
+    while True:
         print(f'key_index is: {key_index} key_name is: {key_name} page is: {current_page} totalpage is : {total_page}')
         try:
-            # driver.execute_cdp_cmd('Network.setUserAgentOverride', {
-            #     "userAgent": f"{UserAgentHelper.getRandowUA_Mac()}",
-            #     "platform": "macOS"})
             url = Manager.URLManager.octopart_get_page_url(key_name=key_name, page=current_page, manu=manu)
-            url = url.replace('view-source:', '')
             print(f'url is: {url}')
             go_to_cate(key=key_name, url=url)
             if current_page > 1 and current_page%15 == 0:
-                time.sleep(240)
+                time.sleep(500)
             else:
                 WaitHelp.waitfor_octopart(is_load_page=True, isDebug=False)
         except Exception as e:
-            current_page += 1
             LogHelper.write_log(log_file, f'{key_name} request get exception: {e}')
             return
         if is_security_check(driver):
-            current_page += 1
             LogHelper.write_log(log_file_name=log_file, content=f'{key_name} ip security check')
             break
         if not has_content(driver=driver):
-            current_page += 1
             break
-        set_totalpage(driver)
-        analyth_html(key_name=key_name)
+        set_totalpage()
+        set_current_page()
+        analyth_html(pn=key_name)
         time.sleep(2)
-        current_page += 1
+        if current_page >= total_page:
+            break
 
 
 # 解析html，获取cate，manu
-def analyth_html(key_name):
+def analyth_html(pn):
+    ppn_list = []
     try:
-        table = driver.find_element(by=By.CSS_SELECTOR, value='div.jsx-2172888034.prices-view')
-        cate_first = table.find_elements(by=By.CSS_SELECTOR, value='div.jsx-2172888034')
-        cate_left = table.find_elements(by=By.CSS_SELECTOR, value='div.jsx-2400378105.part')
-        cates_all = cate_first + cate_left
-        info_list = []
-        for temp_cate in cates_all:
-            header = temp_cate.find_element(by=By.CSS_SELECTOR, value='div.jsx-3355510592.header')
+        left_rows = driver.find_elements(By.CSS_SELECTOR, 'div.jsx-1681079743.part')
+        showed_rows = left_rows
+        # 默认直接显示的row
+        for temp_cate_row in showed_rows:
             try:
-                manu = header.find_element(by=By.CSS_SELECTOR, value='div.jsx-312275976.jsx-2018853745.manufacturer-name-and-possible-tooltip').text
-            except:
-                manu = None
-            try:
-                cate_name = header.find_element(by=By.CSS_SELECTOR, value='div.jsx-312275976.jsx-2018853745.mpn').text
-            except:
-                cate_name = None
-            if cate_name and manu:
-                if check_htmlPPN_valid(html_ppn=cate_name, opn=key_name):
-                    info_list.append([cate_name, manu, key_name, total_page])
-        if len(info_list) > 0:
-            ExcelHelp.add_arr_to_sheet(file_name=result_save_file, sheet_name='ppn', dim_arr=info_list)
+                ppn = get_cate_name(cate_area=temp_cate_row, opn=pn)
+                manu = get_manufacture_name(cate_area=temp_cate_row, opn=pn)
+                if check_htmlPPN_valid(html_ppn=ppn, opn=pn):
+                    info = [ppn, manu, str(current_page), pn]
+                    ppn_list.append(info)
+            except Exception as e:
+                LogHelper.write_log(log_file_name=log_file, content=f'{pn} 当个cate 解析异常：{e} ')
     except Exception as e:
-        LogHelper.write_log(log_file, f'{key_name} analyth_html exception: {e}')
+        LogHelper.write_log(log_file_name=log_file, content=f'{pn} 页面 解析异常：{e} ')
+    ExcelHelp.add_arr_to_sheet(
+        file_name=result_save_file,
+        sheet_name='octopart_price',
+        dim_arr=ppn_list)
+
+
+# 获取cate
+def get_cate_name(cate_area, opn) -> str:
+    cate_name = ''
+    try:
+        header = cate_area.find_elements(By.CSS_SELECTOR, 'div.jsx-2471764431.header')[0]
+        cate_name = header.find_elements(By.CSS_SELECTOR, 'div.jsx-312275976.jsx-1485186546')[2].text
+    except Exception as e:
+        LogHelper.write_log(log_file_name=log_file, content=f'{opn} cannot check keyname: {e}')
+    return cate_name
+
+
+# 获取manu
+def get_manufacture_name(cate_area, opn) -> str:
+    manu_name = ''
+    try:
+        header = cate_area.find_element(By.CSS_SELECTOR, 'div.jsx-2471764431.header')
+        manu_name = header.find_elements(By.CSS_SELECTOR, 'div.jsx-312275976.jsx-1485186546.manufacturer-name-and-possible-tooltip')[0].text
+    except Exception as e:
+        LogHelper.write_log(log_file_name=log_file, content=f'{opn} cannot check manufacture: {e}')
+    return manu_name
 
 
 # 验证获取的ppn 是否与opn 相关
 def check_htmlPPN_valid(html_ppn, opn):
-    opn = opn.replace(" ", "")
-    html_ppn = html_ppn.replace(" ", "")
+    opn = str(opn).strip()
+    html_ppn = str(html_ppn).strip()
     # 去掉结尾的+，因为pn ,结尾有无+都是一个型号
     if opn.endswith('+'):
         pn = opn[0:-1]
     if html_ppn.endswith('+'):
         html_pn = html_ppn[0:-1]
     result = bool(re.search(opn, html_ppn, re.IGNORECASE))
+    if not result:
+        result = str(html_ppn).find(opn, 0, len(opn))
     return result
 
 
@@ -182,7 +212,8 @@ def main():
         if cate_name is None or cate_name.__contains__('?'):
             continue
         elif cate_index in range(sourceFile_dic['startIndex'], sourceFile_dic['endIndex']):
-            manu = Manager.URLManager.Octopart_manu.Onsemi
+            manu = Manager.URLManager.Octopart_manu.NXP
+            cate_name = str(cate_name).strip()
             get_category(key_index=cate_index, key_name=cate_name, manu=manu)
 
 

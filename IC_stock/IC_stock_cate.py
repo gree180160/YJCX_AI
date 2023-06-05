@@ -70,7 +70,7 @@ def login_action(aim_url):
         WaitHelp.waitfor_account_import(True, False)
     if driver.current_url.startswith('https://member.ic.net'):  # 首次登录
         driver.get(aim_url)
-    elif driver.current_url.startswith('https://ST.ic.net.cn/search'):  # 查询过程中出现登录
+    elif driver.current_url.startswith('https://www.ic.net.cn/search'):  # 查询过程中出现登录
         driver.get(aim_url)
 
 
@@ -78,7 +78,6 @@ def login_action(aim_url):
 def get_stock(cate_index, cate_name):
     global current_page
     search_url = URLManager.IC_stock_url(cate_name)
-
     login_action(search_url)
     # 延时几秒确保页面加载完毕
     WaitHelp.waitfor_account_import(True, False)
@@ -172,7 +171,7 @@ def get_stock(cate_index, cate_name):
 # 验证当前页面是否正在等待用户验证，连续三次请求出现验证码页面，则关闭页面
 def checkVerificationCodePage():
     global VerificationCodePage
-    if driver.current_url == 'https://ST.ic.net.cn/searchPnCode.php':
+    if driver.current_url == 'https://www.ic.net.cn/searchPnCode.php':
         VerificationCodePage += 1
     else:
         VerificationCodePage = 0
