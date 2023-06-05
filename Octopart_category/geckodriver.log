@@ -1,0 +1,147 @@
+1684483192989	geckodriver	INFO	Listening on 127.0.0.1:56948
+1684483193496	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "--headless" "blink-settings=imagesEnabled=false" "--remote-debugging-port" "56949" "--remote-allow-hosts" "localhost" "-foreground" "-no-remote" "-profile" "/var/folders/jc/x8nf5scd28v4wrbkt9l72vd00000gn/T/rust_mozprofilejCsuJX"
+*** You are running in headless mode.
+1684483193907	Marionette	INFO	Marionette enabled
+1684483193940	Marionette	INFO	Listening on port 56958
+2023-05-19 15:59:53.969 plugin-container[48295:344452] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2023-05-19 15:59:53.969 plugin-container[48295:344452] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2023-05-19 15:59:54.004 plugin-container[48295:344452] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2023-05-19 15:59:54.004 plugin-container[48295:344452] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2023-05-19 15:59:54.004 plugin-container[48295:344461] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2023-05-19 15:59:54.004 plugin-container[48295:344461] nil host used in call to allowsAnyHTTPSCertificateForHost:
+Read port: 56958
+WebDriver BiDi listening on ws://127.0.0.1:56949
+1684483194086	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /var/folders/jc/x8nf5scd28v4wrbkt9l72vd00000gn/T/rust_mozprofilejCsuJX/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:56949/devtools/browser/2bf836b3-901c-44dc-9824-b7aefd57dfd3
+JavaScript warning: https://octopart.com/kdRQnL15/init.js, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1684483394836	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'interactive'.
+1684483394840	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'interactive'.
+1684483394843	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'interactive'.
+1684483394845	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'interactive'.
+1684483394846	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'interactive'.
+1684483394848	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'interactive'.
+1684483394849	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'interactive'.
+1684483394850	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'interactive'.
+1684483394852	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'interactive'.
+1684483394854	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'interactive'.
+JavaScript warning: https://octopart.com/kdRQnL15/init.js, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://octopart.com/kdRQnL15/init.js, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+[GFX1-]: Unrecognized feature ACCELERATED_CANVAS2D
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+1684483676078	geckodriver	INFO	Listening on 127.0.0.1:57608
+1684483676588	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "--headless" "blink-settings=imagesEnabled=false" "--remote-debugging-port" "57609" "--remote-allow-hosts" "localhost" "-foreground" "-no-remote" "-profile" "/var/folders/jc/x8nf5scd28v4wrbkt9l72vd00000gn/T/rust_mozprofilez0UnJP"
+*** You are running in headless mode.
+1684483676871	Marionette	INFO	Marionette enabled
+1684483676899	Marionette	INFO	Listening on port 57617
+2023-05-19 16:07:56.930 plugin-container[48626:349790] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2023-05-19 16:07:56.931 plugin-container[48626:349790] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2023-05-19 16:07:56.939 plugin-container[48626:349790] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2023-05-19 16:07:56.939 plugin-container[48626:349790] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2023-05-19 16:07:56.939 plugin-container[48626:349801] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2023-05-19 16:07:56.939 plugin-container[48626:349801] nil host used in call to allowsAnyHTTPSCertificateForHost:
+Read port: 57617
+WebDriver BiDi listening on ws://127.0.0.1:57609
+1684483677047	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /var/folders/jc/x8nf5scd28v4wrbkt9l72vd00000gn/T/rust_mozprofilez0UnJP/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:57609/devtools/browser/d1e44788-7a51-40e8-838a-d45716e339df
+JavaScript warning: https://octopart.com/kdRQnL15/init.js, line 2: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1684483888453	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'interactive'.
+1684483888457	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'interactive'.
+1684483888460	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'interactive'.
+1684483888462	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'interactive'.
+1684483888463	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'interactive'.
+1684483888465	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'interactive'.
+1684483888467	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'interactive'.
+1684483888468	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'interactive'.
+1684483888469	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'interactive'.
+1684483888470	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'interactive'.
+JavaScript warning: https://octopart.com/kdRQnL15/init.js, line 2: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://octopart.com/kdRQnL15/init.js, line 2: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+[GFX1-]: Unrecognized feature ACCELERATED_CANVAS2D
+1684484095790	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'interactive'.
+1684484095792	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'interactive'.
+1684484095793	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'interactive'.
+1684484095795	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'interactive'.
+1684484095796	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'interactive'.
+1684484095797	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'interactive'.
+1684484095799	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'interactive'.
+1684484095802	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'interactive'.
+1684484095804	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'interactive'.
+1684484095806	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'interactive'.
+JavaScript warning: https://octopart.com/kdRQnL15/init.js, line 2: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://octopart.com/kdRQnL15/init.js, line 2: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1684484279268	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'interactive'.
+1684484279270	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'interactive'.
+1684484279272	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'interactive'.
+1684484279274	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'interactive'.
+1684484279276	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'interactive'.
+1684484279277	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'interactive'.
+1684484279279	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'interactive'.
+1684484279281	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'interactive'.
+1684484279282	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'interactive'.
+1684484279285	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'interactive'.
+JavaScript warning: https://octopart.com/kdRQnL15/init.js, line 2: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://octopart.com/kdRQnL15/init.js, line 2: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+1684484509194	geckodriver	INFO	Listening on 127.0.0.1:58477
+1684484509200	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "--remote-debugging-port" "58478" "--remote-allow-hosts" "localhost" "-foreground" "-no-remote" "-profile" "/var/folders/jc/x8nf5scd28v4wrbkt9l72vd00000gn/T/rust_mozprofilebOR7sS"
+1684484509599	Marionette	INFO	Marionette enabled
+1684484509654	Marionette	INFO	Listening on port 58483
+2023-05-19 16:21:49.699 plugin-container[49091:357698] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2023-05-19 16:21:49.699 plugin-container[49091:357698] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2023-05-19 16:21:49.703 plugin-container[49091:357698] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2023-05-19 16:21:49.703 plugin-container[49091:357698] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2023-05-19 16:21:49.704 plugin-container[49091:357703] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2023-05-19 16:21:49.704 plugin-container[49091:357703] nil host used in call to allowsAnyHTTPSCertificateForHost:
+WebDriver BiDi listening on ws://127.0.0.1:58478
+Read port: 58483
+1684484509799	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+UNSUPPORTED (log once): POSSIBLE ISSUE: unit 1 GLD_TEXTURE_INDEX_2D is unloadable and bound to sampler type (Float) - using zero texture because texture unloadable
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /var/folders/jc/x8nf5scd28v4wrbkt9l72vd00000gn/T/rust_mozprofilebOR7sS/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:58478/devtools/browser/b1981160-8353-4f88-9be4-feb55acc6b0a
+JavaScript warning: https://octopart.com/kdRQnL15/init.js, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1684484733297	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'interactive'.
+1684484733299	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'interactive'.
+1684484733305	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'interactive'.
+1684484733309	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'interactive'.
+1684484733311	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'interactive'.
+1684484733313	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'interactive'.
+1684484733315	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'interactive'.
+1684484733316	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'interactive'.
+1684484733318	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'interactive'.
+1684484733319	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'interactive'.
+JavaScript warning: https://octopart.com/kdRQnL15/init.js, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://octopart.com/kdRQnL15/init.js, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+console.error: (new TypeError("lazy.AsyncShutdown.profileBeforeChange is undefined", "resource://services-settings/Database.jsm", 510))
+1684484758866	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'interactive'.
+1684484758868	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'interactive'.
+1684484758870	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'interactive'.
+1684484758872	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'interactive'.
+1684484758874	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'interactive'.
+1684484758878	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'interactive'.
+1684484758879	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'interactive'.
+1684484758880	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'interactive'.
+1684484758881	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'interactive'.
+1684484758883	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'interactive'.
+JavaScript warning: https://octopart.com/kdRQnL15/init.js, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1684484766120	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'interactive'.
+1684484766122	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'interactive'.
+1684484766125	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'interactive'.
+1684484766126	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'interactive'.
+1684484766129	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'interactive'.
+1684484766131	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'interactive'.
+1684484766133	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'interactive'.
+1684484766134	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'interactive'.
+1684484766135	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'interactive'.
+1684484766136	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'interactive'.
+JavaScript warning: https://octopart.com/kdRQnL15/init.js, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
