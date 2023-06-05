@@ -51,7 +51,7 @@ def createDayTask():
         if row_value[0]:
             task_value.append(row_info)
             if task_value.__len__() == 100:
-                file_name = PathHelp.get_file_path(f'TNXP_Discontiue_{i}H', 'Task.xlsx')
+                file_name = PathHelp.get_file_path(f'TNXP_Discontiue_{start_index}H', 'Task.xlsx')
                 ExcelHelp.add_arr_to_sheet(file_name=file_name, sheet_name='ppn', dim_arr=task_value)
                 task_value = []
                 start_index += 1
