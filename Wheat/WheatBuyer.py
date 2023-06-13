@@ -25,14 +25,14 @@ import time
 accouts_arr = [AccManage.Wheat['c'], AccManage.Wheat['n'], AccManage.Wheat['p']]
 ssl._create_default_https_context = ssl._create_unverified_context
 
-sourceFile_dic = {'fileName': PathHelp.get_file_path('Wheat', 'WheatTask.xlsx'),
-                  'sourceSheet': 'ppn_active',
+sourceFile_dic = {'fileName': PathHelp.get_file_path(None, 'THolt_wheat_IC.xlsx'),
+                  'sourceSheet': 'ppn',
                   'colIndex': 1,
-                  'startIndex': 82,
-                  'endIndex': 115}
-result_save_file = PathHelp.get_file_path('Wheat', 'wheat_buyer.xlsx')
-result_save_sheet = 'ppn2_record'
-logFile = PathHelp.get_file_path('Wheat', 'Wheat_log.txt.txt')
+                  'startIndex': 262,
+                  'endIndex': 310}
+result_save_file = PathHelp.get_file_path(None, 'THolt_wheat_IC.xlsx')
+result_save_sheet = 'buyer'
+logFile = PathHelp.get_file_path('Wheat', 'Wheat_log.txt')
 
 login_url = 'https://app.51wheatsearch.com/gs/index.html#/login'
 default_url = 'https://app.51wheatsearch.com/gs/index.html#/resource/gather/customs'
@@ -88,12 +88,12 @@ def set_filter(start_date:str, end_date:str):
     WaitHelp.waitfor(False, False)
     #set filters
     # contry
-    select_contry = driver.find_element(By.CSS_SELECTOR, '#resourceCountry')
-    select_contry.click()
-    time.sleep(3.0)
-    russian_div = driver.find_elements(By.CSS_SELECTOR, 'div.ant-col.ant-col-lg-12.ant-col-xl-8.ant-col-xxl-6')[2]
-    button = russian_div.find_element(By.TAG_NAME, 'button')
-    button.click()
+    # select_contry = driver.find_element(By.CSS_SELECTOR, '#resourceCountry')
+    # select_contry.click()
+    # time.sleep(3.0)
+    # russian_div = driver.find_elements(By.CSS_SELECTOR, 'div.ant-col.ant-col-lg-12.ant-col-xl-8.ant-col-xxl-6')[2]
+    # button = russian_div.find_element(By.TAG_NAME, 'button')
+    # button.click()
     # from date
     # clear default date
     ac = ActionChains(driver)
@@ -178,14 +178,15 @@ def set_page_count():
     try:
         page_area = driver.find_elements(By.CSS_SELECTOR, 'li.ant-pagination-options')
         if page_area.__len__() > 0:
-            selection_item = page_area[0].find_element(By.CSS_SELECTOR, 'span.ant-select-selection-item')
-            selection_item.click()
-            time.sleep(2.0)
-            select_options = driver.find_elements(By.CSS_SELECTOR, 'div.ant-select-item.ant-select-item-option')
-            if select_options.__len__() > 0:
-                max_option = select_options[-1]
-                max_option.click()
-                WaitHelp.waitfor(True, False)
+            page_selection_items = page_area[0].find_elements(By.CSS_SELECTOR, 'span.ant-select-selection-item')
+            if page_selection_items.__len__() > 0:
+                page_selection_items[-1].click()
+                time.sleep(2.0)
+                select_options = driver.find_elements(By.CSS_SELECTOR, 'div.ant-select-item.ant-select-item-option')
+                if select_options.__len__() > 0:
+                    max_option = select_options[-1]
+                    max_option.click()
+                    WaitHelp.waitfor(True, False)
         else:
             print('no page selection')
     except Exception as e:
@@ -234,7 +235,7 @@ def anly_webdriver(cate_index, cate_name):
 
 
 def get_rowInfo(cate_name, row):
-    # ['cate_name', 'data', 'buyer', 'supplier', 'des', 'buy_contry', 'supplier_contry', current_time]
+    # ['cate_name', 'data', 'buyer', 'supplier', 'des', 'buy_contry', 'supplier_contry', record_time]
     td_list = row.find_elements(By.TAG_NAME, 'td')
     buyer = td_list[1].text.replace('/', '%2F')
     buyer = buyer.replace('\x1e', ' (tim)')
@@ -266,5 +267,5 @@ def main():
 if __name__ == "__main__":
     loginAction(default_url)
     driver.get(default_url)
-    set_filter(start_date='2020-04-30', end_date='2023-04-30')
+    set_filter(start_date='2020-05-31', end_date='2023-05-31')
     main()

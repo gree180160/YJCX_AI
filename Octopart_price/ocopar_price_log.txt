@@ -8399,3 +8399,41 @@ from unknown error: web view not found
 2023-06-03 16:07:28R7F102GCE2DLA#BC0 页面 解析异常：local variable 'showed_rows' referenced before assignment 
 2023-06-05 12:33:23R5F5631NDDFM#V0 页面 解析异常：local variable 'showed_rows' referenced before assignment 
 2023-06-05 12:53:17R5F571MJCDFC#10 页面 解析异常：local variable 'showed_rows' referenced before assignment 
+2023-06-05 14:34:15R7FA6M5BF3CBM#BC0 页面 解析异常：local variable 'showed_rows' referenced before assignment 
+2023-06-05 14:47:59RH850/E2M 页面 解析异常：local variable 'showed_rows' referenced before assignment 
+2023-06-06 15:09:29R5F52316CGFM#30 页面 解析异常：Message: timeout: Timed out receiving message from renderer: 480.000
+  (Session info: chrome=114.0.5735.90)
+
+2023-06-06 15:17:29R5F100AFGSP#10 go_to_cate except: Message: timeout: Timed out receiving message from renderer: 480.000
+  (Session info: chrome=114.0.5735.90)
+
+2023-06-06 17:32:22R5F104LEAFB#V0 页面 解析异常：local variable 'showed_rows' referenced before assignment 
+2023-06-06 17:42:57R5F5111JAGFK#3A 页面 解析异常：local variable 'showed_rows' referenced before assignment 
+2023-06-06 18:06:53UPD70F3557AM1GMA-GBK-AX 页面 解析异常：local variable 'showed_rows' referenced before assignment 
+2023-06-07 11:41:37R5F100LHDFA#X0 go_to_cate except: Message: unknown error: net::ERR_CONNECTION_TIMED_OUT
+  (Session info: chrome=114.0.5735.90)
+
+2023-06-07 12:34:48R7F102GBC2DNP#HA0 页面 解析异常：local variable 'showed_rows' referenced before assignment 
+2023-06-07 13:30:16R7F102G4E2DNP#HA0 页面 解析异常：local variable 'showed_rows' referenced before assignment 
+2023-06-07 15:31:55RH850/P1L-C 页面 解析异常：Message: timeout: Timed out receiving message from renderer: 480.000
+  (Session info: chrome=114.0.5735.90)
+
+2023-06-07 15:39:55R5F52108BDLK#U0 go_to_cate except: Message: timeout: Timed out receiving message from renderer: 480.000
+  (Session info: chrome=114.0.5735.90)
+
+2023-06-08 09:32:24UPD70F3592AM1GMA1-GBK-AX 页面 解析异常：local variable 'showed_rows' referenced before assignment 
+2023-06-08 14:56:59R5F12017MSP#30 页面 解析异常：Message: timeout: Timed out receiving message from renderer: 480.000
+  (Session info: chrome=114.0.5735.106)
+
+2023-06-08 15:04:59R5F56318SDLK#U0 go_to_cate except: Message: timeout: Timed out receiving message from renderer: 480.000
+  (Session info: chrome=114.0.5735.106)
+
+2023-06-08 16:22:53R7F102GBC2DNP#AA0 页面 解析异常：local variable 'showed_rows' referenced before assignment 
+2023-06-08 16:54:10R9A07G074M08GBG#AC0 页面 解析异常：local variable 'showed_rows' referenced before assignment 
+2023-06-09 09:56:50R5F51113AGNE#2A 页面 解析异常：local variable 'showed_rows' referenced before assignment 
+2023-06-09 12:09:28R7F102GGE2DNP#AA0 页面 解析异常：local variable 'showed_rows' referenced before assignment 
+2023-06-09 14:50:56R5F564MFHDFP#31 页面 解析异常：Message: timeout: Timed out receiving message from renderer: 480.000
+  (Session info: chrome=114.0.5735.106)
+
+2023-06-12 10:47:05R7F102GBE3CNP#BA0 页面 解析异常：local variable 'showed_rows' referenced before assignment 
+2023-06-12 13:55:42RH850/E1L 页面 解析异常：local variable 'showed_rows' referenced before assignment 

@@ -16,7 +16,7 @@ ssl._create_default_https_context = ssl._create_unverified_context
 sourceFile_dic = {'fileName': PathHelp.get_file_path(TaskManager.Taskmanger().task_name, 'Task.xlsx'),
                   'sourceSheet': 'ppn',
                   'colIndex': 1,
-                  'startIndex': 0,
+                  'startIndex': 121,
                   'endIndex': TaskManager.Taskmanger().end_index}
 result_file = PathHelp.get_file_path(super_path=TaskManager.Taskmanger().task_name, file_name='IC_stock.xlsx')
 
@@ -143,8 +143,8 @@ def get_stock(cate_index, cate_name):
                 saveContent_arr = ic_Stock_Info.descritpion_arr()
                 need_save_ic_arr.append(saveContent_arr)
         # save per page
-        sheet_name_base64str = str(base64.b64encode(cate_name.encode('utf-8')), 'utf-8')
-        ExcelHelp.add_arr_to_sheet(file_name=result_file, sheet_name=sheet_name_base64str,
+        sheet_name = 'IC_stock'
+        ExcelHelp.add_arr_to_sheet(file_name=result_file, sheet_name=sheet_name,
                                    dim_arr=need_save_ic_arr)
         # 包含>=3个无效的stock信息就不翻页了
         if current_page >= 2 or len(need_save_ic_arr) <= 46:

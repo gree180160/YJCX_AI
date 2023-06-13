@@ -294,9 +294,18 @@ def sheet_isEmpty(file_name, sheet_name1, sheet_name2):
     print(f'ws2 value {ws2.cell(1, 1).value}')
 
 
+# 将excel 中的所有sheet 内容合并到一个sheet 中
+def mergeSheet(source_file, aim_sheet):
+        temp_wb = load_workbook(filename=source_file)
+        # 获取sheet
+        temp_sheets_arr = temp_wb.sheetnames
+        for temp_sheet in temp_sheets_arr:
+            if temp_sheet != aim_sheet:
+                sheet_content = read_sheet_content_by_name(file_name=source_file, sheet_name=temp_sheet)
+                add_arr_to_sheet(file_name=source_file, sheet_name=aim_sheet, dim_arr=sheet_content)
+
+
 def mergeExcel(source_files, aim_file):
-    # 获取工作簿对象
-    aim_wb = load_workbook(filename=aim_file)
     for temp_file in source_files:
         # 获取工作簿对象
         temp_wb = load_workbook(filename=temp_file)
@@ -309,7 +318,7 @@ def mergeExcel(source_files, aim_file):
 
 if __name__ == "__main__":
     # active_excel('/Users/liuhe/PycharmProjects/YJCX_AI/TInfenion_5H.xlsx', "Sheet1")
-    remove_sheets('/Users/liuhe/PycharmProjects/YJCX_AI/TRenesas_MCU_30H/IC_stock.xlsx')
+    remove_sheets('/Users/liuhe/PycharmProjects/YJCX_AI/TRenesas_MCU_55H/IC_stock.xlsx')
     # deal_keyword_result()
     # row_value = read_col_content(file_name='/Users/liuhe/PycharmProjects/YJCX_AI/TKWPage0.xlsx', sheet_name='hot_month', col_index=1)
     # index = row_value.index('46546546546545645')

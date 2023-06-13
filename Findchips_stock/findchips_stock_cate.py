@@ -122,8 +122,9 @@ def has_content(soup):
 
 def combine_result(source_files:[], aim_file):
     for temp in source_files:
-        data = ExcelHelp.read_sheet_content_by_name(file_name=temp, sheet_name='findchip_stock')
-        ExcelHelp.add_arr_to_sheet(file_name=aim_file, sheet_name='findchip_stock', dim_arr=data)
+        data = ExcelHelp.read_sheet_content_by_name(file_name=temp, sheet_name='IC_stock')
+
+        ExcelHelp.add_arr_to_sheet(file_name=aim_file, sheet_name='IC_stock', dim_arr=data)
         time.sleep(2.0)
 
 

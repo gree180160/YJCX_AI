@@ -21,7 +21,7 @@ accouts_arr = [[AccManage.Bom['c'], AccManage.Bom['n'], AccManage.Bom['p']]]
 sourceFile_dic = {'fileName': PathHelp.get_file_path(TaskManager.Taskmanger().task_name, 'Task.xlsx'),
                   'sourceSheet': 'ppn',
                   'colIndex': 1,
-                  'startIndex': 0,
+                  'startIndex': 90,
                   'endIndex': TaskManager.Taskmanger().end_index}
 result_save_file = PathHelp.get_file_path(TaskManager.Taskmanger().task_name, 'bom_price.xlsx')
 
@@ -100,7 +100,7 @@ def analy_html(cate_index, ppn, manu):
         # yun_exg = driver.find_element(by=By.ID, value='yunexg')
         # ul_arr = yun_exg.find_elements(by=By.TAG_NAME, value='ul')
         guwangMore()
-        time.sleep(10.0)
+        time.sleep(5.0)
         ur_arr = driver.find_elements(By.CSS_SELECTOR, 'ul.alt.bom_cloud_h')
         for ul in ur_arr:
             # if not need_more:
@@ -226,5 +226,5 @@ def main():
 if __name__ == "__main__":
     driver.get(default_url)
     current_need_login()
-    WaitHelp.waitfor(False, True)
+    WaitHelp.waitfor(True, False)
     main()

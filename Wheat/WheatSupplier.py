@@ -5,7 +5,7 @@ import time
 # 选择子账号登录
 # 公司名称：深圳市元极创新电子有限公司
 # 账号： 19805243800   密码：Yjcx12345!
-# 账号： 15976988260   密码：Yjcx12345!
+# 账号： 13316837463   密码：Yjcx12345!
 '''
 
 from selenium import webdriver
@@ -17,12 +17,12 @@ import time
 
 ssl._create_default_https_context = ssl._create_unverified_context
 
-sourceFile_dic = {'fileName': PathHelp.get_file_path('TRenesas_MCU_30H', 'Task.xlsx'),
+sourceFile_dic = {'fileName': PathHelp.get_file_path('TRenesas_MCU_55H', 'Task.xlsx'),
                   'sourceSheet': 'buyer',
                   'colIndex': 1,
                   'startIndex': 0,
                   'endIndex': 100}
-result_save_file = PathHelp.get_file_path('TRenesas_MCU_30H', 'wheat_buyer.xlsx')
+result_save_file = PathHelp.get_file_path('TRenesas_MCU_55H', 'wheat_buyer.xlsx')
 logFile = PathHelp.get_file_path('Wheat', 'Wheat_log.txt')
 
 login_url = 'https://app.51wheatsearch.com/gs/index.html#/login'

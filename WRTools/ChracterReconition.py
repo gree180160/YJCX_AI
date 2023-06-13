@@ -6,7 +6,7 @@ import cv2
 from io import BytesIO
 import re
 import os
-from WRTools import LogHelper, PathHelp
+from WRTools import LogHelper, PathHelp, DDDDOCR
 
 corp_path = PathHelp.get_file_path('IC_Search', 'CroppedImages')
 
@@ -22,51 +22,6 @@ def get_image_scale(image_name):
     return 1
 
 
-# 获取ppn_name
-def get_ppn(fold_path, image_name):
-    scale = get_image_scale(image_name)
-    # 打开一张图
-    page_image = Image.open(image_name)
-    # 图片尺寸
-    img_size = page_image.size
-    # 图片中间有效，两边的空白部分是无效的，所以从图片中间开始，计算x
-    wid = img_size[0]
-    w = 343*scale
-    x = wid/2 - 98.6*scale - 343*scale
-    y = 252*scale
-    h = 30*scale
-    # 04
-    # w = 343*scale
-    # x = wid/2 - 68*scale - 343*scale
-    # y = 222*scale
-    # # y = 222 * scale # TODO wr for 04
-    # h = 30*scale
-
-    # 开始截取
-    ppn_area = page_image.crop((x, y, x+w, y+h))
-    ppn_area.save(fold_path + '/ppn_name.png')
-
-    # 1.原始
-    threshold = 127  # to be determined
-    ppn_image = cv2.imread(fold_path + '/ppn_name.png', 1)
-    _, img_binarized = cv2.threshold(ppn_image, threshold, 255, cv2.THRESH_BINARY_INV)
-    pil_img = Image.fromarray(img_binarized)
-    # pil_img.show()
-    try:
-        config = '--psm 6'
-        reco_result = pytesseract.image_to_string(pil_img, lang='eng', config=config)
-        if ': ' in reco_result:
-            index = reco_result.index(': ')
-            result_str = reco_result[index+2:]
-        elif 'WS:' in reco_result:
-            index = reco_result.index('WS:')
-            result_str = reco_result[index + 3:]
-        result_str = result_str.replace('\n', '')
-    except:
-        result_str = "--"
-    return result_str
-
-
 # 获取图片文字,return hot value arr
 def getHotValue(sourceImage, row_image_name, index):
     img = cv2.imread(row_image_name, 1)
@@ -78,6 +33,13 @@ def getHotValue(sourceImage, row_image_name, index):
     # THRESH_BINARY_INV 4 ok, 51 bad
     _, img_binarized = cv2.threshold(gray, min_value, 255, cv2.THRESH_BINARY_INV)
     pil_img = Image.fromarray(img_binarized)
+    eng_config = 'digits'
+    try:
+        eng_str1 = pytesseract.image_to_string(pil_img)
+        origin_value = eng_str1
+    except:
+        origin_value = '--'
+    print(f'origin is:{origin_value}')
     config = '--psm 6 digitsdot'
     try:
         result_str1 = pytesseract.image_to_string(pil_img, lang='eng', config=config)
@@ -141,7 +103,7 @@ def SplitPic_week(source_pic: str):
     wid = img_size[0]  # 图片宽度
     hei = img_size[1]  # 图片高度
     # mac
-    if not source_pic.__contains__('/11/'):
+    if True:
         x = wid / 2 - 216 * scale
         y = (988 * scale) if hei > (3160.0 * scale) else (980 * scale)
         w = 116 * scale
@@ -149,17 +111,18 @@ def SplitPic_week(source_pic: str):
         space = 36 * scale
     else:
         x = wid / 2 - 216 * scale + 20 * scale
-        y = (988 * scale) if hei > (3160.0 * scale) else ((980-98) * scale)
+        y = (988 * scale) if hei > (3160.0 * scale) else ((980-99) * scale)
         w = 116 * scale
         h = 30 * scale
-        space = 32.5 * scale
+        space = 32.55 * scale
     search_record = []
     for index in range(0, 52):
         # 开始截取
         region = img.crop((x, y+space*index, x + w, y+space*index + h))
         # 保存图片
         region.save(f'{corp_path}/w_{index+1}.png')
-        reco_value = getHotValue(sourceImage=source_pic, row_image_name=f'{corp_path}/w_{index+1}.png', index=index)
+        # reco_value = getHotValue(sourceImage=source_pic, row_image_name=f'{corp_path}/w_{index+1}.png', index=index)
+        reco_value = DDDDOCR.reco(f'{corp_path}/w_{index + 1}.png')# getHotValue(sourceImage=source_pic, row_image_name=f'{corp_path}/w_{index + 1}.png', index=index)
         search_record.append(reco_value)
     return search_record
 
@@ -172,7 +135,7 @@ def SplitPic_month(source_pic: str):
     img_size = img.size
     wid = img_size[0]  # 图片宽度
     hei = img_size[1]  # 图片高度
-    if not source_pic.__contains__('/11/'):
+    if True:
         x = wid / 2 - 216 * scale
         y = (988 * scale) if hei > (1720.0 * scale) else (980 * scale)
         w = 116 * scale
@@ -180,10 +143,10 @@ def SplitPic_month(source_pic: str):
         space = 36 * scale
     else:
         x = wid / 2 - 216 * scale + 20 * scale
-        y = (988 * scale) if hei > (1720.0 * scale) else (980 - 98)
+        y = (988 * scale) if hei > (1720.0 * scale) else (980 - 99)
         w = 116 * scale
-        h = 30 * scale
-        space = 32.5 * scale
+        h = 29 * scale
+        space = 32.55 * scale
     search_record = []
     for index in range(0, 12):
 
@@ -191,14 +154,15 @@ def SplitPic_month(source_pic: str):
         region = img.crop((x, y+space*index, x + w, y+space*index + h))
         # 保存图片
         region.save(f'{corp_path}/M_{index+1}.png')
-        rec_value = getHotValue(sourceImage=source_pic, row_image_name=f'{corp_path}/M_{index+1}.png', index=index)
+        # rec_value = getHotValue(sourceImage=source_pic, row_image_name=f'{corp_path}/M_{index+1}.png', index=index)
+        rec_value = DDDDOCR.reco(f'{corp_path}/M_{index+1}.png')
         search_record.append(rec_value)
     return search_record
 
 
 def test_hot_value(fold_path: str):
-    temp = 'R5F10RLCAFB#10_W.png' # 1911×1724
-    # temp = 'R5F10RLCAFB#10_M.png' # 1911×3164
+     # temp = 'R5F10BGELFB#H5_M.png' # 1911×1724
+    temp = 'R5F566TKADFP#30_M.png' # 1911×3164
     if temp.endswith('_M.png'):
         image_hot_data = SplitPic_month(fold_path + '/' + temp)
     elif temp.endswith('_W.png'):
@@ -207,5 +171,5 @@ def test_hot_value(fold_path: str):
 
 
 if __name__ == "__main__":
-    result = test_hot_value(fold_path='/Users/liuhe/Desktop/progress/TRenesas_MCU/Renesas_MCU_30H/11/IC_hot_images')
+    result = test_hot_value(fold_path='/Users/liuhe/Desktop/progress/TRenesas_MCU/Renesas_MCU_45H/04/IC_hot_images')
     print(result)
