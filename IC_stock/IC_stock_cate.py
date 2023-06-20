@@ -8,7 +8,7 @@ import undetected_chromedriver as uc
 import ssl
 from IC_stock.IC_Stock_Info import IC_Stock_Info
 from Manager import AccManage, URLManager, TaskManager
-from WRTools import ExcelHelp, WaitHelp, PathHelp
+from WRTools import ExcelHelp, WaitHelp, PathHelp, EmailHelper
 
 
 ssl._create_default_https_context = ssl._create_unverified_context
@@ -16,7 +16,7 @@ ssl._create_default_https_context = ssl._create_unverified_context
 sourceFile_dic = {'fileName': PathHelp.get_file_path(TaskManager.Taskmanger().task_name, 'Task.xlsx'),
                   'sourceSheet': 'ppn',
                   'colIndex': 1,
-                  'startIndex': 121,
+                  'startIndex': 73,
                   'endIndex': TaskManager.Taskmanger().end_index}
 result_file = PathHelp.get_file_path(super_path=TaskManager.Taskmanger().task_name, file_name='IC_stock.xlsx')
 
@@ -81,21 +81,24 @@ def get_stock(cate_index, cate_name):
     login_action(search_url)
     # 延时几秒确保页面加载完毕
     WaitHelp.waitfor_account_import(True, False)
-    checkVerificationCodePage()
-    # page_content = driver.page_source
-    # print("page content is：", page_content)
+    showingCheckCode = checkVerificationCodePage(cate_name)
+    while showingCheckCode:
+        WaitHelp.waitfor(True, False)
+        showingCheckCode = checkVerificationCodePage(cate_name)
     get_total_page()
     print(f"index is: {cate_index} cate is:{cate_name} currentPage is: {current_page} totalpage is:{total_page}")
     #  2-loop page arr
     need_load_nextPage = True
     while current_page <= total_page and need_load_nextPage:
         try:
-            li_arr = driver.find_element(by=By.ID, value='resultList').find_elements(by=By.TAG_NAME, value='li')
+            li_arr = driver.find_element(by=By.ID, value='resultList').find_elements(by=By.CSS_SELECTOR, value='li.stair_tr')
         except:
             li_arr = []
         need_save_ic_arr = []
         #  3-loop table arr
         for templi in li_arr:
+            if not templi.is_displayed():
+                continue
             # print("li is:", templi.__str__())
             try:
                 supplier = templi.find_element(by=By.CLASS_NAME, value='result_goCompany').text
@@ -143,8 +146,9 @@ def get_stock(cate_index, cate_name):
                 saveContent_arr = ic_Stock_Info.descritpion_arr()
                 need_save_ic_arr.append(saveContent_arr)
         # save per page
-        sheet_name = 'IC_stock'
-        ExcelHelp.add_arr_to_sheet(file_name=result_file, sheet_name=sheet_name,
+        # sheet_name_base64str = str(base64.b64encode(cate_name.encode('utf-8')), 'utf-8')
+        sheet_name_base64str = 'IC_stock'
+        ExcelHelp.add_arr_to_sheet(file_name=result_file, sheet_name=sheet_name_base64str,
                                    dim_arr=need_save_ic_arr)
         # 包含>=3个无效的stock信息就不翻页了
         if current_page >= 2 or len(need_save_ic_arr) <= 46:
@@ -169,14 +173,19 @@ def get_stock(cate_index, cate_name):
 
 
 # 验证当前页面是否正在等待用户验证，连续三次请求出现验证码页面，则关闭页面
-def checkVerificationCodePage():
+def checkVerificationCodePage(ppn) -> bool:
     global VerificationCodePage
     if driver.current_url == 'https://www.ic.net.cn/searchPnCode.php':
         VerificationCodePage += 1
+        print(f'{ppn} check code')
+        EmailHelper.mail_IC_Stock(AccManage.Device_ID)
+        result = True
     else:
         VerificationCodePage = 0
-    if VerificationCodePage >= 3:
+        result = False
+    if VerificationCodePage >= 10:
         driver.close()
+    return result
 
 
 def main():

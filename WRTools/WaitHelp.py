@@ -51,18 +51,15 @@ def waitfor_account_import(is_load_page, isDebug):
 
 # 计算过了多少天
 def daysPassed(thatDay: str) -> int:
-    result = 99999
     try:
         now = datetime.now()
         past = thatDay
-        past = list(map(int, pawww.split('-')))
+        past = list(map(int, past.split('-')))
         past = datetime(past[0], past[1], past[2])
         delta = now - past
         result = delta.days
     except:
-        print('thatDay invalid')
         result = 99999
-    print(result)
     return result
 
 

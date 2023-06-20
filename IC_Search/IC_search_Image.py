@@ -5,42 +5,6 @@ import time
 from PIL import Image, ImageGrab
 from WRTools import ChracterReconition, ExcelHelp, PathHelp
 
-# AUIRF1404ZS   AUIRF1405   AUIRF1405ZL， AUIRF2804S
-# （推荐ppn过多，看
-# 根据图片高度，<1000，说明没有数据），1700-1800， 月指数，3000-35000，周指数
-def rule_image_names(fold_path):
-    source_file = PathHelp.get_file_path("TInfenion_55H", 'TInfenion_55H.xlsx')
-    source_ppn_list = ExcelHelp.read_col_content(file_name=source_file, sheet_name='ppn', col_index=1)[37:73]
-    check_ppn_list = []
-    for temp in source_ppn_list:
-        if temp:
-            check_ppn_list.append(ppn_checkChange(temp))
-    file_name_list = os.listdir(fold_path)
-    file_name_list.sort()
-    unmatch_image = []
-    for temp in file_name_list:
-        if temp.endswith('.png'):
-            file_path = fold_path + '/' + temp
-            rec_ppn = ChracterReconition.get_ppn(fold_path=fold_path, image_name=file_path)
-            rec_ppn = rec_ppn.replace('.', '')
-            rec_ppn = rec_ppn.strip()
-            if rec_ppn in source_ppn_list:
-                is_week_data = is_week_search(file_path)
-                imageName_new = rec_ppn + ('__W' if is_week_data else '__M') + '.png'
-                os.rename(fold_path + '/' + temp, fold_path + '/' + imageName_new)
-                # print(f'  match---- file : {temp} , ppn: {ppn}')
-            else:
-                check_changedppn = ppn_checkChange(rec_ppn)
-                if check_changedppn in check_ppn_list and check_ppn_list.count(check_changedppn) == 1:
-                    is_week_data = is_week_search(file_path)
-                    check_right_index = check_ppn_list.index(check_changedppn)
-                    imageName_new = source_ppn_list[check_right_index] + ('__W' if is_week_data else '__M') + '.png'
-                    os.rename(fold_path + '/' + temp, fold_path + '/' + imageName_new)
-                    # print(f'  changed match---- file : {temp} , ppn: {ppn}')
-                else:
-                    unmatch_image.append([rec_ppn, temp])
-                    print(f'unmatch---- file : {temp} , ppn: {check_changedppn}')
-
 
 # 是否是周指数
 def is_week_search(image_name):
@@ -132,7 +96,7 @@ def filert_useless_image(fold_path):
 # 识别IC——hot 图片里的热度信息并保存到数据库
 def rec_image(fold_path):
     filert_useless_image(fold_path)
-    source_file = PathHelp.get_file_path('TRenesas_MCU_55H', 'Task.xlsx')
+    source_file = PathHelp.get_file_path('TRenesas_MCU_85H', 'Task.xlsx')
     file_name_list = os.listdir(fold_path)
     file_name_list.sort()
     print(f"file count is: {file_name_list.__len__()}")
@@ -152,13 +116,12 @@ def rec_image(fold_path):
 
 
 if __name__ == "__main__":
-    # 9DB833AGILFT_M.png
-    # rec_image(fold_path='/Users/liuhe/Desktop/progress/TRenesas_MCU/Renesas_MCU_55H/04/IC_hot_images')
-    # time.sleep(2.0)
-    # rec_image(fold_path='/Users/liuhe/Desktop/progress/TRenesas_MCU/Renesas_MCU_55H/11/IC_hot_images')
-    # time.sleep(2.0)
-    # rec_image(fold_path='/Users/liuhe/Desktop/progress/TRenesas_MCU/Renesas_MCU_55H/sz/IC_hot_images')
-    # time.sleep(2.0)
-    rec_image(fold_path=PathHelp.get_IC_hot_image_fold('TRenesas_MCU_55H'))
+    rec_image(fold_path='/Users/liuhe/Desktop/progress/TRenesas_MCU/Renesas_MCU_85H/04/IC_hot_images')
+    time.sleep(2.0)
+    rec_image(fold_path='/Users/liuhe/Desktop/progress/TRenesas_MCU/Renesas_MCU_85H/11/IC_hot_images')
+    time.sleep(2.0)
+    rec_image(fold_path='/Users/liuhe/Desktop/progress/TRenesas_MCU/Renesas_MCU_85H/sz/IC_hot_images')
+    time.sleep(2.0)
+    rec_image(fold_path=PathHelp.get_IC_hot_image_fold('TRenesas_MCU_85H'))
 
 

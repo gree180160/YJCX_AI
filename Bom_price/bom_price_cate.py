@@ -8,6 +8,7 @@ from selenium.webdriver.common.by import By
 from WRTools import LogHelper, PathHelp, ExcelHelp, WaitHelp
 from Manager import AccManage, TaskManager
 import bom_price_info
+import re
 
 ssl._create_default_https_context = ssl._create_unverified_context
 
@@ -21,7 +22,7 @@ accouts_arr = [[AccManage.Bom['c'], AccManage.Bom['n'], AccManage.Bom['p']]]
 sourceFile_dic = {'fileName': PathHelp.get_file_path(TaskManager.Taskmanger().task_name, 'Task.xlsx'),
                   'sourceSheet': 'ppn',
                   'colIndex': 1,
-                  'startIndex': 90,
+                  'startIndex': 108,
                   'endIndex': TaskManager.Taskmanger().end_index}
 result_save_file = PathHelp.get_file_path(TaskManager.Taskmanger().task_name, 'bom_price.xlsx')
 
@@ -90,116 +91,118 @@ def go_to_cate(cate_index, cate_name):
             login_action(f'https://www.bom.ai/ic/{cate_name}.html')
 
 
+# 获取所有云价格记录总数
+def get_total_supplier():
+    result = 0
+    links = driver.find_elements(By.CSS_SELECTOR, 'a.bomID_extStock_More')
+    if links.__len__() > 0:
+        result_str = links[0].text
+        result_str = re.sub('[^0-9]', '', result_str)
+        result = int(result_str)
+    return result
+
+
 # 解析某个型号的页面信息，先看未折叠的前三行，判断是否需要展开，展开，解析，再判断，再展开，再解析。。。。
 def analy_html(cate_index, ppn, manu):
+    total_count = get_total_supplier()
+    showed_supplier = show_suppliers()
     # 是否需要继续展开。 出现第一条非本周数据后不再展开
-    need_more = True
+    need_more = need_click_more(showed_supplier, cate_index, ppn, manu)
     # 默认直接现实的row
     valid_supplier_arr = []
-    try:
-        # yun_exg = driver.find_element(by=By.ID, value='yunexg')
-        # ul_arr = yun_exg.find_elements(by=By.TAG_NAME, value='ul')
-        guwangMore()
-        time.sleep(5.0)
-        ur_arr = driver.find_elements(By.CSS_SELECTOR, 'ul.alt.bom_cloud_h')
-        for ul in ur_arr:
-            # if not need_more:
-            #     break
-            aside = ul.find_element(by=By.TAG_NAME, value='aside')
+    # total_count 总数在只有一页时不显示
+    total_count = min(total_count, showed_supplier.__len__())
+    if total_count > 0 or showed_supplier.__len__() > 0:
+        while showed_supplier.__len__() < total_count and need_more:
+            click_more_supplier()
+            WaitHelp.waitfor(True, False)
+            showed_supplier = show_suppliers()
+            need_more = need_click_more(showed_supplier, cate_index, ppn, manu)
+        for aside in showed_supplier:
             bom_price_ele = get_supplier_info(aside=aside, cate_index=cate_index, ppn=ppn, manu=manu)
-            if not bom_price_ele.is_valid_supplier():
-                print(f'supplier invalid: {bom_price_ele.description_str()}')
-                need_more = False
+            # 无论是否有效都记录
             valid_supplier_arr.append(bom_price_ele.descritpion_arr())
-    except Exception as e:
-        need_more = False
-        LogHelper.write_log(log_file_name=log_file, content=f'{ppn} html 解析异常：{e} or nodata')
-    # 折叠的row ##########################################################################################################
-    while need_more:
-        try:
-            nav = driver.find_element(by=By.CLASS_NAME,
-                                      value='bom_yun_agens.bomID_yunextts_agens.bom_quoteyunext_length')
-            nav_display = nav.is_displayed()
-            if nav_display:
-                alink = nav.find_element(by=By.TAG_NAME, value='a')
-                alink.click()
-            else:
-                need_more = False  # 已经展示完了
-                break
-            yun_extts = driver.find_element(by=By.ID, value='bomidyunextts')
-            ul = yun_extts.find_elements(by=By.TAG_NAME, value='ul')[-1]  # 最后一个就是最近一次展开的内容
-            aside_arr = ul.find_elements(by=By.TAG_NAME, value='aside')
-            for (aside_index, aside) in enumerate(aside_arr):
-                if not need_more:
-                    break
-                bom_price_ele = get_supplier_info(aside=aside, cate_index=cate_index, ppn=ppn, manu=manu)
-                if not bom_price_ele.is_valid_supplier():
-                    print(f'supplier invalid: {bom_price_ele.description_str()}')
-                    need_more = False
-                valid_supplier_arr.append(bom_price_ele.descritpion_arr())
-        except Exception as e:
-            need_more = False  # may be no load more
-            LogHelper.write_log(log_file_name=log_file, content=f'{ppn} load more 解析异常：{e}')
-    ExcelHelp.add_arr_to_sheet(
-    file_name=result_save_file,
-    sheet_name='bom_price',
-    dim_arr=valid_supplier_arr)
-    valid_supplier_arr.clear()
+        ExcelHelp.add_arr_to_sheet(
+            file_name=result_save_file,
+            sheet_name='bom_price',
+            dim_arr=valid_supplier_arr)
+        valid_supplier_arr.clear()
+    else:
+        print(f'{cate_index}th {ppn} has no record')
 
 
-def guwangMore():
-    try:
-        guwangmore_nav = driver.find_element(By.CSS_SELECTOR, 'nav.bom_yun_agens.bomID_yun_agens.guanwangMore')
-        a = guwangmore_nav.find_element(By.TAG_NAME, 'a')
-        a.click()
-    except:
-        print('click gu wang more error')
+#获取所有的supplier
+def show_suppliers():
+    show_suppliers = driver.find_elements(By.CSS_SELECTOR, 'aside.stock-view.bom_cloud_num02.mainext')
+    return show_suppliers
+
+
+# 更具showed_supplier 的最后一条是否有效，判断是否需要继续more
+def need_click_more(li_arr, cate_index, ppn, manu):
+    result = False
+    if li_arr.__len__() > 0:
+        last_value = li_arr[-1]
+        bom_price_ele = get_supplier_info(last_value, cate_index, ppn, manu)
+        if bom_price_ele.is_valid_supplier():
+            result = True
+    return result
+
+
+# 点击获取更多supplier 信息的a
+def click_more_supplier():
+    links = driver.find_elements(By.CSS_SELECTOR, 'a.bomID_extStock_More')
+    if links.__len__() > 0:
+        links[0].click()
+
 
 
 # 将页面row的内容 转化成Bom_price_info
 # aside: contain row info
 def get_supplier_info(aside, cate_index, ppn, manu) -> bom_price_info.Bom_price_info:
-    section_arr = aside.find_elements(by=By.TAG_NAME, value='section')
-    supplier_section = section_arr[1]
     try:
-        supplier_name = supplier_section.find_element(by=By.TAG_NAME, value='a').text
-    except:
-        supplier_name = '--'
-    cate_name_section = section_arr[2]
-    try:
-        cate_name = cate_name_section.find_element(by=By.TAG_NAME, value='a').text
-        # 无需做ppn 和 bom 获取的cate_name 的匹配验证
-    except:
-        cate_name = '--'
-    pakage_section = section_arr[4]
-    try:
-        pakage_name = pakage_section.find_element(by=By.TAG_NAME, value='p').text
-    except:
-        pakage_name = '--'
-    year_section = section_arr[5]
-    try:
-        year_str = year_section.find_element(by=By.TAG_NAME, value='p').text
-    except:
-        year_str = '--'
-    price_section = section_arr[6]
-    try:
-        price_str = price_section.find_element(by=By.TAG_NAME, value='p').text
-    except:
-        price_str = '--'
-    release_time_section = section_arr[7]
-    try:
-        release_time = release_time_section.find_element(by=By.TAG_NAME, value='p').text
-    except:
-        release_time = '--'
-    stock_num_section = section_arr[8]
-    try:
-        stock_num = stock_num_section.find_element(by=By.TAG_NAME, value='p').text
-    except:
-        stock_num = '--'
-    bom_price_ele = bom_price_info.Bom_price_info(cate=cate_name, manu=manu, supplier=supplier_name,
-                                                  package=pakage_name, year=year_str, quoted_price=price_str,
-                                                  release_time=release_time, stock_num=stock_num)
-    return bom_price_ele
+        section_arr = aside.find_elements(by=By.TAG_NAME, value='section')
+        supplier_section = section_arr[1]
+        try:
+            supplier_name = supplier_section.find_element(by=By.TAG_NAME, value='a').text
+        except:
+            supplier_name = '--'
+        cate_name_section = section_arr[2]
+        try:
+            cate_name = cate_name_section.find_element(by=By.TAG_NAME, value='a').text
+            # 无需做ppn 和 bom 获取的cate_name 的匹配验证
+        except:
+            cate_name = '--'
+        pakage_section = section_arr[4]
+        try:
+            pakage_name = pakage_section.find_element(by=By.TAG_NAME, value='p').text
+        except:
+            pakage_name = '--'
+        year_section = section_arr[5]
+        try:
+            year_str = year_section.find_element(by=By.TAG_NAME, value='p').text
+        except:
+            year_str = '--'
+        price_section = section_arr[6]
+        try:
+            price_str = price_section.find_element(by=By.TAG_NAME, value='p').text
+        except:
+            price_str = '--'
+        release_time_section = section_arr[7]
+        try:
+            release_time = release_time_section.find_element(by=By.TAG_NAME, value='p').text
+        except:
+            release_time = '--'
+        stock_num_section = section_arr[8]
+        try:
+            stock_num = stock_num_section.find_element(by=By.TAG_NAME, value='p').text
+        except:
+            stock_num = '--'
+        bom_price_ele = bom_price_info.Bom_price_info(cate=cate_name, manu=manu, supplier=supplier_name,
+                                                      package=pakage_name, year=year_str, quoted_price=price_str,
+                                                      release_time=release_time, stock_num=stock_num)
+        return bom_price_ele
+    except Exception as e:
+        LogHelper.write_log(f'cate is: {ppn} index is:{cate_index} , error is : {e}')
 
 
 def main():

@@ -22,7 +22,7 @@ default_url = 'https://octopart.com/what-is-octopart'
 sourceFile_dic = {'fileName': PathHelp.get_file_path(TaskManager.Taskmanger().task_name, 'Task.xlsx'),
                   'sourceSheet': 'ppn',
                   'colIndex': 1,
-                  'startIndex': 70,
+                  'startIndex': 84,
                   'endIndex': TaskManager.Taskmanger().end_index}
 result_save_file = PathHelp.get_file_path(TaskManager.Taskmanger().task_name, 'octopart_price.xlsx')
 
@@ -40,40 +40,6 @@ def go_to_cate(pn_index, pn):
         if str(e.msg).__contains__('Timed out'):
             driver.reconnect()
             sys.exit()
-
-
-# 解析某个型号的页面信息，如果有更多，直接点击，然后只选择start ， 遇到第一个不是star 的就返回
-def analy_html(pn_index, pn):
-    valid_supplier_arr = []
-    try:
-        all_cates_table = driver.find_elements(By.CSS_SELECTOR, 'div.jsx-2906236790.prices-view')
-        showed_rows = []
-        if all_cates_table.__len__() > 0:
-            left_rows = all_cates_table[0].find_elements(By.CSS_SELECTOR, 'div.jsx-1681079743.part')
-            showed_rows = left_rows
-        # 默认直接显示的row
-        for temp_cate_row in showed_rows:
-            try:
-                ppn = get_cate_name(cate_area=temp_cate_row, opn=pn)
-                manu = get_manufacture_name(cate_area=temp_cate_row, opn=pn)
-                tables = temp_cate_row.find_elements(By.CSS_SELECTOR, 'table')
-                for temp_table in tables:
-                    first_th_text = temp_table.find_elements(By.TAG_NAME, 'th')[1].text
-                    if first_th_text == 'Authorized Distributors':
-                        tbody = temp_table.find_element(By.TAG_NAME, 'tbody')
-                        tr_list = tbody.find_elements(By.TAG_NAME, 'tr')
-                        for tr_temp in tr_list:
-                            cate_price_ele = get_supplier_info(tr=tr_temp, ppn=ppn, manu_name=manu)
-                            valid_supplier_arr.append(cate_price_ele.descritpion_arr())
-            except Exception as e:
-                LogHelper.write_log(log_file_name=log_file, content=f'{pn} 当个cate 解析异常：{e} ')
-    except Exception as e:
-        LogHelper.write_log(log_file_name=log_file, content=f'{pn} 页面 解析异常：{e} ')
-    ExcelHelp.add_arr_to_sheet(
-        file_name=result_save_file,
-        sheet_name='octopart_price',
-        dim_arr=valid_supplier_arr)
-    valid_supplier_arr.clear()
 
 
 # 判断当前内容是否和pn 一致,忽略大小写，和最后一位的加号
@@ -198,13 +164,14 @@ def close_alert():
     except Exception as e:
         return
 
+
 # 解析某个型号的页面信息，如果有更多，直接点击，然后只选择start ， 遇到第一个不是star 的就返回
 def analy_html(pn_index, pn):
     valid_supplier_arr = []
     try:
         all_cates_table = driver.find_elements(By.CSS_SELECTOR, 'div.jsx-2906236790.prices-view')
         if all_cates_table.__len__() > 0:
-            left_rows = all_cates_table[0].find_elements(By.CSS_SELECTOR, 'div.jsx-1681079743.part')
+            left_rows = all_cates_table[0].find_elements(By.CSS_SELECTOR, 'div.jsx-4014881838.part')
             showed_rows = left_rows
         # 默认直接显示的row
         for temp_cate_row in showed_rows:
@@ -241,7 +208,7 @@ def main():
         elif pn_index in range(sourceFile_dic['startIndex'], sourceFile_dic['endIndex']):
             print(f'pn_index is: {pn_index}  pn is: {pn}')
             go_to_cate(pn_index, pn)
-            WaitHelp.waitfor_octopart(True, False)
+            WaitHelp.waitfor_octopart(True,False)
             close_alert()
             analy_html(pn_index, pn)
 
@@ -250,4 +217,3 @@ if __name__ == "__main__":
     driver.get(default_url)
     WaitHelp.waitfor_octopart(False, False)
     main()
-

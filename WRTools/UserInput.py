@@ -5,6 +5,7 @@ import pyperclip
 import webbrowser
 from sys import platform
 import time
+import re
 
 m = PyMouse()
 k = PyKeyboard()
@@ -142,4 +143,4 @@ if __name__ == "__main__":
     # test_open_save()
     # time.sleep(3)
     # screenShot_saveAndClose()
-    save_firfox_image(125)
+    save_firfox_image(114)

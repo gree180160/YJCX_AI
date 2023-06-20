@@ -22,14 +22,14 @@ sourceFile_dic = {'fileName': PathHelp.get_file_path('TRenesasAll_25H', 'Task.xl
                   'colIndex': 1,
                   'startIndex': 0,
                   'endIndex': 125}
-result_save_file = PathHelp.get_file_path('TRenesasAll_25H', 'dijikey_status.xlsx')
+result_save_file = PathHelp.get_file_path('TRenesasAll_25H', 'digikey_status.xlsx')
 
 # sourceFile_dic = {'fileName': PathHelp.get_file_path("TInfenion_80H", 'Task.xlsx'),
 #                   'sourceSheet': 'ppn',
 #                   'colIndex': 1,
 #                   'startIndex': 393,
 #                   'endIndex': 430} # 101 unfinished
-# result_save_file = PathHelp.get_file_path("TInfenion_80H", 'dijikey_status.xlsx')
+# result_save_file = PathHelp.get_file_path("TInfenion_80H", 'digikey_status.xlsx')
 
 default_url = 'https://www.digikey.com/'
 log_file = PathHelp.get_file_path('Digikey', 'DJ_product_status_log.txt')
@@ -110,7 +110,7 @@ def analy_html(cate_index, cate_name):
     print('begin write data ')
     ExcelHelp.add_arr_to_sheet(
     file_name=result_save_file,
-    sheet_name='dijikey_status',
+    sheet_name='digikey_status',
     dim_arr=[result])
     print('end write data ')
 

@@ -10,9 +10,9 @@ def reco(source_image) -> int:
         with open(source_image, 'rb') as f:
             img_bytes = f.read()
         ocr_result = ocr.classification(img_bytes)
-        ocr_result = re.sub('[^0-9]', '', ocr_result)
         ocr_result = ocr_result.replace('o', '0' )
         ocr_result = ocr_result.replace('O', '0')
+        ocr_result = re.sub('[^0-9]', '', ocr_result)
         if ocr_result.__len__() > 0:
             ocr_result = int(ocr_result)
         else:
@@ -33,6 +33,7 @@ def test():
 
 
 if __name__ == "__main__":
-    a = reco("/Users/liuhe/PycharmProjects/YJCX_AI/IC_Search/CroppedImages/M_1.png")
+    a = reco("/Users/liuhe/PycharmProjects/YJCX_AI/IC_Search/CroppedImages/M_4.png")
+    print(a)
 
 

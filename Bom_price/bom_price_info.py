@@ -23,7 +23,10 @@ class Bom_price_info:
             numberDays = WRTools.WaitHelp.daysPassed(self.release_time)
             if 0 < numberDays <= 8:
                 return True
+            else:
+                print(f'thatDay invalid: {self.release_time}')
             return False
+
 
     def description_str(self):
         result = f'{self.cate or "--"}, {self.manu or "--"}, {self.supplier}, {self.package}, {self.year}, {self.quoted_price}, {self.release_time}, {self.stock_num}, {self.search_date}, {"valid supplier" if self.valid_supplier else "invalid supplier"}'

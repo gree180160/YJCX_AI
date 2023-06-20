@@ -10,6 +10,7 @@ from WRTools import LogHelper, PathHelp, DDDDOCR
 
 corp_path = PathHelp.get_file_path('IC_Search', 'CroppedImages')
 
+
 # 是否是mac 高清图
 def get_image_scale(image_name):
     # 打开一张图
@@ -20,78 +21,6 @@ def get_image_scale(image_name):
     if w > 2800:
         return 2
     return 1
-
-
-# 获取图片文字,return hot value arr
-def getHotValue(sourceImage, row_image_name, index):
-    img = cv2.imread(row_image_name, 1)
-    # 1.原始
-    threshold = 180  # to be determined
-    # _, img_binarized = cv2.threshold(img, threshold, 255, cv2.THRESH_BINARY)
-    gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
-    min_value = 127
-    # THRESH_BINARY_INV 4 ok, 51 bad
-    _, img_binarized = cv2.threshold(gray, min_value, 255, cv2.THRESH_BINARY_INV)
-    pil_img = Image.fromarray(img_binarized)
-    eng_config = 'digits'
-    try:
-        eng_str1 = pytesseract.image_to_string(pil_img)
-        origin_value = eng_str1
-    except:
-        origin_value = '--'
-    print(f'origin is:{origin_value}')
-    config = '--psm 6 digitsdot'
-    try:
-        result_str1 = pytesseract.image_to_string(pil_img, lang='eng', config=config)
-        result_str1 = result_str1.replace(",", '')
-        int1 = int(result_str1)
-    except:
-        int1 = 0
-    # 2
-    _, img_binarized2 = cv2.threshold(gray, min_value, 255, cv2.THRESH_BINARY_INV + cv2.THRESH_OTSU)
-    pil_img2 = Image.fromarray(img_binarized2)
-    try:
-        result_str2 = pytesseract.image_to_string(pil_img2, lang='eng', config=config)
-        result_str2 = result_str2.replace(",", '')
-        int2 = int(result_str2)
-    except:
-        int2 = 0
-    # 3
-    _, img_binarized3 = cv2.threshold(gray, 180, 255, cv2.THRESH_BINARY_INV)
-    pil_img3 = Image.fromarray(img_binarized3)
-    try:
-        result_str3 = pytesseract.image_to_string(pil_img3, lang='eng', config=config)
-        result_str3 = result_str3.replace(",", '')
-        int3 = int(result_str3)
-    except:
-        int3 = 0
-    # 4
-    _, img_binarized4 = cv2.threshold(gray, 180, 255, cv2.THRESH_BINARY_INV + cv2.THRESH_OTSU)
-    pil_img2 = Image.fromarray(img_binarized4)
-    try:
-        result_str4 = pytesseract.image_to_string(pil_img2, lang='eng', config=config)
-        result_str4 = result_str4.replace(",", '')
-        int4 = int(result_str4)
-    except:
-        int4 = 0
-    des_str = sourceImage + "  " + str(index) + 'th---  ' + "1: " + result_str1 + "2: " + result_str2 + "3: " + result_str3 + "4: " + result_str4
-    # print(f'结果{index + 1}:  {des_str}')
-    may_result = [int1, int2, int3, int4]
-    may_result.sort()
-    search_num = ''
-    if may_result[2] > 0 and may_result[3] > 0:
-        if may_result[2] != may_result[3] and str(may_result[2]).__len__() == str(may_result[3]).__len__():
-            search_num = f'{may_result[2]} ? {may_result[3]}'
-            if search_num == '28 ? 43':
-                search_num = '28'
-            else:
-                log_file = PathHelp.get_file_path(super_path='IC_Search', file_name='IC_search_Image_log.txt')
-                LogHelper.write_log(log_file, des_str)
-        else:
-            search_num = str(may_result[0])
-    else:
-        search_num = str(may_result[0])
-    return search_num
 
 
 def SplitPic_week(source_pic: str):
@@ -121,8 +50,7 @@ def SplitPic_week(source_pic: str):
         region = img.crop((x, y+space*index, x + w, y+space*index + h))
         # 保存图片
         region.save(f'{corp_path}/w_{index+1}.png')
-        # reco_value = getHotValue(sourceImage=source_pic, row_image_name=f'{corp_path}/w_{index+1}.png', index=index)
-        reco_value = DDDDOCR.reco(f'{corp_path}/w_{index + 1}.png')# getHotValue(sourceImage=source_pic, row_image_name=f'{corp_path}/w_{index + 1}.png', index=index)
+        reco_value = DDDDOCR.reco(f'{corp_path}/w_{index + 1}.png')
         search_record.append(reco_value)
     return search_record
 
@@ -154,7 +82,6 @@ def SplitPic_month(source_pic: str):
         region = img.crop((x, y+space*index, x + w, y+space*index + h))
         # 保存图片
         region.save(f'{corp_path}/M_{index+1}.png')
-        # rec_value = getHotValue(sourceImage=source_pic, row_image_name=f'{corp_path}/M_{index+1}.png', index=index)
         rec_value = DDDDOCR.reco(f'{corp_path}/M_{index+1}.png')
         search_record.append(rec_value)
     return search_record

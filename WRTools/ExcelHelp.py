@@ -318,7 +318,7 @@ def mergeExcel(source_files, aim_file):
 
 if __name__ == "__main__":
     # active_excel('/Users/liuhe/PycharmProjects/YJCX_AI/TInfenion_5H.xlsx', "Sheet1")
-    remove_sheets('/Users/liuhe/PycharmProjects/YJCX_AI/TRenesas_MCU_55H/IC_stock.xlsx')
+    remove_sheets('/Users/liuhe/PycharmProjects/YJCX_AI/TRenesas_MCU_85H/IC_stock.xlsx')
     # deal_keyword_result()
     # row_value = read_col_content(file_name='/Users/liuhe/PycharmProjects/YJCX_AI/TKWPage0.xlsx', sheet_name='hot_month', col_index=1)
     # index = row_value.index('46546546546545645')

@@ -13,7 +13,7 @@ ssl._create_default_https_context = ssl._create_unverified_context
 sourceFile_dic = {'fileName': PathHelp.get_file_path(TaskManager.Taskmanger().task_name, 'Task.xlsx'),
                   'sourceSheet': 'ppn',
                   'colIndex': 1,
-                  'startIndex': TaskManager.Taskmanger().start_index,
+                  'startIndex': 103,
                   'endIndex': TaskManager.Taskmanger().end_index}
 result_save_file = PathHelp.get_file_path(TaskManager.Taskmanger().task_name, 'findchip_stock.xlsx')
 
@@ -122,9 +122,8 @@ def has_content(soup):
 
 def combine_result(source_files:[], aim_file):
     for temp in source_files:
-        data = ExcelHelp.read_sheet_content_by_name(file_name=temp, sheet_name='IC_stock')
-
-        ExcelHelp.add_arr_to_sheet(file_name=aim_file, sheet_name='IC_stock', dim_arr=data)
+        data = ExcelHelp.read_sheet_content_by_name(file_name=temp, sheet_name='findchip_stock')
+        ExcelHelp.add_arr_to_sheet(file_name=aim_file, sheet_name='findchip_stock', dim_arr=data)
         time.sleep(2.0)
 
 

@@ -8437,3 +8437,34 @@ from unknown error: web view not found
 
 2023-06-12 10:47:05R7F102GBE3CNP#BA0 页面 解析异常：local variable 'showed_rows' referenced before assignment 
 2023-06-12 13:55:42RH850/E1L 页面 解析异常：local variable 'showed_rows' referenced before assignment 
+2023-06-13 15:28:20R5F562T7BDFP#13 页面 解析异常：Message: timeout: Timed out receiving message from renderer: 480.000
+  (Session info: chrome=114.0.5735.106)
+
+2023-06-13 15:36:21R5F101LLDFB#X0 go_to_cate except: Message: timeout: Timed out receiving message from renderer: 480.000
+  (Session info: chrome=114.0.5735.106)
+
+2023-06-14 14:59:03R7F7010073AFP 页面 解析异常：Message: timeout: Timed out receiving message from renderer: 480.000
+  (Session info: chrome=114.0.5735.106)
+
+2023-06-14 15:07:03R7S721030VLFP#AA0 go_to_cate except: Message: timeout: Timed out receiving message from renderer: 480.000
+  (Session info: chrome=114.0.5735.106)
+
+2023-06-14 17:15:01R7S910007CBG#AC0 页面 解析异常：local variable 'showed_rows' referenced before assignment 
+2023-06-15 15:17:11R5F566NNHDFB#30 页面 解析异常：Message: timeout: Timed out receiving message from renderer: 480.000
+  (Session info: chrome=114.0.5735.133)
+
+2023-06-15 15:25:11R5F1176AGSM#10 go_to_cate except: Message: timeout: Timed out receiving message from renderer: 480.000
+  (Session info: chrome=114.0.5735.133)
+
+2023-06-16 09:18:00R5F563TEADFH#V1 页面 解析异常：Message: disconnected: not connected to DevTools
+  (failed to check if window was closed: disconnected: not connected to DevTools)
+  (Session info: chrome=114.0.5735.133)
+
+2023-06-16 09:18:00R5F51403AGFK#30 go_to_cate except: Message: disconnected: not connected to DevTools
+  (failed to check if window was closed: disconnected: not connected to DevTools)
+  (Session info: chrome=114.0.5735.133)
+
+2023-06-16 10:43:21R7F102G4E2DNP#BA0 页面 解析异常：local variable 'showed_rows' referenced before assignment 
+2023-06-17 13:35:57R7FA4M1AB3CFP#HA0 页面 解析异常：local variable 'showed_rows' referenced before assignment 
+2023-06-17 14:12:39R5F12067ASP#50 页面 解析异常：local variable 'showed_rows' referenced before assignment 
+2023-06-19 11:14:59R7F102G7E2DNP#HA0 页面 解析异常：local variable 'showed_rows' referenced before assignment 
