@@ -37,7 +37,7 @@ def get_page_more_PN():
 
 # 将大项目拆分成一天天的任务
 def createDayTask():
-    i = 9  # 删除ppn 里面的历史数据,TRenesas_MCU_85H
+    i = 9  # 删除ppn 里面的历史数据,Renesas_MCU_105H
     while i < 15:
         file_name = PathHelp.get_file_path(f'TNXP_Discontiue_{i}H', 'Task.xlsx')
         ExcelHelp.remove_sheet(file_name, 'ppn')
@@ -59,14 +59,14 @@ def createDayTask():
 
 # 分解数量大的ppn列表
 def decompositionPPN(unit: int):
-    source_file = PathHelp.get_file_path(None, 'TRenesa.xlsx')
-    source_ppn = ExcelHelp.read_col_content(file_name=source_file, sheet_name='ppn', col_index=1)
-    source_ppn = source_ppn[16000:24981]
+    source_file = PathHelp.get_file_path(None, 'TNXP.xlsx')
+    source_ppn = ExcelHelp.read_col_content(file_name=source_file, sheet_name='ppn3+4', col_index=1)
+    source_ppn = source_ppn[0:2243]
     history_sheets = []
     history_ppn = set()
     for sheet_name in history_sheets:
         history_ppn = history_ppn.union(set(ExcelHelp.read_col_content(file_name=source_file, sheet_name=sheet_name, col_index=1)))
-    sava_fold = '/Users/liuhe/Desktop/progress/TReneseas_all/digikey/p4/'
+    sava_fold = '/Users/liuhe/Desktop/progress/TNXP/discontiue/p4/discontiue'
     ppn_all = list(set(source_ppn).difference(set(history_ppn)))
 
     ppn_all = ppn_all[0:]
@@ -93,13 +93,15 @@ def decompositionPPN(unit: int):
 
 
 def adi_stock():
-    source_file = PathHelp.get_file_path(None, 'TADIStock.xlsx')
-    arr1 = ExcelHelp.read_col_content(source_file, sheet_name='Sheet1', col_index=1)
-    arr2 = ExcelHelp.read_col_content(source_file, sheet_name='Sheet2', col_index=1)
-    source = arr1 + arr2
-    result = list(set(source))
+    source_file = PathHelp.get_file_path(None, 'TNXP.xlsx')
+    arr1 = ExcelHelp.read_col_content(source_file, sheet_name='ppn1', col_index=1)
+    arr2 = ExcelHelp.read_col_content(source_file, sheet_name='ppn2', col_index=1)
+    arr3 = ExcelHelp.read_col_content(source_file, sheet_name='ppn3', col_index=1)
+    finished = arr1 + arr2 + arr3
+    arr4 = ExcelHelp.read_col_content(source_file, sheet_name='page0_ppn_4', col_index=1)
+    result = list(set(arr4).difference(set(finished)))
     result.sort()
-    ExcelHelp.add_arr_to_col(file_name=source_file, sheet_name='ppn', dim_arr=result)
+    ExcelHelp.add_arr_to_col(file_name=source_file, sheet_name='ppn4', dim_arr=result)
 
 
 def mcu2():
@@ -115,6 +117,6 @@ if __name__ == "__main__":
     # get_ICSupplierAndHot(20, 300)
     # get_wheat()
     # adjustopn()
-    # decompositionPPN(500)
-    createDayTask()
+    decompositionPPN(500)
     # createDayTask()
+    # decompositionPPN(500)

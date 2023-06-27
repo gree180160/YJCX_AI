@@ -16,7 +16,7 @@ ssl._create_default_https_context = ssl._create_unverified_context
 sourceFile_dic = {'fileName': PathHelp.get_file_path(TaskManager.Taskmanger().task_name, 'Task.xlsx'),
                   'sourceSheet': 'ppn',
                   'colIndex': 1,
-                  'startIndex': 73,
+                  'startIndex': 124,
                   'endIndex': TaskManager.Taskmanger().end_index}
 result_file = PathHelp.get_file_path(super_path=TaskManager.Taskmanger().task_name, file_name='IC_stock.xlsx')
 

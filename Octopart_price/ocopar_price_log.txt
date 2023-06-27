@@ -8468,3 +8468,166 @@ from unknown error: web view not found
 2023-06-17 13:35:57R7FA4M1AB3CFP#HA0 页面 解析异常：local variable 'showed_rows' referenced before assignment 
 2023-06-17 14:12:39R5F12067ASP#50 页面 解析异常：local variable 'showed_rows' referenced before assignment 
 2023-06-19 11:14:59R7F102G7E2DNP#HA0 页面 解析异常：local variable 'showed_rows' referenced before assignment 
+2023-06-20 10:41:41R7F102G7E2DNP#HA0 页面 解析异常：local variable 'showed_rows' referenced before assignment 
+2023-06-21 08:58:185962-0721901VHA cannot check keyname: Message: no such element: Unable to locate element: {"method":"tag name","selector":"mark"}
+  (Session info: chrome=114.0.5735.133)
+
+2023-06-21 09:08:136PAIC3109TRHBRQ1 cannot check keyname: Message: no such element: Unable to locate element: {"method":"tag name","selector":"mark"}
+  (Session info: chrome=114.0.5735.133)
+
+2023-06-21 09:12:0474ACT16244DGGR cannot check keyname: Message: no such element: Unable to locate element: {"method":"tag name","selector":"mark"}
+  (Session info: chrome=114.0.5735.133)
+
+2023-06-21 09:39:29ADC08100CIMTC/NOPB cannot check keyname: Message: no such element: Unable to locate element: {"method":"tag name","selector":"mark"}
+  (Session info: chrome=114.0.5735.133)
+
+2023-06-21 09:49:49ADC08200CIMTX/NOPB cannot check keyname: Message: no such element: Unable to locate element: {"method":"tag name","selector":"mark"}
+  (Session info: chrome=114.0.5735.133)
+
+2023-06-21 10:00:38ADC0834CCWMX/NOPB cannot check keyname: Message: no such element: Unable to locate element: {"method":"tag name","selector":"mark"}
+  (Session info: chrome=114.0.5735.133)
+
+2023-06-21 10:15:30ADC101S021CIMF/NOPB cannot check keyname: Message: no such element: Unable to locate element: {"method":"tag name","selector":"mark"}
+  (Session info: chrome=114.0.5735.133)
+
+2023-06-21 10:22:29ADC121C021CIMK/NOPB cannot check keyname: Message: no such element: Unable to locate element: {"method":"tag name","selector":"mark"}
+  (Session info: chrome=114.0.5735.133)
+
+2023-06-21 10:40:54ADC121S101CIMF/NOPB cannot check keyname: Message: no such element: Unable to locate element: {"method":"tag name","selector":"mark"}
+  (Session info: chrome=114.0.5735.133)
+
+2023-06-21 10:40:54ADC121S101CIMF/NOPB cannot check keyname: Message: no such element: Unable to locate element: {"method":"tag name","selector":"mark"}
+  (Session info: chrome=114.0.5735.133)
+
+2023-06-21 10:55:29ADC128S022CIMT/NOPB cannot check keyname: Message: no such element: Unable to locate element: {"method":"tag name","selector":"mark"}
+  (Session info: chrome=114.0.5735.133)
+
+2023-06-25 10:41:55R5F563NACDFB#V0 cannot check keyname: Message: no such element: Unable to locate element: {"method":"tag name","selector":"mark"}
+  (Session info: chrome=114.0.5735.133)
+
+2023-06-25 11:18:23R7F102G7E2DNP#HA0 页面 解析异常：local variable 'showed_rows' referenced before assignment 
+2023-06-25 12:44:34RL78/L1C cannot check keyname: Message: no such element: Unable to locate element: {"method":"tag name","selector":"mark"}
+  (Session info: chrome=114.0.5735.133)
+
+2023-06-25 12:44:34RL78/L1C cannot check keyname: Message: no such element: Unable to locate element: {"method":"tag name","selector":"mark"}
+  (Session info: chrome=114.0.5735.133)
+
+2023-06-25 12:44:34RL78/L1C cannot check keyname: Message: no such element: Unable to locate element: {"method":"tag name","selector":"mark"}
+  (Session info: chrome=114.0.5735.133)
+
+2023-06-25 12:44:35RL78/L1C cannot check keyname: Message: no such element: Unable to locate element: {"method":"tag name","selector":"mark"}
+  (Session info: chrome=114.0.5735.133)
+
+2023-06-25 12:44:35RL78/L1C cannot check keyname: Message: no such element: Unable to locate element: {"method":"tag name","selector":"mark"}
+  (Session info: chrome=114.0.5735.133)
+
+2023-06-25 12:44:35RL78/L1C cannot check keyname: Message: no such element: Unable to locate element: {"method":"tag name","selector":"mark"}
+  (Session info: chrome=114.0.5735.133)
+
+2023-06-25 12:44:35RL78/L1C cannot check keyname: Message: no such element: Unable to locate element: {"method":"tag name","selector":"mark"}
+  (Session info: chrome=114.0.5735.133)
+
+2023-06-25 12:44:35RL78/L1C cannot check keyname: Message: no such element: Unable to locate element: {"method":"tag name","selector":"mark"}
+  (Session info: chrome=114.0.5735.133)
+
+2023-06-25 12:44:35RL78/L1C cannot check keyname: Message: no such element: Unable to locate element: {"method":"tag name","selector":"mark"}
+  (Session info: chrome=114.0.5735.133)
+
+2023-06-25 12:44:36RL78/L1C cannot check keyname: Message: no such element: Unable to locate element: {"method":"tag name","selector":"mark"}
+  (Session info: chrome=114.0.5735.133)
+
+2023-06-26 10:08:20R5F563NACDFB#V0 cannot check keyname: Message: no such element: Unable to locate element: {"method":"tag name","selector":"mark"}
+  (Session info: chrome=114.0.5735.133)
+
+2023-06-26 10:42:14R7F102G7E2DNP#HA0 页面 解析异常：local variable 'showed_rows' referenced before assignment 
+2023-06-26 12:03:56RL78/L1C cannot check keyname: Message: no such element: Unable to locate element: {"method":"tag name","selector":"mark"}
+  (Session info: chrome=114.0.5735.133)
+
+2023-06-26 12:03:57RL78/L1C cannot check keyname: Message: no such element: Unable to locate element: {"method":"tag name","selector":"mark"}
+  (Session info: chrome=114.0.5735.133)
+
+2023-06-26 12:03:57RL78/L1C cannot check keyname: Message: no such element: Unable to locate element: {"method":"tag name","selector":"mark"}
+  (Session info: chrome=114.0.5735.133)
+
+2023-06-26 12:03:57RL78/L1C cannot check keyname: Message: no such element: Unable to locate element: {"method":"tag name","selector":"mark"}
+  (Session info: chrome=114.0.5735.133)
+
+2023-06-26 12:03:57RL78/L1C cannot check keyname: Message: no such element: Unable to locate element: {"method":"tag name","selector":"mark"}
+  (Session info: chrome=114.0.5735.133)
+
+2023-06-26 12:03:58RL78/L1C cannot check keyname: Message: no such element: Unable to locate element: {"method":"tag name","selector":"mark"}
+  (Session info: chrome=114.0.5735.133)
+
+2023-06-26 12:03:58RL78/L1C cannot check keyname: Message: no such element: Unable to locate element: {"method":"tag name","selector":"mark"}
+  (Session info: chrome=114.0.5735.133)
+
+2023-06-26 12:03:58RL78/L1C cannot check keyname: Message: no such element: Unable to locate element: {"method":"tag name","selector":"mark"}
+  (Session info: chrome=114.0.5735.133)
+
+2023-06-26 12:03:58RL78/L1C cannot check keyname: Message: no such element: Unable to locate element: {"method":"tag name","selector":"mark"}
+  (Session info: chrome=114.0.5735.133)
+
+2023-06-26 12:03:59RL78/L1C cannot check keyname: Message: no such element: Unable to locate element: {"method":"tag name","selector":"mark"}
+  (Session info: chrome=114.0.5735.133)
+
+2023-06-26 14:51:59R5F101GKANA#U0 go_to_cate except: Message: timeout: Timed out receiving message from renderer: 479.547
+  (Session info: chrome=114.0.5735.133)
+
+2023-06-27 09:23:40R5F11ZBADFP#50 当个cate 解析异常：list index out of range 
+2023-06-27 09:26:31R5F571MFCGFB#V0 当个cate 解析异常：list index out of range 
+2023-06-27 09:29:20R5F51101AGNE#U0 当个cate 解析异常：list index out of range 
+2023-06-27 09:36:14R5F56519FDFP#30 当个cate 解析异常：list index out of range 
+2023-06-27 09:39:31R7F100GMK2DFB#HA0 当个cate 解析异常：list index out of range 
+2023-06-27 09:42:15R5F572TFCGFB#30 当个cate 解析异常：list index out of range 
+2023-06-27 09:48:40R5F563NACDFB#V0 cannot check keyname: Message: no such element: Unable to locate element: {"method":"tag name","selector":"mark"}
+  (Session info: chrome=114.0.5735.133)
+
+2023-06-27 09:54:52R7FS5D97E3A01CFB#AA0 当个cate 解析异常：list index out of range 
+2023-06-27 10:00:58R7FA4E10B2CNE#AA0 当个cate 解析异常：list index out of range 
+2023-06-27 10:04:12R5F101EGANA#00 当个cate 解析异常：list index out of range 
+2023-06-27 10:07:30R5F56318CDLK#U0 当个cate 解析异常：list index out of range 
+2023-06-27 10:10:35R5F56604AGFL#30 当个cate 解析异常：list index out of range 
+2023-06-27 10:13:40R5F10EGEGFB#X0 当个cate 解析异常：list index out of range 
+2023-06-27 10:22:10R7F102G7E2DNP#HA0 页面 解析异常：local variable 'showed_rows' referenced before assignment 
+2023-06-27 10:25:24R7F100GPG3CFB#BA0 当个cate 解析异常：list index out of range 
+2023-06-27 10:32:26R5F52305ADND#00 当个cate 解析异常：list index out of range 
+2023-06-27 10:35:28R5F100LGAFB#V0 当个cate 解析异常：list index out of range 
+2023-06-27 10:38:22R5F563NECDLC#U0 当个cate 解析异常：list index out of range 
+2023-06-27 10:58:35R5F11ZBADFP#50 当个cate 解析异常：list index out of range 
+2023-06-27 11:01:47R5F571MFCGFB#V0 当个cate 解析异常：list index out of range 
+2023-06-27 11:04:43R5F51101AGNE#U0 当个cate 解析异常：list index out of range 
+2023-06-27 11:11:53R5F56519FDFP#30 当个cate 解析异常：list index out of range 
+2023-06-27 11:41:29R5F563NACDFB#V0 cannot check keyname: Message: no such element: Unable to locate element: {"method":"tag name","selector":"mark"}
+  (Session info: chrome=114.0.5735.133)
+
+2023-06-27 12:14:50R7F102G7E2DNP#HA0 页面 解析异常：local variable 'showed_rows' referenced before assignment 
+2023-06-27 13:34:37RL78/L1C cannot check keyname: Message: no such element: Unable to locate element: {"method":"tag name","selector":"mark"}
+  (Session info: chrome=114.0.5735.133)
+
+2023-06-27 13:34:37RL78/L1C cannot check keyname: Message: no such element: Unable to locate element: {"method":"tag name","selector":"mark"}
+  (Session info: chrome=114.0.5735.133)
+
+2023-06-27 13:34:38RL78/L1C cannot check keyname: Message: no such element: Unable to locate element: {"method":"tag name","selector":"mark"}
+  (Session info: chrome=114.0.5735.133)
+
+2023-06-27 13:34:38RL78/L1C cannot check keyname: Message: no such element: Unable to locate element: {"method":"tag name","selector":"mark"}
+  (Session info: chrome=114.0.5735.133)
+
+2023-06-27 13:34:38RL78/L1C cannot check keyname: Message: no such element: Unable to locate element: {"method":"tag name","selector":"mark"}
+  (Session info: chrome=114.0.5735.133)
+
+2023-06-27 13:34:38RL78/L1C cannot check keyname: Message: no such element: Unable to locate element: {"method":"tag name","selector":"mark"}
+  (Session info: chrome=114.0.5735.133)
+
+2023-06-27 13:34:38RL78/L1C cannot check keyname: Message: no such element: Unable to locate element: {"method":"tag name","selector":"mark"}
+  (Session info: chrome=114.0.5735.133)
+
+2023-06-27 13:34:39RL78/L1C cannot check keyname: Message: no such element: Unable to locate element: {"method":"tag name","selector":"mark"}
+  (Session info: chrome=114.0.5735.133)
+
+2023-06-27 13:34:39RL78/L1C cannot check keyname: Message: no such element: Unable to locate element: {"method":"tag name","selector":"mark"}
+  (Session info: chrome=114.0.5735.133)
+
+2023-06-27 13:34:39RL78/L1C cannot check keyname: Message: no such element: Unable to locate element: {"method":"tag name","selector":"mark"}
+  (Session info: chrome=114.0.5735.133)
+

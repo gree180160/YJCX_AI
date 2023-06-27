@@ -96,7 +96,7 @@ def filert_useless_image(fold_path):
 # 识别IC——hot 图片里的热度信息并保存到数据库
 def rec_image(fold_path):
     filert_useless_image(fold_path)
-    source_file = PathHelp.get_file_path('TRenesas_MCU_85H', 'Task.xlsx')
+    source_file = PathHelp.get_file_path('TRenesas_MCU_105H', 'Task.xlsx')
     file_name_list = os.listdir(fold_path)
     file_name_list.sort()
     print(f"file count is: {file_name_list.__len__()}")
@@ -116,12 +116,12 @@ def rec_image(fold_path):
 
 
 if __name__ == "__main__":
-    rec_image(fold_path='/Users/liuhe/Desktop/progress/TRenesas_MCU/Renesas_MCU_85H/04/IC_hot_images')
+    rec_image(fold_path='/Users/liuhe/Desktop/progress/TRenesas_MCU/Renesas_MCU_105H/11/IC_hot_images')
     time.sleep(2.0)
-    rec_image(fold_path='/Users/liuhe/Desktop/progress/TRenesas_MCU/Renesas_MCU_85H/11/IC_hot_images')
+    rec_image(fold_path='/Users/liuhe/Desktop/progress/TRenesas_MCU/Renesas_MCU_105H/sz/IC_hot_images')
     time.sleep(2.0)
-    rec_image(fold_path='/Users/liuhe/Desktop/progress/TRenesas_MCU/Renesas_MCU_85H/sz/IC_hot_images')
+    rec_image(fold_path='/Users/liuhe/Desktop/progress/TRenesas_MCU/Renesas_MCU_105H/04/IC_hot_images')
     time.sleep(2.0)
-    rec_image(fold_path=PathHelp.get_IC_hot_image_fold('TRenesas_MCU_85H'))
+    rec_image(fold_path=PathHelp.get_IC_hot_image_fold())
 
 

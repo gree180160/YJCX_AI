@@ -121,16 +121,10 @@ def testDigikey():
 
 
 def combine_upload_result():
-    source_file = PathHelp.get_file_path(None, 'TRenesa.xlsx')
-    files = ["/Users/liuhe/Desktop/progress/TReneseas_all/digikey/p4/p4s1.xlsx",
-             "/Users/liuhe/Desktop/progress/TReneseas_all/digikey/p4/p4s3.xlsx",
-             "/Users/liuhe/Desktop/progress/TReneseas_all/digikey/p4/p4s5.xlsx",
-             "/Users/liuhe/Desktop/progress/TReneseas_all/digikey/p4/p4s7.xlsx",
-             "/Users/liuhe/Desktop/progress/TReneseas_all/digikey/p4/p4s9.xlsx",
-             "/Users/liuhe/Desktop/progress/TReneseas_all/digikey/p4/p4s11.xlsx",
-             "/Users/liuhe/Desktop/progress/TReneseas_all/digikey/p4/p4s13.xlsx",
-             "/Users/liuhe/Desktop/progress/TReneseas_all/digikey/p4/p4s15.xlsx",
-             "/Users/liuhe/Desktop/progress/TReneseas_all/digikey/p4/p4s17.xlsx"
+    source_file = PathHelp.get_file_path(None, 'TNXP.xlsx')
+    files = ["/Users/liuhe/Desktop/progress/TNXP/discontiue/p4/discontiue/n41.xlsx",
+             "/Users/liuhe/Desktop/progress/TNXP/discontiue/p4/discontiue/n43.xlsx",
+             "/Users/liuhe/Desktop/progress/TNXP/discontiue/p4/discontiue/n45.xlsx"
              ]
     result = []
     for temp in files:
@@ -157,7 +151,7 @@ def partion(source_file, source_sheet):
     noData_result = []
     for row in sheet_content:
         if row.__len__() > 4:
-            if str(row[3]).__len__() == 0:
+            if str(row[3]).__len__() == 0 or str(row[3]) == 'None':
                 if not (row[0] in history_noData):
                     noData_result.append([row[0], row[1], row[4]])
             elif row[3] == 'Obsolete' or row[3] == 'Last Time Buy' or row[3] == '停产' or row[3] == '最后售卖':
@@ -172,6 +166,15 @@ def partion(source_file, source_sheet):
     ExcelHelp.add_arr_to_sheet(file_name=source_file, sheet_name='noData', dim_arr=noData_result)
 
 
+def deal_upload():
+    digikey_upload_file = PathHelp.get_file_path(None, 'TDigikey_upload.xlsx')
+    ExcelHelp.delete_sheet_content(digikey_upload_file, 'Sheet1')
+    all_cates = ExcelHelp.read_col_content(file_name=PathHelp.get_file_path("TRenesas_MCU_105H", 'Task.xlsx'),
+                                           sheet_name='ppn',
+                                           col_index=1)
+    ExcelHelp.add_arr_to_col(file_name=digikey_upload_file, sheet_name='Sheet1', dim_arr=all_cates)
+
+
 if __name__ == '__main__':
-    combine_upload_result()
+    deal_upload()
     # main()

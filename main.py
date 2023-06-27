@@ -2,7 +2,7 @@
 
 # Press ⌃R to execute it or replace it with your code.
 # Press Double ⇧ to search everywhere for classes, files, tool windows, actions, and settings.
-
+from urllib.parse import parse_qs, urlparse
 
 def print_hi(name):
     # Use a breakpoint in the code line below to debug your script.
@@ -203,16 +203,21 @@ def checkVerificationCodePage():
 
 
 def main():
-    all_cates = ExcelHelp.read_col_content(sourceFile_dic['fileName'], sourceFile_dic['sourceSheet'],
-                                           sourceFile_dic['colIndex'])
-    for (cate_index, cate_name) in enumerate(all_cates):
-        if cate_name.__contains__('?'):
-            continue
-        elif cate_index in range(sourceFile_dic['startIndex'], sourceFile_dic['endIndex']):
-            get_stock(cate_index, cate_name)
+
+
+    url = "https://www.wyselect.com/shop/itemList?title=vicor&store_sort=asc&page=33"
+    # 解析URL
+    o = urlparse(url)
+
+    # 将请求参数部分转化为 字典格式
+    params = parse_qs(o.query)
+    print(int(params['page'][0]))
+    # 设置可变参数,这里是页数
+    # page = 2
+    # params['page'] = [page]
 
 
 if __name__ == "__main__":
-    driver.get("https://member.ic.net.cn/login.php")
-    login_action(login_url)
+    # driver.get("https://member.ic.net.cn/login.php")
+    # login_action(login_url)
     main()

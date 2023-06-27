@@ -10,8 +10,8 @@ from urllib.parse import urlparse
 
 default_url = 'https://octopart.com/'
 keyword_source_file = PathHelp.get_file_path(None, 'TNXP.xlsx')
-sheet_name = "page0_ppn_2"
-fold_path = '/Users/liuhe/Desktop/progress/TNXP/discontiue/p2/html'
+sheet_name = "page0_ppn_4"
+fold_path = '/Users/liuhe/Desktop/progress/TNXP/discontiue/p4/html'
 log_file = '/Octopart_category/octopart_key_cate_log.txt'
 
 total_page = 1
@@ -44,7 +44,7 @@ def set_totalpage(soup):
     try:
         ul = soup.select('ul.jsx-4126298714.jumps')[0]
         li_last = ul.select('li.jsx-4126298714')[-1]
-        a = li_lawww.select('a')[0]
+        a = li_last.select('a')[0]
         total_page = a.text
     except:
         total_page = 1
@@ -249,7 +249,7 @@ def get_unfinished_pn(keyword_source_file: str, finished_html_files_folds: list)
     finished_ppn = get_finished_ppn(fold_paths=finished_html_files_folds)
     for (ppn_index, temp_ppn) in enumerate(all_ppn):
         if not temp_ppn in finished_ppn:
-            manu = URLManager.Octopart_manu.Onsemi
+            manu = URLManager.Octopart_manu.NXP
             url = URLManager.octopart_get_page_url(key_name=temp_ppn, page=1, manu=manu)
             unfinished_url.append([temp_ppn, url])
     ExcelHelp.add_arr_to_sheet(file_name=keyword_source_file, sheet_name='unfinished_url', dim_arr=unfinished_url)
@@ -295,7 +295,9 @@ def change_name():
 if __name__ == "__main__":
     # get_Onsemi_ppn()
     # get_category(fold_path="/Users/liuhe/Desktop", file_name="https __octopart.com_search q=LM293DR2&currency=USD&specs=0.html", key_name="LM293DR2")
-    main()
-    # get_unfinished_pn(keyword_source_file=PathHelp.get_file_path(None, 'TSkyworks.xlsx'),
-    #                   finished_html_files_folds = ["/Users/liuhe/Desktop/progress/TSkyworks/html_files1",
-    #                                                "/Users/liuhe/Desktop/progress/TSkyworks/html_files2"])
+    # main()
+    get_unfinished_pn(keyword_source_file=PathHelp.get_file_path(None, 'TNXP.xlsx'),
+                      finished_html_files_folds = ["/Users/liuhe/Desktop/progress/TNXP/discontiue/p1/html",
+                                                   "/Users/liuhe/Desktop/progress/TNXP/discontiue/p2/html",
+                                                   '/Users/liuhe/Desktop/progress/TNXP/discontiue/p3/html',
+                                                   '/Users/liuhe/Desktop/progress/TNXP/discontiue/p4/html'])

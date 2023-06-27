@@ -2,7 +2,7 @@ from Manager import AccManage
 
 
 class Taskmanger:
-    task_name = 'TRenesas_MCU_90H'
+    task_name = 'TRenesas_MCU_110H'
     if AccManage.Device_ID == 'Mac':
         start_index = 0
         end_index = 125

@@ -204,6 +204,17 @@ def active_excel(file_name, sheet_name):
     add_arr_to_sheet(file_name=file_name, sheet_name=sheet_name, dim_arr=arr)
 
 
+def delete_sheet_content(file_name, sheet_name):
+    wb = load_workbook(file_name)
+    for (index, sheet) in enumerate(wb.worksheets):
+        if sheet.title == sheet_name:
+            sheet = wb[sheet_name]
+            sheet.delete_rows(1, sheet.max_row)
+    wb.save(file_name)
+    wb.close()
+
+
+
 def remove_sheet(file_name, sheet_name):
     wb = load_workbook(file_name)
     for (index, sheet) in enumerate(wb.worksheets):
@@ -317,8 +328,9 @@ def mergeExcel(source_files, aim_file):
 
 
 if __name__ == "__main__":
+    delete_sheet_content('/Users/liuhe/PycharmProjects/YJCX_AI/TDigikey_upload.xlsx', 'Sheet1')
     # active_excel('/Users/liuhe/PycharmProjects/YJCX_AI/TInfenion_5H.xlsx', "Sheet1")
-    remove_sheets('/Users/liuhe/PycharmProjects/YJCX_AI/TRenesas_MCU_85H/IC_stock.xlsx')
+    # remove_sheets('/Users/liuhe/PycharmProjects/YJCX_AI/Renesas_MCU_105H/IC_stock.xlsx')
     # deal_keyword_result()
     # row_value = read_col_content(file_name='/Users/liuhe/PycharmProjects/YJCX_AI/TKWPage0.xlsx', sheet_name='hot_month', col_index=1)
     # index = row_value.index('46546546546545645')

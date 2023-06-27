@@ -143,4 +143,4 @@ if __name__ == "__main__":
     # test_open_save()
     # time.sleep(3)
     # screenShot_saveAndClose()
-    save_firfox_image(114)
+    save_firfox_image(125)

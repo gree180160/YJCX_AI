@@ -22,7 +22,7 @@ default_url = 'https://octopart.com/what-is-octopart'
 sourceFile_dic = {'fileName': PathHelp.get_file_path(TaskManager.Taskmanger().task_name, 'Task.xlsx'),
                   'sourceSheet': 'ppn',
                   'colIndex': 1,
-                  'startIndex': 84,
+                  'startIndex': 4,
                   'endIndex': TaskManager.Taskmanger().end_index}
 result_save_file = PathHelp.get_file_path(TaskManager.Taskmanger().task_name, 'octopart_price.xlsx')
 
@@ -67,8 +67,7 @@ def cate_valid(pn, first_row) -> bool:
 def get_cate_name(cate_area, opn) -> str:
     cate_name = ''
     try:
-        header = cate_area.find_elements(By.CSS_SELECTOR, 'div.jsx-2471764431.header')[0]
-        cate_name = header.find_elements(By.CSS_SELECTOR, 'div.jsx-312275976.jsx-1485186546')[2].text
+        cate_name = cate_area.find_element(By.TAG_NAME, 'mark').text
     except Exception as e:
         LogHelper.write_log(log_file_name=log_file, content=f'{opn} cannot check keyname: {e}')
     return cate_name

@@ -1,6 +1,8 @@
 from sys import platform
 import os
 import sys
+from Manager import TaskManager
+from WRTools import ExcelHelp
 
 
 def get_file_path(super_path, file_name) -> str:
@@ -16,8 +18,8 @@ def get_file_path(super_path, file_name) -> str:
 
 
 def get_IC_hot_image_fold(task_name):
-   image_fold = getRootPath() + f"/{task_name}" + "/IC_hot_images"
-   return image_fold
+    image_fold = getRootPath() + f"/{task_name}" + "/IC_hot_images"
+    return image_fold
 
 
 # 获得根路径
@@ -50,11 +52,31 @@ def resource_path(relative_path):
     return os.path.join(base_path, relative_path)
 
 
+def change_screenShotName(fold_path):
+    pn_file = get_file_path(TaskManager.Taskmanger().task_name, 'Task.xlsx')
+    ppn_list = ExcelHelp.read_col_content(file_name=pn_file, sheet_name='ppn', col_index=1)[TaskManager.Taskmanger().start_index: TaskManager.Taskmanger().end_index]
+    file_name_list = os.listdir(fold_path)
+    valid_files = []
+    for (index, temp) in enumerate(file_name_list):
+        if temp.startswith("火狐截图_"):
+            valid_files.append(temp)
+    valid_files.sort()
+    print(valid_files)
+    for (index, temp) in enumerate(valid_files):
+        print(temp)
+        if True:
+            is_week_data = index < ppn_list.__len__()
+            print(ppn_list[index % ppn_list.__len__()])
+            right_ppn = ppn_list[index % ppn_list.__len__()].replace('/', '%2F')
+            imageName_new = right_ppn + ('_W' if is_week_data else '_M') + '.png'
+            os.rename(fold_path + '/' + temp, fold_path + '/' + imageName_new)
+
+
 if __name__ == "__main__":
     # keyword_source_file = get_file_path(super_path=None, file_name='TKeywords.xlsx')
     # log_file = get_file_path(super_path='Octopart_category', file_name='octopart_key_cate_log.txt')
     # print(keyword_source_file)
     # print(log_file)-
-    print(getOtherPath('TRenesasAll_10H'))
-
+    # print(getOtherPath('TRenesasAll_10H'))
+    change_screenShotName(fold_path=get_file_path('IC_Search', 'temp_hot_images'))
 

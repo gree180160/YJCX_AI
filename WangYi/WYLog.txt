@@ -1,0 +1,3 @@
+2023-06-20 16:16:47vicor go_to_cate except: invalid literal for int() with base 10: '共 18 页'
+2023-06-21 14:51:31vicor 页面 解析异常：('Connection aborted.', ConnectionResetError(54, 'Connection reset by peer')) 
+2023-06-21 14:51:31vicor go_to_cate except: HTTPConnectionPool(host='localhost', port=61892): Max retries exceeded with url: /session/6095bf5414bfe0f08aaf4940030e43ad/execute/sync (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x11721b6a0>: Failed to establish a new connection: [Errno 61] Connection refused'))

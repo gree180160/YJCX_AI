@@ -17,25 +17,25 @@ import Bom_price.bom_price_info
 ssl._create_default_https_context = ssl._create_unverified_context
 
 
-cate_source_file = PathHelp.get_file_path(super_path='THolt', file_name='Task.xlsx')
+cate_source_file = PathHelp.get_file_path(super_path='TRenesas_MCU_105H', file_name='Task.xlsx')
 result_save_file = cate_source_file
 
 # renesas
-# octopart_file_arr = ['/Users/liuhe/Desktop/progress/TOnsemi/octopart/4-1.xlsx',
-#                         '/Users/liuhe/Desktop/progress/TOnsemi/octopart/4-2.xlsx',
-#                         '/Users/liuhe/Desktop/progress/TOnsemi/octopart/4-3.xlsx',
-#                         '/Users/liuhe/Desktop/progress/TOnsemi/octopart/4-4.xlsx']
-# bom_file_arr = ['/Users/liuhe/Desktop/progress/THolt/second/04/bom_price.xlsx',
-#                 '/Users/liuhe/Desktop/progress/THolt/second/11/bom_price.xlsx',
-#                 '/Users/liuhe/Desktop/progress/THolt/second/sz/bom_price.xlsx',
-#                 PathHelp.get_file_path('TOnsemi_DiscontinueP4', 'bom_price.xlsx')]
-
-# onsemi
-octopart_file_arr = ['/Users/liuhe/PycharmProjects/YJCX_AI/THolt/octopart_price.xlsx']
+octopart_file_arr = ['/Users/liuhe/Desktop/progress/TOnsemi/octopart/4-1.xlsx',
+                        '/Users/liuhe/Desktop/progress/TOnsemi/octopart/4-2.xlsx',
+                        '/Users/liuhe/Desktop/progress/TOnsemi/octopart/4-3.xlsx',
+                        '/Users/liuhe/Desktop/progress/TOnsemi/octopart/4-4.xlsx']
 bom_file_arr = ['/Users/liuhe/Desktop/progress/THolt/second/04/bom_price.xlsx',
                 '/Users/liuhe/Desktop/progress/THolt/second/11/bom_price.xlsx',
                 '/Users/liuhe/Desktop/progress/THolt/second/sz/bom_price.xlsx',
-                PathHelp.get_file_path('THolt', 'bom_price.xlsx')]
+                PathHelp.get_file_path('TOnsemi_DiscontinueP4', 'bom_price.xlsx')]
+
+# onsemi
+# octopart_file_arr = ['/Users/liuhe/PycharmProjects/YJCX_AI/THolt/octopart_price.xlsx']
+# bom_file_arr = ['/Users/liuhe/Desktop/progress/THolt/second/04/bom_price.xlsx',
+#                 '/Users/liuhe/Desktop/progress/THolt/second/11/bom_price.xlsx',
+#                 '/Users/liuhe/Desktop/progress/THolt/second/sz/bom_price.xlsx',
+#                 PathHelp.get_file_path('THolt', 'bom_price.xlsx')]
 
 
 

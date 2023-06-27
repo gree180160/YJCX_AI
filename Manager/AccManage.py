@@ -1,6 +1,6 @@
 
 Device_ID = 'Mac'
-IC_stock = {'n':'13315052459', 'p':'yjcx8888'}
+IC_stock = {'n':'17318034819', 'p':'SZyjcx12345'}
 # todo for test
 # IC_hot = {'n':'18571227953', 'p':'Yjcx123'}
 IC_hot = {'n':'13528520982', 'p':'Llm520'}
