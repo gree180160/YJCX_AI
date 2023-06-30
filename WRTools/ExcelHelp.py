@@ -330,7 +330,7 @@ def mergeExcel(source_files, aim_file):
 if __name__ == "__main__":
     delete_sheet_content('/Users/liuhe/PycharmProjects/YJCX_AI/TDigikey_upload.xlsx', 'Sheet1')
     # active_excel('/Users/liuhe/PycharmProjects/YJCX_AI/TInfenion_5H.xlsx', "Sheet1")
-    # remove_sheets('/Users/liuhe/PycharmProjects/YJCX_AI/Renesas_MCU_105H/IC_stock.xlsx')
+    # remove_sheets('/Users/liuhe/PycharmProjects/YJCX_AI/Renesas_MCU_115H/IC_stock.xlsx')
     # deal_keyword_result()
     # row_value = read_col_content(file_name='/Users/liuhe/PycharmProjects/YJCX_AI/TKWPage0.xlsx', sheet_name='hot_month', col_index=1)
     # index = row_value.index('46546546546545645')

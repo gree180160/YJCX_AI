@@ -16,24 +16,24 @@ import Bom_price.bom_price_info
 ssl._create_default_https_context = ssl._create_unverified_context
 
 
-cate_source_file = PathHelp.get_file_path(super_path='TRenesas_MCU_105H', file_name='Task.xlsx')
+cate_source_file = PathHelp.get_file_path(super_path='TRenesas_MCU_115H', file_name='Task.xlsx')
 result_save_file = cate_source_file
 octopart_sheet_name = 'octopart_price'
 bom_sheet_name = 'bom_price'
 
 
-octopart_file_arr = ['/Users/liuhe/Desktop/progress/TRenesas_MCU/Renesas_MCU_105H/04/octopart_price.xlsx',
-                    '/Users/liuhe/Desktop/progress/TRenesas_MCU/Renesas_MCU_105H/11/octopart_price.xlsx',
-                    '/Users/liuhe/Desktop/progress/TRenesas_MCU/Renesas_MCU_105H/sz/octopart_price.xlsx',
-                    PathHelp.get_file_path('TRenesas_MCU_105H', 'octopart_price.xlsx')]
-bom_file_arr = ['/Users/liuhe/Desktop/progress/TRenesas_MCU/Renesas_MCU_105H/04/bom_price.xlsx',
-                '/Users/liuhe/Desktop/progress/TRenesas_MCU/Renesas_MCU_105H/11/bom_price.xlsx',
-                '/Users/liuhe/Desktop/progress/TRenesas_MCU/Renesas_MCU_105H/sz/bom_price.xlsx',
-                PathHelp.get_file_path('TRenesas_MCU_105H', 'bom_price.xlsx')]
+octopart_file_arr = ['/Users/liuhe/Desktop/progress/TRenesas_MCU/Renesas_MCU_115H/04/octopart_price.xlsx',
+                    '/Users/liuhe/Desktop/progress/TRenesas_MCU/Renesas_MCU_115H/11/octopart_price.xlsx',
+                    '/Users/liuhe/Desktop/progress/TRenesas_MCU/Renesas_MCU_115H/sz/octopart_price.xlsx',
+                    PathHelp.get_file_path('TRenesas_MCU_115H', 'octopart_price.xlsx')]
+bom_file_arr = ['/Users/liuhe/Desktop/progress/TRenesas_MCU/Renesas_MCU_115H/04/bom_price.xlsx',
+                '/Users/liuhe/Desktop/progress/TRenesas_MCU/Renesas_MCU_115H/11/bom_price.xlsx',
+                '/Users/liuhe/Desktop/progress/TRenesas_MCU/Renesas_MCU_115H/sz/bom_price.xlsx',
+                PathHelp.get_file_path('TRenesas_MCU_115H', 'bom_price.xlsx')]
 
 # little ppn
-# octopart_file_arr = [PathHelp.get_file_path('TRenesas_MCU_105H', 'octopart_price.xlsx')]
-# bom_file_arr = [PathHelp.get_file_path('TRenesas_MCU_105H', 'bom_price.xlsx')]
+# octopart_file_arr = [PathHelp.get_file_path('TRenesas_MCU_115H', 'octopart_price.xlsx')]
+# bom_file_arr = [PathHelp.get_file_path('TRenesas_MCU_115H', 'bom_price.xlsx')]
 
 
 # 一次汇总bom 的所有pps， 2维数组，文件列表+ppns 列表
@@ -87,7 +87,7 @@ def get_bom_price(file_index, ppn_index, ppn, rate):
                         except Exception as e:
                             price_float = 0
                             print(f'?????????\n bom {price_str} 转换价格失败 {e} \n ????????????')
-                    if price_float > 0:
+                    if price_float > 0.001:
                         price_arr.append(price_float)
         else:
             break
@@ -122,7 +122,7 @@ def get_octopart_price(file_index, ppn_index, ppn, rate) -> float:
             if price_str and price_str != 'None' and len(price_str) > 0:
                 price_str = price_str.replace(',', '')
                 price_float = float(price_str) * rate
-                if price_float > 0:
+                if price_float > 0.001:
                     price_arr.append(price_float)
         else:
             continue
@@ -211,6 +211,7 @@ def calculater_price():
             manu_name = all_manu[cate_index]
             row_arr = [[cate_name, manu_name, pm, pr, c, grade, '有' if bom_has_supplier else '无',
                         str(bom_max_price)]]  # 从bom，获取pm，从octopart 获取pr
+            print(row_arr)
             ExcelHelp.add_arr_to_sheet(file_name=result_save_file, sheet_name='bom_octopart_price', dim_arr=row_arr)
 
 
@@ -244,6 +245,7 @@ def update_gradeA():
 if __name__ == "__main__":
     calculater_price()
     # update_gradeA()
+    # pr = get_octopart_price(file_index=0, ppn_index=0, rate=7.22, ppn="R7S910028CBG")
     print('over')
 
 

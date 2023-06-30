@@ -169,7 +169,7 @@ def partion(source_file, source_sheet):
 def deal_upload():
     digikey_upload_file = PathHelp.get_file_path(None, 'TDigikey_upload.xlsx')
     ExcelHelp.delete_sheet_content(digikey_upload_file, 'Sheet1')
-    all_cates = ExcelHelp.read_col_content(file_name=PathHelp.get_file_path("TRenesas_MCU_105H", 'Task.xlsx'),
+    all_cates = ExcelHelp.read_col_content(file_name=PathHelp.get_file_path("TRenesas_MCU_115H", 'Task.xlsx'),
                                            sheet_name='ppn',
                                            col_index=1)
     ExcelHelp.add_arr_to_col(file_name=digikey_upload_file, sheet_name='Sheet1', dim_arr=all_cates)

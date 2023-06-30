@@ -36,25 +36,27 @@ def get_page_more_PN():
 
 
 # 将大项目拆分成一天天的任务
-def createDayTask():
-    i = 9  # 删除ppn 里面的历史数据,Renesas_MCU_105H
-    while i < 15:
-        file_name = PathHelp.get_file_path(f'TNXP_Discontiue_{i}H', 'Task.xlsx')
+def createDayTask(unit:int):
+    i = 125  # 删除ppn 里面的历史数据,Renesas_MCU_115H
+    while i < 145:
+        file_name = PathHelp.get_file_path(f'TRenesas_MCU_{i}H', 'Task.xlsx')
         ExcelHelp.remove_sheet(file_name, 'ppn')
-        i += 1
-    sheet_content = ExcelHelp.read_sheet_content_by_name(file_name=PathHelp.get_file_path(None, 'TNXP.xlsx'), sheet_name='discontinue')
-    sheet_content = sheet_content[800:1400]
+        i += int(unit/100)
+    # sheet_content = ExcelHelp.read_sheet_content_by_name(file_name=PathHelp.get_file_path(None, 'TNXP.xlsx'), sheet_name='discontinue')
+    sheet_content = ExcelHelp.read_sheet_content_by_name(file_name=PathHelp.get_file_path(None, 'TRenesas_MCU.xlsx'),
+                                                         sheet_name='ppn')
+    sheet_content = sheet_content[12000:14000]
     task_value = []
-    start_index = 9
+    start_index = 125
     for (row_index, row_value) in enumerate(sheet_content):
-        row_info = [row_value[0], 'NXP Semiconductors']
+        row_info = [row_value[0], 'Renesas']
         if row_value[0]:
             task_value.append(row_info)
-            if task_value.__len__() == 100:
-                file_name = PathHelp.get_file_path(f'TNXP_Discontiue_{start_index}H', 'Task.xlsx')
+            if task_value.__len__() == unit:
+                file_name = PathHelp.get_file_path(f'TRenesas_MCU_{start_index}H', 'Task.xlsx')
                 ExcelHelp.add_arr_to_sheet(file_name=file_name, sheet_name='ppn', dim_arr=task_value)
                 task_value = []
-                start_index += 1
+                start_index += int(unit/100)
 
 
 # 分解数量大的ppn列表
@@ -117,6 +119,6 @@ if __name__ == "__main__":
     # get_ICSupplierAndHot(20, 300)
     # get_wheat()
     # adjustopn()
-    decompositionPPN(500)
-    # createDayTask()
+    # decompositionPPN(500)
+    createDayTask(500)
     # decompositionPPN(500)

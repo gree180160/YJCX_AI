@@ -22,7 +22,7 @@ default_url = 'https://octopart.com/what-is-octopart'
 sourceFile_dic = {'fileName': PathHelp.get_file_path(TaskManager.Taskmanger().task_name, 'Task.xlsx'),
                   'sourceSheet': 'ppn',
                   'colIndex': 1,
-                  'startIndex': 4,
+                  'startIndex': TaskManager.Taskmanger().start_index,
                   'endIndex': TaskManager.Taskmanger().end_index}
 result_save_file = PathHelp.get_file_path(TaskManager.Taskmanger().task_name, 'octopart_price.xlsx')
 
@@ -88,19 +88,7 @@ def get_manufacture_name(cate_area, opn) -> str:
 # tr: contain row info
 def get_supplier_info(tr, ppn, manu_name) -> octopart_price_info:
     td_arr = tr.find_elements(by=By.TAG_NAME, value='td')
-    star_td = td_arr[0]
-    is_star = 0
-    try:
-        a = star_td.find_element(by=By.TAG_NAME, value='a')
-        title = a.get_attribute('title')
-        if title == 'Non-Authorized Stocking Distributor':
-            is_star = -1
-        elif title == 'Authorized Distributor':
-            is_star = 1
-        else:
-            is_star = 0
-    except:
-        is_star = -1
+    is_star = 1
     distribute_tr = td_arr[1]
     try:
         distribute_name = distribute_tr.find_element(by=By.TAG_NAME, value='a').text

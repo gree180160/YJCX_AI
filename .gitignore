@@ -8,4 +8,4 @@
 /venv/*
 /IC_Search/CroppedImages/
 /IC_Search/temp_hot_images/
-IC_Search/CroppedImages/
+IC_Search/CroppedImages/*
