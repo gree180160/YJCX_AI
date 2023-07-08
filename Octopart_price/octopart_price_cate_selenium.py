@@ -42,32 +42,12 @@ def go_to_cate(pn_index, pn):
             sys.exit()
 
 
-# 判断当前内容是否和pn 一致,忽略大小写，和最后一位的加号
-def cate_valid(pn, first_row) -> bool:
-    result = False
-    try:
-        html_pn = get_cate_name(cate_area=first_row, opn=pn)
-        pn = pn.replace(" ", "")
-        html_pn = html_pn.replace(" ", "")
-        # 去掉结尾的+，因为pn ,结尾有无+都是一个型号
-        if pn.endswith('+'):
-            pn = pn[0:-1]
-        if html_pn.endswith('+'):
-            html_pn = html_pn[0:-1]
-        result = bool(re.search(pn, html_pn, re.IGNORECASE))
-        if not result:
-            LogHelper.write_log(log_file_name=log_file, content=f'{pn} cannot match')
-    except Exception as e:
-        LogHelper.write_log(log_file_name=log_file, content=f'{pn} cannot check name: {e}')
-        result = False
-    return result
-
-
 # 获取cate
 def get_cate_name(cate_area, opn) -> str:
     cate_name = ''
     try:
-        cate_name = cate_area.find_element(By.TAG_NAME, 'mark').text
+        cate_name = cate_area.find_element(By.CSS_SELECTOR, 'div.jsx-312275976.jsx-1485186546.mpn').text
+        # cate_name = cate_area.find_element(By.TAG_NAME, 'mark').text
     except Exception as e:
         LogHelper.write_log(log_file_name=log_file, content=f'{opn} cannot check keyname: {e}')
     return cate_name
@@ -173,7 +153,7 @@ def analy_html(pn_index, pn):
                         tr_list = tbody.find_elements(By.TAG_NAME, 'tr')
                         for tr_temp in tr_list:
                             cate_price_ele = get_supplier_info(tr=tr_temp, ppn=ppn, manu_name=manu)
-                            valid_supplier_arr.append(cate_price_ele.descritpion_arr())
+                            valid_supplier_arr.append(cate_price_ele.descritpion_arr() + [pn])
             except Exception as e:
                 LogHelper.write_log(log_file_name=log_file, content=f'{pn} 当个cate 解析异常：{e} ')
     except Exception as e:

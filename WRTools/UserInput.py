@@ -142,5 +142,5 @@ def save_firfox_image(count: int):
 if __name__ == "__main__":
     # test_open_save()
     # time.sleep(3)
-    # screenShot_saveAndClose()
+    # screenShot_saveAndClose()å
     save_firfox_image(125)

@@ -25,12 +25,12 @@ import time
 accouts_arr = [AccManage.Wheat['c'], AccManage.Wheat['n'], AccManage.Wheat['p']]
 ssl._create_default_https_context = ssl._create_unverified_context
 
-sourceFile_dic = {'fileName': PathHelp.get_file_path(None, 'THolt_wheat_IC.xlsx'),
-                  'sourceSheet': 'ppn',
+sourceFile_dic = {'fileName': PathHelp.get_file_path('Wheat', 'Task.xlsx'),
+                  'sourceSheet': 'ppn_all',
                   'colIndex': 1,
-                  'startIndex': 262,
-                  'endIndex': 310}
-result_save_file = PathHelp.get_file_path(None, 'THolt_wheat_IC.xlsx')
+                  'startIndex': 28,
+                  'endIndex': 115}
+result_save_file = PathHelp.get_file_path('Wheat', 'Task.xlsx')
 result_save_sheet = 'buyer'
 logFile = PathHelp.get_file_path('Wheat', 'Wheat_log.txt')
 
@@ -267,5 +267,5 @@ def main():
 if __name__ == "__main__":
     loginAction(default_url)
     driver.get(default_url)
-    set_filter(start_date='2020-05-31', end_date='2023-05-31')
+    set_filter(start_date='2020-06-31', end_date='2023-06-31')
     main()

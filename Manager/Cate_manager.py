@@ -37,23 +37,23 @@ def get_page_more_PN():
 
 # 将大项目拆分成一天天的任务
 def createDayTask(unit:int):
-    i = 125  # 删除ppn 里面的历史数据,Renesas_MCU_115H
-    while i < 145:
-        file_name = PathHelp.get_file_path(f'TRenesas_MCU_{i}H', 'Task.xlsx')
+    i = 165  # 删除ppn 里面的历史数据,Renesas_all_165H
+    while i < 190:
+        file_name = PathHelp.get_file_path(f'TRenesas_all_{i}H', 'Task.xlsx')
         ExcelHelp.remove_sheet(file_name, 'ppn')
         i += int(unit/100)
     # sheet_content = ExcelHelp.read_sheet_content_by_name(file_name=PathHelp.get_file_path(None, 'TNXP.xlsx'), sheet_name='discontinue')
-    sheet_content = ExcelHelp.read_sheet_content_by_name(file_name=PathHelp.get_file_path(None, 'TRenesas_MCU.xlsx'),
+    sheet_content = ExcelHelp.read_sheet_content_by_name(file_name=PathHelp.get_file_path(None, 'TRenesas.xlsx'),
                                                          sheet_name='ppn')
-    sheet_content = sheet_content[12000:14000]
+    sheet_content = sheet_content[16000:18500]
     task_value = []
-    start_index = 125
+    start_index = 165
     for (row_index, row_value) in enumerate(sheet_content):
         row_info = [row_value[0], 'Renesas']
         if row_value[0]:
             task_value.append(row_info)
             if task_value.__len__() == unit:
-                file_name = PathHelp.get_file_path(f'TRenesas_MCU_{start_index}H', 'Task.xlsx')
+                file_name = PathHelp.get_file_path(f'TRenesas_all_{start_index}H', 'Task.xlsx')
                 ExcelHelp.add_arr_to_sheet(file_name=file_name, sheet_name='ppn', dim_arr=task_value)
                 task_value = []
                 start_index += int(unit/100)

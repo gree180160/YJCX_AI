@@ -9,12 +9,12 @@ import IC_stock.IC_Stock_Info
 import time
 from WRTools import PathHelp, ExcelHelp
 
-cate_source_file = PathHelp.get_file_path("Renesas_MCU_115H", 'Task.xlsx')
-ICStock_file_arr = ["/Users/liuhe/Desktop/progress/TRenesas_MCU/Renesas_MCU_115H/11/IC_stock.xlsx",
-                    "/Users/liuhe/Desktop/progress/TRenesas_MCU/Renesas_MCU_115H/sz/IC_stock.xlsx",
-                    "/Users/liuhe/Desktop/progress/TRenesas_MCU/Renesas_MCU_115H/04/IC_stock.xlsx",
-                    PathHelp.get_file_path('TRenesas_MCU_115H', 'IC_stock.xlsx')]
-IC_source_file = PathHelp.get_file_path('TRenesas_MCU_115H', 'IC_stock.xlsx')
+cate_source_file = PathHelp.get_file_path("Renesas_all_165H", 'Task.xlsx')
+ICStock_file_arr = ["/Users/liuhe/Desktop/progress/TReneseas_all/165H/11/IC_stock.xlsx",
+                    "/Users/liuhe/Desktop/progress/TReneseas_all/165H/sz/IC_stock.xlsx",
+                    "/Users/liuhe/Desktop/progress/TReneseas_all/165H/04/IC_stock.xlsx",
+                    PathHelp.get_file_path('TRenesas_all_165H', 'IC_stock.xlsx')]
+IC_source_file = PathHelp.get_file_path('TRenesas_all_165H', 'IC_stock.xlsx')
 result_save_file = cate_source_file
 
 

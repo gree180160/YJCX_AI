@@ -98,5 +98,5 @@ def test_hot_value(fold_path: str):
 
 
 if __name__ == "__main__":
-    result = test_hot_value(fold_path='/Users/liuhe/Desktop/progress/TRenesas_MCU/Renesas_MCU_115H/04/IC_hot_images')
+    result = test_hot_value(fold_path='/Users/liuhe/Desktop/progress/TReneseas_all/165H/04/IC_hot_images')
     print(result)

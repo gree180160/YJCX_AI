@@ -45,9 +45,9 @@ def get_ICSupplierAndHot_renesas(hot_min):
     '''
     / Users / liuhe / Desktop / progress / TReneseas_all / 5H / mac / Task.xlsx....90H
     '''
-    index = 5
+    index = 105
     result = []
-    while index <= 100:
+    while index <= 165:
         try:
             file = f'/Users/liuhe/Desktop/progress/TReneseas_all/{index}H/mac/Task.xlsx'
             sheet_content = ExcelHelp.read_sheet_content_by_name(file_name=file, sheet_name='all_info')
@@ -71,15 +71,45 @@ def get_ICSupplierAndHot_renesas(hot_min):
         except Exception as e:
             print(f'1 get max_m error file is: {file}')
         index += 5
-    ExcelHelp.add_arr_to_sheet(PathHelp.get_file_path('Wheat', 'Task.xlsx'), 'Sheet3', result)
+    ExcelHelp.add_arr_to_sheet(PathHelp.get_file_path('Wheat', 'Task.xlsx'), 'Sheet4', result)
 
 
+def get_ICSupplierAndHot_renesasMCU(hot_min):
+    index = 5
+    result = []
+    while index <= 140:
+        try:
+            file = f'/Users/liuhe/Desktop/progress/TRenesas_MCU/Renesas_MCU_{index}H/mac/Task.xlsx'
+            sheet_content = ExcelHelp.read_sheet_content_by_name(file_name=file, sheet_name='all_info')
+            default_max_row = 17
+            for (row_index, row) in enumerate(sheet_content):
+                if row_index == 0:
+                    if str(row[default_max_row]) != 'max_month1':
+                        for (cell_index, cell) in enumerate(row):
+                            if str(cell) == 'max_month1':
+                                default_max_row = cell_index
+                    print(f'max month index is :{default_max_row}')
+                else:
+                    try:
+                        max_m_value = int(row[default_max_row])
+                        print(f'max_m_value is:{max_m_value}')
+                    except:
+                        max_m_value = 0
+                        print(f'change to int error : {str(row[default_max_row])}')
+                    if max_m_value >= hot_min:
+                        result.append([row[0], row[1], row[default_max_row]])
+        except Exception as e:
+            print(f'1 get max_m error file is: {file}')
+        index += 5
+    ExcelHelp.add_arr_to_sheet(PathHelp.get_file_path('Wheat', 'Task.xlsx'), 'Sheet5', result)
+
+
+#finished 2023.05 之前的所有品牌，Infineon, renesas_mcu, Renesas-all-165H
 def get_wheat():
     source_file = PathHelp.get_file_path('Wheat', 'Task.xlsx')
-    sheet1 = ExcelHelp.read_sheet_content_by_name(file_name=source_file, sheet_name='Sheet1')
-    sheet2 = ExcelHelp.read_sheet_content_by_name(file_name=source_file, sheet_name='Sheet2')
-    sheet3 = ExcelHelp.read_sheet_content_by_name(file_name=source_file, sheet_name='Sheet3')
-    sheet_all = sheet1 + sheet2 + sheet3
+    sheet1 = ExcelHelp.read_sheet_content_by_name(file_name=source_file, sheet_name='Sheet4')
+    sheet2 = ExcelHelp.read_sheet_content_by_name(file_name=source_file, sheet_name='Sheet5')
+    sheet_all = sheet1 + sheet2
     result = []
     for row in sheet_all:
         try:
@@ -107,6 +137,7 @@ if __name__ == "__main__":
     # get_ICSupplierAndHot(20, 300)
     # get_wheat()
     # adjustopn()
-    # get_ICSupplierAndHot_renesas(300)
     # get_ICSupplierAndHot_Infineon(400)
+    # get_ICSupplierAndHot_renesas(300)
+    # get_ICSupplierAndHot_renesasMCU(300)
     get_wheat()

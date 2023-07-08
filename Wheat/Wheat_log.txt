@@ -375,3 +375,151 @@
 2023-06-09 13:06:16get total page error list index out of range
 2023-06-09 13:14:19get total page error list index out of range
 2023-06-09 13:18:40get total page error list index out of range
+2023-07-07 09:35:03get total page error list index out of range
+2023-07-07 09:38:24get total page error list index out of range
+2023-07-07 09:41:10get total page error list index out of range
+2023-07-07 09:48:19get total page error list index out of range
+2023-07-07 09:52:29get total page error list index out of range
+2023-07-07 09:59:37get total page error list index out of range
+2023-07-07 10:03:57get total page error list index out of range
+2023-07-07 10:08:30get total page error list index out of range
+2023-07-07 10:12:00get total page error list index out of range
+2023-07-07 10:15:15get total page error list index out of range
+2023-07-07 10:19:56get total page error list index out of range
+2023-07-07 10:27:40get total page error list index out of range
+2023-07-07 10:30:42get total page error list index out of range
+2023-07-07 10:38:29get total page error list index out of range
+2023-07-07 10:42:07get total page error list index out of range
+2023-07-07 10:46:35get total page error list index out of range
+2023-07-07 10:49:26get total page error list index out of range
+2023-07-07 10:53:50get total page error list index out of range
+2023-07-07 10:56:59get total page error list index out of range
+2023-07-07 11:01:39get total page error list index out of range
+2023-07-07 11:05:40get total page error list index out of range
+2023-07-07 11:09:19get total page error list index out of range
+2023-07-07 11:13:17get total page error list index out of range
+2023-07-07 11:17:01get total page error list index out of range
+2023-07-07 11:17:04input ppn error Message: element not interactable
+  (Session info: chrome=114.0.5735.198)
+
+2023-07-07 11:19:51get total page error list index out of range
+2023-07-07 11:19:53input ppn error Message: element not interactable
+  (Session info: chrome=114.0.5735.198)
+
+2023-07-07 11:23:05get total page error list index out of range
+2023-07-07 11:23:08input ppn error Message: element not interactable
+  (Session info: chrome=114.0.5735.198)
+
+2023-07-07 11:26:35get total page error list index out of range
+2023-07-07 11:26:38input ppn error Message: element not interactable
+  (Session info: chrome=114.0.5735.198)
+
+2023-07-07 11:30:37get total page error list index out of range
+2023-07-07 11:30:40input ppn error Message: element not interactable
+  (Session info: chrome=114.0.5735.198)
+
+2023-07-07 11:34:40get total page error list index out of range
+2023-07-07 11:34:43input ppn error Message: element not interactable
+  (Session info: chrome=114.0.5735.198)
+
+2023-07-07 11:38:13get total page error list index out of range
+2023-07-07 11:38:16input ppn error Message: element not interactable
+  (Session info: chrome=114.0.5735.198)
+
+2023-07-07 11:42:41get total page error list index out of range
+2023-07-07 11:42:43input ppn error Message: element not interactable
+  (Session info: chrome=114.0.5735.198)
+
+2023-07-07 11:45:26get total page error list index out of range
+2023-07-07 11:45:28input ppn error Message: element not interactable
+  (Session info: chrome=114.0.5735.198)
+
+2023-07-07 11:48:59get total page error list index out of range
+2023-07-07 11:49:02input ppn error Message: element not interactable
+  (Session info: chrome=114.0.5735.198)
+
+2023-07-07 11:51:49get total page error list index out of range
+2023-07-07 11:51:52input ppn error Message: element not interactable
+  (Session info: chrome=114.0.5735.198)
+
+2023-07-07 12:07:07get total page error list index out of range
+2023-07-07 12:11:27get total page error list index out of range
+2023-07-07 12:14:17get total page error list index out of range
+2023-07-07 12:18:01get total page error list index out of range
+2023-07-07 12:22:30get total page error list index out of range
+2023-07-07 12:25:29get total page error list index out of range
+2023-07-07 12:29:47get total page error list index out of range
+2023-07-07 12:33:20get total page error list index out of range
+2023-07-07 12:39:35input ppn error Message: element not interactable
+  (Session info: chrome=114.0.5735.198)
+
+2023-07-07 12:44:07get total page error list index out of range
+2023-07-07 12:47:19get total page error list index out of range
+2023-07-07 12:50:07get total page error list index out of range
+2023-07-07 12:54:15get total page error list index out of range
+2023-07-07 13:02:41get total page error list index out of range
+2023-07-07 13:07:16get total page error list index out of range
+2023-07-07 13:15:05get total page error list index out of range
+2023-07-07 13:23:20get total page error list index out of range
+2023-07-07 13:31:15get total page error list index out of range
+2023-07-07 13:37:41get total page error list index out of range
+2023-07-07 13:41:17get total page error list index out of range
+2023-07-07 13:45:59get total page error list index out of range
+2023-07-07 13:52:05get total page error list index out of range
+2023-07-07 14:40:56get total page error list index out of range
+2023-07-07 14:49:03get total page error list index out of range
+2023-07-07 15:05:54get total page error list index out of range
+2023-07-07 15:08:41get total page error list index out of range
+2023-07-07 15:11:49get total page error list index out of range
+2023-07-07 15:14:49get total page error list index out of range
+2023-07-07 15:18:30get total page error list index out of range
+2023-07-07 15:22:54get total page error list index out of range
+2023-07-07 15:26:16get total page error list index out of range
+2023-07-07 15:30:33get total page error list index out of range
+2023-07-07 15:34:14get total page error list index out of range
+2023-07-07 15:37:55get total page error list index out of range
+2023-07-07 15:41:08get total page error list index out of range
+2023-07-07 15:44:17get total page error list index out of range
+2023-07-07 15:48:32get total page error list index out of range
+2023-07-07 15:52:40get total page error list index out of range
+2023-07-07 15:55:35get total page error list index out of range
+2023-07-07 16:00:10get total page error list index out of range
+2023-07-07 16:03:40get total page error list index out of range
+2023-07-07 16:07:44get total page error list index out of range
+2023-07-07 16:11:59get total page error list index out of range
+2023-07-07 16:14:46get total page error list index out of range
+2023-07-07 16:19:14get total page error list index out of range
+2023-07-07 16:22:30get total page error list index out of range
+2023-07-07 16:26:08get total page error list index out of range
+2023-07-07 16:29:25get total page error list index out of range
+2023-07-07 16:33:49get total page error list index out of range
+2023-07-07 16:37:53get total page error list index out of range
+2023-07-07 16:41:54get total page error list index out of range
+2023-07-07 16:46:08get total page error list index out of range
+2023-07-07 16:49:00get total page error list index out of range
+2023-07-07 16:52:19get total page error list index out of range
+2023-07-07 16:56:13get total page error list index out of range
+2023-07-07 17:00:38get total page error list index out of range
+2023-07-07 17:04:51get total page error list index out of range
+2023-07-07 17:09:34get total page error list index out of range
+2023-07-07 17:13:44get total page error list index out of range
+2023-07-07 17:17:40get total page error list index out of range
+2023-07-07 17:21:08get total page error list index out of range
+2023-07-07 17:25:11get total page error list index out of range
+2023-07-07 17:29:47get total page error list index out of range
+2023-07-07 17:34:11get total page error list index out of range
+2023-07-07 17:38:37get total page error list index out of range
+2023-07-07 17:41:33get total page error list index out of range
+2023-07-07 17:45:38get total page error list index out of range
+2023-07-07 17:48:28get total page error list index out of range
+2023-07-07 17:51:26get total page error list index out of range
+2023-07-07 17:55:53get total page error list index out of range
+2023-07-07 18:00:09get total page error list index out of range
+2023-07-07 18:03:31get total page error list index out of range
+2023-07-07 18:07:58get total page error list index out of range
+2023-07-07 18:12:12get total page error list index out of range
+2023-07-07 18:16:11get total page error list index out of range
+2023-07-07 18:19:45get total page error list index out of range
+2023-07-07 18:23:13get total page error list index out of range
+2023-07-07 18:27:09get total page error list index out of range
+2023-07-07 18:30:57get total page error list index out of range

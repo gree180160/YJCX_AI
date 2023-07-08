@@ -24,10 +24,10 @@ driver.set_page_load_timeout(1000)
 default_url = 'https://octopart.com/'
 
 sourceFile_dic = {'fileName': PathHelp.get_file_path(None, 'TNXP.xlsx'),
-                  'sourceSheet': 'opn',
+                  'sourceSheet': 'unfinished_url',
                   'colIndex': 1,
-                  'startIndex': 1720,
-                  'endIndex': 2500}
+                  'startIndex': 0,
+                  'endIndex': 800}
 result_save_file = PathHelp.get_file_path(None, 'TNXP.xlsx')
 
 log_file = PathHelp.get_file_path(super_path='Octopart_category', file_name='octopart_key_cate_log.txt')
@@ -64,7 +64,7 @@ def set_totalpage():
     try:
         ul = driver.find_element(by=By.CSS_SELECTOR, value='ul.jsx-4126298714.jumps')
         li_last = ul.find_elements(by=By.CSS_SELECTOR, value='li.jsx-4126298714')[-1]
-        a = li_lawww.find_element(by=By.CSS_SELECTOR, value='a')
+        a = li_last.find_element(by=By.CSS_SELECTOR, value='a')
         total_page = int(a.text)
     except:
         total_page = 1
@@ -141,14 +141,18 @@ def get_category(key_index, key_name, manu):
         time.sleep(2)
         if current_page >= total_page:
             break
+        else:
+            go_next_page(key_name)
 
 
 # 解析html，获取cate，manu
 def analyth_html(pn):
     ppn_list = []
     try:
-        left_rows = driver.find_elements(By.CSS_SELECTOR, 'div.jsx-1681079743.part')
-        showed_rows = left_rows
+        all_cates_table = driver.find_elements(By.CSS_SELECTOR, 'div.jsx-2906236790.prices-view')
+        if all_cates_table.__len__() > 0:
+            left_rows = all_cates_table[0].find_elements(By.CSS_SELECTOR, 'div.jsx-4014881838.part')
+            showed_rows = left_rows
         # 默认直接显示的row
         for temp_cate_row in showed_rows:
             try:
@@ -163,7 +167,7 @@ def analyth_html(pn):
         LogHelper.write_log(log_file_name=log_file, content=f'{pn} 页面 解析异常：{e} ')
     ExcelHelp.add_arr_to_sheet(
         file_name=result_save_file,
-        sheet_name='octopart_price',
+        sheet_name='octopart_ppn',
         dim_arr=ppn_list)
 
 
@@ -173,6 +177,17 @@ def get_cate_name(cate_area, opn) -> str:
     try:
         header = cate_area.find_elements(By.CSS_SELECTOR, 'div.jsx-2471764431.header')[0]
         cate_name = header.find_elements(By.CSS_SELECTOR, 'div.jsx-312275976.jsx-1485186546')[2].text
+    except Exception as e:
+        LogHelper.write_log(log_file_name=log_file, content=f'{opn} cannot check keyname: {e}')
+    return cate_name
+
+
+# 获取cate
+def get_cate_name(cate_area, opn) -> str:
+    cate_name = ''
+    try:
+        cate_name = cate_area.find_element(By.CSS_SELECTOR, 'div.jsx-312275976.jsx-1485186546.mpn').text
+        # cate_name = cate_area.find_element(By.TAG_NAME, 'mark').text
     except Exception as e:
         LogHelper.write_log(log_file_name=log_file, content=f'{opn} cannot check keyname: {e}')
     return cate_name
@@ -195,9 +210,9 @@ def check_htmlPPN_valid(html_ppn, opn):
     html_ppn = str(html_ppn).strip()
     # 去掉结尾的+，因为pn ,结尾有无+都是一个型号
     if opn.endswith('+'):
-        pn = opn[0:-1]
+        opn = opn[0:-1]
     if html_ppn.endswith('+'):
-        html_pn = html_ppn[0:-1]
+        html_ppn = html_ppn[0:-1]
     result = bool(re.search(opn, html_ppn, re.IGNORECASE))
     if not result:
         result = str(html_ppn).find(opn, 0, len(opn))
@@ -208,11 +223,12 @@ def main():
     all_cates = ExcelHelp.read_col_content(file_name=sourceFile_dic['fileName'],
                                            sheet_name=sourceFile_dic['sourceSheet'],
                                            col_index=sourceFile_dic['colIndex'])
+    all_cates = ["s18", 's20']
     for (cate_index, cate_name) in enumerate(all_cates):
         if cate_name is None or cate_name.__contains__('?'):
             continue
         elif cate_index in range(sourceFile_dic['startIndex'], sourceFile_dic['endIndex']):
-            manu = Manager.URLManager.Octopart_manu.NXP
+            manu = Manager.URLManager.Octopart_manu.NoManu
             cate_name = str(cate_name).strip()
             get_category(key_index=cate_index, key_name=cate_name, manu=manu)
 
