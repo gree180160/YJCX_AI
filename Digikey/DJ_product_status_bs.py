@@ -5,8 +5,7 @@ from bs4 import BeautifulSoup
 import requests
 from WRTools import IPHelper, UserAgentHelper, LogHelper, WaitHelp, ExcelHelp, PathHelp
 import os
-import digikey
-from digikey.v3.productinformation import KeywordSearchRequest
+
 
 
 
@@ -103,28 +102,9 @@ def main():
             get_dg_product_status(cate_index, cate_name)
 
 
-def testDigikey():
-    os.environ['DIGIKEY_CLIENT_ID'] = 'G2LPNfi9s5dalamAEx1jzZ6VKtga6jTS'
-    os.environ['DIGIKEY_CLIENT_SECRET'] = 'PjIFbMXbWLwpcqY4'
-    os.environ['DIGIKEY_CLIENT_SANDBOX'] = 'True'
-    os.environ['DIGIKEY_STORAGE_PATH'] = '/Users/liuhe/Library/Caches/Firefox/Profiles/p7u49s1s.default-release-1/cache2'
-    os.environ['DIGIKEY_REDIRECT_URI'] = 'https://molies.net/'
-
-    # Query product number
-    dkpn = '296-6501-1-ND'
-    part = digikey.product_details(dkpn)
-
-    # Search for parts
-    search_request = KeywordSearchRequest(keywords='CRCW080510K0FKEA', record_count=10)
-    result = digikey.keyword_search(body=search_request)
-    print(result)
-
-
 def combine_upload_result():
     source_file = PathHelp.get_file_path(None, 'TNXP.xlsx')
-    files = ["/Users/liuhe/Desktop/progress/TNXP/discontiue/p4/discontiue/n41.xlsx",
-             "/Users/liuhe/Desktop/progress/TNXP/discontiue/p4/discontiue/n43.xlsx",
-             "/Users/liuhe/Desktop/progress/TNXP/discontiue/p4/discontiue/n45.xlsx"
+    files = ["/Users/liuhe/Desktop/progress/TNXP/discontiue/p7/nxp7.xlsx",
              ]
     result = []
     for temp in files:
@@ -169,7 +149,7 @@ def partion(source_file, source_sheet):
 def deal_upload():
     digikey_upload_file = PathHelp.get_file_path(None, 'TDigikey_upload.xlsx')
     ExcelHelp.delete_sheet_content(digikey_upload_file, 'Sheet1')
-    all_cates = ExcelHelp.read_col_content(file_name=PathHelp.get_file_path("TRenesas_all_165H", 'Task.xlsx'),
+    all_cates = ExcelHelp.read_col_content(file_name=PathHelp.get_file_path("TVicor15H", 'Task.xlsx'),
                                            sheet_name='ppn',
                                            col_index=1)
     ExcelHelp.add_arr_to_col(file_name=digikey_upload_file, sheet_name='Sheet1', dim_arr=all_cates)
@@ -177,4 +157,4 @@ def deal_upload():
 
 if __name__ == '__main__':
     deal_upload()
-    # main()
+    # combine_upload_result()

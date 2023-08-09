@@ -1,5 +1,8 @@
 from openpyxl import load_workbook, Workbook
+import openpyxl
 import os
+import time
+from datetime import datetime, timedelta
 
 
 # READ
@@ -84,6 +87,11 @@ def read_from_col_to_col(file_name, sheet_name, from_col, to_col):
 
 
 # WRITE
+def create_excel_file(file_path):
+    workbook = openpyxl.Workbook()
+    workbook.save(file_path)
+
+
 def create_sheet(sheet_name, wb):
     print(f'add sheet : {sheet_name}')
     wb.create_sheet(sheet_name)
@@ -327,8 +335,23 @@ def mergeExcel(source_files, aim_file):
             add_arr_to_sheet(file_name=aim_file, sheet_name=temp_sheet, dim_arr=sheet_content)
 
 
+def render_date():
+    files = ['/Users/liuhe/Downloads/tender_info_2023-07-27_B.xlsx', '/Users/liuhe/Downloads/tender_info_2023-07-27_A.xlsx']
+    for temp_file in files:
+        sheetContent = read_sheet_content_by_name(file_name=temp_file, sheet_name='tender')
+        new_content = []
+        for row_content in sheetContent:
+            new_row_value = row_content
+            new_row_value[3] = row_content[3].replace(' ', '')
+            new_row_value[4] = row_content[4].replace(' ', '')
+            new_row_value[5] = row_content[5].replace(' ', '')
+            new_content.append(new_row_value)
+        add_arr_to_sheet(file_name=temp_file, sheet_name='Sheet', dim_arr=new_content)
+
+
 if __name__ == "__main__":
-    delete_sheet_content('/Users/liuhe/PycharmProjects/YJCX_AI/TDigikey_upload.xlsx', 'Sheet1')
+    # delete_sheet_content('/Users/liuhe/PycharmProjects/YJCX_AI/TDigikey_upload.xlsx', 'Sheet1')
+    render_date()
     # active_excel('/Users/liuhe/PycharmProjects/YJCX_AI/TInfenion_5H.xlsx', "Sheet1")
     # remove_sheets('/Users/liuhe/PycharmProjects/YJCX_AI/Renesas_all_165H/IC_stock.xlsx')
     # deal_keyword_result()

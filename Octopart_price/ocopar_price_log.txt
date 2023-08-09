@@ -9040,3 +9040,45 @@ from unknown error: web view not found
 2023-07-06 16:14:50F1975 cannot check keyname: Message: no such element: Unable to locate element: {"method":"tag name","selector":"mark"}
   (Session info: chrome=114.0.5735.198)
 
+2023-07-21 16:54:24M3032316035NX0IBCR go_to_cate except: Message: unknown error: net::ERR_INTERNET_DISCONNECTED
+  (Session info: chrome=114.0.5735.198)
+
+2023-07-24 12:56:02QS3306AS18 go_to_cate except: Message: unknown error: net::ERR_PROXY_CONNECTION_FAILED
+  (Session info: chrome=114.0.5735.198)
+
+2023-07-24 12:59:24QS3306AS18 页面 解析异常：local variable 'showed_rows' referenced before assignment 
+2023-07-24 12:59:24QS3306AS1G go_to_cate except: Message: unknown error: net::ERR_PROXY_CONNECTION_FAILED
+  (Session info: chrome=114.0.5735.198)
+
+2023-07-24 13:02:23QS3306AS1G 页面 解析异常：local variable 'showed_rows' referenced before assignment 
+2023-07-25 18:27:45SLG46867M 页面 解析异常：Message: timeout: Timed out receiving message from renderer: 480.000
+  (Session info: chrome=114.0.5735.248)
+
+2023-07-25 18:35:45SLG46867M-DIP go_to_cate except: Message: timeout: Timed out receiving message from renderer: 480.000
+  (Session info: chrome=114.0.5735.248)
+
+2023-07-26 16:36:41UPC451G2(5)-E1-A 页面 解析异常：Message: timeout: Timed out receiving message from renderer: 480.000
+  (Session info: chrome=115.0.5790.102)
+
+2023-07-26 16:44:41UPC451G2(5)-E2-A go_to_cate except: Message: timeout: Timed out receiving message from renderer: 480.000
+  (Session info: chrome=115.0.5790.102)
+
+2023-07-27 16:41:39X5325S8IZT1 页面 解析异常：Message: timeout: Timed out receiving message from renderer: 480.000
+  (Session info: chrome=115.0.5790.114)
+
+2023-07-27 16:49:39X5325S8Z-4.5A go_to_cate except: Message: timeout: Timed out receiving message from renderer: 480.000
+  (Session info: chrome=115.0.5790.114)
+
+2023-07-28 10:07:39X9315WMI 页面 解析异常：local variable 'showed_rows' referenced before assignment 
+2023-07-28 15:38:38X9317US8 页面 解析异常：Message: timeout: Timed out receiving message from renderer: 480.000
+  (Session info: chrome=115.0.5790.114)
+
+2023-07-28 15:46:38X9317US8I go_to_cate except: Message: timeout: Timed out receiving message from renderer: 480.000
+  (Session info: chrome=115.0.5790.114)
+
+2023-08-02 10:17:03XLH536040.000JS4X go_to_cate except: Message: unknown error: net::ERR_CONNECTION_TIMED_OUT
+  (Session info: chrome=115.0.5790.114)
+
+2023-08-02 10:28:04XLH536045.000000I 页面 解析异常：local variable 'showed_rows' referenced before assignment 
+2023-08-03 14:50:44VI-23P-CU 页面 解析异常：local variable 'showed_rows' referenced before assignment 
+2023-08-03 14:54:00VI-23V-CU 页面 解析异常：local variable 'showed_rows' referenced before assignment 

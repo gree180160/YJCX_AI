@@ -27,7 +27,12 @@ def getRootPath():
     # 获取文件目录
     curPath = os.path.abspath(os.path.dirname(__file__))
     # 获取项目根路径，内容为当前项目的名字
-    rootPath = curPath[:curPath.find('YJCX_AI') + len('YJCX_AI')]
+    if platform.startswith('linux'):
+        tail = ''
+    elif platform.startswith('win'):
+        tail = rootPath = curPath[:curPath.find('YJCX_AI') + len('YJCX_AI')]
+    else:
+        tail = rootPath = curPath[:curPath.find('TransitTech') + len('TransitTech')]
     return rootPath
 
 
@@ -73,7 +78,7 @@ def change_screenShotName(fold_path):
 
 
 if __name__ == "__main__":
-    # keyword_source_file = get_file_path(super_path=None, file_name='TKeywords.xlsx')
+    # keyword_source_file = get_file_path(super_path=None, file_name='Tkeyword.xlsx')
     # log_file = get_file_path(super_path='Octopart_category', file_name='octopart_key_cate_log.txt')
     # print(keyword_source_file)
     # print(log_file)-

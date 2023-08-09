@@ -16,24 +16,24 @@ import Bom_price.bom_price_info
 ssl._create_default_https_context = ssl._create_unverified_context
 
 
-cate_source_file = PathHelp.get_file_path(super_path='TRenesas_all_165H', file_name='Task.xlsx')
+cate_source_file = PathHelp.get_file_path(super_path='TVicor15H', file_name='Task.xlsx')
 result_save_file = cate_source_file
 octopart_sheet_name = 'octopart_price'
 bom_sheet_name = 'bom_price'
 
 
-octopart_file_arr = ['/Users/liuhe/Desktop/progress/TReneseas_all/165H/04/octopart_price.xlsx',
-                    '/Users/liuhe/Desktop/progress/TReneseas_all/165H/11/octopart_price.xlsx',
-                    '/Users/liuhe/Desktop/progress/TReneseas_all/165H/sz/octopart_price.xlsx',
-                    PathHelp.get_file_path('TRenesas_all_165H', 'octopart_price.xlsx')]
-bom_file_arr = ['/Users/liuhe/Desktop/progress/TReneseas_all/165H/04/bom_price.xlsx',
-                '/Users/liuhe/Desktop/progress/TReneseas_all/165H/11/bom_price.xlsx',
-                '/Users/liuhe/Desktop/progress/TReneseas_all/165H/sz/bom_price.xlsx',
-                PathHelp.get_file_path('TRenesas_all_165H', 'bom_price.xlsx')]
+octopart_file_arr = ['/Users/liuhe/Desktop/progress/TVicor/15H/04/octopart_price.xlsx',
+                    '/Users/liuhe/Desktop/progress/TVicor/15H/11/octopart_price.xlsx',
+                    '/Users/liuhe/Desktop/progress/TVicor/15H/sz/octopart_price.xlsx',
+                    PathHelp.get_file_path('TVicor15H', 'octopart_price.xlsx')]
+bom_file_arr = ['/Users/liuhe/Desktop/progress/TVicor/15H/04/bom_price.xlsx',
+                '/Users/liuhe/Desktop/progress/TVicor/15H/11/bom_price.xlsx',
+                '/Users/liuhe/Desktop/progress/TVicor/15H/sz/bom_price.xlsx',
+                PathHelp.get_file_path('TVicor15H', 'bom_price.xlsx')]
 
 # little ppn
-# octopart_file_arr = [PathHelp.get_file_path('TRenesas_all_165H', 'octopart_price.xlsx')]
-# bom_file_arr = [PathHelp.get_file_path('TRenesas_all_165H', 'bom_price.xlsx')]
+# octopart_file_arr = [PathHelp.get_file_path('TVicor15H', 'octopart_price.xlsx')]
+# bom_file_arr = [PathHelp.get_file_path('TVicor15H', 'bom_price.xlsx')]
 
 
 # 一次汇总bom 的所有pps， 2维数组，文件列表+ppns 列表

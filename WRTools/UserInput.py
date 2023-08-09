@@ -80,8 +80,8 @@ def webpage_saveAndClose():
 def screenShot_saveAndClose():
     # 保存
     if platform.startswith('win'):
-        k.press_keys([k.control_key, 'q'])
-        k.release_key(k.control_key)
+        k.press_keys([k.alt_key, 'q'])
+        k.release_key(k.alt_key)
         time.sleep(2.0)
         k.tap_key('s')
         time.sleep(2.0)
@@ -100,7 +100,7 @@ def test_open_save():
            'view-source:https://octopart.com/search?q=A3212&currency=USD&specs=0&start=930']
     for (index, tempURL) in enumerate(arr):
         print(f'index is : {index}')
-        input_url(url=tempURL)
+        input_url(url=tempURL, wait_time_kind=0)
         webpage_saveAndClose()
 
 
@@ -112,8 +112,8 @@ def save_firfox_image(count: int):
         for index in range(0, count):
             print(f'index is: {index}')
             time.sleep(2.0)
-            k.press_keys([k.control_key, 'q'])
-            k.release_key(k.control_key)
+            k.press_keys([k.alt_key, 'q'])
+            k.release_key(k.alt_key)
             time.sleep(3.0)
             k.tap_key('s')
             time.sleep(3.0)
@@ -139,8 +139,37 @@ def save_firfox_image(count: int):
             k.release_key('control')
 
 
+def save_chrome_image(count: int):
+    if platform.startswith('win'):
+        time.sleep(3)
+        k.press_keys([k.control_key, k.tab_key])
+        k.release_key(k.control_key)
+        for index in range(0, count):
+            print(f'index is: {index}')
+            time.sleep(2.0)
+            k.press_keys([k.alt_key, 'f'])
+            k.release_key(k.alt_key)
+            time.sleep(3.0)
+            k.press_keys(['control', 'tab'])
+            k.release_key('control')
+
+    else:
+        time.sleep(3)
+        k.press_keys(['control', 'tab'])
+        k.release_key('control')
+        for index in range(0, count):
+            print(f'index is: {index}')
+            time.sleep(2.0)
+            k.press_keys(['Alternate', 'f'])
+            k.release_key('Alternate')
+            time.sleep(3.0)
+            k.press_keys(['control', 'tab'])
+            k.release_key('control')
+
+
 if __name__ == "__main__":
     # test_open_save()
     # time.sleep(3)
-    # screenShot_saveAndClose()å
-    save_firfox_image(125)
+    # screenShot_saveAndClose()
+    save_firfox_image(100)
+    # save_chrome_image(100)

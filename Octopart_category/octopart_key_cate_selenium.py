@@ -26,8 +26,8 @@ default_url = 'https://octopart.com/'
 sourceFile_dic = {'fileName': PathHelp.get_file_path(None, 'TNXP.xlsx'),
                   'sourceSheet': 'unfinished_url',
                   'colIndex': 1,
-                  'startIndex': 0,
-                  'endIndex': 800}
+                  'startIndex': 517,
+                  'endIndex': 600}
 result_save_file = PathHelp.get_file_path(None, 'TNXP.xlsx')
 
 log_file = PathHelp.get_file_path(super_path='Octopart_category', file_name='octopart_key_cate_log.txt')
@@ -223,7 +223,6 @@ def main():
     all_cates = ExcelHelp.read_col_content(file_name=sourceFile_dic['fileName'],
                                            sheet_name=sourceFile_dic['sourceSheet'],
                                            col_index=sourceFile_dic['colIndex'])
-    all_cates = ["s18", 's20']
     for (cate_index, cate_name) in enumerate(all_cates):
         if cate_name is None or cate_name.__contains__('?'):
             continue

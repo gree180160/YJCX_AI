@@ -1,6 +1,5 @@
-from WRTools import ExcelHelp, PathHelp
+from WRTools import ExcelHelp, PathHelp, PandasHelp
 import os
-
 
 def change_file_name():
     path = "/Users/liuhe/Desktop/MMS_html_files"
@@ -37,23 +36,22 @@ def get_page_more_PN():
 
 # 将大项目拆分成一天天的任务
 def createDayTask(unit:int):
-    i = 165  # 删除ppn 里面的历史数据,Renesas_all_165H
-    while i < 190:
-        file_name = PathHelp.get_file_path(f'TRenesas_all_{i}H', 'Task.xlsx')
+    i = 15  # 删除ppn 里面的历史数据,Renesas_all_165H
+    while i < 20:
+        file_name = PathHelp.get_file_path(f'TVicor{i}H', 'Task.xlsx')
         ExcelHelp.remove_sheet(file_name, 'ppn')
         i += int(unit/100)
     # sheet_content = ExcelHelp.read_sheet_content_by_name(file_name=PathHelp.get_file_path(None, 'TNXP.xlsx'), sheet_name='discontinue')
-    sheet_content = ExcelHelp.read_sheet_content_by_name(file_name=PathHelp.get_file_path(None, 'TRenesas.xlsx'),
-                                                         sheet_name='ppn')
-    sheet_content = sheet_content[16000:18500]
+    sheet_content = ExcelHelp.read_sheet_content_by_name(file_name=PathHelp.get_file_path(None, 'TVicor.xlsx'), sheet_name='ppn')
+    sheet_content = sheet_content[1000:]
     task_value = []
-    start_index = 165
+    start_index = 15
     for (row_index, row_value) in enumerate(sheet_content):
-        row_info = [row_value[0], 'Renesas']
+        row_info = [row_value[0], 'Vicor']
         if row_value[0]:
             task_value.append(row_info)
             if task_value.__len__() == unit:
-                file_name = PathHelp.get_file_path(f'TRenesas_all_{start_index}H', 'Task.xlsx')
+                file_name = PathHelp.get_file_path(f'TVicor{start_index}H', 'Task.xlsx')
                 ExcelHelp.add_arr_to_sheet(file_name=file_name, sheet_name='ppn', dim_arr=task_value)
                 task_value = []
                 start_index += int(unit/100)
@@ -62,13 +60,13 @@ def createDayTask(unit:int):
 # 分解数量大的ppn列表
 def decompositionPPN(unit: int):
     source_file = PathHelp.get_file_path(None, 'TNXP.xlsx')
-    source_ppn = ExcelHelp.read_col_content(file_name=source_file, sheet_name='ppn3+4', col_index=1)
-    source_ppn = source_ppn[0:2243]
+    source_ppn = ExcelHelp.read_col_content(file_name=source_file, sheet_name='ppn7', col_index=1)
+    source_ppn = source_ppn[0:726]
     history_sheets = []
     history_ppn = set()
     for sheet_name in history_sheets:
         history_ppn = history_ppn.union(set(ExcelHelp.read_col_content(file_name=source_file, sheet_name=sheet_name, col_index=1)))
-    sava_fold = '/Users/liuhe/Desktop/progress/TNXP/discontiue/p4/discontiue'
+    sava_fold = '/Users/liuhe/Desktop/progress/TNXP/discontiue/p7/'
     ppn_all = list(set(source_ppn).difference(set(history_ppn)))
 
     ppn_all = ppn_all[0:]
@@ -99,26 +97,49 @@ def adi_stock():
     arr1 = ExcelHelp.read_col_content(source_file, sheet_name='ppn1', col_index=1)
     arr2 = ExcelHelp.read_col_content(source_file, sheet_name='ppn2', col_index=1)
     arr3 = ExcelHelp.read_col_content(source_file, sheet_name='ppn3', col_index=1)
-    finished = arr1 + arr2 + arr3
-    arr4 = ExcelHelp.read_col_content(source_file, sheet_name='page0_ppn_4', col_index=1)
-    result = list(set(arr4).difference(set(finished)))
+    arr4 = ExcelHelp.read_col_content(source_file, sheet_name='ppn4', col_index=1)
+    arr34 = ExcelHelp.read_col_content(source_file, sheet_name='ppn3+4', col_index=1)
+    arr5 = ExcelHelp.read_col_content(source_file, sheet_name='page0_ppn_5', col_index=1)
+    arr6 = ExcelHelp.read_col_content(source_file, sheet_name='page0_ppn_6', col_index=1)
+    finished = arr1 + arr2 + arr3 + arr4 + arr34 + arr5 + arr6
+    arr7 = ExcelHelp.read_col_content(source_file, sheet_name='page0_ppn_7', col_index=1)
+    result = list(set(arr7).difference(set(finished)))
     result.sort()
-    ExcelHelp.add_arr_to_col(file_name=source_file, sheet_name='ppn4', dim_arr=result)
+    ExcelHelp.add_arr_to_col(file_name=source_file, sheet_name='ppn7', dim_arr=result)
 
 
 def mcu2():
-    mcu_source = ExcelHelp.read_col_content(file_name='/Users/liuhe/Desktop/JunLongMCU.xlsx', sheet_name='Sheet1', col_index=1)
-    jm_MCU = ExcelHelp.read_col_content(file_name=PathHelp.get_file_path(None, 'TRenesas_MCU.xlsx'), sheet_name='ppn', col_index=1)
-    result = set(mcu_source).intersection(set(jm_MCU))
-    # ExcelHelp.add_arr_to_col('/Users/liuhe/Desktop/ppnTask/MCU.xlsx', sheet_name='ppn', dim_arr=result)
+    svicor_sheet = ExcelHelp.read_sheet_content_by_name(file_name=PathHelp.get_file_path(None, 'TVicor.xlsx'), sheet_name='jason')
+    his = ExcelHelp.read_col_content(file_name=PathHelp.get_file_path(None, 'TVicor.xlsx'), sheet_name='ppn', col_index=1)
+    result = []
+    for row_value in svicor_sheet:
+        if not his.__contains__(row_value[0]):
+            result.append(row_value)
+            his.append(row_value[0])
+    ExcelHelp.add_arr_to_sheet(file_name=PathHelp.get_file_path(None, 'TVicor.xlsx'), sheet_name='jason2', dim_arr=result)
     print(result)
 
 
+def ppn_vicor_all():
+    fold = '/Users/liuhe/Downloads/ly/'
+    file_name_list = os.listdir(fold)
+    result = []
+    for temp_file in file_name_list:
+        try:
+            content_sheet = PandasHelp.read_sheet_content(fold + temp_file)#ExcelHelp.read_sheet_content_by_name(file_name=temp_file, sheet_name='工作表 1')
+        except:
+            content_sheet = ''
+            print(f'error file: {temp_file}')
+        for row_content in content_sheet:
+            result.append([row_content[3], row_content[4], row_content[6], row_content[12], row_content[13], os.path.basename(temp_file)])
+    ExcelHelp.add_arr_to_sheet(file_name=PathHelp.get_file_path(None, 'TVicor.xlsx'), sheet_name='all_ppn_ser', dim_arr=result)
+
+
 if __name__ == "__main__":
-    # createDayTask()
     # get_ICSupplierAndHot(20, 300)
     # get_wheat()
     # adjustopn()
+    # createDayTask(500)
     # decompositionPPN(500)
-    createDayTask(500)
-    # decompositionPPN(500)
+    # adi_stock()
+    mcu2()

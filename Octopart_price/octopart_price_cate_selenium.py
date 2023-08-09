@@ -99,9 +99,9 @@ def get_supplier_info(tr, ppn, manu_name) -> octopart_price_info:
         k_price = k_price_tr.text
     except:
         k_price = '--'
-    updated_tr = td_arr[12]
     try:
-        updated_span = updated_tr.find_element(by=By.TAG_NAME, value='span')
+        updated_div = tr.find_element(by=By.CSS_SELECTOR, value='div.updated-tooltip')
+        updated_span = updated_div.find_element(By.TAG_NAME, 'span')
         updated = updated_span.text
     except:
         updated = '--'

@@ -24061,7 +24061,7 @@
 2023-05-30 11:01:03R5F101LEDFB#50 load more 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":".bom_yun_agens.bomID_yunextts_agens.bom_quoteyunext_length"}
   (Session info: chrome=113.0.5672.126)
 
-2023-05-30 11:03:31UPD70F3215HGF-JBT-A load more 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":".bom_yun_agens.bomID_yunextts_agens.bom_quoteyunext_length"}
+2023-05-30 11:03:31UPD70F3220HGF-JBT-A load more 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":".bom_yun_agens.bomID_yunextts_agens.bom_quoteyunext_length"}
   (Session info: chrome=113.0.5672.126)
 
 2023-05-30 11:05:28R5F1056AASM#50 load more 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":".bom_yun_agens.bomID_yunextts_agens.bom_quoteyunext_length"}
@@ -27915,4 +27915,22 @@
 
 2023-06-25 11:30:33login action exception is: Message: element not interactable
   (Session info: chrome=114.0.5735.133)
+
+2023-07-21 16:53:45login action exception is: Message: no such element: Unable to locate element: {"method":"css selector","selector":".Bom_loging_title_erplogin.login_phone"}
+  (Session info: chrome=114.0.5735.198)
+
+2023-07-24 12:57:57login action exception is: Message: no such element: Unable to locate element: {"method":"css selector","selector":".Bom_loging_title_erplogin.login_phone"}
+  (Session info: chrome=114.0.5735.198)
+
+2023-07-24 12:59:59login action exception is: Message: no such element: Unable to locate element: {"method":"css selector","selector":".Bom_loging_title_erplogin.login_phone"}
+  (Session info: chrome=114.0.5735.198)
+
+2023-07-26 16:20:12login action exception is: Message: element not interactable
+  (Session info: chrome=115.0.5790.102)
+
+2023-07-27 15:36:58login action exception is: Message: element not interactable
+  (Session info: chrome=115.0.5790.114)
+
+2023-07-27 15:40:58login action exception is: Message: element not interactable
+  (Session info: chrome=115.0.5790.114)
 

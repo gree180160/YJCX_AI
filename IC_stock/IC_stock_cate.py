@@ -183,7 +183,7 @@ def checkVerificationCodePage(ppn) -> bool:
     else:
         VerificationCodePage = 0
         result = False
-    if VerificationCodePage >= 10:
+    if VerificationCodePage >= 30:
         driver.close()
     return result
 

@@ -17,7 +17,7 @@ import Bom_price.bom_price_info
 ssl._create_default_https_context = ssl._create_unverified_context
 
 
-cate_source_file = PathHelp.get_file_path(super_path='TRenesas_all_165H', file_name='Task.xlsx')
+cate_source_file = PathHelp.get_file_path(super_path='TVicor15H', file_name='Task.xlsx')
 result_save_file = cate_source_file
 
 # renesas

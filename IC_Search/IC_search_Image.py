@@ -82,6 +82,8 @@ def change_error_image_name(fold_path):
 def filert_useless_image(fold_path):
     file_name_list = os.listdir(fold_path)
     for (index, temp) in enumerate(file_name_list):
+        if temp.endswith('.xlsx'):
+            os.remove(fold_path + '/' + temp)
         if temp.endswith('.png'):
             # 打开一张图
             img = Image.open(fold_path + '/' + temp)
@@ -89,14 +91,14 @@ def filert_useless_image(fold_path):
             img_size = img.size
             h = img_size[1]  # 图片高度
             w = img_size[0]  # 图片高度
-            if h/w < 0.63:
+            if h/w < 0.7:
                 os.remove(fold_path + '/' + temp)
 
 
 # 识别IC——hot 图片里的热度信息并保存到数据库
 def rec_image(fold_path):
     filert_useless_image(fold_path)
-    source_file = PathHelp.get_file_path('TRenesas_all_165H', 'Task.xlsx')
+    source_file = PathHelp.get_file_path('TVicor15H', 'Task.xlsx')
     file_name_list = os.listdir(fold_path)
     file_name_list.sort()
     print(f"file count is: {file_name_list.__len__()}")
@@ -116,11 +118,11 @@ def rec_image(fold_path):
 
 
 if __name__ == "__main__":
-    rec_image(fold_path='/Users/liuhe/Desktop/progress/TReneseas_all/165H/11/IC_hot_images')
+    rec_image(fold_path='/Users/liuhe/Desktop/progress/TVicor/15H/11/IC_hot_images')
     time.sleep(2.0)
-    rec_image(fold_path='/Users/liuhe/Desktop/progress/TReneseas_all/165H/sz/IC_hot_images')
+    rec_image(fold_path='/Users/liuhe/Desktop/progress/TVicor/15H/sz/IC_hot_images')
     time.sleep(2.0)
-    rec_image(fold_path='/Users/liuhe/Desktop/progress/TReneseas_all/165H/04/IC_hot_images')
+    rec_image(fold_path='/Users/liuhe/Desktop/progress/TVicor/15H/04/IC_hot_images')
     time.sleep(2.0)
     rec_image(fold_path=PathHelp.get_IC_hot_image_fold())
 
