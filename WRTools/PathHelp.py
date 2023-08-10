@@ -32,7 +32,7 @@ def getRootPath():
     elif platform.startswith('win'):
         tail = rootPath = curPath[:curPath.find('YJCX_AI') + len('YJCX_AI')]
     else:
-        tail = rootPath = curPath[:curPath.find('TransitTech') + len('TransitTech')]
+        tail = rootPath = curPath[:curPath.find('YJCX_AI') + len('YJCX_AI')]
     return rootPath
 
 

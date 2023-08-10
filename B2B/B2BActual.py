@@ -28,7 +28,7 @@ driver.set_page_load_timeout(1000)
 
 default_url = 'https://www.b2b-center.ru/'
 result_save_file = PathHelp.get_file_path("B2B", 'Task.xlsx')
-result_save_sheet = 'actual'
+result_save_sheet = 'Sheet'
 log_file = PathHelp.get_file_path(super_path="Tender", file_name='B2BLog.txt')
 
 sourceFile_dic = {'fileName': PathHelp.get_file_path("B2B", 'Task.xlsx'),
@@ -52,7 +52,7 @@ def set_total_page():
 
 def get_url(keyword, page):
     today = datetime.today()
-    three_days_ago = today - timedelta(days=3)
+    three_days_ago = today - timedelta(days=1)
     data_start = three_days_ago.strftime("%d.%m.%Y")
     data_end = today.strftime("%d.%m.%Y")
     actural_url = f'https://www.b2b-center.ru/market/?f_keyword={keyword}&searching=1&company_type=2&price_currency=0&date=1&date_start_dmy{data_start}&date_end_dmy={data_end}&trade=buy&from={(page -1)*20}#search-result'
@@ -104,10 +104,10 @@ def analyth_page(url, keyword):
                             "href")
                         No = temp_td.find_element(By.TAG_NAME, 'a').text
                         index = No.index('№ ')
-                        No = No[index + 2:0]
+                        No = No[index + 2:-1]
                         try:
                             title = temp_td.find_elements(By.TAG_NAME, 'div')[0].text
-
+                            No.replace(title, '')
                         except Exception as e:
                             title = ''
                             print(f'title or {e}')
@@ -137,7 +137,7 @@ def analyth_page(url, keyword):
 
 
 def sendEmail(result_file):
-    EmailHelper.ru_tender(result_file)
+    EmailHelper.sendAttachment(result_save_file, 'B2B_Actual')
 
 
 def main():

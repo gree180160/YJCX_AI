@@ -99,12 +99,12 @@ def mail_ip_error(device):
 
 
 # russian tender
-def ru_tender(result_save_file):
+def sendAttachment(result_save_file, theme):
     ret = True
     try:
-        new_user_list = ['river@omni-electronics.com', 'river@szyjcx.cn']
-        # new_user_list = ['jason@omni-electronics.com', 'tim@omni-electronics.com', 'sofia@omni-electronics.com', 'river@omni-electronics.com']
-        mail_msg = f'<h2><center> tender info</center></h2>'
+        # new_user_list = ['river@omni-electronics.com', 'river@szyjcx.cn']
+        new_user_list = ['jason@omni-electronics.com', 'tim@omni-electronics.com', 'sofia@omni-electronics.com', 'river@omni-electronics.com']
+        mail_msg = f'<h2><center> {theme} </center></h2>'
         mail_content_list = ["Hard work pays off.（努力工作会有回报。）",
         "No pain, no gain.（不劳无获。）",
         "Work hard in silence, let success make the noise.（默默努力，让成功发出声音。）",
@@ -147,7 +147,7 @@ def ru_tender(result_save_file):
 
         # 将MIMEText对象添加到邮件对象中
         msg = MIMEMultipart()
-        msg['From'] = formataddr(["From tender info", my_sender])  # 括号里的对应发件人邮箱昵称、发件人邮箱账号
+        msg['From'] = formataddr([f"From {theme}", my_sender])  # 括号里的对应发件人邮箱昵称、发件人邮箱账号
         msg['To'] = ','.join(new_user_list)  # 括号里的对应收件人邮箱昵称、收件人邮箱账号
         msg['Subject'] = "rts-tender"  # 邮件的主题，也可以说是标题
 
@@ -173,5 +173,5 @@ def ru_tender(result_save_file):
 
 
 if __name__ == '__main__':
-    ret = ru_tender('tender_info_2023-07-26_A.xlsx')
+    ret = sendAttachment('tender_info_2023-07-26_A.xlsx', 'tender_info')
 

@@ -191,7 +191,7 @@ def change_money_ru(source_str: str):
 
 
 def sendEmail(result_file):
-    EmailHelper.ru_tender(result_file)
+    EmailHelper.sendAttachment(result_save_file, 'Tender_info_B')
 
 
 def close_alert():

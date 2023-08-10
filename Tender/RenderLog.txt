@@ -1,0 +1,1494 @@
+2023-07-28 17:59:14https://www.b2b-center.ru/market/?f_keyword=TI&searching=1&main_page_search=1&from=0#search-result 页面 解析异常：list index out of range 
+2023-07-28 18:30:22https://www.b2b-center.ru/market/?f_keyword=National Semiconductor&searching=1&main_page_search=1&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.114)
+
+2023-07-28 18:36:04https://www.b2b-center.ru/market/?f_keyword=ADI&searching=1&main_page_search=1&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.114)
+
+2023-07-28 18:41:48https://www.b2b-center.ru/market/?f_keyword=Hittite&searching=1&main_page_search=1&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.114)
+
+2023-07-28 18:44:33https://www.b2b-center.ru/market/?f_keyword=MICROCHIP&searching=1&main_page_search=1&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.114)
+
+2023-07-28 18:49:59https://www.b2b-center.ru/market/?f_keyword=Micrel&searching=1&main_page_search=1&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.114)
+
+2023-07-28 18:53:17https://www.b2b-center.ru/market/?f_keyword=Actel&searching=1&main_page_search=1&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.114)
+
+2023-07-28 18:56:29https://www.b2b-center.ru/market/?f_keyword=Atmel&searching=1&main_page_search=1&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.114)
+
+2023-07-28 18:59:19https://www.b2b-center.ru/market/?f_keyword=BROADCOM&searching=1&main_page_search=1&from=0#search-result 页面 解析异常：list index out of range 
+2023-07-28 19:59:06https://www.b2b-center.ru/market/?f_keyword=TI&searching=1&main_page_search=1&from=0#search-result 页面 解析异常：'list' object has no attribute 'find_elements' 
+2023-07-28 21:59:43https://www.b2b-center.ru/market/?f_keyword=TI&searching=1&main_page_search=1&from=0#search-result 页面 解析异常：'list' object has no attribute 'find_elements' 
+2023-07-28 22:02:55https://www.b2b-center.ru/market/?f_keyword=Texas Instruments&searching=1&main_page_search=1&from=0#search-result 页面 解析异常：'list' object has no attribute 'find_elements' 
+2023-07-28 22:05:53https://www.b2b-center.ru/market/?f_keyword=National Semiconductor&searching=1&main_page_search=1&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.114)
+
+2023-07-28 22:08:52https://www.b2b-center.ru/market/?f_keyword=Analog Devices&searching=1&main_page_search=1&from=0#search-result 页面 解析异常：'list' object has no attribute 'find_elements' 
+2023-07-28 22:11:51https://www.b2b-center.ru/market/?f_keyword=ADI&searching=1&main_page_search=1&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.114)
+
+2023-07-28 22:14:45https://www.b2b-center.ru/market/?f_keyword=Maxim&searching=1&main_page_search=1&from=0#search-result 页面 解析异常：'list' object has no attribute 'find_elements' 
+2023-07-28 22:18:10https://www.b2b-center.ru/market/?f_keyword=Hittite&searching=1&main_page_search=1&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.114)
+
+2023-07-28 22:21:30https://www.b2b-center.ru/market/?f_keyword=MICROCHIP&searching=1&main_page_search=1&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.114)
+
+2023-07-28 22:24:19https://www.b2b-center.ru/market/?f_keyword=Microsemi&searching=1&main_page_search=1&from=0#search-result 页面 解析异常：'list' object has no attribute 'find_elements' 
+2023-07-28 22:27:20https://www.b2b-center.ru/market/?f_keyword=Micrel&searching=1&main_page_search=1&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.114)
+
+2023-07-28 22:30:37https://www.b2b-center.ru/market/?f_keyword=Actel&searching=1&main_page_search=1&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.114)
+
+2023-07-28 22:33:15https://www.b2b-center.ru/market/?f_keyword=Atmel&searching=1&main_page_search=1&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.114)
+
+2023-07-28 22:36:20https://www.b2b-center.ru/market/?f_keyword=BROADCOM&searching=1&main_page_search=1&from=0#search-result 页面 解析异常：'list' object has no attribute 'find_elements' 
+2023-07-28 22:39:11https://www.b2b-center.ru/market/?f_keyword=Avago&searching=1&main_page_search=1&from=0#search-result 页面 解析异常：'list' object has no attribute 'find_elements' 
+2023-07-28 22:42:12https://www.b2b-center.ru/market/?f_keyword=INFINEON&searching=1&main_page_search=1&from=0#search-result 页面 解析异常：'list' object has no attribute 'find_elements' 
+2023-07-28 22:44:58https://www.b2b-center.ru/market/?f_keyword=International Rectifier&searching=1&main_page_search=1&from=0#search-result 页面 解析异常：'list' object has no attribute 'find_elements' 
+2023-07-28 22:47:48https://www.b2b-center.ru/market/?f_keyword=Cypress&searching=1&main_page_search=1&from=0#search-result 页面 解析异常：'list' object has no attribute 'find_elements' 
+2023-07-28 22:50:26https://www.b2b-center.ru/market/?f_keyword=ON&searching=1&main_page_search=1&from=0#search-result 页面 解析异常：'list' object has no attribute 'find_elements' 
+2023-07-28 22:53:48https://www.b2b-center.ru/market/?f_keyword=Fairchild&searching=1&main_page_search=1&from=0#search-result 页面 解析异常：'list' object has no attribute 'find_elements' 
+2023-07-28 22:57:15https://www.b2b-center.ru/market/?f_keyword=ONSEMI&searching=1&main_page_search=1&from=0#search-result 页面 解析异常：'list' object has no attribute 'find_elements' 
+2023-07-28 23:00:40https://www.b2b-center.ru/market/?f_keyword=NXP&searching=1&main_page_search=1&from=0#search-result 页面 解析异常：'list' object has no attribute 'find_elements' 
+2023-07-28 23:04:01https://www.b2b-center.ru/market/?f_keyword=RENESAS&searching=1&main_page_search=1&from=0#search-result 页面 解析异常：'list' object has no attribute 'find_elements' 
+2023-07-28 23:07:22https://www.b2b-center.ru/market/?f_keyword=Intersil&searching=1&main_page_search=1&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.114)
+
+2023-07-28 23:10:36https://www.b2b-center.ru/market/?f_keyword=Dialog&searching=1&main_page_search=1&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.114)
+
+2023-07-28 23:13:51https://www.b2b-center.ru/market/?f_keyword=IDT&searching=1&main_page_search=1&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.114)
+
+2023-07-28 23:16:59https://www.b2b-center.ru/market/?f_keyword=Integrated Device Technology&searching=1&main_page_search=1&from=0#search-result 页面 解析异常：'list' object has no attribute 'find_elements' 
+2023-07-28 23:20:12https://www.b2b-center.ru/market/?f_keyword=YAGEO&searching=1&main_page_search=1&from=0#search-result 页面 解析异常：'list' object has no attribute 'find_elements' 
+2023-07-28 23:23:06https://www.b2b-center.ru/market/?f_keyword=Kemet&searching=1&main_page_search=1&from=0#search-result 页面 解析异常：'list' object has no attribute 'find_elements' 
+2023-07-28 23:26:21https://www.b2b-center.ru/market/?f_keyword=VISHAY&searching=1&main_page_search=1&from=0#search-result 页面 解析异常：'list' object has no attribute 'find_elements' 
+2023-07-28 23:29:10https://www.b2b-center.ru/market/?f_keyword=XILINX&searching=1&main_page_search=1&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.114)
+
+2023-07-28 23:32:36https://www.b2b-center.ru/market/?f_keyword=ALLEGRO&searching=1&main_page_search=1&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.114)
+
+2023-07-28 23:35:28https://www.b2b-center.ru/market/?f_keyword=DIODES&searching=1&main_page_search=1&from=0#search-result 页面 解析异常：'list' object has no attribute 'find_elements' 
+2023-07-28 23:38:45https://www.b2b-center.ru/market/?f_keyword=MICRON&searching=1&main_page_search=1&from=0#search-result 页面 解析异常：'list' object has no attribute 'find_elements' 
+2023-07-28 23:42:05https://www.b2b-center.ru/market/?f_keyword=NEXPERIA&searching=1&main_page_search=1&from=0#search-result 页面 解析异常：'list' object has no attribute 'find_elements' 
+2023-07-28 23:44:55https://www.b2b-center.ru/market/?f_keyword=LATTICE&searching=1&main_page_search=1&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.114)
+
+2023-07-28 23:48:14https://www.b2b-center.ru/market/?f_keyword=MAXLINEAR&searching=1&main_page_search=1&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.114)
+
+2023-07-28 23:50:53https://www.b2b-center.ru/market/?f_keyword=FTDI&searching=1&main_page_search=1&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.114)
+
+2023-07-28 23:54:11https://www.b2b-center.ru/market/?f_keyword=STM&searching=1&main_page_search=1&from=0#search-result 页面 解析异常：'list' object has no attribute 'find_elements' 
+2023-07-28 23:57:09https://www.b2b-center.ru/market/?f_keyword=STMicroelectronics&searching=1&main_page_search=1&from=0#search-result 页面 解析异常：'list' object has no attribute 'find_elements' 
+2023-07-29 00:00:33https://www.b2b-center.ru/market/?f_keyword=ALTERA&searching=1&main_page_search=1&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.114)
+
+2023-07-29 00:03:12https://www.b2b-center.ru/market/?f_keyword=INTEL&searching=1&main_page_search=1&from=0#search-result 页面 解析异常：'list' object has no attribute 'find_elements' 
+2023-07-29 00:06:01https://www.b2b-center.ru/market/?f_keyword=ISSI&searching=1&main_page_search=1&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.114)
+
+2023-07-29 00:09:00https://www.b2b-center.ru/market/?f_keyword=SKYWORKS&searching=1&main_page_search=1&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.114)
+
+2023-07-29 00:11:52https://www.b2b-center.ru/market/?f_keyword=SILICON LABS&searching=1&main_page_search=1&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.114)
+
+2023-07-29 00:15:09https://www.b2b-center.ru/market/?f_keyword=WINBOND&searching=1&main_page_search=1&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.114)
+
+2023-07-29 00:18:03https://www.b2b-center.ru/market/?f_keyword=EVERLIGHT&searching=1&main_page_search=1&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.114)
+
+2023-07-29 00:21:10https://www.b2b-center.ru/market/?f_keyword=VICOR&searching=1&main_page_search=1&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.114)
+
+2023-07-29 00:24:32https://www.b2b-center.ru/market/?f_keyword=JST&searching=1&main_page_search=1&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.114)
+
+2023-07-29 00:27:57https://www.b2b-center.ru/market/?f_keyword=MITSUBISHI&searching=1&main_page_search=1&from=0#search-result 页面 解析异常：'list' object has no attribute 'find_elements' 
+2023-07-29 00:30:33https://www.b2b-center.ru/market/?f_keyword=ROHM&searching=1&main_page_search=1&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.114)
+
+2023-07-29 00:33:55https://www.b2b-center.ru/market/?f_keyword=SITIME&searching=1&main_page_search=1&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.114)
+
+2023-07-29 00:37:05https://www.b2b-center.ru/market/?f_keyword=MACOM&searching=1&main_page_search=1&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.114)
+
+2023-07-29 00:40:27https://www.b2b-center.ru/market/?f_keyword=CIRRUS LOGIC&searching=1&main_page_search=1&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.114)
+
+2023-07-29 00:43:28https://www.b2b-center.ru/market/?f_keyword=MARVELL&searching=1&main_page_search=1&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.114)
+
+2023-07-29 00:46:08https://www.b2b-center.ru/market/?f_keyword=MPS&searching=1&main_page_search=1&from=0#search-result 页面 解析异常：'list' object has no attribute 'find_elements' 
+2023-07-29 00:49:14https://www.b2b-center.ru/market/?f_keyword=Monolithic Power Systems&searching=1&main_page_search=1&from=0#search-result 页面 解析异常：'list' object has no attribute 'find_elements' 
+2023-07-29 00:52:27https://www.b2b-center.ru/market/?f_keyword=NORDIC&searching=1&main_page_search=1&from=0#search-result 页面 解析异常：'list' object has no attribute 'find_elements' 
+2023-07-29 00:55:33https://www.b2b-center.ru/market/?f_keyword=IXYS&searching=1&main_page_search=1&from=0#search-result 页面 解析异常：'list' object has no attribute 'find_elements' 
+2023-07-29 00:58:47https://www.b2b-center.ru/market/?f_keyword=E2V&searching=1&main_page_search=1&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.114)
+
+2023-07-29 01:01:42https://www.b2b-center.ru/market/?f_keyword=GIGADEVICE&searching=1&main_page_search=1&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.114)
+
+2023-07-29 01:05:06https://www.b2b-center.ru/market/?f_keyword=GOWIN&searching=1&main_page_search=1&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.114)
+
+2023-07-29 01:08:14https://www.b2b-center.ru/market/?f_keyword=PSEMI&searching=1&main_page_search=1&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.114)
+
+2023-07-29 01:11:16https://www.b2b-center.ru/market/?f_keyword=ALLIANCE&searching=1&main_page_search=1&from=0#search-result 页面 解析异常：'list' object has no attribute 'find_elements' 
+2023-07-29 01:14:07https://www.b2b-center.ru/market/?f_keyword=QORVO&searching=1&main_page_search=1&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.114)
+
+2023-07-29 01:16:50https://www.b2b-center.ru/market/?f_keyword=EPSON&searching=1&main_page_search=1&from=0#search-result 页面 解析异常：'list' object has no attribute 'find_elements' 
+2023-07-29 01:19:53https://www.b2b-center.ru/market/?f_keyword=LITTLEFUSE&searching=1&main_page_search=1&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.114)
+
+2023-07-29 01:22:51https://www.b2b-center.ru/market/?f_keyword=RECOM&searching=1&main_page_search=1&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.114)
+
+2023-07-29 01:25:48https://www.b2b-center.ru/market/?f_keyword=SUNON&searching=1&main_page_search=1&from=0#search-result 页面 解析异常：'list' object has no attribute 'find_elements' 
+2023-07-29 01:28:30https://www.b2b-center.ru/market/?f_keyword=ABRACON&searching=1&main_page_search=1&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.114)
+
+2023-07-29 01:31:25https://www.b2b-center.ru/market/?f_keyword=SAMSUNG&searching=1&main_page_search=1&from=0#search-result 页面 解析异常：'list' object has no attribute 'find_elements' 
+2023-07-29 01:34:10https://www.b2b-center.ru/market/?f_keyword=MURATA&searching=1&main_page_search=1&from=0#search-result 页面 解析异常：'list' object has no attribute 'find_elements' 
+2023-07-29 01:37:00https://www.b2b-center.ru/market/?f_keyword=AVX&searching=1&main_page_search=1&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.114)
+
+2023-07-29 01:39:53https://www.b2b-center.ru/market/?f_keyword=EPCOS&searching=1&main_page_search=1&from=0#search-result 页面 解析异常：'list' object has no attribute 'find_elements' 
+2023-07-29 01:42:49https://www.b2b-center.ru/market/?f_keyword=PANASONIC&searching=1&main_page_search=1&from=0#search-result 页面 解析异常：'list' object has no attribute 'find_elements' 
+2023-07-29 01:45:34https://www.b2b-center.ru/market/?f_keyword=EATON&searching=1&main_page_search=1&from=0#search-result 页面 解析异常：'list' object has no attribute 'find_elements' 
+2023-07-29 01:48:18https://www.b2b-center.ru/market/?f_keyword=PULSE&searching=1&main_page_search=1&from=0#search-result 页面 解析异常：'list' object has no attribute 'find_elements' 
+2023-07-29 01:51:24https://www.b2b-center.ru/market/?f_keyword=KOA&searching=1&main_page_search=1&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.114)
+
+2023-07-29 01:54:03https://www.b2b-center.ru/market/?f_keyword=TAIYO YUDEN&searching=1&main_page_search=1&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.114)
+
+2023-07-29 01:56:59https://www.b2b-center.ru/market/?f_keyword=KNOWLES&searching=1&main_page_search=1&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.114)
+
+2023-07-29 01:59:48https://www.b2b-center.ru/market/?f_keyword=WURTH&searching=1&main_page_search=1&from=0#search-result 页面 解析异常：'list' object has no attribute 'find_elements' 
+2023-07-29 02:02:56https://www.b2b-center.ru/market/?f_keyword=MULTICOMP&searching=1&main_page_search=1&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.114)
+
+2023-07-29 02:06:17https://www.b2b-center.ru/market/?f_keyword=SUMIDA&searching=1&main_page_search=1&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.114)
+
+2023-07-29 02:09:42https://www.b2b-center.ru/market/?f_keyword=GREENLIANT&searching=1&main_page_search=1&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.114)
+
+2023-07-29 02:12:20https://www.b2b-center.ru/market/?f_keyword=SEMTECH&searching=1&main_page_search=1&from=0#search-result 页面 解析异常：'list' object has no attribute 'find_elements' 
+2023-07-29 02:15:31https://www.b2b-center.ru/market/?f_keyword=BOURNS&searching=1&main_page_search=1&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.114)
+
+2023-07-29 02:18:16https://www.b2b-center.ru/market/?f_keyword=SEMIKRON&searching=1&main_page_search=1&from=0#search-result 页面 解析异常：'list' object has no attribute 'find_elements' 
+2023-07-29 02:21:42https://www.b2b-center.ru/market/?f_keyword=FUJI ELECTRIC&searching=1&main_page_search=1&from=0#search-result 页面 解析异常：'list' object has no attribute 'find_elements' 
+2023-07-29 02:25:12https://www.b2b-center.ru/market/?f_keyword=OSRAM&searching=1&main_page_search=1&from=0#search-result 页面 解析异常：'list' object has no attribute 'find_elements' 
+2023-07-29 02:28:11https://www.b2b-center.ru/market/?f_keyword=HONEYWELL&searching=1&main_page_search=1&from=0#search-result 页面 解析异常：'list' object has no attribute 'find_elements' 
+2023-07-29 02:31:27https://www.b2b-center.ru/market/?f_keyword=INVENSENSE&searching=1&main_page_search=1&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.114)
+
+2023-07-29 02:34:23https://www.b2b-center.ru/market/?f_keyword=PHOENIX&searching=1&main_page_search=1&from=0#search-result 页面 解析异常：'list' object has no attribute 'find_elements' 
+2023-07-29 02:37:23https://www.b2b-center.ru/market/?f_keyword=HAMMOND&searching=1&main_page_search=1&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.114)
+
+2023-07-29 02:40:15https://www.b2b-center.ru/market/?f_keyword=ITT&searching=1&main_page_search=1&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.114)
+
+2023-07-29 02:43:01https://www.b2b-center.ru/market/?f_keyword=MELEXIS&searching=1&main_page_search=1&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.114)
+
+2023-07-29 02:45:50https://www.b2b-center.ru/market/?f_keyword=COSEL&searching=1&main_page_search=1&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.114)
+
+2023-07-29 02:48:41https://www.b2b-center.ru/market/?f_keyword=AIRBORN&searching=1&main_page_search=1&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.114)
+
+2023-07-29 02:51:24https://www.b2b-center.ru/market/?f_keyword=GELENAIR&searching=1&main_page_search=1&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.114)
+
+2023-07-29 02:54:42https://www.b2b-center.ru/market/?f_keyword=HARTING&searching=1&main_page_search=1&from=0#search-result 页面 解析异常：'list' object has no attribute 'find_elements' 
+2023-07-29 02:57:21https://www.b2b-center.ru/market/?f_keyword=HUBER+SUHNER&searching=1&main_page_search=1&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.114)
+
+2023-07-29 03:00:39https://www.b2b-center.ru/market/?f_keyword=MOLEX&searching=1&main_page_search=1&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.114)
+
+2023-07-29 03:04:04https://www.b2b-center.ru/market/?f_keyword=MILL-MAX&searching=1&main_page_search=1&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.114)
+
+2023-07-29 03:06:47https://www.b2b-center.ru/market/?f_keyword=AMPHENOL&searching=1&main_page_search=1&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.114)
+
+2023-07-29 03:10:06https://www.b2b-center.ru/market/?f_keyword=TE&searching=1&main_page_search=1&from=0#search-result 页面 解析异常：'list' object has no attribute 'find_elements' 
+2023-07-29 03:13:04https://www.b2b-center.ru/market/?f_keyword=VPT&searching=1&main_page_search=1&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.114)
+
+2023-07-29 03:16:02https://www.b2b-center.ru/market/?f_keyword=TRIQUINT&searching=1&main_page_search=1&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.114)
+
+2023-07-29 03:19:27https://www.b2b-center.ru/market/?f_keyword=TDK LAMDA&searching=1&main_page_search=1&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.114)
+
+2023-07-29 03:22:34https://www.b2b-center.ru/market/?f_keyword=QUICKLOGIC&searching=1&main_page_search=1&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.114)
+
+2023-07-29 03:25:20https://www.b2b-center.ru/market/?f_keyword=RABBIT&searching=1&main_page_search=1&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.114)
+
+2023-07-29 03:28:09https://www.b2b-center.ru/market/?f_keyword=QUECTEL&searching=1&main_page_search=1&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.114)
+
+2023-07-29 03:31:31https://www.b2b-center.ru/market/?f_keyword=DIGI&searching=1&main_page_search=1&from=0#search-result 页面 解析异常：'list' object has no attribute 'find_elements' 
+2023-07-29 03:34:19https://www.b2b-center.ru/market/?f_keyword=SIEMENS&searching=1&main_page_search=1&from=0#search-result 页面 解析异常：'list' object has no attribute 'find_elements' 
+2023-07-29 03:37:43https://www.b2b-center.ru/market/?f_keyword=KEYSIGHT&searching=1&main_page_search=1&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.114)
+
+2023-07-29 03:40:46https://www.b2b-center.ru/market/?f_keyword=ABB&searching=1&main_page_search=1&from=0#search-result 页面 解析异常：'list' object has no attribute 'find_elements' 
+2023-07-29 03:43:43https://www.b2b-center.ru/market/?f_keyword=RUBYCON&searching=1&main_page_search=1&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.114)
+
+2023-07-29 03:46:21https://www.b2b-center.ru/market/?f_keyword=RICKTEK&searching=1&main_page_search=1&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.114)
+
+2023-07-29 03:49:38https://www.b2b-center.ru/market/?f_keyword=TRACOPOWER&searching=1&main_page_search=1&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.114)
+
+2023-07-29 03:52:50https://www.b2b-center.ru/market/?f_keyword=WOLFSPEED&searching=1&main_page_search=1&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.114)
+
+2023-07-29 03:55:53https://www.b2b-center.ru/market/?f_keyword=Mornsun&searching=1&main_page_search=1&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.114)
+
+2023-07-29 03:58:37https://www.b2b-center.ru/market/?f_keyword=GEEHY&searching=1&main_page_search=1&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.114)
+
+2023-07-29 04:01:22https://www.b2b-center.ru/market/?f_keyword=SILAN&searching=1&main_page_search=1&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.114)
+
+2023-07-29 04:04:22https://www.b2b-center.ru/market/?f_keyword=SYNQOR&searching=1&main_page_search=1&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.114)
+
+2023-07-29 04:07:27https://www.b2b-center.ru/market/?f_keyword=SUNLORD&searching=1&main_page_search=1&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.114)
+
+2023-07-29 04:10:36https://www.b2b-center.ru/market/?f_keyword=FREEOXCUBE&searching=1&main_page_search=1&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.114)
+
+2023-07-29 04:13:21https://www.b2b-center.ru/market/?f_keyword=MAGNETICS&searching=1&main_page_search=1&from=0#search-result 页面 解析异常：'list' object has no attribute 'find_elements' 
+2023-07-29 04:16:00https://www.b2b-center.ru/market/?f_keyword=DEUTSCH&searching=1&main_page_search=1&from=0#search-result 页面 解析异常：'list' object has no attribute 'find_elements' 
+2023-07-29 04:19:12https://www.b2b-center.ru/market/?f_keyword=VACUUMSCHMELZE&searching=1&main_page_search=1&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.114)
+
+2023-07-29 04:22:29https://www.b2b-center.ru/market/?f_keyword=GOLLEGE&searching=1&main_page_search=1&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.114)
+
+2023-07-29 04:39:09go_to_cate except: Message: timeout: Timed out receiving message from renderer: -0.013
+  (Session info: chrome=115.0.5790.114)
+
+2023-07-29 04:44:10go_to_cate except: Message: timeout: Timed out receiving message from renderer: -0.008
+  (Session info: chrome=115.0.5790.114)
+
+2023-07-29 04:49:11go_to_cate except: Message: timeout: Timed out receiving message from renderer: -0.012
+  (Session info: chrome=115.0.5790.114)
+
+2023-07-29 04:54:12go_to_cate except: Message: timeout: Timed out receiving message from renderer: -0.012
+  (Session info: chrome=115.0.5790.114)
+
+2023-07-29 04:59:13go_to_cate except: Message: timeout: Timed out receiving message from renderer: -0.012
+  (Session info: chrome=115.0.5790.114)
+
+2023-07-29 05:04:13go_to_cate except: Message: timeout: Timed out receiving message from renderer: -0.007
+  (Session info: chrome=115.0.5790.114)
+
+2023-07-29 05:09:14go_to_cate except: Message: timeout: Timed out receiving message from renderer: -0.011
+  (Session info: chrome=115.0.5790.114)
+
+2023-07-29 05:14:15go_to_cate except: Message: timeout: Timed out receiving message from renderer: -0.006
+  (Session info: chrome=115.0.5790.114)
+
+2023-07-29 05:19:16go_to_cate except: Message: timeout: Timed out receiving message from renderer: -0.007
+  (Session info: chrome=115.0.5790.114)
+
+2023-07-29 05:24:17go_to_cate except: Message: timeout: Timed out receiving message from renderer: -0.013
+  (Session info: chrome=115.0.5790.114)
+
+2023-07-29 05:29:17go_to_cate except: Message: timeout: Timed out receiving message from renderer: -0.009
+  (Session info: chrome=115.0.5790.114)
+
+2023-07-29 05:34:18go_to_cate except: Message: timeout: Timed out receiving message from renderer: -0.007
+  (Session info: chrome=115.0.5790.114)
+
+2023-07-29 05:39:19go_to_cate except: Message: timeout: Timed out receiving message from renderer: -0.010
+  (Session info: chrome=115.0.5790.114)
+
+2023-07-29 05:44:19go_to_cate except: Message: timeout: Timed out receiving message from renderer: -0.010
+  (Session info: chrome=115.0.5790.114)
+
+2023-07-29 05:49:20go_to_cate except: Message: timeout: Timed out receiving message from renderer: -0.010
+  (Session info: chrome=115.0.5790.114)
+
+2023-07-29 05:54:21go_to_cate except: Message: timeout: Timed out receiving message from renderer: -0.004
+  (Session info: chrome=115.0.5790.114)
+
+2023-07-29 05:59:22go_to_cate except: Message: timeout: Timed out receiving message from renderer: -0.011
+  (Session info: chrome=115.0.5790.114)
+
+2023-07-29 06:04:22go_to_cate except: Message: timeout: Timed out receiving message from renderer: -0.011
+  (Session info: chrome=115.0.5790.114)
+
+2023-07-29 06:09:23go_to_cate except: Message: timeout: Timed out receiving message from renderer: -0.010
+  (Session info: chrome=115.0.5790.114)
+
+2023-07-29 06:14:24go_to_cate except: Message: timeout: Timed out receiving message from renderer: -0.010
+  (Session info: chrome=115.0.5790.114)
+
+2023-07-29 06:19:24go_to_cate except: Message: timeout: Timed out receiving message from renderer: -0.008
+  (Session info: chrome=115.0.5790.114)
+
+2023-07-29 06:24:25go_to_cate except: Message: timeout: Timed out receiving message from renderer: -0.008
+  (Session info: chrome=115.0.5790.114)
+
+2023-07-29 06:29:26go_to_cate except: Message: timeout: Timed out receiving message from renderer: -0.010
+  (Session info: chrome=115.0.5790.114)
+
+2023-07-29 06:34:27go_to_cate except: Message: timeout: Timed out receiving message from renderer: -0.010
+  (Session info: chrome=115.0.5790.114)
+
+2023-07-29 06:39:27go_to_cate except: Message: timeout: Timed out receiving message from renderer: -0.007
+  (Session info: chrome=115.0.5790.114)
+
+2023-07-29 06:44:28go_to_cate except: Message: timeout: Timed out receiving message from renderer: -0.001
+  (Session info: chrome=115.0.5790.114)
+
+2023-07-29 06:49:29go_to_cate except: Message: timeout: Timed out receiving message from renderer: -0.010
+  (Session info: chrome=115.0.5790.114)
+
+2023-07-29 06:54:29go_to_cate except: Message: timeout: Timed out receiving message from renderer: -0.004
+  (Session info: chrome=115.0.5790.114)
+
+2023-07-29 06:59:30go_to_cate except: Message: timeout: Timed out receiving message from renderer: -0.003
+  (Session info: chrome=115.0.5790.114)
+
+2023-07-29 07:04:31go_to_cate except: Message: timeout: Timed out receiving message from renderer: -0.010
+  (Session info: chrome=115.0.5790.114)
+
+2023-07-29 07:09:32go_to_cate except: Message: timeout: Timed out receiving message from renderer: -0.006
+  (Session info: chrome=115.0.5790.114)
+
+2023-07-29 07:14:32go_to_cate except: Message: timeout: Timed out receiving message from renderer: -0.010
+  (Session info: chrome=115.0.5790.114)
+
+2023-07-29 07:19:33go_to_cate except: Message: timeout: Timed out receiving message from renderer: -0.004
+  (Session info: chrome=115.0.5790.114)
+
+2023-07-29 07:24:34go_to_cate except: Message: timeout: Timed out receiving message from renderer: -0.002
+  (Session info: chrome=115.0.5790.114)
+
+2023-07-29 07:29:34go_to_cate except: Message: timeout: Timed out receiving message from renderer: -0.010
+  (Session info: chrome=115.0.5790.114)
+
+2023-07-29 07:34:35go_to_cate except: Message: timeout: Timed out receiving message from renderer: -0.006
+  (Session info: chrome=115.0.5790.114)
+
+2023-07-29 07:39:36go_to_cate except: Message: timeout: Timed out receiving message from renderer: -0.006
+  (Session info: chrome=115.0.5790.114)
+
+2023-07-29 07:44:36go_to_cate except: Message: timeout: Timed out receiving message from renderer: -0.009
+  (Session info: chrome=115.0.5790.114)
+
+2023-07-29 07:49:37go_to_cate except: Message: timeout: Timed out receiving message from renderer: -0.010
+  (Session info: chrome=115.0.5790.114)
+
+2023-07-29 07:54:38go_to_cate except: Message: timeout: Timed out receiving message from renderer: -0.001
+  (Session info: chrome=115.0.5790.114)
+
+2023-07-29 07:59:39go_to_cate except: Message: timeout: Timed out receiving message from renderer: -0.004
+  (Session info: chrome=115.0.5790.114)
+
+2023-07-29 08:04:39go_to_cate except: Message: timeout: Timed out receiving message from renderer: -0.003
+  (Session info: chrome=115.0.5790.114)
+
+2023-07-29 08:09:40go_to_cate except: Message: timeout: Timed out receiving message from renderer: -0.001
+  (Session info: chrome=115.0.5790.114)
+
+2023-07-29 08:14:41go_to_cate except: Message: timeout: Timed out receiving message from renderer: -0.009
+  (Session info: chrome=115.0.5790.114)
+
+2023-07-29 08:19:41go_to_cate except: Message: timeout: Timed out receiving message from renderer: -0.004
+  (Session info: chrome=115.0.5790.114)
+
+2023-07-29 08:24:42go_to_cate except: Message: timeout: Timed out receiving message from renderer: -0.007
+  (Session info: chrome=115.0.5790.114)
+
+2023-07-29 08:29:43go_to_cate except: Message: timeout: Timed out receiving message from renderer: -0.010
+  (Session info: chrome=115.0.5790.114)
+
+2023-07-29 08:34:43go_to_cate except: Message: timeout: Timed out receiving message from renderer: -0.007
+  (Session info: chrome=115.0.5790.114)
+
+2023-07-29 08:39:44go_to_cate except: Message: timeout: Timed out receiving message from renderer: -0.010
+  (Session info: chrome=115.0.5790.114)
+
+2023-07-29 08:44:45go_to_cate except: Message: timeout: Timed out receiving message from renderer: -0.010
+  (Session info: chrome=115.0.5790.114)
+
+2023-07-29 08:49:46go_to_cate except: Message: timeout: Timed out receiving message from renderer: -0.008
+  (Session info: chrome=115.0.5790.114)
+
+2023-07-29 08:54:46go_to_cate except: Message: timeout: Timed out receiving message from renderer: -0.007
+  (Session info: chrome=115.0.5790.114)
+
+2023-07-29 08:59:47go_to_cate except: Message: timeout: Timed out receiving message from renderer: -0.010
+  (Session info: chrome=115.0.5790.114)
+
+2023-07-29 09:04:48go_to_cate except: Message: timeout: Timed out receiving message from renderer: -0.010
+  (Session info: chrome=115.0.5790.114)
+
+2023-07-29 09:09:48go_to_cate except: Message: timeout: Timed out receiving message from renderer: -0.007
+  (Session info: chrome=115.0.5790.114)
+
+2023-07-29 09:14:49go_to_cate except: Message: timeout: Timed out receiving message from renderer: -0.010
+  (Session info: chrome=115.0.5790.114)
+
+2023-07-29 09:19:50go_to_cate except: Message: timeout: Timed out receiving message from renderer: -0.002
+  (Session info: chrome=115.0.5790.114)
+
+2023-07-29 09:24:51go_to_cate except: Message: timeout: Timed out receiving message from renderer: -0.002
+  (Session info: chrome=115.0.5790.114)
+
+2023-07-29 09:29:51go_to_cate except: Message: timeout: Timed out receiving message from renderer: -0.006
+  (Session info: chrome=115.0.5790.114)
+
+2023-07-29 09:34:52go_to_cate except: Message: timeout: Timed out receiving message from renderer: -0.010
+  (Session info: chrome=115.0.5790.114)
+
+2023-07-29 09:39:53go_to_cate except: Message: timeout: Timed out receiving message from renderer: -0.004
+  (Session info: chrome=115.0.5790.114)
+
+2023-07-29 09:44:53go_to_cate except: Message: timeout: Timed out receiving message from renderer: -0.008
+  (Session info: chrome=115.0.5790.114)
+
+2023-07-29 09:49:54go_to_cate except: Message: timeout: Timed out receiving message from renderer: -0.006
+  (Session info: chrome=115.0.5790.114)
+
+2023-07-29 09:54:55go_to_cate except: Message: timeout: Timed out receiving message from renderer: -0.010
+  (Session info: chrome=115.0.5790.114)
+
+2023-07-29 09:59:56go_to_cate except: Message: timeout: Timed out receiving message from renderer: -0.010
+  (Session info: chrome=115.0.5790.114)
+
+2023-07-29 10:04:56go_to_cate except: Message: timeout: Timed out receiving message from renderer: -0.010
+  (Session info: chrome=115.0.5790.114)
+
+2023-07-29 10:09:57go_to_cate except: Message: timeout: Timed out receiving message from renderer: -0.001
+  (Session info: chrome=115.0.5790.114)
+
+2023-07-29 10:14:58go_to_cate except: Message: timeout: Timed out receiving message from renderer: -0.010
+  (Session info: chrome=115.0.5790.114)
+
+2023-07-29 10:19:58go_to_cate except: Message: timeout: Timed out receiving message from renderer: -0.011
+  (Session info: chrome=115.0.5790.114)
+
+2023-07-29 10:24:59go_to_cate except: Message: timeout: Timed out receiving message from renderer: -0.009
+  (Session info: chrome=115.0.5790.114)
+
+2023-07-29 10:30:00go_to_cate except: Message: timeout: Timed out receiving message from renderer: -0.002
+  (Session info: chrome=115.0.5790.114)
+
+2023-07-29 10:35:00go_to_cate except: Message: timeout: Timed out receiving message from renderer: -0.009
+  (Session info: chrome=115.0.5790.114)
+
+2023-07-29 10:40:01go_to_cate except: Message: timeout: Timed out receiving message from renderer: -0.007
+  (Session info: chrome=115.0.5790.114)
+
+2023-07-29 10:45:02go_to_cate except: Message: timeout: Timed out receiving message from renderer: -0.004
+  (Session info: chrome=115.0.5790.114)
+
+2023-07-29 10:50:03go_to_cate except: Message: timeout: Timed out receiving message from renderer: -0.010
+  (Session info: chrome=115.0.5790.114)
+
+2023-07-29 10:55:03go_to_cate except: Message: timeout: Timed out receiving message from renderer: -0.006
+  (Session info: chrome=115.0.5790.114)
+
+2023-07-29 11:00:04go_to_cate except: Message: timeout: Timed out receiving message from renderer: -0.002
+  (Session info: chrome=115.0.5790.114)
+
+2023-07-29 11:05:05go_to_cate except: Message: timeout: Timed out receiving message from renderer: -0.010
+  (Session info: chrome=115.0.5790.114)
+
+2023-07-29 11:10:05go_to_cate except: Message: timeout: Timed out receiving message from renderer: -0.010
+  (Session info: chrome=115.0.5790.114)
+
+2023-07-29 11:15:06go_to_cate except: Message: timeout: Timed out receiving message from renderer: -0.010
+  (Session info: chrome=115.0.5790.114)
+
+2023-07-29 11:20:07go_to_cate except: Message: timeout: Timed out receiving message from renderer: -0.011
+  (Session info: chrome=115.0.5790.114)
+
+2023-07-29 11:25:07go_to_cate except: Message: timeout: Timed out receiving message from renderer: -0.003
+  (Session info: chrome=115.0.5790.114)
+
+2023-07-29 11:30:08go_to_cate except: Message: timeout: Timed out receiving message from renderer: -0.010
+  (Session info: chrome=115.0.5790.114)
+
+2023-07-29 11:35:09go_to_cate except: Message: timeout: Timed out receiving message from renderer: -0.009
+  (Session info: chrome=115.0.5790.114)
+
+2023-07-29 11:40:10go_to_cate except: Message: timeout: Timed out receiving message from renderer: -0.010
+  (Session info: chrome=115.0.5790.114)
+
+2023-07-29 11:45:10go_to_cate except: Message: timeout: Timed out receiving message from renderer: -0.001
+  (Session info: chrome=115.0.5790.114)
+
+2023-07-29 11:50:11go_to_cate except: Message: timeout: Timed out receiving message from renderer: -0.010
+  (Session info: chrome=115.0.5790.114)
+
+2023-07-29 11:55:12go_to_cate except: Message: timeout: Timed out receiving message from renderer: -0.010
+  (Session info: chrome=115.0.5790.114)
+
+2023-07-29 12:00:12go_to_cate except: Message: timeout: Timed out receiving message from renderer: -0.001
+  (Session info: chrome=115.0.5790.114)
+
+2023-07-29 12:05:13go_to_cate except: Message: timeout: Timed out receiving message from renderer: -0.004
+  (Session info: chrome=115.0.5790.114)
+
+2023-07-29 12:10:14go_to_cate except: Message: timeout: Timed out receiving message from renderer: -0.009
+  (Session info: chrome=115.0.5790.114)
+
+2023-07-29 12:15:14go_to_cate except: Message: timeout: Timed out receiving message from renderer: -0.010
+  (Session info: chrome=115.0.5790.114)
+
+2023-07-29 12:20:15go_to_cate except: Message: timeout: Timed out receiving message from renderer: -0.006
+  (Session info: chrome=115.0.5790.114)
+
+2023-07-29 12:25:16go_to_cate except: Message: timeout: Timed out receiving message from renderer: -0.010
+  (Session info: chrome=115.0.5790.114)
+
+2023-07-29 12:30:17go_to_cate except: Message: timeout: Timed out receiving message from renderer: -0.005
+  (Session info: chrome=115.0.5790.114)
+
+2023-07-29 12:35:17go_to_cate except: Message: timeout: Timed out receiving message from renderer: -0.011
+  (Session info: chrome=115.0.5790.114)
+
+2023-07-29 12:40:18go_to_cate except: Message: timeout: Timed out receiving message from renderer: -0.006
+  (Session info: chrome=115.0.5790.114)
+
+2023-07-29 12:45:19go_to_cate except: Message: timeout: Timed out receiving message from renderer: -0.011
+  (Session info: chrome=115.0.5790.114)
+
+2023-07-29 12:50:20go_to_cate except: Message: timeout: Timed out receiving message from renderer: -0.010
+  (Session info: chrome=115.0.5790.114)
+
+2023-07-31 18:14:31https://www.b2b-center.ru/market/?f_keyword=TI&searching=1&main_page_search=1&from=0#search-result 页面 解析异常：'list' object has no attribute 'find_elements' 
+2023-08-02 11:51:49https://www.b2b-center.ru/market/?f_keyword=National Semiconductor&searching=1&main_page_search=1&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.114)
+
+2023-08-02 11:58:18https://www.b2b-center.ru/market/?f_keyword=ADI&searching=1&main_page_search=1&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.114)
+
+2023-08-02 12:04:02https://www.b2b-center.ru/market/?f_keyword=Hittite&searching=1&main_page_search=1&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.114)
+
+2023-08-02 12:06:50https://www.b2b-center.ru/market/?f_keyword=MICROCHIP&searching=1&main_page_search=1&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.114)
+
+2023-08-02 12:13:38https://www.b2b-center.ru/market/?f_keyword=Micrel&searching=1&main_page_search=1&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.114)
+
+2023-08-02 12:16:52https://www.b2b-center.ru/market/?f_keyword=Actel&searching=1&main_page_search=1&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.114)
+
+2023-08-02 12:19:46https://www.b2b-center.ru/market/?f_keyword=Atmel&searching=1&main_page_search=1&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.114)
+
+2023-08-02 12:31:48https://www.b2b-center.ru/market/?f_keyword=International Rectifier&searching=1&main_page_search=1&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.114)
+
+2023-08-02 12:50:29https://www.b2b-center.ru/market/?f_keyword=RENESAS&searching=1&main_page_search=1&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.114)
+
+2023-08-02 12:53:44https://www.b2b-center.ru/market/?f_keyword=Intersil&searching=1&main_page_search=1&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.114)
+
+2023-08-02 12:57:01https://www.b2b-center.ru/market/?f_keyword=Dialog&searching=1&main_page_search=1&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.114)
+
+2023-08-02 13:00:24https://www.b2b-center.ru/market/?f_keyword=IDT&searching=1&main_page_search=1&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.114)
+
+2023-08-02 13:16:01https://www.b2b-center.ru/market/?f_keyword=XILINX&searching=1&main_page_search=1&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.114)
+
+2023-08-02 13:19:16https://www.b2b-center.ru/market/?f_keyword=ALLEGRO&searching=1&main_page_search=1&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.114)
+
+2023-08-02 13:28:28https://www.b2b-center.ru/market/?f_keyword=NEXPERIA&searching=1&main_page_search=1&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.114)
+
+2023-08-02 13:34:20https://www.b2b-center.ru/market/?f_keyword=MAXLINEAR&searching=1&main_page_search=1&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.114)
+
+2023-08-02 13:37:14https://www.b2b-center.ru/market/?f_keyword=FTDI&searching=1&main_page_search=1&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.114)
+
+2023-08-02 13:47:04https://www.b2b-center.ru/market/?f_keyword=ALTERA&searching=1&main_page_search=1&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.114)
+
+2023-08-02 13:52:41https://www.b2b-center.ru/market/?f_keyword=ISSI&searching=1&main_page_search=1&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.114)
+
+2023-08-02 13:55:46https://www.b2b-center.ru/market/?f_keyword=SKYWORKS&searching=1&main_page_search=1&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.114)
+
+2023-08-02 13:58:32https://www.b2b-center.ru/market/?f_keyword=SILICON LABS&searching=1&main_page_search=1&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.114)
+
+2023-08-02 14:02:02https://www.b2b-center.ru/market/?f_keyword=WINBOND&searching=1&main_page_search=1&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.114)
+
+2023-08-02 14:05:27https://www.b2b-center.ru/market/?f_keyword=EVERLIGHT&searching=1&main_page_search=1&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.114)
+
+2023-08-02 14:08:49https://www.b2b-center.ru/market/?f_keyword=VICOR&searching=1&main_page_search=1&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.114)
+
+2023-08-02 14:11:42https://www.b2b-center.ru/market/?f_keyword=JST&searching=1&main_page_search=1&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.114)
+
+2023-08-02 14:17:05https://www.b2b-center.ru/market/?f_keyword=ROHM&searching=1&main_page_search=1&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.114)
+
+2023-08-02 14:19:48https://www.b2b-center.ru/market/?f_keyword=SITIME&searching=1&main_page_search=1&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.114)
+
+2023-08-02 14:22:40https://www.b2b-center.ru/market/?f_keyword=MACOM&searching=1&main_page_search=1&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.114)
+
+2023-08-02 14:25:31https://www.b2b-center.ru/market/?f_keyword=CIRRUS LOGIC&searching=1&main_page_search=1&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.114)
+
+2023-08-02 14:28:22https://www.b2b-center.ru/market/?f_keyword=MARVELL&searching=1&main_page_search=1&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.114)
+
+2023-08-02 14:37:55https://www.b2b-center.ru/market/?f_keyword=NORDIC&searching=1&main_page_search=1&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.114)
+
+2023-08-02 14:44:36https://www.b2b-center.ru/market/?f_keyword=E2V&searching=1&main_page_search=1&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.114)
+
+2023-08-02 14:47:28https://www.b2b-center.ru/market/?f_keyword=GIGADEVICE&searching=1&main_page_search=1&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.114)
+
+2023-08-02 14:50:30https://www.b2b-center.ru/market/?f_keyword=GOWIN&searching=1&main_page_search=1&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.114)
+
+2023-08-02 14:53:41https://www.b2b-center.ru/market/?f_keyword=PSEMI&searching=1&main_page_search=1&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.114)
+
+2023-08-02 14:59:05https://www.b2b-center.ru/market/?f_keyword=QORVO&searching=1&main_page_search=1&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.114)
+
+2023-08-02 15:05:18https://www.b2b-center.ru/market/?f_keyword=LITTLEFUSE&searching=1&main_page_search=1&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.114)
+
+2023-08-02 15:08:39https://www.b2b-center.ru/market/?f_keyword=RECOM&searching=1&main_page_search=1&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.114)
+
+2023-08-02 15:15:12https://www.b2b-center.ru/market/?f_keyword=ABRACON&searching=1&main_page_search=1&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.114)
+
+2023-08-02 15:21:36https://www.b2b-center.ru/market/?f_keyword=MURATA&searching=1&main_page_search=1&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.114)
+
+2023-08-02 15:40:00https://www.b2b-center.ru/market/?f_keyword=KOA&searching=1&main_page_search=1&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.114)
+
+2023-08-02 15:43:20https://www.b2b-center.ru/market/?f_keyword=TAIYO YUDEN&searching=1&main_page_search=1&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.114)
+
+2023-08-02 15:46:29https://www.b2b-center.ru/market/?f_keyword=KNOWLES&searching=1&main_page_search=1&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.114)
+
+2023-08-02 15:52:38https://www.b2b-center.ru/market/?f_keyword=MULTICOMP&searching=1&main_page_search=1&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.114)
+
+2023-08-02 15:55:42https://www.b2b-center.ru/market/?f_keyword=SUMIDA&searching=1&main_page_search=1&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.114)
+
+2023-08-02 15:58:44https://www.b2b-center.ru/market/?f_keyword=GREENLIANT&searching=1&main_page_search=1&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.114)
+
+2023-08-02 16:01:39https://www.b2b-center.ru/market/?f_keyword=SEMTECH&searching=1&main_page_search=1&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.114)
+
+2023-08-02 16:05:22https://www.b2b-center.ru/market/?f_keyword=BOURNS&searching=1&main_page_search=1&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.114)
+
+2023-08-02 16:23:10https://www.b2b-center.ru/market/?f_keyword=INVENSENSE&searching=1&main_page_search=1&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.114)
+
+2023-08-02 16:29:30https://www.b2b-center.ru/market/?f_keyword=HAMMOND&searching=1&main_page_search=1&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.114)
+
+2023-08-02 16:32:48https://www.b2b-center.ru/market/?f_keyword=ITT&searching=1&main_page_search=1&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.114)
+
+2023-08-02 16:36:14https://www.b2b-center.ru/market/?f_keyword=MELEXIS&searching=1&main_page_search=1&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.114)
+
+2023-08-02 16:38:55https://www.b2b-center.ru/market/?f_keyword=COSEL&searching=1&main_page_search=1&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.114)
+
+2023-08-02 16:41:53https://www.b2b-center.ru/market/?f_keyword=AIRBORN&searching=1&main_page_search=1&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.114)
+
+2023-08-02 16:44:47https://www.b2b-center.ru/market/?f_keyword=GELENAIR&searching=1&main_page_search=1&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.114)
+
+2023-08-02 16:51:14https://www.b2b-center.ru/market/?f_keyword=HUBER+SUHNER&searching=1&main_page_search=1&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.114)
+
+2023-08-02 16:58:12https://www.b2b-center.ru/market/?f_keyword=MILL-MAX&searching=1&main_page_search=1&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.114)
+
+2023-08-02 17:01:40https://www.b2b-center.ru/market/?f_keyword=AMPHENOL&searching=1&main_page_search=1&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.114)
+
+2023-08-02 17:07:25https://www.b2b-center.ru/market/?f_keyword=VPT&searching=1&main_page_search=1&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.114)
+
+2023-08-02 17:10:45https://www.b2b-center.ru/market/?f_keyword=TRIQUINT&searching=1&main_page_search=1&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.114)
+
+2023-08-02 17:13:34https://www.b2b-center.ru/market/?f_keyword=TDK LAMDA&searching=1&main_page_search=1&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.114)
+
+2023-08-02 17:16:32https://www.b2b-center.ru/market/?f_keyword=QUICKLOGIC&searching=1&main_page_search=1&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.114)
+
+2023-08-02 17:19:50https://www.b2b-center.ru/market/?f_keyword=RABBIT&searching=1&main_page_search=1&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.114)
+
+2023-08-02 17:22:45https://www.b2b-center.ru/market/?f_keyword=QUECTEL&searching=1&main_page_search=1&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.114)
+
+2023-08-03 11:17:04https://www.b2b-center.ru/market/?f_keyword=National Semiconductor&searching=1&main_page_search=1&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.114)
+
+2023-08-03 11:23:38https://www.b2b-center.ru/market/?f_keyword=ADI&searching=1&main_page_search=1&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.114)
+
+2023-08-03 11:29:33https://www.b2b-center.ru/market/?f_keyword=Hittite&searching=1&main_page_search=1&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.114)
+
+2023-08-03 11:32:53https://www.b2b-center.ru/market/?f_keyword=MICROCHIP&searching=1&main_page_search=1&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.114)
+
+2023-08-03 11:39:09https://www.b2b-center.ru/market/?f_keyword=Micrel&searching=1&main_page_search=1&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.114)
+
+2023-08-03 12:11:08https://www.b2b-center.ru/market/?f_keyword=KEYSIGHT&searching=1&main_page_search=1&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.114)
+
+2023-08-03 12:17:29https://www.b2b-center.ru/market/?f_keyword=RUBYCON&searching=1&main_page_search=1&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.114)
+
+2023-08-03 12:20:24https://www.b2b-center.ru/market/?f_keyword=RICKTEK&searching=1&main_page_search=1&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.114)
+
+2023-08-03 12:23:10https://www.b2b-center.ru/market/?f_keyword=TRACOPOWER&searching=1&main_page_search=1&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.114)
+
+2023-08-03 12:25:55https://www.b2b-center.ru/market/?f_keyword=WOLFSPEED&searching=1&main_page_search=1&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.114)
+
+2023-08-03 12:28:33https://www.b2b-center.ru/market/?f_keyword=Mornsun&searching=1&main_page_search=1&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.114)
+
+2023-08-03 12:31:44https://www.b2b-center.ru/market/?f_keyword=GEEHY&searching=1&main_page_search=1&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.114)
+
+2023-08-03 12:34:38https://www.b2b-center.ru/market/?f_keyword=SILAN&searching=1&main_page_search=1&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.114)
+
+2023-08-03 12:38:02https://www.b2b-center.ru/market/?f_keyword=SYNQOR&searching=1&main_page_search=1&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.114)
+
+2023-08-03 12:41:01https://www.b2b-center.ru/market/?f_keyword=SUNLORD&searching=1&main_page_search=1&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.114)
+
+2023-08-03 12:44:24https://www.b2b-center.ru/market/?f_keyword=FREEOXCUBE&searching=1&main_page_search=1&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.114)
+
+2023-08-03 12:53:11https://www.b2b-center.ru/market/?f_keyword=VACUUMSCHMELZE&searching=1&main_page_search=1&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.114)
+
+2023-08-03 12:56:07https://www.b2b-center.ru/market/?f_keyword=GOLLEGE&searching=1&main_page_search=1&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.114)
+
+2023-08-03 13:14:42https://www.b2b-center.ru/market/?f_keyword=Hewlett-Packard&searching=1&main_page_search=1&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.114)
+
+2023-08-03 13:33:37https://www.b2b-center.ru/market/?f_keyword=Schorch&searching=1&main_page_search=1&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.114)
+
+2023-08-03 13:39:33https://www.b2b-center.ru/market/?f_keyword=Ametek&searching=1&main_page_search=1&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.114)
+
+2023-08-03 13:42:53https://www.b2b-center.ru/market/?f_keyword=RoshX&searching=1&main_page_search=1&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.114)
+
+2023-08-03 13:49:00https://www.b2b-center.ru/market/?f_keyword=Fasco&searching=1&main_page_search=1&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.114)
+
+2023-08-03 13:52:16https://www.b2b-center.ru/market/?f_keyword=Franklin&searching=1&main_page_search=1&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.114)
+
+2023-08-03 13:55:32https://www.b2b-center.ru/market/?f_keyword=AMCI&searching=1&main_page_search=1&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.114)
+
+2023-08-03 13:58:26https://www.b2b-center.ru/market/?f_keyword=ASEA&searching=1&main_page_search=1&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.114)
+
+2023-08-03 14:05:02https://www.b2b-center.ru/market/?f_keyword=Fimet&searching=1&main_page_search=1&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.114)
+
+2023-08-03 14:07:39https://www.b2b-center.ru/market/?f_keyword=Kollmorgen&searching=1&main_page_search=1&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.114)
+
+2023-08-03 14:10:41https://www.b2b-center.ru/market/?f_keyword=IC components&searching=1&main_page_search=1&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.114)
+
+2023-08-03 14:23:03https://www.b2b-center.ru/market/?f_keyword=inductor&searching=1&main_page_search=1&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.114)
+
+2023-08-03 14:42:19https://www.b2b-center.ru/market/?f_keyword=SRAM&searching=1&main_page_search=1&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.114)
+
+2023-08-03 14:45:06https://www.b2b-center.ru/market/?f_keyword=DRAM&searching=1&main_page_search=1&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.114)
+
+2023-08-03 14:47:50https://www.b2b-center.ru/market/?f_keyword=NOR Flash&searching=1&main_page_search=1&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.114)
+
+2023-08-03 14:58:05https://www.b2b-center.ru/market/?f_keyword=PMIC&searching=1&main_page_search=1&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.114)
+
+2023-08-03 15:02:12https://www.b2b-center.ru/market/?f_keyword=FIFO&searching=1&main_page_search=1&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.114)
+
+2023-08-03 15:06:37https://www.b2b-center.ru/market/?f_keyword=MRAM&searching=1&main_page_search=1&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.114)
+
+2023-08-03 15:12:55https://www.b2b-center.ru/market/?f_keyword=voltage reference&searching=1&main_page_search=1&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.114)
+
+2023-08-03 15:21:51https://www.b2b-center.ru/market/?f_keyword=PCI Express&searching=1&main_page_search=1&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.114)
+
+2023-08-03 15:30:51https://www.b2b-center.ru/market/?f_keyword=Battery Management&searching=1&main_page_search=1&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.114)
+
+2023-08-03 15:40:17https://www.b2b-center.ru/market/?f_keyword=motor driver&searching=1&main_page_search=1&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.114)
+
+2023-08-03 15:43:21https://www.b2b-center.ru/market/?f_keyword=LED driver&searching=1&main_page_search=1&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.114)
+
+2023-08-03 15:45:58https://www.b2b-center.ru/market/?f_keyword=LCD driver&searching=1&main_page_search=1&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.114)
+
+2023-08-03 15:51:45https://www.b2b-center.ru/market/?f_keyword=snesor&searching=1&main_page_search=1&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.114)
+
+2023-08-03 15:57:49https://www.b2b-center.ru/market/?f_keyword=bus line&searching=1&main_page_search=1&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.114)
+
+2023-08-03 16:10:54https://www.b2b-center.ru/market/?f_keyword=ADC&searching=1&main_page_search=1&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.114)
+
+2023-08-03 16:22:53https://www.b2b-center.ru/market/?f_keyword=Clock buffers&searching=1&main_page_search=1&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.114)
+
+2023-08-03 16:26:13https://www.b2b-center.ru/market/?f_keyword=Clock generators&searching=1&main_page_search=1&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.114)
+
+2023-08-03 16:29:07https://www.b2b-center.ru/market/?f_keyword=Oscillators&searching=1&main_page_search=1&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.114)
+
+2023-08-03 16:31:51https://www.b2b-center.ru/market/?f_keyword=Real-time clocks&searching=1&main_page_search=1&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.114)
+
+2023-08-03 16:34:32https://www.b2b-center.ru/market/?f_keyword=RTC&searching=1&main_page_search=1&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.114)
+
+2023-08-03 16:37:41https://www.b2b-center.ru/market/?f_keyword=Digital potentiometers&searching=1&main_page_search=1&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.114)
+
+2023-08-03 16:49:12https://www.b2b-center.ru/market/?f_keyword=MIPI&searching=1&main_page_search=1&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.114)
+
+2023-08-03 16:57:33https://www.b2b-center.ru/market/?f_keyword=LVDS&searching=1&main_page_search=1&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.114)
+
+2023-08-03 17:07:03https://www.b2b-center.ru/market/?f_keyword=gate driver&searching=1&main_page_search=1&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.114)
+
+2023-08-03 17:09:48https://www.b2b-center.ru/market/?f_keyword=flip-flop&searching=1&main_page_search=1&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.114)
+
+2023-08-03 17:16:18https://www.b2b-center.ru/market/?f_keyword=logic gate&searching=1&main_page_search=1&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.114)
+
+2023-08-03 17:19:45https://www.b2b-center.ru/market/?f_keyword=Micro Processor Unit&searching=1&main_page_search=1&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.114)
+
+2023-08-03 17:26:07https://www.b2b-center.ru/market/?f_keyword=MCU&searching=1&main_page_search=1&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.114)
+
+2023-08-03 17:32:33https://www.b2b-center.ru/market/?f_keyword=DPU&searching=1&main_page_search=1&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.114)
+
+2023-08-03 17:45:07https://www.b2b-center.ru/market/?f_keyword=synthesizer&searching=1&main_page_search=1&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.114)
+
+2023-08-03 17:48:27https://www.b2b-center.ru/market/?f_keyword=mems&searching=1&main_page_search=1&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.114)
+
+2023-08-03 17:54:58https://www.b2b-center.ru/market/?f_keyword=demultiplexer&searching=1&main_page_search=1&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.114)
+
+2023-08-03 17:58:07https://www.b2b-center.ru/market/?f_keyword=decoder&searching=1&main_page_search=1&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.114)
+
+2023-08-03 18:08:03https://www.b2b-center.ru/market/?f_keyword=Zigbee&searching=1&main_page_search=1&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.114)
+
+2023-08-08 23:57:22https://www.b2b-center.ru/market/?f_keyword=Texas Instruments&searching=1&company_type=2&price_currency=0&date=1&date_start_dmy05.08.2023&date_end_dmy=08.08.2023&trade=buy&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.170)
+
+2023-08-09 00:00:36https://www.b2b-center.ru/market/?f_keyword=National Semiconductor&searching=1&company_type=2&price_currency=0&date=1&date_start_dmy05.08.2023&date_end_dmy=08.08.2023&trade=buy&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.170)
+
+2023-08-09 00:03:54https://www.b2b-center.ru/market/?f_keyword=Analog Devices&searching=1&company_type=2&price_currency=0&date=1&date_start_dmy06.08.2023&date_end_dmy=09.08.2023&trade=buy&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"tag name","selector":"font"}
+  (Session info: chrome=115.0.5790.170)
+
+2023-08-09 00:06:43https://www.b2b-center.ru/market/?f_keyword=ADI&searching=1&company_type=2&price_currency=0&date=1&date_start_dmy06.08.2023&date_end_dmy=09.08.2023&trade=buy&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.170)
+
+2023-08-09 00:09:44https://www.b2b-center.ru/market/?f_keyword=Maxim&searching=1&company_type=2&price_currency=0&date=1&date_start_dmy06.08.2023&date_end_dmy=09.08.2023&trade=buy&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"tag name","selector":"font"}
+  (Session info: chrome=115.0.5790.170)
+
+2023-08-09 00:12:53https://www.b2b-center.ru/market/?f_keyword=Hittite&searching=1&company_type=2&price_currency=0&date=1&date_start_dmy06.08.2023&date_end_dmy=09.08.2023&trade=buy&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.170)
+
+2023-08-09 00:15:48https://www.b2b-center.ru/market/?f_keyword=MICROCHIP&searching=1&company_type=2&price_currency=0&date=1&date_start_dmy06.08.2023&date_end_dmy=09.08.2023&trade=buy&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.170)
+
+2023-08-09 00:18:47https://www.b2b-center.ru/market/?f_keyword=Microsemi&searching=1&company_type=2&price_currency=0&date=1&date_start_dmy06.08.2023&date_end_dmy=09.08.2023&trade=buy&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"tag name","selector":"font"}
+  (Session info: chrome=115.0.5790.170)
+
+2023-08-09 00:21:49https://www.b2b-center.ru/market/?f_keyword=Micrel&searching=1&company_type=2&price_currency=0&date=1&date_start_dmy06.08.2023&date_end_dmy=09.08.2023&trade=buy&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.170)
+
+2023-08-09 00:25:21https://www.b2b-center.ru/market/?f_keyword=Actel&searching=1&company_type=2&price_currency=0&date=1&date_start_dmy06.08.2023&date_end_dmy=09.08.2023&trade=buy&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.170)
+
+2023-08-09 00:28:48https://www.b2b-center.ru/market/?f_keyword=BROADCOM&searching=1&company_type=2&price_currency=0&date=1&date_start_dmy06.08.2023&date_end_dmy=09.08.2023&trade=buy&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"tag name","selector":"font"}
+  (Session info: chrome=115.0.5790.170)
+
+2023-08-09 00:31:44https://www.b2b-center.ru/market/?f_keyword=Avago&searching=1&company_type=2&price_currency=0&date=1&date_start_dmy06.08.2023&date_end_dmy=09.08.2023&trade=buy&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"tag name","selector":"font"}
+  (Session info: chrome=115.0.5790.170)
+
+2023-08-09 00:34:46https://www.b2b-center.ru/market/?f_keyword=INFINEON&searching=1&company_type=2&price_currency=0&date=1&date_start_dmy06.08.2023&date_end_dmy=09.08.2023&trade=buy&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.170)
+
+2023-08-09 00:37:50https://www.b2b-center.ru/market/?f_keyword=International Rectifier&searching=1&company_type=2&price_currency=0&date=1&date_start_dmy06.08.2023&date_end_dmy=09.08.2023&trade=buy&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.170)
+
+2023-08-09 00:40:49https://www.b2b-center.ru/market/?f_keyword=Cypress&searching=1&company_type=2&price_currency=0&date=1&date_start_dmy06.08.2023&date_end_dmy=09.08.2023&trade=buy&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.170)
+
+2023-08-09 00:44:18https://www.b2b-center.ru/market/?f_keyword=Fairchild&searching=1&company_type=2&price_currency=0&date=1&date_start_dmy06.08.2023&date_end_dmy=09.08.2023&trade=buy&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.170)
+
+2023-08-09 00:47:22https://www.b2b-center.ru/market/?f_keyword=ONSEMI&searching=1&company_type=2&price_currency=0&date=1&date_start_dmy06.08.2023&date_end_dmy=09.08.2023&trade=buy&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.170)
+
+2023-08-09 00:50:30https://www.b2b-center.ru/market/?f_keyword=NXP&searching=1&company_type=2&price_currency=0&date=1&date_start_dmy06.08.2023&date_end_dmy=09.08.2023&trade=buy&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.170)
+
+2023-08-09 00:53:21https://www.b2b-center.ru/market/?f_keyword=RENESAS&searching=1&company_type=2&price_currency=0&date=1&date_start_dmy06.08.2023&date_end_dmy=09.08.2023&trade=buy&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.170)
+
+2023-08-09 00:56:21https://www.b2b-center.ru/market/?f_keyword=Intersil&searching=1&company_type=2&price_currency=0&date=1&date_start_dmy06.08.2023&date_end_dmy=09.08.2023&trade=buy&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.170)
+
+2023-08-09 00:59:27https://www.b2b-center.ru/market/?f_keyword=Dialog&searching=1&company_type=2&price_currency=0&date=1&date_start_dmy06.08.2023&date_end_dmy=09.08.2023&trade=buy&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.170)
+
+2023-08-09 01:02:51https://www.b2b-center.ru/market/?f_keyword=IDT&searching=1&company_type=2&price_currency=0&date=1&date_start_dmy06.08.2023&date_end_dmy=09.08.2023&trade=buy&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.170)
+
+2023-08-09 01:06:15https://www.b2b-center.ru/market/?f_keyword=Integrated Device Technology&searching=1&company_type=2&price_currency=0&date=1&date_start_dmy06.08.2023&date_end_dmy=09.08.2023&trade=buy&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.170)
+
+2023-08-09 01:09:30https://www.b2b-center.ru/market/?f_keyword=YAGEO&searching=1&company_type=2&price_currency=0&date=1&date_start_dmy06.08.2023&date_end_dmy=09.08.2023&trade=buy&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.170)
+
+2023-08-09 01:12:48https://www.b2b-center.ru/market/?f_keyword=Kemet&searching=1&company_type=2&price_currency=0&date=1&date_start_dmy06.08.2023&date_end_dmy=09.08.2023&trade=buy&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.170)
+
+2023-08-09 01:16:03https://www.b2b-center.ru/market/?f_keyword=VISHAY&searching=1&company_type=2&price_currency=0&date=1&date_start_dmy06.08.2023&date_end_dmy=09.08.2023&trade=buy&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.170)
+
+2023-08-09 01:19:03https://www.b2b-center.ru/market/?f_keyword=XILINX&searching=1&company_type=2&price_currency=0&date=1&date_start_dmy06.08.2023&date_end_dmy=09.08.2023&trade=buy&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.170)
+
+2023-08-09 01:22:14https://www.b2b-center.ru/market/?f_keyword=ALLEGRO&searching=1&company_type=2&price_currency=0&date=1&date_start_dmy06.08.2023&date_end_dmy=09.08.2023&trade=buy&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.170)
+
+2023-08-09 01:24:55https://www.b2b-center.ru/market/?f_keyword=DIODES&searching=1&company_type=2&price_currency=0&date=1&date_start_dmy06.08.2023&date_end_dmy=09.08.2023&trade=buy&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"tag name","selector":"font"}
+  (Session info: chrome=115.0.5790.170)
+
+2023-08-09 01:27:40https://www.b2b-center.ru/market/?f_keyword=MICRON&searching=1&company_type=2&price_currency=0&date=1&date_start_dmy06.08.2023&date_end_dmy=09.08.2023&trade=buy&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"tag name","selector":"font"}
+  (Session info: chrome=115.0.5790.170)
+
+2023-08-09 01:31:05https://www.b2b-center.ru/market/?f_keyword=NEXPERIA&searching=1&company_type=2&price_currency=0&date=1&date_start_dmy06.08.2023&date_end_dmy=09.08.2023&trade=buy&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.170)
+
+2023-08-09 01:34:04https://www.b2b-center.ru/market/?f_keyword=LATTICE&searching=1&company_type=2&price_currency=0&date=1&date_start_dmy06.08.2023&date_end_dmy=09.08.2023&trade=buy&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.170)
+
+2023-08-09 01:37:03https://www.b2b-center.ru/market/?f_keyword=MAXLINEAR&searching=1&company_type=2&price_currency=0&date=1&date_start_dmy06.08.2023&date_end_dmy=09.08.2023&trade=buy&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"tag name","selector":"font"}
+  (Session info: chrome=115.0.5790.170)
+
+2023-08-09 01:39:51https://www.b2b-center.ru/market/?f_keyword=FTDI&searching=1&company_type=2&price_currency=0&date=1&date_start_dmy06.08.2023&date_end_dmy=09.08.2023&trade=buy&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.170)
+
+2023-08-09 01:43:10https://www.b2b-center.ru/market/?f_keyword=STM32&searching=1&company_type=2&price_currency=0&date=1&date_start_dmy06.08.2023&date_end_dmy=09.08.2023&trade=buy&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.170)
+
+2023-08-09 01:46:11https://www.b2b-center.ru/market/?f_keyword=STMicroelectronics&searching=1&company_type=2&price_currency=0&date=1&date_start_dmy06.08.2023&date_end_dmy=09.08.2023&trade=buy&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.170)
+
+2023-08-09 01:49:39https://www.b2b-center.ru/market/?f_keyword=ALTERA&searching=1&company_type=2&price_currency=0&date=1&date_start_dmy06.08.2023&date_end_dmy=09.08.2023&trade=buy&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.170)
+
+2023-08-09 01:53:00https://www.b2b-center.ru/market/?f_keyword=INTEL&searching=1&company_type=2&price_currency=0&date=1&date_start_dmy06.08.2023&date_end_dmy=09.08.2023&trade=buy&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"tag name","selector":"font"}
+  (Session info: chrome=115.0.5790.170)
+
+2023-08-09 01:55:55https://www.b2b-center.ru/market/?f_keyword=ISSI&searching=1&company_type=2&price_currency=0&date=1&date_start_dmy06.08.2023&date_end_dmy=09.08.2023&trade=buy&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.170)
+
+2023-08-09 01:58:54https://www.b2b-center.ru/market/?f_keyword=SKYWORKS&searching=1&company_type=2&price_currency=0&date=1&date_start_dmy06.08.2023&date_end_dmy=09.08.2023&trade=buy&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.170)
+
+2023-08-09 02:02:26https://www.b2b-center.ru/market/?f_keyword=SILICON LABS&searching=1&company_type=2&price_currency=0&date=1&date_start_dmy06.08.2023&date_end_dmy=09.08.2023&trade=buy&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.170)
+
+2023-08-09 02:05:57https://www.b2b-center.ru/market/?f_keyword=WINBOND&searching=1&company_type=2&price_currency=0&date=1&date_start_dmy06.08.2023&date_end_dmy=09.08.2023&trade=buy&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.170)
+
+2023-08-09 02:08:59https://www.b2b-center.ru/market/?f_keyword=EVERLIGHT&searching=1&company_type=2&price_currency=0&date=1&date_start_dmy06.08.2023&date_end_dmy=09.08.2023&trade=buy&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.170)
+
+2023-08-09 02:11:58https://www.b2b-center.ru/market/?f_keyword=VICOR&searching=1&company_type=2&price_currency=0&date=1&date_start_dmy06.08.2023&date_end_dmy=09.08.2023&trade=buy&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.170)
+
+2023-08-09 02:14:56https://www.b2b-center.ru/market/?f_keyword=MITSUBISHI&searching=1&company_type=2&price_currency=0&date=1&date_start_dmy06.08.2023&date_end_dmy=09.08.2023&trade=buy&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"tag name","selector":"font"}
+  (Session info: chrome=115.0.5790.170)
+
+2023-08-09 02:18:25https://www.b2b-center.ru/market/?f_keyword=ROHM&searching=1&company_type=2&price_currency=0&date=1&date_start_dmy06.08.2023&date_end_dmy=09.08.2023&trade=buy&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.170)
+
+2023-08-09 02:21:24https://www.b2b-center.ru/market/?f_keyword=SITIME&searching=1&company_type=2&price_currency=0&date=1&date_start_dmy06.08.2023&date_end_dmy=09.08.2023&trade=buy&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.170)
+
+2023-08-09 02:24:30https://www.b2b-center.ru/market/?f_keyword=MACOM&searching=1&company_type=2&price_currency=0&date=1&date_start_dmy06.08.2023&date_end_dmy=09.08.2023&trade=buy&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.170)
+
+2023-08-09 02:27:26https://www.b2b-center.ru/market/?f_keyword=CIRRUS LOGIC&searching=1&company_type=2&price_currency=0&date=1&date_start_dmy06.08.2023&date_end_dmy=09.08.2023&trade=buy&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.170)
+
+2023-08-09 02:30:53https://www.b2b-center.ru/market/?f_keyword=MARVELL&searching=1&company_type=2&price_currency=0&date=1&date_start_dmy06.08.2023&date_end_dmy=09.08.2023&trade=buy&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.170)
+
+2023-08-09 02:33:36https://www.b2b-center.ru/market/?f_keyword=Monolithic Power Systems&searching=1&company_type=2&price_currency=0&date=1&date_start_dmy06.08.2023&date_end_dmy=09.08.2023&trade=buy&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.170)
+
+2023-08-09 02:36:26https://www.b2b-center.ru/market/?f_keyword=NORDIC&searching=1&company_type=2&price_currency=0&date=1&date_start_dmy06.08.2023&date_end_dmy=09.08.2023&trade=buy&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.170)
+
+2023-08-09 02:39:12https://www.b2b-center.ru/market/?f_keyword=IXYS&searching=1&company_type=2&price_currency=0&date=1&date_start_dmy06.08.2023&date_end_dmy=09.08.2023&trade=buy&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.170)
+
+2023-08-09 02:42:28https://www.b2b-center.ru/market/?f_keyword=E2V&searching=1&company_type=2&price_currency=0&date=1&date_start_dmy06.08.2023&date_end_dmy=09.08.2023&trade=buy&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.170)
+
+2023-08-09 02:45:34https://www.b2b-center.ru/market/?f_keyword=GIGADEVICE&searching=1&company_type=2&price_currency=0&date=1&date_start_dmy06.08.2023&date_end_dmy=09.08.2023&trade=buy&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.170)
+
+2023-08-09 02:48:24https://www.b2b-center.ru/market/?f_keyword=GOWIN&searching=1&company_type=2&price_currency=0&date=1&date_start_dmy06.08.2023&date_end_dmy=09.08.2023&trade=buy&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.170)
+
+2023-08-09 02:51:38https://www.b2b-center.ru/market/?f_keyword=PSEMI&searching=1&company_type=2&price_currency=0&date=1&date_start_dmy06.08.2023&date_end_dmy=09.08.2023&trade=buy&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.170)
+
+2023-08-09 02:54:27https://www.b2b-center.ru/market/?f_keyword=ALLIANCE&searching=1&company_type=2&price_currency=0&date=1&date_start_dmy06.08.2023&date_end_dmy=09.08.2023&trade=buy&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"tag name","selector":"font"}
+  (Session info: chrome=115.0.5790.170)
+
+2023-08-09 02:57:48https://www.b2b-center.ru/market/?f_keyword=QORVO&searching=1&company_type=2&price_currency=0&date=1&date_start_dmy06.08.2023&date_end_dmy=09.08.2023&trade=buy&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.170)
+
+2023-08-09 03:00:36https://www.b2b-center.ru/market/?f_keyword=EPSON&searching=1&company_type=2&price_currency=0&date=1&date_start_dmy06.08.2023&date_end_dmy=09.08.2023&trade=buy&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"tag name","selector":"font"}
+  (Session info: chrome=115.0.5790.170)
+
+2023-08-09 03:03:18https://www.b2b-center.ru/market/?f_keyword=LITTLEFUSE&searching=1&company_type=2&price_currency=0&date=1&date_start_dmy06.08.2023&date_end_dmy=09.08.2023&trade=buy&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.170)
+
+2023-08-09 03:06:07https://www.b2b-center.ru/market/?f_keyword=RECOM&searching=1&company_type=2&price_currency=0&date=1&date_start_dmy06.08.2023&date_end_dmy=09.08.2023&trade=buy&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.170)
+
+2023-08-09 03:09:26https://www.b2b-center.ru/market/?f_keyword=SUNON&searching=1&company_type=2&price_currency=0&date=1&date_start_dmy06.08.2023&date_end_dmy=09.08.2023&trade=buy&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.170)
+
+2023-08-09 03:12:37https://www.b2b-center.ru/market/?f_keyword=ABRACON&searching=1&company_type=2&price_currency=0&date=1&date_start_dmy06.08.2023&date_end_dmy=09.08.2023&trade=buy&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.170)
+
+2023-08-09 03:15:31https://www.b2b-center.ru/market/?f_keyword=SAMSUNG&searching=1&company_type=2&price_currency=0&date=1&date_start_dmy06.08.2023&date_end_dmy=09.08.2023&trade=buy&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"tag name","selector":"font"}
+  (Session info: chrome=115.0.5790.170)
+
+2023-08-09 03:18:13https://www.b2b-center.ru/market/?f_keyword=MURATA&searching=1&company_type=2&price_currency=0&date=1&date_start_dmy06.08.2023&date_end_dmy=09.08.2023&trade=buy&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.170)
+
+2023-08-09 03:21:07https://www.b2b-center.ru/market/?f_keyword=AVX&searching=1&company_type=2&price_currency=0&date=1&date_start_dmy06.08.2023&date_end_dmy=09.08.2023&trade=buy&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"tag name","selector":"font"}
+  (Session info: chrome=115.0.5790.170)
+
+2023-08-09 03:23:54https://www.b2b-center.ru/market/?f_keyword=EPCOS&searching=1&company_type=2&price_currency=0&date=1&date_start_dmy06.08.2023&date_end_dmy=09.08.2023&trade=buy&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.170)
+
+2023-08-09 03:27:18https://www.b2b-center.ru/market/?f_keyword=PANASONIC&searching=1&company_type=2&price_currency=0&date=1&date_start_dmy06.08.2023&date_end_dmy=09.08.2023&trade=buy&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"tag name","selector":"font"}
+  (Session info: chrome=115.0.5790.170)
+
+2023-08-09 03:30:26https://www.b2b-center.ru/market/?f_keyword=EATON&searching=1&company_type=2&price_currency=0&date=1&date_start_dmy06.08.2023&date_end_dmy=09.08.2023&trade=buy&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"tag name","selector":"font"}
+  (Session info: chrome=115.0.5790.170)
+
+2023-08-09 03:33:31https://www.b2b-center.ru/market/?f_keyword=PULSE&searching=1&company_type=2&price_currency=0&date=1&date_start_dmy06.08.2023&date_end_dmy=09.08.2023&trade=buy&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"tag name","selector":"font"}
+  (Session info: chrome=115.0.5790.170)
+
+2023-08-09 03:36:13https://www.b2b-center.ru/market/?f_keyword=KOA&searching=1&company_type=2&price_currency=0&date=1&date_start_dmy06.08.2023&date_end_dmy=09.08.2023&trade=buy&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.170)
+
+2023-08-09 03:39:14https://www.b2b-center.ru/market/?f_keyword=TAIYO YUDEN&searching=1&company_type=2&price_currency=0&date=1&date_start_dmy06.08.2023&date_end_dmy=09.08.2023&trade=buy&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.170)
+
+2023-08-09 03:42:27https://www.b2b-center.ru/market/?f_keyword=KNOWLES&searching=1&company_type=2&price_currency=0&date=1&date_start_dmy06.08.2023&date_end_dmy=09.08.2023&trade=buy&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.170)
+
+2023-08-09 03:45:28https://www.b2b-center.ru/market/?f_keyword=WURTH&searching=1&company_type=2&price_currency=0&date=1&date_start_dmy06.08.2023&date_end_dmy=09.08.2023&trade=buy&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"tag name","selector":"font"}
+  (Session info: chrome=115.0.5790.170)
+
+2023-08-09 03:48:44https://www.b2b-center.ru/market/?f_keyword=MULTICOMP&searching=1&company_type=2&price_currency=0&date=1&date_start_dmy06.08.2023&date_end_dmy=09.08.2023&trade=buy&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.170)
+
+2023-08-09 03:52:05https://www.b2b-center.ru/market/?f_keyword=SUMIDA&searching=1&company_type=2&price_currency=0&date=1&date_start_dmy06.08.2023&date_end_dmy=09.08.2023&trade=buy&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.170)
+
+2023-08-09 03:54:56https://www.b2b-center.ru/market/?f_keyword=GREENLIANT&searching=1&company_type=2&price_currency=0&date=1&date_start_dmy06.08.2023&date_end_dmy=09.08.2023&trade=buy&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.170)
+
+2023-08-09 03:58:06https://www.b2b-center.ru/market/?f_keyword=SEMTECH&searching=1&company_type=2&price_currency=0&date=1&date_start_dmy06.08.2023&date_end_dmy=09.08.2023&trade=buy&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.170)
+
+2023-08-09 04:00:50https://www.b2b-center.ru/market/?f_keyword=BOURNS&searching=1&company_type=2&price_currency=0&date=1&date_start_dmy06.08.2023&date_end_dmy=09.08.2023&trade=buy&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.170)
+
+2023-08-09 04:03:48https://www.b2b-center.ru/market/?f_keyword=SEMIKRON&searching=1&company_type=2&price_currency=0&date=1&date_start_dmy06.08.2023&date_end_dmy=09.08.2023&trade=buy&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.170)
+
+2023-08-09 04:06:44https://www.b2b-center.ru/market/?f_keyword=FUJI ELECTRIC&searching=1&company_type=2&price_currency=0&date=1&date_start_dmy06.08.2023&date_end_dmy=09.08.2023&trade=buy&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"tag name","selector":"font"}
+  (Session info: chrome=115.0.5790.170)
+
+2023-08-09 04:09:41https://www.b2b-center.ru/market/?f_keyword=OSRAM&searching=1&company_type=2&price_currency=0&date=1&date_start_dmy06.08.2023&date_end_dmy=09.08.2023&trade=buy&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"tag name","selector":"font"}
+  (Session info: chrome=115.0.5790.170)
+
+2023-08-09 04:12:31https://www.b2b-center.ru/market/?f_keyword=HONEYWELL&searching=1&company_type=2&price_currency=0&date=1&date_start_dmy06.08.2023&date_end_dmy=09.08.2023&trade=buy&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"tag name","selector":"font"}
+  (Session info: chrome=115.0.5790.170)
+
+2023-08-09 04:15:27https://www.b2b-center.ru/market/?f_keyword=INVENSENSE&searching=1&company_type=2&price_currency=0&date=1&date_start_dmy06.08.2023&date_end_dmy=09.08.2023&trade=buy&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.170)
+
+2023-08-09 04:18:13https://www.b2b-center.ru/market/?f_keyword=PHOENIX&searching=1&company_type=2&price_currency=0&date=1&date_start_dmy06.08.2023&date_end_dmy=09.08.2023&trade=buy&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"tag name","selector":"font"}
+  (Session info: chrome=115.0.5790.170)
+
+2023-08-09 04:21:21https://www.b2b-center.ru/market/?f_keyword=HAMMOND&searching=1&company_type=2&price_currency=0&date=1&date_start_dmy06.08.2023&date_end_dmy=09.08.2023&trade=buy&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.170)
+
+2023-08-09 04:23:59https://www.b2b-center.ru/market/?f_keyword=ITT&searching=1&company_type=2&price_currency=0&date=1&date_start_dmy06.08.2023&date_end_dmy=09.08.2023&trade=buy&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"tag name","selector":"font"}
+  (Session info: chrome=115.0.5790.170)
+
+2023-08-09 04:27:08https://www.b2b-center.ru/market/?f_keyword=MELEXIS&searching=1&company_type=2&price_currency=0&date=1&date_start_dmy06.08.2023&date_end_dmy=09.08.2023&trade=buy&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.170)
+
+2023-08-09 04:30:28https://www.b2b-center.ru/market/?f_keyword=COSEL&searching=1&company_type=2&price_currency=0&date=1&date_start_dmy06.08.2023&date_end_dmy=09.08.2023&trade=buy&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.170)
+
+2023-08-09 04:33:43https://www.b2b-center.ru/market/?f_keyword=AIRBORN&searching=1&company_type=2&price_currency=0&date=1&date_start_dmy06.08.2023&date_end_dmy=09.08.2023&trade=buy&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.170)
+
+2023-08-09 04:37:08https://www.b2b-center.ru/market/?f_keyword=GELENAIR&searching=1&company_type=2&price_currency=0&date=1&date_start_dmy06.08.2023&date_end_dmy=09.08.2023&trade=buy&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.170)
+
+2023-08-09 04:40:37https://www.b2b-center.ru/market/?f_keyword=HARTING&searching=1&company_type=2&price_currency=0&date=1&date_start_dmy06.08.2023&date_end_dmy=09.08.2023&trade=buy&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"tag name","selector":"font"}
+  (Session info: chrome=115.0.5790.170)
+
+2023-08-09 04:43:23https://www.b2b-center.ru/market/?f_keyword=HUBER+SUHNER&searching=1&company_type=2&price_currency=0&date=1&date_start_dmy06.08.2023&date_end_dmy=09.08.2023&trade=buy&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.170)
+
+2023-08-09 04:46:05https://www.b2b-center.ru/market/?f_keyword=MOLEX&searching=1&company_type=2&price_currency=0&date=1&date_start_dmy06.08.2023&date_end_dmy=09.08.2023&trade=buy&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"tag name","selector":"font"}
+  (Session info: chrome=115.0.5790.170)
+
+2023-08-09 04:49:32https://www.b2b-center.ru/market/?f_keyword=MILL-MAX&searching=1&company_type=2&price_currency=0&date=1&date_start_dmy06.08.2023&date_end_dmy=09.08.2023&trade=buy&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.170)
+
+2023-08-09 04:53:00https://www.b2b-center.ru/market/?f_keyword=AMPHENOL&searching=1&company_type=2&price_currency=0&date=1&date_start_dmy06.08.2023&date_end_dmy=09.08.2023&trade=buy&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"tag name","selector":"font"}
+  (Session info: chrome=115.0.5790.170)
+
+2023-08-09 04:56:05https://www.b2b-center.ru/market/?f_keyword=TRIQUINT&searching=1&company_type=2&price_currency=0&date=1&date_start_dmy06.08.2023&date_end_dmy=09.08.2023&trade=buy&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.170)
+
+2023-08-09 04:59:01https://www.b2b-center.ru/market/?f_keyword=TDK LAMDA&searching=1&company_type=2&price_currency=0&date=1&date_start_dmy06.08.2023&date_end_dmy=09.08.2023&trade=buy&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.170)
+
+2023-08-09 05:02:28https://www.b2b-center.ru/market/?f_keyword=QUICKLOGIC&searching=1&company_type=2&price_currency=0&date=1&date_start_dmy06.08.2023&date_end_dmy=09.08.2023&trade=buy&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.170)
+
+2023-08-09 05:05:47https://www.b2b-center.ru/market/?f_keyword=RABBIT&searching=1&company_type=2&price_currency=0&date=1&date_start_dmy06.08.2023&date_end_dmy=09.08.2023&trade=buy&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.170)
+
+2023-08-09 05:09:07https://www.b2b-center.ru/market/?f_keyword=DIGI&searching=1&company_type=2&price_currency=0&date=1&date_start_dmy06.08.2023&date_end_dmy=09.08.2023&trade=buy&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.170)
+
+2023-08-09 05:12:35https://www.b2b-center.ru/market/?f_keyword=SIEMENS&searching=1&company_type=2&price_currency=0&date=1&date_start_dmy06.08.2023&date_end_dmy=09.08.2023&trade=buy&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"tag name","selector":"font"}
+  (Session info: chrome=115.0.5790.170)
+
+2023-08-09 05:15:59https://www.b2b-center.ru/market/?f_keyword=KEYSIGHT&searching=1&company_type=2&price_currency=0&date=1&date_start_dmy06.08.2023&date_end_dmy=09.08.2023&trade=buy&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.170)
+
+2023-08-09 05:19:28https://www.b2b-center.ru/market/?f_keyword=ABB&searching=1&company_type=2&price_currency=0&date=1&date_start_dmy06.08.2023&date_end_dmy=09.08.2023&trade=buy&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"tag name","selector":"font"}
+  (Session info: chrome=115.0.5790.170)
+
+2023-08-09 05:22:43https://www.b2b-center.ru/market/?f_keyword=RUBYCON&searching=1&company_type=2&price_currency=0&date=1&date_start_dmy06.08.2023&date_end_dmy=09.08.2023&trade=buy&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.170)
+
+2023-08-09 05:25:34https://www.b2b-center.ru/market/?f_keyword=RICKTEK&searching=1&company_type=2&price_currency=0&date=1&date_start_dmy06.08.2023&date_end_dmy=09.08.2023&trade=buy&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.170)
+
+2023-08-09 05:29:02https://www.b2b-center.ru/market/?f_keyword=TRACOPOWER&searching=1&company_type=2&price_currency=0&date=1&date_start_dmy06.08.2023&date_end_dmy=09.08.2023&trade=buy&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.170)
+
+2023-08-09 05:32:24https://www.b2b-center.ru/market/?f_keyword=WOLFSPEED&searching=1&company_type=2&price_currency=0&date=1&date_start_dmy06.08.2023&date_end_dmy=09.08.2023&trade=buy&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.170)
+
+2023-08-09 05:35:52https://www.b2b-center.ru/market/?f_keyword=Mornsun&searching=1&company_type=2&price_currency=0&date=1&date_start_dmy06.08.2023&date_end_dmy=09.08.2023&trade=buy&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.170)
+
+2023-08-09 05:38:37https://www.b2b-center.ru/market/?f_keyword=GEEHY&searching=1&company_type=2&price_currency=0&date=1&date_start_dmy06.08.2023&date_end_dmy=09.08.2023&trade=buy&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.170)
+
+2023-08-09 05:41:44https://www.b2b-center.ru/market/?f_keyword=SILAN&searching=1&company_type=2&price_currency=0&date=1&date_start_dmy06.08.2023&date_end_dmy=09.08.2023&trade=buy&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.170)
+
+2023-08-09 05:44:53https://www.b2b-center.ru/market/?f_keyword=SYNQOR&searching=1&company_type=2&price_currency=0&date=1&date_start_dmy06.08.2023&date_end_dmy=09.08.2023&trade=buy&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.170)
+
+2023-08-09 05:48:08https://www.b2b-center.ru/market/?f_keyword=SUNLORD&searching=1&company_type=2&price_currency=0&date=1&date_start_dmy06.08.2023&date_end_dmy=09.08.2023&trade=buy&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.170)
+
+2023-08-09 05:51:23https://www.b2b-center.ru/market/?f_keyword=FREEOXCUBE&searching=1&company_type=2&price_currency=0&date=1&date_start_dmy06.08.2023&date_end_dmy=09.08.2023&trade=buy&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.170)
+
+2023-08-09 05:54:13https://www.b2b-center.ru/market/?f_keyword=MAGNETICS&searching=1&company_type=2&price_currency=0&date=1&date_start_dmy06.08.2023&date_end_dmy=09.08.2023&trade=buy&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"tag name","selector":"font"}
+  (Session info: chrome=115.0.5790.170)
+
+2023-08-09 05:57:04https://www.b2b-center.ru/market/?f_keyword=DEUTSCH&searching=1&company_type=2&price_currency=0&date=1&date_start_dmy06.08.2023&date_end_dmy=09.08.2023&trade=buy&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"tag name","selector":"font"}
+  (Session info: chrome=115.0.5790.170)
+
+2023-08-09 05:59:59https://www.b2b-center.ru/market/?f_keyword=VACUUMSCHMELZE&searching=1&company_type=2&price_currency=0&date=1&date_start_dmy06.08.2023&date_end_dmy=09.08.2023&trade=buy&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.170)
+
+2023-08-09 06:03:18https://www.b2b-center.ru/market/?f_keyword=GOLLEGE&searching=1&company_type=2&price_currency=0&date=1&date_start_dmy06.08.2023&date_end_dmy=09.08.2023&trade=buy&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.170)
+
+2023-08-09 06:06:22https://www.b2b-center.ru/market/?f_keyword=HUAWEI&searching=1&company_type=2&price_currency=0&date=1&date_start_dmy06.08.2023&date_end_dmy=09.08.2023&trade=buy&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"tag name","selector":"font"}
+  (Session info: chrome=115.0.5790.170)
+
+2023-08-09 06:09:19https://www.b2b-center.ru/market/?f_keyword=LENOVO&searching=1&company_type=2&price_currency=0&date=1&date_start_dmy06.08.2023&date_end_dmy=09.08.2023&trade=buy&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"tag name","selector":"font"}
+  (Session info: chrome=115.0.5790.170)
+
+2023-08-09 06:12:30https://www.b2b-center.ru/market/?f_keyword=DELL&searching=1&company_type=2&price_currency=0&date=1&date_start_dmy06.08.2023&date_end_dmy=09.08.2023&trade=buy&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"tag name","selector":"font"}
+  (Session info: chrome=115.0.5790.170)
+
+2023-08-09 06:15:54https://www.b2b-center.ru/market/?f_keyword=ASUS&searching=1&company_type=2&price_currency=0&date=1&date_start_dmy06.08.2023&date_end_dmy=09.08.2023&trade=buy&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"tag name","selector":"font"}
+  (Session info: chrome=115.0.5790.170)
+
+2023-08-09 06:18:53https://www.b2b-center.ru/market/?f_keyword=Hewlett-Packard&searching=1&company_type=2&price_currency=0&date=1&date_start_dmy06.08.2023&date_end_dmy=09.08.2023&trade=buy&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"tag name","selector":"font"}
+  (Session info: chrome=115.0.5790.170)
+
+2023-08-09 06:21:43https://www.b2b-center.ru/market/?f_keyword=Acer&searching=1&company_type=2&price_currency=0&date=1&date_start_dmy06.08.2023&date_end_dmy=09.08.2023&trade=buy&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"tag name","selector":"font"}
+  (Session info: chrome=115.0.5790.170)
+
+2023-08-09 06:24:47https://www.b2b-center.ru/market/?f_keyword=Delta&searching=1&company_type=2&price_currency=0&date=1&date_start_dmy06.08.2023&date_end_dmy=09.08.2023&trade=buy&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"tag name","selector":"font"}
+  (Session info: chrome=115.0.5790.170)
+
+2023-08-09 06:28:00https://www.b2b-center.ru/market/?f_keyword=Wolong&searching=1&company_type=2&price_currency=0&date=1&date_start_dmy06.08.2023&date_end_dmy=09.08.2023&trade=buy&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.170)
+
+2023-08-09 06:30:43https://www.b2b-center.ru/market/?f_keyword=Lenze&searching=1&company_type=2&price_currency=0&date=1&date_start_dmy06.08.2023&date_end_dmy=09.08.2023&trade=buy&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"tag name","selector":"font"}
+  (Session info: chrome=115.0.5790.170)
+
+2023-08-09 06:33:53https://www.b2b-center.ru/market/?f_keyword=Schorch&searching=1&company_type=2&price_currency=0&date=1&date_start_dmy06.08.2023&date_end_dmy=09.08.2023&trade=buy&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.170)
+
+2023-08-09 06:36:43https://www.b2b-center.ru/market/?f_keyword=Dunkermotoren&searching=1&company_type=2&price_currency=0&date=1&date_start_dmy06.08.2023&date_end_dmy=09.08.2023&trade=buy&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"tag name","selector":"font"}
+  (Session info: chrome=115.0.5790.170)
+
+2023-08-09 06:39:26https://www.b2b-center.ru/market/?f_keyword=Ametek&searching=1&company_type=2&price_currency=0&date=1&date_start_dmy06.08.2023&date_end_dmy=09.08.2023&trade=buy&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.170)
+
+2023-08-09 06:42:17https://www.b2b-center.ru/market/?f_keyword=RoshX&searching=1&company_type=2&price_currency=0&date=1&date_start_dmy06.08.2023&date_end_dmy=09.08.2023&trade=buy&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.170)
+
+2023-08-09 06:45:01https://www.b2b-center.ru/market/?f_keyword=Yaskawa&searching=1&company_type=2&price_currency=0&date=1&date_start_dmy06.08.2023&date_end_dmy=09.08.2023&trade=buy&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"tag name","selector":"font"}
+  (Session info: chrome=115.0.5790.170)
+
+2023-08-09 06:48:01https://www.b2b-center.ru/market/?f_keyword=Fasco&searching=1&company_type=2&price_currency=0&date=1&date_start_dmy06.08.2023&date_end_dmy=09.08.2023&trade=buy&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.170)
+
+2023-08-09 06:50:45https://www.b2b-center.ru/market/?f_keyword=Franklin&searching=1&company_type=2&price_currency=0&date=1&date_start_dmy06.08.2023&date_end_dmy=09.08.2023&trade=buy&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.170)
+
+2023-08-09 06:53:32https://www.b2b-center.ru/market/?f_keyword=AMCI&searching=1&company_type=2&price_currency=0&date=1&date_start_dmy06.08.2023&date_end_dmy=09.08.2023&trade=buy&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.170)
+
+2023-08-09 06:56:34https://www.b2b-center.ru/market/?f_keyword=ASEA&searching=1&company_type=2&price_currency=0&date=1&date_start_dmy06.08.2023&date_end_dmy=09.08.2023&trade=buy&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.170)
+
+2023-08-09 06:59:37https://www.b2b-center.ru/market/?f_keyword=Lafert&searching=1&company_type=2&price_currency=0&date=1&date_start_dmy06.08.2023&date_end_dmy=09.08.2023&trade=buy&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"tag name","selector":"font"}
+  (Session info: chrome=115.0.5790.170)
+
+2023-08-09 07:02:42https://www.b2b-center.ru/market/?f_keyword=Kollmorgen&searching=1&company_type=2&price_currency=0&date=1&date_start_dmy06.08.2023&date_end_dmy=09.08.2023&trade=buy&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.170)
+
+2023-08-09 07:05:57https://www.b2b-center.ru/market/?f_keyword=IC components&searching=1&company_type=2&price_currency=0&date=1&date_start_dmy06.08.2023&date_end_dmy=09.08.2023&trade=buy&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.170)
+
+2023-08-09 07:09:15https://www.b2b-center.ru/market/?f_keyword=passives&searching=1&company_type=2&price_currency=0&date=1&date_start_dmy06.08.2023&date_end_dmy=09.08.2023&trade=buy&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"tag name","selector":"font"}
+  (Session info: chrome=115.0.5790.170)
+
+2023-08-09 07:12:12https://www.b2b-center.ru/market/?f_keyword=capacitor&searching=1&company_type=2&price_currency=0&date=1&date_start_dmy06.08.2023&date_end_dmy=09.08.2023&trade=buy&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"tag name","selector":"font"}
+  (Session info: chrome=115.0.5790.170)
+
+2023-08-09 07:15:28https://www.b2b-center.ru/market/?f_keyword=resistor&searching=1&company_type=2&price_currency=0&date=1&date_start_dmy06.08.2023&date_end_dmy=09.08.2023&trade=buy&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.170)
+
+2023-08-09 07:18:44https://www.b2b-center.ru/market/?f_keyword=inductor&searching=1&company_type=2&price_currency=0&date=1&date_start_dmy06.08.2023&date_end_dmy=09.08.2023&trade=buy&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.170)
+
+2023-08-09 07:22:02https://www.b2b-center.ru/market/?f_keyword=transistor&searching=1&company_type=2&price_currency=0&date=1&date_start_dmy06.08.2023&date_end_dmy=09.08.2023&trade=buy&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"tag name","selector":"font"}
+  (Session info: chrome=115.0.5790.170)
+
+2023-08-09 07:25:21https://www.b2b-center.ru/market/?f_keyword=rectifier&searching=1&company_type=2&price_currency=0&date=1&date_start_dmy06.08.2023&date_end_dmy=09.08.2023&trade=buy&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"tag name","selector":"font"}
+  (Session info: chrome=115.0.5790.170)
+
+2023-08-09 07:28:17https://www.b2b-center.ru/market/?f_keyword=thyristor&searching=1&company_type=2&price_currency=0&date=1&date_start_dmy06.08.2023&date_end_dmy=09.08.2023&trade=buy&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"tag name","selector":"font"}
+  (Session info: chrome=115.0.5790.170)
+
+2023-08-09 07:31:18https://www.b2b-center.ru/market/?f_keyword=IGBT&searching=1&company_type=2&price_currency=0&date=1&date_start_dmy06.08.2023&date_end_dmy=09.08.2023&trade=buy&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"tag name","selector":"font"}
+  (Session info: chrome=115.0.5790.170)
+
+2023-08-09 07:34:05https://www.b2b-center.ru/market/?f_keyword=SRAM&searching=1&company_type=2&price_currency=0&date=1&date_start_dmy06.08.2023&date_end_dmy=09.08.2023&trade=buy&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.170)
+
+2023-08-09 07:37:01https://www.b2b-center.ru/market/?f_keyword=NOR Flash&searching=1&company_type=2&price_currency=0&date=1&date_start_dmy06.08.2023&date_end_dmy=09.08.2023&trade=buy&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.170)
+
+2023-08-09 07:39:59https://www.b2b-center.ru/market/?f_keyword=DDR3&searching=1&company_type=2&price_currency=0&date=1&date_start_dmy06.08.2023&date_end_dmy=09.08.2023&trade=buy&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"tag name","selector":"font"}
+  (Session info: chrome=115.0.5790.170)
+
+2023-08-09 07:43:17https://www.b2b-center.ru/market/?f_keyword=DDR4&searching=1&company_type=2&price_currency=0&date=1&date_start_dmy06.08.2023&date_end_dmy=09.08.2023&trade=buy&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"tag name","selector":"font"}
+  (Session info: chrome=115.0.5790.170)
+
+2023-08-09 07:46:32https://www.b2b-center.ru/market/?f_keyword=PMIC&searching=1&company_type=2&price_currency=0&date=1&date_start_dmy06.08.2023&date_end_dmy=09.08.2023&trade=buy&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.170)
+
+2023-08-09 07:49:19https://www.b2b-center.ru/market/?f_keyword=MRAM&searching=1&company_type=2&price_currency=0&date=1&date_start_dmy06.08.2023&date_end_dmy=09.08.2023&trade=buy&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.170)
+
+2023-08-09 07:52:23https://www.b2b-center.ru/market/?f_keyword=power management&searching=1&company_type=2&price_currency=0&date=1&date_start_dmy06.08.2023&date_end_dmy=09.08.2023&trade=buy&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"tag name","selector":"font"}
+  (Session info: chrome=115.0.5790.170)
+
+2023-08-09 07:55:19https://www.b2b-center.ru/market/?f_keyword=voltage reference&searching=1&company_type=2&price_currency=0&date=1&date_start_dmy06.08.2023&date_end_dmy=09.08.2023&trade=buy&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.170)
+
+2023-08-09 07:58:20https://www.b2b-center.ru/market/?f_keyword=amplifier&searching=1&company_type=2&price_currency=0&date=1&date_start_dmy06.08.2023&date_end_dmy=09.08.2023&trade=buy&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"tag name","selector":"font"}
+  (Session info: chrome=115.0.5790.170)
+
+2023-08-09 08:01:00https://www.b2b-center.ru/market/?f_keyword=PCI Express&searching=1&company_type=2&price_currency=0&date=1&date_start_dmy06.08.2023&date_end_dmy=09.08.2023&trade=buy&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"tag name","selector":"font"}
+  (Session info: chrome=115.0.5790.170)
+
+2023-08-09 08:04:10https://www.b2b-center.ru/market/?f_keyword=DC/DC&searching=1&company_type=2&price_currency=0&date=1&date_start_dmy06.08.2023&date_end_dmy=09.08.2023&trade=buy&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"tag name","selector":"font"}
+  (Session info: chrome=115.0.5790.170)
+
+2023-08-09 08:07:14https://www.b2b-center.ru/market/?f_keyword=AC/DC&searching=1&company_type=2&price_currency=0&date=1&date_start_dmy06.08.2023&date_end_dmy=09.08.2023&trade=buy&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"tag name","selector":"font"}
+  (Session info: chrome=115.0.5790.170)
+
+2023-08-09 09:20:32https://www.b2b-center.ru/market/?f_keyword=Texas Instruments&searching=1&company_type=2&price_currency=0&date=1&date_start_dmy06.08.2023&date_end_dmy=09.08.2023&trade=buy&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.170)
+
+2023-08-09 09:26:50https://www.b2b-center.ru/market/?f_keyword=National Semiconductor&searching=1&company_type=2&price_currency=0&date=1&date_start_dmy06.08.2023&date_end_dmy=09.08.2023&trade=buy&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.170)
+
+2023-08-09 09:37:17https://www.b2b-center.ru/market/?f_keyword=Texas Instruments&searching=1&company_type=2&price_currency=0&date=1&date_start_dmy06.08.2023&date_end_dmy=09.08.2023&trade=buy&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.170)
+
+2023-08-09 09:40:16https://www.b2b-center.ru/market/?f_keyword=National Semiconductor&searching=1&company_type=2&price_currency=0&date=1&date_start_dmy06.08.2023&date_end_dmy=09.08.2023&trade=buy&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.170)
+
+2023-08-09 09:43:34https://www.b2b-center.ru/market/?f_keyword=Analog Devices&searching=1&company_type=2&price_currency=0&date=1&date_start_dmy06.08.2023&date_end_dmy=09.08.2023&trade=buy&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"tag name","selector":"font"}
+  (Session info: chrome=115.0.5790.170)
+
+2023-08-09 09:46:19https://www.b2b-center.ru/market/?f_keyword=ADI&searching=1&company_type=2&price_currency=0&date=1&date_start_dmy06.08.2023&date_end_dmy=09.08.2023&trade=buy&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.170)
+
+2023-08-09 09:49:09https://www.b2b-center.ru/market/?f_keyword=Maxim&searching=1&company_type=2&price_currency=0&date=1&date_start_dmy06.08.2023&date_end_dmy=09.08.2023&trade=buy&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"tag name","selector":"font"}
+  (Session info: chrome=115.0.5790.170)
+
+2023-08-09 09:52:36https://www.b2b-center.ru/market/?f_keyword=Hittite&searching=1&company_type=2&price_currency=0&date=1&date_start_dmy06.08.2023&date_end_dmy=09.08.2023&trade=buy&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.170)
+
+2023-08-09 09:55:22https://www.b2b-center.ru/market/?f_keyword=MICROCHIP&searching=1&company_type=2&price_currency=0&date=1&date_start_dmy06.08.2023&date_end_dmy=09.08.2023&trade=buy&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.170)
+
+2023-08-09 09:58:22https://www.b2b-center.ru/market/?f_keyword=Microsemi&searching=1&company_type=2&price_currency=0&date=1&date_start_dmy06.08.2023&date_end_dmy=09.08.2023&trade=buy&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"tag name","selector":"font"}
+  (Session info: chrome=115.0.5790.170)
+
+2023-08-09 10:01:11https://www.b2b-center.ru/market/?f_keyword=Micrel&searching=1&company_type=2&price_currency=0&date=1&date_start_dmy06.08.2023&date_end_dmy=09.08.2023&trade=buy&from=0#search-result 页面 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"table.table.table-hover.table-filled.search-results"}
+  (Session info: chrome=115.0.5790.170)
+
