@@ -1,10 +1,11 @@
 import mysql.connector
+from Manager import AccManage
 
 # 建立数据库连接
 cnx = mysql.connector.connect(
-    host="161.117.187.27",
-    user="river",
-    password="K7tXjn2jFwb8ADFD",
+    host=AccManage.mys['h'],
+    user=AccManage.mys['n'],
+    password=AccManage.mys['p'],
     database="yjcxrecoomanchip",
     connection_timeout=60
 )
