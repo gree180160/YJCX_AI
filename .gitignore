@@ -10,3 +10,4 @@
 /IC_Search/temp_hot_images/
 IC_Search/CroppedImages/*
 /WRTools/__pycache__/*
+/Manager/AccManage.py
