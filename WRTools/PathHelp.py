@@ -44,6 +44,15 @@ def getOtherPath(abspath:str):
     return dataPath
 
 
+def get_chrome_path():
+
+    return ''
+
+
+def get_firfox_path():
+    return ''
+
+
 # 获得路径，当前文件所在路径
 def resource_path(relative_path):
     # 是否Bundle Resource

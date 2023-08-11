@@ -7,7 +7,7 @@ import time
 import undetected_chromedriver as uc
 import ssl
 from WRTools import ExcelHelp, WaitHelp, PathHelp, EmailHelper, StringHelp
-
+import os
 
 ssl._create_default_https_context = ssl._create_unverified_context
 # 定义要爬取的url
@@ -209,12 +209,15 @@ def adjust_excel():
     global result_save_file
     today = time.strftime('%Y-%m-%d', time.localtime())
     result_save_file = PathHelp.get_file_path('Tender', f'tender_info_{today}_{grade}.xlsx')
-    ExcelHelp.create_excel_file(result_save_file)
-    title_arr = [
-        ['grade', 'No', 'title_ru', 'starting_price', 'application_security', 'contract_security', 'status', 'published',
-         'apply_data', 'show_data', 'org_name', 'org_TinKpp', 'org_contact', 'cus_name', 'cus_TinKppReg', 'cus_contact',
-         'cus_address', 'detail_url', 'page']]
-    ExcelHelp.add_arr_to_sheet(result_save_file, result_save_sheet, title_arr)
+    if not os.path.exists(result_save_file):
+        ExcelHelp.create_excel_file(result_save_file)
+        title_arr = [
+            ['grade', 'No', 'title_ru', 'starting_price', 'application_security', 'contract_security', 'status',
+             'published',
+             'apply_data', 'show_data', 'org_name', 'org_TinKpp', 'org_contact', 'cus_name', 'cus_TinKppReg',
+             'cus_contact',
+             'cus_address', 'detail_url', 'page']]
+        ExcelHelp.add_arr_to_sheet(result_save_file, result_save_sheet, title_arr)
 
 
 if __name__ == "__main__":

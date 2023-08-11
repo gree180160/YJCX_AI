@@ -1,3 +1,4 @@
+import os.path
 import ssl
 import math
 import time
@@ -107,7 +108,7 @@ def analyth_page(url, keyword):
                         No = No[index + 2:-1]
                         try:
                             title = temp_td.find_elements(By.TAG_NAME, 'div')[0].text
-                            No.replace(title, '')
+                            No = No.replace(title, '')
                         except Exception as e:
                             title = ''
                             print(f'title or {e}')
@@ -125,7 +126,7 @@ def analyth_page(url, keyword):
                 row_value = [keyword, No, title, detail, link, org, published, relevant]
                 table_value.append(row_value)
         else:
-            row_value = [keyword, 0]
+            row_value = [keyword, 'No record']
             table_value.append(row_value)
     except Exception as e:
         LogHelper.write_log(log_file_name=log_file, content=f'{url} 页面 解析异常：{e} ')
@@ -152,14 +153,15 @@ def main():
     sendEmail(result_save_file)
 
 
-
 def adjust_excel():
     global result_save_file
     today = time.strftime('%Y-%m-%d', time.localtime())
     result_save_file = PathHelp.get_file_path('B2B', f'b2b_actual_{today}_.xlsx')
-    ExcelHelp.create_excel_file(result_save_file)
-    title_arr = [["keyword", "No", "title", "detail", "link", "org", "published", "relevant"]]
-    ExcelHelp.add_arr_to_sheet(result_save_file, result_save_sheet, title_arr)
+    if not os.path.exists(result_save_file):
+        ExcelHelp.create_excel_file(result_save_file)
+        title_arr = [["keyword", "No", "title", "detail", "link", "org", "published", "relevant"]]
+        ExcelHelp.add_arr_to_sheet(result_save_file, result_save_sheet, title_arr)
+
 
 
 if __name__ == "__main__":
