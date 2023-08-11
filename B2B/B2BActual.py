@@ -34,7 +34,7 @@ log_file = PathHelp.get_file_path(super_path="Tender", file_name='B2BLog.txt')
 sourceFile_dic = {'fileName': PathHelp.get_file_path("B2B", 'Task.xlsx'),
                   'sourceSheet': 'keywords',
                   'colIndex': 1,
-                  'startIndex': 0,
+                  'startIndex': 161,
                   'endIndex': 199}
 
 current_page = 1
@@ -51,8 +51,8 @@ def set_total_page():
 
 
 def get_url(keyword, page):
-    today = datetime.today()
-    three_days_ago = today - timedelta(days=1)
+    today = datetime.today() - timedelta(days=1)
+    three_days_ago = today - timedelta(days=2)
     data_start = three_days_ago.strftime("%d.%m.%Y")
     data_end = today.strftime("%d.%m.%Y")
     actural_url = f'https://www.b2b-center.ru/market/?f_keyword={keyword}&searching=1&company_type=2&price_currency=0&date=1&date_start_dmy{data_start}&date_end_dmy={data_end}&trade=buy&from={(page -1)*20}#search-result'

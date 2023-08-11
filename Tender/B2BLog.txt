@@ -1,0 +1,4 @@
+2023-08-11 09:12:56https://www.b2b-center.ru/market/?f_keyword=VICOR&searching=1&company_type=2&price_currency=0&date=1&date_start_dmy08.08.2023&date_end_dmy=10.08.2023&trade=buy&from=0#search-result 页面 解析异常：Message: disconnected: not connected to DevTools
+  (failed to check if window was closed: disconnected: not connected to DevTools)
+  (Session info: chrome=115.0.5790.170)
+

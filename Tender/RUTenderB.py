@@ -12,7 +12,7 @@ from WRTools import ExcelHelp, WaitHelp, PathHelp, EmailHelper, StringHelp
 ssl._create_default_https_context = ssl._create_unverified_context
 # 定义要爬取的url
 
-start_url = "https://www.rts-tender.ru/poisk/search?id=ac6e9ce4-a444-4426-94b6-1c6916b865f6"
+start_url = "https://www.rts-tender.ru/poisk/search?id=dd7db265-9cbe-4511-b8e7-0d0c582fc907"
 result_save_file = PathHelp.get_file_path('Tender', 'Task.xlsx')
 result_save_sheet = 'Sheet'
 grade = 'B'
