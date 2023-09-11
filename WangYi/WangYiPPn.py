@@ -9,7 +9,7 @@ from selenium.webdriver.common.by import By
 from WRTools import ExcelHelp, LogHelper, PathHelp, WaitHelp
 from Manager import TaskManager, URLManager
 import re
-
+#page 116
 ssl._create_default_https_context = ssl._create_unverified_context
 
 driver_option = webdriver.ChromeOptions()

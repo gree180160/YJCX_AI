@@ -154,7 +154,7 @@ def get_grade(c_value: float) -> str:
 
 # 计算汇率
 def get_rate():
-    result = 6.94  # default cate
+    result = 7.28  # default cate
     try:
         url = "https://api.exchangerate-api.com/v4/latest/USD"
         json_str = ''

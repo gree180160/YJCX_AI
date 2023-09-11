@@ -19,8 +19,8 @@ driver.set_page_load_timeout(120)
 # accouts_arr = [["深圳市元极创新电子有限公司", "caigou01", "Yjcx123"]]
 accouts_arr = [[AccManage.Bom['c'], AccManage.Bom['n'], AccManage.Bom['p']]]
 
-sourceFile_dic = {'fileName': PathHelp.get_file_path(TaskManager.Taskmanger().task_name, 'Task.xlsx'),
-                  'sourceSheet': 'ppn',
+sourceFile_dic = {'fileName': PathHelp.get_file_path(None, 'TTI.xlsx'),
+                  'sourceSheet': 'making',
                   'colIndex': 1,
                   'startIndex': TaskManager.Taskmanger().start_index,
                   'endIndex': TaskManager.Taskmanger().end_index}
@@ -187,22 +187,22 @@ def get_supplier_info(aside, cate_index, ppn, manu) -> bom_price_info.Bom_price_
             price_str = price_section.find_element(by=By.TAG_NAME, value='p').text
         except:
             price_str = '--'
-        release_time_section = section_arr[7]
+        release_time_section = section_arr[8]
         try:
             release_time = release_time_section.find_element(by=By.TAG_NAME, value='p').text
         except:
             release_time = '--'
-        stock_num_section = section_arr[8]
+        stock_num_section = section_arr[9]
         try:
             stock_num = stock_num_section.find_element(by=By.TAG_NAME, value='p').text
         except:
             stock_num = '--'
         bom_price_ele = bom_price_info.Bom_price_info(cate=cate_name, manu=manu, supplier=supplier_name,
-                                                      package=pakage_name, year=year_str, quoted_price=price_str,
+                                                      package=pakage_name, lot=year_str, quoted_price=price_str,
                                                       release_time=release_time, stock_num=stock_num)
         return bom_price_ele
     except Exception as e:
-        LogHelper.write_log(f'cate is: {ppn} index is:{cate_index} , error is : {e}')
+        LogHelper.write_log(PathHelp.get_file_path('Bom_price', 'bom_price_log.txt'), f'cate is: {ppn} index is:{cate_index} , error is : {e}')
 
 
 def main():
@@ -217,6 +217,8 @@ def main():
             continue
         elif ppn_index in range(sourceFile_dic['startIndex'], sourceFile_dic['endIndex']):
             print(f'cate_index is: {ppn_index}  cate_name is: {ppn}')
+            # todo
+            ppn = '74LVX4245MTCX'
             go_to_cate(ppn_index, str(ppn))
             if ppn_index > 0 and ppn_index % 15 == 0:
                 time.sleep(480)

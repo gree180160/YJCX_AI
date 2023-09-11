@@ -1,0 +1,42 @@
+1694021327479	geckodriver	INFO	Listening on 127.0.0.1:62577
+1694021327987	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "--headless" "blink-settings=imagesEnabled=false" "--remote-debugging-port" "62578" "--remote-allow-hosts" "localhost" "-foreground" "-no-remote" "-profile" "/var/folders/jc/x8nf5scd28v4wrbkt9l72vd00000gn/T/rust_mozprofileUMCX4m"
+*** You are running in headless mode.
+1694021328206	Marionette	INFO	Marionette enabled
+1694021328234	Marionette	INFO	Listening on port 62585
+2023-09-07 01:28:48.274 plugin-container[35698:1448603] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2023-09-07 01:28:48.274 plugin-container[35698:1448603] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2023-09-07 01:28:48.288 plugin-container[35698:1448603] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2023-09-07 01:28:48.288 plugin-container[35698:1448603] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2023-09-07 01:28:48.288 plugin-container[35698:1448606] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2023-09-07 01:28:48.288 plugin-container[35698:1448606] nil host used in call to allowsAnyHTTPSCertificateForHost:
+Read port: 62585
+WebDriver BiDi listening on ws://127.0.0.1:62578
+1694021328360	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /var/folders/jc/x8nf5scd28v4wrbkt9l72vd00000gn/T/rust_mozprofileUMCX4m/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:62578/devtools/browser/ab47e481-5b6d-4aa8-b440-ac998344f4e8
+JavaScript warning: https://cdn.jsdelivr.net/npm/@fingerprintjs/fingerprintjs@3/dist/fp.js, line 2463: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: https://www.rts-tender.ru/poisk/search?id=de690086-24a8-4c44-b918-0c95a5c12aa5, line 20: SyntaxError: missing ) after condition
+1694021589078	geckodriver	INFO	Listening on 127.0.0.1:62850
+1694021589603	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "blink-settings=imagesEnabled=false" "--remote-debugging-port" "62851" "--remote-allow-hosts" "localhost" "-foreground" "-no-remote" "-profile" "/var/folders/jc/x8nf5scd28v4wrbkt9l72vd00000gn/T/rust_mozprofileS2NBKE"
+1694021589871	Marionette	INFO	Marionette enabled
+2023-09-07 01:33:09.930 plugin-container[35886:1450739] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2023-09-07 01:33:09.930 plugin-container[35886:1450739] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2023-09-07 01:33:09.932 plugin-container[35886:1450739] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2023-09-07 01:33:09.932 plugin-container[35886:1450739] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2023-09-07 01:33:09.932 plugin-container[35886:1450743] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2023-09-07 01:33:09.932 plugin-container[35886:1450743] nil host used in call to allowsAnyHTTPSCertificateForHost:
+1694021590005	Marionette	INFO	Listening on port 62858
+Read port: 62858
+WebDriver BiDi listening on ws://127.0.0.1:62851
+1694021590068	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+UNSUPPORTED (log once): POSSIBLE ISSUE: unit 1 GLD_TEXTURE_INDEX_2D is unloadable and bound to sampler type (Float) - using zero texture because texture unloadable
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /var/folders/jc/x8nf5scd28v4wrbkt9l72vd00000gn/T/rust_mozprofileS2NBKE/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:62851/devtools/browser/00df423d-776b-4d7b-8a4a-8a31645c826f
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+[GFX1-]: Unrecognized feature ACCELERATED_CANVAS2D
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.

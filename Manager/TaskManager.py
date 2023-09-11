@@ -1,4 +1,5 @@
 from Manager import AccManage
+from WRTools import MySqlHelp_recommanded
 
 
 class Taskmanger:
@@ -22,39 +23,22 @@ class Taskmanger:
 
 class Task_IC_hot_F_manger:
     task_name = 'TVicor'
-    base = 0
-    if AccManage.Device_ID == 'Mac':
-        start_index = base + 0
-        end_index = base + 100
-    elif AccManage.Device_ID == '11':
-        start_index = base + 100
-        end_index = base + 200
-    elif AccManage.Device_ID == 'sz':
-        start_index = base + 200
-        end_index = base + 300
-    elif AccManage.Device_ID == '04':
-        start_index = base + 300
-        end_index = base + 400
-    elif AccManage.Device_ID == '42':
-        start_index = base + 400
-        end_index = base + 500
+    base = 11200 #11100 finished
+    start_index = base + 60
+    end_index = base + 79
 
 
 class Task_IC_hot_C_manger:
     task_name = 'TVicor'
-    base = 500
-    if AccManage.Device_ID == 'Mac':
-        start_index = base + 0
-        end_index = base + 100
-    elif AccManage.Device_ID == '11':
-        start_index = base + 100
-        end_index = base + 200
-    elif AccManage.Device_ID == 'sz':
-        start_index = base + 200
-        end_index = base + 300
-    elif AccManage.Device_ID == '04':
-        start_index = base + 300
-        end_index = base + 400
-    elif AccManage.Device_ID == '42':
-        start_index = base + 400
-        end_index = base + 500
+    base = 11200
+    start_index = base + 79
+    end_index = base + 100
+    # task_name = 'TTI'
+    # base = 2000
+    # start_index = base + 0
+    # end_index = base + 100
+
+#
+# class DB_Task:
+#     def get_sum_ppn(self):
+#         MySqlHelp.IC_hot_m_read()

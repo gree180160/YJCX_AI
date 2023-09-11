@@ -3,7 +3,7 @@ import os
 import time
 
 from PIL import Image, ImageGrab
-from WRTools import ChracterReconition, MySqlHelp, PathHelp
+from WRTools import ChracterReconition, ExcelHelp, PathHelp, MySqlHelp_recommanded
 
 
 # 是否是周指数
@@ -59,6 +59,25 @@ def ppn_checkChange(ppn: str):
     return result
 
 
+# 修改图片名称错误的情况
+def change_error_image_name(fold_path):
+    file_name_list = os.listdir(fold_path)
+    file_name_list.sort()
+    T55H_ppn = ExcelHelp.read_col_content(file_name='/Users/liuhe/Desktop/progress/TInfineon/55H/TInfenion_55H.xlsx', sheet_name='ppn', col_index=1)
+    TNV_ppn = ExcelHelp.read_col_content(file_name=PathHelp.get_file_path('TSumNvmNdt', 'Task.xlsx'), sheet_name='ppn', col_index=1)
+    for temp in file_name_list:
+        if temp.endswith('.png'):
+            error_ppn = temp[0:-6]
+            right_index = T55H_ppn.index(error_ppn)
+            new_ppn = TNV_ppn[right_index]
+            if temp.endswith('_M.png'):
+                imageName_new = new_ppn + "_M.png"
+                os.rename(fold_path + '/' + temp, fold_path + '/' + imageName_new)
+            elif temp.endswith('_W.png'):
+                imageName_new = new_ppn + "_W.png"
+                os.rename(fold_path + '/' + temp, fold_path + '/' + imageName_new)
+
+
 #  删除没有热度数据的图片
 def filert_useless_image(fold_path):
     file_name_list = os.listdir(fold_path)
@@ -79,7 +98,6 @@ def filert_useless_image(fold_path):
 # 识别IC——hot 图片里的热度信息并保存到数据库
 def rec_image(fold_path, manu):
     filert_useless_image(fold_path)
-    source_file = PathHelp.get_file_path('TVicor15H', 'Task.xlsx')
     file_name_list = os.listdir(fold_path)
     file_name_list.sort()
     print(f"file count is: {file_name_list.__len__()}")
@@ -90,25 +108,16 @@ def rec_image(fold_path, manu):
             ppn = ppn.replace('%2F', '/')
             if temp.endswith('_M.png'):
                 image_hot_data = ChracterReconition.SplitPic_month(fold_path + '/' + temp)
-                image_hot_data = [ppn, manu] + image_hot_data
-                MySqlHelp.IC_hot_m_write(data=[image_hot_data])
-                time.sleep(0.5)
-                # ExcelHelp.add_arr_to_sheet(file_name=source_file, sheet_name='IC_hot_month', dim_arr=[image_hot_data])
+                image_hot_data = [ppn+"^"+manu, ppn, manu] + image_hot_data
+                MySqlHelp_recommanded.IC_hot_m_write([image_hot_data])
             elif temp.endswith('_W.png'):
                 image_hot_data = ChracterReconition.SplitPic_week(fold_path + '/' + temp)
-                image_hot_data = [ppn, manu] + image_hot_data
-                MySqlHelp.IC_hot_w_write(data=[image_hot_data])
-                time.sleep(0.5)
-                # ExcelHelp.add_arr_to_sheet(file_name=source_file, sheet_name='IC_hot_week', dim_arr=[image_hot_data])
+                image_hot_data = [ppn+"^"+manu, ppn, manu] + image_hot_data
+                MySqlHelp_recommanded.IC_hot_w_write([image_hot_data])
 
 
 if __name__ == "__main__":
-    rec_image(fold_path='/Users/liuhe/Desktop/progress/TVicor/p2_15H/15H/11/IC_hot_images', manu='Vicor')
-    # time.sleep(2.0)
-    # rec_image(fold_path='/Users/liuhe/Desktop/progress/TVicor/15H/sz/IC_hot_images', manu='Vicor')
-    # time.sleep(2.0)
-    # rec_image(fold_path='/Users/liuhe/Desktop/progress/TVicor/15H/04/IC_hot_images', manu='Vicor')
-    # time.sleep(2.0)
-    # rec_image(fold_path=PathHelp.get_IC_hot_image_fold(), manu='Vicor')
+    rec_image(fold_path=PathHelp.get_file_path('IC_Search', 'temp_hot_images_Firefox'), manu='Vicor')
+    rec_image(fold_path=PathHelp.get_file_path('IC_Search', 'temp_hot_images_Chrome'), manu='Vicor')
 
 

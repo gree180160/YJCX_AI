@@ -44,15 +44,6 @@ def getOtherPath(abspath:str):
     return dataPath
 
 
-def get_chrome_path():
-
-    return ''
-
-
-def get_firfox_path():
-    return ''
-
-
 # 获得路径，当前文件所在路径
 def resource_path(relative_path):
     # 是否Bundle Resource
@@ -66,13 +57,33 @@ def resource_path(relative_path):
     return os.path.join(base_path, relative_path)
 
 
-def change_screenShotName(fold_path):
-    pn_file = get_file_path(TaskManager.Taskmanger().task_name, 'Task.xlsx')
-    ppn_list = ExcelHelp.read_col_content(file_name=pn_file, sheet_name='ppn', col_index=1)[TaskManager.Taskmanger().start_index: TaskManager.Taskmanger().end_index]
+def change_screenShotName_Firfox(fold_path):
+    pn_file = get_file_path(None, f'{TaskManager.Task_IC_hot_F_manger().task_name}.xlsx')
+    ppn_list = ExcelHelp.read_col_content(file_name=pn_file, sheet_name='ppn', col_index=1)[TaskManager.Task_IC_hot_F_manger().start_index: TaskManager.Task_IC_hot_F_manger().end_index]
     file_name_list = os.listdir(fold_path)
     valid_files = []
     for (index, temp) in enumerate(file_name_list):
         if temp.startswith("火狐截图_"):
+            valid_files.append(temp)
+    valid_files.sort()
+    print(valid_files)
+    for (index, temp) in enumerate(valid_files):
+        print(temp)
+        if True:
+            is_week_data = index < ppn_list.__len__()
+            print(ppn_list[index % ppn_list.__len__()])
+            right_ppn = ppn_list[index % ppn_list.__len__()].replace('/', '%2F')
+            imageName_new = right_ppn + ('_W' if is_week_data else '_M') + '.png'
+            os.rename(fold_path + '/' + temp, fold_path + '/' + imageName_new)
+
+
+def change_screenShotName_Chrome(fold_path):
+    pn_file = get_file_path(TaskManager.Task_IC_hot_C_manger().task_name, 'Task.xlsx')
+    ppn_list = ExcelHelp.read_col_content(file_name=pn_file, sheet_name='ppn', col_index=1)[TaskManager.Task_IC_hot_C_manger().start_index: TaskManager.Task_IC_hot_C_manger().end_index]
+    file_name_list = os.listdir(fold_path)
+    valid_files = []
+    for (index, temp) in enumerate(file_name_list):
+        if temp.startswith("Screenshot_"):
             valid_files.append(temp)
     valid_files.sort()
     print(valid_files)
@@ -92,5 +103,6 @@ if __name__ == "__main__":
     # print(keyword_source_file)
     # print(log_file)-
     # print(getOtherPath('TRenesasAll_10H'))
-    change_screenShotName(fold_path=get_file_path('IC_Search', 'temp_hot_images'))
+    change_screenShotName_Firfox(fold_path=get_file_path('IC_Search', 'temp_hot_images'))
+    # change_screenShotName_Chrome(fold_path=get_file_path('IC_Search', 'temp_hot_images'))
 

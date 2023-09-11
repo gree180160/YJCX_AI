@@ -150,8 +150,8 @@ def save_chrome_image(count: int):
             k.press_keys([k.alt_key, 'f'])
             k.release_key(k.alt_key)
             time.sleep(3.0)
-            k.press_keys(['control', 'tab'])
-            k.release_key('control')
+            k.press_keys([k.control_key, k.tab_key])
+            k.release_key(k.control_key)
 
     else:
         time.sleep(3)

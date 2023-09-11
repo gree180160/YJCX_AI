@@ -6,13 +6,14 @@ from selenium.webdriver.common.by import By
 import time
 import undetected_chromedriver as uc
 import ssl
-from WRTools import ExcelHelp, WaitHelp, PathHelp, EmailHelper, StringHelp
+from WRTools import ExcelHelp, WaitHelp, PathHelp, EmailHelper, StringHelp, RateHelp
 import os
+import re
 
 ssl._create_default_https_context = ssl._create_unverified_context
 # 定义要爬取的url
 
-start_url = "https://www.rts-tender.ru/poisk/search?id=dd7db265-9cbe-4511-b8e7-0d0c582fc907"
+start_url = "https://www.rts-tender.ru/poisk/search?id=a8d6490a-5f90-48ea-8e6b-49ec1f0d5e73"
 result_save_file = PathHelp.get_file_path('Tender', 'Task.xlsx')
 result_save_sheet = 'Sheet'
 grade = 'B'
@@ -54,8 +55,10 @@ def set_currentPage():
         current_page_ele = page_area.find_elements(By.CSS_SELECTOR, 'span.current')[-1]
         current_page = int(current_page_ele.text)
     except:
-        current_page = total_page
+        # current_page = total_page
         print(f'{driver.current_url} ; set_currentPage error')
+        print(f'current_page is :{current_page} total_page is :{total_page}')
+        exit(0)
 
 
 def need_next_page():
@@ -171,18 +174,19 @@ def main():
 def change_money_ru(source_str: str):
     result = source_str.replace(' ', '')
     result = result.replace(',', '.')
+    numbers = re.findall(r'\d+\.?\d*', result)
     if result[-1] == '₽':
         result = result.replace('₽', '')
     elif result[-1] == '$':
         if result[0] == '0':
             result = result.replace('$', '')
         else:
-            return source_str
+            result = RateHelp.USDtoRUB(numbers)
     elif result[-1] == '€':
         if result[0] == '0':
             result = result.replace('€', '')
         else:
-            return source_str
+            result = RateHelp.EURtoRUB(numbers)
     else:
         result = result[:-1]
     if result.__len__() > 0:

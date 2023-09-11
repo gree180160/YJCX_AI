@@ -1,34 +1,21 @@
-from PIL import Image, ImageGrab
-from pytesseract import *
-from WRTools import UserAgentHelper, ExcelHelp, PathHelp, WaitHelp, IPHelper
-from selenium import webdriver
-import base64
+from WRTools import ExcelHelp, WaitHelp, PathHelp, MySqlHelp_recommanded, DDDDOCR, ImageHelp, EmailHelper
 from selenium.webdriver.common.by import By
-import time
 import random
 import undetected_chromedriver as uc
 import ssl
-from io import BytesIO
-import cv2
-import re
 import shutil
 import os
+from Manager import AccManage, TaskManager, URLManager
+import base64
 
 
 ssl._create_default_https_context = ssl._create_unverified_context
 
 total_page = 1
 current_page = 1
-accouts_arr = [["17712288872", "yjcx8872"]]
-driver_option = webdriver.ChromeOptions()
-#  等待初始HTML文档完全加载和解析，
-driver_option.page_load_strategy = 'eager'
-# 无痕浏览
-driver_option.add_argument("–incognito")
-driver_option.add_argument(f'--proxy-server=http://{IPHelper.getRandowCityIP()}')
-driver_option.add_argument(f'user-agent="{UserAgentHelper.getRandowUA()}"')
-prefs = {"profile.managed_default_content_settings.images": 2}
-driver_option.add_experimental_option('prefs', prefs)
+accouts_arr = [[AccManage.IC_stock['n'], AccManage.IC_stock['p']]]
+no_data_url = 'https://icpi.ic.net.cn/'
+
 driver = uc.Chrome(use_subprocess=True)
 driver.set_window_size(height=800, width=1200)
 current_cate_has_date = True
@@ -36,124 +23,88 @@ current_cate_has_date = True
 
 def login_action(aim_url):
     current_url = driver.current_url
-    if current_url == "https://member.ic.net.cn/login.php":
-        waitfor(False)
+    if current_url.__contains__("https://member.ic.net.cn/login.php"):
+        WaitHelp.waitfor_ICHot(False, False)
         # begin login
         accout_current = random.choice(accouts_arr)
         driver.find_element(by=By.ID, value='username').clear()
         driver.find_element(by=By.ID, value='username').send_keys(accout_current[0])
-        waitfor(False)
         driver.find_element(by=By.ID, value='password').clear()
         driver.find_element(by=By.ID, value='password').send_keys(accout_current[1])
-        waitfor(False)
+        WaitHelp.waitfor_ICHot(False, False)
         driver.find_element(by=By.ID, value='btn_login').click()
-        waitfor(True)
-        time.sleep(10)
-    if not driver.current_url.startswith('https://www.ic.net.cn/member/'):
+        WaitHelp.waitfor_ICHot(True, False)
+    if driver.current_url.startswith('https://member.ic.net'):  # 首次登录
         driver.get(aim_url)
-    waitfor(False)
+    elif driver.current_url.startswith('https://www.ic.net.cn/search'):  # 查询过程中出现登录
+        driver.get(aim_url)
 
 
-# 等待时间，load new page -> 5s; else 2s
-def waitfor(is_load_page):
-    # load new page
-    if is_load_page:
-        time.sleep(30 + random.randint(1, 5))
-        driver.refresh()
-    # user action
+def has_hotData():
+    if driver.current_url == no_data_url:
+        result = False
     else:
-        time.sleep(15 + random.randint(1, 4))
+        result = True
+    return result
 
 
 # 获取单个型号热度信息
 # cate_name：型号
 # isWeek：【周/月】搜索指数
-def getSearchInfo(cate_name, isWeek):
+def getSearchInfo(cate_name,manu, isWeek):
     global current_cate_has_date
-    # todo 不替换url，在搜索框里输入内容
-    if isWeek:
-        search_url = f'https://icpi.ic.net.cn/icpi/detail.php?key={cate_name}'
-    else:
-        search_url = f'https://icpi.ic.net.cn/icpi/detail_month.php?key={cate_name}'
+    search_url = URLManager.IC_hot_url(cate_name, isWeek)
     driver.get(search_url)
-    waitfor(False)
-    time.sleep(200 + random.randint(5, 60))
-    if not driver.current_url.__contains__(cate_name):
-        if isWeek:
-            current_cate_has_date = False  # 如果周没有数据，月搜索指数不查询
-        return
-    login_action(search_url)
+    WaitHelp.waitfor_ICHot(True, False)
+    if isNeedLogin(search_url):
+        login_action(search_url)
+    else:
+        while isCheckCode():
+            WaitHelp.waitfor_ICHot(True, False)
+            EmailHelper.mail_IC_Hot(AccManage.Device_ID)
+        if has_hotData():
+            anlyth_page(search_url, cate_name, manu, isWeek)
+        else:
+            print(f'{cate_name}: no hot data')
+
+
+def anlyth_page(aim_url, cate_name, manu, isWeek):
     try:
         table = driver.find_element(by=By.CLASS_NAME, value='details_main_tabel')
         tbody = table.find_element(by=By.TAG_NAME, value='tbody')
         tr_arr = tbody.find_elements(by=By.TAG_NAME, value='tr')  # 只取前12
         heat_value_arr = []
-        if len(tr_arr) >= 12:
-            tr_arr = tr_arr[0:12]
-            row_element = tr_arr[-1]
-            #  热度
-            row_children = row_element.find_elements(by=By.TAG_NAME, value='td')
-            heat_value_arr = get_heat_value_arr(row_children[2])
-        elif len(tr_arr) >= 2:
-            tr_arr = tr_arr[1:]
-        else:
-            tr_arr = []
-        search_value_arr = []
-        for (index, tr_value) in enumerate(tr_arr):
-            try:
-                #  time_value
-                td_arr = tr_value.find_elements(by=By.TAG_NAME, value='td')
-                if len(td_arr) >= 2:
-                    time_value = td_arr[1].text
-                    if len(heat_value_arr) > index:
-                        heat_value = heat_value_arr[index]
-                    else:
-                        heat_value = '--'
-                else:
-                    time_value = '--'
-                    heat_value = '--'
-            except:
-                heat_value = getReduValue('temp.png')
-            search_value_arr.append([time_value, heat_value])
-        saveSearchInfo(search_value_arr, isWeek=isWeek, cate_name=cate_name)
-        image_name_tail = "_week" if isWeek else "_month"
-        savaImage(cate_name + image_name_tail + ".png")
-        search_value_arr.clear()
-    except:
-        print(f"{cate_name}no data")
+        for temp_row in tr_arr:
+            td = temp_row.find_elements(By.TAG_NAME, 'td')[2]
+            canvas = td.find_element(By.TAG_NAME, 'canvas')
+            # 将canvas内容保存为.png图片
+            canvas_base64 = driver.execute_script("return arguments[0].toDataURL('image/png').substring(21);", canvas)
+            #0
+            ImageHelp.canvasToImage_color(canvas_base64, PathHelp.get_file_path('IC_Search', 'canvas0.png'), (255, 204, 0))
+            reco_value0 = DDDDOCR.reco(source_image=PathHelp.get_file_path('IC_Search', 'canvas0.png'))
+            #white
+            ImageHelp.canvasToImage_color(canvas_base64, PathHelp.get_file_path('IC_Search', 'canvas1.png'), (255, 204, 153))
+            reco_value1 = DDDDOCR.reco(source_image=PathHelp.get_file_path('IC_Search', 'canvas1.png'))
+            #yellow
+            ImageHelp.canvasToImage_color(canvas_base64, PathHelp.get_file_path('IC_Search', 'canvas2.png'), (102, 255, 255))
+            reco_value2 = DDDDOCR.reco(source_image=PathHelp.get_file_path('IC_Search', 'canvas2.png'))
+            #blue
+            ImageHelp.canvasToImage_color(canvas_base64, PathHelp.get_file_path('IC_Search', 'canvas3.png'), (0, 255, 153))
+            reco_value3 = DDDDOCR.reco(source_image=PathHelp.get_file_path('IC_Search', 'canvas3.png'))
+            max_value = max(reco_value0, reco_value1, reco_value2, reco_value3)
+            heat_value_arr.append(max_value)
+        deal_sql_data(cate_name, manu, isWeek, heat_value_arr)
+    except Exception as e:
+        print(f"{aim_url} anlyth_page")
 
 
-# 将element(列表结果的第12行)底部与浏览器窗口底部对齐，然后开始截屏，并开始1-12裁剪，返回识别的结果数组
-def get_heat_value_arr(element):
-    driver.execute_script("arguments[0].scrollIntoView(false);", element)
-    time.sleep(0.5)
-    location = element.location
-    size = element.size
-    left = location['x']
-    right = location['x'] + size['width']
-    screen_shoot = driver.get_screenshot_as_png()
-    im = Image.open(BytesIO(screen_shoot))
-    screen_height = im.height
-    im = im.crop((left, screen_height - size['height']*12, right, screen_height))  # defines crop points
-    im.save('temp.png')  # saves new cropped image
-    heat_value_arr = getReduValue('temp.png')
-    return heat_value_arr
-
-
-# 获取图片文字,return hot value arr
-def getReduValue(image_name):
-    img = cv2.imread(image_name)
-    threshold = 180  # to be determined
-    _, img_binarized = cv2.threshold(img, threshold, 255, cv2.THRESH_BINARY)
-    pil_img = Image.fromarray(img_binarized)
-    try:
-        result_str = pytesseract.image_to_string(pil_img, lang='eng', config="--psm 6 digits")
-        result_str = result_str.replace('.', '')
-        result_str = re.sub('\n+', '\n', result_str)
-    except:
-        result_str = "--"
-    result_arr = result_str.split('\n')
-    return result_arr
+def deal_sql_data(ppn, manu, isWeek, rec_arr):
+    image_hot_data = [ppn+"^"+manu, ppn, manu] + rec_arr
+    print(image_hot_data)
+    if isWeek:
+        MySqlHelp_recommanded.IC_hot_w_write([image_hot_data])
+    else:
+        MySqlHelp_recommanded.IC_hot_m_write([image_hot_data])
 
 
 # copy image and rename
@@ -167,37 +118,46 @@ def savaImage(new_image_name):
     shutil.copy(src, dst)
 
 
-# 保存型号的搜索信息[[2022.07, 165][2022.08, 250]]
-def saveSearchInfo(info_arr, isWeek, cate_name):
-    file_name = "/Users/liuhe/PycharmProjects/YJCX_AI/IC_Search/T0815_week.xlsx" if isWeek else "/Users/liuhe/PycharmProjects/YJCX_AI/IC_Search/T0815_month.xlsx"
-    sheet_name_base64str = str(base64.b64encode(cate_name.encode('utf-8')), 'utf-8')
-    ExcelHelp.add_arr_to_sheet(file_name=file_name, sheet_name=sheet_name_base64str,
-                                          dim_arr=info_arr)
+def isNeedLogin(aim_url):
+    try:
+        tips_main_areas = driver.find_elements(By.CSS_SELECTOR, 'div.tips_main')
+        if tips_main_areas.__len__() > 0:
+           result = tips_main_areas[0].is_displayed()
+           return result
+            # login_a = tips_main_areas[0].find_element(By.CSS_SELECTOR, 'a.tips_login')
+            # login_a.click()
+            # WaitHelp.waitfor_ICHot(True, False)
+            # login_action(aim_url=aim_url)
+    except Exception as e:
+        print('no need to login')
+        return False
+
+
+def isCheckCode():
+    verification_area = driver.find_elements(By.ID, "verification")
+    if verification_area.__len__() > 0:
+        result = True
+    else:
+        result = False
+    return result
 
 
 # 查询列表中所有需要查询的型号的搜索指数
 def main():
-    global current_cate_has_date
-    cate_ids = ExcelHelp.read_col_content('//IC_Search/T0815.xlsx',
-                                                     'left', 1)
-    for (cate_index, cate_name) in enumerate(cate_ids):
-        current_cate_has_date = True
-        print(f'cate_index is: {cate_index}  cate_name is: {cate_name}')
-        getSearchInfo(cate_name, True)
-        if current_cate_has_date:
-            getSearchInfo(cate_name, False)
+    pn_file = PathHelp.get_file_path(None, f'{TaskManager.Task_IC_hot_C_manger.task_name}.xlsx')
+    ppn_list = ExcelHelp.read_col_content(file_name=pn_file, sheet_name='ppn', col_index=1)
+    manu_list = ExcelHelp.read_col_content(file_name=pn_file, sheet_name='ppn', col_index=2)
+    for (index, ppn) in enumerate(ppn_list):
+        if index in range(TaskManager.Task_IC_hot_C_manger().start_index, TaskManager.Task_IC_hot_C_manger.end_index):
+            print(f'cate_index is: {index}  cate_name is: {ppn}')
+            manu = manu_list[index]
+            getSearchInfo(ppn, manu, True)
+            if has_hotData(): #有周数据，请求月数据
+                getSearchInfo(ppn, manu, False)
 
 
-def saveLongScreenShot():
-    br = webdriver.PhantomJS()
-    br.maximize_window()
-    br.get("https://www.cnblogs.com/Jack-cx/p/9383990.html")
-    br.save_screenshot("app1.png")
-
-
-# print('识别到的中文')
 if __name__ == "__main__":
     driver.get("https://member.ic.net.cn/login.php")
-    saveLongScreenShot()
-    #login_action("https://member.ic.net.cn/member/member_index.php")
-    #main()
+    login_action("https://member.ic.net.cn/member/member_index.php")
+    WaitHelp.waitfor_ICHot(True, False)
+    main()

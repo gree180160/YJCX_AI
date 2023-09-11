@@ -4,19 +4,6 @@ import math
 import time
 from datetime import datetime, timedelta
 
-# 获取今天的日期
-today = datetime.today()
-
-# 计算前三天的日期
-three_days_ago = today - timedelta(days=3)
-
-# 将日期转换为指定的格式
-formatted_date = three_days_ago.strftime("%d.%m.%Y")
-
-# 输出结果
-print(formatted_date)
-
-
 import undetected_chromedriver as uc
 from selenium.webdriver.common.by import By
 
@@ -35,11 +22,14 @@ log_file = PathHelp.get_file_path(super_path="Tender", file_name='B2BLog.txt')
 sourceFile_dic = {'fileName': PathHelp.get_file_path("B2B", 'Task.xlsx'),
                   'sourceSheet': 'keywords',
                   'colIndex': 1,
-                  'startIndex': 161,
-                  'endIndex': 199}
+                  'startIndex': 130,
+                  'endIndex': 173} #199
 
 current_page = 1
 total_page = 1
+
+detail_url_list = []
+No_value_list = []
 
 
 def set_total_page():
@@ -53,10 +43,10 @@ def set_total_page():
 
 def get_url(keyword, page):
     today = datetime.today() - timedelta(days=1)
-    three_days_ago = today - timedelta(days=2)
-    data_start = three_days_ago.strftime("%d.%m.%Y")
-    data_end = today.strftime("%d.%m.%Y")
-    actural_url = f'https://www.b2b-center.ru/market/?f_keyword={keyword}&searching=1&company_type=2&price_currency=0&date=1&date_start_dmy{data_start}&date_end_dmy={data_end}&trade=buy&from={(page -1)*20}#search-result'
+    yesterday = datetime.today() - timedelta(days=1)
+    data_start = today.strftime("%d.%m.%Y")
+    data_end = yesterday.strftime("%d.%m.%Y")
+    actural_url = f'https://www.b2b-center.ru/market/?f_keyword={keyword}&searching=1&company_type=2&price_currency=0&date=1&date_start_dmy={data_start}&date_end_dmy={data_end}&trade=buy&from={(page -1)*20}#search-result'
     archive_url = f'https://www.b2b-center.ru/market/?f_keyword={keyword}&searching=1&company_type=2&price_currency=0&date=1&date_start_dmy=01.08.2018&date_end_dmy=08.08.2023&trade=buy&show=archive&from={(page -1)*20}#search-result'
     result = actural_url
     return result
@@ -89,6 +79,7 @@ def analyth_keyword(keyword):
 
 # 解析html，获取cate，manu
 def analyth_page(url, keyword):
+    global No_value_list, detail_url_list
     table_value = []
     try:
         tables = driver.find_elements(By.CSS_SELECTOR, 'table.table.table-hover.table-filled.search-results')
@@ -106,9 +97,12 @@ def analyth_page(url, keyword):
                         No = temp_td.find_element(By.TAG_NAME, 'a').text
                         index = No.index('№ ')
                         No = No[index + 2:-1]
+                        if str(No).__contains__('\n'):
+                            index2 = No.index('\n')
+                            No = No[0:index2]
                         try:
                             title = temp_td.find_elements(By.TAG_NAME, 'div')[0].text
-                            No = No.replace(title, '')
+                            No = str(No).replace(title, '')
                         except Exception as e:
                             title = ''
                             print(f'title or {e}')
@@ -124,7 +118,12 @@ def analyth_page(url, keyword):
                     else:
                         relevant = temp_td.text
                 row_value = [keyword, No, title, detail, link, org, published, relevant]
-                table_value.append(row_value)
+                if No_value_list.__contains__(No) or detail_url_list.__contains__(link):
+                    print(f'repeated value: {No} ; {link}')
+                else:
+                    table_value.append(row_value)
+                    No_value_list.append(No)
+                    detail_url_list.append(link)
         else:
             row_value = [keyword, 'No record']
             table_value.append(row_value)
@@ -148,8 +147,9 @@ def main():
     adjust_excel()
     for (keyword_index, keyword) in enumerate(keyword_list):
         if keyword_index in range(sourceFile_dic['startIndex'], sourceFile_dic['endIndex']):
-            print(f'cate_index is: {keyword_index}  cate_name is: {keyword}')
-            analyth_keyword(keyword)
+            if keyword:
+                print(f'cate_index is: {keyword_index}  cate_name is: {keyword}')
+                analyth_keyword(keyword)
     sendEmail(result_save_file)
 
 
@@ -161,7 +161,6 @@ def adjust_excel():
         ExcelHelp.create_excel_file(result_save_file)
         title_arr = [["keyword", "No", "title", "detail", "link", "org", "published", "relevant"]]
         ExcelHelp.add_arr_to_sheet(result_save_file, result_save_sheet, title_arr)
-
 
 
 if __name__ == "__main__":

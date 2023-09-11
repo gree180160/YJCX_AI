@@ -27,6 +27,18 @@ def waitfor_octopart(is_load_page, isDebug):
             time.sleep(15 + random.randint(2, 22))
 
 
+# test ， for octopart
+def waitfor_ICHot(is_load_page, isDebug):
+    if isDebug:
+        time.sleep(5 + random.randint(1, 3))
+    else:
+        # load new page
+        if is_load_page:
+            time.sleep(120 + random.randint(10, 50))
+        else:
+            time.sleep(15 + random.randint(2, 22))
+
+
 # 适用于不需要账号，有隧道代理，load new page -> 60; else 5s
 def waitfor_auto_proxy(is_load_page, isDebug):
     if isDebug:

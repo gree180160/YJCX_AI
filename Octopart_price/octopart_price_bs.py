@@ -1,6 +1,6 @@
 # 根据关键字查找P/N, manu
 from bs4 import BeautifulSoup
-from WRTools import IPHelper, UserAgentHelper, LogHelper, PathHelp, QGHelp, EmailHelper, ExcelHelp
+from WRTools import IPHelper, UserAgentHelper, LogHelper, PathHelp, EmailHelper, ExcelHelp
 import requests
 import re
 import base64
@@ -8,11 +8,11 @@ import octopart_price_info
 from Manager import URLManager
 
 
-sourceFile_dic = {'fileName': PathHelp.get_file_path('TInfenion_40H', 'Task.xlsx'),
+sourceFile_dic = {'fileName': PathHelp.get_file_path(None, 'TTI.xlsx'),
                   'sourceSheet': 'ppn',
                   'colIndex': 1,
                   'startIndex': 0,
-                  'endIndex': 2}
+                  'endIndex': 8000}
 result_save_file = PathHelp.get_file_path('TInfenion_40H', 'digikey_status.xlsx')
 log_file = '//Octopart_category/octopart_key_cate_log.txt'
 

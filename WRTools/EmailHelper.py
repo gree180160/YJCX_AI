@@ -1,4 +1,5 @@
 import smtplib
+import time
 from email.mime.text import MIMEText
 from email.utils import formataddr
 from email.mime.application import MIMEApplication
@@ -63,9 +64,31 @@ def mail_IC_Stock(device):
         # msg=MIMEText('填写邮件内容','plain','utf-8')
         mail_msg = f'<h2><center>IC_stock</center></h2> 设备: {device} 出现check code'
         msg = MIMEText(mail_msg, 'html', 'utf-8')
-        msg['From'] = formataddr(["From Ti buy", my_sender])  # 括号里的对应发件人邮箱昵称、发件人邮箱账号
+        msg['From'] = formataddr(["From IC Stock", my_sender])  # 括号里的对应发件人邮箱昵称、发件人邮箱账号
         msg['To'] = formataddr(["river", new_user])  # 括号里的对应收件人邮箱昵称、收件人邮箱账号
         msg['Subject'] = "IC_Stock"  # 邮件的主题，也可以说是标题
+        #  user email
+        server = smtplib.SMTP_SSL("smtp.qq.com", 465)  # 发件人邮箱中的SMTP服务器，端口是465，固定的，不能更改
+        server.login(my_sender, my_pass)  # 括号中对应的是发件人邮箱账号、邮箱密码
+        server.set_debuglevel(1)
+        server.sendmail(my_sender, [new_user], msg.as_string())  # 括号中对应的是发件人邮箱账号、收件人邮箱账号、发送邮件
+        server.quit()  # 关闭连接
+    except Exception as err:  # 如果 try 中的语句没有执行，则会执行下面的 ret=False
+        ret = False
+    return ret
+
+
+# IC 交易网查库存，出现验证码
+def mail_IC_Hot(device):
+    ret = True
+    try:
+        new_user = '1459287460@qq.com'
+        # msg=MIMEText('填写邮件内容','plain','utf-8')
+        mail_msg = f'<h2><center>IC_Hot</center></h2> 设备: {device} 出现check code'
+        msg = MIMEText(mail_msg, 'html', 'utf-8')
+        msg['From'] = formataddr(["From IC_hot", my_sender])  # 括号里的对应发件人邮箱昵称、发件人邮箱账号
+        msg['To'] = formataddr(["river", new_user])  # 括号里的对应收件人邮箱昵称、收件人邮箱账号
+        msg['Subject'] = "IC_Hot"  # 邮件的主题，也可以说是标题
         #  user email
         server = smtplib.SMTP_SSL("smtp.qq.com", 465)  # 发件人邮箱中的SMTP服务器，端口是465，固定的，不能更改
         server.login(my_sender, my_pass)  # 括号中对应的是发件人邮箱账号、邮箱密码
@@ -173,5 +196,7 @@ def sendAttachment(result_save_file, theme):
 
 
 if __name__ == '__main__':
-    ret = sendAttachment('tender_info_2023-07-26_A.xlsx', 'tender_info')
+    sendAttachment(PathHelp.get_file_path('Tender', 'tender_info_2023-09-11_A.xlsx'), 'Tender_info_A')
+    time.sleep(15.0)
+    sendAttachment(PathHelp.get_file_path('Tender', 'tender_info_2023-09-11_B.xlsx'), 'Tender_info_B')
 

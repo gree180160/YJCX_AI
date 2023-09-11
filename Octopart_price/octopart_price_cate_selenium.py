@@ -19,8 +19,8 @@ driver.set_page_load_timeout(480)
 # https://octopart.com/search?q=8P34S1204NLGI8&currency=USD&specs=0
 default_url = 'https://octopart.com/what-is-octopart'
 
-sourceFile_dic = {'fileName': PathHelp.get_file_path(TaskManager.Taskmanger().task_name, 'Task.xlsx'),
-                  'sourceSheet': 'ppn',
+sourceFile_dic = {'fileName': PathHelp.get_file_path(None, 'TTI.xlsx'),
+                  'sourceSheet': 'making',
                   'colIndex': 1,
                   'startIndex': TaskManager.Taskmanger().start_index,
                   'endIndex': TaskManager.Taskmanger().end_index}
@@ -74,35 +74,34 @@ def get_supplier_info(tr, ppn, manu_name) -> octopart_price_info:
         distribute_name = distribute_tr.find_element(by=By.TAG_NAME, value='a').text
     except:
         distribute_name = '--'
-    SKU_tr = td_arr[2]
+    SKU_tr = td_arr[3]
     try:
         sku = SKU_tr.text
     except:
         sku = "--"
-    stock_tr = td_arr[3]
+    stock_tr = td_arr[4]
     try:
         stock = stock_tr.text
     except:
         stock = '--'
-    MOQ_tr = td_arr[4]
+    MOQ_tr = td_arr[5]
     try:
         moq = MOQ_tr.text
     except:
         moq = '--'
-    currency_type_tr = td_arr[6]
+    currency_type_tr = td_arr[7]
     try:
         currency_type = currency_type_tr.text
     except:
         currency_type = '--'
-    k_price_tr = td_arr[10]
+    k_price_tr = td_arr[11]
     try:
         k_price = k_price_tr.text
     except:
         k_price = '--'
+    updated_tr = td_arr[13]
     try:
-        updated_div = tr.find_element(by=By.CSS_SELECTOR, value='div.updated-tooltip')
-        updated_span = updated_div.find_element(By.TAG_NAME, 'span')
-        updated = updated_span.text
+        updated = updated_tr.text
     except:
         updated = '--'
     manu_name = manu_name
@@ -173,6 +172,8 @@ def main():
         if pn is None or pn.__contains__('?'):
             continue
         elif pn_index in range(sourceFile_dic['startIndex'], sourceFile_dic['endIndex']):
+            #todo
+            pn = 'X9317UV8'
             print(f'pn_index is: {pn_index}  pn is: {pn}')
             go_to_cate(pn_index, pn)
             WaitHelp.waitfor_octopart(True,False)

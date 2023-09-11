@@ -1,4 +1,6 @@
-from WRTools import ExcelHelp, PathHelp, PandasHelp
+import time
+
+from WRTools import ExcelHelp, PathHelp, PandasHelp, MySqlHelp_recommanded
 import os
 
 def change_file_name():
@@ -92,20 +94,23 @@ def decompositionPPN(unit: int):
         ExcelHelp.add_arr_to_sheet(file_name=file_path, sheet_name='Sheet', dim_arr=result)
 
 
-def adi_stock():
-    source_file = PathHelp.get_file_path(None, 'TNXP.xlsx')
-    arr1 = ExcelHelp.read_col_content(source_file, sheet_name='ppn1', col_index=1)
-    arr2 = ExcelHelp.read_col_content(source_file, sheet_name='ppn2', col_index=1)
-    arr3 = ExcelHelp.read_col_content(source_file, sheet_name='ppn3', col_index=1)
-    arr4 = ExcelHelp.read_col_content(source_file, sheet_name='ppn4', col_index=1)
-    arr34 = ExcelHelp.read_col_content(source_file, sheet_name='ppn3+4', col_index=1)
-    arr5 = ExcelHelp.read_col_content(source_file, sheet_name='page0_ppn_5', col_index=1)
-    arr6 = ExcelHelp.read_col_content(source_file, sheet_name='page0_ppn_6', col_index=1)
-    finished = arr1 + arr2 + arr3 + arr4 + arr34 + arr5 + arr6
-    arr7 = ExcelHelp.read_col_content(source_file, sheet_name='page0_ppn_7', col_index=1)
-    result = list(set(arr7).difference(set(finished)))
-    result.sort()
-    ExcelHelp.add_arr_to_col(file_name=source_file, sheet_name='ppn7', dim_arr=result)
+def Ti():
+    source_file = PathHelp.get_file_path(None, 'TTI.xlsx')
+    arr1 = ExcelHelp.read_col_content(source_file, sheet_name='ppn', col_index=1)[600: 700]
+    arr2 =  ExcelHelp.read_col_content(source_file, sheet_name='ppn', col_index=1)[800: 900]
+    arr3 = ExcelHelp.read_col_content(source_file, sheet_name='making', col_index=1)[0: 600]
+    arr4 = ExcelHelp.read_col_content(source_file, sheet_name='making', col_index=1)[700: 800]
+
+    finished = list(set(arr1 + arr2 + arr3 + arr4))
+    making = ExcelHelp.read_sheet_content_by_name(source_file, sheet_name='making')
+    result = []
+    for temp_row in making:
+        if finished.__contains__(temp_row[0]):
+            row_content = [temp_row[0], temp_row[1], temp_row[2], 'ed']
+        else:
+            row_content = [temp_row[0], temp_row[1], temp_row[2], 'ing']
+        result.append(row_content)
+    ExcelHelp.add_arr_to_sheet(file_name=source_file, sheet_name='making2', dim_arr=result)
 
 
 def mcu2():
@@ -135,6 +140,20 @@ def ppn_vicor_all():
     ExcelHelp.add_arr_to_sheet(file_name=PathHelp.get_file_path(None, 'TVicor.xlsx'), sheet_name='all_ppn_ser', dim_arr=result)
 
 
+def write_ppn_to_sql():
+    ppn_list_file = PathHelp.get_file_path(None, 'TVicor.xlsx')
+    ppn_file = ExcelHelp.read_col_content(ppn_list_file, sheet_name='ppn', col_index=1)
+    ppn_db = MySqlHelp_recommanded.ppn_read('1')
+    ppn_db = [item[0] for item in ppn_db]
+    ppn_list = list(set(ppn_file).difference(set(ppn_db)))
+    result = []
+    for ppn in ppn_list:
+        if ppn:
+            row = [ppn + "^" + 'Vicor', ppn, 2089, 'Vicor', 'sales_dijikey']
+            result.append(row)
+    MySqlHelp_recommanded.ppn_write(result)
+
+
 if __name__ == "__main__":
     # get_ICSupplierAndHot(20, 300)
     # get_wheat()
@@ -142,4 +161,4 @@ if __name__ == "__main__":
     # createDayTask(500)
     # decompositionPPN(500)
     # adi_stock()
-    mcu2()
+    write_ppn_to_sql()
