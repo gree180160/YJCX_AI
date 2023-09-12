@@ -100,7 +100,6 @@ def anlyth_page(aim_url, cate_name, manu, isWeek):
 
 def deal_sql_data(ppn, manu, isWeek, rec_arr):
     image_hot_data = [ppn+"^"+manu, ppn, manu] + rec_arr
-    print(image_hot_data)
     if isWeek:
         MySqlHelp_recommanded.IC_hot_w_write([image_hot_data])
     else:

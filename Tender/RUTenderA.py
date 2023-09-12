@@ -2,7 +2,7 @@
 import base64
 import math
 import re
-
+import datetime
 from selenium.webdriver.common.by import By
 import time
 import undetected_chromedriver as uc
@@ -14,7 +14,7 @@ import os
 ssl._create_default_https_context = ssl._create_unverified_context
 # 定义要爬取的url
 
-start_url = "https://www.rts-tender.ru/poisk/search?id=34721aae-fb03-4475-82c7-c724d9c1cc63"
+start_url = "https://www.rts-tender.ru/poisk/search?id=176586e9-6086-46c0-91a1-10a25c5d8b9d"
 result_save_file = PathHelp.get_file_path('Tender', 'Task.xlsx')
 result_save_sheet = 'Sheet'
 grade = 'A'
@@ -232,4 +232,11 @@ if __name__ == "__main__":
     skip_login()
     time.sleep(2.0)
     set_total_page()
+    while True:
+        now = datetime.datetime.now()
+        h_value = now.hour
+        if h_value > 1:
+            time.sleep(60*50)
+        else:
+            break
     main()

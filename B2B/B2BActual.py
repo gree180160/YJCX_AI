@@ -22,7 +22,7 @@ log_file = PathHelp.get_file_path(super_path="Tender", file_name='B2BLog.txt')
 sourceFile_dic = {'fileName': PathHelp.get_file_path("B2B", 'Task.xlsx'),
                   'sourceSheet': 'keywords',
                   'colIndex': 1,
-                  'startIndex': 130,
+                  'startIndex': 124,
                   'endIndex': 173} #199
 
 current_page = 1
@@ -166,4 +166,11 @@ def adjust_excel():
 if __name__ == "__main__":
     driver.get(default_url)
     WaitHelp.waitfor_octopart(True, False)
+    while True:
+        now = datetime.datetime.now()
+        h_value = now.hour
+        if h_value > 1:
+            time.sleep(60 * 50)
+        else:
+            break
     main()

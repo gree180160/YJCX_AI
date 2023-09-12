@@ -9,7 +9,7 @@ class Octopart_price_info:
         self.distribute = distribute
         self.SKU = SKU
         self.stock = stock
-        self.MOQ = MOQ
+        self.MOQ = MOQ.replace(",", '')
         self.currency_type = currency_type
         self.k_price = k_price
         self.updated = updated
@@ -32,8 +32,8 @@ class Octopart_price_info:
         return result
 
     def descritpion_arr(self):
-        result = [self.cate or "--", self.manu or "--", self.is_star, self.distribute, self.SKU, self.stock, self.MOQ,
-                  self.currency_type, self.k_price, self.updated, self.search_date]
+        result = [self.cate+"^"+self.manu, self.cate or "--", self.manu or "--", self.is_star, self.distribute, self.SKU, self.stock, self.MOQ,
+                  self.currency_type, self.k_price, self.updated]
         return result
 
 

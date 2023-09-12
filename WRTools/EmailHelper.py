@@ -196,7 +196,7 @@ def sendAttachment(result_save_file, theme):
 
 
 if __name__ == '__main__':
-    sendAttachment(PathHelp.get_file_path('Tender', 'tender_info_2023-09-11_A.xlsx'), 'Tender_info_A')
+    sendAttachment(PathHelp.get_file_path('Tender', 'tender_info_2023-09-12_A.xlsx'), 'Tender_info_A')
     time.sleep(15.0)
-    sendAttachment(PathHelp.get_file_path('Tender', 'tender_info_2023-09-11_B.xlsx'), 'Tender_info_B')
+    sendAttachment(PathHelp.get_file_path('Tender', 'tender_info_2023-09-12_B.xlsx'), 'Tender_info_B')
 

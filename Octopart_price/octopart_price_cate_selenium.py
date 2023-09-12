@@ -5,7 +5,7 @@ import sys
 import undetected_chromedriver as uc
 from selenium import webdriver
 from selenium.webdriver.common.by import By
-from WRTools import ExcelHelp, LogHelper, PathHelp, WaitHelp
+from WRTools import ExcelHelp, LogHelper, PathHelp, WaitHelp, MySqlHelp_recommanded
 import octopart_price_info
 from Manager import TaskManager, URLManager
 import re
@@ -24,7 +24,7 @@ sourceFile_dic = {'fileName': PathHelp.get_file_path(None, 'TTI.xlsx'),
                   'colIndex': 1,
                   'startIndex': TaskManager.Taskmanger().start_index,
                   'endIndex': TaskManager.Taskmanger().end_index}
-result_save_file = PathHelp.get_file_path(TaskManager.Taskmanger().task_name, 'octopart_price.xlsx')
+# result_save_file = PathHelp.get_file_path(TaskManager.Taskmanger().task_name, 'octopart_price.xlsx')
 
 log_file = PathHelp.get_file_path('Octopart_price', 'ocopar_price_log.txt')
 
@@ -157,10 +157,11 @@ def analy_html(pn_index, pn):
                 LogHelper.write_log(log_file_name=log_file, content=f'{pn} 当个cate 解析异常：{e} ')
     except Exception as e:
         LogHelper.write_log(log_file_name=log_file, content=f'{pn} 页面 解析异常：{e} ')
-    ExcelHelp.add_arr_to_sheet(
-        file_name=result_save_file,
-        sheet_name='octopart_price',
-        dim_arr=valid_supplier_arr)
+    MySqlHelp_recommanded.octopart_price_write(valid_supplier_arr)
+    # ExcelHelp.add_arr_to_sheet(
+    #     file_name=result_save_file,
+    #     sheet_name='octopart_price',
+    #     dim_arr=valid_supplier_arr)
     valid_supplier_arr.clear()
 
 

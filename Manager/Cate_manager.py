@@ -95,22 +95,15 @@ def decompositionPPN(unit: int):
 
 
 def Ti():
-    source_file = PathHelp.get_file_path(None, 'TTI.xlsx')
-    arr1 = ExcelHelp.read_col_content(source_file, sheet_name='ppn', col_index=1)[600: 700]
-    arr2 =  ExcelHelp.read_col_content(source_file, sheet_name='ppn', col_index=1)[800: 900]
-    arr3 = ExcelHelp.read_col_content(source_file, sheet_name='making', col_index=1)[0: 600]
-    arr4 = ExcelHelp.read_col_content(source_file, sheet_name='making', col_index=1)[700: 800]
-
-    finished = list(set(arr1 + arr2 + arr3 + arr4))
-    making = ExcelHelp.read_sheet_content_by_name(source_file, sheet_name='making')
-    result = []
-    for temp_row in making:
-        if finished.__contains__(temp_row[0]):
-            row_content = [temp_row[0], temp_row[1], temp_row[2], 'ed']
-        else:
-            row_content = [temp_row[0], temp_row[1], temp_row[2], 'ing']
-        result.append(row_content)
-    ExcelHelp.add_arr_to_sheet(file_name=source_file, sheet_name='making2', dim_arr=result)
+    source_file = "/Users/liuhe/Desktop/progress/TRuStock/TRuStock.xlsx"
+    arr1 = ExcelHelp.read_sheet_content_by_name(source_file, sheet_name='Sheet1')[0: 1000]
+    arr2 = ExcelHelp.read_sheet_content_by_name(source_file, sheet_name='Sheet1')[1000: 2000]
+    arr3 = ExcelHelp.read_sheet_content_by_name(source_file, sheet_name='Sheet1')[2000: 3000]
+    arr4 = ExcelHelp.read_sheet_content_by_name(source_file, sheet_name='Sheet1')[3000: 4000]
+    result = [arr1, arr2, arr3, arr4]
+    fold = '/Users/liuhe/Desktop/progress/TRuStock/'
+    for (index, temp_row) in enumerate(result):
+        ExcelHelp.add_arr_to_sheet(file_name=fold + f'Active {index}.xlsx', sheet_name='Sheet1', dim_arr=temp_row)
 
 
 def mcu2():
@@ -161,4 +154,4 @@ if __name__ == "__main__":
     # createDayTask(500)
     # decompositionPPN(500)
     # adi_stock()
-    write_ppn_to_sql()
+    Ti()

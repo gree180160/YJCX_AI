@@ -23,14 +23,14 @@ class Taskmanger:
 
 class Task_IC_hot_F_manger:
     task_name = 'TVicor'
-    base = 11200 #11100 finished
+    base = 11700 #11100 finished
     start_index = base + 60
     end_index = base + 79
 
 
 class Task_IC_hot_C_manger:
     task_name = 'TVicor'
-    base = 11200
+    base = 11800
     start_index = base + 79
     end_index = base + 100
     # task_name = 'TTI'

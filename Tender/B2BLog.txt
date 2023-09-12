@@ -20,3 +20,6 @@
 2023-09-09 07:22:12go_to_cate except: Message: timeout: Timed out receiving message from renderer: -0.012
   (Session info: chrome=114.0.5735.198)
 
+2023-09-12 07:46:32go_to_cate except: Message: timeout: Timed out receiving message from renderer: -0.013
+  (Session info: chrome=114.0.5735.198)
+

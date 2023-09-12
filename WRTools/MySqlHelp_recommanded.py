@@ -83,7 +83,7 @@ def IC_hot_w_read(filter_contend):
 
 
 def octopart_price_write(data:list):
-    sql_str = "REPLACE INTO t_octopart_price (ppnManu, ppn, manu, is_star, distribute_name, sku, stock, moq, currency_type, k_price, update_time) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s)"
+    sql_str = "REPLACE INTO t_octopart_price (ppnManu, ppn, manu, is_star, distribute, sku, stock, moq, currency_type,k_price, updated, opn) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)"
     sql_write(sql_str, data)
 
 
