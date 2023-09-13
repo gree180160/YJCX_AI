@@ -108,11 +108,11 @@ def rec_image(fold_path, manu):
             ppn = ppn.replace('%2F', '/')
             if temp.endswith('_M.png'):
                 image_hot_data = ChracterReconition.SplitPic_month(fold_path + '/' + temp)
-                image_hot_data = [ppn+"^"+manu, ppn, manu] + image_hot_data
+                image_hot_data = [ppn, manu] + image_hot_data
                 MySqlHelp_recommanded.IC_hot_m_write([image_hot_data])
             elif temp.endswith('_W.png'):
                 image_hot_data = ChracterReconition.SplitPic_week(fold_path + '/' + temp)
-                image_hot_data = [ppn+"^"+manu, ppn, manu] + image_hot_data
+                image_hot_data = [ppn, manu] + image_hot_data
                 MySqlHelp_recommanded.IC_hot_w_write([image_hot_data])
 
 

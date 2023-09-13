@@ -46,10 +46,10 @@ def sql_read(sql):
 def IC_hot_m_write(data: list):
     # 插入数据的SQL语句
     # 插入数据的SQL语句
-    sql_str = "REPLACE INTO t_IC_hot_m (ppnManu, ppn, manu"
+    sql_str = "REPLACE INTO t_IC_hot_m (ppn, manu"
     for index in range(1, 13):
         sql_str += f', m{index}'
-    sql_str += ') VALUES (%s, %s, %s '
+    sql_str += ') VALUES (%s, %s '
     for index in range(1, 13):
         sql_str += ', %s'
     sql_str += ")"
@@ -65,10 +65,10 @@ def IC_hot_m_read(filter_contend):
 
 def IC_hot_w_write(data:list):
     # 插入数据的SQL语句
-    sql_str = "REPLACE INTO t_IC_hot_w (ppnManu, ppn, manu"
+    sql_str = "REPLACE INTO t_IC_hot_w (ppn, manu"
     for index in range(1, 53):
         sql_str += f', w{index}'
-    sql_str += ') VALUES (%s, %s, %s '
+    sql_str += ') VALUES (%s, %s '
     for index in range(1, 53):
         sql_str += ', %s'
     sql_str += ")"
@@ -82,13 +82,23 @@ def IC_hot_w_read(filter_contend):
     return result
 
 
+def ic_stock(data:list):
+    sql_str = "REPLACE INTO t_ic_stock (ppn, manu, supplier, isICCP, isSSCP, iSRanking, isHotSell, stock_num) VALUES (%s, %s, %s, %s, %s, %s, %s, %s)"
+    sql_write(sql_str, data)
+
+
+def bom_price_write(data:list):
+    sql_str = "REPLACE INTO t_bom_price (ppn, manu, supplier, package, lot, quoted_price, release_time, stock_num, valid_supplier) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s)"
+    sql_write(sql_str, data)
+
+
 def octopart_price_write(data:list):
-    sql_str = "REPLACE INTO t_octopart_price (ppnManu, ppn, manu, is_star, distribute, sku, stock, moq, currency_type,k_price, updated, opn) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)"
+    sql_str = "REPLACE INTO t_octopart_price (ppn, manu, is_star, distribute, sku, stock, moq, currency_type,k_price, updated, opn) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)"
     sql_write(sql_str, data)
 
 
 def ppn_write(data:list):
-    sql_str = "REPLACE INTO t_ppn (ppnManu, ppn, manu_id, manu_name, source) VALUES (%s, %s, %s, %s, %s)"
+    sql_str = "REPLACE INTO t_ppn (ppn, manu_id, manu_name, source) VALUES (%s, %s, %s, %s)"
     sql_write(sql_str, data)
 
 

@@ -142,7 +142,7 @@ def write_ppn_to_sql():
     result = []
     for ppn in ppn_list:
         if ppn:
-            row = [ppn + "^" + 'Vicor', ppn, 2089, 'Vicor', 'sales_dijikey']
+            row = [ppn, 2089, 'Vicor', 'sales_dijikey']
             result.append(row)
     MySqlHelp_recommanded.ppn_write(result)
 

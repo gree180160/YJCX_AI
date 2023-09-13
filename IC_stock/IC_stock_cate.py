@@ -1,24 +1,21 @@
 
 #  记录Task 提供的型号，在IC 中的库存信息
-import base64
 from selenium.webdriver.common.by import By
-import time
 import random
 import undetected_chromedriver as uc
 import ssl
 from IC_stock.IC_Stock_Info import IC_Stock_Info
 from Manager import AccManage, URLManager, TaskManager
-from WRTools import ExcelHelp, WaitHelp, PathHelp, EmailHelper
+from WRTools import ExcelHelp, WaitHelp, PathHelp, EmailHelper, MySqlHelp_recommanded
 
 
 ssl._create_default_https_context = ssl._create_unverified_context
 
-sourceFile_dic = {'fileName': PathHelp.get_file_path(TaskManager.Taskmanger().task_name, 'Task.xlsx'),
+sourceFile_dic = {'fileName': PathHelp.get_file_path(None, f'{TaskManager.Task_IC_hot_C_manger().task_name}.xlsx'),
                   'sourceSheet': 'ppn',
                   'colIndex': 1,
                   'startIndex': TaskManager.Taskmanger().start_index,
                   'endIndex': TaskManager.Taskmanger().end_index}
-result_file = PathHelp.get_file_path(super_path=TaskManager.Taskmanger().task_name, file_name='IC_stock.xlsx')
 
 
 total_page = 1
@@ -138,18 +135,14 @@ def get_stock(cate_index, cate_name):
                         stock_num = ele.text
             except:
                 stock_num = '0'
-            search_date = time.strftime('%Y-%m-%d', time.localtime())
+            #(ppn, manu, supplier, isICCP, isSSCP, iSRanking, isHotSell, stock_num)
             ic_Stock_Info = IC_Stock_Info(supplier=supplier, isICCP=isICCP, isSSCP=isSSCP, model=model,
                                           isSpotRanking=isSpotRanking, isHotSell=isHotSell,
-                                          manufacturer=manufacturer, stock_num=stock_num, search_date=search_date)
+                                          manufacturer=manufacturer, stock_num=stock_num)
             if ic_Stock_Info.shouldSave():
                 saveContent_arr = ic_Stock_Info.descritpion_arr()
                 need_save_ic_arr.append(saveContent_arr)
-        # save per page
-        # sheet_name_base64str = str(base64.b64encode(cate_name.encode('utf-8')), 'utf-8')
-        sheet_name_base64str = 'IC_stock'
-        ExcelHelp.add_arr_to_sheet(file_name=result_file, sheet_name=sheet_name_base64str,
-                                   dim_arr=need_save_ic_arr)
+        MySqlHelp_recommanded.ic_stock(need_save_ic_arr)
         # 包含>=3个无效的stock信息就不翻页了
         if current_page >= 2 or len(need_save_ic_arr) <= 46:
             need_load_nextPage = False

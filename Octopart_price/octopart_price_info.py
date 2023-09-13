@@ -32,7 +32,7 @@ class Octopart_price_info:
         return result
 
     def descritpion_arr(self):
-        result = [self.cate+"^"+self.manu, self.cate or "--", self.manu or "--", self.is_star, self.distribute, self.SKU, self.stock, self.MOQ,
+        result = [self.cate or "--", self.manu or "--", self.is_star, self.distribute, self.SKU, self.stock, self.MOQ,
                   self.currency_type, self.k_price, self.updated]
         return result
 

@@ -19,12 +19,11 @@ driver.set_page_load_timeout(480)
 # https://octopart.com/search?q=8P34S1204NLGI8&currency=USD&specs=0
 default_url = 'https://octopart.com/what-is-octopart'
 
-sourceFile_dic = {'fileName': PathHelp.get_file_path(None, 'TTI.xlsx'),
-                  'sourceSheet': 'making',
+sourceFile_dic = {'fileName': PathHelp.get_file_path(None, f'{TaskManager.Task_IC_hot_C_manger().task_name}.xlsx'),
+                  'sourceSheet': 'ppn',
                   'colIndex': 1,
                   'startIndex': TaskManager.Taskmanger().start_index,
                   'endIndex': TaskManager.Taskmanger().end_index}
-# result_save_file = PathHelp.get_file_path(TaskManager.Taskmanger().task_name, 'octopart_price.xlsx')
 
 log_file = PathHelp.get_file_path('Octopart_price', 'ocopar_price_log.txt')
 
