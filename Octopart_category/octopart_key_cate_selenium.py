@@ -48,7 +48,6 @@ def is_security_check(driver) -> bool:
             result = True
             security_times += 1
             EmailHelper.mail_ip_error("mac")
-            # QGHelp.maintainWhiteList()  #todo remove qg
             time.sleep(60)
     except:
         result = False

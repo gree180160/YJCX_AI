@@ -19,7 +19,7 @@ driver.set_page_load_timeout(480)
 # https://octopart.com/search?q=8P34S1204NLGI8&currency=USD&specs=0
 default_url = 'https://octopart.com/what-is-octopart'
 
-sourceFile_dic = {'fileName': PathHelp.get_file_path(None, f'{TaskManager.Task_IC_hot_C_manger().task_name}.xlsx'),
+sourceFile_dic = {'fileName': PathHelp.get_file_path(None, f'{TaskManager.Taskmanger().task_name}.xlsx'),
                   'sourceSheet': 'ppn',
                   'colIndex': 1,
                   'startIndex': TaskManager.Taskmanger().start_index,
@@ -173,8 +173,6 @@ def main():
         if pn is None or pn.__contains__('?'):
             continue
         elif pn_index in range(sourceFile_dic['startIndex'], sourceFile_dic['endIndex']):
-            #todo
-            pn = 'X9317UV8'
             print(f'pn_index is: {pn_index}  pn is: {pn}')
             go_to_cate(pn_index, pn)
             WaitHelp.waitfor_octopart(True, False)
