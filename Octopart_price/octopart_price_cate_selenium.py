@@ -156,7 +156,8 @@ def analy_html(pn_index, pn):
                 LogHelper.write_log(log_file_name=log_file, content=f'{pn} 当个cate 解析异常：{e} ')
     except Exception as e:
         LogHelper.write_log(log_file_name=log_file, content=f'{pn} 页面 解析异常：{e} ')
-    MySqlHelp_recommanded.DBRecommandChip().octopart_price_write(valid_supplier_arr)
+    if valid_supplier_arr.__len__() > 0:
+        MySqlHelp_recommanded.DBRecommandChip().octopart_price_write(valid_supplier_arr)
     # ExcelHelp.add_arr_to_sheet(
     #     file_name=result_save_file,
     #     sheet_name='octopart_price',

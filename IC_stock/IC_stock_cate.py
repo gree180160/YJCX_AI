@@ -142,7 +142,8 @@ def get_stock(cate_index, cate_name):
             if ic_Stock_Info.shouldSave():
                 saveContent_arr = ic_Stock_Info.descritpion_arr()
                 need_save_ic_arr.append(saveContent_arr)
-        MySqlHelp_recommanded.DBRecommandChip().ic_stock(need_save_ic_arr)
+        if need_save_ic_arr.__len__() > 0:
+            MySqlHelp_recommanded.DBRecommandChip().ic_stock(need_save_ic_arr)
         # 包含>=3个无效的stock信息就不翻页了
         if current_page >= 2 or len(need_save_ic_arr) <= 46:
             need_load_nextPage = False
