@@ -101,9 +101,9 @@ def anlyth_page(aim_url, cate_name, manu, isWeek):
 def deal_sql_data(ppn, manu, isWeek, rec_arr):
     image_hot_data = [ppn, manu] + rec_arr
     if isWeek:
-        MySqlHelp_recommanded.IC_hot_w_write([image_hot_data])
+        MySqlHelp_recommanded.DBRecommandChip().IC_hot_w_write([image_hot_data])
     else:
-        MySqlHelp_recommanded.IC_hot_m_write([image_hot_data])
+        MySqlHelp_recommanded.DBRecommandChip().IC_hot_m_write([image_hot_data])
 
 
 # copy image and rename

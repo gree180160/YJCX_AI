@@ -156,7 +156,7 @@ def analy_html(pn_index, pn):
                 LogHelper.write_log(log_file_name=log_file, content=f'{pn} 当个cate 解析异常：{e} ')
     except Exception as e:
         LogHelper.write_log(log_file_name=log_file, content=f'{pn} 页面 解析异常：{e} ')
-    MySqlHelp_recommanded.octopart_price_write(valid_supplier_arr)
+    MySqlHelp_recommanded.DBRecommandChip().octopart_price_write(valid_supplier_arr)
     # ExcelHelp.add_arr_to_sheet(
     #     file_name=result_save_file,
     #     sheet_name='octopart_price',
@@ -176,7 +176,7 @@ def main():
             pn = 'X9317UV8'
             print(f'pn_index is: {pn_index}  pn is: {pn}')
             go_to_cate(pn_index, pn)
-            WaitHelp.waitfor_octopart(True,False)
+            WaitHelp.waitfor_octopart(True, False)
             close_alert()
             analy_html(pn_index, pn)
 

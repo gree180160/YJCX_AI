@@ -191,7 +191,10 @@ def change_money_ru(source_str: str):
     else:
         result = result[:-1]
     if result.__len__() > 0:
-        result = float(result.replace(' ', ''))
+        try:
+            result = float(result.replace(' ', ''))
+        except:
+            result = 0.00
     return result
 
 

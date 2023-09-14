@@ -136,7 +136,7 @@ def ppn_vicor_all():
 def write_ppn_to_sql():
     ppn_list_file = PathHelp.get_file_path(None, 'TVicor.xlsx')
     ppn_file = ExcelHelp.read_col_content(ppn_list_file, sheet_name='ppn', col_index=1)
-    ppn_db = MySqlHelp_recommanded.ppn_read('1')
+    ppn_db = MySqlHelp_recommanded.DBRecommandChip().ppn_read('1')
     ppn_db = [item[0] for item in ppn_db]
     ppn_list = list(set(ppn_file).difference(set(ppn_db)))
     result = []
@@ -144,7 +144,7 @@ def write_ppn_to_sql():
         if ppn:
             row = [ppn, 2089, 'Vicor', 'sales_dijikey']
             result.append(row)
-    MySqlHelp_recommanded.ppn_write(result)
+    MySqlHelp_recommanded.DBRecommandChip().ppn_write(result)
 
 
 if __name__ == "__main__":

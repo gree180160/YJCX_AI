@@ -1,6 +1,6 @@
 import mysql.connector
 from Manager import AccManage
-from WRTools import ExcelHelp, PathHelp
+from WRTools import ExcelHelp, PathHelp, LogHelper
 
 # 建立数据库连接
 cnx = mysql.connector.connect(
@@ -8,20 +8,23 @@ cnx = mysql.connector.connect(
     user=AccManage.mys['n'],
     password=AccManage.mys['p'],
     database="tender_info",
-    connection_timeout=60
+    connection_timeout=180
 )
 
 
 def sql_write(sql, data):
-    # 创建游标对象
-    print(f'write data:\n {data}')
-    cursor = cnx.cursor()
-    # 执行插入操作
-    cursor.executemany(sql, data)
-    # 提交事务
-    cnx.commit()
-    # 关闭游标和数据库连接
-    cursor.close()
+    try:
+        # 创建游标对象
+        print(f'write data:\n {data}')
+        cursor = cnx.cursor()
+        # 执行插入操作
+        cursor.executemany(sql, data)
+        # 提交事务
+        cnx.commit()
+        # 关闭游标和数据库连接
+        cursor.close()
+    except Exception as e:
+        LogHelper.write_log(log_file_name= PathHelp.get_file_path('WRTools', 'MySqlHelpLog.txt'), content=f'yjcx_recommended wirte error {e} {data}')
 
 
 def sql_read(sql):
