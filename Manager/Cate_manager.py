@@ -95,13 +95,12 @@ def decompositionPPN(unit: int):
 
 
 def Ti():
-    source_file = "/Users/liuhe/Desktop/progress/TRuStock/TRuStock.xlsx"
+    source_file = "/Users/liuhe/Desktop/progress/TRu_needs/RuNeeds0918.xlsx"
     arr1 = ExcelHelp.read_sheet_content_by_name(source_file, sheet_name='Sheet1')[0: 1000]
     arr2 = ExcelHelp.read_sheet_content_by_name(source_file, sheet_name='Sheet1')[1000: 2000]
     arr3 = ExcelHelp.read_sheet_content_by_name(source_file, sheet_name='Sheet1')[2000: 3000]
-    arr4 = ExcelHelp.read_sheet_content_by_name(source_file, sheet_name='Sheet1')[3000: 4000]
-    result = [arr1, arr2, arr3, arr4]
-    fold = '/Users/liuhe/Desktop/progress/TRuStock/'
+    result = [arr1, arr2, arr3]
+    fold = '/Users/liuhe/Desktop/progress/TRu_needs'
     for (index, temp_row) in enumerate(result):
         ExcelHelp.add_arr_to_sheet(file_name=fold + f'Active {index}.xlsx', sheet_name='Sheet1', dim_arr=temp_row)
 
@@ -145,6 +144,15 @@ def write_ppn_to_sql():
             row = [ppn, 2089, 'Vicor', 'sales_dijikey']
             result.append(row)
     MySqlHelp_recommanded.DBRecommandChip().ppn_write(result)
+
+
+def ros_cate():
+    path = '/Users/liuhe/Desktop/progress/TTender_info/ros_tender/ros_keyword.xlsx'
+    arr1 = ExcelHelp.read_col_content(path, sheet_name='keywords1', col_index=1)
+    arr2 = ExcelHelp.read_col_content(path, sheet_name='keywords2', col_index=1)
+    result = list(set(arr2).difference(set(arr1)))
+    ExcelHelp.add_arr_to_col(path, 'keword_new',dim_arr=result)
+
 
 
 if __name__ == "__main__":

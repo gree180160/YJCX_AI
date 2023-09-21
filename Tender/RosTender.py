@@ -8,16 +8,21 @@ import time
 import undetected_chromedriver as uc
 import ssl
 from WRTools import ExcelHelp, WaitHelp, PathHelp, EmailHelper, StringHelp, MySqlHelp_recommanded, RateHelp
+from Manager import AccManage
 import os
 
+# https://rostender.info/login
+# Логин: tim616
+# Пароль: 4IPZjmst
+# https://rostender.info/category/tendery-elektronnye-komponenty
 
 ssl._create_default_https_context = ssl._create_unverified_context
 # 定义要爬取的url
 
-start_url = "https://www.rts-tender.ru/poisk/search?id=176586e9-6086-46c0-91a1-10a25c5d8b9d"
+login_url = "https://rostender.info/login"
+search_base_url = 'https://rostender.info/category/tendery-elektronnye-komponenty'
 result_save_file = PathHelp.get_file_path('Tender', 'Task.xlsx')
 result_save_sheet = 'Sheet'
-grade = 'A'
 
 # 定义一个变量来记录当前的页码
 current_page = 1
@@ -30,13 +35,20 @@ except Exception as e:
     print(e)
 
 
-def skip_login():
+def login_action():
     try:
-        skip_login_button = driver.find_element(By.CSS_SELECTOR, 'button.modal-form-reset')
-        skip_login_button.click()
+        username = driver.find_element(By.ID, 'username')
+        username.clear()
+        username.send_keys(AccManage.ros['n'])
+        password = driver.find_element(By.ID, 'password')
+        password.clear()
+        password.send_keys(AccManage.ros['p'])
+        button = driver.find_element(By.CSS_SELECTOR, 'button.btn.btn-block.btn-danger.btn-lg.login-action')
+        button.click()
+        # loging success url:https://rostender.info/profile
+        WaitHelp.waitfor_account_import(True, False)
     except:
-        print('skip login error')
-
+        print('login_action error')
 
 def set_total_page():
     global total_page
@@ -76,7 +88,6 @@ def goto_nextPage():
         print(f'{driver.current_url} ; goto_nextPage error')
 
 
-
 def main():
     # 定义一个循环，直到爬取完所有的页码或者达到最大页码限制
     while True:
@@ -91,69 +102,9 @@ def main():
         # 遍历每一个搜索结果
         for temp_item in items:
             try:
-                # 定义一个字典来存储每个搜索结果的信息
-                item_content = []
-                No = temp_item.find_elements(By.CSS_SELECTOR, 'a.link')[-1].text
-                No = No.replace('Закупка №', '')
-                No = No.replace('в ЕИС', '')
-                more_url = temp_item.find_element(By.CSS_SELECTOR, 'a.button-red').get_attribute("href")
-                row_titleRU = temp_item.find_element(By.CSS_SELECTOR, 'div.card-item__title').text
-                # head
-                start_pri = app_secu = contr_secu = status = '--'
-                cells = temp_item.find_elements(By.CSS_SELECTOR, 'div.card-item__properties-cell')
-                for (cell_index, tempCell) in enumerate(cells):
-                    title_ele = tempCell.find_elements(By.CSS_SELECTOR, 'div.card-item__properties-name')
-                    if title_ele.__len__() > 0:
-                        title = title_ele[0].text
-                        PSS_value = tempCell.find_element(By.CSS_SELECTOR, 'div.card-item__properties-desc').text
-                        if title == 'НАЧАЛЬНАЯ ЦЕНА':
-                            start_pri = PSS_value
-                        elif title == 'ОБЕСПЕЧЕНИЕ ЗАЯВКИ':
-                            app_secu = PSS_value
-                        elif title == 'ОБЕСПЕЧЕНИЕ КОНТРАКТА':
-                            contr_secu = PSS_value
-                        elif title == 'СТАТУС':
-                            status = PSS_value
-                # date
-                try:
-                    publish_date = temp_item.find_element(By.CSS_SELECTOR, 'div.card-item__info').text
-                    publish_date = publish_date.replace('Опубликовано: ', '')
-                except:
-                    publish_date = '--'
-                try:
-                    end_date = temp_item.find_element(By.CSS_SELECTOR, 'div.card-item__info-end-date').text
-                    end_date = end_date.replace('Подать заявку до: ', '')
-                except:
-                    end_date = '--'
-                try:
-                    show_date = temp_item.find_element(By.CSS_SELECTOR, 'div.card-item__info-auction-time').text
-                    show_date = show_date.replace('Дата проведения: ', '')
-                except:
-                    show_date = '--'
-                # organization
-                org_area = temp_item.find_elements(By.CSS_SELECTOR, 'div.card-item__organization-main')[0]
-                org_name = org_area.find_elements(By.TAG_NAME, 'p')[0].text
-                org_tinKpp = org_area.find_elements(By.TAG_NAME, 'p')[1].text
-                org_contact_det = org_area.find_elements(By.TAG_NAME, 'p')[2].text
-                if org_contact_det == 'Контактные данные:':
-                    org_contact_det = 'Информация скрыта'
-                # customer
-                cus_area = temp_item.find_elements(By.CSS_SELECTOR, 'div.card-item__organization-main')[1]
-                cus_name = cus_area.find_elements(By.TAG_NAME, 'p')[0].text
-                cus_tinKppReg = cus_area.find_elements(By.TAG_NAME, 'p')[1].text
-                cus_det = cus_area.find_elements(By.TAG_NAME, 'p')[2].text
-                if cus_det == 'Контактные данные:':
-                    cus_det = 'Информация скрыта'
-                cus_address = temp_item.find_elements(By.CSS_SELECTOR, 'div.content-address')[0].text
-                cus_address = cus_address.replace('Адрес поставки: ', '')
-                item_content = [grade, No, row_titleRU, change_money_ru(start_pri), change_money_ru(app_secu), contr_secu.replace(' ', ''), status, publish_date, end_date, show_date,
-                                org_name, org_tinKpp, org_contact_det, cus_name, cus_tinKppReg, cus_det, cus_address,
-                                more_url, current_page]
-                print(item_content)
-                # 把这个搜索结果添加到列表中
-                page_result.append(item_content)
+                print('analython html')
             except Exception as e:
-                print(f'url is : {driver.current_url} get element error {e}')
+               print('error')
         print(f'current page is {current_page}')
         ExcelHelp.add_arr_to_sheet(file_name=result_save_file, sheet_name=result_save_sheet, dim_arr=page_result)
         # 找到下一页的按钮，它在class为next-page的a标签里面
@@ -216,7 +167,7 @@ def close_alert():
 def adjust_excel():
     global result_save_file
     today = time.strftime('%Y-%m-%d', time.localtime())
-    result_save_file = PathHelp.get_file_path('Tender', f'tender_info_{today}_{grade}.xlsx')
+    result_save_file = PathHelp.get_file_path('Tender', f'ros_tender_{today}.xlsx')
     if not os.path.exists(result_save_file):
         ExcelHelp.create_excel_file(result_save_file)
         title_arr = [
@@ -229,11 +180,12 @@ def adjust_excel():
 
 
 if __name__ == "__main__":
-    driver.get(start_url)
+    driver.get(login_url)
     WaitHelp.waitfor_account_import(True, False)
+    login_action()
     adjust_excel()
-    skip_login()
     time.sleep(2.0)
+    driver.get(search_base_url)
     set_total_page()
     while True:
         now = datetime.datetime.now()

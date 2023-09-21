@@ -107,7 +107,7 @@ def mail_ip_error(device):
         # msg=MIMEText('填写邮件内容','plain','utf-8')
         mail_msg = f'<h2><center>Octopart</center></h2> 设备: {device} 出现security check'
         msg = MIMEText(mail_msg, 'html', 'utf-8')
-        msg['From'] = formataddr(["From Ti buy", my_sender])  # 括号里的对应发件人邮箱昵称、发件人邮箱账号
+        msg['From'] = formataddr(["octopart security check", my_sender])  # 括号里的对应发件人邮箱昵称、发件人邮箱账号
         msg['To'] = formataddr(["river", new_user])  # 括号里的对应收件人邮箱昵称、收件人邮箱账号
         msg['Subject'] = "Octopart"  # 邮件的主题，也可以说是标题
         #  user email

@@ -9082,3 +9082,29 @@ from unknown error: web view not found
 2023-08-02 10:28:04XLH536045.000000I 页面 解析异常：local variable 'showed_rows' referenced before assignment 
 2023-08-03 14:50:44VI-23P-CU 页面 解析异常：local variable 'showed_rows' referenced before assignment 
 2023-08-03 14:54:00VI-23V-CU 页面 解析异常：local variable 'showed_rows' referenced before assignment 
+2023-09-14 13:57:41BLVR-L20D-B2NS-N 页面 解析异常：local variable 'showed_rows' referenced before assignment 
+2023-09-14 14:00:31ACS712ELCTR-20A-T 页面 解析异常：local variable 'showed_rows' referenced before assignment 
+2023-09-15 11:16:07AD8130ARZ-REEL7 页面 解析异常：local variable 'showed_rows' referenced before assignment 
+2023-09-15 11:21:01AD8170ARZ(-R7) 当个cate 解析异常：list index out of range 
+2023-09-15 12:08:54AD8400ARZ50 当个cate 解析异常：list index out of range 
+2023-09-15 12:08:55AD8400ARZ50 当个cate 解析异常：list index out of range 
+2023-09-15 12:32:11AD8531ARTZ 页面 解析异常：local variable 'showed_rows' referenced before assignment 
+2023-09-15 12:35:05AD8610ARZ 页面 解析异常：local variable 'showed_rows' referenced before assignment 
+2023-09-15 14:49:32AD9859YSV 页面 解析异常：local variable 'showed_rows' referenced before assignment 
+2023-09-15 14:52:22AD9912ABCPZ 页面 解析异常：local variable 'showed_rows' referenced before assignment 
+2023-09-15 14:55:45AD9957BSVZ 页面 解析异常：local variable 'showed_rows' referenced before assignment 
+2023-09-15 14:58:38ADA4807-2ARMZ 页面 解析异常：local variable 'showed_rows' referenced before assignment 
+2023-09-15 16:36:24ADF4153BRU 页面 解析异常：local variable 'showed_rows' referenced before assignment 
+2023-09-15 16:39:41ADF4350BCPZ 页面 解析异常：local variable 'showed_rows' referenced before assignment 
+2023-09-15 17:38:34ADG5436BCPZ 页面 解析异常：local variable 'showed_rows' referenced before assignment 
+2023-09-15 17:41:38ADG5436BRUZ 页面 解析异常：local variable 'showed_rows' referenced before assignment 
+2023-09-15 17:44:42ADG608BRZ 页面 解析异常：local variable 'showed_rows' referenced before assignment 
+2023-09-18 13:17:04ADM485AR 页面 解析异常：local variable 'showed_rows' referenced before assignment 
+2023-09-18 13:19:59ADM485ARZ 页面 解析异常：local variable 'showed_rows' referenced before assignment 
+2023-09-18 14:28:30ADP151ACPZ-2,5-R7 页面 解析异常：local variable 'showed_rows' referenced before assignment 
+2023-09-18 14:35:09ADM485AR 页面 解析异常：local variable 'showed_rows' referenced before assignment 
+2023-09-18 18:27:31ADuM162N1BRZ go_to_cate except: Message: disconnected: not connected to DevTools
+  (failed to check if window was closed: disconnected: not connected to DevTools)
+  (Session info: chrome=114.0.5735.198)
+
+2023-09-19 16:36:37HMC451LC3 页面 解析异常：local variable 'showed_rows' referenced before assignment 

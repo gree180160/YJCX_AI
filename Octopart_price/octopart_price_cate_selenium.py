@@ -5,10 +5,10 @@ import sys
 import undetected_chromedriver as uc
 from selenium import webdriver
 from selenium.webdriver.common.by import By
-from WRTools import ExcelHelp, LogHelper, PathHelp, WaitHelp, MySqlHelp_recommanded
+from WRTools import ExcelHelp, LogHelper, PathHelp, WaitHelp, MySqlHelp_recommanded, EmailHelper
 import octopart_price_info
-from Manager import TaskManager, URLManager
-import re
+from Manager import TaskManager, URLManager, AccManage
+import time
 
 ssl._create_default_https_context = ssl._create_unverified_context
 
@@ -22,7 +22,7 @@ default_url = 'https://octopart.com/what-is-octopart'
 sourceFile_dic = {'fileName': PathHelp.get_file_path(None, f'{TaskManager.Taskmanger().task_name}.xlsx'),
                   'sourceSheet': 'ppn',
                   'colIndex': 1,
-                  'startIndex': TaskManager.Taskmanger().start_index,
+                  'startIndex': 345,
                   'endIndex': TaskManager.Taskmanger().end_index}
 
 log_file = PathHelp.get_file_path('Octopart_price', 'ocopar_price_log.txt')
@@ -165,6 +165,17 @@ def analy_html(pn_index, pn):
     valid_supplier_arr.clear()
 
 
+# 验证是否处于验证IP 页面
+def is_security_check() -> bool:
+    # 400：Bad Request
+    if driver.title == 'Please complete the security check - Octopart':
+        result = True
+        EmailHelper.mail_ip_error(AccManage.Device_ID)
+    else:
+        result = False
+    return result
+
+
 def main():
     all_cates = ExcelHelp.read_col_content(file_name=sourceFile_dic['fileName'],
                                            sheet_name=sourceFile_dic['sourceSheet'],
@@ -175,8 +186,16 @@ def main():
         elif pn_index in range(sourceFile_dic['startIndex'], sourceFile_dic['endIndex']):
             print(f'pn_index is: {pn_index}  pn is: {pn}')
             go_to_cate(pn_index, pn)
-            WaitHelp.waitfor_octopart(True, False)
-            close_alert()
+            if pn_index > 0 and pn_index % 15 == 0:
+                time.sleep(10*60)
+            else:
+                WaitHelp.waitfor_octopart(True, False)
+            while True:
+                if is_security_check():
+                    time.sleep(60)
+                    print('is security ip')
+                else:
+                    break
             analy_html(pn_index, pn)
 
 

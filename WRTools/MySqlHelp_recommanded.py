@@ -34,7 +34,7 @@ class DBRecommandChip:
             "password": AccManage.mys['p'],
             "database": "yjcx_recommended",
         }
-        self.connection_pool = pooling.MySQLConnectionPool(pool_name="my_pool", pool_size=10, **config)
+        self.connection_pool = pooling.MySQLConnectionPool(pool_name="my_pool", pool_size=30, **config)
 
     def sql_write(self, sql, data):
         # 创建游标对象

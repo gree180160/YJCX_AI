@@ -7,7 +7,7 @@ from selenium.webdriver.common.by import By
 import time
 import undetected_chromedriver as uc
 import ssl
-from WRTools import ExcelHelp, WaitHelp, PathHelp, EmailHelper, StringHelp, MySqlHelp_recommanded, RateHelp
+from WRTools import ExcelHelp, WaitHelp, PathHelp, EmailHelper, RateHelp
 import os
 
 

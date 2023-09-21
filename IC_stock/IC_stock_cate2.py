@@ -14,15 +14,15 @@ ssl._create_default_https_context = ssl._create_unverified_context
 sourceFile_dic = {'fileName': PathHelp.get_file_path(None, f'{TaskManager.Taskmanger().task_name}.xlsx'),
                   'sourceSheet': 'ppn',
                   'colIndex': 1,
-                  'startIndex': 365,
-                  'endIndex': 510}
+                  'startIndex': 510,
+                  'endIndex': TaskManager.Taskmanger().end_index}
 
 
 total_page = 1
 
 current_page = 1
 VerificationCodePage = 0
-accouts_arr = [[AccManage.IC_stock['n'], AccManage.IC_stock['p']]]
+accouts_arr = [[AccManage.IC_hot['n'], AccManage.IC_hot['p']]]
 # driver_option = webdriver.ChromeOptions()
 # driver_option.add_argument(f'--proxy-server=http://{IPHelper.getRandowCityIP()}')
 # driver_option.add_argument("–incognito")

@@ -7,7 +7,7 @@ import datetime
 import time
 import undetected_chromedriver as uc
 import ssl
-from WRTools import ExcelHelp, WaitHelp, PathHelp, EmailHelper, StringHelp, RateHelp
+from WRTools import ExcelHelp, WaitHelp, PathHelp, EmailHelper, RateHelp
 import os
 import re
 

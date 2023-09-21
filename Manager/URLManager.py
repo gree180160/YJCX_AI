@@ -62,6 +62,7 @@ def octopart_get_page_url(key_name, page, manu: Octopart_manu) -> str:
     url = f'https://octopart.com/search?q={cate_str}&currency=USD&specs=0{manu_param}{page_param}'
     return url
 
+
 # octopart
 def octopart_get_code_url(key_name, page, manu: Octopart_manu) -> str:
     cate_str = str(key_name)
