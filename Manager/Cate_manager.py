@@ -61,18 +61,17 @@ def createDayTask(unit:int):
 
 # 分解数量大的ppn列表
 def decompositionPPN(unit: int):
-    source_file = PathHelp.get_file_path(None, 'TNXP.xlsx')
-    source_ppn = ExcelHelp.read_col_content(file_name=source_file, sheet_name='ppn7', col_index=1)
-    source_ppn = source_ppn[0:726]
-    history_sheets = []
-    history_ppn = set()
-    for sheet_name in history_sheets:
-        history_ppn = history_ppn.union(set(ExcelHelp.read_col_content(file_name=source_file, sheet_name=sheet_name, col_index=1)))
-    sava_fold = '/Users/liuhe/Desktop/progress/TNXP/discontiue/p7/'
-    ppn_all = list(set(source_ppn).difference(set(history_ppn)))
-
-    ppn_all = ppn_all[0:]
-    ppn_all.sort()
+    source_file = PathHelp.get_file_path(None, 'TRuStock.xlsx')
+    source_ppn = ExcelHelp.read_col_content(file_name=source_file, sheet_name='IC_stock_sum', col_index=1)
+    source_ppn = source_ppn[0:3300]
+    # history_sheets = []
+    # history_ppn = set()
+    # for sheet_name in history_sheets:
+    #     history_ppn = history_ppn.union(set(ExcelHelp.read_col_content(file_name=source_file, sheet_name=sheet_name, col_index=1)))
+    # ppn_all = list(set(source_ppn).difference(set(history_ppn)))
+    sava_fold = '/Users/liuhe/Desktop/progress/TRuStock/'
+    ppn_all = source_ppn[0:]
+    # ppn_all.sort()
     stop_quotient = 0
     result = []
     for (index, ppn) in enumerate(ppn_all):
@@ -95,7 +94,7 @@ def decompositionPPN(unit: int):
 
 
 def Ti():
-    source_file = "/Users/liuhe/Desktop/progress/TRu_needs/RuNeeds0918.xlsx"
+    source_file = "/Users/liuhe/Desktop/progress/TRuStock/TRuStock.xlsx"
     arr1 = ExcelHelp.read_sheet_content_by_name(source_file, sheet_name='Sheet1')[0: 1000]
     arr2 = ExcelHelp.read_sheet_content_by_name(source_file, sheet_name='Sheet1')[1000: 2000]
     arr3 = ExcelHelp.read_sheet_content_by_name(source_file, sheet_name='Sheet1')[2000: 3000]
@@ -154,6 +153,13 @@ def ros_cate():
     ExcelHelp.add_arr_to_col(path, 'keword_new',dim_arr=result)
 
 
+def jinshunRenesas2():
+    file = '/Users/liuhe/Desktop/progress/TReneseas_all/JinShun2/renesas/sum.xlsx'
+    excel_ppn = ExcelHelp.read_col_content(file, 'ppn', 1)
+    renesas_old = ExcelHelp.read_col_content('/Users/liuhe/Desktop/progress/TReneseas_all/TRenesa.xlsx', 'only_ppn', 1)
+    result = list(set(excel_ppn).difference(set(renesas_old)))
+    ExcelHelp.add_arr_to_col(file, 'new_ppn', result)
+
 
 if __name__ == "__main__":
     # get_ICSupplierAndHot(20, 300)
@@ -162,4 +168,5 @@ if __name__ == "__main__":
     # createDayTask(500)
     # decompositionPPN(500)
     # adi_stock()
-    Ti()
+    # Ti()
+    jinshunRenesas2()

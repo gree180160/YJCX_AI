@@ -66,8 +66,11 @@ def daysPassed(thatDay: str) -> int:
     try:
         now = datetime.now()
         past = thatDay
-        past = list(map(int, past.split('-')))
-        past = datetime(past[0], past[1], past[2])
+        past = list(map(int, past.split('/')))
+        if past.__len__() == 2:
+            past = datetime(past[0], past[1], 1)
+        else:
+            past = datetime(past[0], past[1], past[1])
         delta = now - past
         result = delta.days
     except:
@@ -84,3 +87,7 @@ def waitfor_kind(kind:int, is_load_page, isDebug):
     else:
         waitfor(is_load_page=is_load_page, isDebug=isDebug)
 
+
+if __name__ == "__main__":
+    result = daysPassed('2023/08')
+    print(result)

@@ -1,3 +1,4 @@
+# 对于贸易商数量超过5家的，跑一下正能量里面的价格，取3个月内的最高值，没有价格则忽略
 import base64
 import random
 import ssl
@@ -5,7 +6,7 @@ import time
 
 import undetected_chromedriver as uc
 from selenium.webdriver.common.by import By
-from WRTools import LogHelper, PathHelp, ExcelHelp, WaitHelp
+from WRTools import LogHelper, PathHelp, ExcelHelp, WaitHelp, MySqlHelp_recommanded
 from Manager import AccManage, TaskManager
 import bom_price_info
 import re
@@ -111,9 +112,9 @@ def analy_html(cate_index, ppn, manu):
     # 默认直接现实的row
     valid_supplier_arr = []
     # total_count 总数在只有一页时不显示
-    total_count = min(total_count, showed_supplier.__len__())
+    total_count = max(total_count, showed_supplier.__len__())
     if total_count > 0 or showed_supplier.__len__() > 0:
-        while showed_supplier.__len__() < total_count and need_more:
+        while showed_supplier.__len__() <= total_count and need_more:
             click_more_supplier()
             WaitHelp.waitfor(True, False)
             showed_supplier = show_suppliers()
@@ -121,13 +122,16 @@ def analy_html(cate_index, ppn, manu):
         for aside in showed_supplier:
             bom_price_ele = get_supplier_info(aside=aside, cate_index=cate_index, ppn=ppn, manu=manu)
             # 无论是否有效都记录
-            valid_supplier_arr.append(bom_price_ele.descritpion_arr())
-        ExcelHelp.add_arr_to_sheet(
-            file_name=result_save_file,
-            sheet_name='bom_price',
-            dim_arr=valid_supplier_arr)
+            if bom_price_ele and str(bom_price_ele.supplier).__len__() > 0:
+                valid_supplier_arr.append(bom_price_ele.descritpion_arr())
+        MySqlHelp_recommanded.DBRecommandChip().bom_price_write(valid_supplier_arr)
+        # ExcelHelp.add_arr_to_sheet(
+        #     file_name=result_save_file,
+        #     sheet_name='bom_price',
+        #     dim_arr=valid_supplier_arr)
         valid_supplier_arr.clear()
     else:
+        MySqlHelp_recommanded.DBRecommandChip().bom_price_write([[ppn, '??', '??', "??"]])
         print(f'{cate_index}th {ppn} has no record')
 
 
@@ -143,7 +147,7 @@ def need_click_more(li_arr, cate_index, ppn, manu):
     if li_arr.__len__() > 0:
         last_value = li_arr[-1]
         bom_price_ele = get_supplier_info(last_value, cate_index, ppn, manu)
-        if bom_price_ele.is_valid_supplier():
+        if bom_price_ele and bom_price_ele.is_valid_supplier():
             result = True
     return result
 
@@ -187,12 +191,12 @@ def get_supplier_info(aside, cate_index, ppn, manu) -> bom_price_info.Bom_price_
             price_str = price_section.find_element(by=By.TAG_NAME, value='p').text
         except:
             price_str = '--'
-        release_time_section = section_arr[8]
+        release_time_section = section_arr[-4]
         try:
             release_time = release_time_section.find_element(by=By.TAG_NAME, value='p').text
         except:
             release_time = '--'
-        stock_num_section = section_arr[9]
+        stock_num_section = section_arr[-3]
         try:
             stock_num = stock_num_section.find_element(by=By.TAG_NAME, value='p').text
         except:
@@ -203,6 +207,7 @@ def get_supplier_info(aside, cate_index, ppn, manu) -> bom_price_info.Bom_price_
         return bom_price_ele
     except Exception as e:
         LogHelper.write_log(PathHelp.get_file_path('Bom_price', 'bom_price_log.txt'), f'cate is: {ppn} index is:{cate_index} , error is : {e}')
+        return None
 
 
 def main():
@@ -217,8 +222,6 @@ def main():
             continue
         elif ppn_index in range(sourceFile_dic['startIndex'], sourceFile_dic['endIndex']):
             print(f'cate_index is: {ppn_index}  cate_name is: {ppn}')
-            # todo
-            ppn = '74LVX4245MTCX'
             go_to_cate(ppn_index, str(ppn))
             if ppn_index > 0 and ppn_index % 15 == 0:
                 time.sleep(480)

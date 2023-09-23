@@ -14,8 +14,8 @@ ssl._create_default_https_context = ssl._create_unverified_context
 sourceFile_dic = {'fileName': PathHelp.get_file_path(None, f'{TaskManager.Taskmanger().task_name}.xlsx'),
                   'sourceSheet': 'ppn',
                   'colIndex': 1,
-                  'startIndex': 510,
-                  'endIndex': TaskManager.Taskmanger().end_index}
+                  'startIndex': 2620,
+                  'endIndex': 2630}
 
 
 total_page = 1

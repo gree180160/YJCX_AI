@@ -12,24 +12,22 @@ class Bom_price_info:
         self.quoted_price = quoted_price.replace('官\n', '')
         self.release_time = release_time
         self.stock_num = stock_num
-        self.update_time = time.strftime('%Y-%m-%d', time.localtime())
         self.valid_supplier = self.is_valid_supplier()
 
     def is_valid_supplier(self) -> bool:
-        valid_time_arr = ['3天内', '1周内', '今天', '昨天']
+        valid_time_arr = ['3天内', '1周内', '今天', '昨天', '1月内']
         if valid_time_arr.__contains__(self.release_time):
             return True
         else:
             numberDays = WRTools.WaitHelp.daysPassed(self.release_time)
-            if 0 < numberDays <= 8:
+            if 0 < numberDays <= 90: #8
                 return True
             else:
                 print(f'thatDay invalid: {self.release_time}')
             return False
-
-
+# (`ppn`, `manu`, `supplier`, `package`, `lot`, `quoted_price`, `release_time`, `stock_num`, `valid_supplier`)
     def description_str(self):
-        result = f'{self.cate or "--"}, {self.manu or "--"}, {self.supplier}, {self.package}, {self.lot}, {self.quoted_price}, {self.release_time}, {self.stock_num}, {self.update_time}, {"valid supplier" if self.valid_supplier else "invalid supplier"}'
+        result = f'{self.cate or "--"}, {self.manu or "--"}, {self.supplier}, {self.package}, {self.lot}, {self.quoted_price}, {self.release_time}, {self.stock_num}, {"valid supplier" if self.valid_supplier else "invalid supplier"}'
         return result
 
     def descritpion_arr(self):
@@ -41,7 +39,6 @@ class Bom_price_info:
                   self.quoted_price,
                   self.release_time,
                   self.stock_num,
-                  self.update_time,
                   self.valid_supplier]
         return result
 
