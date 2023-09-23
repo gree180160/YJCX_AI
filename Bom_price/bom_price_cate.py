@@ -20,12 +20,12 @@ driver.set_page_load_timeout(120)
 # accouts_arr = [["深圳市元极创新电子有限公司", "caigou01", "Yjcx123"]]
 accouts_arr = [[AccManage.Bom['c'], AccManage.Bom['n'], AccManage.Bom['p']]]
 
-sourceFile_dic = {'fileName': PathHelp.get_file_path(None, 'TTI.xlsx'),
-                  'sourceSheet': 'making',
+sourceFile_dic = {'fileName': PathHelp.get_file_path(None, 'TRuStock.xlsx'),
+                  'sourceSheet': 'IC_stock_sum',
                   'colIndex': 1,
-                  'startIndex': TaskManager.Taskmanger().start_index,
-                  'endIndex': TaskManager.Taskmanger().end_index}
-result_save_file = PathHelp.get_file_path(TaskManager.Taskmanger().task_name, 'bom_price.xlsx')
+                  'startIndex': 0,
+                  'endIndex': 125}
+# result_save_file = PathHelp.get_file_path(TaskManager.Taskmanger().task_name, 'bom_price.xlsx')
 
 default_url = 'https://www.bom.ai/ic/74LVX4245MTCX.html'
 log_file = PathHelp.get_file_path('Bom_price', 'bom_price_log.txt')
