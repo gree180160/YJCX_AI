@@ -6,19 +6,19 @@ class Taskmanger:
     task_name = 'TRuStock'
     if AccManage.Device_ID == 'Mac':
         start_index = 0
-        end_index = 660
+        end_index = 400
     elif AccManage.Device_ID == '11':
-        start_index = 660
-        end_index = 1320
+        start_index = 400
+        end_index = 800
     elif AccManage.Device_ID == 'sz':
-        start_index = 1320
-        end_index = 1980
+        start_index = 800
+        end_index = 1200
     elif AccManage.Device_ID == '42':
-        start_index = 1980
-        end_index = 2640
+        start_index = 1200
+        end_index = 1600
     elif AccManage.Device_ID == '04':
-        start_index = 2640
-        end_index = 3300
+        start_index = 1600
+        end_index = 1974
 
 
 class Task_IC_hot_F_manger:
@@ -33,12 +33,6 @@ class Task_IC_hot_C_manger:
     base = 11800
     start_index = base + 79
     end_index = base + 100
-    # task_name = 'TTI'
-    # base = 2000
-    # start_index = base + 0
-    # end_index = base + 100
 
-#
-# class DB_Task:
-#     def get_sum_ppn(self):
-#         MySqlHelp.IC_hot_m_read()
+
+

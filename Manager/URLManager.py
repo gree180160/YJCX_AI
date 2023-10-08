@@ -45,7 +45,7 @@ class Octopart_manu(Enum):
 
 
 # octopart
-# https://octopart.com/search?q=8P34S1204NLGI8&currency=USD&specs=0
+# https://octopart.com/search?q=PIC18&currency=USD&specs=0
 def octopart_get_page_url(key_name, page, manu: Octopart_manu) -> str:
     cate_str = str(key_name)
     cate_str = cate_str.replace('/', '%2F')
@@ -137,6 +137,6 @@ def IC_hot_url(ppn: str, isWeek):
 
 
 if __name__ == "__main__":
-    octopart_page_more_url(sourcefile = PathHelp.get_file_path(None, file_name='TSkyworks.xlsx'), page0_sheet='page0_ppn_2', manu=Octopart_manu.Skyworks)
+    octopart_page_more_url(sourcefile=PathHelp.get_file_path(None, file_name='TSkyworks.xlsx'), page0_sheet='page0_ppn_2', manu=Octopart_manu.Skyworks)
 
 

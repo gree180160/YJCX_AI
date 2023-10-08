@@ -20,11 +20,11 @@ driver.set_page_load_timeout(120)
 # accouts_arr = [["深圳市元极创新电子有限公司", "caigou01", "Yjcx123"]]
 accouts_arr = [[AccManage.Bom['c'], AccManage.Bom['n'], AccManage.Bom['p']]]
 
-sourceFile_dic = {'fileName': PathHelp.get_file_path(None, 'TRuStock.xlsx'),
-                  'sourceSheet': 'IC_stock_sum',
+sourceFile_dic = {'fileName': PathHelp.get_file_path(None, f'{TaskManager.Taskmanger().task_name}.xlsx'),
+                  'sourceSheet': 'M10ppn',
                   'colIndex': 1,
-                  'startIndex': 0,
-                  'endIndex': 125}
+                  'startIndex': TaskManager.Taskmanger().task_name.start_index,
+                  'endIndex':  TaskManager.Taskmanger().task_name.end_index}
 # result_save_file = PathHelp.get_file_path(TaskManager.Taskmanger().task_name, 'bom_price.xlsx')
 
 default_url = 'https://www.bom.ai/ic/74LVX4245MTCX.html'
@@ -115,10 +115,13 @@ def analy_html(cate_index, ppn, manu):
     total_count = max(total_count, showed_supplier.__len__())
     if total_count > 0 or showed_supplier.__len__() > 0:
         while showed_supplier.__len__() <= total_count and need_more:
-            click_more_supplier()
-            WaitHelp.waitfor(True, False)
-            showed_supplier = show_suppliers()
-            need_more = need_click_more(showed_supplier, cate_index, ppn, manu)
+            clickResult = click_more_supplier()
+            if clickResult:
+                WaitHelp.waitfor(True, False)
+                showed_supplier = show_suppliers()
+                need_more = (need_click_more(showed_supplier, cate_index, ppn, manu))
+            else:
+                need_more = False
         for aside in showed_supplier:
             bom_price_ele = get_supplier_info(aside=aside, cate_index=cate_index, ppn=ppn, manu=manu)
             # 无论是否有效都记录
@@ -156,7 +159,12 @@ def need_click_more(li_arr, cate_index, ppn, manu):
 def click_more_supplier():
     links = driver.find_elements(By.CSS_SELECTOR, 'a.bomID_extStock_More')
     if links.__len__() > 0:
-        links[0].click()
+        try:
+            links[0].click()
+            return True
+        except Exception as e:
+            LogHelper.write_log(log_file, f'click more error {e}')
+            return False
 
 
 

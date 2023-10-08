@@ -61,15 +61,15 @@ def createDayTask(unit:int):
 
 # 分解数量大的ppn列表
 def decompositionPPN(unit: int):
-    source_file = PathHelp.get_file_path(None, 'TRuStock.xlsx')
-    source_ppn = ExcelHelp.read_col_content(file_name=source_file, sheet_name='IC_stock_sum', col_index=1)
-    source_ppn = source_ppn[0:3300]
+    source_file = "/Users/liuhe/Desktop/progress/TRuStock/2023.10/Task.xlsx"
+    source_ppn = ExcelHelp.read_col_content(file_name=source_file, sheet_name='Sheet2', col_index=1)
+    # source_ppn = source_ppn[0:2000]
     # history_sheets = []
     # history_ppn = set()
     # for sheet_name in history_sheets:
     #     history_ppn = history_ppn.union(set(ExcelHelp.read_col_content(file_name=source_file, sheet_name=sheet_name, col_index=1)))
     # ppn_all = list(set(source_ppn).difference(set(history_ppn)))
-    sava_fold = '/Users/liuhe/Desktop/progress/TRuStock/'
+    sava_fold = '/Users/liuhe/Desktop/progress/TRuStock/2023.10/'
     ppn_all = source_ppn[0:]
     # ppn_all.sort()
     stop_quotient = 0
@@ -166,7 +166,7 @@ if __name__ == "__main__":
     # get_wheat()
     # adjustopn()
     # createDayTask(500)
-    # decompositionPPN(500)
+    decompositionPPN(500)
     # adi_stock()
     # Ti()
-    jinshunRenesas2()
+    # jinshunRenesas2()

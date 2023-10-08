@@ -13,7 +13,8 @@ import time
 ssl._create_default_https_context = ssl._create_unverified_context
 
 driver_option = webdriver.ChromeOptions()
-driver = uc.Chrome(use_subprocess=True)
+# driver_option.add_argument("Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/117.0")
+driver = uc.Chrome(use_subprocess=True, options=driver_option)
 driver.set_page_load_timeout(480)
 # logic
 # https://octopart.com/search?q=8P34S1204NLGI8&currency=USD&specs=0
@@ -22,7 +23,7 @@ default_url = 'https://octopart.com/what-is-octopart'
 sourceFile_dic = {'fileName': PathHelp.get_file_path(None, f'{TaskManager.Taskmanger().task_name}.xlsx'),
                   'sourceSheet': 'ppn',
                   'colIndex': 1,
-                  'startIndex': 345,
+                  'startIndex': 499, #M9
                   'endIndex': TaskManager.Taskmanger().end_index}
 
 log_file = PathHelp.get_file_path('Octopart_price', 'ocopar_price_log.txt')
@@ -68,9 +69,13 @@ def get_manufacture_name(cate_area, opn) -> str:
 def get_supplier_info(tr, ppn, manu_name) -> octopart_price_info:
     td_arr = tr.find_elements(by=By.TAG_NAME, value='td')
     is_star = 1
+    # for Authorized and non-Authorized confused
+    author = td_arr[0]
+    is_star = author.accessible_name == 'Authorized Distributor'
+
     distribute_tr = td_arr[1]
     try:
-        distribute_name = distribute_tr.find_element(by=By.TAG_NAME, value='a').text
+        distribute_name = distribute_tr.find_element(by=By.CLASS_NAME, value='click-url').text
     except:
         distribute_name = '--'
     SKU_tr = td_arr[3]
@@ -143,15 +148,26 @@ def analy_html(pn_index, pn):
             try:
                 ppn = get_cate_name(cate_area=temp_cate_row, opn=pn)
                 manu = get_manufacture_name(cate_area=temp_cate_row, opn=pn)
+                unfold_table(temp_cate_row, ppn, manu)
                 tables = temp_cate_row.find_elements(By.CSS_SELECTOR, 'table')
                 for temp_table in tables:
-                    first_th_text = temp_table.find_elements(By.TAG_NAME, 'th')[1].text
-                    if first_th_text == 'Authorized Distributors':
-                        tbody = temp_table.find_element(By.TAG_NAME, 'tbody')
-                        tr_list = tbody.find_elements(By.TAG_NAME, 'tr')
-                        for tr_temp in tr_list:
-                            cate_price_ele = get_supplier_info(tr=tr_temp, ppn=ppn, manu_name=manu)
+
+                #     first_th_text = temp_table.find_elements(By.TAG_NAME, 'th')[1].text
+                #     if first_th_text == 'Authorized Distributors':
+                #         tbody = temp_table.find_element(By.TAG_NAME, 'tbody')
+                #         tr_list = tbody.find_elements(By.TAG_NAME, 'tr')
+                #         for tr_temp in tr_list:
+                #             cate_price_ele = get_supplier_info(tr=tr_temp, ppn=ppn, manu_name=manu)
+                #             valid_supplier_arr.append(cate_price_ele.descritpion_arr() + [pn])
+
+                    tbody = temp_table.find_element(By.TAG_NAME, 'tbody')
+                    tr_list = tbody.find_elements(By.TAG_NAME, 'tr')
+                    for tr_temp in tr_list:
+                        cate_price_ele = get_supplier_info(tr=tr_temp, ppn=ppn, manu_name=manu)
+                        if cate_price_ele.is_star:
                             valid_supplier_arr.append(cate_price_ele.descritpion_arr() + [pn])
+                        else:
+                            break;
             except Exception as e:
                 LogHelper.write_log(log_file_name=log_file, content=f'{pn} 当个cate 解析异常：{e} ')
     except Exception as e:
@@ -163,6 +179,18 @@ def analy_html(pn_index, pn):
     #     sheet_name='octopart_price',
     #     dim_arr=valid_supplier_arr)
     valid_supplier_arr.clear()
+
+
+def unfold_table(part, ppn, manu_name):
+    show_buttons = part.find_elements(By.CSS_SELECTOR, 'button.show-button')
+    if show_buttons and show_buttons.__len__() > 0:
+        table = part.find_element(By.CSS_SELECTOR, 'div.offers-tables')
+        tbody = table.find_element(By.TAG_NAME, 'tbody')
+        last_row = tbody.find_elements(By.TAG_NAME, 'tr')[-1]
+        ele = get_supplier_info(last_row, ppn, manu_name)
+        if ele.is_star:
+            show_buttons[0].click()
+            WaitHelp.waitfor(True, False)
 
 
 # 验证是否处于验证IP 页面

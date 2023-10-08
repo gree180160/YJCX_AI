@@ -117,12 +117,16 @@ class DBRecommandChip:
     def ic_stock_read(self, filter_contend):
         query = f"SELECT * FROM t_ic_stock where {filter_contend}"
         result = self.sql_read(query)
-        print(result)
         return result
 
     def bom_price_write(self, data: list):
         sql_str = "REPLACE INTO t_bom_price (ppn, manu, supplier, package, lot, quoted_price, release_time, stock_num, valid_supplier) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s)"
         self.sql_write(sql_str, data)
+
+    def bom_price_read(self, filter_contend):
+        query = f"SELECT * FROM t_bom_price where {filter_contend} order by ppn"
+        result = self.sql_read(query)
+        return result
 
     def octopart_price_write(self, data: list):
         sql_str = "REPLACE INTO t_octopart_price (ppn, manu, is_star, distribute, sku, stock, moq, currency_type,k_price, updated, opn) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)"
@@ -177,4 +181,5 @@ if __name__ == "__main__":
     #     [['VI-261-CU', 'Vicor', 5, 0, 4, 0, 0, 0, 0, 3, 0, 7, 2, 0, 0, 0, 5, 0, 1, 0, 0, 0, 2, 2, 2, 0, 1, 5, 0, 0, 1,
     #       10, 0, 0, 0, 5, 0, 1, 0, 6, 8, 0, 1, 0, 1, 1, 3, 5, 2, 0, 1, 0, 0, 2]]
     # )
-    manager.ic_stock_read(1)
+    result = manager.bom_price_read(1)
+    print(list(result).__len__())

@@ -9,7 +9,7 @@ import base64
 from selenium.webdriver.common.by import By
 import ssl
 import os
-from Manager import AccManage,URLManager
+from Manager import AccManage, URLManager, TaskManager
 
 
 ssl._create_default_https_context = ssl._create_unverified_context
@@ -25,11 +25,11 @@ driver = webdriver.Firefox(options=fire_options)
 # driver.set_window_size(height=800, width=1200)
 current_cate_has_date = True
 
-sourceFile_dic = {'fileName': PathHelp.get_file_path('TSpeedReneseas', 'Task.xlsx'),
-                  'sourceSheet': 'ppn',
+sourceFile_dic = {'fileName': PathHelp.get_file_path(None, f'{TaskManager.Taskmanger().task_name}.xlsx'),
+                  'sourceSheet': 'M10ppn',
                   'colIndex': 1,
-                  'startIndex': 0,
-                  'endIndex': 2}
+                  'startIndex': TaskManager.Taskmanger().task_name.start_index,
+                  'endIndex':  TaskManager.Taskmanger().task_name.end_index}
 result_save_file = PathHelp.get_file_path('TSpeedReneseas', 'findchip_stock.xlsx')
 login_url = "https://member.ic.net.cn/login.php"
 no_data_url = 'https://icpi.ic.net.cn/'
