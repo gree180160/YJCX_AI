@@ -13,13 +13,18 @@ ssl._create_default_https_context = ssl._create_unverified_context
 
 total_page = 1
 current_page = 1
-accouts_arr = [[AccManage.IC_stock['n'], AccManage.IC_stock['p']]]
+accouts_arr = [[AccManage.IC_hot['n'], AccManage.IC_hot['p']]]
 no_data_url = 'https://icpi.ic.net.cn/'
 
 driver = uc.Chrome(use_subprocess=True)
 driver.set_window_size(height=800, width=1200)
 current_cate_has_date = True
 
+# sourceFile_dic = {'fileName': PathHelp.get_file_path(None, f'{TaskManager.Taskmanger().task_name}.xlsx'),
+#                   'sourceSheet': 'M10ppn',
+#                   'colIndex': 1,
+#                   'startIndex': 55,
+#                   'endIndex':  TaskManager.Taskmanger().end_index}
 
 def login_action(aim_url):
     current_url = driver.current_url
@@ -143,11 +148,11 @@ def isCheckCode():
 
 # 查询列表中所有需要查询的型号的搜索指数
 def main():
-    pn_file = PathHelp.get_file_path(None, f'{TaskManager.Task_IC_hot_C_manger.task_name}.xlsx')
-    ppn_list = ExcelHelp.read_col_content(file_name=pn_file, sheet_name='ppn', col_index=1)
-    manu_list = ExcelHelp.read_col_content(file_name=pn_file, sheet_name='ppn', col_index=2)
+    pn_file = PathHelp.get_file_path(None, f'{TaskManager.Taskmanger().task_name}.xlsx')
+    ppn_list = ExcelHelp.read_col_content(file_name=pn_file, sheet_name='M10ppn', col_index=1)
+    manu_list = ExcelHelp.read_col_content(file_name=pn_file, sheet_name='M10ppn', col_index=2)
     for (index, ppn) in enumerate(ppn_list):
-        if index in range(TaskManager.Task_IC_hot_C_manger().start_index, TaskManager.Task_IC_hot_C_manger.end_index):
+        if index in range(1972, 1974):
             print(f'cate_index is: {index}  cate_name is: {ppn}')
             manu = manu_list[index]
             getSearchInfo(ppn, manu, True)

@@ -132,15 +132,17 @@ def ppn_vicor_all():
 
 
 def write_ppn_to_sql():
-    ppn_list_file = PathHelp.get_file_path(None, 'TVicor.xlsx')
-    ppn_file = ExcelHelp.read_col_content(ppn_list_file, sheet_name='ppn', col_index=1)
+    ppn_list_file = PathHelp.get_file_path(None, 'TRuStock.xlsx')
+    ppn_file = ExcelHelp.read_col_content(ppn_list_file, sheet_name='ppn_M9', col_index=1)
     ppn_db = MySqlHelp_recommanded.DBRecommandChip().ppn_read('1')
     ppn_db = [item[0] for item in ppn_db]
-    ppn_list = list(set(ppn_file).difference(set(ppn_db)))
+    ppn_list = ppn_file
+    manu_id_list = ExcelHelp.read_col_content(ppn_list_file, sheet_name='ppn_M9', col_index=4)
+    manu_name_list = ExcelHelp.read_col_content(ppn_list_file, sheet_name='ppn_M9', col_index=3)
     result = []
-    for ppn in ppn_list:
+    for (index1, ppn) in enumerate(ppn_list):
         if ppn:
-            row = [ppn, 2089, 'Vicor', 'sales_dijikey']
+            row = [ppn, manu_id_list[index1],manu_name_list[index1], 'TRuStock_M9']
             result.append(row)
     MySqlHelp_recommanded.DBRecommandChip().ppn_write(result)
 
@@ -166,7 +168,8 @@ if __name__ == "__main__":
     # get_wheat()
     # adjustopn()
     # createDayTask(500)
-    decompositionPPN(500)
+    # decompositionPPN(500)
     # adi_stock()
     # Ti()
     # jinshunRenesas2()
+    write_ppn_to_sql()

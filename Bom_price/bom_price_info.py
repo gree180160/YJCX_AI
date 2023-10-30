@@ -20,7 +20,7 @@ class Bom_price_info:
             return True
         else:
             numberDays = WRTools.WaitHelp.daysPassed(self.release_time)
-            if 0 < numberDays <= 90: #8
+            if 0 < numberDays <= 30: #8
                 return True
             else:
                 print(f'thatDay invalid: {self.release_time}')

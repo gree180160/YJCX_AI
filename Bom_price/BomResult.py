@@ -14,13 +14,13 @@ result_save_file = cate_source_file
 def bom_price_result():
     rate = get_rate()
     cate_source_file = PathHelp.get_file_path(None, 'TRuStock.xlsx')
-    pps = ExcelHelp.read_col_content(file_name=cate_source_file, sheet_name='IC_stock_sum', col_index=1)[0:619]
-    manufactures = ExcelHelp.read_col_content(file_name=cate_source_file, sheet_name='IC_stock_sum', col_index=2)[0:619]
+    pps = ExcelHelp.read_col_content(file_name=cate_source_file, sheet_name='ppn_M9', col_index=1)
+    manufactures = ExcelHelp.read_col_content(file_name=cate_source_file, sheet_name='ppn_M9', col_index=3)
     result = []
     for (index, temp_ppn) in enumerate(pps):
         ppn_str = str(temp_ppn)
         price_arr = []
-        bom_price_list = MySqlHelp_recommanded.DBRecommandChip().bom_price_read(1)
+        bom_price_list = MySqlHelp_recommanded.DBRecommandChip().bom_price_read("update_time > '2023/10/08'")
         started_record = False
         #(`ppn`, `manu`, `supplier`, `package`, `lot`, `quoted_price`, `release_time`, `stock_num`, `valid_supplier`, `update_time`)
 
@@ -40,10 +40,11 @@ def bom_price_result():
         ppn_result = [ppn_str, manufactures[index]] + price_arr
         print(ppn_result)
         result.append(ppn_result)
-    ExcelHelp.add_arr_to_sheet(file_name=cate_source_file, sheet_name='bom_price_max3', dim_arr=result)
+    ExcelHelp.add_arr_to_sheet(file_name=cate_source_file, sheet_name='bom_price_maxM9', dim_arr=result)
 
 
 def change_price_get(price_str, rate):
+    price_float = 0.00
     if price_str is not None:
         if len(price_str) > 0:
             price_str = extract_currency(price_str)
@@ -65,7 +66,7 @@ def change_price_get(price_str, rate):
 
 # 计算汇率
 def get_rate():
-    result = 7.3057  # default cate
+    result = 7.31  # default cate
     try:
         url = "https://api.exchangerate-api.com/v4/latest/USD"
         json_str = ''

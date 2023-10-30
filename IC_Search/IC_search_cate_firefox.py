@@ -19,8 +19,8 @@ accouts_arr = [[AccManage.IC_hot['n'], AccManage.IC_hot['p']]]
 # driver_option = webdriver.ChromeOptions()
 # driver_option.add_argument(f'--proxy-server=http://{IPHelper.getRandowCityIP()}')
 fire_options = webdriver.FirefoxOptions()
-fire_options.add_argument('--headless')
-fire_options.add_argument('blink-settings=imagesEnabled=false')
+# fire_options.add_argument('--headless')
+# fire_options.add_argument('blink-settings=imagesEnabled=false')
 driver = webdriver.Firefox(options=fire_options)
 # driver.set_window_size(height=800, width=1200)
 current_cate_has_date = True
@@ -28,8 +28,9 @@ current_cate_has_date = True
 sourceFile_dic = {'fileName': PathHelp.get_file_path(None, f'{TaskManager.Taskmanger().task_name}.xlsx'),
                   'sourceSheet': 'M10ppn',
                   'colIndex': 1,
-                  'startIndex': TaskManager.Taskmanger().task_name.start_index,
-                  'endIndex':  TaskManager.Taskmanger().task_name.end_index}
+                  'startIndex': TaskManager.Taskmanger().start_index,
+                  'endIndex':  TaskManager.Taskmanger().end_index}
+
 result_save_file = PathHelp.get_file_path('TSpeedReneseas', 'findchip_stock.xlsx')
 login_url = "https://member.ic.net.cn/login.php"
 no_data_url = 'https://icpi.ic.net.cn/'

@@ -125,7 +125,11 @@ def anly_webdriver(url_index, url_value):
                     print(f'ppn is :{ppn_all}')
                     # price INFO
                     try:
-                        price = productInfo_arr[1].find_element(by=By.CSS_SELECTOR, value='p.p-m-price').text
+                        m_price = productInfo_arr[1].find_element(by=By.CSS_SELECTOR, value='p.p-m-price').text
+                    except:
+                        m_price = '--'
+                    try:
+                        price = productInfo_arr[1].find_element(by=By.CSS_SELECTOR, value='p.p-price').text
                     except:
                         price = '--'
                     # STOCK INFO
@@ -154,11 +158,11 @@ def anly_webdriver(url_index, url_value):
                     except:
                         stock_num_feng = 0
                     stock_num = stock_num_zong + stock_num_feng
-                    info_arr = [ppn_all, stock_num, manuID, manuName, prodcut_des, tec_info, price]
+                    info_arr = [ppn_all, stock_num, manuID, manuName, prodcut_des, tec_info, price, m_price]
                     page_ppn_arr.append(info_arr)
                 else:
                     LogHelper.write_log(log_file_name=logFile, content=f'{url_value} row info error')
-            ExcelHelp.add_arr_to_sheet(file_name=sourceFile, sheet_name='ppn', dim_arr=page_ppn_arr)
+            ExcelHelp.add_arr_to_sheet(file_name=sourceFile, sheet_name='ppn3', dim_arr=page_ppn_arr)
             if current_page < total_page:
                 goToNextPage()
             else:

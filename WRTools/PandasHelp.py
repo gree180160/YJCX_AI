@@ -4,18 +4,18 @@ from WRTools import ExcelHelp
 
 
 def csv_to_xlsx_pd(file):
-    csv = pd.read_csv(file + '.cvs', encoding='utf-8')
+    csv = pd.read_csv(file + '.cvs', encoding='utf-8', encoding_errors='ignore')
     csv.to_excel(file + ".xlsx", sheet_name='data')
 
 
 def read_sheet_content(file_name):
-    source_data = pd.read_csv(file_name)
+    source_data = pd.read_csv(file_name, encoding='utf-8', encoding_errors='ignore')
     list2 = source_data.values.tolist()
     return list2
 
 
 def jinshun2():
-    fold = '/Users/liuhe/Desktop/progress/TReneseas_all/JinShun2/renesas/'
+    fold = '/Users/liuhe/Desktop/progress/TInfineonIGBT/JinShunFiles/'
     list_file = os.listdir(fold)  # 返回指定目录
     result = []
     for temp_file in list_file:

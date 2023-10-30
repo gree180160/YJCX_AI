@@ -12,14 +12,12 @@ from WRTools import ExcelHelp, WaitHelp, PathHelp, EmailHelper, MySqlHelp_recomm
 ssl._create_default_https_context = ssl._create_unverified_context
 
 sourceFile_dic = {'fileName': PathHelp.get_file_path(None, f'{TaskManager.Taskmanger().task_name}.xlsx'),
-                  'sourceSheet': 'M10ppn',
+                  'sourceSheet': 'ppn',
                   'colIndex': 1,
-                  'startIndex': TaskManager.Taskmanger().task_name.start_index,
-                  'endIndex':  TaskManager.Taskmanger().task_name.end_index}
-
+                  'startIndex': TaskManager.Taskmanger().start_index,
+                  'endIndex': TaskManager.Taskmanger().end_index}
 
 total_page = 1
-
 current_page = 1
 VerificationCodePage = 0
 accouts_arr = [[AccManage.IC_stock['n'], AccManage.IC_stock['p']]]

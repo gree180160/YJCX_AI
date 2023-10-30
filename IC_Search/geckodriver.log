@@ -1254,3 +1254,60 @@ console.error: (new NetworkError("Network error: TypeError: NetworkError: Networ
 Exiting due to channel error.
 Exiting due to channel error.
 Exiting due to channel error.
+1696826069154	geckodriver	INFO	Listening on 127.0.0.1:56156
+1696826069587	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "--headless" "blink-settings=imagesEnabled=false" "--remote-debugging-port" "56157" "--remote-allow-hosts" "localhost" "-foreground" "-no-remote" "-profile" "/var/folders/jc/x8nf5scd28v4wrbkt9l72vd00000gn/T/rust_mozprofileg1CQAa"
+*** You are running in headless mode.
+1696826069849	Marionette	INFO	Marionette enabled
+1696826069881	Marionette	INFO	Listening on port 56162
+Read port: 56162
+2023-10-09 12:34:29.906 plugin-container[6937:98000] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2023-10-09 12:34:29.906 plugin-container[6937:98000] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2023-10-09 12:34:29.930 plugin-container[6937:98000] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2023-10-09 12:34:29.930 plugin-container[6937:98000] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2023-10-09 12:34:29.930 plugin-container[6937:98008] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2023-10-09 12:34:29.930 plugin-container[6937:98008] nil host used in call to allowsAnyHTTPSCertificateForHost:
+WebDriver BiDi listening on ws://127.0.0.1:56157
+1696826070003	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /var/folders/jc/x8nf5scd28v4wrbkt9l72vd00000gn/T/rust_mozprofileg1CQAa/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:56157/devtools/browser/eb042822-47c0-4314-be1a-22007f4ac01b
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://member.ic.net.cn."
+JavaScript error: https://im.ic.net.cn/media/templates/ui/search_imbox.html?callback=success_jsonpCallback&_=1696826101382, line 1: SyntaxError: expected expression, got '<'
+console.error: (new TypeError("NetworkError: Network request failed", "resource://services-settings/Utils.jsm", 230))
+JavaScript warning: https://icpi.ic.net.cn/media/javascript/q.js?v=1616807239, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1696826317215	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+console.error: (new Error("Polling for changes failed: NetworkError: Network request failed.", "resource://services-settings/remote-settings.js", 334))
+1696826641227	geckodriver	INFO	Listening on 127.0.0.1:56598
+1696826641733	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "--headless" "blink-settings=imagesEnabled=false" "--remote-debugging-port" "56599" "--remote-allow-hosts" "localhost" "-foreground" "-no-remote" "-profile" "/var/folders/jc/x8nf5scd28v4wrbkt9l72vd00000gn/T/rust_mozprofilepW3jzK"
+*** You are running in headless mode.
+1696826641985	Marionette	INFO	Marionette enabled
+1696826642017	Marionette	INFO	Listening on port 56603
+2023-10-09 12:44:02.040 plugin-container[7154:101582] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2023-10-09 12:44:02.040 plugin-container[7154:101582] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2023-10-09 12:44:02.042 plugin-container[7154:101582] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2023-10-09 12:44:02.042 plugin-container[7154:101582] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2023-10-09 12:44:02.042 plugin-container[7154:101584] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2023-10-09 12:44:02.042 plugin-container[7154:101584] nil host used in call to allowsAnyHTTPSCertificateForHost:
+Read port: 56603
+WebDriver BiDi listening on ws://127.0.0.1:56599
+1696826642137	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /var/folders/jc/x8nf5scd28v4wrbkt9l72vd00000gn/T/rust_mozprofilepW3jzK/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:56599/devtools/browser/f651baed-f626-4350-9fd5-84227ca2d443
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://member.ic.net.cn."
+JavaScript error: https://im.ic.net.cn/media/templates/ui/search_imbox.html?callback=success_jsonpCallback&_=1696826668073, line 1: SyntaxError: expected expression, got '<'
+console.error: (new TypeError("NetworkError: Network request failed", "resource://services-settings/Utils.jsm", 230))
+JavaScript warning: https://icpi.ic.net.cn/media/javascript/q.js?v=1616807239, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1696826960491	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+console.error: (new Error("Polling for changes failed: NetworkError: Network request failed.", "resource://services-settings/remote-settings.js", 334))
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+Exiting due to channel error.
