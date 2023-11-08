@@ -20,15 +20,15 @@ result_save_file = cate_source_file
 
 # 将同一个ppn到所有stock 累加，然后按照保存到数组中, 没有数据的，用/填充
 def IC_stock_sum():
-    cate_source_file = PathHelp.get_file_path(None, 'TRuStock.xlsx')
-    pps = ExcelHelp.read_col_content(file_name=cate_source_file, sheet_name='ppn_M9', col_index=1)
-    manufactures = ExcelHelp.read_col_content(file_name=cate_source_file, sheet_name='ppn_M9', col_index=3)
+    cate_source_file = PathHelp.get_file_path(None, 'TMitsubishi.xlsx')
+    pps = ExcelHelp.read_col_content(file_name=cate_source_file, sheet_name='ppn', col_index=1)
+    manufactures = ExcelHelp.read_col_content(file_name=cate_source_file, sheet_name='ppn', col_index=3)
     result = []
     for (index, temp_ppn) in enumerate(pps):
         ppn_str = str(temp_ppn)
         valid_supplier_sum = 0
         valid_stock_sum = 0
-        IC_stocks = MySqlHelp_recommanded.DBRecommandChip().ic_stock_read(("update_time > '2023/10/08'"))
+        IC_stocks = MySqlHelp_recommanded.DBRecommandChip().ic_stock_read(("update_time > '2023/10/28'"))
         # (`ppn`, `manu`, `supplier`, `isICCP`, `isSSCP`, `iSRanking`, `isHotSell`, `stock_num`, `update_time`)
         # IC_stocks = ExcelHelp.read_sheet_content_by_name(file_name=IC_source_file, sheet_name='IC_stock')
         for row_content in IC_stocks:
@@ -46,7 +46,7 @@ def IC_stock_sum():
                     valid_stock_sum += stock_num
                     print(row_content)
         result.append([ppn_str, manufactures[index], valid_supplier_sum, int(valid_stock_sum)])
-    ExcelHelp.add_arr_to_sheet(file_name=cate_source_file, sheet_name="IC_stock_sum2M9", dim_arr=result)
+    ExcelHelp.add_arr_to_sheet(file_name=cate_source_file, sheet_name="IC_stock_sum", dim_arr=result)
 
 
 def adjust():
@@ -57,8 +57,6 @@ def adjust():
         row_value = [temp_row[0], temp_row[1], temp_row[2], temp_row[3]*6]
         result.append(row_value)
     ExcelHelp.add_arr_to_sheet(file_name=cate_source_file, sheet_name="IC_stock_sum2", dim_arr=result)
-
-
 
 
 if __name__ == "__main__":

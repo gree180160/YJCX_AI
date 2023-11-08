@@ -61,8 +61,8 @@ def createDayTask(unit:int):
 
 # 分解数量大的ppn列表
 def decompositionPPN(unit: int):
-    source_file = "/Users/liuhe/Desktop/progress/TRuStock/2023.10/Task.xlsx"
-    source_ppn = ExcelHelp.read_col_content(file_name=source_file, sheet_name='Sheet2', col_index=1)
+    source_file = "/Users/liuhe/Desktop/progress/TRuStock/2023.10/TRuStock10.xlsx"
+    source_ppn = ExcelHelp.read_col_content(file_name=source_file, sheet_name='ppn', col_index=1)
     # source_ppn = source_ppn[0:2000]
     # history_sheets = []
     # history_ppn = set()
@@ -132,27 +132,45 @@ def ppn_vicor_all():
 
 
 def write_ppn_to_sql():
-    ppn_list_file = PathHelp.get_file_path(None, 'TRuStock.xlsx')
-    ppn_file = ExcelHelp.read_col_content(ppn_list_file, sheet_name='ppn_M9', col_index=1)
-    ppn_db = MySqlHelp_recommanded.DBRecommandChip().ppn_read('1')
-    ppn_db = [item[0] for item in ppn_db]
+    ppn_list_file = PathHelp.get_file_path(None, 'TMitsubishi.xlsx')
+    sheet_name = 'Sheet1'
+    ppn_file = ExcelHelp.read_col_content(ppn_list_file, sheet_name=sheet_name, col_index=1)
+    # ppn_db = MySqlHelp_recommanded.DBRecommandChip().ppn_read('1')
+    # ppn_db = [item[0] for item in ppn_db]
     ppn_list = ppn_file
-    manu_id_list = ExcelHelp.read_col_content(ppn_list_file, sheet_name='ppn_M9', col_index=4)
-    manu_name_list = ExcelHelp.read_col_content(ppn_list_file, sheet_name='ppn_M9', col_index=3)
+    manu_id_list = ExcelHelp.read_col_content(ppn_list_file, sheet_name=sheet_name, col_index=3)
+    manu_name_list = ExcelHelp.read_col_content(ppn_list_file, sheet_name=sheet_name, col_index=2)
     result = []
     for (index1, ppn) in enumerate(ppn_list):
         if ppn:
-            row = [ppn, manu_id_list[index1],manu_name_list[index1], 'TRuStock_M9']
+            row = [ppn, manu_id_list[index1],manu_name_list[index1], 'TinaMitsubishiIGBT']
             result.append(row)
     MySqlHelp_recommanded.DBRecommandChip().ppn_write(result)
 
 
-def ros_cate():
-    path = '/Users/liuhe/Desktop/progress/TTender_info/ros_tender/ros_keyword.xlsx'
-    arr1 = ExcelHelp.read_col_content(path, sheet_name='keywords1', col_index=1)
-    arr2 = ExcelHelp.read_col_content(path, sheet_name='keywords2', col_index=1)
-    result = list(set(arr2).difference(set(arr1)))
-    ExcelHelp.add_arr_to_col(path, 'keword_new',dim_arr=result)
+def ru_stock_nonRepeat():
+    new_path = '/Users/liuhe/Desktop/progress/TRuStock/2023.10/oc/RuInquire2023.10sum.xlsx'
+    new_ppnInfo = ExcelHelp.read_sheet_content_by_name(new_path, sheet_name='ppn')
+    old_path = PathHelp.get_file_path(None, 'TRuStock.xlsx')
+    old1 = ExcelHelp.read_col_content(old_path, sheet_name='ppn_M8', col_index=1)
+    old2 = ExcelHelp.read_col_content(old_path, sheet_name='ppn_M9', col_index=1)
+    old_all = old2 + old1
+    result = []
+    for temp_row in new_ppnInfo:
+        if old_all.__contains__(temp_row[0]):
+            continue
+        else:
+            new_list_cell = []
+            if temp_row[0]:
+                new_list_cell.append(temp_row[0])
+            if temp_row[1]:
+                new_list_cell.append(temp_row[1])
+            if temp_row[2]:
+                new_list_cell.append(temp_row[2])
+            if temp_row[3]:
+                new_list_cell.append(temp_row[3])
+            result.append(new_list_cell)
+    ExcelHelp.add_arr_to_sheet(new_path, 'ppn_new', dim_arr=result)
 
 
 def jinshunRenesas2():
@@ -168,8 +186,10 @@ if __name__ == "__main__":
     # get_wheat()
     # adjustopn()
     # createDayTask(500)
-    # decompositionPPN(500)
+
     # adi_stock()
     # Ti()
     # jinshunRenesas2()
-    write_ppn_to_sql()
+    # write_ppn_to_sql()
+    # decompositionPPN(500)
+    ru_stock_nonRepeat()

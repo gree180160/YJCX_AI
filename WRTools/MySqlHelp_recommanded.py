@@ -132,6 +132,19 @@ class DBRecommandChip:
         sql_str = "REPLACE INTO t_octopart_price (ppn, manu, is_star, distribute, sku, stock, moq, currency_type,k_price, updated, opn) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)"
         self.sql_write(sql_str, data)
 
+    def octopart_price_read(self, filter_contend):
+        query = f"SELECT * FROM t_octopart_price where {filter_contend} order by ppn"
+        result = self.sql_read(query)
+        return result
+
+    def findchip_stock_write(self, data: list):
+        sql_str = "REPLACE INTO t_findchips_stock (ppn, manu, supplier, authorized, part_url, stock_str) VALUES (%s, %s, %s, %s, %s, %s)"
+        self.sql_write(sql_str, data)
+
+    def findchip_stock_read(self, data: list):
+        sql_str = "SELECT * FROM t_findchips_stock where {filter_contend} order by ppn"
+        self.sql_write(sql_str, data)
+
     def ppn_write(self, data: list):
         sql_str = "REPLACE INTO t_ppn (ppn, manu_id, manu_name, source) VALUES (%s, %s, %s, %s)"
         self.sql_write(sql_str, data)

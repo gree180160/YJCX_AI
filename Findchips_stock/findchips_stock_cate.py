@@ -3,19 +3,18 @@ import time
 
 from bs4 import BeautifulSoup
 import requests
-from WRTools import IPHelper, UserAgentHelper, LogHelper, WaitHelp, ExcelHelp, PathHelp
+from WRTools import UserAgentHelper, LogHelper, WaitHelp, ExcelHelp, PathHelp,MySqlHelp_recommanded
 from Findchips_stock.findchips_stock_info import findchips_stock_info_onePart, findchips_stock_info_oneSupplier
 from Manager import TaskManager
 
 
 ssl._create_default_https_context = ssl._create_unverified_context
 
-sourceFile_dic = {'fileName': PathHelp.get_file_path(TaskManager.Taskmanger().task_name, 'Task.xlsx'),
-                  'sourceSheet': 'ppn',
+sourceFile_dic = {'fileName': PathHelp.get_file_path(None, f'{TaskManager.Taskmanger().task_name}.xlsx'),
+                  'sourceSheet': 'ppn_M9',
                   'colIndex': 1,
-                  'startIndex': TaskManager.Taskmanger().start_index,
+                  'startIndex': 159,
                   'endIndex': TaskManager.Taskmanger().end_index}
-result_save_file = PathHelp.get_file_path(TaskManager.Taskmanger().task_name, 'findchip_stock.xlsx')
 
 log_file = PathHelp.get_file_path('Findchips_stock', 'findchips_stock_log.txt')
 cookies = {'fc_locale':'zh-CN', 'fc_timezone':'Asia%2FShanghai'}
@@ -46,10 +45,11 @@ def get_findchips_stock(cate_index, cate_name, send_email):
     # 该ppn 没有记录
     if not has_content(soup):
         supplier_info_arr = [[cate_name, "//", '//', False, '', "--"]]
-        ExcelHelp.add_arr_to_sheet(
-            file_name=result_save_file,
-            sheet_name='findchip_stock',
-            dim_arr=supplier_info_arr)
+        print(supplier_info_arr)
+        # ExcelHelp.add_arr_to_sheet(
+        #     file_name=result_save_file,
+        #     sheet_name='findchip_stock',
+        #     dim_arr=supplier_info_arr)
         return
     try:
         supplier_list = soup.select('div .distributor-results')
@@ -75,7 +75,6 @@ def get_findchips_stock(cate_index, cate_name, send_email):
                 for tr in tr_list:
                     td_arr = tr.select('td')
                     part_a = td_arr[0].find('a')
-                    part_value = part_a.string
                     part_url = part_a['href'][0:30]
                     manu_value = td_arr[1].text
                     stock_str = td_arr[3].text
@@ -93,19 +92,13 @@ def get_findchips_stock(cate_index, cate_name, send_email):
                                                                      authorized=is_author, part_url=part_url,
                                                                      stock_sum=stock_sum)
                     supplier_info_arr.append(supplier_info.descritpion_arr())
-        ExcelHelp.add_arr_to_sheet(
-            file_name=result_save_file,
-            sheet_name='findchip_stock',
-            dim_arr=supplier_info_arr)
+        MySqlHelp_recommanded.DBRecommandChip().findchip_stock_write(data=supplier_info_arr)
         supplier_info_arr.clear()
         WaitHelp.waitfor(False, isDebug=False)
     except Exception as e:
         LogHelper.write_log(log_file, f'{cate_name} request get exception: {e}')
         supplier_info_arr = [[cate_name, "//", '//', False, '', "//"]]
-        ExcelHelp.add_arr_to_sheet(
-            file_name=result_save_file,
-            sheet_name='findchip_stock',
-            dim_arr=supplier_info_arr)
+        print(supplier_info_arr)
 
 
 # 是否有合适的搜索结果
@@ -123,7 +116,8 @@ def has_content(soup):
 def combine_result(source_files:[], aim_file):
     for temp in source_files:
         data = ExcelHelp.read_sheet_content_by_name(file_name=temp, sheet_name='findchip_stock')
-        ExcelHelp.add_arr_to_sheet(file_name=aim_file, sheet_name='findchip_stock', dim_arr=data)
+
+        # ExcelHelp.add_arr_to_sheet(file_name=aim_file, sheet_name='findchip_stock', dim_arr=data)
         time.sleep(2.0)
 
 

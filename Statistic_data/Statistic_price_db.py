@@ -20,15 +20,6 @@ octopart_sheet_name = 'octopart_price'
 bom_sheet_name = 'bom_price'
 
 
-octopart_file_arr = ['/Users/liuhe/Desktop/progress/TVicor/15H/04/octopart_price.xlsx',
-                    '/Users/liuhe/Desktop/progress/TVicor/15H/11/octopart_price.xlsx',
-                    '/Users/liuhe/Desktop/progress/TVicor/15H/sz/octopart_price.xlsx',
-                    PathHelp.get_file_path('TVicor15H', 'octopart_price.xlsx')]
-bom_file_arr = ['/Users/liuhe/Desktop/progress/TVicor/15H/04/bom_price.xlsx',
-                '/Users/liuhe/Desktop/progress/TVicor/15H/11/bom_price.xlsx',
-                '/Users/liuhe/Desktop/progress/TVicor/15H/sz/bom_price.xlsx',
-                PathHelp.get_file_path('TVicor15H', 'bom_price.xlsx')]
-
 # little ppn
 # octopart_file_arr = [PathHelp.get_file_path('TVicor15H', 'octopart_price.xlsx')]
 # bom_file_arr = [PathHelp.get_file_path('TVicor15H', 'bom_price.xlsx')]
@@ -64,7 +55,7 @@ def get_bom_price(file_index, ppn_index, ppn, rate):
             manu = row_content[1]
             # print(f'是否有报价记录 is: {row_content[9]}')
             valid_supplier = (row_content[9] == "TRUE" or row_content[9])
-            if not valid_supplier:  # 只需要三天内，一周内掉报价
+            if not valid_supplier:  # 只需要三天内，一周内,一个月内的报价
                 break
             price_str = row_content[5]
             if price_str is not None:

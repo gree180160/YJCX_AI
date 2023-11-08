@@ -1,8 +1,8 @@
 # 统计pn 在IC 交谊网的热度
-from WRTools import ExcelHelp, PathHelp
+from WRTools import ExcelHelp, PathHelp, MySqlHelp_recommanded
 import base64
 
-pn_file = PathHelp.get_file_path(super_path=None, file_name='TDisconfinue_IC_Hot.xlsx')
+pn_file = PathHelp.get_file_path(super_path=None, file_name='TRuStock.xlsx')
 
 def get_price_level(pn) ->str:
     result = ""
@@ -82,8 +82,43 @@ def statistic_simple():
         statistic_info = [pn, manu, str(week_search[0]), str(week_search[1]),
                           str(week_search[2]), str(month_search[0]), str(month_search[1]), str(month_search[2])]
         search_statistic_arr.append(statistic_info)
-    ExcelHelp.add_arr_to_sheet(file_name=pn_file, sheet_name='IC_statistic_simple', dim_arr=search_statistic_arr)
+    ExcelHelp.add_arr_to_sheet(file_name=pn_file, sheet_name='IC_search', dim_arr=search_statistic_arr)
+
+
+############################   DB    #####################################################
+def getDBData_m():
+    # IC_hot_m_read
+    IC_Search_list_m = MySqlHelp_recommanded.DBRecommandChip().IC_hot_m_read("update_time > '2023/10/08'")
+    result_m = []
+    for temp in IC_Search_list_m:
+        search_num_arr = [temp[2], temp[3], temp[4], temp[5], temp[6], temp[7], temp[8], temp[9], temp[10], temp[11], temp[12], temp[13]]
+        first_value = temp[2]
+        search_num_arr.sort()
+        if search_num_arr and search_num_arr.__len__() > 0:
+            ppnInfo = [temp[0], temp[1], search_num_arr[search_num_arr.__len__() - 1], search_num_arr[search_num_arr.__len__() - 2], first_value]
+        result_m.append(ppnInfo)
+    ExcelHelp.add_arr_to_sheet(pn_file, 'IC_search_m', result_m)
+
+
+def getDBData_w():
+    IC_Search_list_w = MySqlHelp_recommanded.DBRecommandChip().IC_hot_w_read("update_time > '2023/10/08'")
+    result_w = []
+    for temp in IC_Search_list_w:
+        search_num_arr = [temp[2], temp[3], temp[4], temp[5], temp[6], temp[7], temp[8], temp[9], temp[10],
+                          temp[11],temp[12], temp[13], temp[14], temp[15], temp[16], temp[17], temp[18], temp[19], temp[20],
+                          temp[21], temp[22], temp[23], temp[24], temp[25], temp[26], temp[27], temp[28], temp[29],temp[30],
+                          temp[31], temp[32], temp[33], temp[34], temp[35], temp[36], temp[37], temp[38], temp[39],temp[40],
+                          temp[41], temp[42], temp[43], temp[44], temp[45], temp[46], temp[47], temp[48], temp[49],temp[50],
+                          temp[51], temp[52], temp[53]
+                          ]
+        first_value = temp[2]
+        search_num_arr.sort()
+        if search_num_arr and search_num_arr.__len__() > 0:
+            ppnInfo = [temp[0], temp[1], search_num_arr[search_num_arr.__len__() - 1], search_num_arr[search_num_arr.__len__() - 2], first_value]
+        result_w.append(ppnInfo)
+    ExcelHelp.add_arr_to_sheet(pn_file, 'IC_search_w', result_w)
 
 
 if __name__ == "__main__":
-    statistic_simple()
+    getDBData_m()
+    getDBData_w()

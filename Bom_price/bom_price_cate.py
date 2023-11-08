@@ -23,7 +23,7 @@ accouts_arr = [[AccManage.Bom['c'], AccManage.Bom['n'], AccManage.Bom['p']]]
 sourceFile_dic = {'fileName': PathHelp.get_file_path(None, f'{TaskManager.Taskmanger().task_name}.xlsx'),
                   'sourceSheet': 'ppn',
                   'colIndex': 1,
-                  'startIndex': TaskManager.Taskmanger().start_index,
+                  'startIndex': 0,
                   'endIndex': TaskManager.Taskmanger().end_index}
 # result_save_file = PathHelp.get_file_path(TaskManager.Taskmanger().task_name, 'bom_price.xlsx')
 
@@ -134,7 +134,7 @@ def analy_html(cate_index, ppn, manu):
         #     dim_arr=valid_supplier_arr)
         valid_supplier_arr.clear()
     else:
-        MySqlHelp_recommanded.DBRecommandChip().bom_price_write([[ppn, '??', '??', "??"]])
+        # MySqlHelp_recommanded.DBRecommandChip().bom_price_write([[ppn, '??', '??', "??"]])
         print(f'{cate_index}th {ppn} has no record')
 
 

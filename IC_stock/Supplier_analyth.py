@@ -30,7 +30,7 @@ class Manu_supp:
                 supplier_index = len(self.supplier_info) - 1
             self.supplier_info[supplier_index].ppn_count += 1
 
-    #  到处数据，导出的是一个二维数组
+    #  导出数据，导出的是一个二维数组
     def output_record(self) -> list:
         result = []
         self.supplier_info = sorted(self.supplier_info, key=lambda x: x.ppn_count, reverse=True)
