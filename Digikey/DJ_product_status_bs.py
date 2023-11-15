@@ -155,6 +155,31 @@ def deal_upload():
     ExcelHelp.add_arr_to_col(file_name=digikey_upload_file, sheet_name='Sheet1', dim_arr=all_cates)
 
 
+def get_encapsulation():
+    file = '/Users/liuhe/Downloads/h.xlsx'
+    sheet_content = ExcelHelp.read_sheet_content_by_name(file, 'My Lists Worksheet')
+    result = []
+    for (row_index, row) in enumerate(sheet_content):
+        des = str(row[3])
+        if des:
+            pos = des.rfind(" ")
+            if pos >= 0:
+                encapse = des[pos + 1:]
+            else:
+                encapse = ''
+        else:
+            encapse = ''
+        result.append(encapse)
+    ExcelHelp.add_arr_to_col(file, 'My Lists Worksheet', result)
+
+
+
+    # row3 最后一个空格后面的内容放到 row7
+
+
+
 if __name__ == '__main__':
-    deal_upload()
+    # deal_upload()
     # combine_upload_result()
+    get_encapsulation()
+

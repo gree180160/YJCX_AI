@@ -104,7 +104,7 @@ def anlyth_page(aim_url, cate_name, manu, isWeek):
 
 
 def deal_sql_data(ppn, manu, isWeek, rec_arr):
-    image_hot_data = [ppn, manu] + rec_arr
+    image_hot_data = [ppn, manu] + rec_arr + TaskManager.Taskmanger.task_name
     if isWeek:
         MySqlHelp_recommanded.DBRecommandChip().IC_hot_w_write([image_hot_data])
     else:

@@ -181,6 +181,70 @@ def jinshunRenesas2():
     ExcelHelp.add_arr_to_col(file, 'new_ppn', result)
 
 
+def huaqiang_ppn():
+    cate_source_file = PathHelp.get_file_path(None, 'TRuStock.xlsx')
+    pps = ExcelHelp.read_col_content(file_name=cate_source_file, sheet_name='ppn_M9', col_index=1)
+    manus = ExcelHelp.read_col_content(file_name=cate_source_file, sheet_name='ppn_M9', col_index=2)
+    ic_hots = ExcelHelp.read_col_content(cate_source_file, 'IC_search_m', 1)
+    ic_stocks = ExcelHelp.read_col_content(cate_source_file, 'IC_stock_sum2M9', 1)
+    findchips = ExcelHelp.read_col_content(cate_source_file, 'M9_findchips', 1)
+    result = []
+    for (ppn_index, ppn) in enumerate(pps):
+        try:
+            ic_hot_index = ic_hots.index(ppn)
+            ic_hot_value = int(ExcelHelp.read_sheet_content_by_name(cate_source_file, 'IC_search_m')[ic_hot_index][2])
+        except:
+            ic_hot_value = 0
+
+        try:
+            ic_stock_index = ic_stocks.index(ppn)
+            ic_stock_value = int(ExcelHelp.read_sheet_content_by_name(cate_source_file, 'IC_stock_sum2M9')[ic_stock_index][2])
+        except:
+            ic_stock_value = 0
+
+        try:
+            findchip_index = findchips.index(ppn)
+            findchip_value = int(ExcelHelp.read_sheet_content_by_name(cate_source_file, 'M9_findchips')[findchip_index][2])
+        except:
+            findchip_value = 0
+        if ic_hot_value >= 500 and ic_stock_value <= 4 and findchip_value <= 10:
+            ppnInfo = [ppn, manus[ppn_index], ic_hot_value, ic_stock_value, findchip_value]
+            result.append(ppnInfo)
+    ExcelHelp.add_arr_to_sheet(cate_source_file, 'js2', result)
+
+
+def ali():
+    cate_source_file = PathHelp.get_file_path(None, 'TRuStock.xlsx')
+    pps = ExcelHelp.read_col_content(file_name=cate_source_file, sheet_name='ppn_M9', col_index=1)
+    manus = ExcelHelp.read_col_content(file_name=cate_source_file, sheet_name='ppn_M9', col_index=2)
+    ic_hots = ExcelHelp.read_col_content(cate_source_file, 'IC_search_m', 1)
+    ic_stocks = ExcelHelp.read_col_content(cate_source_file, 'IC_stock_sum2M9', 1)
+    findchips = ExcelHelp.read_col_content(cate_source_file, 'M9_findchips', 1)
+    result = []
+    for (ppn_index, ppn) in enumerate(pps):
+        try:
+            ic_hot_index = ic_hots.index(ppn)
+            ic_hot_value = int(ExcelHelp.read_sheet_content_by_name(cate_source_file, 'IC_search_m')[ic_hot_index][2])
+        except:
+            ic_hot_value = 0
+
+        try:
+            ic_stock_index = ic_stocks.index(ppn)
+            ic_stock_value = int(ExcelHelp.read_sheet_content_by_name(cate_source_file, 'IC_stock_sum2M9')[ic_stock_index][2])
+        except:
+            ic_stock_value = 0
+
+        try:
+            findchip_index = findchips.index(ppn)
+            findchip_value = int(ExcelHelp.read_sheet_content_by_name(cate_source_file, 'M9_findchips')[findchip_index][2])
+        except:
+            findchip_value = 0
+        if ic_hot_value >= 600 and ic_stock_value >= 8 and findchip_value >= 3:
+            ppnInfo = [ppn, manus[ppn_index], ic_hot_value, ic_stock_value, findchip_value]
+            result.append(ppnInfo)
+    ExcelHelp.add_arr_to_sheet(cate_source_file, 'hxl2', result)
+
+
 if __name__ == "__main__":
     # get_ICSupplierAndHot(20, 300)
     # get_wheat()
@@ -192,4 +256,6 @@ if __name__ == "__main__":
     # jinshunRenesas2()
     # write_ppn_to_sql()
     # decompositionPPN(500)
-    ru_stock_nonRepeat()
+    huaqiang_ppn()
+    time.sleep(3.0)
+    ali()

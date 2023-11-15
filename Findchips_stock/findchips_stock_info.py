@@ -43,7 +43,7 @@ class findchips_stock_info_oneSupplier:
         return result
 
     def descritpion_arr(self) -> list:
-        result = [self.cate or "--", self.manu or "--", self.supplier, self.authorized, self.part_url, self.stock_sum, self.search_date]
+        result = [self.cate or "--", self.manu or "--", self.supplier, '1' if self.authorized else '0', self.part_url, str(self.stock_sum)]
         return result
 
 

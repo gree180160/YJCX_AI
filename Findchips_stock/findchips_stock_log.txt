@@ -1286,3 +1286,12 @@
 2023-07-26 13:03:30UPC277G2-E1-A/HH/HM req.status_code: 404
 2023-07-26 14:26:59UPC4072G2-A/H/HM req.status_code: 404
 2023-07-26 15:06:14UPC4092G2-E1-A/H/HM req.status_code: 404
+2023-11-08 15:20:12ABM3C-12.288MHZ-D4Y-T request get exception: 'module' object is not callable
+2023-11-08 15:22:22ADM3202ARUZ request get exception: 'module' object is not callable
+2023-11-08 15:24:28ADM3485EARZ request get exception: 'module' object is not callable
+2023-11-08 15:27:04AD4030-24BBCZ request get exception: 'module' object is not callable
+2023-11-08 15:29:31AD5141BCPZ10-RL7 request get exception: 'module' object is not callable
+2023-11-08 15:31:41AD5144BRUZ10 request get exception: 'module' object is not callable
+2023-11-08 15:34:14AD5314ACPZ-REEL7 request get exception: 'module' object is not callable
+2023-11-08 15:36:43AD5322ARMZ request get exception: 'module' object is not callable
+2023-11-08 15:38:55AD590KF request get exception: 'module' object is not callable

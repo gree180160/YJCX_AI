@@ -2,7 +2,7 @@
 from WRTools import ExcelHelp, PathHelp, MySqlHelp_recommanded
 import base64
 
-pn_file = PathHelp.get_file_path(super_path=None, file_name='TRuStock.xlsx')
+pn_file = PathHelp.get_file_path(super_path=None, file_name='TTI.xlsx')
 
 def get_price_level(pn) ->str:
     result = ""
@@ -14,26 +14,44 @@ def get_price_level(pn) ->str:
                 break;
     return result
 
-# [max, max2, min]
-def get_search_data(isWeek, pn) ->list:
+
+# [first, max, max2, min]
+def get_search_data(isWeek, pn, week_info, month_info) ->list:
     result = []
     if isWeek:
-        # 1.确定sheet， 2.确定在哪一列 3.找出排除空和'/' 4.找出max，max2，min
-        pns = ExcelHelp.read_row_content(file_name=pn_file, sheet_name='hot_week', row_index=1)
+        for row_info in week_info:
+            if row_info[0] == pn:
+                try:
+                    first_weak = int(row_info[2])
+                except:
+                    first_weak = 0
+                number_arr = []
+                for index in range(2, 53):
+                    try:
+                        hot_value = int(row_info[index])
+                    except:
+                        hot_value = 0
+                    number_arr.append(hot_value)
+                number_arr.sort()
+                return [first_weak, number_arr[-1], number_arr[-2], number_arr[0]]
+        return ['--', '--', '--', '--']
     else:
-        pns = ExcelHelp.read_row_content(file_name=pn_file, sheet_name='hot_month', row_index=1)
-    index = pns.index(pn) if (pn in pns) else -1
-    print(f'find index is:{index}')
-    if index > 0:
-       search_num_arr = ExcelHelp.get_search_num(file_name=pn_file, sheet_name='hot_week' if isWeek else 'hot_month', col_index=index+1)
-       search_num_arr = list(filter(None, search_num_arr))
-       search_num_arr.sort()
-       if search_num_arr and search_num_arr.__len__() > 0:
-           result = [search_num_arr[search_num_arr.__len__() - 1], search_num_arr[search_num_arr.__len__() - 2], search_num_arr[0]]
-    if result.__len__() > 0:
-        return result
-    else:
-        return ["/", "/", "/"]
+        for row_info in month_info:
+            if row_info[0] == pn:
+                try:
+                    first_month = int(row_info[2])
+                except:
+                    first_month = 0
+                number_arr = []
+                for index in range(2, 13):
+                    try:
+                        hot_value = int(row_info[index])
+                    except:
+                        hot_value = 0
+                    number_arr.append(hot_value)
+                number_arr.sort()
+                return [first_month, number_arr[-1], number_arr[-2], number_arr[0]]
+        return ['--', '--', '--', '--']
 
 
 # 返回靠谱的供应商数量和w库存
@@ -70,19 +88,26 @@ def statistic_all():
 
 # 只统计搜索热度
 def statistic_simple():
-    pnsinfo = ExcelHelp.read_sheet_content_by_name(file_name=pn_file, sheet_name='ppn')
-    sub_pns = pnsinfo[0:]
+    month_info = ExcelHelp.read_sheet_content_by_name(file_name=pn_file, sheet_name='hot_month')
+    week_info = ExcelHelp.read_sheet_content_by_name(file_name=pn_file, sheet_name='hot_week')
+    sub_pns = month_info[0:5438]
     search_statistic_arr = []
     for (index, tempInfo) in enumerate(sub_pns):
         pn = tempInfo[0]
         print(f'index is:{index} pn is: {pn}')
         manu = tempInfo[1]
-        week_search = get_search_data(isWeek=True, pn=pn)
-        month_search = get_search_data(isWeek=False, pn=pn)
-        statistic_info = [pn, manu, str(week_search[0]), str(week_search[1]),
-                          str(week_search[2]), str(month_search[0]), str(month_search[1]), str(month_search[2])]
+        week_search = get_search_data(True, pn, week_info, month_info)
+        month_search = get_search_data(False, pn, week_info, month_info)
+        statistic_info = [pn, manu] + month_search + week_search
         search_statistic_arr.append(statistic_info)
     ExcelHelp.add_arr_to_sheet(file_name=pn_file, sheet_name='IC_search', dim_arr=search_statistic_arr)
+
+
+# 统计从DB 导出的Excel的信息
+def statistic_excel():
+    month_sheet = ExcelHelp.read_sheet_content_by_name(pn_file, sheet_name='hot_month')
+    mont_sheet = ExcelHelp.read_sheet_content_by_name(pn_file, sheet_name='hot_week')
+
 
 
 ############################   DB    #####################################################
@@ -119,6 +144,15 @@ def getDBData_w():
     ExcelHelp.add_arr_to_sheet(pn_file, 'IC_search_w', result_w)
 
 
+def temp():
+    ppnList1 = ExcelHelp.read_col_content(pn_file, sheet_name='hot_month', col_index=1)
+    ppnList2 = ExcelHelp.read_col_content(pn_file, sheet_name='hot_week', col_index=1)
+    print(set(ppnList1).difference(ppnList2))
+    print('2')
+    print(set(ppnList2).difference(ppnList1))
+
+
 if __name__ == "__main__":
-    getDBData_m()
-    getDBData_w()
+    # getDBData_m()
+    # getDBData_w()
+    statistic_simple()

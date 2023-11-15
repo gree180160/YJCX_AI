@@ -59,10 +59,25 @@ def adjust():
     ExcelHelp.add_arr_to_sheet(file_name=cate_source_file, sheet_name="IC_stock_sum2", dim_arr=result)
 
 
+def printPPN():
+    ppn = ExcelHelp.read_col_content('/Users/liuhe/Desktop/progress/TRuStock/2023.09/hxl.xlsx', 'Sheet1', col_index=1)
+    print(ppn)
+
+
+def addIC_info():
+    sheet_content = ExcelHelp.read_sheet_content_by_name('/Users/liuhe/Desktop/progress/TRuStock/2023.09/hxl.xlsx', 'Sheet1')
+    bom_price_info  =ExcelHelp.read_sheet_content_by_name('/Users/liuhe/Desktop/progress/TRuStock/2023.09/hxl.xlsx', 'Sheet2')
+    result_arr = []
+    for (row_idnex, row) in enumerate(sheet_content):
+        ppn = row[0]
+    ExcelHelp.add_arr_to_sheet('/Users/liuhe/Desktop/progress/TRuStock/2023.09/hxl.xlsx', 'Sheet5', result_arr)
+
+
 if __name__ == "__main__":
     # combine_result(source_files=ICStock_file_arr, aim_file=IC_source_file)
-    IC_stock_sum()
-    print('over')
+    # IC_stock_sum()
+    # print('over')
+    addIC_info()
 
 
 

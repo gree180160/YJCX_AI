@@ -11,9 +11,9 @@ from Manager import TaskManager
 ssl._create_default_https_context = ssl._create_unverified_context
 
 sourceFile_dic = {'fileName': PathHelp.get_file_path(None, f'{TaskManager.Taskmanger().task_name}.xlsx'),
-                  'sourceSheet': 'ppn_M9',
+                  'sourceSheet': 'ppn_s1',
                   'colIndex': 1,
-                  'startIndex': 159,
+                  'startIndex': TaskManager.Taskmanger().start_index,
                   'endIndex': TaskManager.Taskmanger().end_index}
 
 log_file = PathHelp.get_file_path('Findchips_stock', 'findchips_stock_log.txt')
@@ -79,7 +79,7 @@ def get_findchips_stock(cate_index, cate_name, send_email):
                     manu_value = td_arr[1].text
                     stock_str = td_arr[3].text
                     part_info = findchips_stock_info_onePart(cate=cate_name, manu=manu_value, supplier=supplier_name,
-                                                             authorized=is_author, part_url=part_url,
+                                                             authorized= is_author, part_url=part_url,
                                                              stock_str=stock_str)
                     if part_info.is_valid_supplier:
                         last_ele = part_info
@@ -91,7 +91,7 @@ def get_findchips_stock(cate_index, cate_name, send_email):
                                                                      supplier=supplier_name,
                                                                      authorized=is_author, part_url=part_url,
                                                                      stock_sum=stock_sum)
-                    supplier_info_arr.append(supplier_info.descritpion_arr())
+                    supplier_info_arr.append(supplier_info.descritpion_arr() + [TaskManager.Taskmanger().task_name])
         MySqlHelp_recommanded.DBRecommandChip().findchip_stock_write(data=supplier_info_arr)
         supplier_info_arr.clear()
         WaitHelp.waitfor(False, isDebug=False)
@@ -132,6 +132,32 @@ def main():
             if cate_name is None:
                 break;
             get_findchips_stock(cate_index, cate_name, send_email=False)
+
+
+def db_read():
+    findchip_list = MySqlHelp_recommanded.DBRecommandChip().findchip_stock_read(("update_time > '2023/11/02'"))
+    cate_source_file = PathHelp.get_file_path(None, 'TRuStock.xlsx')
+    pps = ExcelHelp.read_col_content(file_name=cate_source_file, sheet_name='ppn_M9', col_index=1)
+    manus = ExcelHelp.read_col_content(file_name=cate_source_file, sheet_name='ppn_M9', col_index=2)
+    result = []
+    for (ppn_index, ppn) in enumerate(pps):
+        temp = [ppn, manus[ppn_index]]
+        stock_num = 0
+        supplier_num = 0
+        for chip_value in findchip_list:
+            if ppn == chip_value[0]:
+                supplier_num += 1
+                try:
+                    stock_num += int(chip_value[5])
+                except:
+                    stock_num += 0
+                    print(f'{chip_value[5]} change int error')
+            else:
+                if stock_num > 0:
+                    break
+        temp = temp + [supplier_num, stock_num]
+        result.append(temp)
+    ExcelHelp.add_arr_to_sheet(cate_source_file, 'M9_findchips3', result)
 
 
 if __name__ == '__main__':

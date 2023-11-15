@@ -81,10 +81,10 @@ class DBRecommandChip:
         sql_str = "REPLACE INTO t_IC_hot_m (ppn, manu"
         for index in range(1, 13):
             sql_str += f', m{index}'
-        sql_str += ') VALUES (%s, %s '
+        sql_str += 'task_name) VALUES (%s, %s '
         for index in range(1, 13):
             sql_str += ', %s'
-        sql_str += ")"
+        sql_str += "%s)"
         self.sql_write(sql=sql_str, data=data)
 
     def IC_hot_m_read(self, filter_contend):
@@ -98,10 +98,10 @@ class DBRecommandChip:
         sql_str = "REPLACE INTO t_IC_hot_w (ppn, manu"
         for index in range(1, 53):
             sql_str += f', w{index}'
-        sql_str += ') VALUES (%s, %s '
+        sql_str += 'task_name) VALUES (%s, %s '
         for index in range(1, 53):
             sql_str += ', %s'
-        sql_str += ")"
+        sql_str += "%s)"
         self.sql_write(sql_str, data)
 
     def IC_hot_w_read(self, filter_contend):
@@ -111,7 +111,7 @@ class DBRecommandChip:
         return result
 
     def ic_stock(self, data: list):
-        sql_str = "REPLACE INTO t_ic_stock (ppn, manu, supplier, isICCP, isSSCP, iSRanking, isHotSell, stock_num) VALUES (%s, %s, %s, %s, %s, %s, %s, %s)"
+        sql_str = "REPLACE INTO t_ic_stock (ppn, manu, supplier, isICCP, isSSCP, iSRanking, isHotSell, stock_num, task_name) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s)"
         self.sql_write(sql_str, data)
 
     def ic_stock_read(self, filter_contend):
@@ -120,7 +120,7 @@ class DBRecommandChip:
         return result
 
     def bom_price_write(self, data: list):
-        sql_str = "REPLACE INTO t_bom_price (ppn, manu, supplier, package, lot, quoted_price, release_time, stock_num, valid_supplier) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s)"
+        sql_str = "REPLACE INTO t_bom_price (ppn, manu, supplier, package, lot, quoted_price, release_time, stock_num, valid_supplier, task_name) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s)"
         self.sql_write(sql_str, data)
 
     def bom_price_read(self, filter_contend):
@@ -129,7 +129,7 @@ class DBRecommandChip:
         return result
 
     def octopart_price_write(self, data: list):
-        sql_str = "REPLACE INTO t_octopart_price (ppn, manu, is_star, distribute, sku, stock, moq, currency_type,k_price, updated, opn) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)"
+        sql_str = "REPLACE INTO t_octopart_price (ppn, manu, is_star, distribute, sku, stock, moq, currency_type,k_price, updated, opn, task_name) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)"
         self.sql_write(sql_str, data)
 
     def octopart_price_read(self, filter_contend):
@@ -138,12 +138,13 @@ class DBRecommandChip:
         return result
 
     def findchip_stock_write(self, data: list):
-        sql_str = "REPLACE INTO t_findchips_stock (ppn, manu, supplier, authorized, part_url, stock_str) VALUES (%s, %s, %s, %s, %s, %s)"
+        sql_str = "REPLACE INTO t_findchips_stock (ppn, manu, supplier, authorized, part_url, stock_str, task_name) VALUES (%s, %s, %s, %s, %s, %s, %s)"
         self.sql_write(sql_str, data)
 
-    def findchip_stock_read(self, data: list):
-        sql_str = "SELECT * FROM t_findchips_stock where {filter_contend} order by ppn"
-        self.sql_write(sql_str, data)
+    def findchip_stock_read(self, filter_contend):
+        query = f"SELECT * FROM t_findchips_stock where {filter_contend} order by ppn"
+        result = self.sql_read(query)
+        return result
 
     def ppn_write(self, data: list):
         sql_str = "REPLACE INTO t_ppn (ppn, manu_id, manu_name, source) VALUES (%s, %s, %s, %s)"

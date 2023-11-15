@@ -1,6 +1,4 @@
-
 Device_ID = 'Mac'
-
 
 
 

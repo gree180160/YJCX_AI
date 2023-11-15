@@ -1,6 +1,7 @@
 import time
 
 from WRTools import ExcelHelp, LogHelper, PathHelp, WaitHelp, MySqlHelp_recommanded, EmailHelper, PandasHelp
+from  Manager import TaskManager
 import os
 
 
@@ -35,7 +36,8 @@ def getData_fromCVS():
                         new_row = [row[3], row[2], 1, str(supplier_row[sku_sub]), str(row[sku_sub]),
                                    str(row[stock_indexs[sku_sub_index]]),
                                    str(row[moq_indexs[sku_sub_index]]), 'USD', str(row[price_indexs[sku_sub_index]]), '--',
-                                   row[0]]
+                                   row[0], TaskManager.Taskmanger.task_name()
+                                   ]
                         result.append(new_row)
             MySqlHelp_recommanded.DBRecommandChip().octopart_price_write(result)
             print(f'finish file:{temp_file}')

@@ -14,14 +14,14 @@ result_save_file = cate_source_file
 # 取3个月内的最高值，没有价格则忽略
 def bom_price_result():
     rate = get_rate()
-    cate_source_file = PathHelp.get_file_path(None, 'TMitsubishi.xlsx')
-    pps = ExcelHelp.read_col_content(file_name=cate_source_file, sheet_name='ppn', col_index=1)
-    manufactures = ExcelHelp.read_col_content(file_name=cate_source_file, sheet_name='ppn', col_index=3)
+    cate_source_file = '/Users/liuhe/Desktop/progress/TRuStock/2023.09/hxl.xlsx'
+    pps = ExcelHelp.read_col_content(file_name=cate_source_file, sheet_name='Sheet1', col_index=1)
+    manufactures = ExcelHelp.read_col_content(file_name=cate_source_file, sheet_name='Sheet1', col_index=2)
     result = []
     for (index, temp_ppn) in enumerate(pps):
         ppn_str = str(temp_ppn)
         price_arr = []
-        bom_price_list = MySqlHelp_recommanded.DBRecommandChip().bom_price_read("update_time > '2023/10/28'")
+        bom_price_list =  ExcelHelp.read_sheet_content_by_name(file_name=cate_source_file, sheet_name='Sheet2')#MySqlHelp_recommanded.DBRecommandChip().bom_price_read("update_time > '2023/10/28'")
         started_record = False
         #(`ppn`, `manu`, `supplier`, `package`, `lot`, `quoted_price`, `release_time`, `stock_num`, `valid_supplier`, `update_time`)
 
@@ -38,7 +38,17 @@ def bom_price_result():
                 if started_record:
                     break #结束这个ppn 的查找
         price_arr = sorted(price_arr, reverse=True)
-        ppn_result = [ppn_str, manufactures[index]] + price_arr
+        if price_arr.__len__() > 0:
+            if int(price_arr[-1]) > 0:
+                min = price_arr[-1]
+            else:
+                if price_arr.__len__() >= 2:
+                    min = price_arr[-2]
+                else:
+                    min = ' '
+        else:
+            min = ''
+        ppn_result = [ppn_str, manufactures[index]] + [min]
         print(ppn_result)
         result.append(ppn_result)
     ExcelHelp.add_arr_to_sheet(file_name=cate_source_file, sheet_name='bom_price', dim_arr=result)

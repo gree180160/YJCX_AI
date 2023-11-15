@@ -96,7 +96,7 @@ def filert_useless_image(fold_path):
 
 
 # 识别IC——hot 图片里的热度信息并保存到数据库
-def rec_image(fold_path, manu):
+def rec_image(fold_path, manu, task_name):
     filert_useless_image(fold_path)
     file_name_list = os.listdir(fold_path)
     file_name_list.sort()
@@ -108,16 +108,16 @@ def rec_image(fold_path, manu):
             ppn = ppn.replace('%2F', '/')
             if temp.endswith('_M.png'):
                 image_hot_data = ChracterReconition.SplitPic_month(fold_path + '/' + temp)
-                image_hot_data = [ppn, manu] + image_hot_data
+                image_hot_data = [ppn, manu] + image_hot_data + task_name
                 MySqlHelp_recommanded.DBRecommandChip().IC_hot_m_write([image_hot_data])
             elif temp.endswith('_W.png'):
                 image_hot_data = ChracterReconition.SplitPic_week(fold_path + '/' + temp)
-                image_hot_data = [ppn, manu] + image_hot_data
+                image_hot_data = [ppn, manu] + image_hot_data + task_name
                 MySqlHelp_recommanded.DBRecommandChip().IC_hot_w_write([image_hot_data])
 
 
 if __name__ == "__main__":
-    rec_image(fold_path=PathHelp.get_file_path('IC_Search', 'temp_hot_images_Firefox'), manu='Vicor')
-    rec_image(fold_path=PathHelp.get_file_path('IC_Search', 'temp_hot_images_Chrome'), manu='Vicor')
+    rec_image(fold_path=PathHelp.get_file_path('IC_Search', 'temp_hot_images_Firefox'), manu='Vicor', task_name='Vicor_brand')
+    rec_image(fold_path=PathHelp.get_file_path('IC_Search', 'temp_hot_images_Chrome'), manu='Vicor', task_name='Vicor_brand')
 
 

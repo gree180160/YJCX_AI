@@ -21,9 +21,9 @@ driver.set_page_load_timeout(120)
 accouts_arr = [[AccManage.Bom['c'], AccManage.Bom['n'], AccManage.Bom['p']]]
 
 sourceFile_dic = {'fileName': PathHelp.get_file_path(None, f'{TaskManager.Taskmanger().task_name}.xlsx'),
-                  'sourceSheet': 'ppn',
+                  'sourceSheet': 'ppn_s1',
                   'colIndex': 1,
-                  'startIndex': 0,
+                  'startIndex': TaskManager.Taskmanger().start_index,
                   'endIndex': TaskManager.Taskmanger().end_index}
 # result_save_file = PathHelp.get_file_path(TaskManager.Taskmanger().task_name, 'bom_price.xlsx')
 
@@ -126,7 +126,7 @@ def analy_html(cate_index, ppn, manu):
             bom_price_ele = get_supplier_info(aside=aside, cate_index=cate_index, ppn=ppn, manu=manu)
             # 无论是否有效都记录
             if bom_price_ele and str(bom_price_ele.supplier).__len__() > 0:
-                valid_supplier_arr.append(bom_price_ele.descritpion_arr())
+                valid_supplier_arr.append(bom_price_ele.descritpion_arr() + [TaskManager.Taskmanger.task_name])
         MySqlHelp_recommanded.DBRecommandChip().bom_price_write(valid_supplier_arr)
         # ExcelHelp.add_arr_to_sheet(
         #     file_name=result_save_file,

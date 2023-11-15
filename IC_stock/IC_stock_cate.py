@@ -12,9 +12,9 @@ from WRTools import ExcelHelp, WaitHelp, PathHelp, EmailHelper, MySqlHelp_recomm
 ssl._create_default_https_context = ssl._create_unverified_context
 
 sourceFile_dic = {'fileName': PathHelp.get_file_path(None, f'{TaskManager.Taskmanger().task_name}.xlsx'),
-                  'sourceSheet': 'ppn',
+                  'sourceSheet': 'ppn_s1',
                   'colIndex': 1,
-                  'startIndex': 73,
+                  'startIndex': TaskManager.Taskmanger().start_index,
                   'endIndex': TaskManager.Taskmanger().end_index}
 
 total_page = 1
@@ -138,7 +138,7 @@ def get_stock(cate_index, cate_name):
                                           isSpotRanking=isSpotRanking, isHotSell=isHotSell,
                                           manufacturer=manufacturer, stock_num=stock_num)
             if ic_Stock_Info.shouldSave():
-                saveContent_arr = ic_Stock_Info.descritpion_arr()
+                saveContent_arr = ic_Stock_Info.descritpion_arr() + [TaskManager.Taskmanger().task_name]
                 need_save_ic_arr.append(saveContent_arr)
         if need_save_ic_arr.__len__() > 0:
             MySqlHelp_recommanded.DBRecommandChip().ic_stock(need_save_ic_arr)

@@ -241,7 +241,7 @@ def update_gradeA():
 
 
 if __name__ == "__main__":
-    calculater_price()
+    # calculater_price()
     # update_gradeA()
     # pr = get_octopart_price(file_index=0, ppn_index=0, rate=7.22, ppn="R7S910028CBG")
     print('over')

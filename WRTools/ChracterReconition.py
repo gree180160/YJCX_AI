@@ -98,5 +98,5 @@ def test_hot_value(fold_path: str):
 
 
 if __name__ == "__main__":
-    result = test_hot_value(fold_path='/Users/liuhe/Downloads')
+    result = test_hot_value(fold_path='/Users/liuhe/Desktop/aa.png')
     print(result)
