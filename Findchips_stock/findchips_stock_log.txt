@@ -1295,3 +1295,6 @@
 2023-11-08 15:34:14AD5314ACPZ-REEL7 request get exception: 'module' object is not callable
 2023-11-08 15:36:43AD5322ARMZ request get exception: 'module' object is not callable
 2023-11-08 15:38:55AD590KF request get exception: 'module' object is not callable
+2023-11-16 13:46:34DS90UB954TRGZRQ1 request get exception: Pool size should be higher than 0 and lower or equal to 32
+2023-11-16 13:55:06DS90UB954TRGZRQ1 request get exception: 2026 (HY000): SSL connection error: error:00000000:lib(0)::reason(0)
+2023-11-16 18:30:47TMP421AIDCNR request get exception: HTTPSConnectionPool(host='www.findchips.com', port=443): Max retries exceeded with url: /search/TMP421AIDCNR (Caused by SSLError(SSLEOFError(8, 'EOF occurred in violation of protocol (_ssl.c:997)')))

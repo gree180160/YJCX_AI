@@ -34,7 +34,7 @@ def waitfor_ICHot(is_load_page, isDebug):
     else:
         # load new page
         if is_load_page:
-            time.sleep(120 + random.randint(10, 50))
+            time.sleep(130 + random.randint(10, 50))
         else:
             time.sleep(15 + random.randint(2, 22))
 

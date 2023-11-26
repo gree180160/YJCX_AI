@@ -12,8 +12,10 @@ import bom_price_info
 import re
 
 ssl._create_default_https_context = ssl._create_unverified_context
-
-driver = uc.Chrome(use_subprocess=True)
+if AccManage.chromedriver_path.__len__() > 0:
+    driver = uc.Chrome(use_subprocess=True, driver_executable_path=AccManage.chromedriver_path) #todo chromedriverPath
+else:
+    driver = uc.Chrome(use_subprocess=True)
 driver.set_page_load_timeout(120)
 # logic
 
@@ -21,10 +23,10 @@ driver.set_page_load_timeout(120)
 accouts_arr = [[AccManage.Bom['c'], AccManage.Bom['n'], AccManage.Bom['p']]]
 
 sourceFile_dic = {'fileName': PathHelp.get_file_path(None, f'{TaskManager.Taskmanger().task_name}.xlsx'),
-                  'sourceSheet': 'ppn_s1',
+                  'sourceSheet': 'ppn_M10',
                   'colIndex': 1,
-                  'startIndex': TaskManager.Taskmanger().start_index,
-                  'endIndex': TaskManager.Taskmanger().end_index}
+                  'startIndex': 324,
+                  'endIndex':TaskManager.Taskmanger().end_index}
 # result_save_file = PathHelp.get_file_path(TaskManager.Taskmanger().task_name, 'bom_price.xlsx')
 
 default_url = 'https://www.bom.ai/ic/74LVX4245MTCX.html'

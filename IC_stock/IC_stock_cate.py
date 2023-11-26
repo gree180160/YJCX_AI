@@ -12,9 +12,9 @@ from WRTools import ExcelHelp, WaitHelp, PathHelp, EmailHelper, MySqlHelp_recomm
 ssl._create_default_https_context = ssl._create_unverified_context
 
 sourceFile_dic = {'fileName': PathHelp.get_file_path(None, f'{TaskManager.Taskmanger().task_name}.xlsx'),
-                  'sourceSheet': 'ppn_s1',
+                  'sourceSheet': 'ppn_M10',
                   'colIndex': 1,
-                  'startIndex': TaskManager.Taskmanger().start_index,
+                  'startIndex': 297,
                   'endIndex': TaskManager.Taskmanger().end_index}
 
 total_page = 1
@@ -30,7 +30,11 @@ accouts_arr = [[AccManage.IC_stock['n'], AccManage.IC_stock['p']]]
 # prefs = {"profile.managed_default_content_settings.images": 2}
 # driver_option.add_experimental_option('prefs', prefs)
 try:
-    driver = uc.Chrome(use_subprocess=True)
+    if AccManage.chromedriver_path.__len__() > 0:
+        driver = uc.Chrome(use_subprocess=True,
+                           driver_executable_path=AccManage.chromedriver_path)  # todo chromedriverPath
+    else:
+        driver = uc.Chrome(use_subprocess=True)
     driver.set_page_load_timeout(1000)
 except Exception as e:
     print(e)

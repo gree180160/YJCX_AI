@@ -58,7 +58,7 @@ def has_hotData():
 # isWeek：【周/月】搜索指数
 def getSearchInfo(cate_name,manu, isWeek):
     global current_cate_has_date
-    search_url = URLManager.IC_hot_url(cate_name, isWeek)
+    search_url = URLManager.IC_hot_url(cate_name)
     driver.get(search_url)
     WaitHelp.waitfor_ICHot(True, False)
     if isNeedLogin(search_url):

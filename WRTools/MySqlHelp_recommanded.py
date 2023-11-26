@@ -24,7 +24,8 @@ class DBRecommandChip:
         user=AccManage.mys['n'],
         password=AccManage.mys['p'],
         database="yjcx_recommended",
-        connection_timeout=180
+        ssl_disabled=True,  # 忽略 SSL 验证
+        connection_timeout=120
     )
 
     def __init__(self):
@@ -34,7 +35,7 @@ class DBRecommandChip:
             "password": AccManage.mys['p'],
             "database": "yjcx_recommended",
         }
-        self.connection_pool = pooling.MySQLConnectionPool(pool_name="my_pool", pool_size=30, **config)
+        self.connection_pool = pooling.MySQLConnectionPool(pool_name="my_pool", pool_size=20, **config)
 
     def sql_write(self, sql, data):
         # 创建游标对象
@@ -81,10 +82,10 @@ class DBRecommandChip:
         sql_str = "REPLACE INTO t_IC_hot_m (ppn, manu"
         for index in range(1, 13):
             sql_str += f', m{index}'
-        sql_str += 'task_name) VALUES (%s, %s '
+        sql_str += ',task_name) VALUES (%s, %s '
         for index in range(1, 13):
             sql_str += ', %s'
-        sql_str += "%s)"
+        sql_str += ", %s)"
         self.sql_write(sql=sql_str, data=data)
 
     def IC_hot_m_read(self, filter_contend):
@@ -98,10 +99,10 @@ class DBRecommandChip:
         sql_str = "REPLACE INTO t_IC_hot_w (ppn, manu"
         for index in range(1, 53):
             sql_str += f', w{index}'
-        sql_str += 'task_name) VALUES (%s, %s '
+        sql_str += ',task_name) VALUES (%s, %s '
         for index in range(1, 53):
             sql_str += ', %s'
-        sql_str += "%s)"
+        sql_str += ", %s)"
         self.sql_write(sql_str, data)
 
     def IC_hot_w_read(self, filter_contend):
@@ -118,6 +119,10 @@ class DBRecommandChip:
         query = f"SELECT * FROM t_ic_stock where {filter_contend}"
         result = self.sql_read(query)
         return result
+
+    def ic_des_write(self, data:list):
+        sql_str = "REPLACE INTO t_ic_des (ppn, manu, todaySearch, todaySearch_person, yesterdaySearch, yesterdaySearch_person, reference_price, week_search, market_hot, risk, mainLand_stock, international_stock, task_name)  VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)"
+        self.sql_write(sql_str, data)
 
     def bom_price_write(self, data: list):
         sql_str = "REPLACE INTO t_bom_price (ppn, manu, supplier, package, lot, quoted_price, release_time, stock_num, valid_supplier, task_name) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s)"
@@ -188,12 +193,14 @@ class DBRecommandChip:
 
 
 if __name__ == "__main__":
-    manager = DBRecommandChip()
+    # manager = DBRecommandChip()
     # manager.octopart_price_write([['X9317UV8IZ-2.7', 'Renesas', 1, 'DigiKey Marketplace', '2156-X9317UV8IZ-2.7-ND', '0', '1', 'USD', '1.000', '2m', 'X9317UV8'], ['X9317UV8IZ-2.7', 'Renesas', 1, 'Avnet', 'X9317UV8IZ-2.7', '0', '1200', '', '', '1d', 'X9317UV8'], ['X9317UV8IZ-2.7', 'Renesas', 1, 'Newark', '79K9315', '0', '600', 'USD', '5.990', '20h', 'X9317UV8'], ['X9317UV8IZ', 'Renesas', 1, 'Avnet', 'X9317UV8IZ', '0', '800', '', '', '1d', 'X9317UV8'], ['X9317UV8IZ', 'Renesas', 1, 'Newark', '79K9314', '0', '400', 'USD', '5.180', '20h', 'X9317UV8'], ['X9317UV8IZT1', 'Renesas', 1, 'Avnet', 'X9317UV8IZT1', '0', '2500', '', '', '1d', 'X9317UV8'], ['X9317UV8IZT1', 'Renesas', 1, 'Newark', '79K9317', '0', '2500', 'USD', '', '20h', 'X9317UV8'], ['X9317UV8Z', 'Renesas', 1, 'Avnet', 'X9317UV8Z', '0', '1000', '', '', '1d', 'X9317UV8'], ['X9317UV8Z', 'Renesas', 1, 'Newark', '79K9318', '0', '500', 'USD', '4.150', '20h', 'X9317UV8'], ['X9317UV8Z-2.7', 'Renesas', 1, 'Avnet', 'X9317UV8Z-2.7', '0', '1600', '', '', '1d', 'X9317UV8'], ['X9317UV8Z-2.7', 'Renesas', 1, 'Newark', '79K9319', '0', '800', 'USD', '4.530', '20h', 'X9317UV8'], ['X9317UV8IZ-2.7T1', 'Renesas', 1, 'Avnet', 'X9317UV8IZ-2.7T1', '0', '2500', '', '', '1d', 'X9317UV8'], ['X9317UV8IZ-2.7T1', 'Renesas', 1, 'Newark', '79K9316', '0', '2500', 'USD', '', '20h', 'X9317UV8'], ['X9317UV8ZT1', 'Renesas', 1, 'Avnet', 'X9317UV8ZT1', '0', '2500', '', '', '1d', 'X9317UV8'], ['X9317UV8ZT1', 'Renesas', 1, 'Newark', '79K9321', '0', '2500', 'USD', '', '20h', 'X9317UV8'], ['X9317UV8Z-2.7T1', 'Renesas', 1, 'Avnet', 'X9317UV8Z-2.7T1', '0', '2500', '', '', '1d', 'X9317UV8'], ['X9317UV8Z-2.7T1', 'Renesas', 1, 'Newark', '79K9320', '0', '2500', 'USD', '', '20h', 'X9317UV8']])
     # IC_hot_m_read("update_time > '2023/08/15'")
     # IC_hot_w_write(
     #     [['VI-261-CU', 'Vicor', 5, 0, 4, 0, 0, 0, 0, 3, 0, 7, 2, 0, 0, 0, 5, 0, 1, 0, 0, 0, 2, 2, 2, 0, 1, 5, 0, 0, 1,
     #       10, 0, 0, 0, 5, 0, 1, 0, 6, 8, 0, 1, 0, 1, 1, 3, 5, 2, 0, 1, 0, 0, 2]]
     # )
-    result = manager.bom_price_read(1)
-    print(list(result).__len__())
+    # result = manager.bom_price_read(1)
+    # print(list(result).__len__())
+    arr = [['AD5160BRJZ50', 'ADI Electronics', '49', '92', '220', '116', '113', '120', '165', '257', '219', '68', '117', '175', 'TRuStock']]
+    DBRecommandChip().IC_hot_m_write(arr)

@@ -123,16 +123,13 @@ def IC_stock_url(ppn: str):
     return f"https://www.ic.net.cn/search/{cate_str}.html"
 
 
-def IC_hot_url(ppn: str, isWeek):
+def IC_hot_url(ppn: str):
     cate_str = str(ppn)
     cate_str = cate_str.replace('/', '%2F')
     cate_str = cate_str.replace('#', '%23')
     cate_str = cate_str.replace('+', '%2B')
     cate_str = cate_str.replace(',', '%2C')
-    if isWeek:
-        search_url = f'https://icpi.ic.net.cn/icpi/detail.php?key={cate_str}'
-    else:
-        search_url = f'https://icpi.ic.net.cn/icpi/detail_month.php?key={cate_str}'
+    search_url = f'https://icpi.ic.net.cn/detail_icpi?partno={cate_str}'
     return search_url
 
 

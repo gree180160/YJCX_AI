@@ -11,9 +11,9 @@ from Manager import TaskManager
 ssl._create_default_https_context = ssl._create_unverified_context
 
 sourceFile_dic = {'fileName': PathHelp.get_file_path(None, f'{TaskManager.Taskmanger().task_name}.xlsx'),
-                  'sourceSheet': 'ppn_s1',
+                  'sourceSheet': 'ppn_M10',
                   'colIndex': 1,
-                  'startIndex': TaskManager.Taskmanger().start_index,
+                  'startIndex': 318,
                   'endIndex': TaskManager.Taskmanger().end_index}
 
 log_file = PathHelp.get_file_path('Findchips_stock', 'findchips_stock_log.txt')

@@ -274,3 +274,105 @@ Traceback (most recent call last):
 KeyboardInterrupt
 
 Process finished with exit code 130 (interrupted by signal 2: SIGINT)
+2023-11-16 14:37:46login action exception is: Message: element not interactable
+  (Session info: chrome=114.0.5735.133)
+
+2023-11-16 16:19:13click more error Message: element not interactable
+  (Session info: chrome=114.0.5735.133)
+
+2023-11-17 09:49:46login action exception is: Message: element not interactable
+  (Session info: chrome=114.0.5735.133)
+
+2023-11-17 12:59:19click more error Message: element not interactable
+  (Session info: chrome=114.0.5735.133)
+
+2023-11-17 14:41:59click more error Message: element not interactable
+  (Session info: chrome=114.0.5735.133)
+
+2023-11-17 18:24:11login action exception is: Message: element not interactable
+  (Session info: chrome=114.0.5735.133)
+
+2023-11-17 18:30:51login action exception is: Message: timeout: Timed out receiving message from renderer: 120.000
+  (Session info: chrome=114.0.5735.133)
+
+2023-11-18 15:11:47click more error Message: element not interactable
+  (Session info: chrome=114.0.5735.133)
+
+2023-11-19 17:08:20click more error Message: element not interactable
+  (Session info: chrome=114.0.5735.133)
+
+2023-11-19 17:17:06click more error Message: element click intercepted: Element <a href="javascript:void(0)" class="bomID_extStock_More" data-startindex="1" data-for="sixpage" data-pagesize="15" data-hasids="4">...</a> is not clickable at point (1046, 765). Other element would receive the click: <i class="tool_tip tool_tip_top">...</i>
+  (Session info: chrome=114.0.5735.133)
+
+2023-11-20 09:29:54login action exception is: Message: element not interactable
+  (Session info: chrome=114.0.5735.133)
+
+2023-11-22 09:56:27login action exception is: Message: element not interactable
+  (Session info: chrome=114.0.5735.133)
+
+2023-11-22 09:59:45login action exception is: Message: element not interactable
+  (Session info: chrome=114.0.5735.133)
+
+2023-11-22 10:04:20login action exception is: Message: element not interactable
+  (Session info: chrome=114.0.5735.133)
+
+2023-11-22 10:06:25login check exception：Message: element click intercepted: Element <a href="javascript:;" class="bom_power_a bom_layer_login">...</a> is not clickable at point (733, 342). Other element would receive the click: <label class="Bom_loging_user">...</label>
+  (Session info: chrome=114.0.5735.133)
+
+2023-11-22 10:12:45click more error Message: element not interactable
+  (Session info: chrome=114.0.5735.133)
+
+2023-11-22 16:18:46click more error Message: timeout: Timed out receiving message from renderer: 120.000
+  (Session info: chrome=114.0.5735.133)
+
+2023-11-22 16:20:46cate is: ADP7104ACPZ-R7 index is:85 , error is : Message: timeout: Timed out receiving message from renderer: 120.000
+  (Session info: chrome=114.0.5735.133)
+
+2023-11-22 16:22:46cate is: ADP7104ACPZ-R7 index is:85 , error is : Message: timeout: Timed out receiving message from renderer: 120.000
+  (Session info: chrome=114.0.5735.133)
+
+2023-11-22 16:24:46cate is: ADP7104ACPZ-R7 index is:85 , error is : Message: timeout: Timed out receiving message from renderer: 120.000
+  (Session info: chrome=114.0.5735.133)
+
+2023-11-22 16:29:26login action exception is: Message: timeout: Timed out receiving message from renderer: 120.000
+  (Session info: chrome=114.0.5735.133)
+
+2023-11-23 09:10:31login action exception is: Message: element not interactable
+  (Session info: chrome=114.0.5735.133)
+
+2023-11-23 09:38:53login action exception is: Message: element not interactable
+  (Session info: chrome=114.0.5735.133)
+
+2023-11-23 09:43:39login action exception is: Message: element not interactable
+  (Session info: chrome=114.0.5735.133)
+
+2023-11-23 11:46:38click more error Message: element not interactable
+  (Session info: chrome=114.0.5735.133)
+
+2023-11-23 15:24:19login action exception is: Message: element not interactable
+  (Session info: chrome=114.0.5735.133)
+
+2023-11-23 15:29:21login action exception is: Message: element not interactable
+  (Session info: chrome=114.0.5735.133)
+
+2023-11-24 13:51:23click more error Message: element not interactable
+  (Session info: chrome=114.0.5735.133)
+
+2023-11-24 15:23:03click more error Message: timeout: Timed out receiving message from renderer: 120.000
+  (Session info: chrome=114.0.5735.133)
+
+2023-11-24 15:25:03cate is: ADUM1200BRZ-RL7 index is:285 , error is : Message: timeout: Timed out receiving message from renderer: 120.000
+  (Session info: chrome=114.0.5735.133)
+
+2023-11-24 15:27:03cate is: ADUM1200BRZ-RL7 index is:285 , error is : Message: timeout: Timed out receiving message from renderer: 120.000
+  (Session info: chrome=114.0.5735.133)
+
+2023-11-24 15:29:03cate is: ADUM1200BRZ-RL7 index is:285 , error is : Message: timeout: Timed out receiving message from renderer: 120.000
+  (Session info: chrome=114.0.5735.133)
+
+2023-11-24 15:33:45login action exception is: Message: timeout: Timed out receiving message from renderer: 120.000
+  (Session info: chrome=114.0.5735.133)
+
+2023-11-24 16:06:00login action exception is: Message: element not interactable
+  (Session info: chrome=114.0.5735.133)
+

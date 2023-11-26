@@ -21,7 +21,7 @@ def open_url(isWeek):
     ppn_list = ExcelHelp.read_col_content(file_name=pn_file, sheet_name='ppn', col_index=1)
     for (index, ppn) in enumerate(ppn_list):
         if index in range(TaskManager.Task_IC_hot_C_manger().start_index, TaskManager.Task_IC_hot_C_manger.end_index):
-            url = Manager.URLManager.IC_hot_url(ppn, isWeek)
+            url = Manager.URLManager.IC_hot_url(ppn)
             print(f'index is：{index} USL is: {url}')
             webbrowser.get('Chrome').open_new(url)
             WaitHelp.waitfor_account_import(is_load_page=True, isDebug=False)

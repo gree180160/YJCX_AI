@@ -1,5 +1,2 @@
 Device_ID = 'Mac'
 
-
-
-

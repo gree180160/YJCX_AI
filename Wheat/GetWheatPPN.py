@@ -45,9 +45,9 @@ def get_ICSupplierAndHot_renesas(hot_min):
     '''
     / Users / liuhe / Desktop / progress / TReneseas_all / 5H / mac / Task.xlsx....90H
     '''
-    index = 105
+    index = 5
     result = []
-    while index <= 165:
+    while index <= 250:
         try:
             file = f'/Users/liuhe/Desktop/progress/TReneseas_all/{index}H/mac/Task.xlsx'
             sheet_content = ExcelHelp.read_sheet_content_by_name(file_name=file, sheet_name='all_info')
@@ -67,11 +67,16 @@ def get_ICSupplierAndHot_renesas(hot_min):
                         max_m_value = 0
                         print(f'change to int error : {str(row[default_max_row])}')
                     if max_m_value >= hot_min:
-                        result.append([row[0], row[1], row[default_max_row]])
+                        try:
+                            IC_supplier = int(row[2])
+                        except:
+                            IC_supplier = -1
+                        if IC_supplier <= 3:
+                            result.append(row)
         except Exception as e:
             print(f'1 get max_m error file is: {file}')
         index += 5
-    ExcelHelp.add_arr_to_sheet(PathHelp.get_file_path('Wheat', 'Task.xlsx'), 'Sheet4', result)
+    ExcelHelp.add_arr_to_sheet('/Users/liuhe/Desktop/Active2.xlsx', 'js', result)
 
 
 def get_ICSupplierAndHot_renesasMCU(hot_min):
@@ -138,6 +143,6 @@ if __name__ == "__main__":
     # get_wheat()
     # adjustopn()
     # get_ICSupplierAndHot_Infineon(400)
-    # get_ICSupplierAndHot_renesas(300)
+    get_ICSupplierAndHot_renesas(400)
     # get_ICSupplierAndHot_renesasMCU(300)
-    get_wheat()
+    # get_ICSupplierAndHot_renesas()
