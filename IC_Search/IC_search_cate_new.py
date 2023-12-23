@@ -14,7 +14,7 @@ ssl._create_default_https_context = ssl._create_unverified_context
 
 total_page = 1
 current_page = 1
-accouts_arr = [[AccManage.IC_stock['n'], AccManage.IC_stock['p']]]
+accouts_arr = [[AccManage.IC_hot['n'], AccManage.IC_hot['p']]]
 
 if AccManage.chromedriver_path.__len__() > 0:
     driver = uc.Chrome(use_subprocess=True, driver_executable_path=AccManage.chromedriver_path) #todo chromedriverPath
@@ -149,10 +149,10 @@ def getIC_des(ppn ,manu):
 # 查询列表中所有需要查询的型号的搜索指数
 def main():
     pn_file = PathHelp.get_file_path(None, f'{TaskManager.Taskmanger().task_name}.xlsx')
-    ppn_list = ExcelHelp.read_col_content(file_name=pn_file, sheet_name='ppn_M10', col_index=1)
-    manu_list = ExcelHelp.read_col_content(file_name=pn_file, sheet_name='ppn_M10', col_index=2)
+    ppn_list = ExcelHelp.read_col_content(file_name=pn_file, sheet_name='ppn', col_index=1)
+    manu_list = ExcelHelp.read_col_content(file_name=pn_file, sheet_name='ppn', col_index=2)
     for (index, ppn) in enumerate(ppn_list):
-        if index in range(TaskManager.Taskmanger().start_index, TaskManager.Taskmanger().end_index): #mac 100
+        if index in range(0, TaskManager.Taskmanger().end_index): #mac 100   #  if index in range(201, TaskManager.Taskmanger().end_index): #mac 100
             print(f'cate_index is: {index}  cate_name is: {ppn}')
             manu = manu_list[index]
             getSearchInfo(ppn, manu, True)

@@ -229,5 +229,6 @@ def main():
 
 if __name__ == "__main__":
     driver.get(default_url)
+    time.sleep(10.0)
     WaitHelp.waitfor_octopart(False, False)
     main()

@@ -12,9 +12,9 @@ from WRTools import ExcelHelp, WaitHelp, PathHelp, EmailHelper, MySqlHelp_recomm
 ssl._create_default_https_context = ssl._create_unverified_context
 
 sourceFile_dic = {'fileName': PathHelp.get_file_path(None, f'{TaskManager.Taskmanger().task_name}.xlsx'),
-                  'sourceSheet': 'ppn_M10',
+                  'sourceSheet': 'ppn',
                   'colIndex': 1,
-                  'startIndex': 297,
+                  'startIndex': 0,
                   'endIndex': TaskManager.Taskmanger().end_index}
 
 total_page = 1

@@ -8,8 +8,9 @@ import base64
 import IC_stock.IC_Stock_Info
 import time
 from WRTools import PathHelp, ExcelHelp, MySqlHelp_recommanded
+from Manager import TaskManager
 
-cate_source_file = PathHelp.get_file_path("Renesas_all_165H", 'Task.xlsx')
+cate_source_file = PathHelp.get_file_path(None, f'{TaskManager.Taskmanger().task_name}.xlsx')
 ICStock_file_arr = ["/Users/liuhe/Desktop/progress/TVicor/15H/11/IC_stock.xlsx",
                     "/Users/liuhe/Desktop/progress/TVicor/15H/sz/IC_stock.xlsx",
                     "/Users/liuhe/Desktop/progress/TVicor/15H/04/IC_stock.xlsx",
@@ -20,7 +21,6 @@ result_save_file = cate_source_file
 
 # 将同一个ppn到所有stock 累加，然后按照保存到数组中, 没有数据的，用/填充
 def IC_stock_sum():
-    cate_source_file = "/Users/liuhe/Desktop/progress/TTI/S1/Task.xlsx"
     pps = ExcelHelp.read_col_content(file_name=cate_source_file, sheet_name='ppn', col_index=1)
     manufactures = ExcelHelp.read_col_content(file_name=cate_source_file, sheet_name='ppn', col_index=2)
     result = []

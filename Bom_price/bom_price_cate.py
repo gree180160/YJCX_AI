@@ -23,9 +23,9 @@ driver.set_page_load_timeout(120)
 accouts_arr = [[AccManage.Bom['c'], AccManage.Bom['n'], AccManage.Bom['p']]]
 
 sourceFile_dic = {'fileName': PathHelp.get_file_path(None, f'{TaskManager.Taskmanger().task_name}.xlsx'),
-                  'sourceSheet': 'ppn_M10',
+                  'sourceSheet': 'ppn',
                   'colIndex': 1,
-                  'startIndex': 324,
+                  'startIndex': 0,
                   'endIndex':TaskManager.Taskmanger().end_index}
 # result_save_file = PathHelp.get_file_path(TaskManager.Taskmanger().task_name, 'bom_price.xlsx')
 

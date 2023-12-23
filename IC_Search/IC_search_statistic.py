@@ -1,8 +1,9 @@
 # 统计pn 在IC 交谊网的热度
 from WRTools import ExcelHelp, PathHelp, MySqlHelp_recommanded
+from Manager import TaskManager
 import base64
 
-pn_file = PathHelp.get_file_path(super_path=None, file_name='TTI.xlsx')
+pn_file = PathHelp.get_file_path(None, f'{TaskManager.Taskmanger().task_name}.xlsx')
 
 def get_price_level(pn) ->str:
     result = ""
@@ -70,7 +71,7 @@ def get_stockInfo(pn) ->list:
 
 def statistic_all():
     pnsinfo = ExcelHelp.read_sheet_content_by_name(file_name=pn_file, sheet_name='ppn')
-    sub_pns = pnsinfo[0:]
+    sub_pns = pnsinfo[0:18]
     search_statistic_arr = []
     for (index, tempInfo) in enumerate(sub_pns):
         pn = tempInfo[0]
@@ -88,9 +89,9 @@ def statistic_all():
 
 # 只统计搜索热度
 def statistic_simple():
-    month_info = ExcelHelp.read_sheet_content_by_name(file_name=pn_file, sheet_name='hot_month')
-    week_info = ExcelHelp.read_sheet_content_by_name(file_name=pn_file, sheet_name='hot_week')
-    sub_pns = month_info[0:5438]
+    month_info = ExcelHelp.read_sheet_content_by_name(file_name=pn_file, sheet_name='ic_search_m')
+    week_info = ExcelHelp.read_sheet_content_by_name(file_name=pn_file, sheet_name='ic_search_w')
+    sub_pns = ExcelHelp.read_sheet_content_by_name(file_name=pn_file, sheet_name='ppn')
     search_statistic_arr = []
     for (index, tempInfo) in enumerate(sub_pns):
         pn = tempInfo[0]

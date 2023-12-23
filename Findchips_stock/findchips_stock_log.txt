@@ -1298,3 +1298,13 @@
 2023-11-16 13:46:34DS90UB954TRGZRQ1 request get exception: Pool size should be higher than 0 and lower or equal to 32
 2023-11-16 13:55:06DS90UB954TRGZRQ1 request get exception: 2026 (HY000): SSL connection error: error:00000000:lib(0)::reason(0)
 2023-11-16 18:30:47TMP421AIDCNR request get exception: HTTPSConnectionPool(host='www.findchips.com', port=443): Max retries exceeded with url: /search/TMP421AIDCNR (Caused by SSLError(SSLEOFError(8, 'EOF occurred in violation of protocol (_ssl.c:997)')))
+2023-12-08 16:16:41BSC093N15NS5 request get exception: 'NoneType' object has no attribute 'contents'
+2023-12-08 16:18:38IPB048N15N5 request get exception: 'NoneType' object has no attribute 'contents'
+2023-12-08 16:31:39IRFB4020PBF request get exception: 'NoneType' object has no attribute 'contents'
+2023-12-08 16:33:46IRFB4110PBF request get exception: 'NoneType' object has no attribute 'contents'
+2023-12-08 16:36:20IRFB4115PBF request get exception: 'NoneType' object has no attribute 'contents'
+2023-12-08 16:38:19IRFB4227PBF request get exception: 'NoneType' object has no attribute 'contents'
+2023-12-08 16:40:37IRFP4468PBF request get exception: 'NoneType' object has no attribute 'contents'
+2023-12-08 16:42:26IRFP4568PBF request get exception: 'NoneType' object has no attribute 'contents'
+2023-12-08 16:44:20IRFP4668PBF request get exception: 'NoneType' object has no attribute 'contents'
+2023-12-08 16:46:28IRFP4768PBF request get exception: 'NoneType' object has no attribute 'contents'

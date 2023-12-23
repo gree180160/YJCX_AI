@@ -1,5 +1,5 @@
 
-#  记录Task 提供的型号，在IC 中的库存信息
+#  要用IC 交易网中的现货排名、ICCP、SSCP中  库存数量       最多那一家，的批次和数量
 from selenium.webdriver.common.by import By
 import random
 import undetected_chromedriver as uc
@@ -8,21 +8,18 @@ from IC_stock.IC_Stock_Info import IC_Stock_Info
 from Manager import AccManage, URLManager, TaskManager
 from WRTools import ExcelHelp, WaitHelp, PathHelp, EmailHelper, MySqlHelp_recommanded
 
-
 ssl._create_default_https_context = ssl._create_unverified_context
 
 sourceFile_dic = {'fileName': PathHelp.get_file_path(None, f'{TaskManager.Taskmanger().task_name}.xlsx'),
                   'sourceSheet': 'ppn',
                   'colIndex': 1,
-                  'startIndex': 2620,
-                  'endIndex': 2630}
-
+                  'startIndex': TaskManager.Taskmanger().start_index,
+                  'endIndex': TaskManager.Taskmanger().end_index}
 
 total_page = 1
-
 current_page = 1
 VerificationCodePage = 0
-accouts_arr = [[AccManage.IC_hot['n'], AccManage.IC_hot['p']]]
+accouts_arr = [[AccManage.IC_stock['n'], AccManage.IC_stock['p']]]
 # driver_option = webdriver.ChromeOptions()
 # driver_option.add_argument(f'--proxy-server=http://{IPHelper.getRandowCityIP()}')
 # driver_option.add_argument("–incognito")
@@ -32,7 +29,11 @@ accouts_arr = [[AccManage.IC_hot['n'], AccManage.IC_hot['p']]]
 # prefs = {"profile.managed_default_content_settings.images": 2}
 # driver_option.add_experimental_option('prefs', prefs)
 try:
-    driver = uc.Chrome(use_subprocess=True)
+    if AccManage.chromedriver_path.__len__() > 0:
+        driver = uc.Chrome(use_subprocess=True,
+                           driver_executable_path=AccManage.chromedriver_path)  # todo chromedriverPath
+    else:
+        driver = uc.Chrome(use_subprocess=True)
     driver.set_page_load_timeout(1000)
 except Exception as e:
     print(e)
@@ -91,7 +92,9 @@ def get_stock(cate_index, cate_name):
             li_arr = driver.find_element(by=By.ID, value='resultList').find_elements(by=By.CSS_SELECTOR, value='li.stair_tr')
         except:
             li_arr = []
-        need_save_ic_arr = []
+        # need_save_ic_arr = []
+        need_save_ic_info = []
+        max_stock=0
         #  3-loop table arr
         for templi in li_arr:
             if not templi.is_displayed():
@@ -140,30 +143,33 @@ def get_stock(cate_index, cate_name):
                                           isSpotRanking=isSpotRanking, isHotSell=isHotSell,
                                           manufacturer=manufacturer, stock_num=stock_num)
             if ic_Stock_Info.shouldSave():
-                saveContent_arr = ic_Stock_Info.descritpion_arr()
-                need_save_ic_arr.append(saveContent_arr)
-        if need_save_ic_arr.__len__() > 0:
-            MySqlHelp_recommanded.DBRecommandChip().ic_stock(need_save_ic_arr)
+                saveContent_arr = ic_Stock_Info.descritpion_arr() + [TaskManager.Taskmanger().task_name]
+                if int(ic_Stock_Info.stock_num) > max_stock:
+                    need_save_ic_info = saveContent_arr
+                    max_stock = int(ic_Stock_Info.stock_num)
+        if need_save_ic_info.__len__() > 0:
+            MySqlHelp_recommanded.DBRecommandChip().ic_stock([need_save_ic_info])
+        need_load_nextPage = False
         # 包含>=3个无效的stock信息就不翻页了
-        if current_page >= 2 or len(need_save_ic_arr) <= 46:
-            need_load_nextPage = False
-        need_save_ic_arr.clear()
-        # 翻页
-        if need_load_nextPage:
-            old_url = driver.current_url
-            if current_page < total_page:
-                js = f"javascript:pageTo({current_page + 1})"
-                try:
-                    driver.execute_script(js)
-                except:
-                    login_action(search_url)
-                WaitHelp.waitfor_account_import(True, False)
-                waitTime = 0  # wait reload time
-                while driver.current_url == old_url and waitTime <= 5:
-                    WaitHelp.waitfor_account_import(False, False)
-                    waitTime += 1
-                    print("long page:", driver.current_url)
-            current_page += 1
+        # if current_page >= 2 or len(need_save_ic_arr) <= 46:
+        #     need_load_nextPage = False
+        # need_save_ic_arr.clear()
+        # # 翻页
+        # if need_load_nextPage:
+        #     old_url = driver.current_url
+        #     if current_page < total_page:
+        #         js = f"javascript:pageTo({current_page + 1})"
+        #         try:
+        #             driver.execute_script(js)
+        #         except:
+        #             login_action(search_url)
+        #         WaitHelp.waitfor_account_import(True, False)
+        #         waitTime = 0  # wait reload time
+        #         while driver.current_url == old_url and waitTime <= 5:
+        #             WaitHelp.waitfor_account_import(False, False)
+        #             waitTime += 1
+        #             print("long page:", driver.current_url)
+        #     current_page += 1
 
 
 # 验证当前页面是否正在等待用户验证，连续三次请求出现验证码页面，则关闭页面

@@ -245,6 +245,53 @@ def ali():
     ExcelHelp.add_arr_to_sheet(cate_source_file, 'hxl2', result)
 
 
+def temp():
+    ppn_file = '/Users/liuhe/Desktop/卖什么/hxl.xlsx'
+    ppn_list = ExcelHelp.read_col_content(ppn_file, 'TIBrandS1', col_index=1)
+    search_data_file = '/Users/liuhe/Desktop/progress/TTI/S1/Task.xlsx'
+    search_sheet = ExcelHelp.read_sheet_content_by_name(search_data_file, 'ic_search')
+    result = []
+    for ppn1 in ppn_list:
+        for info in search_sheet:
+            if ppn1 == info[0]:
+                result.append(info)
+                break;
+    ExcelHelp.add_arr_to_sheet(ppn_file, 'ic_search', result)
+
+
+def find_macTask_folders(folder_path):
+    task_file_paths = []
+    for root, dirs, files in os.walk(folder_path):
+        if "mac" in dirs:
+            mac_folder = os.path.join(root, "mac")
+            for mac_root, mac_dirs, mac_files in os.walk(mac_folder):
+                for file in mac_files:
+                    if file == "Task.xlsx":
+                        task_file_paths.append(os.path.join(mac_root, file))
+    return task_file_paths
+
+
+def getAllICStockRecord():
+    result_file = '/Users/liuhe/Desktop/IC_supplier10+2.xlsx'
+    fold1 = '/Users/liuhe/Desktop/progress/TRenesas_MCU'
+    fold2 = '/Users/liuhe/Desktop/progress/TRenesas_RL78'
+    fold3 = '/Users/liuhe/Desktop/progress/TReneseas_all'
+    fold4 = '/Users/liuhe/Desktop/progress/TVicor/p2_15H'
+    folder_paths = [fold1, fold2, fold3, fold4]
+    macTask_fiels = find_macTask_folders(folder_paths[3])
+    for excel in macTask_fiels:
+        try:
+            sheetContent = ExcelHelp.read_sheet_content_by_name(excel, 'IC_Stock')
+        except:
+            try:
+                sheetContent = ExcelHelp.read_sheet_content_by_name(excel, 'IC_stock_sum')
+            except:
+                print("error : {excel}")
+                sheetContent = [[]]
+        ExcelHelp.add_arr_to_sheet(result_file, 'IC_Stock', sheetContent)
+        time.sleep(1.0)
+
+
 if __name__ == "__main__":
     # get_ICSupplierAndHot(20, 300)
     # get_wheat()
@@ -256,6 +303,7 @@ if __name__ == "__main__":
     # jinshunRenesas2()
     # write_ppn_to_sql()
     # decompositionPPN(500)
-    huaqiang_ppn()
-    time.sleep(3.0)
-    ali()
+    # huaqiang_ppn()
+    # time.sleep(3.0)
+    # ali()
+    getAllICStockRecord()

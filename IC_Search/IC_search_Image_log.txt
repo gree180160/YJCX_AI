@@ -14,3 +14,4 @@
 2023-11-25 09:49:03IC_search error. https://icpi.ic.net.cn/detail_icpi?partno=HMC653LP2E list index out of range
 2023-11-25 09:50:11IC_search error. https://icpi.ic.net.cn/detail_icpi?partno=HMC653LP2E list index out of range
 2023-11-25 09:55:24IC_search error. https://icpi.ic.net.cn/detail_icpi?partno=ADG659YRUZ list index out of range
+2023-11-28 11:25:30IC_search error. https://icpi.ic.net.cn/detail_icpi?partno=DS1971-F5 list index out of range

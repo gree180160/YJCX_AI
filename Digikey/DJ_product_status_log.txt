@@ -1426,3 +1426,21 @@
 2023-09-19 23:24:17go_to_cate HMC308ETR exception is: HTTPConnectionPool(host='localhost', port=53915): Max retries exceeded with url: /session/fe0e0caa1565160d2220cbca609996a7/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x10dc9db40>: Failed to establish a new connection: [Errno 61] Connection refused'))
 2023-09-19 23:26:39go_to_cate LP2950CDT-5.0 exception is: HTTPConnectionPool(host='localhost', port=53915): Max retries exceeded with url: /session/fe0e0caa1565160d2220cbca609996a7/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x10e5338e0>: Failed to establish a new connection: [Errno 61] Connection refused'))
 2023-09-19 23:28:56go_to_cate IRFB17N50L exception is: HTTPConnectionPool(host='localhost', port=53915): Max retries exceeded with url: /session/fe0e0caa1565160d2220cbca609996a7/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x10f9a3790>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2023-12-07 15:10:24go_to_cate SN74HCT244DBR exception is: Message: no such element: Unable to locate element: {"method":"css selector","selector":".header__search"}
+  (Session info: chrome=114.0.5735.133)
+
+2023-12-07 15:13:45go_to_cate SN74LVC2G17DCKT exception is: Message: no such element: Unable to locate element: {"method":"css selector","selector":".header__search"}
+  (Session info: chrome=114.0.5735.133)
+
+2023-12-07 15:18:11go_to_cate LMR14030SDDAR exception is: Message: no such element: Unable to locate element: {"method":"css selector","selector":".header__search"}
+  (Session info: chrome=114.0.5735.133)
+
+2023-12-07 15:22:39go_to_cate LM73606QRNPRQ1 exception is: Message: no such element: Unable to locate element: {"method":"css selector","selector":".header__search"}
+  (Session info: chrome=114.0.5735.133)
+
+2023-12-07 15:26:40go_to_cate TMS320F2809PZA exception is: Message: no such element: Unable to locate element: {"method":"css selector","selector":".header__search"}
+  (Session info: chrome=114.0.5735.133)
+
+2023-12-07 15:29:36go_to_cate TMS320F2808PZA exception is: Message: no such element: Unable to locate element: {"method":"css selector","selector":".header__search"}
+  (Session info: chrome=114.0.5735.133)
+

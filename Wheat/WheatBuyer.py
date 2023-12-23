@@ -25,13 +25,13 @@ import time
 accouts_arr = [AccManage.Wheat['c'], AccManage.Wheat['n'], AccManage.Wheat['p']]
 ssl._create_default_https_context = ssl._create_unverified_context
 
-sourceFile_dic = {'fileName': PathHelp.get_file_path('Wheat', 'Task.xlsx'),
-                  'sourceSheet': 'ppn_all',
+sourceFile_dic = {'fileName': PathHelp.get_file_path(None, 'TMitsubishiIGBT.xlsx'),
+                  'sourceSheet': 'ppn',
                   'colIndex': 1,
-                  'startIndex': 28,
-                  'endIndex': 115}
-result_save_file = PathHelp.get_file_path('Wheat', 'Task.xlsx')
-result_save_sheet = 'buyer'
+                  'startIndex': 68,
+                  'endIndex': 169}
+result_save_file = PathHelp.get_file_path(None, 'TMitsubishiIGBT.xlsx')
+result_save_sheet = 'Wheat_buyer'
 logFile = PathHelp.get_file_path('Wheat', 'Wheat_log.txt')
 
 login_url = 'https://app.51wheatsearch.com/gs/index.html#/login'
@@ -267,5 +267,5 @@ def main():
 if __name__ == "__main__":
     loginAction(default_url)
     driver.get(default_url)
-    set_filter(start_date='2020-06-31', end_date='2023-06-31')
+    set_filter(start_date='2020-12-22', end_date='2023-12-22')
     main()

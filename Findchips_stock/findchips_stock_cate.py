@@ -11,9 +11,9 @@ from Manager import TaskManager
 ssl._create_default_https_context = ssl._create_unverified_context
 
 sourceFile_dic = {'fileName': PathHelp.get_file_path(None, f'{TaskManager.Taskmanger().task_name}.xlsx'),
-                  'sourceSheet': 'ppn_M10',
+                  'sourceSheet': 'ppn',
                   'colIndex': 1,
-                  'startIndex': 318,
+                  'startIndex': 0,
                   'endIndex': TaskManager.Taskmanger().end_index}
 
 log_file = PathHelp.get_file_path('Findchips_stock', 'findchips_stock_log.txt')
@@ -121,7 +121,6 @@ def combine_result(source_files:[], aim_file):
         time.sleep(2.0)
 
 
-
 def main():
     all_cates = ExcelHelp.read_col_content(file_name=sourceFile_dic['fileName'],
                                            sheet_name=sourceFile_dic['sourceSheet'],
@@ -135,10 +134,10 @@ def main():
 
 
 def db_read():
-    findchip_list = MySqlHelp_recommanded.DBRecommandChip().findchip_stock_read(("update_time > '2023/11/02'"))
-    cate_source_file = PathHelp.get_file_path(None, 'TRuStock.xlsx')
-    pps = ExcelHelp.read_col_content(file_name=cate_source_file, sheet_name='ppn_M9', col_index=1)
-    manus = ExcelHelp.read_col_content(file_name=cate_source_file, sheet_name='ppn_M9', col_index=2)
+    findchip_list = ExcelHelp.read_sheet_content_by_name(PathHelp.get_file_path(None, f'{TaskManager.Taskmanger().task_name}.xlsx'), sheet_name='findchips')
+    cate_source_file = PathHelp.get_file_path(None, f'{TaskManager.Taskmanger().task_name}.xlsx')
+    pps = ExcelHelp.read_col_content(file_name=cate_source_file, sheet_name='ppn', col_index=1)
+    manus = ExcelHelp.read_col_content(file_name=cate_source_file, sheet_name='ppn', col_index=2)
     result = []
     for (ppn_index, ppn) in enumerate(pps):
         temp = [ppn, manus[ppn_index]]
@@ -157,8 +156,8 @@ def db_read():
                     break
         temp = temp + [supplier_num, stock_num]
         result.append(temp)
-    ExcelHelp.add_arr_to_sheet(cate_source_file, 'M9_findchips3', result)
+    ExcelHelp.add_arr_to_sheet(cate_source_file, 'findchips_sum', result)
 
 
 if __name__ == '__main__':
-    main()
+    db_read()

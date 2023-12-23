@@ -151,6 +151,11 @@ class DBRecommandChip:
         result = self.sql_read(query)
         return result
 
+    def digikey_attr_write(self, data: list):
+        # 假设您已经建立了与 MySQL 数据库的连接，并创建了一个名为 cursor 的游标对象
+        sql_str = "INSERT INTO t_digikey_attr (ppn, manu, digi_key_code, manu_code, des, delivery_time, detail_des, category, serial, package, status, kind, single_channel, voltage_reverse, voltage_breakdown, voltage_ipp, peakCurrentPulse, peakPowerPulse, protect_power, apply, capacitance, operating_temperature, install_kind, shell, supplier_packeage, product_code, task_name) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)"
+        self.sql_write(sql_str, data)
+
     def ppn_write(self, data: list):
         sql_str = "REPLACE INTO t_ppn (ppn, manu_id, manu_name, source) VALUES (%s, %s, %s, %s)"
         self.sql_write(sql_str, data)
@@ -202,5 +207,5 @@ if __name__ == "__main__":
     # )
     # result = manager.bom_price_read(1)
     # print(list(result).__len__())
-    arr = [['AD5160BRJZ50', 'ADI Electronics', '49', '92', '220', '116', '113', '120', '165', '257', '219', '68', '117', '175', 'TRuStock']]
-    DBRecommandChip().IC_hot_m_write(arr)
+    arr = [['MSP430F449IPZR', 'Texas Instruments', '296-26234-2-ND - 卷带（TR）\n296-26234-1-ND - 剪切带（CT）\n296-26234-6-ND - Digi-Reel® 得捷定制卷带', 'MSP430F449IPZR', 'IC MCU 16BIT 60KB FLASH 100LQFP', '6 周', 'MSP430 CPU16 MSP430x4xx 微控制器 IC 16 位 8MHz 60KB（60K x 8 + 256B） 闪存 100-LQFP（14x14）', '集成电路（IC）\n嵌入式\n微控制器', 'MSP430x4xx', '卷带（TR）\n剪切带（CT）\nDigi-Reel® 得捷定制卷带', '在售', '已验证', 'MSP430 CPU16', '16 位', '8MHz', 'SPI，UART/USART', '欠压检测/复位，LCD，POR，PWM，WDT', '48', '60KB（60K x 8 + 256B）', '闪存', '-', '2K x 8', '1.8V ~ 3.6V', 'A/D 8x12b', '内部', '-40°C ~ 85°C（TA）', 'TIBrandS1']]
+    DBRecommandChip().digikey_attr_write(arr)
