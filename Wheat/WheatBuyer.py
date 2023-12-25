@@ -25,12 +25,12 @@ import time
 accouts_arr = [AccManage.Wheat['c'], AccManage.Wheat['n'], AccManage.Wheat['p']]
 ssl._create_default_https_context = ssl._create_unverified_context
 
-sourceFile_dic = {'fileName': PathHelp.get_file_path(None, 'TMitsubishiIGBT.xlsx'),
+sourceFile_dic = {'fileName': PathHelp.get_file_path(None, 'TInfineonIGBT.xlsx'),
                   'sourceSheet': 'ppn',
                   'colIndex': 1,
-                  'startIndex': 68,
-                  'endIndex': 169}
-result_save_file = PathHelp.get_file_path(None, 'TMitsubishiIGBT.xlsx')
+                  'startIndex': 83,
+                  'endIndex': 1000}
+result_save_file = PathHelp.get_file_path(None, 'TInfineonIGBT.xlsx')
 result_save_sheet = 'Wheat_buyer'
 logFile = PathHelp.get_file_path('Wheat', 'Wheat_log.txt')
 

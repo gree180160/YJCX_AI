@@ -13,7 +13,7 @@ ssl._create_default_https_context = ssl._create_unverified_context
 sourceFile_dic = {'fileName': PathHelp.get_file_path(None, f'{TaskManager.Taskmanger().task_name}.xlsx'),
                   'sourceSheet': 'ppn',
                   'colIndex': 1,
-                  'startIndex': TaskManager.Taskmanger().start_index,
+                  'startIndex': 1,
                   'endIndex': TaskManager.Taskmanger().end_index}
 
 total_page = 1
@@ -129,6 +129,14 @@ def get_stock(cate_index, cate_name):
             except:
                 manufacturer = '--'
             try:
+                batch = str(templi.find_element(by=By.CLASS_NAME, value='result_batchNumber').text)
+            except:
+                batch = ''
+            try:
+                pakaging = templi.find_element(by=By.CLASS_NAME, value='result_pakaging').text  #result_pakaging
+            except:
+                pakaging = ''
+            try:
                 stock_num_arr = templi.find_elements(by=By.TAG_NAME, value='div')
                 stock_num = '0'
                 for ele in stock_num_arr:
@@ -138,10 +146,17 @@ def get_stock(cate_index, cate_name):
                         stock_num = ele.text
             except:
                 stock_num = '0'
-            #(ppn, manu, supplier, isICCP, isSSCP, iSRanking, isHotSell, stock_num)
-            ic_Stock_Info = IC_Stock_Info(supplier=supplier, isICCP=isICCP, isSSCP=isSSCP, model=model,
-                                          isSpotRanking=isSpotRanking, isHotSell=isHotSell,
-                                          manufacturer=manufacturer, stock_num=stock_num)
+            #(ppn, manu, supplier, isICCP, isSSCP, iSRanking,batch,pakaging, isHotSell, stock_num)
+            ic_Stock_Info = IC_Stock_Info(supplier=supplier,
+                                          isICCP=isICCP,
+                                          isSSCP=isSSCP,
+                                          model=model,
+                                          isSpotRanking=isSpotRanking,
+                                          isHotSell=isHotSell,
+                                          batch=batch,
+                                          pakaging=pakaging,
+                                          manufacturer=manufacturer,
+                                          stock_num=stock_num)
             if ic_Stock_Info.shouldSave():
                 saveContent_arr = ic_Stock_Info.descritpion_arr() + [TaskManager.Taskmanger().task_name]
                 if int(ic_Stock_Info.stock_num) > max_stock:
