@@ -13,7 +13,7 @@ ssl._create_default_https_context = ssl._create_unverified_context
 sourceFile_dic = {'fileName': PathHelp.get_file_path(None, f'{TaskManager.Taskmanger().task_name}.xlsx'),
                   'sourceSheet': 'ppn',
                   'colIndex': 1,
-                  'startIndex': 1,
+                  'startIndex': 549,
                   'endIndex': TaskManager.Taskmanger().end_index}
 
 total_page = 1
@@ -73,7 +73,7 @@ def login_action(aim_url):
 
 
 #   二维数组，page 列表， table 列表
-def get_stock(cate_index, cate_name):
+def get_stock(cate_index, cate_name,st_manu):
     global current_page
     search_url = URLManager.IC_stock_url(cate_name)
     login_action(search_url)
@@ -151,11 +151,12 @@ def get_stock(cate_index, cate_name):
                                           isICCP=isICCP,
                                           isSSCP=isSSCP,
                                           model=model,
+                                          st_manu=st_manu,
                                           isSpotRanking=isSpotRanking,
                                           isHotSell=isHotSell,
                                           batch=batch,
                                           pakaging=pakaging,
-                                          manufacturer=manufacturer,
+                                          supplier_manu=manufacturer,
                                           stock_num=stock_num)
             if ic_Stock_Info.shouldSave():
                 saveContent_arr = ic_Stock_Info.descritpion_arr() + [TaskManager.Taskmanger().task_name]
@@ -206,11 +207,12 @@ def checkVerificationCodePage(ppn) -> bool:
 def main():
     all_cates = ExcelHelp.read_col_content(sourceFile_dic['fileName'], sourceFile_dic['sourceSheet'],
                                            sourceFile_dic['colIndex'])
+    all_manu = ExcelHelp.read_col_content(sourceFile_dic['fileName'], sourceFile_dic['sourceSheet'], 2)
     for (cate_index, cate_name) in enumerate(all_cates):
         if cate_name.__contains__('?'):
             continue
         elif cate_index in range(sourceFile_dic['startIndex'], sourceFile_dic['endIndex']):
-            get_stock(cate_index, cate_name)
+            get_stock(cate_index, cate_name, all_manu[cate_index])
 
 
 if __name__ == "__main__":

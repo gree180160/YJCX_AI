@@ -20,18 +20,18 @@ def read_sheet_content(file_name):
     return list2
 
 
-def jinshun2():
-    fold = '/Users/liuhe/Desktop/progress/TRuStock/2023.10/oc/'
+def comineCVS():
+    fold = '/Users/liuhe/Desktop/progress/TRUNeed2024-01-19/'
     list_file = os.listdir(fold)  # 返回指定目录
     result = []
     for temp_file in list_file:
         if temp_file.__contains__('.csv'):
             sheet_content = read_sheet_content(f"{fold}{temp_file}")
             for row in sheet_content:
-                new_row = [row[3], row[2], row[5]]
+                new_row = [row[3], row[2], row[0]]
                 result.append(new_row)
     ExcelHelp.add_arr_to_sheet(file_name=f'{fold}sum.xlsx', sheet_name='ppn', dim_arr=result)
 
 
 if __name__ == '__main__':
-    jinshun2()
+    comineCVS()

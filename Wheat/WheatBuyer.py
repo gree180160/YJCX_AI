@@ -25,19 +25,24 @@ import time
 accouts_arr = [AccManage.Wheat['c'], AccManage.Wheat['n'], AccManage.Wheat['p']]
 ssl._create_default_https_context = ssl._create_unverified_context
 
-sourceFile_dic = {'fileName': PathHelp.get_file_path(None, 'TInfineonIGBT.xlsx'),
-                  'sourceSheet': 'ppn',
+# sourceFile_dic = {'fileName': PathHelp.get_file_path(None, 'TInfineonIGBT.xlsx'),
+#                   'sourceSheet': 'ppn',
+#                   'colIndex': 1,
+#                   'startIndex': 793,
+#                   'endIndex': 1000}
+sourceFile_dic = {'fileName': PathHelp.get_file_path(None, 'TNewBrand.xlsx'),
+                  'sourceSheet': 'brand',
                   'colIndex': 1,
-                  'startIndex': 83,
-                  'endIndex': 1000}
-result_save_file = PathHelp.get_file_path(None, 'TInfineonIGBT.xlsx')
+                  'startIndex': 5, # SICK page 4 开始查询
+                  'endIndex': 13}
+result_save_file = PathHelp.get_file_path(None, 'TNewBrand.xlsx')
 result_save_sheet = 'Wheat_buyer'
 logFile = PathHelp.get_file_path('Wheat', 'Wheat_log.txt')
 
 login_url = 'https://app.51wheatsearch.com/gs/index.html#/login'
 default_url = 'https://app.51wheatsearch.com/gs/index.html#/resource/gather/customs'
 total_page = 1
-current_page = 1 # infenion 305
+current_page = 1 #infenion 305
 
 driver_option = webdriver.ChromeOptions()
 driver_option.add_argument(f'--proxy-server=http://{IPHelper.getRandowCityIP()}')
@@ -54,6 +59,7 @@ driver.set_page_load_timeout(1000)
 # 登陆
 def loginAction(aim_url):
     driver.get(aim_url)
+    time.sleep(5.0)
     login_types = driver.find_elements(By.CSS_SELECTOR, 'div.ant-tabs-tab')
     if login_types.__len__() > 0:
         time.sleep(10.0)
@@ -122,10 +128,11 @@ def goToPPN(ppn: str, manu: str):
         if manu and manu.__len__() > 0:
             input_card_content(4, manu)
         time.sleep(2.0)
+        #ant-btn ant-btn-primary , 保持搜索按钮在关键词下面
         search_button = driver.find_elements(By.CSS_SELECTOR, 'button.ant-btn.ant-btn-primary')[2]
         search_button.click()
     except Exception as e:
-        LogHelper.write_log(logFile, f'input ppn error {e}')
+        LogHelper.write_log(logFile, f'click search_button error {e}')
 
 
 # 在input 中delete old content ,input new content
@@ -168,6 +175,7 @@ def get_page_info(for_current):
             else:
                 total_page_li = page_elements[-3]
                 total_page = int(total_page_li.text)
+                total_page = min(50, total_page) #max page is 50
             print(f'total_page is: {total_page}')
         except Exception as e:
             total_page = 0
@@ -267,5 +275,5 @@ def main():
 if __name__ == "__main__":
     loginAction(default_url)
     driver.get(default_url)
-    set_filter(start_date='2020-12-22', end_date='2023-12-22')
+    set_filter(start_date='2023-01-23', end_date='2024-01-23')
     main()

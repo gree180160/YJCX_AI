@@ -61,7 +61,7 @@ def createDayTask(unit:int):
 
 # 分解数量大的ppn列表
 def decompositionPPN(unit: int):
-    source_file = "/Users/liuhe/Desktop/progress/TRuStock/2023.10/TRuStock10.xlsx"
+    source_file = "/Users/liuhe/Desktop/progress/TRUNeed2024-01-19/all.xlsx"
     source_ppn = ExcelHelp.read_col_content(file_name=source_file, sheet_name='ppn', col_index=1)
     # source_ppn = source_ppn[0:2000]
     # history_sheets = []
@@ -69,7 +69,7 @@ def decompositionPPN(unit: int):
     # for sheet_name in history_sheets:
     #     history_ppn = history_ppn.union(set(ExcelHelp.read_col_content(file_name=source_file, sheet_name=sheet_name, col_index=1)))
     # ppn_all = list(set(source_ppn).difference(set(history_ppn)))
-    sava_fold = '/Users/liuhe/Desktop/progress/TRuStock/2023.10/'
+    sava_fold = '/Users/liuhe/Desktop/progress/TRUNeed2024-01-19/'
     ppn_all = source_ppn[0:]
     # ppn_all.sort()
     stop_quotient = 0
@@ -292,6 +292,20 @@ def getAllICStockRecord():
         time.sleep(1.0)
 
 
+def filterNeeds():
+    source_file = '/Users/liuhe/Desktop/progress/TYjcxCloudStock/p1/TYjcxCloundStock.xlsx'
+    finished_ppn = ExcelHelp.read_col_content(source_file, 'ppn1', 1)
+    waiting_data = ExcelHelp.read_sheet_content_by_name(source_file, 'needs')
+    result = []
+    for row_value in waiting_data:
+        temp_ppn = row_value[0]
+        if finished_ppn.__contains__(temp_ppn):
+            continue
+        else:
+            result.append(row_value)
+    ExcelHelp.add_arr_to_sheet(source_file, 'needs2', result)
+
+
 if __name__ == "__main__":
     # get_ICSupplierAndHot(20, 300)
     # get_wheat()
@@ -302,8 +316,9 @@ if __name__ == "__main__":
     # Ti()
     # jinshunRenesas2()
     # write_ppn_to_sql()
-    # decompositionPPN(500)
+    # filterNeeds(500)
     # huaqiang_ppn()
     # time.sleep(3.0)
     # ali()
-    getAllICStockRecord()
+    # getAllICStockRecord()
+    filterNeeds()

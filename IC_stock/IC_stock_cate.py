@@ -12,9 +12,9 @@ from WRTools import ExcelHelp, WaitHelp, PathHelp, EmailHelper, MySqlHelp_recomm
 ssl._create_default_https_context = ssl._create_unverified_context
 
 sourceFile_dic = {'fileName': PathHelp.get_file_path(None, f'{TaskManager.Taskmanger().task_name}.xlsx'),
-                  'sourceSheet': 'ppn',
+                  'sourceSheet': 'ppn2',
                   'colIndex': 1,
-                  'startIndex': 0,
+                  'startIndex': 45,
                   'endIndex': TaskManager.Taskmanger().end_index}
 
 total_page = 1
@@ -74,7 +74,7 @@ def login_action(aim_url):
 
 
 #   二维数组，page 列表， table 列表
-def get_stock(cate_index, cate_name):
+def get_stock(cate_index, cate_name, st_manu):
     global current_page
     search_url = URLManager.IC_stock_url(cate_name)
     login_action(search_url)
@@ -128,6 +128,14 @@ def get_stock(cate_index, cate_name):
             except:
                 manufacturer = '--'
             try:
+                batch = str(templi.find_element(by=By.CLASS_NAME, value='result_batchNumber').text)
+            except:
+                batch = ''
+            try:
+                pakaging = templi.find_element(by=By.CLASS_NAME, value='result_pakaging').text  #result_pakaging
+            except:
+                pakaging = ''
+            try:
                 stock_num_arr = templi.find_elements(by=By.TAG_NAME, value='div')
                 stock_num = '0'
                 for ele in stock_num_arr:
@@ -137,10 +145,18 @@ def get_stock(cate_index, cate_name):
                         stock_num = ele.text
             except:
                 stock_num = '0'
-            #(ppn, manu, supplier, isICCP, isSSCP, iSRanking, isHotSell, stock_num)
-            ic_Stock_Info = IC_Stock_Info(supplier=supplier, isICCP=isICCP, isSSCP=isSSCP, model=model,
-                                          isSpotRanking=isSpotRanking, isHotSell=isHotSell,
-                                          manufacturer=manufacturer, stock_num=stock_num)
+            #(supplier, isICCP, isSSCP, model, st_manu, isSpotRanking, isHotSell, batch, pakaging, supplier_manu, stock_num)
+            ic_Stock_Info = IC_Stock_Info(supplier=supplier,
+                                          isICCP=isICCP,
+                                          isSSCP=isSSCP,
+                                          model=model,
+                                          st_manu=st_manu,
+                                          isSpotRanking=isSpotRanking,
+                                          isHotSell=isHotSell,
+                                          batch=batch,
+                                          pakaging=pakaging,
+                                          supplier_manu=manufacturer,
+                                          stock_num=stock_num)
             if ic_Stock_Info.shouldSave():
                 saveContent_arr = ic_Stock_Info.descritpion_arr() + [TaskManager.Taskmanger().task_name]
                 need_save_ic_arr.append(saveContent_arr)
@@ -187,11 +203,12 @@ def checkVerificationCodePage(ppn) -> bool:
 def main():
     all_cates = ExcelHelp.read_col_content(sourceFile_dic['fileName'], sourceFile_dic['sourceSheet'],
                                            sourceFile_dic['colIndex'])
+    all_manu = ExcelHelp.read_col_content(sourceFile_dic['fileName'], sourceFile_dic['sourceSheet'], 2)
     for (cate_index, cate_name) in enumerate(all_cates):
         if cate_name.__contains__('?'):
             continue
         elif cate_index in range(sourceFile_dic['startIndex'], sourceFile_dic['endIndex']):
-            get_stock(cate_index, cate_name)
+            get_stock(cate_index, cate_name, all_manu[cate_index])
 
 
 if __name__ == "__main__":

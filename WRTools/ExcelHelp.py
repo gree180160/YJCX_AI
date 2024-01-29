@@ -3,7 +3,7 @@ import openpyxl
 import os
 import time
 from datetime import datetime, timedelta
-
+from WRTools import StringHelp
 
 # READ
 # 获取某一列的内容返回cate list
@@ -349,9 +349,60 @@ def render_date():
         add_arr_to_sheet(file_name=temp_file, sheet_name='Sheet', dim_arr=new_content)
 
 
+def purchase():
+    #7194531.13
+    result = []
+    last_brand = ''
+    source_file = '/Users/liuhe/Downloads/purchase2.xlsx'
+    orders = read_sheet_content_by_name(source_file, 'sales')
+    brands = read_sheet_content_by_name(source_file, 'brand')
+    sale_amount = 0
+    for temp_order in orders:
+        if temp_order and temp_order.__len__() > 0 and temp_order[0] != 'None':
+            manu = temp_order[4]
+            try:
+                temp_money = float(temp_order[5])
+                print(temp_order)
+            except:
+                print(temp_order)
+            if manu == last_brand:
+                sale_amount += temp_money
+            else:
+                if last_brand != '':
+                    info = [last_brand, sale_amount]
+                    for temp_brand in brands:
+                        s1 = temp_brand[0].replace(' ', '').lower()
+                        s2 = last_brand.replace(' ', '').lower()
+                        if s1 == s2:
+                            info = [last_brand, sale_amount, temp_brand[1], temp_brand[3]]
+                    result.append(info)
+                sale_amount = temp_money
+                last_brand = manu
+    add_arr_to_sheet(source_file, 'task', result)
+
+
+def purchase2():
+    source_file_record = '/Users/liuhe/Desktop/progress/TYjcxCloudStock/p1/TYjcxCloudStock2.xlsx'
+    source_file_ppn = '/Users/liuhe/Desktop/progress/TYjcxCloudStock/p1/TYjcxCloundStock.xlsx'
+    record_info = read_sheet_content_by_name(source_file_record, 'Sheet1')
+    ppn_info = read_sheet_content_by_name(source_file_ppn, 'ppn')
+    result = []
+    for temp_rec in record_info:
+        ppn = temp_rec[0]
+        manu = ''
+        for temp_ppn in ppn_info:
+            if ppn == temp_ppn[0]:
+                manu = temp_ppn[1]
+        source_batch = temp_rec[7]
+        batch = StringHelp.IC_batch(source_batch)
+        one_record = [ppn, manu, temp_rec[1], temp_rec[2],temp_rec[3],temp_rec[4],temp_rec[5],temp_rec[6], str(batch), temp_rec[8], temp_rec[9], temp_rec[10], temp_rec[11]]
+        result.append(one_record)
+    add_arr_to_sheet(source_file_record, 'result', result)
+
+
 if __name__ == "__main__":
     # delete_sheet_content('/Users/liuhe/PycharmProjects/YJCX_AI/TDigikey_upload.xlsx', 'Sheet1')
-    render_date()
+    purchase2()
     # active_excel('/Users/liuhe/PycharmProjects/YJCX_AI/TInfenion_5H.xlsx', "Sheet1")
     # remove_sheets('/Users/liuhe/PycharmProjects/YJCX_AI/Renesas_all_165H/IC_stock.xlsx')
     # deal_keyword_result()

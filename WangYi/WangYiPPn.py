@@ -19,10 +19,10 @@ driver.set_page_load_timeout(480)
 default_url = 'https://www.wyselect.com/shop/index'
 
 sourceFile_dic = {'fileName': PathHelp.get_file_path("WangYi", 'Task.xlsx'),
-                  'sourceSheet': 'keyword',
+                  'sourceSheet': 'manu',
                   'colIndex': 1,
                   'startIndex': 0,
-                  'endIndex': 100}
+                  'endIndex': 1}
 result_save_file = PathHelp.get_file_path("WangYi", 'Task.xlsx')
 
 log_file = PathHelp.get_file_path('WangYi', 'WYLog.txt')

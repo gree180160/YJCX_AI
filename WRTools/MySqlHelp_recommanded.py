@@ -112,7 +112,7 @@ class DBRecommandChip:
         return result
 
     def ic_stock(self, data: list):
-        sql_str = "REPLACE INTO t_ic_stock (ppn, manu, supplier, isICCP, isSSCP, iSRanking, isHotSell,batch, pakaging, stock_num, task_name) VALUES (%s, %s, %s, %s, %s, %s, %s,%s, %s, %s, %s)"
+        sql_str = "REPLACE INTO t_ic_stock (ppn, st_manu, supplier_manu, supplier, isICCP, isSSCP, iSRanking, isHotSell,batch, pakaging, stock_num, task_name) VALUES (%s,%s, %s, %s, %s, %s, %s, %s,%s, %s, %s, %s)"
         self.sql_write(sql_str, data)
 
     def ic_stock_read(self, filter_contend):

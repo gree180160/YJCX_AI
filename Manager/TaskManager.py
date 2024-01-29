@@ -3,22 +3,22 @@ from WRTools import MySqlHelp_recommanded
 
 
 class Taskmanger:
-    task_name = 'TYjcxCloundStock'
+    task_name = 'TRUNeeds202401'
     if AccManage.Device_ID == 'Mac':
-        start_index = 1
-        end_index = 1000
+        start_index = 0
+        end_index = 700
     elif AccManage.Device_ID == '11':
-        start_index = 1000
-        end_index = 2000
+        start_index = 700
+        end_index = 1400
     elif AccManage.Device_ID == 'sz':
-        start_index = 2000
-        end_index = 3000
+        start_index = 1400
+        end_index = 2100
     elif AccManage.Device_ID == '42':
-        start_index = 3000
-        end_index = 4000
+        start_index = 2100 #3000-3189
+        end_index = 2800
     elif AccManage.Device_ID == '04':
-        start_index = 4000
-        end_index = 5000
+        start_index = 2800# 4000-4182
+        end_index = 3390
 
 
 class Task_IC_hot_F_manger:

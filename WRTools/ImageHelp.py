@@ -1,7 +1,7 @@
 import base64
 from WRTools import PathHelp, DDDDOCR
-from PIL import Image
-from io import BytesIO
+from PIL import Image, ImageDraw, ImageFont
+import os
 
 
 def canvasToImage_color(canvas_base64, path, bgColor):
@@ -64,6 +64,30 @@ def adjust_image():
     print(f'{result1} ; {result2} ; {result3}')
 
 
+def water_mark():
+    # 设置水印文字和字体
+    text = "Kyent Industrial"
+    font_path = "/Library/Fonts/Times New Roman.ttf"  # 修改为系统自带的字体路径
+    font_size = 24  # 设置字号
+    font = ImageFont.truetype(font_path, font_size)
+
+    # 遍历文件夹里的所有图片
+    folder_path = "/Users/liuhe/Desktop/宝塔/kyent/images/product/product/"
+    for filename in os.listdir(folder_path):
+        if filename.endswith(".jpg") or filename.endswith(".png"):
+            # 打开图片
+            image_path = os.path.join(folder_path, filename)
+            img = Image.open(image_path)
+
+            # 添加水印
+            draw = ImageDraw.Draw(img)
+            draw.text((120, 220), text, fill="white", font=font)
+
+            # 保存图片
+            img.save(os.path.join(folder_path, f"{filename}"))
+    print("水印添加完成！")
+
+
 if __name__ == "__main__":
     # canvasToImage_color()
-    adjust_image()
+    water_mark()
