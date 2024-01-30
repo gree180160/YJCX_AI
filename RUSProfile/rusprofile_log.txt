@@ -1,0 +1,1446 @@
+2023-02-25 11:28:51IRF7303TRPBF request get exception: HTTPSConnectionPool(host='www.digikey.cn', port=443): Read timed out. (read timeout=240)
+2023-02-25 12:08:34IRF7303TRPBF request get exception: HTTPSConnectionPool(host='www.digikey.cn', port=443): Read timed out. (read timeout=360)
+2023-02-25 12:14:34IRF7303TRPBF-EL request get exception: HTTPSConnectionPool(host='www.digikey.cn', port=443): Read timed out. (read timeout=360)
+2023-02-27 16:40:26login action exception is: can't set attribute 'text'
+2023-02-27 18:13:02go_to_cate exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (756, 157). Other element would receive the click: <div tabindex="-1" id="auto-modal-mask" class="dk-site__mask visible"></div>
+  (Session info: chrome=110.0.5481.177)
+
+2023-02-27 18:34:30go_to_cate exception is: HTTPConnectionPool(host='localhost', port=53080): Max retries exceeded with url: /session/d8a62ccb2be59565569e6452c2a1e537/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x11f7dac80>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2023-02-27 18:36:25go_to_cate exception is: HTTPConnectionPool(host='localhost', port=53080): Max retries exceeded with url: /session/d8a62ccb2be59565569e6452c2a1e537/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x11f7b2b90>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2023-02-27 18:37:46go_to_cate exception is: HTTPConnectionPool(host='localhost', port=53080): Max retries exceeded with url: /session/d8a62ccb2be59565569e6452c2a1e537/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x11f7dba00>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2023-02-27 18:42:07go_to_cate exception is: HTTPConnectionPool(host='localhost', port=55294): Max retries exceeded with url: /session/6a4bbf032a21b852e872adaf5683029c/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x11acd6b90>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2023-02-27 18:43:39go_to_cate exception is: HTTPConnectionPool(host='localhost', port=55294): Max retries exceeded with url: /session/6a4bbf032a21b852e872adaf5683029c/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x11acac0d0>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2023-02-27 18:45:00go_to_cate exception is: HTTPConnectionPool(host='localhost', port=55294): Max retries exceeded with url: /session/6a4bbf032a21b852e872adaf5683029c/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x11acd7ac0>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2023-02-28 12:05:09go_to_cate exception is: Message: timeout: Timed out receiving message from renderer: 300.000
+  (Session info: chrome=110.0.5481.177)
+
+2023-02-28 12:15:19go_to_cate exception is: Message: timeout: Timed out receiving message from renderer: 300.000
+  (Session info: chrome=110.0.5481.177)
+
+2023-02-28 12:40:27go_to_cate exception is: Message: timeout: Timed out receiving message from renderer: 300.000
+  (Session info: chrome=110.0.5481.177)
+
+2023-02-28 13:15:43go_to_cate exception is: Message: timeout: Timed out receiving message from renderer: 300.000
+  (Session info: chrome=110.0.5481.177)
+
+2023-02-28 14:14:44go_to_cate exception is: Message: timeout: Timed out receiving message from renderer: 300.000
+  (Session info: chrome=110.0.5481.177)
+
+2023-02-28 14:38:24go_to_cate exception is: Message: timeout: Timed out receiving message from renderer: 300.000
+  (Session info: chrome=110.0.5481.177)
+
+2023-02-28 15:00:03go_to_cate exception is: Message: timeout: Timed out receiving message from renderer: 300.000
+  (Session info: chrome=110.0.5481.177)
+
+2023-02-28 15:36:59go_to_cate exception is: Message: timeout: Timed out receiving message from renderer: 300.000
+  (Session info: chrome=110.0.5481.177)
+
+2023-02-28 17:39:50go_to_cate exception is: Message: timeout: Timed out receiving message from renderer: 300.000
+  (Session info: chrome=110.0.5481.177)
+
+2023-02-28 18:01:31go_to_cate exception is: Message: timeout: Timed out receiving message from renderer: 300.000
+  (Session info: chrome=110.0.5481.177)
+
+2023-02-28 18:15:48go_to_cate exception is: HTTPConnectionPool(host='localhost', port=53240): Max retries exceeded with url: /session/7a6001421e598e0bb6d715779913a1e8/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x109a7bf70>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2023-02-28 18:17:35go_to_cate exception is: HTTPConnectionPool(host='localhost', port=53240): Max retries exceeded with url: /session/7a6001421e598e0bb6d715779913a1e8/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x10a3e8a90>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2023-02-28 18:18:51go_to_cate exception is: HTTPConnectionPool(host='localhost', port=53240): Max retries exceeded with url: /session/7a6001421e598e0bb6d715779913a1e8/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x109efae90>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2023-02-28 18:20:08go_to_cate exception is: HTTPConnectionPool(host='localhost', port=53240): Max retries exceeded with url: /session/7a6001421e598e0bb6d715779913a1e8/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x109c6b1c0>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2023-02-28 18:21:43go_to_cate exception is: HTTPConnectionPool(host='localhost', port=53240): Max retries exceeded with url: /session/7a6001421e598e0bb6d715779913a1e8/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x10a383760>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2023-02-28 18:23:18go_to_cate exception is: HTTPConnectionPool(host='localhost', port=53240): Max retries exceeded with url: /session/7a6001421e598e0bb6d715779913a1e8/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x109fa3d90>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2023-02-28 19:26:13go_to_cate exception is: HTTPConnectionPool(host='localhost', port=53240): Max retries exceeded with url: /session/7a6001421e598e0bb6d715779913a1e8/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x109fa1150>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2023-02-28 19:33:50go_to_cate exception is: HTTPConnectionPool(host='localhost', port=53240): Max retries exceeded with url: /session/7a6001421e598e0bb6d715779913a1e8/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x10a381630>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2023-02-28 19:35:37go_to_cate exception is: HTTPConnectionPool(host='localhost', port=53240): Max retries exceeded with url: /session/7a6001421e598e0bb6d715779913a1e8/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x10a0f7010>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2023-02-28 19:37:12go_to_cate exception is: HTTPConnectionPool(host='localhost', port=53240): Max retries exceeded with url: /session/7a6001421e598e0bb6d715779913a1e8/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x10a41c580>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2023-02-28 19:59:15go_to_cate exception is: Message: timeout: Timed out receiving message from renderer: 300.000
+  (Session info: chrome=110.0.5481.177)
+
+2023-02-28 20:33:48go_to_cate exception is: Message: timeout: Timed out receiving message from renderer: 300.000
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-01 11:36:50go_to_cate IRLR2705TRLPBF exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-01 12:38:19go_to_cate IRLR3110ZTRLPBF exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-01 15:12:35go_to_cate IRLR8743TRPBF exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-01 15:38:39go_to_cate IRLR9343-701PBF exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-01 16:04:01go_to_cate IRLR9343TR exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-01 16:29:33go_to_cate IRLR9343TRL exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-01 16:55:17go_to_cate IRLR9343TRLPBF exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-01 17:21:10go_to_cate IRLR9343TRPBF exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-01 17:46:43go_to_cate IRLR9343TRR exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-01 18:12:30go_to_cate IRLS3034TRL7PP exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-01 18:37:51go_to_cate IRLS3034TRLPBF exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-01 19:03:11go_to_cate IRLS3036TRL7PP exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-01 19:28:44go_to_cate IRLS3036TRLPBF exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-01 19:54:21go_to_cate IRLS3036TRRPBF exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-01 20:20:09go_to_cate IRLS4030TRL7PP exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-01 20:45:36go_to_cate IRLS4030TRLPBF exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-01 21:11:10go_to_cate IRLSL4030PBF exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-01 21:43:10go_to_cate IRLTS2242TRPBF exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-01 22:09:11go_to_cate IRLTS6342TRPBF exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-01 22:34:55go_to_cate IRLU024NPBF exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-01 23:00:51go_to_cate IRLU3410PBF exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-01 23:26:08go_to_cate IRLZ34NL exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-01 23:51:25go_to_cate IRLZ34NLPBF exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-02 00:17:20go_to_cate IRLZ34NPBF exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-02 00:42:47go_to_cate IRLZ34NSPBF exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-02 01:08:16go_to_cate IRLZ34NSTRL exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-02 01:33:38go_to_cate IRLZ34NSTRLPBF exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-02 01:59:35go_to_cate IRLZ34NSTRR exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-02 02:25:39go_to_cate IRLZ44NL exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-02 02:51:22go_to_cate IRLZ44NLPBF exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-02 03:16:54go_to_cate IRLZ44NPBF exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-02 03:42:19go_to_cate IRLZ44NSTRL exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-02 04:14:19go_to_cate IRLZ44NSTRLPBF exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-02 04:40:07go_to_cate IRLZ44NSTRR exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-02 05:05:59go_to_cate IRLZ44NSTRRPBF exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-02 05:31:38go_to_cate IRPS5401MPBF exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-02 05:57:35go_to_cate IRPS5401MTRP exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-02 06:23:18go_to_cate IRPS5401MTRPBF exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-02 06:48:42go_to_cate IRPS5401MXI03TRP exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-02 07:14:18go_to_cate IRPS5401MXI04TRPAUMA1 exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-02 07:40:17go_to_cate IRPS5401MXI04TRPAUMA1/SAMPLE exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-02 08:05:51go_to_cate IRS21064PBF exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-02 08:31:40go_to_cate IRS21064SPBF exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-02 08:57:30go_to_cate IRS21064STRPBF exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-02 09:07:18go_to_cate IRS21091PBF exception is: HTTPConnectionPool(host='localhost', port=55226): Max retries exceeded with url: /session/16d3e4847e5f9192aeb91ecc9dd88032/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x120acc400>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2023-03-02 09:09:01go_to_cate IRS21091SPBF exception is: HTTPConnectionPool(host='localhost', port=55226): Max retries exceeded with url: /session/16d3e4847e5f9192aeb91ecc9dd88032/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x120ab8160>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2023-03-02 09:11:03go_to_cate IRS21091STRPBF exception is: HTTPConnectionPool(host='localhost', port=55226): Max retries exceeded with url: /session/16d3e4847e5f9192aeb91ecc9dd88032/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x12090e6e0>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2023-03-02 09:19:03go_to_cate IRS21094PBF exception is: HTTPConnectionPool(host='localhost', port=55226): Max retries exceeded with url: /session/16d3e4847e5f9192aeb91ecc9dd88032/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x12095fc10>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2023-03-02 09:20:23go_to_cate IRS21094SPBF exception is: HTTPConnectionPool(host='localhost', port=55226): Max retries exceeded with url: /session/16d3e4847e5f9192aeb91ecc9dd88032/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x12092aaa0>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2023-03-02 09:21:41go_to_cate IRS21094STRPBF exception is: HTTPConnectionPool(host='localhost', port=55226): Max retries exceeded with url: /session/16d3e4847e5f9192aeb91ecc9dd88032/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x120348d90>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2023-03-02 09:23:23go_to_cate IRS2112PBF exception is: HTTPConnectionPool(host='localhost', port=55226): Max retries exceeded with url: /session/16d3e4847e5f9192aeb91ecc9dd88032/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x1203229e0>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2023-03-02 09:24:42go_to_cate IRS2112SPBF exception is: HTTPConnectionPool(host='localhost', port=55226): Max retries exceeded with url: /session/16d3e4847e5f9192aeb91ecc9dd88032/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x1205a4250>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2023-03-02 09:26:19go_to_cate IRS2112STRPBF exception is: HTTPConnectionPool(host='localhost', port=55226): Max retries exceeded with url: /session/16d3e4847e5f9192aeb91ecc9dd88032/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x1206bc640>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2023-03-02 09:28:18go_to_cate IRS21271PBF exception is: HTTPConnectionPool(host='localhost', port=55226): Max retries exceeded with url: /session/16d3e4847e5f9192aeb91ecc9dd88032/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x120984b20>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2023-03-02 09:30:20go_to_cate IRS21271SPBF exception is: HTTPConnectionPool(host='localhost', port=55226): Max retries exceeded with url: /session/16d3e4847e5f9192aeb91ecc9dd88032/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x120d69960>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2023-03-02 09:31:51go_to_cate IRS21814MPBF exception is: HTTPConnectionPool(host='localhost', port=55226): Max retries exceeded with url: /session/16d3e4847e5f9192aeb91ecc9dd88032/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x1204153f0>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2023-03-02 09:33:10go_to_cate IRS21814MTRPBF exception is: HTTPConnectionPool(host='localhost', port=55226): Max retries exceeded with url: /session/16d3e4847e5f9192aeb91ecc9dd88032/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x1208d0160>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2023-03-02 09:35:09go_to_cate IRS21814PBF exception is: HTTPConnectionPool(host='localhost', port=55226): Max retries exceeded with url: /session/16d3e4847e5f9192aeb91ecc9dd88032/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x120796140>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2023-03-02 09:36:35go_to_cate IRS21814SPBF exception is: HTTPConnectionPool(host='localhost', port=55226): Max retries exceeded with url: /session/16d3e4847e5f9192aeb91ecc9dd88032/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x1204168c0>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2023-03-02 09:38:25go_to_cate IRS21814STRPBF exception is: HTTPConnectionPool(host='localhost', port=55226): Max retries exceeded with url: /session/16d3e4847e5f9192aeb91ecc9dd88032/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x1206cf9d0>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2023-03-02 09:39:44go_to_cate IRS279524SPBF exception is: HTTPConnectionPool(host='localhost', port=55226): Max retries exceeded with url: /session/16d3e4847e5f9192aeb91ecc9dd88032/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x1208cc970>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2023-03-02 09:41:37go_to_cate IRS279524STRPBF exception is: HTTPConnectionPool(host='localhost', port=55226): Max retries exceeded with url: /session/16d3e4847e5f9192aeb91ecc9dd88032/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x12037da20>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2023-03-02 09:49:37go_to_cate IRS27952S exception is: HTTPConnectionPool(host='localhost', port=55226): Max retries exceeded with url: /session/16d3e4847e5f9192aeb91ecc9dd88032/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x1208cc7c0>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2023-03-02 09:51:02go_to_cate IRS27952STRPBF exception is: HTTPConnectionPool(host='localhost', port=55226): Max retries exceeded with url: /session/16d3e4847e5f9192aeb91ecc9dd88032/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x120483a30>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2023-03-02 09:52:52go_to_cate ISC007N04NM6 exception is: HTTPConnectionPool(host='localhost', port=55226): Max retries exceeded with url: /session/16d3e4847e5f9192aeb91ecc9dd88032/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x120351e40>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2023-03-02 09:54:46go_to_cate ISC007N04NM6ATMA1 exception is: HTTPConnectionPool(host='localhost', port=55226): Max retries exceeded with url: /session/16d3e4847e5f9192aeb91ecc9dd88032/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x120d7e4a0>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2023-03-02 11:21:46go_to_cate S25FL128SAGBHVC13 exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-02 12:28:22go_to_cate S25FL128SAGMFI011 exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-02 12:54:06go_to_cate S25FL128SAGMFI011M exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-02 13:19:39go_to_cate S25FL128SAGMFI013 exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-02 13:51:39go_to_cate S25FL128SAGMFIG00 exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-02 14:17:11go_to_cate S25FL128SAGMFIG01 exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-02 14:43:05go_to_cate S25FL128SAGMFIG03 exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-02 15:08:33go_to_cate S25FL128SAGMFIG10 exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-02 15:34:26go_to_cate S25FL128SAGMFIG11 exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-02 18:13:50go_to_cate S25FL128SAGNFA000 exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-02 19:33:01go_to_cate S25FL128SAGNFI011 exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-02 22:21:40go_to_cate S25FL128SDSMFBG10 exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-02 22:49:51go_to_cate S25FL128SDSMFN003 exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-03 09:36:07go_to_cate S26KS512SDPBHV020 exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-03 10:32:47go_to_cate S28HL512TFPBHI013 exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-03 10:52:31go_to_cate S28HL512TFPBHV013 exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-03 12:01:41go_to_cate S28HS01GTGZBHI033 exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-03 12:27:01go_to_cate S28HS01GTGZBHM030 exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-03 12:52:56go_to_cate S28HS01GTGZBHM033 exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-03 13:18:16go_to_cate S28HS01GTGZBHV030 exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-03 13:44:11go_to_cate S28HS01GTGZBHV033 exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-03 14:16:11go_to_cate S28HS02GTFPBHB050 exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-03 14:41:44go_to_cate S28HS02GTFPBHB053 exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-03 15:07:14go_to_cate S28HS02GTFPBHM050 exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-03 15:33:02go_to_cate S28HS02GTFPBHM053 exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-06 10:26:40go_to_cate S29GL128P10FFI013 exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (909, 47). Other element would receive the click: <div tabindex="-1" id="auto-modal-mask" class="dk-site__mask visible"></div>
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-06 10:28:27go_to_cate S29GL128P10FFI020 exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (909, 47). Other element would receive the click: <div tabindex="-1" id="auto-modal-mask" class="dk-site__mask visible"></div>
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-06 10:30:20go_to_cate S29GL128P10FFI0202 exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (909, 47). Other element would receive the click: <div tabindex="-1" id="auto-modal-mask" class="dk-site__mask visible"></div>
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-06 10:32:08go_to_cate S29GL128P10FFI020A exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (909, 47). Other element would receive the click: <div tabindex="-1" id="auto-modal-mask" class="dk-site__mask visible"></div>
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-06 10:34:09go_to_cate S29GL128P10FFI022 exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (909, 47). Other element would receive the click: <div tabindex="-1" id="auto-modal-mask" class="dk-site__mask visible"></div>
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-06 10:35:26go_to_cate S29GL128P10TFI010 exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (909, 47). Other element would receive the click: <div tabindex="-1" id="auto-modal-mask" class="dk-site__mask visible"></div>
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-06 10:36:54go_to_cate S29GL128P10TFI010(TSTDTS) exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (909, 47). Other element would receive the click: <div tabindex="-1" id="auto-modal-mask" class="dk-site__mask visible"></div>
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-06 10:39:00go_to_cate S29GL128P10TFI0105 exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (909, 47). Other element would receive the click: <div tabindex="-1" id="auto-modal-mask" class="dk-site__mask visible"></div>
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-06 10:40:47go_to_cate S29GL128P10TFI010-AU exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (909, 47). Other element would receive the click: <div tabindex="-1" id="auto-modal-mask" class="dk-site__mask visible"></div>
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-06 10:42:50go_to_cate S29GL128P10TFI013 exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (909, 47). Other element would receive the click: <div tabindex="-1" id="auto-modal-mask" class="dk-site__mask visible"></div>
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-06 10:44:10go_to_cate S29GL128P10TFI020 exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (909, 47). Other element would receive the click: <div tabindex="-1" id="auto-modal-mask" class="dk-site__mask visible"></div>
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-06 10:46:13go_to_cate S29GL128P10TFI0205 exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (909, 47). Other element would receive the click: <div tabindex="-1" id="auto-modal-mask" class="dk-site__mask visible"></div>
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-06 10:48:09go_to_cate S29GL128P10TFI020D exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (909, 47). Other element would receive the click: <div tabindex="-1" id="auto-modal-mask" class="dk-site__mask visible"></div>
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-06 10:49:59go_to_cate S29GL128P10TFI023 exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (909, 47). Other element would receive the click: <div tabindex="-1" id="auto-modal-mask" class="dk-site__mask visible"></div>
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-06 10:51:28go_to_cate S29GL128P11FFI010 exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (909, 47). Other element would receive the click: <div tabindex="-1" id="auto-modal-mask" class="dk-site__mask visible"></div>
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-06 10:59:29go_to_cate S29GL128P11FFI0102 exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (909, 47). Other element would receive the click: <div tabindex="-1" id="auto-modal-mask" class="dk-site__mask visible"></div>
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-06 11:00:50go_to_cate S29GL128P11FFI010A exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (909, 47). Other element would receive the click: <div tabindex="-1" id="auto-modal-mask" class="dk-site__mask visible"></div>
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-06 11:02:26go_to_cate S29GL128P11FFI010-DNU exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (909, 47). Other element would receive the click: <div tabindex="-1" id="auto-modal-mask" class="dk-site__mask visible"></div>
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-06 11:04:00go_to_cate S29GL128P11FFI020 exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (909, 47). Other element would receive the click: <div tabindex="-1" id="auto-modal-mask" class="dk-site__mask visible"></div>
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-06 11:05:32go_to_cate S29GL128P11FFI0202 exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (909, 47). Other element would receive the click: <div tabindex="-1" id="auto-modal-mask" class="dk-site__mask visible"></div>
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-06 11:07:06go_to_cate S29GL128P11FFI020A exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (909, 47). Other element would receive the click: <div tabindex="-1" id="auto-modal-mask" class="dk-site__mask visible"></div>
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-06 11:08:23go_to_cate S29GL128P11FFI022 exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (909, 47). Other element would receive the click: <div tabindex="-1" id="auto-modal-mask" class="dk-site__mask visible"></div>
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-06 11:10:22go_to_cate S29GL128P11FFIV10 exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (909, 47). Other element would receive the click: <div tabindex="-1" id="auto-modal-mask" class="dk-site__mask visible"></div>
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-06 11:11:45go_to_cate S29GL128P11FFIV13 exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (909, 47). Other element would receive the click: <div tabindex="-1" id="auto-modal-mask" class="dk-site__mask visible"></div>
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-06 11:13:31go_to_cate S29GL128P11FFIV20 exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (909, 47). Other element would receive the click: <div tabindex="-1" id="auto-modal-mask" class="dk-site__mask visible"></div>
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-06 11:15:24go_to_cate S29GL128P11FFIV20A exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (909, 47). Other element would receive the click: <div tabindex="-1" id="auto-modal-mask" class="dk-site__mask visible"></div>
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-06 11:17:04go_to_cate S29GL128P11FFIV22 exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (909, 47). Other element would receive the click: <div tabindex="-1" id="auto-modal-mask" class="dk-site__mask visible"></div>
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-06 11:18:37go_to_cate S29GL128P11FFIV22A exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (909, 47). Other element would receive the click: <div tabindex="-1" id="auto-modal-mask" class="dk-site__mask visible"></div>
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-06 11:20:05go_to_cate S29GL128P11FFIV23 exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (909, 47). Other element would receive the click: <div tabindex="-1" id="auto-modal-mask" class="dk-site__mask visible"></div>
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-06 11:21:38go_to_cate S29GL128P11TFI010 exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (909, 47). Other element would receive the click: <div tabindex="-1" id="auto-modal-mask" class="dk-site__mask visible"></div>
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-06 11:29:40go_to_cate S29GL128P11TFI0105 exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (909, 47). Other element would receive the click: <div tabindex="-1" id="auto-modal-mask" class="dk-site__mask visible"></div>
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-06 11:31:39go_to_cate S29GL128P11TFI010D exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (909, 47). Other element would receive the click: <div tabindex="-1" id="auto-modal-mask" class="dk-site__mask visible"></div>
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-06 11:33:26go_to_cate S29GL128P11TFI013 exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (909, 47). Other element would receive the click: <div tabindex="-1" id="auto-modal-mask" class="dk-site__mask visible"></div>
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-06 11:35:20go_to_cate S29GL128P11TFI020 exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (909, 47). Other element would receive the click: <div tabindex="-1" id="auto-modal-mask" class="dk-site__mask visible"></div>
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-06 11:36:44go_to_cate S29GL128P11TFI0205 exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (909, 47). Other element would receive the click: <div tabindex="-1" id="auto-modal-mask" class="dk-site__mask visible"></div>
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-06 11:38:04go_to_cate S29GL128P11TFI023 exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (909, 47). Other element would receive the click: <div tabindex="-1" id="auto-modal-mask" class="dk-site__mask visible"></div>
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-06 11:39:23go_to_cate S29GL128P11TFIV10 exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (909, 47). Other element would receive the click: <div tabindex="-1" id="auto-modal-mask" class="dk-site__mask visible"></div>
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-06 11:40:54go_to_cate S29GL128P11TFIV13 exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (909, 47). Other element would receive the click: <div tabindex="-1" id="auto-modal-mask" class="dk-site__mask visible"></div>
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-06 11:42:55go_to_cate S29GL128P11TFIV20 exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (909, 47). Other element would receive the click: <div tabindex="-1" id="auto-modal-mask" class="dk-site__mask visible"></div>
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-06 11:45:00go_to_cate S29GL128P11TFIV23 exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (909, 47). Other element would receive the click: <div tabindex="-1" id="auto-modal-mask" class="dk-site__mask visible"></div>
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-06 11:46:59go_to_cate S29GL128P90FAIR10 exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (909, 47). Other element would receive the click: <div tabindex="-1" id="auto-modal-mask" class="dk-site__mask visible"></div>
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-06 11:48:46go_to_cate S29GL128P90FAIR12 exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (909, 47). Other element would receive the click: <div tabindex="-1" id="auto-modal-mask" class="dk-site__mask visible"></div>
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-06 11:50:03go_to_cate S29GL128P90FAIR20 exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (909, 47). Other element would receive the click: <div tabindex="-1" id="auto-modal-mask" class="dk-site__mask visible"></div>
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-06 11:51:50go_to_cate S29GL128P90FFCR10 exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (909, 47). Other element would receive the click: <div tabindex="-1" id="auto-modal-mask" class="dk-site__mask visible"></div>
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-06 11:53:46go_to_cate S29GL128P90FFCR102 exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (909, 47). Other element would receive the click: <div tabindex="-1" id="auto-modal-mask" class="dk-site__mask visible"></div>
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-06 12:01:47go_to_cate S29GL128P90FFCR10A exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (909, 47). Other element would receive the click: <div tabindex="-1" id="auto-modal-mask" class="dk-site__mask visible"></div>
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-06 12:03:46go_to_cate S29GL128P90FFCR20 exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (909, 47). Other element would receive the click: <div tabindex="-1" id="auto-modal-mask" class="dk-site__mask visible"></div>
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-06 12:05:29go_to_cate S29GL128P90FFCR202 exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (909, 47). Other element would receive the click: <div tabindex="-1" id="auto-modal-mask" class="dk-site__mask visible"></div>
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-06 12:07:20go_to_cate S29GL128P90FFCR20A exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (909, 47). Other element would receive the click: <div tabindex="-1" id="auto-modal-mask" class="dk-site__mask visible"></div>
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-06 12:09:22go_to_cate S29GL128P90FFIR10 exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (909, 47). Other element would receive the click: <div tabindex="-1" id="auto-modal-mask" class="dk-site__mask visible"></div>
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-06 12:11:05go_to_cate S29GL128P90FFIR10 (ROHS) exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (909, 47). Other element would receive the click: <div tabindex="-1" id="auto-modal-mask" class="dk-site__mask visible"></div>
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-06 12:13:07go_to_cate S29GL128P90FFIR10A exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (909, 47). Other element would receive the click: <div tabindex="-1" id="auto-modal-mask" class="dk-site__mask visible"></div>
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-06 12:14:43go_to_cate S29GL128P90FFIR12 exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (909, 47). Other element would receive the click: <div tabindex="-1" id="auto-modal-mask" class="dk-site__mask visible"></div>
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-06 12:16:20go_to_cate S29GL128P90FFIR13 exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (909, 47). Other element would receive the click: <div tabindex="-1" id="auto-modal-mask" class="dk-site__mask visible"></div>
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-06 12:17:44go_to_cate S29GL128P90FFIR20 exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (909, 47). Other element would receive the click: <div tabindex="-1" id="auto-modal-mask" class="dk-site__mask visible"></div>
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-06 12:19:25go_to_cate S29GL128P90FFIR202 exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (909, 47). Other element would receive the click: <div tabindex="-1" id="auto-modal-mask" class="dk-site__mask visible"></div>
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-06 12:21:15go_to_cate S29GL128P90FFIR20A exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (909, 47). Other element would receive the click: <div tabindex="-1" id="auto-modal-mask" class="dk-site__mask visible"></div>
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-06 12:22:58go_to_cate S29GL128P90FFIR22 exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (909, 47). Other element would receive the click: <div tabindex="-1" id="auto-modal-mask" class="dk-site__mask visible"></div>
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-06 12:24:45go_to_cate S29GL128P90FFIR23 exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (909, 47). Other element would receive the click: <div tabindex="-1" id="auto-modal-mask" class="dk-site__mask visible"></div>
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-06 12:26:09go_to_cate S29GL128P90TFCR10 exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (909, 47). Other element would receive the click: <div tabindex="-1" id="auto-modal-mask" class="dk-site__mask visible"></div>
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-06 12:34:10go_to_cate S29GL128P90TFCR105 exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (909, 47). Other element would receive the click: <div tabindex="-1" id="auto-modal-mask" class="dk-site__mask visible"></div>
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-06 12:35:32go_to_cate S29GL128P90TFCR10A exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (909, 47). Other element would receive the click: <div tabindex="-1" id="auto-modal-mask" class="dk-site__mask visible"></div>
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-06 12:36:55go_to_cate S29GL128P90TFCR10D exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (909, 47). Other element would receive the click: <div tabindex="-1" id="auto-modal-mask" class="dk-site__mask visible"></div>
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-06 12:38:24go_to_cate S29GL128P90TFCR20 exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (909, 47). Other element would receive the click: <div tabindex="-1" id="auto-modal-mask" class="dk-site__mask visible"></div>
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-06 12:40:01go_to_cate S29GL128P90TFCR205 exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (909, 47). Other element would receive the click: <div tabindex="-1" id="auto-modal-mask" class="dk-site__mask visible"></div>
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-06 12:41:47go_to_cate S29GL128P90TFCR20D exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (909, 47). Other element would receive the click: <div tabindex="-1" id="auto-modal-mask" class="dk-site__mask visible"></div>
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-06 12:43:43go_to_cate S29GL128P90TFIR10 exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (909, 47). Other element would receive the click: <div tabindex="-1" id="auto-modal-mask" class="dk-site__mask visible"></div>
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-06 12:45:13go_to_cate S29GL128P90TFIR105 exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (909, 47). Other element would receive the click: <div tabindex="-1" id="auto-modal-mask" class="dk-site__mask visible"></div>
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-06 12:47:17go_to_cate S29GL128P90TFIR10D exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (909, 47). Other element would receive the click: <div tabindex="-1" id="auto-modal-mask" class="dk-site__mask visible"></div>
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-06 12:49:04go_to_cate S29GL128P90TFIR13 exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (909, 47). Other element would receive the click: <div tabindex="-1" id="auto-modal-mask" class="dk-site__mask visible"></div>
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-06 12:51:01go_to_cate S29GL128P90TFIR20 exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (909, 47). Other element would receive the click: <div tabindex="-1" id="auto-modal-mask" class="dk-site__mask visible"></div>
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-06 12:52:17go_to_cate S29GL128P90TFIR20/HSD/TR/BAE exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (909, 47). Other element would receive the click: <div tabindex="-1" id="auto-modal-mask" class="dk-site__mask visible"></div>
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-06 12:53:54go_to_cate S29GL128P90TFIR20D exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (909, 47). Other element would receive the click: <div tabindex="-1" id="auto-modal-mask" class="dk-site__mask visible"></div>
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-06 12:55:37go_to_cate S29GL128P90TFIR23 exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (909, 47). Other element would receive the click: <div tabindex="-1" id="auto-modal-mask" class="dk-site__mask visible"></div>
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-06 12:57:06go_to_cate S29GL128P90TFIR23D exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (909, 47). Other element would receive the click: <div tabindex="-1" id="auto-modal-mask" class="dk-site__mask visible"></div>
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-06 13:05:07go_to_cate S29GL128S10DHB010 exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (909, 47). Other element would receive the click: <div tabindex="-1" id="auto-modal-mask" class="dk-site__mask visible"></div>
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-06 13:06:55go_to_cate S29GL128S10DHB013 exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (909, 47). Other element would receive the click: <div tabindex="-1" id="auto-modal-mask" class="dk-site__mask visible"></div>
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-06 13:08:24go_to_cate S29GL128S10DHB020 exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (909, 47). Other element would receive the click: <div tabindex="-1" id="auto-modal-mask" class="dk-site__mask visible"></div>
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-06 13:09:45go_to_cate S29GL128S10DHB023 exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (909, 47). Other element would receive the click: <div tabindex="-1" id="auto-modal-mask" class="dk-site__mask visible"></div>
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-06 13:11:44go_to_cate S29GL128S10DHI010 exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (909, 47). Other element would receive the click: <div tabindex="-1" id="auto-modal-mask" class="dk-site__mask visible"></div>
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-06 13:13:09go_to_cate S29GL128S10DHI013 exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (909, 47). Other element would receive the click: <div tabindex="-1" id="auto-modal-mask" class="dk-site__mask visible"></div>
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-06 13:14:43go_to_cate S29GL128S10DHI020 exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (909, 47). Other element would receive the click: <div tabindex="-1" id="auto-modal-mask" class="dk-site__mask visible"></div>
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-06 13:16:49go_to_cate S29GL128S10DHI023 exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (909, 47). Other element would receive the click: <div tabindex="-1" id="auto-modal-mask" class="dk-site__mask visible"></div>
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-06 13:18:35go_to_cate S29GL128S10DHIV10 exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (909, 47). Other element would receive the click: <div tabindex="-1" id="auto-modal-mask" class="dk-site__mask visible"></div>
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-06 13:20:24go_to_cate S29GL128S10DHIV13 exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (909, 47). Other element would receive the click: <div tabindex="-1" id="auto-modal-mask" class="dk-site__mask visible"></div>
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-06 13:22:02go_to_cate S29GL128S10DHIV20 exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (909, 47). Other element would receive the click: <div tabindex="-1" id="auto-modal-mask" class="dk-site__mask visible"></div>
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-06 13:23:20go_to_cate S29GL128S10DHIV23 exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (909, 47). Other element would receive the click: <div tabindex="-1" id="auto-modal-mask" class="dk-site__mask visible"></div>
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-06 13:25:02go_to_cate S29GL128S10DHV010 exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (909, 47). Other element would receive the click: <div tabindex="-1" id="auto-modal-mask" class="dk-site__mask visible"></div>
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-06 13:26:45go_to_cate S29GL128S10DHV013 exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (909, 47). Other element would receive the click: <div tabindex="-1" id="auto-modal-mask" class="dk-site__mask visible"></div>
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-06 13:28:44go_to_cate S29GL128S10DHV020 exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (909, 47). Other element would receive the click: <div tabindex="-1" id="auto-modal-mask" class="dk-site__mask visible"></div>
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-06 13:36:46go_to_cate S29GL128S10DHV023 exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (909, 47). Other element would receive the click: <div tabindex="-1" id="auto-modal-mask" class="dk-site__mask visible"></div>
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-06 13:49:10go_to_cate S29GL128S10FAIV13 exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-06 14:38:44go_to_cate S29GL128S10GHB010 exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-06 15:42:20go_to_cate S29GL128S10TFV020 exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-06 16:25:25go_to_cate S29GL128S11DHIV20 exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-06 16:50:42go_to_cate S29GL128S11DHIV20A exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-06 22:30:38go_to_cate 1EDN7550BXTSA1 exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-06 23:28:30go_to_cate BSC010N04LSATMA1 exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-07 00:55:58go_to_cate ICE5AR4770BZSXKLA1 exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-07 02:06:17go_to_cate IKW50N60DTPXKSA1 exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-07 14:37:02go_to_cate S29GL512T12TFVV23 exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-07 14:47:38go_to_cate S29GL512T13DHNV13 exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-07 15:11:27go_to_cate S29GL512T13TFNV23 exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-07 17:15:18go_to_cate S29PL127J60BFA043 exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-07 17:44:08go_to_cate S70FL01GSAGBAEC10 exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-07 18:16:08go_to_cate S70FL01GSAGBHAC10 exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-07 18:42:01go_to_cate S70FL01GSAGBHAC13 exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-07 19:08:02go_to_cate S70FL01GSAGBHBC10 exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-07 19:33:17go_to_cate S70FL01GSAGBHEC10 exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-07 19:58:48go_to_cate S70FL01GSAGBHEC13 exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-07 20:24:38go_to_cate S70FL01GSAGBHIC10 exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-07 20:50:05go_to_cate S70FL01GSAGBHIC13 exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-07 21:15:42go_to_cate S70FL01GSAGBHMC10 exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-07 21:41:22go_to_cate S70FL01GSAGBHMC13 exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-07 22:06:54go_to_cate S70FL01GSAGBHVC10 exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-07 22:13:43go_to_cate S70FL01GSAGBHVC13 exception is: HTTPConnectionPool(host='localhost', port=54895): Max retries exceeded with url: /session/3467f8bc4643738e6e84e53e0b6066f8/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x11ed95240>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2023-03-08 00:23:12go_to_cate S70FL01GSAGMFA010 exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-08 03:17:56go_to_cate S70FS01GSAGBHB213 exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-08 03:56:37go_to_cate S70FS01GSAGMFV010 exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-08 05:23:50go_to_cate S70GL02GS11FHI013 exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-08 05:43:16go_to_cate S70GL02GS11FHV020 exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-08 10:49:08go_to_cate TD215N22KOF exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-08 11:50:30go_to_cate TD250N16KOF exception is: Message: no such element: Unable to locate element: {"method":"css selector","selector":".header__search"}
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-08 12:11:26go_to_cate TD250N16KOF-EUPC exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-08 14:55:33go_to_cate TD500N12KOFS01HPSA1 exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-08 15:21:06go_to_cate TD500N16KOF-EUPC exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-08 15:46:50go_to_cate TD500N16KOFHOSA1 exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-08 16:12:45go_to_cate TD500N16KOFHPSA1 exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-08 16:38:19go_to_cate TD500N16KOFHPSA2 exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-08 17:04:12go_to_cate TD500N16KOFTIMHPSA1 exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-08 17:30:04go_to_cate TD500N18KOF exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-08 17:55:39go_to_cate TD500N18KOFHPSA1 exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-08 18:21:37go_to_cate TD520N22KOFHPSA2 exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=110.0.5481.177)
+
+2023-03-10 22:43:02go_to_cate CY7S1049G30-10VXIT exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=111.0.5563.64)
+
+2023-03-11 08:49:10go_to_cate CY8C21312-24PVXA exception is: Message: disconnected: Unable to receive message from renderer
+  (failed to check if window was closed: disconnected: not connected to DevTools)
+  (Session info: chrome=111.0.5563.64)
+
+2023-03-11 09:16:05go_to_cate CY8C21312-24PVXAT exception is: Message: disconnected: not connected to DevTools
+  (failed to check if window was closed: disconnected: not connected to DevTools)
+  (Session info: chrome=111.0.5563.64)
+
+2023-03-11 09:17:45go_to_cate CY8C21323-24LQXI exception is: Message: disconnected: not connected to DevTools
+  (failed to check if window was closed: disconnected: not connected to DevTools)
+  (Session info: chrome=111.0.5563.64)
+
+2023-03-11 11:14:00go_to_cate TD570N18KOF exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=111.0.5563.64)
+
+2023-03-11 13:29:38go_to_cate TDA38840AUMA1 exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=111.0.5563.64)
+
+2023-03-11 13:50:18go_to_cate TDB6HK124N16RR-EUPC exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=111.0.5563.64)
+
+2023-03-11 14:15:41go_to_cate TDB6HK180N16RRB11BOSA1 exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=111.0.5563.64)
+
+2023-03-11 14:47:42go_to_cate TDB6HK180N16RRB11BPSA1 exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=111.0.5563.64)
+
+2023-03-11 15:13:10go_to_cate TDB6HK180N16RR-B11-EUPC exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=111.0.5563.64)
+
+2023-03-11 15:38:59go_to_cate TDB6HK180N16RRB21BOSA1 exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=111.0.5563.64)
+
+2023-03-11 16:04:19go_to_cate TDB6HK180N16RRB48BPSA1 exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=111.0.5563.64)
+
+2023-03-11 16:29:37go_to_cate TDB6HK180N16RRB48BPSA2 exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=111.0.5563.64)
+
+2023-03-11 16:55:06go_to_cate TDB6HK180N16RRBOSA1 exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=111.0.5563.64)
+
+2023-03-11 17:21:05go_to_cate TDB6HK180N16RRBPSA1 exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=111.0.5563.64)
+
+2023-03-11 17:46:57go_to_cate TDB6HK180N16RRPB11BPSA1 exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=111.0.5563.64)
+
+2023-03-11 18:12:20go_to_cate TDB6HK240N16PBOSA1 exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=111.0.5563.64)
+
+2023-03-11 18:38:10go_to_cate TDB6HK360N16P exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=111.0.5563.64)
+
+2023-03-11 19:04:10go_to_cate TDB6HK95N16LOFHOSA1 exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=111.0.5563.64)
+
+2023-03-11 20:41:55go_to_cate TDB6HK180N16RRB48BPSA1 exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=111.0.5563.64)
+
+2023-03-11 22:22:49go_to_cate CY7C1021DV33-10ZSXI exception is: HTTPConnectionPool(host='localhost', port=58451): Max retries exceeded with url: /session/ca9c70831fed19ca17c60992478d3a08/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x11fcd0040>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2023-03-11 23:41:08go_to_cate TDB6HK180N16RRB11BOSA1 exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=111.0.5563.64)
+
+2023-03-12 00:09:38go_to_cate TDB6HK180N16RRB48BPSA1 exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=111.0.5563.64)
+
+2023-03-12 01:42:39go_to_cate TLE4905LXA exception is: Message: no such element: Unable to locate element: {"method":"css selector","selector":".header__search"}
+  (Session info: chrome=111.0.5563.64)
+
+2023-03-12 01:44:44go_to_cate TLE4906K/SN exception is: Message: no such element: Unable to locate element: {"method":"css selector","selector":".header__search"}
+  (Session info: chrome=111.0.5563.64)
+
+2023-03-12 01:46:20go_to_cate TLE4906KHTSA1 exception is: Message: no such element: Unable to locate element: {"method":"css selector","selector":".header__search"}
+  (Session info: chrome=111.0.5563.64)
+
+2023-03-12 16:10:12go_to_cate TLE4906KHTSA1 exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=111.0.5563.64)
+
+2023-03-12 17:46:02go_to_cate TZ800N14KOFHPSA3 exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=111.0.5563.64)
+
+2023-03-13 17:51:36go_to_cate CYRS2643KV18-250GCMB exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=111.0.5563.64)
+
+2023-03-14 12:57:48go_to_cate R5F1007AANA#W0 exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=111.0.5563.64)
+
+2023-03-14 14:38:56go_to_cate R5F1007EGNA#U0 exception is: Message: no such element: Unable to locate element: {"method":"css selector","selector":".header__search"}
+  (Session info: chrome=111.0.5563.64)
+
+2023-03-14 14:40:23go_to_cate R5F1007EGNA#W0 exception is: Message: no such element: Unable to locate element: {"method":"css selector","selector":".header__search"}
+  (Session info: chrome=111.0.5563.64)
+
+2023-03-14 14:46:27go_to_cate R5F100AAA100SP#X0 exception is: Message: no such element: Unable to locate element: {"method":"css selector","selector":".header__search"}
+  (Session info: chrome=111.0.5563.64)
+
+2023-03-14 14:47:53go_to_cate R5F100AAASP#V0 exception is: Message: no such element: Unable to locate element: {"method":"css selector","selector":".header__search"}
+  (Session info: chrome=111.0.5563.64)
+
+2023-03-14 14:49:25go_to_cate R5F100AAASP#X0 exception is: Message: no such element: Unable to locate element: {"method":"css selector","selector":".header__search"}
+  (Session info: chrome=111.0.5563.64)
+
+2023-03-14 17:13:21go_to_cate R5F100BADNA#U0 exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=111.0.5563.64)
+
+2023-03-14 17:57:34go_to_cate R5F100BCGNA#U0 exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=111.0.5563.64)
+
+2023-03-14 18:15:10go_to_cate R5F100BDANA#W0 exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=111.0.5563.64)
+
+2023-03-14 19:17:36go_to_cate R5F100BDGNA#U0 exception is: Message: disconnected: not connected to DevTools
+  (failed to check if window was closed: disconnected: not connected to DevTools)
+  (Session info: chrome=111.0.5563.64)
+
+2023-03-14 19:41:26go_to_cate R5F100BDGNA#W0 exception is: Message: disconnected: not connected to DevTools
+  (failed to check if window was closed: disconnected: not connected to DevTools)
+  (Session info: chrome=111.0.5563.64)
+
+2023-03-14 19:43:27go_to_cate R5F100BEANA#U0 exception is: Message: disconnected: not connected to DevTools
+  (failed to check if window was closed: disconnected: not connected to DevTools)
+  (Session info: chrome=111.0.5563.64)
+
+2023-03-14 19:45:04go_to_cate R5F100BEANA#W0 exception is: Message: disconnected: not connected to DevTools
+  (failed to check if window was closed: disconnected: not connected to DevTools)
+  (Session info: chrome=111.0.5563.64)
+
+2023-03-14 19:46:26go_to_cate R5F100BEDNA#U0 exception is: Message: disconnected: not connected to DevTools
+  (failed to check if window was closed: disconnected: not connected to DevTools)
+  (Session info: chrome=111.0.5563.64)
+
+2023-03-14 19:47:43go_to_cate R5F100BEDNA#W0 exception is: Message: disconnected: not connected to DevTools
+  (failed to check if window was closed: disconnected: not connected to DevTools)
+  (Session info: chrome=111.0.5563.64)
+
+2023-03-14 19:49:36go_to_cate R5F100BEGNA#U0 exception is: Message: disconnected: not connected to DevTools
+  (failed to check if window was closed: disconnected: not connected to DevTools)
+  (Session info: chrome=111.0.5563.64)
+
+2023-03-14 19:51:41go_to_cate R5F100BEGNA#W0 exception is: Message: disconnected: not connected to DevTools
+  (failed to check if window was closed: disconnected: not connected to DevTools)
+  (Session info: chrome=111.0.5563.64)
+
+2023-03-14 19:53:39go_to_cate R5F100BFANA#U0 exception is: Message: disconnected: not connected to DevTools
+  (failed to check if window was closed: disconnected: not connected to DevTools)
+  (Session info: chrome=111.0.5563.64)
+
+2023-03-14 19:55:20go_to_cate R5F100BFANA#W0 exception is: Message: disconnected: not connected to DevTools
+  (failed to check if window was closed: disconnected: not connected to DevTools)
+  (Session info: chrome=111.0.5563.64)
+
+2023-03-14 19:56:35go_to_cate R5F100BFDNA#U0 exception is: Message: disconnected: not connected to DevTools
+  (failed to check if window was closed: disconnected: not connected to DevTools)
+  (Session info: chrome=111.0.5563.64)
+
+2023-03-14 19:57:50go_to_cate R5F100BFDNA#W0 exception is: Message: disconnected: not connected to DevTools
+  (failed to check if window was closed: disconnected: not connected to DevTools)
+  (Session info: chrome=111.0.5563.64)
+
+2023-03-14 19:59:43go_to_cate R5F100BFGNA#U0 exception is: Message: disconnected: not connected to DevTools
+  (failed to check if window was closed: disconnected: not connected to DevTools)
+  (Session info: chrome=111.0.5563.64)
+
+2023-03-14 20:01:02go_to_cate R5F100BFGNA#W0 exception is: Message: disconnected: not connected to DevTools
+  (failed to check if window was closed: disconnected: not connected to DevTools)
+  (Session info: chrome=111.0.5563.64)
+
+2023-03-14 20:02:21go_to_cate R5F100BGANA#U0 exception is: Message: disconnected: not connected to DevTools
+  (failed to check if window was closed: disconnected: not connected to DevTools)
+  (Session info: chrome=111.0.5563.64)
+
+2023-03-14 20:10:21go_to_cate R5F100BGANA#W0 exception is: Message: disconnected: not connected to DevTools
+  (failed to check if window was closed: disconnected: not connected to DevTools)
+  (Session info: chrome=111.0.5563.64)
+
+2023-03-14 20:11:39go_to_cate R5F100BGDNA#U0 exception is: Message: disconnected: not connected to DevTools
+  (failed to check if window was closed: disconnected: not connected to DevTools)
+  (Session info: chrome=111.0.5563.64)
+
+2023-03-14 20:13:43go_to_cate R5F100BGDNA#W0 exception is: Message: disconnected: not connected to DevTools
+  (failed to check if window was closed: disconnected: not connected to DevTools)
+  (Session info: chrome=111.0.5563.64)
+
+2023-03-14 20:15:27go_to_cate R5F100BGGNA#U0 exception is: Message: disconnected: not connected to DevTools
+  (failed to check if window was closed: disconnected: not connected to DevTools)
+  (Session info: chrome=111.0.5563.64)
+
+2023-03-14 20:17:25go_to_cate R5F100BGGNA#W0 exception is: Message: disconnected: not connected to DevTools
+  (failed to check if window was closed: disconnected: not connected to DevTools)
+  (Session info: chrome=111.0.5563.64)
+
+2023-03-14 20:19:26go_to_cate R5F100CDALA#W0 exception is: Message: disconnected: not connected to DevTools
+  (failed to check if window was closed: disconnected: not connected to DevTools)
+  (Session info: chrome=111.0.5563.64)
+
+2023-03-14 20:21:10go_to_cate R5F100CEALA#YE exception is: Message: disconnected: not connected to DevTools
+  (failed to check if window was closed: disconnected: not connected to DevTools)
+  (Session info: chrome=111.0.5563.64)
+
+2023-03-14 20:22:37go_to_cate R5F100CEALA#YW exception is: Message: disconnected: not connected to DevTools
+  (failed to check if window was closed: disconnected: not connected to DevTools)
+  (Session info: chrome=111.0.5563.64)
+
+2023-03-14 20:24:15go_to_cate R5F100CGALA#YE exception is: Message: disconnected: not connected to DevTools
+  (failed to check if window was closed: disconnected: not connected to DevTools)
+  (Session info: chrome=111.0.5563.64)
+
+2023-03-14 20:25:41go_to_cate R5F100CGALA#YW exception is: Message: disconnected: not connected to DevTools
+  (failed to check if window was closed: disconnected: not connected to DevTools)
+  (Session info: chrome=111.0.5563.64)
+
+2023-03-14 20:27:27go_to_cate R5F100EAANA#U0 exception is: Message: disconnected: not connected to DevTools
+  (failed to check if window was closed: disconnected: not connected to DevTools)
+  (Session info: chrome=111.0.5563.64)
+
+2023-03-14 20:28:51go_to_cate R5F100EAANA#W0 exception is: Message: disconnected: not connected to DevTools
+  (failed to check if window was closed: disconnected: not connected to DevTools)
+  (Session info: chrome=111.0.5563.64)
+
+2023-03-14 20:30:11go_to_cate R5F100EAAXXXNA#U0 exception is: Message: disconnected: not connected to DevTools
+  (failed to check if window was closed: disconnected: not connected to DevTools)
+  (Session info: chrome=111.0.5563.64)
+
+2023-03-14 20:31:32go_to_cate R5F100EADNA#U0 exception is: Message: disconnected: not connected to DevTools
+  (failed to check if window was closed: disconnected: not connected to DevTools)
+  (Session info: chrome=111.0.5563.64)
+
+2023-03-14 20:32:53go_to_cate R5F100EADNA#W0 exception is: Message: disconnected: not connected to DevTools
+  (failed to check if window was closed: disconnected: not connected to DevTools)
+  (Session info: chrome=111.0.5563.64)
+
+2023-03-14 20:40:53go_to_cate R5F100EAGNA#U0 exception is: Message: disconnected: not connected to DevTools
+  (failed to check if window was closed: disconnected: not connected to DevTools)
+  (Session info: chrome=111.0.5563.64)
+
+2023-03-14 20:42:42go_to_cate R5F100EAGNA#W0 exception is: Message: disconnected: not connected to DevTools
+  (failed to check if window was closed: disconnected: not connected to DevTools)
+  (Session info: chrome=111.0.5563.64)
+
+2023-03-14 20:44:16go_to_cate R5F100ECANA#U0 exception is: Message: disconnected: not connected to DevTools
+  (failed to check if window was closed: disconnected: not connected to DevTools)
+  (Session info: chrome=111.0.5563.64)
+
+2023-03-14 20:46:08go_to_cate R5F100ECANA#W0 exception is: Message: disconnected: not connected to DevTools
+  (failed to check if window was closed: disconnected: not connected to DevTools)
+  (Session info: chrome=111.0.5563.64)
+
+2023-03-15 12:43:07go_to_cate R5F100PGGFB#X0 exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=111.0.5563.64)
+
+2023-03-15 13:59:16go_to_cate R5F100PJAFA#X0 exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=111.0.5563.64)
+
+2023-03-15 14:24:31go_to_cate R5F100PJAFB#V0 exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=111.0.5563.64)
+
+2023-03-15 14:50:11go_to_cate R5F100PJAFB#X0 exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=111.0.5563.64)
+
+2023-03-15 15:15:33go_to_cate R5F100PJDFA#30 exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=111.0.5563.64)
+
+2023-03-15 15:40:55go_to_cate R5F100PJDFA#V0 exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=111.0.5563.64)
+
+2023-03-15 16:06:57go_to_cate R5F100PJDFA#X0 exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=111.0.5563.64)
+
+2023-03-15 16:32:59go_to_cate R5F100PJDFB#V0 exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=111.0.5563.64)
+
+2023-03-15 16:58:34go_to_cate R5F100PJDFB#X0 exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=111.0.5563.64)
+
+2023-03-15 17:24:38go_to_cate R5F100PJGFA#V0 exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=111.0.5563.64)
+
+2023-03-15 17:50:14go_to_cate R5F100PJGFB#V0 exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=111.0.5563.64)
+
+2023-03-15 18:15:38go_to_cate R5F100PJGFB#X0 exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=111.0.5563.64)
+
+2023-03-15 18:41:39go_to_cate R5F100PKAFA#X0 exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=111.0.5563.64)
+
+2023-03-15 19:01:34go_to_cate R5F100PKAFB#V0 exception is: Message: disconnected: not connected to DevTools
+  (failed to check if window was closed: disconnected: not connected to DevTools)
+  (Session info: chrome=111.0.5563.64)
+
+2023-03-15 19:38:36go_to_cate R5F100PKDFA#V0 exception is: Message: disconnected: not connected to DevTools
+  (failed to check if window was closed: disconnected: not connected to DevTools)
+  (Session info: chrome=111.0.5563.64)
+
+2023-03-15 22:16:25go_to_cate R5F100PKDFA#X0 exception is: Message: disconnected: not connected to DevTools
+  (failed to check if window was closed: disconnected: not connected to DevTools)
+  (Session info: chrome=111.0.5563.64)
+
+2023-03-15 22:17:58go_to_cate R5F100PKDFB#V0 exception is: Message: disconnected: not connected to DevTools
+  (failed to check if window was closed: disconnected: not connected to DevTools)
+  (Session info: chrome=111.0.5563.64)
+
+2023-03-15 23:52:09go_to_cate R5F100PKDFA#X0 exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=111.0.5563.64)
+
+2023-03-16 00:14:58go_to_cate R5F100PKGFB#V0 exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=111.0.5563.64)
+
+2023-03-16 00:42:50go_to_cate R5F100PLDFA#X0 exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=111.0.5563.64)
+
+2023-03-16 10:10:00go_to_cate R5F104BEANA#U0 exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=111.0.5563.64)
+
+2023-03-16 10:36:56go_to_cate R5F104BEGNA#U0 exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=111.0.5563.64)
+
+2023-03-16 13:02:29go_to_cate R5F104ECANA#W0 exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=111.0.5563.64)
+
+2023-03-16 13:27:57go_to_cate R5F104ECGNA#U0 exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=111.0.5563.64)
+
+2023-03-16 13:37:16go_to_cate R5F104ECGNA#W0 exception is: HTTPConnectionPool(host='localhost', port=53814): Max retries exceeded with url: /session/76680c3681f443b8fb73214b51e9ae15/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x112de2aa0>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2023-03-16 14:32:19go_to_cate R5F104EEGNA#U0 exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=111.0.5563.64)
+
+2023-03-20 00:03:46go_to_cate 9ZXL0451EKILFT exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=111.0.5563.64)
+
+2023-03-20 01:20:45go_to_cate 5P49V5901B750NLGI8 exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=111.0.5563.64)
+
+2023-03-20 11:50:40go_to_cate 1338-18DVGI8 exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=111.0.5563.64)
+
+2023-03-20 12:20:50go_to_cate 1338679 exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=111.0.5563.64)
+
+2023-03-20 13:05:01go_to_cate 1338AC-31SRGI8 exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=111.0.5563.64)
+
+2023-03-20 15:23:06go_to_cate 1339AC-31SRGI8 exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=111.0.5563.64)
+
+2023-03-20 16:05:52go_to_cate 1339D-31DVGI exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=111.0.5563.64)
+
+2023-03-20 17:01:31go_to_cate 2304NZLPGGI8 exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=111.0.5563.64)
+
+2023-03-20 17:30:06go_to_cate 2305-1DCGI exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=111.0.5563.64)
+
+2023-03-20 17:52:02go_to_cate 2305-1HDC exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=111.0.5563.64)
+
+2023-03-20 19:12:55go_to_cate 2305A-1DCG8 exception is: Message: disconnected: not connected to DevTools
+  (failed to check if window was closed: disconnected: not connected to DevTools)
+  (Session info: chrome=111.0.5563.64)
+
+2023-03-20 20:09:19go_to_cate 2305A-1DCGI exception is: Message: disconnected: not connected to DevTools
+  (failed to check if window was closed: disconnected: not connected to DevTools)
+  (Session info: chrome=111.0.5563.64)
+
+2023-03-20 22:09:50go_to_cate 2305A-1DCGI8 exception is: Message: disconnected: not connected to DevTools
+  (failed to check if window was closed: disconnected: not connected to DevTools)
+  (Session info: chrome=111.0.5563.64)
+
+2023-03-20 23:02:59go_to_cate 2305A-1DCI exception is: Message: disconnected: not connected to DevTools
+  (failed to check if window was closed: disconnected: not connected to DevTools)
+  (Session info: chrome=111.0.5563.64)
+
+2023-03-20 23:04:30go_to_cate 2305A-1HDC exception is: Message: disconnected: not connected to DevTools
+  (failed to check if window was closed: disconnected: not connected to DevTools)
+  (Session info: chrome=111.0.5563.64)
+
+2023-03-20 23:12:30go_to_cate 2305A-1HDCG exception is: Message: disconnected: not connected to DevTools
+  (failed to check if window was closed: disconnected: not connected to DevTools)
+  (Session info: chrome=111.0.5563.64)
+
+2023-03-20 23:14:12go_to_cate 2305A-1HDCG8 exception is: Message: disconnected: not connected to DevTools
+  (failed to check if window was closed: disconnected: not connected to DevTools)
+  (Session info: chrome=111.0.5563.64)
+
+2023-03-20 23:15:32go_to_cate 2305A-1HDCGI exception is: Message: disconnected: not connected to DevTools
+  (failed to check if window was closed: disconnected: not connected to DevTools)
+  (Session info: chrome=111.0.5563.64)
+
+2023-03-20 23:16:56go_to_cate 2305A-1HDCGI8 exception is: Message: disconnected: not connected to DevTools
+  (failed to check if window was closed: disconnected: not connected to DevTools)
+  (Session info: chrome=111.0.5563.64)
+
+2023-03-20 23:18:34go_to_cate 2305A1HDCI exception is: Message: disconnected: not connected to DevTools
+  (failed to check if window was closed: disconnected: not connected to DevTools)
+  (Session info: chrome=111.0.5563.64)
+
+2023-03-20 23:20:32go_to_cate 2305B-1DCG exception is: Message: disconnected: not connected to DevTools
+  (failed to check if window was closed: disconnected: not connected to DevTools)
+  (Session info: chrome=111.0.5563.64)
+
+2023-03-20 23:22:29go_to_cate 2305B-1DCGI exception is: Message: disconnected: not connected to DevTools
+  (failed to check if window was closed: disconnected: not connected to DevTools)
+  (Session info: chrome=111.0.5563.64)
+
+2023-03-20 23:23:49go_to_cate 2305B-1DCGI8 exception is: Message: disconnected: not connected to DevTools
+  (failed to check if window was closed: disconnected: not connected to DevTools)
+  (Session info: chrome=111.0.5563.64)
+
+2023-03-21 02:38:30go_to_cate 2305MI-1LFT exception is: Message: disconnected: Unable to receive message from renderer
+  (failed to check if window was closed: disconnected: not connected to DevTools)
+  (Session info: chrome=111.0.5563.64)
+
+2023-03-21 10:07:59go_to_cate 2309-1DCG8 exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=111.0.5563.64)
+
+2023-03-21 13:52:28go_to_cate 5962-8953605YA exception is: Message: timeout: Timed out receiving message from renderer: 360.000
+  (Session info: chrome=111.0.5563.64)
+
+2023-03-22 13:29:11go_to_cate 5P35023B-619NLGI8 exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (966, 47). Other element would receive the click: <div class="jss210" data-testid="loadingCover"></div>
+  (Session info: chrome=111.0.5563.110)
+
+2023-03-22 13:30:59go_to_cate 5P35023B-629NLGI exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (966, 47). Other element would receive the click: <div class="jss210" data-testid="loadingCover"></div>
+  (Session info: chrome=111.0.5563.110)
+
+2023-03-22 13:32:17go_to_cate 5P35023NBGI exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (966, 47). Other element would receive the click: <div class="jss210" data-testid="loadingCover"></div>
+  (Session info: chrome=111.0.5563.110)
+
+2023-03-22 13:33:50go_to_cate 5P35023NBGI8 exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (966, 47). Other element would receive the click: <div class="jss210" data-testid="loadingCover"></div>
+  (Session info: chrome=111.0.5563.110)
+
+2023-03-22 13:35:14go_to_cate 5P35023NLGI exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (966, 47). Other element would receive the click: <div class="jss210" data-testid="loadingCover"></div>
+  (Session info: chrome=111.0.5563.110)
+
+2023-03-22 13:39:04go_to_cate 5P49V60A000NLG2 exception is: HTTPConnectionPool(host='localhost', port=55989): Max retries exceeded with url: /session/e7a2e95ea730d94e81111272d6f0dca1/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x12ccfbe80>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2023-03-23 15:43:45go_to_cate 7005S25JG8 exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (997, 47). Other element would receive the click: <div class="jss210" data-testid="loadingCover"></div>
+  (Session info: chrome=111.0.5563.110)
+
+2023-03-23 15:51:46go_to_cate 7005S25PF exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (997, 47). Other element would receive the click: <div class="jss210" data-testid="loadingCover"></div>
+  (Session info: chrome=111.0.5563.110)
+
+2023-03-23 15:53:42go_to_cate 7005S25PF8 exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (997, 47). Other element would receive the click: <div class="jss210" data-testid="loadingCover"></div>
+  (Session info: chrome=111.0.5563.110)
+
+2023-03-23 15:55:13go_to_cate 7005S25PFG exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (997, 47). Other element would receive the click: <div class="jss210" data-testid="loadingCover"></div>
+  (Session info: chrome=111.0.5563.110)
+
+2023-03-23 16:37:17go_to_cate 7005S35J/2594 exception is: Message: no such element: Unable to locate element: {"method":"css selector","selector":".header__search"}
+  (Session info: chrome=111.0.5563.110)
+
+2023-03-23 18:52:19go_to_cate 7005S55J8 exception is: HTTPConnectionPool(host='localhost', port=53896): Max retries exceeded with url: /session/e0663d9b23338859c9a0c89f609ffd45/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x1043b8970>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2023-03-23 19:28:23go_to_cate 7005S55JI exception is: HTTPConnectionPool(host='localhost', port=53896): Max retries exceeded with url: /session/e0663d9b23338859c9a0c89f609ffd45/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x104424760>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2023-03-23 20:40:27go_to_cate 7005S55JI8 exception is: HTTPConnectionPool(host='localhost', port=53896): Max retries exceeded with url: /session/e0663d9b23338859c9a0c89f609ffd45/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x1178aa620>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2023-03-24 10:55:13go_to_cate 7024S55PFI exception is: Message: no such element: Unable to locate element: {"method":"css selector","selector":".header__search"}
+  (Session info: chrome=111.0.5563.110)
+
+2023-03-24 10:56:44go_to_cate 7024S55PFI8 exception is: Message: no such element: Unable to locate element: {"method":"css selector","selector":".header__search"}
+  (Session info: chrome=111.0.5563.110)
+
+2023-03-24 10:58:28go_to_cate 7024S70FB exception is: Message: no such element: Unable to locate element: {"method":"css selector","selector":".header__search"}
+  (Session info: chrome=111.0.5563.110)
+
+2023-03-24 11:00:24go_to_cate 7024S70GB exception is: Message: no such element: Unable to locate element: {"method":"css selector","selector":".header__search"}
+  (Session info: chrome=111.0.5563.110)
+
+2023-03-24 11:02:19go_to_cate 7025L12J exception is: Message: no such element: Unable to locate element: {"method":"css selector","selector":".header__search"}
+  (Session info: chrome=111.0.5563.110)
+
+2023-03-24 11:03:48go_to_cate 7025L12J8 exception is: Message: no such element: Unable to locate element: {"method":"css selector","selector":".header__search"}
+  (Session info: chrome=111.0.5563.110)
+
+2023-03-24 11:05:49go_to_cate 7025L12PF exception is: Message: no such element: Unable to locate element: {"method":"css selector","selector":".header__search"}
+  (Session info: chrome=111.0.5563.110)
+
+2023-03-24 11:07:11go_to_cate 7025L12PF8 exception is: Message: no such element: Unable to locate element: {"method":"css selector","selector":".header__search"}
+  (Session info: chrome=111.0.5563.110)
+
+2023-03-24 11:08:53go_to_cate 7025L12PFI exception is: Message: no such element: Unable to locate element: {"method":"css selector","selector":".header__search"}
+  (Session info: chrome=111.0.5563.110)
+
+2023-03-24 11:10:53go_to_cate 7025L12PFI8 exception is: Message: no such element: Unable to locate element: {"method":"css selector","selector":".header__search"}
+  (Session info: chrome=111.0.5563.110)
+
+2023-03-24 11:12:33go_to_cate 7025L15J exception is: Message: no such element: Unable to locate element: {"method":"css selector","selector":".header__search"}
+  (Session info: chrome=111.0.5563.110)
+
+2023-03-24 11:13:52go_to_cate 7025L15J8 exception is: Message: no such element: Unable to locate element: {"method":"css selector","selector":".header__search"}
+  (Session info: chrome=111.0.5563.110)
+
+2023-03-24 14:10:26go_to_cate 7025L25PF8 exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (896, 47). Other element would receive the click: <div class="jss210" data-testid="loadingCover"></div>
+  (Session info: chrome=111.0.5563.110)
+
+2023-03-24 14:12:00go_to_cate 7025L25PFG exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (896, 47). Other element would receive the click: <div class="jss210" data-testid="loadingCover"></div>
+  (Session info: chrome=111.0.5563.110)
+
+2023-03-24 14:13:18go_to_cate 7025L25PFG8 exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (896, 47). Other element would receive the click: <div class="jss210" data-testid="loadingCover"></div>
+  (Session info: chrome=111.0.5563.110)
+
+2023-03-24 14:15:13go_to_cate 7025L25PFI exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (896, 47). Other element would receive the click: <div class="jss210" data-testid="loadingCover"></div>
+  (Session info: chrome=111.0.5563.110)
+
+2023-03-24 14:16:29go_to_cate 7025L25PFI8 exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (896, 47). Other element would receive the click: <div class="jss210" data-testid="loadingCover"></div>
+  (Session info: chrome=111.0.5563.110)
+
+2023-03-24 14:17:49go_to_cate 7025L30J exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (896, 47). Other element would receive the click: <div class="jss210" data-testid="loadingCover"></div>
+  (Session info: chrome=111.0.5563.110)
+
+2023-03-24 14:19:24go_to_cate 7025L30J8 exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (896, 47). Other element would receive the click: <div class="jss210" data-testid="loadingCover"></div>
+  (Session info: chrome=111.0.5563.110)
+
+2023-03-24 14:21:06go_to_cate 7025L35FB exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (896, 47). Other element would receive the click: <div class="jss210" data-testid="loadingCover"></div>
+  (Session info: chrome=111.0.5563.110)
+
+2023-03-24 14:29:07go_to_cate 7025L35G exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (896, 47). Other element would receive the click: <div class="jss210" data-testid="loadingCover"></div>
+  (Session info: chrome=111.0.5563.110)
+
+2023-03-24 14:30:32go_to_cate 7025L35GB exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (896, 47). Other element would receive the click: <div class="jss210" data-testid="loadingCover"></div>
+  (Session info: chrome=111.0.5563.110)
+
+2023-03-24 14:32:29go_to_cate 7025L35GI exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (896, 47). Other element would receive the click: <div class="jss210" data-testid="loadingCover"></div>
+  (Session info: chrome=111.0.5563.110)
+
+2023-03-24 14:34:21go_to_cate 7025L35GI/2703 exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (896, 47). Other element would receive the click: <div class="jss210" data-testid="loadingCover"></div>
+  (Session info: chrome=111.0.5563.110)
+
+2023-03-24 14:36:04go_to_cate 7025L35J exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (896, 47). Other element would receive the click: <div class="jss210" data-testid="loadingCover"></div>
+  (Session info: chrome=111.0.5563.110)
+
+2023-03-24 14:38:07go_to_cate 7025L35J8 exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (896, 47). Other element would receive the click: <div class="jss210" data-testid="loadingCover"></div>
+  (Session info: chrome=111.0.5563.110)
+
+2023-03-24 14:39:25go_to_cate 7025L35JI exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (896, 47). Other element would receive the click: <div class="jss210" data-testid="loadingCover"></div>
+  (Session info: chrome=111.0.5563.110)
+
+2023-03-24 14:40:58go_to_cate 7025L35JI8 exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (896, 47). Other element would receive the click: <div class="jss210" data-testid="loadingCover"></div>
+  (Session info: chrome=111.0.5563.110)
+
+2023-03-24 14:42:59go_to_cate 7025L35PF exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (896, 47). Other element would receive the click: <div class="jss210" data-testid="loadingCover"></div>
+  (Session info: chrome=111.0.5563.110)
+
+2023-03-24 14:44:33go_to_cate 7025L35PF8 exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (896, 47). Other element would receive the click: <div class="jss210" data-testid="loadingCover"></div>
+  (Session info: chrome=111.0.5563.110)
+
+2023-03-24 14:46:19go_to_cate 7025L35PFI exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (896, 47). Other element would receive the click: <div class="jss210" data-testid="loadingCover"></div>
+  (Session info: chrome=111.0.5563.110)
+
+2023-03-24 14:48:02go_to_cate 7025L35PFI8 exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (896, 47). Other element would receive the click: <div class="jss210" data-testid="loadingCover"></div>
+  (Session info: chrome=111.0.5563.110)
+
+2023-03-24 14:49:45go_to_cate 7025L45FB exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (896, 47). Other element would receive the click: <div class="jss210" data-testid="loadingCover"></div>
+  (Session info: chrome=111.0.5563.110)
+
+2023-03-24 14:51:41go_to_cate 7025L45J exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (896, 47). Other element would receive the click: <div class="jss210" data-testid="loadingCover"></div>
+  (Session info: chrome=111.0.5563.110)
+
+2023-03-24 14:53:43go_to_cate 7025L45J8 exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (896, 47). Other element would receive the click: <div class="jss210" data-testid="loadingCover"></div>
+  (Session info: chrome=111.0.5563.110)
+
+2023-03-24 15:01:44go_to_cate 7025L45PF exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (896, 47). Other element would receive the click: <div class="jss210" data-testid="loadingCover"></div>
+  (Session info: chrome=111.0.5563.110)
+
+2023-03-24 15:03:37go_to_cate 7025L45PF8 exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (896, 47). Other element would receive the click: <div class="jss210" data-testid="loadingCover"></div>
+  (Session info: chrome=111.0.5563.110)
+
+2023-03-24 15:05:35go_to_cate 7025L45PFI exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (896, 47). Other element would receive the click: <div class="jss210" data-testid="loadingCover"></div>
+  (Session info: chrome=111.0.5563.110)
+
+2023-03-24 15:07:33go_to_cate 7025L45PFI8 exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (896, 47). Other element would receive the click: <div class="jss210" data-testid="loadingCover"></div>
+  (Session info: chrome=111.0.5563.110)
+
+2023-03-24 15:09:26go_to_cate 7025L55FB exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (896, 47). Other element would receive the click: <div class="jss210" data-testid="loadingCover"></div>
+  (Session info: chrome=111.0.5563.110)
+
+2023-03-24 15:11:04go_to_cate 7025L55G exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (896, 47). Other element would receive the click: <div class="jss210" data-testid="loadingCover"></div>
+  (Session info: chrome=111.0.5563.110)
+
+2023-03-24 15:12:20go_to_cate 7025L55GB exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (896, 47). Other element would receive the click: <div class="jss210" data-testid="loadingCover"></div>
+  (Session info: chrome=111.0.5563.110)
+
+2023-03-24 15:13:53go_to_cate 7025L55J exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (896, 47). Other element would receive the click: <div class="jss210" data-testid="loadingCover"></div>
+  (Session info: chrome=111.0.5563.110)
+
+2023-03-24 15:15:32go_to_cate 7025L55J8 exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (896, 47). Other element would receive the click: <div class="jss210" data-testid="loadingCover"></div>
+  (Session info: chrome=111.0.5563.110)
+
+2023-03-24 15:16:57go_to_cate 7025L55JI exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (896, 47). Other element would receive the click: <div class="jss210" data-testid="loadingCover"></div>
+  (Session info: chrome=111.0.5563.110)
+
+2023-03-24 15:18:39go_to_cate 7025L55JI8 exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (896, 47). Other element would receive the click: <div class="jss210" data-testid="loadingCover"></div>
+  (Session info: chrome=111.0.5563.110)
+
+2023-03-24 15:20:17go_to_cate 7025L55PF exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (896, 47). Other element would receive the click: <div class="jss210" data-testid="loadingCover"></div>
+  (Session info: chrome=111.0.5563.110)
+
+2023-03-24 15:21:54go_to_cate 7025L55PF8 exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (896, 47). Other element would receive the click: <div class="jss210" data-testid="loadingCover"></div>
+  (Session info: chrome=111.0.5563.110)
+
+2023-03-24 15:23:42go_to_cate 7025L55PFI exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (896, 47). Other element would receive the click: <div class="jss210" data-testid="loadingCover"></div>
+  (Session info: chrome=111.0.5563.110)
+
+2023-03-24 15:25:10go_to_cate 7025L55PFI8 exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (896, 47). Other element would receive the click: <div class="jss210" data-testid="loadingCover"></div>
+  (Session info: chrome=111.0.5563.110)
+
+2023-03-24 15:33:11go_to_cate 7025L70FB exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (896, 47). Other element would receive the click: <div class="jss210" data-testid="loadingCover"></div>
+  (Session info: chrome=111.0.5563.110)
+
+2023-03-24 15:35:13go_to_cate 7025L70GB exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (896, 47). Other element would receive the click: <div class="jss210" data-testid="loadingCover"></div>
+  (Session info: chrome=111.0.5563.110)
+
+2023-09-19 18:01:33go_to_cate BQ24105RHLR exception is: HTTPConnectionPool(host='localhost', port=63070): Max retries exceeded with url: /session/3ff3e7d0dece17fbca5f0767bae3f441/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x1127f98d0>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2023-09-19 19:13:48go_to_cate PGA112AIDGST exception is: HTTPConnectionPool(host='localhost', port=63070): Max retries exceeded with url: /session/3ff3e7d0dece17fbca5f0767bae3f441/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x132ce05e0>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2023-09-19 19:17:28go_to_cate TMP36GSZ-REEL7 exception is: HTTPConnectionPool(host='localhost', port=63070): Max retries exceeded with url: /session/3ff3e7d0dece17fbca5f0767bae3f441/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x132cb3eb0>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2023-09-19 19:19:29go_to_cate TPS5410MDREP exception is: HTTPConnectionPool(host='localhost', port=63070): Max retries exceeded with url: /session/3ff3e7d0dece17fbca5f0767bae3f441/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x132cb1c90>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2023-09-19 19:21:31go_to_cate TPS61070DDCR exception is: HTTPConnectionPool(host='localhost', port=63070): Max retries exceeded with url: /session/3ff3e7d0dece17fbca5f0767bae3f441/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x132c9a680>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2023-09-19 19:23:38go_to_cate TPS61200DRCT exception is: HTTPConnectionPool(host='localhost', port=63070): Max retries exceeded with url: /session/3ff3e7d0dece17fbca5f0767bae3f441/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x132c0a950>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2023-09-19 19:25:30go_to_cate IRFP4468PBF exception is: HTTPConnectionPool(host='localhost', port=63070): Max retries exceeded with url: /session/3ff3e7d0dece17fbca5f0767bae3f441/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x132c0ad70>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2023-09-19 19:27:18go_to_cate V24A8M300BL exception is: HTTPConnectionPool(host='localhost', port=63070): Max retries exceeded with url: /session/3ff3e7d0dece17fbca5f0767bae3f441/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x132c98e50>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2023-09-19 19:29:15go_to_cate V24B6V5H200BL3 exception is: HTTPConnectionPool(host='localhost', port=63070): Max retries exceeded with url: /session/3ff3e7d0dece17fbca5f0767bae3f441/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x1127d3f40>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2023-09-19 19:31:27go_to_cate V24C5H100BL3 exception is: HTTPConnectionPool(host='localhost', port=63070): Max retries exceeded with url: /session/3ff3e7d0dece17fbca5f0767bae3f441/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x1343c17e0>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2023-09-19 19:33:38go_to_cate V24C5H50BL3 exception is: HTTPConnectionPool(host='localhost', port=63070): Max retries exceeded with url: /session/3ff3e7d0dece17fbca5f0767bae3f441/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x132cb0ac0>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2023-09-19 19:36:12go_to_cate URAM2M23 exception is: HTTPConnectionPool(host='localhost', port=63070): Max retries exceeded with url: /session/3ff3e7d0dece17fbca5f0767bae3f441/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x132c0bc70>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2023-09-19 19:38:22go_to_cate URAM3H21 exception is: HTTPConnectionPool(host='localhost', port=63070): Max retries exceeded with url: /session/3ff3e7d0dece17fbca5f0767bae3f441/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x1343c0640>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2023-09-19 19:40:13go_to_cate URAM3H23 exception is: HTTPConnectionPool(host='localhost', port=63070): Max retries exceeded with url: /session/3ff3e7d0dece17fbca5f0767bae3f441/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x1343c21d0>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2023-09-19 19:48:13go_to_cate V24B5H200BL exception is: HTTPConnectionPool(host='localhost', port=63070): Max retries exceeded with url: /session/3ff3e7d0dece17fbca5f0767bae3f441/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x132ce1c00>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2023-09-19 19:50:26go_to_cate V24C12H100BL exception is: HTTPConnectionPool(host='localhost', port=63070): Max retries exceeded with url: /session/3ff3e7d0dece17fbca5f0767bae3f441/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x1343c3f10>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2023-09-19 19:52:40go_to_cate V24B3V3H150BL exception is: HTTPConnectionPool(host='localhost', port=63070): Max retries exceeded with url: /session/3ff3e7d0dece17fbca5f0767bae3f441/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x1344a85e0>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2023-09-19 19:54:28go_to_cate V300B5H200BL exception is: HTTPConnectionPool(host='localhost', port=63070): Max retries exceeded with url: /session/3ff3e7d0dece17fbca5f0767bae3f441/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x1127f9930>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2023-09-19 19:56:14go_to_cate V300B3V3H150BL exception is: HTTPConnectionPool(host='localhost', port=63070): Max retries exceeded with url: /session/3ff3e7d0dece17fbca5f0767bae3f441/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x134552b00>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2023-09-19 19:58:08go_to_cate TMS320F28379DZWTT exception is: HTTPConnectionPool(host='localhost', port=63070): Max retries exceeded with url: /session/3ff3e7d0dece17fbca5f0767bae3f441/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x1344a8970>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2023-09-19 19:59:56go_to_cate TMS230F28388DZWTS exception is: HTTPConnectionPool(host='localhost', port=63070): Max retries exceeded with url: /session/3ff3e7d0dece17fbca5f0767bae3f441/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x1343c1660>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2023-09-19 20:01:41go_to_cate AD825AR exception is: HTTPConnectionPool(host='localhost', port=63070): Max retries exceeded with url: /session/3ff3e7d0dece17fbca5f0767bae3f441/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x132d126e0>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2023-09-19 20:04:06go_to_cate AD845KN exception is: HTTPConnectionPool(host='localhost', port=63070): Max retries exceeded with url: /session/3ff3e7d0dece17fbca5f0767bae3f441/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x132c3e470>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2023-09-19 20:06:36go_to_cate HMC308ETR exception is: HTTPConnectionPool(host='localhost', port=63070): Max retries exceeded with url: /session/3ff3e7d0dece17fbca5f0767bae3f441/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x1344aa0b0>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2023-09-19 20:08:54go_to_cate LP2950CDT-5.0 exception is: HTTPConnectionPool(host='localhost', port=63070): Max retries exceeded with url: /session/3ff3e7d0dece17fbca5f0767bae3f441/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x132cb2740>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2023-09-19 20:11:19go_to_cate IRFB17N50L exception is: HTTPConnectionPool(host='localhost', port=63070): Max retries exceeded with url: /session/3ff3e7d0dece17fbca5f0767bae3f441/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x134264fd0>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2023-09-19 20:13:18go_to_cate IRFP4368PBF exception is: HTTPConnectionPool(host='localhost', port=63070): Max retries exceeded with url: /session/3ff3e7d0dece17fbca5f0767bae3f441/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x13436cd00>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2023-09-19 20:15:38go_to_cate LM78L05ACM exception is: HTTPConnectionPool(host='localhost', port=63070): Max retries exceeded with url: /session/3ff3e7d0dece17fbca5f0767bae3f441/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x1127b37c0>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2023-09-19 20:17:38go_to_cate LM78L12ACM exception is: HTTPConnectionPool(host='localhost', port=63070): Max retries exceeded with url: /session/3ff3e7d0dece17fbca5f0767bae3f441/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x1129aa3e0>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2023-09-19 20:25:39go_to_cate AD5662BRJ-1 exception is: HTTPConnectionPool(host='localhost', port=63070): Max retries exceeded with url: /session/3ff3e7d0dece17fbca5f0767bae3f441/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x1129798d0>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2023-09-19 20:28:00go_to_cate AD7705BR exception is: HTTPConnectionPool(host='localhost', port=63070): Max retries exceeded with url: /session/3ff3e7d0dece17fbca5f0767bae3f441/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x1129b0040>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2023-09-19 20:30:24go_to_cate AD780BR exception is: HTTPConnectionPool(host='localhost', port=63070): Max retries exceeded with url: /session/3ff3e7d0dece17fbca5f0767bae3f441/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x132c3d0c0>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2023-09-19 20:32:20go_to_cate AD820AN exception is: HTTPConnectionPool(host='localhost', port=63070): Max retries exceeded with url: /session/3ff3e7d0dece17fbca5f0767bae3f441/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x13440db40>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2023-09-19 20:34:51go_to_cate MAX6951CEE exception is: HTTPConnectionPool(host='localhost', port=63070): Max retries exceeded with url: /session/3ff3e7d0dece17fbca5f0767bae3f441/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x13440e590>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2023-09-19 20:37:25go_to_cate IR2110STRPBF exception is: HTTPConnectionPool(host='localhost', port=63070): Max retries exceeded with url: /session/3ff3e7d0dece17fbca5f0767bae3f441/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x1127e1480>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2023-09-19 20:39:35go_to_cate TPS54719 exception is: HTTPConnectionPool(host='localhost', port=63070): Max retries exceeded with url: /session/3ff3e7d0dece17fbca5f0767bae3f441/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x1127e1c60>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2023-09-19 20:41:52go_to_cate ADuM1411ARWZ exception is: HTTPConnectionPool(host='localhost', port=63070): Max retries exceeded with url: /session/3ff3e7d0dece17fbca5f0767bae3f441/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x11289a500>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2023-09-19 20:44:06go_to_cate ADM7001XACT1 exception is: HTTPConnectionPool(host='localhost', port=63070): Max retries exceeded with url: /session/3ff3e7d0dece17fbca5f0767bae3f441/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x1127e1c00>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2023-09-19 20:46:12go_to_cate CY22393F(X)C exception is: HTTPConnectionPool(host='localhost', port=63070): Max retries exceeded with url: /session/3ff3e7d0dece17fbca5f0767bae3f441/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x1344ab2b0>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2023-09-19 20:48:42go_to_cate DS34T102GN+ exception is: HTTPConnectionPool(host='localhost', port=63070): Max retries exceeded with url: /session/3ff3e7d0dece17fbca5f0767bae3f441/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x132cb3fd0>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2023-09-19 20:50:50go_to_cate FM3164-G exception is: HTTPConnectionPool(host='localhost', port=63070): Max retries exceeded with url: /session/3ff3e7d0dece17fbca5f0767bae3f441/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x1129a8700>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2023-09-19 20:53:18go_to_cate FM31L276-G exception is: HTTPConnectionPool(host='localhost', port=63070): Max retries exceeded with url: /session/3ff3e7d0dece17fbca5f0767bae3f441/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x132cb2410>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2023-09-19 20:55:46go_to_cate FM3164-S exception is: HTTPConnectionPool(host='localhost', port=63070): Max retries exceeded with url: /session/3ff3e7d0dece17fbca5f0767bae3f441/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x112774310>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2023-09-19 20:58:15go_to_cate IRF7492TRPBF exception is: HTTPConnectionPool(host='localhost', port=63070): Max retries exceeded with url: /session/3ff3e7d0dece17fbca5f0767bae3f441/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x1129eff40>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2023-09-19 21:06:15go_to_cate IRF7820TRPBF exception is: HTTPConnectionPool(host='localhost', port=63070): Max retries exceeded with url: /session/3ff3e7d0dece17fbca5f0767bae3f441/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x1343b90f0>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2023-09-19 21:08:31go_to_cate HMC194AMS8ETR exception is: HTTPConnectionPool(host='localhost', port=63070): Max retries exceeded with url: /session/3ff3e7d0dece17fbca5f0767bae3f441/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x13435ae90>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2023-09-19 21:10:46go_to_cate F7811WPBF exception is: HTTPConnectionPool(host='localhost', port=63070): Max retries exceeded with url: /session/3ff3e7d0dece17fbca5f0767bae3f441/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x13433fc10>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2023-09-19 21:12:39go_to_cate MAX485EESA exception is: HTTPConnectionPool(host='localhost', port=63070): Max retries exceeded with url: /session/3ff3e7d0dece17fbca5f0767bae3f441/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x132cc6920>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2023-09-19 21:14:27go_to_cate BQ7692003PW exception is: HTTPConnectionPool(host='localhost', port=63070): Max retries exceeded with url: /session/3ff3e7d0dece17fbca5f0767bae3f441/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x1127d1ed0>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2023-09-19 21:16:43go_to_cate ADM3260ARSZ-RL7 exception is: HTTPConnectionPool(host='localhost', port=63070): Max retries exceeded with url: /session/3ff3e7d0dece17fbca5f0767bae3f441/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x132b67c10>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2023-09-19 21:19:06go_to_cate CSD18563Q5A exception is: HTTPConnectionPool(host='localhost', port=63070): Max retries exceeded with url: /session/3ff3e7d0dece17fbca5f0767bae3f441/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x1067ac0d0>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2023-09-19 21:21:15go_to_cate AD9747BCPZRL exception is: HTTPConnectionPool(host='localhost', port=63070): Max retries exceeded with url: /session/3ff3e7d0dece17fbca5f0767bae3f441/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x1127fa0b0>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2023-09-19 21:23:30go_to_cate AD8510ARMZ-REEL exception is: HTTPConnectionPool(host='localhost', port=63070): Max retries exceeded with url: /session/3ff3e7d0dece17fbca5f0767bae3f441/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x11273fb80>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2023-09-19 21:25:18go_to_cate ADP7118AUJZ-R7 exception is: HTTPConnectionPool(host='localhost', port=63070): Max retries exceeded with url: /session/3ff3e7d0dece17fbca5f0767bae3f441/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x13440e8c0>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2023-09-19 21:27:09go_to_cate BDP955 exception is: HTTPConnectionPool(host='localhost', port=63070): Max retries exceeded with url: /session/3ff3e7d0dece17fbca5f0767bae3f441/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x132c3ed70>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2023-09-19 21:29:01go_to_cate BCR148WH6327XTSA1 exception is: HTTPConnectionPool(host='localhost', port=63070): Max retries exceeded with url: /session/3ff3e7d0dece17fbca5f0767bae3f441/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x132c10c40>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2023-09-19 21:31:07go_to_cate IHLP2525CZER1R0M01 exception is: HTTPConnectionPool(host='localhost', port=63070): Max retries exceeded with url: /session/3ff3e7d0dece17fbca5f0767bae3f441/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x132cc4dc0>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2023-09-19 21:32:56go_to_cate IR3315SPBF exception is: HTTPConnectionPool(host='localhost', port=63070): Max retries exceeded with url: /session/3ff3e7d0dece17fbca5f0767bae3f441/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x13435b310>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2023-09-19 21:35:21go_to_cate PVG612AS exception is: HTTPConnectionPool(host='localhost', port=63070): Max retries exceeded with url: /session/3ff3e7d0dece17fbca5f0767bae3f441/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x132cac8e0>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2023-09-19 21:43:21go_to_cate PVG612SPBF exception is: HTTPConnectionPool(host='localhost', port=63070): Max retries exceeded with url: /session/3ff3e7d0dece17fbca5f0767bae3f441/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x112838910>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2023-09-19 21:45:41go_to_cate TPS71701DCKR exception is: HTTPConnectionPool(host='localhost', port=63070): Max retries exceeded with url: /session/3ff3e7d0dece17fbca5f0767bae3f441/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x112838190>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2023-09-19 21:47:51go_to_cate TPS74401RGWR exception is: HTTPConnectionPool(host='localhost', port=63070): Max retries exceeded with url: /session/3ff3e7d0dece17fbca5f0767bae3f441/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x134359810>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2023-09-19 21:50:17go_to_cate LM8365BALMFX27/NOPB exception is: HTTPConnectionPool(host='localhost', port=63070): Max retries exceeded with url: /session/3ff3e7d0dece17fbca5f0767bae3f441/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x1343b49a0>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2023-09-19 21:52:21go_to_cate PCA9546ARGVR exception is: HTTPConnectionPool(host='localhost', port=63070): Max retries exceeded with url: /session/3ff3e7d0dece17fbca5f0767bae3f441/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x1129e3b20>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2023-09-19 21:54:16go_to_cate TPS54678RTER exception is: HTTPConnectionPool(host='localhost', port=63070): Max retries exceeded with url: /session/3ff3e7d0dece17fbca5f0767bae3f441/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x1343e9780>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2023-09-19 21:56:21go_to_cate UA78L05ACPKG3 exception is: HTTPConnectionPool(host='localhost', port=63070): Max retries exceeded with url: /session/3ff3e7d0dece17fbca5f0767bae3f441/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x11283b010>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2023-09-19 21:58:27go_to_cate LP38851MRX-ADJ/NOPB exception is: HTTPConnectionPool(host='localhost', port=63070): Max retries exceeded with url: /session/3ff3e7d0dece17fbca5f0767bae3f441/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x112a29450>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2023-09-19 22:00:55go_to_cate TPS7A4700RGW exception is: HTTPConnectionPool(host='localhost', port=63070): Max retries exceeded with url: /session/3ff3e7d0dece17fbca5f0767bae3f441/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x106caf910>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2023-09-19 22:03:26go_to_cate TPS54528DDAR exception is: HTTPConnectionPool(host='localhost', port=63070): Max retries exceeded with url: /session/3ff3e7d0dece17fbca5f0767bae3f441/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x132c3cf10>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2023-09-19 22:05:44go_to_cate TPS51116RGET exception is: HTTPConnectionPool(host='localhost', port=63070): Max retries exceeded with url: /session/3ff3e7d0dece17fbca5f0767bae3f441/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x132cb0b50>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2023-09-19 22:08:09go_to_cate ISL95870BHRZ exception is: HTTPConnectionPool(host='localhost', port=63070): Max retries exceeded with url: /session/3ff3e7d0dece17fbca5f0767bae3f441/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x1127e3d90>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2023-09-19 22:09:57go_to_cate ISL6536IBZ exception is: HTTPConnectionPool(host='localhost', port=63070): Max retries exceeded with url: /session/3ff3e7d0dece17fbca5f0767bae3f441/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x132ce1b70>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2023-09-19 22:11:50go_to_cate AUIR3313S exception is: HTTPConnectionPool(host='localhost', port=63070): Max retries exceeded with url: /session/3ff3e7d0dece17fbca5f0767bae3f441/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x132b65c00>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2023-09-19 22:13:59go_to_cate AD7683BRMZ exception is: HTTPConnectionPool(host='localhost', port=63070): Max retries exceeded with url: /session/3ff3e7d0dece17fbca5f0767bae3f441/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x132ce2fe0>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2023-09-19 22:21:59go_to_cate AD7793BRUZ exception is: HTTPConnectionPool(host='localhost', port=63070): Max retries exceeded with url: /session/3ff3e7d0dece17fbca5f0767bae3f441/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x1343c1870>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2023-09-19 22:23:54go_to_cate AD7887ARMZ exception is: HTTPConnectionPool(host='localhost', port=63070): Max retries exceeded with url: /session/3ff3e7d0dece17fbca5f0767bae3f441/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x132ce2b90>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2023-09-19 22:25:52go_to_cate AD8629ARZ exception is: HTTPConnectionPool(host='localhost', port=63070): Max retries exceeded with url: /session/3ff3e7d0dece17fbca5f0767bae3f441/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x1343e9960>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2023-09-19 22:27:33go_to_cate BQ24105RHLR exception is: HTTPConnectionPool(host='localhost', port=53915): Max retries exceeded with url: /session/fe0e0caa1565160d2220cbca609996a7/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x10e77c190>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2023-09-19 22:28:07go_to_cate ADR431BRMZ exception is: HTTPConnectionPool(host='localhost', port=63070): Max retries exceeded with url: /session/3ff3e7d0dece17fbca5f0767bae3f441/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x1343a97b0>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2023-09-19 22:29:49go_to_cate PGA112AIDGST exception is: HTTPConnectionPool(host='localhost', port=53915): Max retries exceeded with url: /session/fe0e0caa1565160d2220cbca609996a7/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x10ddfe740>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2023-09-19 22:30:08go_to_cate ADUM1401ARWZ exception is: HTTPConnectionPool(host='localhost', port=63070): Max retries exceeded with url: /session/3ff3e7d0dece17fbca5f0767bae3f441/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x1127b4790>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2023-09-19 22:32:23go_to_cate TMP36GSZ-REEL7 exception is: HTTPConnectionPool(host='localhost', port=53915): Max retries exceeded with url: /session/fe0e0caa1565160d2220cbca609996a7/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x10dd51060>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2023-09-19 22:32:33go_to_cate ADUM5401ARWZ exception is: HTTPConnectionPool(host='localhost', port=63070): Max retries exceeded with url: /session/3ff3e7d0dece17fbca5f0767bae3f441/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x112837940>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2023-09-19 22:34:11go_to_cate TPS5410MDREP exception is: HTTPConnectionPool(host='localhost', port=53915): Max retries exceeded with url: /session/fe0e0caa1565160d2220cbca609996a7/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x10dd25120>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2023-09-19 22:34:37go_to_cate CY7C1470BV33-167AXI exception is: HTTPConnectionPool(host='localhost', port=63070): Max retries exceeded with url: /session/3ff3e7d0dece17fbca5f0767bae3f441/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x1343ab100>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2023-09-19 22:36:10go_to_cate TPS61070DDCR exception is: HTTPConnectionPool(host='localhost', port=53915): Max retries exceeded with url: /session/fe0e0caa1565160d2220cbca609996a7/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x10f8ce1a0>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2023-09-19 22:36:38go_to_cate ISO15DW exception is: HTTPConnectionPool(host='localhost', port=63070): Max retries exceeded with url: /session/3ff3e7d0dece17fbca5f0767bae3f441/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x1127a1810>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2023-09-19 22:38:19go_to_cate TPS61200DRCT exception is: HTTPConnectionPool(host='localhost', port=53915): Max retries exceeded with url: /session/fe0e0caa1565160d2220cbca609996a7/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x10e399270>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2023-09-19 22:38:49go_to_cate LM317DCY exception is: HTTPConnectionPool(host='localhost', port=63070): Max retries exceeded with url: /session/3ff3e7d0dece17fbca5f0767bae3f441/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x1343fa7d0>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2023-09-19 22:40:44go_to_cate IRFP4468PBF exception is: HTTPConnectionPool(host='localhost', port=53915): Max retries exceeded with url: /session/fe0e0caa1565160d2220cbca609996a7/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x10e3bca90>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2023-09-19 22:41:24go_to_cate LP2985IM5-3.3/NOPB exception is: HTTPConnectionPool(host='localhost', port=63070): Max retries exceeded with url: /session/3ff3e7d0dece17fbca5f0767bae3f441/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x134358190>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2023-09-19 22:42:38go_to_cate V24A8M300BL exception is: HTTPConnectionPool(host='localhost', port=53915): Max retries exceeded with url: /session/fe0e0caa1565160d2220cbca609996a7/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x10dd263e0>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2023-09-19 22:43:56go_to_cate MAX1951ESA exception is: HTTPConnectionPool(host='localhost', port=63070): Max retries exceeded with url: /session/3ff3e7d0dece17fbca5f0767bae3f441/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x11289ba30>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2023-09-19 22:44:58go_to_cate V24B6V5H200BL3 exception is: HTTPConnectionPool(host='localhost', port=53915): Max retries exceeded with url: /session/fe0e0caa1565160d2220cbca609996a7/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x10f9b40d0>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2023-09-19 22:45:49go_to_cate LM26420XMH exception is: HTTPConnectionPool(host='localhost', port=63070): Max retries exceeded with url: /session/3ff3e7d0dece17fbca5f0767bae3f441/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x1127e11b0>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2023-09-19 22:47:31go_to_cate V24C5H100BL3 exception is: HTTPConnectionPool(host='localhost', port=53915): Max retries exceeded with url: /session/fe0e0caa1565160d2220cbca609996a7/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x10e3c5f00>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2023-09-19 22:47:37go_to_cate LMV331IDBV exception is: HTTPConnectionPool(host='localhost', port=63070): Max retries exceeded with url: /session/3ff3e7d0dece17fbca5f0767bae3f441/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x1127e3130>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2023-09-19 22:49:18go_to_cate V24C5H50BL3 exception is: HTTPConnectionPool(host='localhost', port=53915): Max retries exceeded with url: /session/fe0e0caa1565160d2220cbca609996a7/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x10dc8d390>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2023-09-19 22:49:49go_to_cate SN74LVC1GU04DBV exception is: HTTPConnectionPool(host='localhost', port=63070): Max retries exceeded with url: /session/3ff3e7d0dece17fbca5f0767bae3f441/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x1127e2170>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2023-09-19 22:51:14go_to_cate AD1580BRTZ exception is: Message: element click intercepted: Element <button class="search-button" type="button" value="" id="header-search-button" cookie-event="ref_page_event=Initiate%20Search;header_flag=link">...</button> is not clickable at point (912, 47). Other element would receive the click: <iframe id="px-captcha-modal" style="display: block; position: fixed; top: 0; left: 0; width: 100%; height: 100%; border: none; z-index: 2147483647;"></iframe>
+  (Session info: chrome=114.0.5735.198)
+
+2023-09-19 22:51:23go_to_cate URAM2M23 exception is: HTTPConnectionPool(host='localhost', port=53915): Max retries exceeded with url: /session/fe0e0caa1565160d2220cbca609996a7/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x10dd27b80>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2023-09-19 22:52:07go_to_cate SN74LVC1G08DBV exception is: HTTPConnectionPool(host='localhost', port=63070): Max retries exceeded with url: /session/3ff3e7d0dece17fbca5f0767bae3f441/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x134266b60>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2023-09-19 22:53:43go_to_cate URAM3H21 exception is: HTTPConnectionPool(host='localhost', port=53915): Max retries exceeded with url: /session/fe0e0caa1565160d2220cbca609996a7/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x10dcaad70>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2023-09-19 22:56:06go_to_cate URAM3H23 exception is: HTTPConnectionPool(host='localhost', port=53915): Max retries exceeded with url: /session/fe0e0caa1565160d2220cbca609996a7/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x10dc7f1c0>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2023-09-19 23:00:07go_to_cate SN74LVC8T245PW exception is: HTTPConnectionPool(host='localhost', port=63070): Max retries exceeded with url: /session/3ff3e7d0dece17fbca5f0767bae3f441/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x13440e920>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2023-09-19 23:02:31go_to_cate UA78M33QDCY exception is: HTTPConnectionPool(host='localhost', port=63070): Max retries exceeded with url: /session/3ff3e7d0dece17fbca5f0767bae3f441/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x132c25120>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2023-09-19 23:04:06go_to_cate AD5424YRUZ exception is: Message: no such element: Unable to locate element: {"method":"css selector","selector":".header__search"}
+  (Session info: chrome=114.0.5735.198)
+
+2023-09-19 23:04:07go_to_cate V24B5H200BL exception is: HTTPConnectionPool(host='localhost', port=53915): Max retries exceeded with url: /session/fe0e0caa1565160d2220cbca609996a7/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x10dce6d10>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2023-09-19 23:05:05go_to_cate BC857B exception is: HTTPConnectionPool(host='localhost', port=63070): Max retries exceeded with url: /session/3ff3e7d0dece17fbca5f0767bae3f441/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x132c11f30>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2023-09-19 23:05:56go_to_cate V24C12H100BL exception is: HTTPConnectionPool(host='localhost', port=53915): Max retries exceeded with url: /session/fe0e0caa1565160d2220cbca609996a7/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x10dcc42e0>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2023-09-19 23:07:10go_to_cate AD843AQ exception is: HTTPConnectionPool(host='localhost', port=63070): Max retries exceeded with url: /session/3ff3e7d0dece17fbca5f0767bae3f441/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x1127fb340>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2023-09-19 23:08:29go_to_cate V24B3V3H150BL exception is: HTTPConnectionPool(host='localhost', port=53915): Max retries exceeded with url: /session/fe0e0caa1565160d2220cbca609996a7/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x10f7fe5c0>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2023-09-19 23:09:45go_to_cate LMX2531LQ3010E/NOPB exception is: HTTPConnectionPool(host='localhost', port=63070): Max retries exceeded with url: /session/3ff3e7d0dece17fbca5f0767bae3f441/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x1127fb130>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2023-09-19 23:11:01go_to_cate V300B5H200BL exception is: HTTPConnectionPool(host='localhost', port=53915): Max retries exceeded with url: /session/fe0e0caa1565160d2220cbca609996a7/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x10dc8c2b0>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2023-09-19 23:11:47go_to_cate HMC244G16 exception is: HTTPConnectionPool(host='localhost', port=63070): Max retries exceeded with url: /session/3ff3e7d0dece17fbca5f0767bae3f441/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x1129e2e60>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2023-09-19 23:13:01go_to_cate V300B3V3H150BL exception is: HTTPConnectionPool(host='localhost', port=53915): Max retries exceeded with url: /session/fe0e0caa1565160d2220cbca609996a7/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x10dc8c7f0>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2023-09-19 23:13:55go_to_cate LT1513-2IT7#PBF exception is: HTTPConnectionPool(host='localhost', port=63070): Max retries exceeded with url: /session/3ff3e7d0dece17fbca5f0767bae3f441/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x1343c1120>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2023-09-19 23:14:48go_to_cate TMS320F28379DZWTT exception is: HTTPConnectionPool(host='localhost', port=53915): Max retries exceeded with url: /session/fe0e0caa1565160d2220cbca609996a7/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x10dd2f400>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2023-09-19 23:16:01go_to_cate AD590MH exception is: HTTPConnectionPool(host='localhost', port=63070): Max retries exceeded with url: /session/3ff3e7d0dece17fbca5f0767bae3f441/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x1343eb6d0>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2023-09-19 23:17:16go_to_cate TMS230F28388DZWTS exception is: HTTPConnectionPool(host='localhost', port=53915): Max retries exceeded with url: /session/fe0e0caa1565160d2220cbca609996a7/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x10fa7af50>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2023-09-19 23:17:55go_to_cate ADXL1005BCPZ exception is: HTTPConnectionPool(host='localhost', port=63070): Max retries exceeded with url: /session/3ff3e7d0dece17fbca5f0767bae3f441/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x1343c01f0>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2023-09-19 23:19:35go_to_cate AD825AR exception is: HTTPConnectionPool(host='localhost', port=53915): Max retries exceeded with url: /session/fe0e0caa1565160d2220cbca609996a7/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x10fa3de40>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2023-09-19 23:21:58go_to_cate AD845KN exception is: HTTPConnectionPool(host='localhost', port=53915): Max retries exceeded with url: /session/fe0e0caa1565160d2220cbca609996a7/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x10f9a0f10>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2023-09-19 23:24:17go_to_cate HMC308ETR exception is: HTTPConnectionPool(host='localhost', port=53915): Max retries exceeded with url: /session/fe0e0caa1565160d2220cbca609996a7/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x10dc9db40>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2023-09-19 23:26:39go_to_cate LP2950CDT-5.0 exception is: HTTPConnectionPool(host='localhost', port=53915): Max retries exceeded with url: /session/fe0e0caa1565160d2220cbca609996a7/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x10e5338e0>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2023-09-19 23:28:56go_to_cate IRFB17N50L exception is: HTTPConnectionPool(host='localhost', port=53915): Max retries exceeded with url: /session/fe0e0caa1565160d2220cbca609996a7/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x10f9a3790>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2023-12-07 15:10:24go_to_cate SN74HCT244DBR exception is: Message: no such element: Unable to locate element: {"method":"css selector","selector":".header__search"}
+  (Session info: chrome=114.0.5735.133)
+
+2023-12-07 15:13:45go_to_cate SN74LVC2G17DCKT exception is: Message: no such element: Unable to locate element: {"method":"css selector","selector":".header__search"}
+  (Session info: chrome=114.0.5735.133)
+
+2023-12-07 15:18:11go_to_cate LMR14030SDDAR exception is: Message: no such element: Unable to locate element: {"method":"css selector","selector":".header__search"}
+  (Session info: chrome=114.0.5735.133)
+
+2023-12-07 15:22:39go_to_cate LM73606QRNPRQ1 exception is: Message: no such element: Unable to locate element: {"method":"css selector","selector":".header__search"}
+  (Session info: chrome=114.0.5735.133)
+
+2023-12-07 15:26:40go_to_cate TMS320F2809PZA exception is: Message: no such element: Unable to locate element: {"method":"css selector","selector":".header__search"}
+  (Session info: chrome=114.0.5735.133)
+
+2023-12-07 15:29:36go_to_cate TMS320F2808PZA exception is: Message: no such element: Unable to locate element: {"method":"css selector","selector":".header__search"}
+  (Session info: chrome=114.0.5735.133)
+

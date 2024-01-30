@@ -25,6 +25,7 @@ result_save_file = PathHelp.get_file_path('Tender', 'Task.xlsx')
 result_save_sheet = 'Sheet'
 
 # 定义一个变量来记录当前的页码
+
 current_page = 1
 total_page = 0
 

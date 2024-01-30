@@ -11,11 +11,16 @@ from WRTools import ExcelHelp, WaitHelp, PathHelp, EmailHelper, MySqlHelp_recomm
 
 ssl._create_default_https_context = ssl._create_unverified_context
 
+# sourceFile_dic = {'fileName': PathHelp.get_file_path(None, f'{TaskManager.Taskmanger().task_name}.xlsx'),
+#                   'sourceSheet': 'ppn2',
+#                   'colIndex': 1,
+#                   'startIndex': 45,
+#                   'endIndex': TaskManager.Taskmanger().end_index}
 sourceFile_dic = {'fileName': PathHelp.get_file_path(None, f'{TaskManager.Taskmanger().task_name}.xlsx'),
-                  'sourceSheet': 'ppn2',
+                  'sourceSheet': 'ppn',
                   'colIndex': 1,
-                  'startIndex': 45,
-                  'endIndex': TaskManager.Taskmanger().end_index}
+                  'startIndex': 0,
+                  'endIndex': 28}
 
 total_page = 1
 current_page = 1
@@ -124,6 +129,10 @@ def get_stock(cate_index, cate_name, st_manu):
             except:
                 isHotSell = False
             try:
+                isYouXian = (templi.find_element(by=By.CLASS_NAME, value='icon_youXian') is not None)
+            except:
+                isYouXian = False
+            try:
                 manufacturer = templi.find_element(by=By.CLASS_NAME, value='result_factory').text
             except:
                 manufacturer = '--'
@@ -153,11 +162,12 @@ def get_stock(cate_index, cate_name, st_manu):
                                           st_manu=st_manu,
                                           isSpotRanking=isSpotRanking,
                                           isHotSell=isHotSell,
+                                          isYouXian=isYouXian,
                                           batch=batch,
                                           pakaging=pakaging,
                                           supplier_manu=manufacturer,
                                           stock_num=stock_num)
-            if ic_Stock_Info.shouldSave():
+            if ic_Stock_Info.shouldSave_holt():
                 saveContent_arr = ic_Stock_Info.descritpion_arr() + [TaskManager.Taskmanger().task_name]
                 need_save_ic_arr.append(saveContent_arr)
         if need_save_ic_arr.__len__() > 0:

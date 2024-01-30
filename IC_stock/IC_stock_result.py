@@ -24,35 +24,25 @@ def IC_stock_sum():
     pps = ExcelHelp.read_col_content(file_name=cate_source_file, sheet_name='ppn', col_index=1)
     manufactures = ExcelHelp.read_col_content(file_name=cate_source_file, sheet_name='ppn', col_index=2)
     result = []
-    start_index = 0
     for (index, temp_ppn) in enumerate(pps):
         ppn_str = str(temp_ppn)
         valid_supplier_sum = 0
         valid_stock_sum = 0
-        anchor_index = 0
-        IC_stocks = ExcelHelp.read_sheet_content_by_name(cate_source_file, sheet_name='ic_stock')
-        # (`ppn`, `manu`, `supplier`, `isICCP`, `isSSCP`, `iSRanking`, `isHotSell`, `stock_num`, `update_time`)
-        # IC_stocks = ExcelHelp.read_sheet_content_by_name(file_name=IC_source_file, sheet_name='IC_stock')
+        IC_stocks = ExcelHelp.read_sheet_content_by_name(cate_source_file, sheet_name='IC_stock')
+        # (ppn	st_manu	supplier_manu	supplier	isICCP	isSSCP	iSRanking	isHotSell	isYouXian	batch	pakaging	stock_num	task_name	update_time)
         for (row_index, row_content) in enumerate(IC_stocks):
-            if row_index < start_index:
-                continue
             ppn_ic = str(row_content[0])
-            if ppn_ic == ppn_str:
-                start_index = row_index
-                anchor_index = row_index
-                isICCP = str(row_content[3]) == "1"
-                isSSCP = str(row_content[4]) == "1"
-                isSpotRanking = str(row_content[5]) == "1"
-                stock_num = int(row_content[7])
-                if isSSCP or isICCP or isSpotRanking:
+            if ppn_ic.upper() == ppn_str.upper():
+                isICCP = str(row_content[4]) == "1"
+                isSSCP = str(row_content[5]) == "1"
+                isSpotRanking = str(row_content[6]) == "1"
+                isHotSell = str(row_content[7]) == "1"
+                isYouXian = str(row_content[8]) == "1"
+                stock_num = int(row_content[11])
+                if isSSCP or isICCP or isSpotRanking or isHotSell or isYouXian:
                     valid_supplier_sum += 1
                     valid_stock_sum += stock_num
-                    print(row_content)
-            else:
-                if anchor_index > 0:
-                    result.append([ppn_str, manufactures[index], valid_supplier_sum, int(valid_stock_sum)])
-                    start_index = row_index
-                    break
+        result.append([ppn_str, manufactures[index], valid_supplier_sum, int(valid_stock_sum)])
     ExcelHelp.add_arr_to_sheet(file_name=cate_source_file, sheet_name="IC_stock_sum", dim_arr=result)
 
 
@@ -82,9 +72,8 @@ def addIC_info():
 
 if __name__ == "__main__":
     # combine_result(source_files=ICStock_file_arr, aim_file=IC_source_file)
-    # IC_stock_sum()
-    # print('over')
     IC_stock_sum()
+    print('over')
 
 
 
