@@ -3,8 +3,7 @@ from WRTools import MySqlHelp_recommanded
 
 
 class Taskmanger:
-    # task_name = 'TRUNeeds202401'
-    task_name = 'TAliceHolt'
+    task_name = 'TRUNeeds202401'
     if AccManage.Device_ID == 'Mac':
         start_index = 0
         end_index = 700

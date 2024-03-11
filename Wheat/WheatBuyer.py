@@ -2,23 +2,16 @@
 # ['Siemens', '2022-02-24', 'Ооо Сименс', 'Siemens Building Technologies Ltd', 'ИЗДЕЛИЕ ИЗ ПЛАСТМАСС (ШТАМПОВКА):', '俄罗斯', '德国', '2023-05-14', '42']
 # 2021-07-16
 
-'''
-# 链接：https://app.51wheatsearch.com/gs/index.html#/login
-# 选择子账号登录
-# 公司名称：深圳市元极创新电子有限公司
-#  19805243800   Yjcx12345!
-#  13316837463    Yjcx12345!
-'''
+
 import datetime
 import sys
 from selenium import webdriver
 from selenium.webdriver.common.by import By
-from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.action_chains import ActionChains
 import undetected_chromedriver as uc
 import ssl
-from Manager import AccManage
-from WRTools import IPHelper, UserAgentHelper, ExcelHelp, WaitHelp, PathHelp, LogHelper
+from Manager import AccManage, TaskManager
+from WRTools import IPHelper, UserAgentHelper, ExcelHelp, WaitHelp, PathHelp, LogHelper, MySqlHelp_recommanded
 import time
 
 
@@ -30,12 +23,12 @@ ssl._create_default_https_context = ssl._create_unverified_context
 #                   'colIndex': 1,
 #                   'startIndex': 793,
 #                   'endIndex': 1000}
-sourceFile_dic = {'fileName': PathHelp.get_file_path(None, 'TNewBrand.xlsx'),
-                  'sourceSheet': 'brand',
+sourceFile_dic = {'fileName': PathHelp.get_file_path(None, 'TICHot_202401.xlsx'),
+                  'sourceSheet': 'ppn',
                   'colIndex': 1,
-                  'startIndex': 5, # SICK page 4 开始查询
-                  'endIndex': 13}
-result_save_file = PathHelp.get_file_path(None, 'TNewBrand.xlsx')
+                  'startIndex': 92,
+                  'endIndex': 92}
+result_save_file = PathHelp.get_file_path(None, 'TICHot_202401.xlsx')
 result_save_sheet = 'Wheat_buyer'
 logFile = PathHelp.get_file_path('Wheat', 'Wheat_log.txt')
 
@@ -235,7 +228,8 @@ def anly_webdriver(cate_index, cate_name):
             row_info = get_rowInfo(cate_name, row)
             result.append(row_info)
         if row_list.__len__() > 0:
-            ExcelHelp.add_arr_to_sheet(file_name=result_save_file, sheet_name=result_save_sheet, dim_arr=result)
+            # ExcelHelp.add_arr_to_sheet(file_name=result_save_file, sheet_name=result_save_sheet, dim_arr=result)
+            MySqlHelp_recommanded.DBRecommandChip().wheat_buyer_write(result)
             if current_page < total_page:
                 go_to_next_page(cate_index, cate_name)
     except Exception as e:
@@ -247,7 +241,8 @@ def get_rowInfo(cate_name, row):
     td_list = row.find_elements(By.TAG_NAME, 'td')
     buyer = td_list[1].text.replace('/', '%2F')
     buyer = buyer.replace('\x1e', ' (tim)')
-    result = [cate_name, td_list[0].text, buyer, td_list[2].text, td_list[3].text, td_list[4].text, td_list[5].text, time.strftime('%Y-%m-%d', time.localtime()), str(current_page)]
+    task_name = "TICHot_202401"
+    result = [cate_name, td_list[0].text, buyer, td_list[2].text, td_list[3].text, td_list[4].text, td_list[5].text, str(current_page), task_name]
     return result
 
 
@@ -275,5 +270,5 @@ def main():
 if __name__ == "__main__":
     loginAction(default_url)
     driver.get(default_url)
-    set_filter(start_date='2023-01-23', end_date='2024-01-23')
+    set_filter(start_date='2023-03-05', end_date='2024-03-05')
     main()

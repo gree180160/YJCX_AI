@@ -165,34 +165,26 @@ def close_alert():
         # print(e)
 
 
-def adjust_excel():
-    global result_save_file
-    today = time.strftime('%Y-%m-%d', time.localtime())
-    result_save_file = PathHelp.get_file_path('Tender', f'ros_tender_{today}.xlsx')
-    if not os.path.exists(result_save_file):
-        ExcelHelp.create_excel_file(result_save_file)
-        title_arr = [
-            ['grade', 'No', 'title_ru', 'starting_price', 'application_security', 'contract_security', 'status',
-             'published',
-             'apply_data', 'show_data', 'org_name', 'org_TinKpp', 'org_contact', 'cus_name', 'cus_TinKppReg',
-             'cus_contact',
-             'cus_address', 'detail_url', 'page']]
-        ExcelHelp.add_arr_to_sheet(result_save_file, result_save_sheet, title_arr)
+# def adjust_excel():
+#     global result_save_file
+#     today = time.strftime('%Y-%m-%d', time.localtime())
+#     result_save_file = PathHelp.get_file_path('Tender', f'ros_tender_{today}.xlsx')
+#     if not os.path.exists(result_save_file):
+#         ExcelHelp.create_excel_file(result_save_file)
+#         title_arr = [
+#             ['grade', 'No', 'title_ru', 'starting_price', 'application_security', 'contract_security', 'status',
+#              'published',
+#              'apply_data', 'show_data', 'org_name', 'org_TinKpp', 'org_contact', 'cus_name', 'cus_TinKppReg',
+#              'cus_contact',
+#              'cus_address', 'detail_url', 'page']]
+#         ExcelHelp.add_arr_to_sheet(result_save_file, result_save_sheet, title_arr)
 
 
 if __name__ == "__main__":
     driver.get(login_url)
     WaitHelp.waitfor_account_import(True, False)
     login_action()
-    adjust_excel()
     time.sleep(2.0)
     driver.get(search_base_url)
     set_total_page()
-    while True:
-        now = datetime.datetime.now()
-        h_value = now.hour
-        if h_value > 1:
-            time.sleep(60*50)
-        else:
-            break
     main()

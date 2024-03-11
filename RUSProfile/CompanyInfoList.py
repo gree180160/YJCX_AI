@@ -13,11 +13,16 @@ from WRTools import ExcelHelp, WaitHelp, PathHelp, MySqlHelp_recommanded, LogHel
 
 ssl._create_default_https_context = ssl._create_unverified_context
 
-sourceFile_dic = {'fileName': PathHelp.get_file_path(None, f'TNewBrand.xlsx'),
-                  'sourceSheet': 'company',
+# sourceFile_dic = {'fileName': PathHelp.get_file_path(None, f'TNewBrand.xlsx'),
+#                   'sourceSheet': 'company',
+#                   'colIndex': 1,
+#                   'startIndex': 595,  #Акционерное Общество Золотые Луга
+#                   'endIndex': 1313}
+sourceFile_dic = {'fileName': PathHelp.get_file_path(None, f'TICHot_202401.xlsx'),
+                  'sourceSheet': 'buyer',
                   'colIndex': 1,
-                  'startIndex': 5,  #Акционерное Общество Золотые Луга       ///Акционерное Общество Объединенная Компания Арматура И Насосы Ао Окан
-                  'endIndex': 1313}
+                  'startIndex': 0,  #Акционерное Общество Золотые Луга
+                  'endIndex': 142}
 
 accouts_arr = [AccManage.rusprofile['n'], AccManage.rusprofile['p']]
 default_url = 'https://www.rusprofile.ru/search-advanced'
@@ -65,7 +70,7 @@ def login_action():
             sure_button = input_area.find_element(By.CSS_SELECTOR, 'button.btn.btn-blue')
             sure_button.click()
             time.sleep(3.0)
-            time.sleep(60.0)
+            WaitHelp.waitfor(True, False)
         except Exception as e:
             LogHelper.write_log(log_file, 'login error')
 
@@ -77,14 +82,18 @@ def get_id(company_index, company_name):
     if companys.__len__() == 0:
         print(f'{company_name} : has no record')
         return
-    for temp_company in companys:
+    for (loopIndex, temp_company) in enumerate(companys):
+        if loopIndex >= 3:
+            break
         # https://www.rusprofile.ru/id/1653418
+        # https://www.rusprofile.ru/ip/318583500057542
         link = temp_company.find_element(By.TAG_NAME, 'a').get_attribute('href')
-        parts = link.split('/')
-        # 获取最后一个部分
-        profile_id = parts[-1]
-        temp_company.find_element(By.TAG_NAME, 'a').click()
-        goto_detail(company_index, company_name, profile_id)
+        if link.startswith('https://www.rusprofile.ru/id'): #不要ip 这种个体工商户
+            parts = link.split('/')
+            # 获取最后一个部分
+            profile_id = parts[-1]
+            temp_company.find_element(By.TAG_NAME, 'a').click()
+            goto_detail(company_index, company_name, profile_id)
 
 
 def goto_detail(company_index, company_name, profile_id):
@@ -100,8 +109,14 @@ def goto_detail(company_index, company_name, profile_id):
     try:
         full_name = new_tab_driver.find_element(By.CSS_SELECTOR, 'h2.company-name').text
         inn = new_tab_driver.find_element(By.ID, 'clip_inn').text
-        activity = new_tab_driver.find_element(By.XPATH, '//*[@id="anketa"]/div[2]/div[2]/div[1]/span[2]').text
-        rigister_date = new_tab_driver.find_element(By.XPATH, '//*[@id="anketa"]/div[2]/div[1]/div[1]/div[2]/dl[1]/dd').text
+        try:
+            activity = new_tab_driver.find_element(By.XPATH, '//*[@id="anketa"]/div[2]/div[2]/div[1]/span[2]').text
+        except:
+            activity = ''
+        try:
+            rigister_date = new_tab_driver.find_element(By.XPATH, '//*[@id="anketa"]/div[2]/div[1]/div[1]/div[2]/dl[1]/dd').text
+        except:
+            rigister_date = ''
         industry_rank = new_tab_driver.find_element(By.XPATH, '//*[@id="anketa"]/div[2]/div[2]/div[2]/span[2]').text
         adress = new_tab_driver.find_element(By.XPATH, '//*[@id="clip_address"]').text
         try:
@@ -124,11 +139,17 @@ def goto_detail(company_index, company_name, profile_id):
         revenue = revenue1 + revenue2
         profit = new_tab_driver.find_element(By.XPATH, '//*[@id="ab-test-wrp"]/div[2]/div[2]/div[1]/div/div[1]/div[2]/div[2]').text
         cost = new_tab_driver.find_element(By.XPATH, '//*[@id="ab-test-wrp"]/div[2]/div[2]/div[1]/div/div[1]/div[3]/div[2]').text
+        if email.__contains__('░░'):
+            login_action()
+            time.sleep(20.0)
+            goto_detail(company_index, company_name, profile_id)
     except Exception as e:
         LogHelper.write_log(log_file, f'{company_name} goto_detail error {e}')
-    result = [company_name, profile_id, full_name, inn , activity , rigister_date , industry_rank , adress , phone , email , website , revenue , profit , cost ]
-    ExcelHelp.add_arr_to_sheet(sourceFile_dic['fileName'], 'rusprofile', [result])
-    #todo save to mysql
+    # task_name = 'newbrand_202401'
+    task_name = 'TICHot_202401'
+    result = [company_name, profile_id, full_name, inn , activity , rigister_date , industry_rank , adress , phone , email , website , revenue , profit , cost , task_name]
+    # ExcelHelp.add_arr_to_sheet(sourceFile_dic['fileName'], 'rusprofile', [result])
+    MySqlHelp_recommanded.DBRecommandChip().rusprofile_write( [result])
     # 关闭当前的页面
     new_tab_driver.close()
     # 切换回列表页面
@@ -140,7 +161,10 @@ def send_companyName_to_filter(company_index, company_name):
     input_area = driver.find_element(By.ID, 'advanced-search-query')
     input_area.clear()
     input_area.send_keys(company_name)
-    WaitHelp.waitfor(True, False)
+    if company_index % 15 == 0 and company_index > 0:
+        time.sleep(60*8)
+    else:
+        WaitHelp.waitfor_account_import(True, False)
     get_id(company_index, company_name)
     
 

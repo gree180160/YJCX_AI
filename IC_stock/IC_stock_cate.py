@@ -10,30 +10,18 @@ from WRTools import ExcelHelp, WaitHelp, PathHelp, EmailHelper, MySqlHelp_recomm
 
 
 ssl._create_default_https_context = ssl._create_unverified_context
-
-# sourceFile_dic = {'fileName': PathHelp.get_file_path(None, f'{TaskManager.Taskmanger().task_name}.xlsx'),
-#                   'sourceSheet': 'ppn2',
-#                   'colIndex': 1,
-#                   'startIndex': 45,
-#                   'endIndex': TaskManager.Taskmanger().end_index}
-sourceFile_dic = {'fileName': PathHelp.get_file_path(None, f'{TaskManager.Taskmanger().task_name}.xlsx'),
+# arr is: [['OMRON', '36167']]
+sourceFile_dic = {'fileName': PathHelp.get_file_path(None, 'TTIMilitary.xlsx'),
                   'sourceSheet': 'ppn',
                   'colIndex': 1,
-                  'startIndex': 0,
-                  'endIndex': 28}
+                  'startIndex': 103,
+                  'endIndex': 120}
 
 total_page = 1
 current_page = 1
 VerificationCodePage = 0
 accouts_arr = [[AccManage.IC_stock['n'], AccManage.IC_stock['p']]]
-# driver_option = webdriver.ChromeOptions()
-# driver_option.add_argument(f'--proxy-server=http://{IPHelper.getRandowCityIP()}')
-# driver_option.add_argument("–incognito")
-# #  等待初始HTML文档完全加载和解析，
-# driver_option.page_load_strategy = 'eager'
-# driver_option.add_argument(f'user-agent="{UserAgentHelper.getRandowUA_Mac()}"')
-# prefs = {"profile.managed_default_content_settings.images": 2}
-# driver_option.add_experimental_option('prefs', prefs)
+
 try:
     if AccManage.chromedriver_path.__len__() > 0:
         driver = uc.Chrome(use_subprocess=True,
@@ -168,7 +156,8 @@ def get_stock(cate_index, cate_name, st_manu):
                                           supplier_manu=manufacturer,
                                           stock_num=stock_num)
             if ic_Stock_Info.shouldSave_holt():
-                saveContent_arr = ic_Stock_Info.descritpion_arr() + [TaskManager.Taskmanger().task_name]
+                # saveContent_arr = ic_Stock_Info.descritpion_arr() + [TaskManager.Taskmanger().task_name]
+                saveContent_arr = ic_Stock_Info.descritpion_arr() + ["TTIMilitary"]
                 need_save_ic_arr.append(saveContent_arr)
         if need_save_ic_arr.__len__() > 0:
             MySqlHelp_recommanded.DBRecommandChip().ic_stock(need_save_ic_arr)
@@ -197,7 +186,7 @@ def get_stock(cate_index, cate_name, st_manu):
 # 验证当前页面是否正在等待用户验证，连续三次请求出现验证码页面，则关闭页面
 def checkVerificationCodePage(ppn) -> bool:
     global VerificationCodePage
-    if driver.current_url == 'https://www.ic.net.cn/searchPnCode.php':
+    if driver.current_url == 'https://www.ic.net.cn/searchPnCode.php?l=ins':
         VerificationCodePage += 1
         print(f'{ppn} check code')
         EmailHelper.mail_IC_Stock(AccManage.Device_ID)

@@ -1,5 +1,5 @@
 
-#  要用IC 交易网中的现货排名、ICCP、SSCP中  库存数量       最多那一家，的批次和数量
+#  只保留第一页的记录，只用IC 交易网中的现货排名、ICCP、SSCP中  库存数量  最多那一家，的批次和数量
 from selenium.webdriver.common.by import By
 import random
 import undetected_chromedriver as uc

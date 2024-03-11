@@ -5,3 +5,214 @@
 2024-01-30 14:24:26Акционерное Общество Золотые Луга goto_detail error Message: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id="contacts-row"]/span[2]/span[2]"}
   (Session info: chrome=114.0.5735.133)
 
+2024-01-30 15:29:45Ао Архангельский Целлюлозно Бумажный Комбинат goto_detail error Message: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id="ab-test-wrp"]/div[2]/div[2]/div[1]/div/div[1]/div[1]/div[2]/span[1]"}
+  (Session info: chrome=114.0.5735.133)
+
+2024-01-30 16:08:58Ао Волга goto_detail error Message: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id="ab-test-wrp"]/div[2]/div[2]/div[1]/div/div[1]/div[1]/div[2]/span[1]"}
+  (Session info: chrome=114.0.5735.133)
+
+2024-01-30 17:34:08Ао Каустик goto_detail error Message: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id="ab-test-wrp"]/div[2]/div[2]/div[1]/div/div[1]/div[1]/div[2]/span[1]"}
+  (Session info: chrome=114.0.5735.133)
+
+2024-01-30 17:45:32Ао Компонента goto_detail error Message: no such element: Unable to locate element: {"method":"css selector","selector":"h2.company-name"}
+  (Session info: chrome=114.0.5735.133)
+
+2024-01-31 13:06:04Ао Синетик goto_detail error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-01-31 14:23:55Ао Скад Тех goto_detail error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-02-02 14:20:18Ип Ермолаев Сергей Борисович goto_detail error Message: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id="anketa"]/div[2]/div[2]/div[1]/span[2]"}
+  (Session info: chrome=114.0.5735.133)
+
+2024-02-02 14:26:39Ип Земсков Андрей Петрович goto_detail error Message: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id="anketa"]/div[2]/div[2]/div[1]/span[2]"}
+  (Session info: chrome=114.0.5735.133)
+
+2024-02-02 14:33:04Ип Као Ден Владимир Валерьевич goto_detail error Message: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id="anketa"]/div[2]/div[2]/div[1]/span[2]"}
+  (Session info: chrome=114.0.5735.133)
+
+2024-02-02 14:47:46Ип Серокуров Павел Владимирович goto_detail error Message: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id="anketa"]/div[2]/div[2]/div[1]/span[2]"}
+  (Session info: chrome=114.0.5735.133)
+
+2024-02-02 14:57:00Ип Синицын Илья Александрович goto_detail error Message: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id="anketa"]/div[2]/div[2]/div[1]/span[2]"}
+  (Session info: chrome=114.0.5735.133)
+
+2024-02-02 15:19:56Ип Ермолаев Сергей Борисович goto_detail error Message: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id="anketa"]/div[2]/div[1]/div[1]/div[2]/dl[1]/dd"}
+  (Session info: chrome=114.0.5735.133)
+
+2024-02-02 15:25:02Ип Земсков Андрей Петрович goto_detail error Message: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id="anketa"]/div[2]/div[1]/div[1]/div[2]/dl[1]/dd"}
+  (Session info: chrome=114.0.5735.133)
+
+2024-02-04 16:31:36Общество С Ограниченной Ответственностью Гидроком goto_detail error Message: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id="ab-test-wrp"]/div[2]/div[2]/div[1]/div/div[1]/div[1]/div[2]/span[1]"}
+  (Session info: chrome=114.0.5735.133)
+
+2024-02-04 17:25:27Общество С Ограниченной Ответственностью Лагом goto_detail error Message: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id="ab-test-wrp"]/div[2]/div[2]/div[1]/div/div[1]/div[1]/div[2]/span[1]"}
+  (Session info: chrome=114.0.5735.133)
+
+2024-02-04 17:29:16Общество С Ограниченной Ответственностью Лагом goto_detail error Message: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id="ab-test-wrp"]/div[2]/div[2]/div[1]/div/div[1]/div[1]/div[2]/span[1]"}
+  (Session info: chrome=114.0.5735.133)
+
+2024-02-04 18:19:40Общество С Ограниченной Ответственностью Ронта goto_detail error Message: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id="ab-test-wrp"]/div[2]/div[2]/div[1]/div/div[1]/div[1]/div[2]/span[1]"}
+  (Session info: chrome=114.0.5735.133)
+
+2024-02-04 18:21:34Общество С Ограниченной Ответственностью Ронта goto_detail error Message: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id="ab-test-wrp"]/div[2]/div[2]/div[1]/div/div[1]/div[1]/div[2]/span[1]"}
+  (Session info: chrome=114.0.5735.133)
+
+2024-02-05 09:31:09Общество С Ограниченной Ответственностью Юнион Пром goto_detail error Message: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id="ab-test-wrp"]/div[2]/div[2]/div[1]/div/div[1]/div[1]/div[2]/span[1]"}
+  (Session info: chrome=114.0.5735.133)
+
+2024-02-05 10:38:38Ооо 1М goto_detail error Message: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id="ab-test-wrp"]/div[2]/div[2]/div[1]/div/div[1]/div[1]/div[2]/span[1]"}
+  (Session info: chrome=114.0.5735.133)
+
+2024-02-05 11:19:21Ооо А М Н goto_detail error Message: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id="ab-test-wrp"]/div[2]/div[2]/div[1]/div/div[1]/div[1]/div[2]/span[1]"}
+  (Session info: chrome=114.0.5735.133)
+
+2024-02-05 11:27:45Ооо А М Н goto_detail error Message: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id="ab-test-wrp"]/div[2]/div[2]/div[1]/div/div[1]/div[1]/div[2]/span[1]"}
+  (Session info: chrome=114.0.5735.133)
+
+2024-02-05 11:30:13Ооо А М Н goto_detail error Message: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id="ab-test-wrp"]/div[2]/div[2]/div[1]/div/div[1]/div[1]/div[2]/span[1]"}
+  (Session info: chrome=114.0.5735.133)
+
+2024-02-05 11:58:42Ооо Ав Трейд goto_detail error Message: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id="ab-test-wrp"]/div[2]/div[2]/div[1]/div/div[1]/div[1]/div[2]/span[1]"}
+  (Session info: chrome=114.0.5735.133)
+
+2024-02-05 14:39:38Ооо Авс Нн goto_detail error Message: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id="ab-test-wrp"]/div[2]/div[2]/div[1]/div/div[1]/div[1]/div[2]/span[1]"}
+  (Session info: chrome=114.0.5735.133)
+
+2024-02-05 15:47:26Ооо Аг Альянс goto_detail error Message: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id="ab-test-wrp"]/div[2]/div[2]/div[1]/div/div[1]/div[1]/div[2]/span[1]"}
+  (Session info: chrome=114.0.5735.133)
+
+2024-02-05 15:49:29Ооо Аг Альянс goto_detail error Message: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id="ab-test-wrp"]/div[2]/div[2]/div[1]/div/div[1]/div[1]/div[2]/span[1]"}
+  (Session info: chrome=114.0.5735.133)
+
+2024-02-05 15:51:16Ооо Аг Альянс goto_detail error Message: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id="ab-test-wrp"]/div[2]/div[2]/div[1]/div/div[1]/div[1]/div[2]/span[1]"}
+  (Session info: chrome=114.0.5735.133)
+
+2024-02-05 16:46:57Ооо Азимут goto_detail error Message: no such element: Unable to locate element: {"method":"css selector","selector":"h2.company-name"}
+  (Session info: chrome=114.0.5735.133)
+
+2024-02-05 17:23:51Ооо Азур goto_detail error Message: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id="ab-test-wrp"]/div[2]/div[2]/div[1]/div/div[1]/div[1]/div[2]/span[1]"}
+  (Session info: chrome=114.0.5735.133)
+
+2024-02-05 17:38:44Ооо Азур goto_detail error Message: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id="ab-test-wrp"]/div[2]/div[2]/div[1]/div/div[1]/div[1]/div[2]/span[1]"}
+  (Session info: chrome=114.0.5735.133)
+
+2024-02-05 17:53:04Ооо Ай Кью Групп goto_detail error Message: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id="ab-test-wrp"]/div[2]/div[2]/div[1]/div/div[1]/div[1]/div[2]/span[1]"}
+  (Session info: chrome=114.0.5735.133)
+
+2024-02-05 18:08:06Ооо Ай Си Компонент goto_detail error Message: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id="ab-test-wrp"]/div[2]/div[2]/div[1]/div/div[1]/div[1]/div[2]/span[1]"}
+  (Session info: chrome=114.0.5735.133)
+
+2024-02-06 10:07:09Ооо Айтиси Рус goto_detail error Message: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id="ab-test-wrp"]/div[2]/div[2]/div[1]/div/div[1]/div[1]/div[2]/span[1]"}
+  (Session info: chrome=114.0.5735.133)
+
+2024-02-06 10:21:21Ооо Ак Инжиниринг goto_detail error Message: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id="ab-test-wrp"]/div[2]/div[2]/div[1]/div/div[1]/div[1]/div[2]/span[1]"}
+  (Session info: chrome=114.0.5735.133)
+
+2024-02-06 12:09:37Ооо Алон goto_detail error Message: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id="ab-test-wrp"]/div[2]/div[2]/div[1]/div/div[1]/div[1]/div[2]/span[1]"}
+  (Session info: chrome=114.0.5735.133)
+
+2024-02-06 12:11:55Ооо Алон goto_detail error Message: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id="ab-test-wrp"]/div[2]/div[2]/div[1]/div/div[1]/div[1]/div[2]/span[1]"}
+  (Session info: chrome=114.0.5735.133)
+
+2024-02-06 12:13:56Ооо Алон goto_detail error Message: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id="ab-test-wrp"]/div[2]/div[2]/div[1]/div/div[1]/div[1]/div[2]/span[1]"}
+  (Session info: chrome=114.0.5735.133)
+
+2024-02-06 12:16:15Ооо Алон goto_detail error Message: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id="ab-test-wrp"]/div[2]/div[2]/div[1]/div/div[1]/div[1]/div[2]/span[1]"}
+  (Session info: chrome=114.0.5735.133)
+
+2024-02-06 14:09:51Ооо Альтехпром goto_detail error Message: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id="ab-test-wrp"]/div[2]/div[2]/div[1]/div/div[1]/div[1]/div[2]/span[1]"}
+  (Session info: chrome=114.0.5735.133)
+
+2024-02-06 15:34:26Ооо Альянс Право goto_detail error Message: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id="ab-test-wrp"]/div[2]/div[2]/div[1]/div/div[1]/div[1]/div[2]/span[1]"}
+  (Session info: chrome=114.0.5735.133)
+
+2024-02-06 17:30:58Ооо Амитек goto_detail error Message: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id="ab-test-wrp"]/div[2]/div[2]/div[1]/div/div[1]/div[1]/div[2]/span[1]"}
+  (Session info: chrome=114.0.5735.133)
+
+2024-02-06 17:53:01Ооо Анхель Групп goto_detail error Message: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id="ab-test-wrp"]/div[2]/div[2]/div[1]/div/div[1]/div[1]/div[2]/span[1]"}
+  (Session info: chrome=114.0.5735.133)
+
+2024-02-06 18:35:43Ооо Апс Групп goto_detail error Message: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id="ab-test-wrp"]/div[2]/div[2]/div[1]/div/div[1]/div[1]/div[2]/span[1]"}
+  (Session info: chrome=114.0.5735.133)
+
+2024-02-06 18:47:58Ооо Апх Рус goto_detail error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-02-26 13:04:55Ооо Асип goto_detail error Message: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id="ab-test-wrp"]/div[2]/div[2]/div[1]/div/div[1]/div[1]/div[2]/span[1]"}
+  (Session info: chrome=114.0.5735.133)
+
+2024-02-26 14:49:00Ооо Атома goto_detail error Message: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id="ab-test-wrp"]/div[2]/div[2]/div[1]/div/div[1]/div[1]/div[2]/span[1]"}
+  (Session info: chrome=114.0.5735.133)
+
+2024-02-26 17:18:48Ооо Баланс Технолоджи goto_detail error Message: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id="ab-test-wrp"]/div[2]/div[2]/div[1]/div/div[1]/div[1]/div[2]/span[1]"}
+  (Session info: chrome=114.0.5735.133)
+
+2024-02-26 17:29:19Ооо Балтех goto_detail error Message: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id="ab-test-wrp"]/div[2]/div[2]/div[1]/div/div[1]/div[1]/div[2]/span[1]"}
+  (Session info: chrome=114.0.5735.133)
+
+2024-02-27 15:46:23Ооо Беко goto_detail error Message: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id="ab-test-wrp"]/div[2]/div[2]/div[1]/div/div[1]/div[1]/div[2]/span[1]"}
+  (Session info: chrome=114.0.5735.133)
+
+2024-02-28 17:21:34Ооо Бора goto_detail error Message: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id="ab-test-wrp"]/div[2]/div[2]/div[1]/div/div[1]/div[1]/div[2]/span[1]"}
+  (Session info: chrome=114.0.5735.133)
+
+2024-02-28 17:44:37Ооо Бриз Элемент goto_detail error Message: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id="ab-test-wrp"]/div[2]/div[2]/div[1]/div/div[1]/div[1]/div[2]/span[1]"}
+  (Session info: chrome=114.0.5735.133)
+
+2024-02-29 13:34:34Ооо Виа Сервис goto_detail error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-02-29 14:35:23Ооо Виалект goto_detail error Message: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id="ab-test-wrp"]/div[2]/div[2]/div[1]/div/div[1]/div[1]/div[2]/span[1]"}
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-01 15:23:18Ооо Гига Инжиниринг goto_detail error Message: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id="ab-test-wrp"]/div[2]/div[2]/div[1]/div/div[1]/div[1]/div[2]/span[1]"}
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-01 17:28:36Ооо Горт goto_detail error Message: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id="ab-test-wrp"]/div[2]/div[2]/div[1]/div/div[1]/div[1]/div[2]/span[1]"}
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-01 18:06:47Ооо Грант Инструмент goto_detail error Message: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id="ab-test-wrp"]/div[2]/div[2]/div[1]/div/div[1]/div[1]/div[2]/span[1]"}
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-01 19:40:00Ооо Гтс Групп goto_detail error Message: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id="ab-test-wrp"]/div[2]/div[2]/div[1]/div/div[1]/div[1]/div[2]/span[1]"}
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-04 14:45:31login error
+2024-03-05 12:18:06Ооо Евротек goto_detail error Message: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id="ab-test-wrp"]/div[2]/div[2]/div[1]/div/div[1]/div[1]/div[2]/span[1]"}
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-05 12:52:19Ооо Емс Эксперт goto_detail error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-06 16:06:24Ооо Индастриал Партс goto_detail error Message: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id="ab-test-wrp"]/div[2]/div[2]/div[1]/div/div[1]/div[1]/div[2]/span[1]"}
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-07 11:51:25Ооо Интекс Групп goto_detail error Message: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id="ab-test-wrp"]/div[2]/div[2]/div[1]/div/div[1]/div[1]/div[2]/span[1]"}
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-07 13:29:09Ооо Интерресурс goto_detail error Message: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id="ab-test-wrp"]/div[2]/div[2]/div[1]/div/div[1]/div[1]/div[2]/span[1]"}
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-07 16:19:26Ооо Каскад Инжиниринг goto_detail error Message: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id="ab-test-wrp"]/div[2]/div[2]/div[1]/div/div[1]/div[1]/div[2]/span[1]"}
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-07 17:18:18Ооо Квант Электроникс goto_detail error Message: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id="ab-test-wrp"]/div[2]/div[2]/div[1]/div/div[1]/div[1]/div[2]/span[1]"}
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-07 17:25:04Ооо Квантум goto_detail error Message: no such element: Unable to locate element: {"method":"css selector","selector":"h2.company-name"}
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-07 18:48:50Ооо Кнауф Гипс Новомосковск goto_detail error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-08 11:45:08Ооо Комитас goto_detail error Message: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id="ab-test-wrp"]/div[2]/div[2]/div[1]/div/div[1]/div[1]/div[2]/span[1]"}
+  (Session info: chrome=114.0.5735.133)
+

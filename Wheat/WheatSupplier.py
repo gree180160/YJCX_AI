@@ -1,28 +1,24 @@
-# 根据buyer 获取supplier
+# 根据buyer 获取 获取购买记录
 import time
-'''
-# 链接：https://app.51wheatsearch.com/gs/index.html#/login
-# 选择子账号登录
-# 公司名称：深圳市元极创新电子有限公司
-# 账号： 19805243800   密码：Yjcx12345!
-# 账号： 13316837463   密码：Yjcx12345!
-'''
+
 
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 import undetected_chromedriver as uc
 import ssl
+from Manager import AccManage, TaskManager
 from WRTools import IPHelper, UserAgentHelper, ExcelHelp, WaitHelp, PathHelp, LogHelper
 import time
 
 ssl._create_default_https_context = ssl._create_unverified_context
+accouts_arr = [AccManage.Wheat['c'], AccManage.Wheat['n'], AccManage.Wheat['p']]
 
-sourceFile_dic = {'fileName': PathHelp.get_file_path('TVicor15H', 'Task.xlsx'),
+sourceFile_dic = {'fileName': PathHelp.get_file_path(None, 'TICHot_202401.xlsx'),
                   'sourceSheet': 'buyer',
                   'colIndex': 1,
                   'startIndex': 0,
-                  'endIndex': 100}
-result_save_file = PathHelp.get_file_path('TVicor15H', 'wheat_buyer.xlsx')
+                  'endIndex': 143}
+result_save_file = PathHelp.get_file_path(None, 'TICHot_202401.xlsx')
 logFile = PathHelp.get_file_path('Wheat', 'Wheat_log.txt')
 
 login_url = 'https://app.51wheatsearch.com/gs/index.html#/login'
@@ -44,7 +40,30 @@ driver.set_page_load_timeout(1000)
 
 # 登陆
 def loginAction(aim_url):
-    WaitHelp.waitfor_account_import(True, False)
+    driver.get(aim_url)
+    time.sleep(5.0)
+    login_types = driver.find_elements(By.CSS_SELECTOR, 'div.ant-tabs-tab')
+    if login_types.__len__() > 0:
+        time.sleep(10.0)
+        sub_long = login_types[1]
+        sub_long.click()
+        time.sleep(3.0)
+        company_name = driver.find_element(By.CSS_SELECTOR, '#mobileOrName')
+        company_name.clear()
+        company_name.send_keys(accouts_arr[0])
+        use_name = driver.find_element(By.CSS_SELECTOR, '#emailOrMobile')
+        use_name.clear()
+        use_name.send_keys(accouts_arr[1])
+        pw = driver.find_element(By.CSS_SELECTOR, '#password')
+        pw.clear()
+        pw.send_keys(accouts_arr[2])
+        time.sleep(3.0)
+        login_button = driver.find_elements(By.TAG_NAME, 'button')[-1]
+        login_button.click()
+        WaitHelp.waitfor(True, False)
+    else:
+        print('login error')
+        sys.exit()
 
 
 # search one buyer
