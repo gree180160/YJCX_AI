@@ -26,7 +26,7 @@ ssl._create_default_https_context = ssl._create_unverified_context
 sourceFile_dic = {'fileName': PathHelp.get_file_path(None, 'TICHot_202402.xlsx'),
                   'sourceSheet': 'ppn',
                   'colIndex': 1,
-                  'startIndex': 0,
+                  'startIndex': 7,
                   'endIndex': 30}
 result_save_file = PathHelp.get_file_path(None, 'TICHot_202402.xlsx')
 result_save_sheet = 'Wheat_buyer'
@@ -237,12 +237,13 @@ def anly_webdriver(cate_index, cate_name):
 
 
 def get_rowInfo(cate_name, row):
-    # ['cate_name', 'data', 'buyer', 'supplier', 'des', 'buy_contry', 'supplier_contry', record_time]
+    # old ['buyer_name', 'data', 'buyer', 'supplier', 'des', 'buy_contry', 'supplier_contry', record_time]
+    #new  (keyword, wheat_date, buyer, supplier, HSCode, description, buy_country, supplier_country, productContry, weight, number, totalValue, current_page, task_name)
     td_list = row.find_elements(By.TAG_NAME, 'td')
     buyer = td_list[1].text.replace('/', '%2F')
     buyer = buyer.replace('\x1e', ' (tim)')
     task_name = "TICHot_202402"
-    result = [cate_name, td_list[0].text, buyer, td_list[2].text, td_list[3].text, td_list[4].text, td_list[5].text, str(current_page), task_name]
+    result = [cate_name, td_list[0].text, buyer, td_list[2].text, td_list[3].text, td_list[4].text, "" , "",  td_list[5].text, td_list[6].text, td_list[7].text, td_list[8].text, str(current_page), task_name]
     return result
 
 

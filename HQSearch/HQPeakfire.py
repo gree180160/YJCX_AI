@@ -57,31 +57,19 @@ def has_hotData() -> bool:
 # isWeek：【周/月】搜索指数
 def getSearchInfo(cate_name,manu, isWeek):
     weekInfos = driver.find_elements(By.ID, 'template_0')
+    result = []
     if weekInfos.__len__() > 0:
         try:
-            weekInfo = weekInfos[0]
-            week_baseInfo = weekInfo.find_element(By.CSS_SELECTOR, 'ul.sum-bd')
-            items = week_baseInfo.find_elements(By.CSS_SELECTOR, 'li.sum-item')
-            try:
-                data0 = items[0].find_element(By.CSS_SELECTOR, 'div.sum-data')
-
-            except:
-                print('week base info error')
-
-            heat =
+            hot_tables = driver.find_elements(By.CSS_SELECTOR, 'g.highcharts-data-labels.highcharts-series-0.highcharts-line-series.highcharts-color-0')
+            for temp_table in hot_tables:
+                dots = temp_table.find_elements(By.CSS_SELECTOR, 'g.highcharts-label.highcharts-data-label.highcharts-data-label-color-0')
+                for temp_d in dots:
+                    result.append(temp_d.text)
         except:
             print('week info error')
+    return result
 
-
-
-    heat
-    stock
-    price
-    supplier
-
-
-
-def anlyth_page(aim_url, cate_name, manu, isWeek):
+# def anlyth_page(aim_url, cate_name, manu, isWeek):
 
 
 

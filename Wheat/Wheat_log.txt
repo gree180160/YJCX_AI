@@ -10051,3 +10051,10 @@ from unknown error: web view not found
 2024-03-22 10:14:00get total page error list index out of range
 2024-03-22 10:14:03click search_button error list index out of range
 2024-03-22 10:17:27get total page error list index out of range
+2024-03-22 16:53:22get total page error list index out of range
+2024-03-22 16:56:41get total page error list index out of range
+2024-03-22 17:03:49get total page error list index out of range
+2024-03-22 17:07:41get total page error list index out of range
+2024-03-22 17:10:27get total page error list index out of range
+2024-03-22 17:13:47get total page error list index out of range
+2024-03-22 17:18:27get total page error list index out of range
