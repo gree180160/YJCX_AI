@@ -6561,3 +6561,3493 @@ from unknown error: web view not found
 2024-03-08 18:29:07set_page_count error HTTPConnectionPool(host='localhost', port=59617): Max retries exceeded with url: /session/1a282776c45a3d96f6e782c336c1ab63/elements (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x127bef370>: Failed to establish a new connection: [Errno 61] Connection refused'))
 2024-03-08 18:29:07get total page error HTTPConnectionPool(host='localhost', port=59617): Max retries exceeded with url: /session/1a282776c45a3d96f6e782c336c1ab63/elements (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x127bec1c0>: Failed to establish a new connection: [Errno 61] Connection refused'))
 2024-03-08 19:07:56get total page error list index out of range
+2024-03-11 11:26:17get total page error list index out of range
+2024-03-11 13:55:07anly_webdriver error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-11 13:58:06set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-11 13:58:06get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-11 14:01:03set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-11 14:01:03get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-11 14:04:03set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-11 14:04:03get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-11 14:07:55set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-11 14:07:55get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-11 14:11:12set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-11 14:11:12get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-11 14:14:40set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-11 14:14:40get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-11 14:18:09set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-11 14:18:09get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-11 14:22:08set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-11 14:22:08get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-11 14:24:50set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-11 14:24:50get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-11 14:27:43set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-11 14:27:43get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-11 14:32:23set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-11 14:32:23get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-11 14:35:04set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-11 14:35:04get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-11 14:39:28set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-11 14:39:28get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-11 14:42:48set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-11 14:42:48get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-11 14:46:03set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-11 14:46:03get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-11 14:48:54set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-11 14:48:54get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-11 14:51:45set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-11 14:51:45get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-11 14:56:01set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-11 14:56:01get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-11 15:00:29set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-11 15:00:29get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-11 15:03:40set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-11 15:03:40get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-11 15:06:49set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-11 15:06:49get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-11 15:09:44set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-11 15:09:44get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-11 15:13:14set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-11 15:13:14get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-11 15:16:16set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-11 15:16:16get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-11 15:19:21set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-11 15:19:21get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-11 15:22:21set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-11 15:22:21get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-11 15:25:45set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-11 15:25:45get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-11 15:30:19set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-11 15:30:19get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-11 15:33:30set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-11 15:33:30get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-11 15:36:13set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-11 15:36:13get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-11 15:40:27set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-11 15:40:27get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-11 15:43:25set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-11 15:43:25get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-11 15:46:47set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-11 15:46:47get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-11 15:49:46set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-11 15:49:46get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-11 15:54:11set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-11 15:54:11get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-11 15:58:05set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-11 15:58:05get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-11 16:02:03set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-11 16:02:03get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-11 16:05:02set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-11 16:05:02get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-11 16:08:37set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-11 16:08:37get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-11 16:13:05set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-11 16:13:05get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-11 16:17:03set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-11 16:17:03get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-11 16:21:25set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-11 16:21:25get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-11 16:25:52set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-11 16:25:52get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-11 16:28:39set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-11 16:28:39get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-11 16:31:20set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-11 16:31:20get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-11 16:35:52set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-11 16:35:52get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-11 16:39:27set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-11 16:39:27get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-11 16:42:26set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-11 16:42:26get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-11 16:45:24set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-11 16:45:24get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-11 16:48:12set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-11 16:48:12get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-11 16:51:45set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-11 16:51:45get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-11 16:54:51set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-11 16:54:51get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-11 16:59:09set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-11 16:59:09get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-11 19:41:32anly_webdriver error write_log() missing 1 required positional argument: 'content'
+2024-03-11 19:45:47set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-11 19:45:47get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-11 19:49:43set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-11 19:49:43get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-11 19:52:41set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-11 19:52:41get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-11 19:56:12set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-11 19:56:12get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-11 20:00:31set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-11 20:00:31get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-11 20:04:55set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-11 20:04:55get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-11 20:09:21set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-11 20:09:21get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-11 20:13:24set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-11 20:13:24get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-11 20:17:59set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-11 20:17:59get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-11 20:21:18set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-11 20:21:18get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-11 20:24:49set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-11 20:24:49get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-11 20:28:08set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-11 20:28:08get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-11 20:31:42set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-11 20:31:42get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-11 20:34:27set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-11 20:34:28get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-11 20:37:54set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-11 20:37:54get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-11 20:42:05set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-11 20:42:05get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-11 20:46:36set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-11 20:46:36get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-11 20:49:31set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-11 20:49:31get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-11 20:53:10set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-11 20:53:10get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-11 20:55:51set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-11 20:55:51get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-11 20:58:41set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-11 20:58:41get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-11 21:01:27set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-11 21:01:27get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-11 21:05:09set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-11 21:05:09get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-11 21:08:56set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-11 21:08:56get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-11 21:12:59set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-11 21:12:59get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-11 21:16:19set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-11 21:16:19get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-11 21:20:05set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-11 21:20:05get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-11 21:24:20set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-11 21:24:20get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-11 21:28:48set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-11 21:28:48get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-11 21:32:05set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-11 21:32:05get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-11 21:36:32set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-11 21:36:32get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-11 21:39:27set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-11 21:39:27get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-11 21:42:42set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-11 21:42:42get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-11 21:45:55set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-11 21:45:55get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-11 21:48:39set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-11 21:48:39get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-11 21:51:39set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-11 21:51:39get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-11 21:55:40set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-11 21:55:40get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-11 21:58:29set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-11 21:58:29get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-11 22:01:59set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-11 22:01:59get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-12 13:01:01anly_webdriver error write_log() missing 1 required positional argument: 'content'
+2024-03-12 13:04:39set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-12 13:04:39get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-12 13:08:09set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-12 13:08:09get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-12 13:11:35set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-12 13:11:35get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-12 13:14:57set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-12 13:14:57get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-12 13:19:21set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-12 13:19:21get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-12 13:22:18set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-12 13:22:18get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-12 13:25:52set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-12 13:25:52get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-12 13:28:46set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-12 13:28:46get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-12 13:33:14set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-12 13:33:14get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-12 13:37:50set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-12 13:37:50get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-12 13:41:18set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-12 13:41:18get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-12 13:45:52set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-12 13:45:52get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-12 13:49:50set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-12 13:49:50get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-12 13:52:59set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-12 13:52:59get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-12 13:55:48set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-12 13:55:48get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-12 13:59:13set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-12 13:59:13get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-12 14:03:53set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-12 14:03:53get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-12 14:08:12set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-12 14:08:12get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-12 14:12:20set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-12 14:12:20get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-12 14:15:26set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-12 14:15:26get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-12 14:18:50set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-12 14:18:50get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-12 14:22:35set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-12 14:22:35get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-12 14:26:54set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-12 14:26:54get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-12 14:30:49set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-12 14:30:49get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-12 14:33:47set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-12 14:33:47get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-12 14:38:16set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-12 14:38:16get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-12 14:41:05set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-12 14:41:05get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-12 14:44:27set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-12 14:44:27get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-12 14:47:14set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-12 14:47:14get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-13 13:43:22anly_webdriver error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-13 13:46:22set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-13 13:46:22get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-13 13:50:17set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-13 13:50:17get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-13 13:53:36set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-13 13:53:36get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-13 13:56:46set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-13 13:56:46get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-13 14:00:38set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-13 14:00:38get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-13 14:04:41set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-13 14:04:41get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-13 14:08:53set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-13 14:08:53get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-13 14:11:37set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-13 14:11:37get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-13 14:15:48set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-13 14:15:48get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-13 14:18:51set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-13 14:18:51get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-13 14:21:39set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-13 14:21:39get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-13 14:26:05set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-13 14:26:05get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-13 14:29:18set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-13 14:29:18get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-13 14:33:48set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-13 14:33:48get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-13 14:38:16set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-13 14:38:16get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-13 14:41:31set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-13 14:41:31get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-13 14:44:39set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-13 14:44:39get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-13 14:48:34set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-13 14:48:34get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-13 14:52:39set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-13 14:52:39get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-13 14:55:56set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-13 14:55:56get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-13 14:59:09set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-13 14:59:09get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-13 15:02:46set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-13 15:02:46get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-13 15:06:54set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-13 15:06:54get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-13 15:10:20set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-13 15:10:20get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-13 15:14:59set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-13 15:14:59get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-13 15:19:13set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-13 15:19:13get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-13 15:22:15set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-13 15:22:15get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-13 15:26:29set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-13 15:26:29get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-13 15:30:29set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-13 15:30:29get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-13 15:35:09set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-13 15:35:09get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-13 15:38:55set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-13 15:38:55get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-13 15:42:27set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-13 15:42:27get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-13 15:45:14set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-13 15:45:14get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-13 15:49:01set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-13 15:49:01get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-13 15:52:19set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-13 15:52:19get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-13 15:55:11set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-13 15:55:11get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-13 15:59:46set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-13 15:59:46get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-13 16:03:56set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-13 16:03:56get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-13 16:07:34set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-13 16:07:34get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-13 16:11:51set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-13 16:11:51get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-13 16:16:03set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-13 16:16:03get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-13 16:18:48set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-13 16:18:48get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-13 16:21:54set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-13 16:21:54get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-13 16:24:45set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-13 16:24:45get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-13 16:28:12set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-13 16:28:12get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-13 16:31:31set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-13 16:31:32get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-13 16:34:18set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-13 16:34:18get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-13 16:37:00set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-13 16:37:00get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-13 16:39:45set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-13 16:39:45get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-13 16:42:52set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-13 16:42:52get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-13 16:47:04set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-13 16:47:04get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-13 16:50:04set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-13 16:50:04get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-13 16:53:40set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-13 16:53:40get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-13 16:58:17set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-13 16:58:17get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-13 17:02:13set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-13 17:02:13get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-13 17:05:04set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-13 17:05:04get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-13 17:09:41set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-13 17:09:41get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-13 17:13:44set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-13 17:13:44get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-13 17:16:41set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-13 17:16:41get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-13 17:20:27set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-13 17:20:27get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-13 17:24:19set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-13 17:24:19get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-13 19:37:00anly_webdriver error write_log() missing 1 required positional argument: 'content'
+2024-03-13 19:40:26set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-13 19:40:26get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-13 19:43:38set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-13 19:43:38get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-13 19:48:15set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-13 19:48:15get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-13 19:51:50set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-13 19:51:50get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-13 19:54:56set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-13 19:54:56get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-13 19:57:55set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-13 19:57:55get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-13 20:00:55set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-13 20:00:55get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-13 20:05:17set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-13 20:05:17get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-13 20:08:40set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-13 20:08:40get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-13 20:12:14set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-13 20:12:14get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-13 20:15:48set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-13 20:15:48get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-13 20:19:05set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-13 20:19:05get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-13 20:22:13set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-13 20:22:13get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-13 20:25:29set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-13 20:25:29get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-13 20:29:13set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-13 20:29:13get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-13 20:32:32set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-13 20:32:32get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-13 20:35:46set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-13 20:35:46get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-13 20:40:07set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-13 20:40:07get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-13 20:43:35set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-13 20:43:35get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-13 20:46:30set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-13 20:46:30get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-13 20:50:16set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-13 20:50:16get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-13 20:54:18set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-13 20:54:18get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-13 20:58:24set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-13 20:58:24get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-13 21:01:44set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-13 21:01:44get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-13 21:05:08set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-13 21:05:08get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-13 21:07:55set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-13 21:07:55get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-13 21:11:56set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-13 21:11:56get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-13 21:14:46set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-13 21:14:46get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-13 21:18:19set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-13 21:18:19get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-13 21:22:49set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-13 21:22:49get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-13 21:27:13set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-13 21:27:13get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-13 21:31:47set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-13 21:31:47get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-13 21:35:19set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-13 21:35:19get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-13 21:39:20set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-13 21:39:20get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-13 21:43:37set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-13 21:43:37get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-13 21:47:39set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-13 21:47:39get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-13 21:51:54set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-13 21:51:54get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-13 21:54:37set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-13 21:54:37get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-13 21:58:06set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-13 21:58:06get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-13 22:01:58set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-13 22:01:58get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-14 14:05:12anly_webdriver error 'NoneType' object has no attribute 'replace'
+2024-03-14 14:09:51set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-14 14:09:51get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-14 14:13:55set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-14 14:13:55get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-14 14:17:48set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-14 14:17:48get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-14 15:23:43get total page error list index out of range
+2024-03-14 15:27:52get total page error list index out of range
+2024-03-14 15:32:26get total page error list index out of range
+2024-03-14 15:36:26get total page error list index out of range
+2024-03-14 15:40:26get total page error list index out of range
+2024-03-14 15:43:14get total page error list index out of range
+2024-03-14 15:47:47get total page error list index out of range
+2024-03-14 15:51:17get total page error list index out of range
+2024-03-14 15:54:58get total page error list index out of range
+2024-03-14 15:57:53get total page error list index out of range
+2024-03-14 16:01:26get total page error list index out of range
+2024-03-14 16:05:37get total page error list index out of range
+2024-03-14 16:10:16get total page error list index out of range
+2024-03-14 16:14:14get total page error list index out of range
+2024-03-14 16:17:37get total page error list index out of range
+2024-03-14 16:20:43get total page error list index out of range
+2024-03-14 16:24:22get total page error list index out of range
+2024-03-14 16:28:15get total page error list index out of range
+2024-03-14 16:32:52get total page error list index out of range
+2024-03-14 16:36:39get total page error list index out of range
+2024-03-14 16:41:10get total page error list index out of range
+2024-03-14 16:45:53get total page error list index out of range
+2024-03-14 16:49:18get total page error list index out of range
+2024-03-14 16:52:27get total page error list index out of range
+2024-03-14 16:55:53get total page error list index out of range
+2024-03-14 17:00:15get total page error list index out of range
+2024-03-14 17:03:18get total page error list index out of range
+2024-03-14 17:06:43get total page error list index out of range
+2024-03-14 17:11:05get total page error list index out of range
+2024-03-14 17:15:19get total page error list index out of range
+2024-03-14 17:18:12get total page error list index out of range
+2024-03-14 17:22:33get total page error list index out of range
+2024-03-14 17:27:09get total page error list index out of range
+2024-03-14 17:31:03get total page error list index out of range
+2024-03-14 17:34:27get total page error list index out of range
+2024-03-14 17:38:05get total page error list index out of range
+2024-03-14 17:42:08get total page error list index out of range
+2024-03-14 17:45:59get total page error list index out of range
+2024-03-14 17:48:53set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-14 17:48:53get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-14 17:52:29set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-14 17:52:29get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-14 17:56:03set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-14 17:56:03get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-14 18:00:31set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-14 18:00:31get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-14 18:03:23set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-14 18:03:23get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-14 18:07:00set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-14 18:07:00get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-14 18:10:59set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-14 18:10:59get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-14 18:15:31set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-14 18:15:31get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-14 18:18:43set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-14 18:18:43get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-14 18:21:45set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-14 18:21:45get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-14 18:24:30set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-14 18:24:30get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-14 18:28:42set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-14 18:28:42get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-14 18:31:29set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-14 18:31:29get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-14 18:34:26set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-14 18:34:26get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-14 18:37:28set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-14 18:37:28get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-14 18:40:11set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-14 18:40:11get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-14 18:44:27set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-14 18:44:27get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-14 18:48:10set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-14 18:48:10get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-14 18:52:33set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-14 18:52:33get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-14 18:57:03set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-14 18:57:03get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-14 18:59:47set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-14 18:59:47get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-14 19:02:35set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-14 19:02:35get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-14 19:06:37set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-14 19:06:37get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-14 19:10:16set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-14 19:10:16get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-14 19:14:26set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-14 19:14:26get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-14 19:18:19set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-14 19:18:19get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-14 19:21:03set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-14 19:21:03get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-14 19:24:31set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-14 19:24:31get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-14 19:27:27set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-14 19:27:27get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-14 19:31:20set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-14 19:31:20get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-14 19:34:08set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-14 19:34:08get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-14 19:37:58set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-14 19:37:58get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-14 19:41:32set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-14 19:41:32get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-14 19:44:52set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-14 19:44:52get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-14 19:47:33set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-14 19:47:33get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-14 19:50:20set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-14 19:50:20get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-14 19:53:41set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-14 19:53:41get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-14 19:56:42set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-14 19:56:42get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-14 19:59:57set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-14 19:59:57get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-14 20:03:46set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-14 20:03:46get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-14 20:08:14set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-14 20:08:14get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-14 20:11:56set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-14 20:11:56get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-14 20:15:23set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-14 20:15:23get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-14 20:18:42set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-14 20:18:42get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-14 20:23:15set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-14 20:23:15get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-14 20:27:08set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-14 20:27:08get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-14 20:29:56set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-14 20:29:56get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-14 20:33:46set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-14 20:33:46get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-14 20:37:30set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-14 20:37:30get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-14 20:42:07set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-14 20:42:07get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-14 20:44:55set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-14 20:44:55get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-14 20:48:04set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-14 20:48:04get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-14 20:51:26set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-14 20:51:26get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-14 20:55:52set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-14 20:55:52get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-15 12:49:06get total page error list index out of range
+2024-03-15 12:53:02get total page error list index out of range
+2024-03-15 12:55:57get total page error list index out of range
+2024-03-15 13:00:26get total page error list index out of range
+2024-03-15 13:03:45get total page error list index out of range
+2024-03-15 13:08:09get total page error list index out of range
+2024-03-15 13:11:38get total page error list index out of range
+2024-03-15 13:16:15get total page error list index out of range
+2024-03-15 13:19:21get total page error list index out of range
+2024-03-15 13:23:47get total page error list index out of range
+2024-03-15 13:26:31get total page error list index out of range
+2024-03-15 13:29:43get total page error list index out of range
+2024-03-15 13:32:50get total page error list index out of range
+2024-03-15 13:37:07get total page error list index out of range
+2024-03-15 13:41:36get total page error list index out of range
+2024-03-15 13:45:04get total page error list index out of range
+2024-03-15 13:49:39set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-15 13:49:40get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-15 13:52:29set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-15 13:52:29get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-15 13:56:53set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-15 13:56:53get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-15 13:59:37set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-15 13:59:37get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-15 14:03:02set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-15 14:03:02get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-15 14:07:23set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-15 14:07:23get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-15 14:11:22set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-15 14:11:22get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-15 14:14:57set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-15 14:14:57get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-15 14:19:15set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-15 14:19:15get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-15 14:22:19set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-15 14:22:19get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-15 14:26:41set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-15 14:26:41get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-15 14:29:35set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-15 14:29:35get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-15 14:34:00set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-15 14:34:00get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-15 14:37:12set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-15 14:37:12get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-15 14:40:53set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-15 14:40:53get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-15 14:44:33set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-15 14:44:33get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-15 14:48:07set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-15 14:48:07get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-15 14:52:34set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-15 14:52:34get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-15 14:56:44set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-15 14:56:44get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-15 15:01:24set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-15 15:01:24get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-15 15:05:43set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-15 15:05:43get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-15 15:09:02set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-15 15:09:02get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-15 15:13:04set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-15 15:13:04get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-15 15:16:39set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-15 15:16:39get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-15 15:20:09set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-15 15:20:09get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-15 15:24:40set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-15 15:24:40get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-15 15:27:58set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-15 15:27:58get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-15 15:32:16set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-15 15:32:16get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-15 15:36:19set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-15 15:36:19get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-15 15:40:28set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-15 15:40:28get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-15 15:44:32set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-15 15:44:32get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-15 15:49:08set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-15 15:49:08get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-15 15:52:05set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-15 15:52:06get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-15 15:56:13set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-15 15:56:13get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-15 15:59:53set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-15 15:59:53get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-15 16:02:48set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-15 16:02:49get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-15 16:06:19set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-15 16:06:19get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-15 16:09:18set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-15 16:09:18get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-15 16:12:49set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-15 16:12:49get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-15 16:16:58set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-15 16:16:58get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-15 16:21:27set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-15 16:21:27get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-15 16:25:22set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-15 16:25:22get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-15 16:28:32set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-15 16:28:32get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-15 16:33:09set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-15 16:33:09get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-15 16:36:47set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-15 16:36:47get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-15 16:41:13set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-15 16:41:13get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-15 16:44:25set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-15 16:44:25get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-15 16:47:27set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-15 16:47:27get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-15 16:52:00set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-15 16:52:00get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-15 16:55:37set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-15 16:55:37get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-15 16:58:38set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-15 16:58:38get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-15 17:03:08set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-15 17:03:08get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-15 17:15:43get total page error list index out of range
+2024-03-15 17:20:14get total page error list index out of range
+2024-03-15 17:24:23get total page error list index out of range
+2024-03-15 17:28:39get total page error list index out of range
+2024-03-15 17:32:06get total page error list index out of range
+2024-03-15 17:34:52get total page error list index out of range
+2024-03-15 17:38:37get total page error list index out of range
+2024-03-15 17:42:35get total page error list index out of range
+2024-03-15 17:46:48get total page error list index out of range
+2024-03-15 17:50:30get total page error list index out of range
+2024-03-15 17:54:45get total page error list index out of range
+2024-03-15 17:58:36get total page error list index out of range
+2024-03-15 18:01:47get total page error list index out of range
+2024-03-15 18:04:39get total page error list index out of range
+2024-03-15 18:07:38get total page error list index out of range
+2024-03-15 18:12:07get total page error list index out of range
+2024-03-15 18:15:32get total page error list index out of range
+2024-03-15 18:19:11get total page error list index out of range
+2024-03-15 18:22:51get total page error list index out of range
+2024-03-15 18:26:40get total page error list index out of range
+2024-03-15 18:30:49get total page error list index out of range
+2024-03-17 10:31:25get total page error list index out of range
+2024-03-17 11:26:44get total page error list index out of range
+2024-03-17 11:30:30set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-17 11:30:30get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-17 11:34:18set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-17 11:34:18get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-17 11:37:26set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-17 11:37:26get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-17 11:41:43set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-17 11:41:43get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-17 11:46:18set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-17 11:46:18get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-17 11:50:42set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-17 11:50:42get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-17 11:55:14set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-17 11:55:14get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-17 11:59:19set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-17 11:59:19get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-17 12:02:10set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-17 12:02:10get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-17 12:05:08set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-17 12:05:08get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-17 12:08:52set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-17 12:08:52get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-17 12:11:39set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-17 12:11:39get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-17 12:15:24set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-17 12:15:24get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-17 12:19:06set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-17 12:19:06get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-17 12:23:06set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-17 12:23:06get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-17 12:27:24set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-17 12:27:24get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-17 12:31:00set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-17 12:31:00get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-17 12:35:39set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-17 12:35:39get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-17 12:40:01set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-17 12:40:01get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-17 12:43:00set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-17 12:43:00get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-17 12:46:55set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-17 12:46:55get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-17 12:50:38set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-17 12:50:38get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-17 12:54:00set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-17 12:54:00get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-17 12:57:27set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-17 12:57:27get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-17 13:01:38set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-17 13:01:38get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-17 13:05:55set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-17 13:05:55get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-17 13:09:50set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-17 13:09:50get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-17 13:14:07set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-17 13:14:07get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-17 13:17:30set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-17 13:17:30get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-17 13:20:29set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-17 13:20:29get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-17 13:24:52set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-17 13:24:52get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-17 13:29:25set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-17 13:29:25get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-17 13:33:16set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-17 13:33:16get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-17 13:36:36set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-17 13:36:36get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-17 13:40:18set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-17 13:40:18get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-17 13:43:07set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-17 13:43:07get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-17 13:47:20set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-17 13:47:20get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-17 13:51:52set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-17 13:51:52get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-17 13:55:17set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-17 13:55:17get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-17 13:58:13set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-17 13:58:13get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-17 14:01:58set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-17 14:01:58get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-17 14:04:58set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-17 14:04:58get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-17 14:09:04set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-17 14:09:04get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-17 14:13:38set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-17 14:13:38get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-17 14:17:45set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-17 14:17:45get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-17 14:22:05set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-17 14:22:05get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-17 14:25:21set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-17 14:25:21get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-17 14:28:55set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-17 14:28:55get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-17 14:31:48set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-17 14:31:48get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-17 14:35:24set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-17 14:35:24get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-17 14:39:49set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-17 14:39:49get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-17 14:43:18set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-17 14:43:18get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-18 10:12:38get total page error list index out of range
+2024-03-18 10:16:10get total page error list index out of range
+2024-03-18 10:19:08get total page error list index out of range
+2024-03-18 10:21:55get total page error list index out of range
+2024-03-18 10:24:42get total page error list index out of range
+2024-03-18 10:27:35get total page error list index out of range
+2024-03-18 10:31:53get total page error list index out of range
+2024-03-18 10:34:39get total page error list index out of range
+2024-03-18 10:43:14get total page error list index out of range
+2024-03-18 10:47:19get total page error list index out of range
+2024-03-18 10:50:54get total page error list index out of range
+2024-03-18 10:55:07get total page error list index out of range
+2024-03-18 10:58:18get total page error list index out of range
+2024-03-18 11:01:54get total page error list index out of range
+2024-03-18 11:04:51get total page error list index out of range
+2024-03-18 11:07:42get total page error list index out of range
+2024-03-18 11:10:53get total page error list index out of range
+2024-03-18 11:15:34get total page error list index out of range
+2024-03-18 11:18:55get total page error list index out of range
+2024-03-18 11:22:45get total page error list index out of range
+2024-03-18 11:25:41get total page error list index out of range
+2024-03-18 11:29:18get total page error list index out of range
+2024-03-18 11:33:57get total page error list index out of range
+2024-03-18 11:37:01get total page error list index out of range
+2024-03-18 11:40:16get total page error list index out of range
+2024-03-18 11:43:13get total page error list index out of range
+2024-03-18 11:47:43get total page error list index out of range
+2024-03-18 11:51:53get total page error list index out of range
+2024-03-18 11:56:22get total page error list index out of range
+2024-03-18 12:00:01get total page error list index out of range
+2024-03-18 12:03:17get total page error list index out of range
+2024-03-18 12:06:31get total page error list index out of range
+2024-03-18 12:11:10get total page error list index out of range
+2024-03-18 12:14:35get total page error list index out of range
+2024-03-18 12:17:43get total page error list index out of range
+2024-03-18 12:20:34get total page error list index out of range
+2024-03-18 12:25:10get total page error list index out of range
+2024-03-18 12:29:12get total page error list index out of range
+2024-03-18 12:33:11get total page error list index out of range
+2024-03-18 12:36:33get total page error list index out of range
+2024-03-18 12:40:37get total page error list index out of range
+2024-03-18 12:43:55get total page error list index out of range
+2024-03-18 13:38:44anly_webdriver error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-18 13:42:28set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-18 13:42:28get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-18 13:45:38set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-18 13:45:38get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-18 13:49:05set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-18 13:49:05get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-18 13:53:24set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-18 13:53:24get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-18 13:57:19set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-18 13:57:19get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-18 14:00:13set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-18 14:00:13get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-18 14:03:55set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-18 14:03:55get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-21 17:37:41click search_button error list index out of range
+2024-03-21 17:41:59get total page error list index out of range
+2024-03-21 17:42:02click search_button error list index out of range
+2024-03-21 17:45:05get total page error list index out of range
+2024-03-21 17:45:08click search_button error list index out of range
+2024-03-21 17:48:07get total page error list index out of range
+2024-03-21 17:48:10click search_button error list index out of range
+2024-03-21 17:51:35get total page error list index out of range
+2024-03-21 17:51:38click search_button error list index out of range
+2024-03-21 17:56:08get total page error list index out of range
+2024-03-21 17:56:11click search_button error list index out of range
+2024-03-21 18:00:29get total page error list index out of range
+2024-03-21 18:00:32click search_button error list index out of range
+2024-03-21 18:05:09get total page error list index out of range
+2024-03-21 18:05:12click search_button error list index out of range
+2024-03-21 18:07:55get total page error list index out of range
+2024-03-21 18:07:58click search_button error list index out of range
+2024-03-21 18:12:18get total page error list index out of range
+2024-03-21 18:12:20click search_button error list index out of range
+2024-03-21 18:16:56get total page error list index out of range
+2024-03-21 18:16:59click search_button error list index out of range
+2024-03-21 18:20:35get total page error list index out of range
+2024-03-21 18:20:38click search_button error list index out of range
+2024-03-21 18:31:33click search_button error list index out of range
+2024-03-21 18:35:33get total page error list index out of range
+2024-03-21 18:35:35click search_button error list index out of range
+2024-03-21 18:38:28get total page error list index out of range
+2024-03-21 18:48:51click search_button error list index out of range
+2024-03-21 19:53:01set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-21 19:53:01get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-21 19:53:01set input content error item_index is: 0, new content is :XC7VX1140T-2FLG1928I Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-21 19:53:03click search_button error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-21 19:56:42set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-21 19:56:42get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-21 19:56:42set input content error item_index is: 0, new content is :MSP430F5437AIPN Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-21 19:56:44click search_button error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-21 20:00:20set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-21 20:00:20get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-21 20:00:20set input content error item_index is: 0, new content is :TLV70018DDCR Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-21 20:00:22click search_button error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-21 20:03:54set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-21 20:03:54get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-21 20:03:54set input content error item_index is: 0, new content is :SN65HVD33DR Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-21 20:03:56click search_button error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-21 20:07:51set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-21 20:07:51get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-21 20:07:51set input content error item_index is: 0, new content is :TMS320F28027PTT Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-21 20:07:53click search_button error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-21 20:11:13set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-21 20:11:13get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-21 20:11:13set input content error item_index is: 0, new content is :SDINBDG4-8G Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-21 20:11:15click search_button error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-21 20:14:01set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-21 20:14:01get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-21 20:14:01set input content error item_index is: 0, new content is :SN74HC374N Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-21 20:14:03click search_button error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-21 20:18:29set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-21 20:18:29get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-21 20:18:29set input content error item_index is: 0, new content is :RT9193-33GB Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-21 20:18:31click search_button error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-21 20:23:07set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-21 20:23:07get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-21 20:23:07set input content error item_index is: 0, new content is :SN65MLVD206DR Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-21 20:23:09click search_button error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-21 20:27:48set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-21 20:27:48get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-21 20:27:48set input content error item_index is: 0, new content is :OPA277U Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-21 20:27:50click search_button error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-21 20:30:53set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-21 20:30:53get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-21 20:30:53set input content error item_index is: 0, new content is :MT40A512M16TB-062E:R Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-21 20:30:55click search_button error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-21 20:35:14set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-21 20:35:14get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-21 20:35:14set input content error item_index is: 0, new content is :LM66100DCKR Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-21 20:35:16click search_button error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-21 20:39:00set_page_count error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-21 20:39:00get total page error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-22 10:07:41click search_button error list index out of range
+2024-03-22 10:10:53get total page error list index out of range
+2024-03-22 10:10:56click search_button error list index out of range
+2024-03-22 10:14:00get total page error list index out of range
+2024-03-22 10:14:03click search_button error list index out of range
+2024-03-22 10:17:27get total page error list index out of range

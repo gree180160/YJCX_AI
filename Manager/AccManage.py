@@ -4,7 +4,7 @@ chrome_path = '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome'
 firefox_path = '/Applications/Firefox.app/Contents/MacOS/firefox'
 chromedriver_path = ''
 
-IC_stock = {'n':'17318034819', 'p':'SZyjcx12345'}
+IC_stock = {'n':'15976988260', 'p':'zhiyu0428'}
 IC_hot = {'n':'17873685572', 'p':'Kyent2111'}
 HQ_hot = {'n':'13162796680', 'p':'Zhiyu0324'}
 Bom = {'c':"深圳市元极创新电子有限公司1", 'n':"A_CG01", 'p':"yjcx123"}

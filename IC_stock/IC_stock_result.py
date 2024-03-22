@@ -10,12 +10,8 @@ import time
 from WRTools import PathHelp, ExcelHelp, MySqlHelp_recommanded
 from Manager import TaskManager
 
-cate_source_file = PathHelp.get_file_path(None, f'{TaskManager.Taskmanger().task_name}.xlsx')
-ICStock_file_arr = ["/Users/liuhe/Desktop/progress/TVicor/15H/11/IC_stock.xlsx",
-                    "/Users/liuhe/Desktop/progress/TVicor/15H/sz/IC_stock.xlsx",
-                    "/Users/liuhe/Desktop/progress/TVicor/15H/04/IC_stock.xlsx",
-                    PathHelp.get_file_path('TVicor15H', 'IC_stock.xlsx')]
-IC_source_file = PathHelp.get_file_path('TVicor15H', 'IC_stock.xlsx')
+# IC_source_file = PathHelp.get_file_path('TVicor15H', 'IC_stock.xlsx')
+cate_source_file = PathHelp.get_file_path(None, 'Tkuibenshuaimai.xlsx') #PathHelp.get_file_path(None, '/Users/liuhe/Downloads/TTIMilitary.xlsx')
 result_save_file = cate_source_file
 
 
@@ -36,10 +32,9 @@ def IC_stock_sum():
                 isICCP = str(row_content[4]) == "1"
                 isSSCP = str(row_content[5]) == "1"
                 isSpotRanking = str(row_content[6]) == "1"
-                isHotSell = str(row_content[7]) == "1"
-                isYouXian = str(row_content[8]) == "1"
                 stock_num = int(row_content[11])
-                if isSSCP or isICCP or isSpotRanking or isHotSell or isYouXian:
+                # if isSSCP or isICCP or isSpotRanking or isHotSell or isYouXian:
+                if isSSCP or isICCP or isSpotRanking:
                     valid_supplier_sum += 1
                     valid_stock_sum += stock_num
         result.append([ppn_str, manufactures[index], valid_supplier_sum, int(valid_stock_sum)])
@@ -71,9 +66,5 @@ def addIC_info():
 
 
 if __name__ == "__main__":
-    # combine_result(source_files=ICStock_file_arr, aim_file=IC_source_file)
     IC_stock_sum()
     print('over')
-
-
-

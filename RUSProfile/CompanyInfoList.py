@@ -13,16 +13,16 @@ from WRTools import ExcelHelp, WaitHelp, PathHelp, MySqlHelp_recommanded, LogHel
 
 ssl._create_default_https_context = ssl._create_unverified_context
 
-# sourceFile_dic = {'fileName': PathHelp.get_file_path(None, f'TNewBrand.xlsx'),
-#                   'sourceSheet': 'company',
-#                   'colIndex': 1,
-#                   'startIndex': 595,  #Акционерное Общество Золотые Луга
-#                   'endIndex': 1313}
-sourceFile_dic = {'fileName': PathHelp.get_file_path(None, f'TICHot_202401.xlsx'),
-                  'sourceSheet': 'buyer',
+sourceFile_dic = {'fileName': PathHelp.get_file_path(None, f'TNewBrand.xlsx'),
+                  'sourceSheet': 'company',
                   'colIndex': 1,
-                  'startIndex': 0,  #Акционерное Общество Золотые Луга
-                  'endIndex': 142}
+                  'startIndex': 826,  #Акционерное Общество Золотые Луга
+                  'endIndex': 1313}
+# sourceFile_dic = {'fileName': PathHelp.get_file_path(None, f'TICHot_202401.xlsx'),
+#                   'sourceSheet': 'buyer',
+#                   'colIndex': 1,
+#                   'startIndex': 138,  #Акционерное Общество Золотые Луга
+#                   'endIndex': 142}
 
 accouts_arr = [AccManage.rusprofile['n'], AccManage.rusprofile['p']]
 default_url = 'https://www.rusprofile.ru/search-advanced'
@@ -145,11 +145,11 @@ def goto_detail(company_index, company_name, profile_id):
             goto_detail(company_index, company_name, profile_id)
     except Exception as e:
         LogHelper.write_log(log_file, f'{company_name} goto_detail error {e}')
-    # task_name = 'newbrand_202401'
-    task_name = 'TICHot_202401'
+    task_name = 'newbrand_202401'
+    # task_name = 'TICHot_202401'
     result = [company_name, profile_id, full_name, inn , activity , rigister_date , industry_rank , adress , phone , email , website , revenue , profit , cost , task_name]
     # ExcelHelp.add_arr_to_sheet(sourceFile_dic['fileName'], 'rusprofile', [result])
-    MySqlHelp_recommanded.DBRecommandChip().rusprofile_write( [result])
+    MySqlHelp_recommanded.DBRecommandChip().rusprofile_write([result])
     # 关闭当前的页面
     new_tab_driver.close()
     # 切换回列表页面

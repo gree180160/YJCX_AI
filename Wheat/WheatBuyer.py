@@ -10,7 +10,7 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.common.action_chains import ActionChains
 import undetected_chromedriver as uc
 import ssl
-from Manager import AccManage, TaskManager
+from Manager import AccManage
 from WRTools import IPHelper, UserAgentHelper, ExcelHelp, WaitHelp, PathHelp, LogHelper, MySqlHelp_recommanded
 import time
 
@@ -23,12 +23,12 @@ ssl._create_default_https_context = ssl._create_unverified_context
 #                   'colIndex': 1,
 #                   'startIndex': 793,
 #                   'endIndex': 1000}
-sourceFile_dic = {'fileName': PathHelp.get_file_path(None, 'TICHot_202401.xlsx'),
+sourceFile_dic = {'fileName': PathHelp.get_file_path(None, 'TICHot_202402.xlsx'),
                   'sourceSheet': 'ppn',
                   'colIndex': 1,
-                  'startIndex': 92,
-                  'endIndex': 92}
-result_save_file = PathHelp.get_file_path(None, 'TICHot_202401.xlsx')
+                  'startIndex': 0,
+                  'endIndex': 30}
+result_save_file = PathHelp.get_file_path(None, 'TICHot_202402.xlsx')
 result_save_sheet = 'Wheat_buyer'
 logFile = PathHelp.get_file_path('Wheat', 'Wheat_log.txt')
 
@@ -80,19 +80,19 @@ def loginAction(aim_url):
 def set_filter(start_date:str, end_date:str):
     driver.get(default_url)
     WaitHelp.waitfor(True, False)
-    #submit form
+    # submit form
     card_one = driver.find_elements(By.CSS_SELECTOR, 'div.ant-card-body')[0]
     sub_form = card_one.find_elements(By.CSS_SELECTOR, 'div.ant-space-item')[2]
     sub_form.click()
     WaitHelp.waitfor(False, False)
-    #set filters
+    # set filters
     # contry
-    # select_contry = driver.find_element(By.CSS_SELECTOR, '#resourceCountry')
-    # select_contry.click()
-    # time.sleep(3.0)
-    # russian_div = driver.find_elements(By.CSS_SELECTOR, 'div.ant-col.ant-col-lg-12.ant-col-xl-8.ant-col-xxl-6')[2]
-    # button = russian_div.find_element(By.TAG_NAME, 'button')
-    # button.click()
+    select_contry = driver.find_elements(By.CSS_SELECTOR, 'span.anticon.anticon-down')[0]
+    select_contry.click()
+    time.sleep(3.0)
+    alert_area = driver.find_elements(By.CSS_SELECTOR, 'div.ant-modal-body')[0]
+    ru_button = alert_area.find_elements(By.XPATH, "//button[@title='俄罗斯']")[0]
+    ru_button.click()
     # from date
     # clear default date
     ac = ActionChains(driver)
@@ -117,12 +117,12 @@ def set_filter(start_date:str, end_date:str):
 # search one ppn
 def goToPPN(ppn: str, manu: str):
     try:
-        input_card_content(1, ppn)
-        if manu and manu.__len__() > 0:
-            input_card_content(4, manu)
+        input_card_content(0, ppn)
+        # if manu and manu.__len__() > 0:
+        #     input_card_content(12, manu)
         time.sleep(2.0)
         #ant-btn ant-btn-primary , 保持搜索按钮在关键词下面
-        search_button = driver.find_elements(By.CSS_SELECTOR, 'button.ant-btn.ant-btn-primary')[2]
+        search_button = driver.find_elements(By.CSS_SELECTOR, 'button.ant-btn.ant-btn-primary')[1]
         search_button.click()
     except Exception as e:
         LogHelper.write_log(logFile, f'click search_button error {e}')
@@ -130,7 +130,7 @@ def goToPPN(ppn: str, manu: str):
 
 # 在input 中delete old content ,input new content
 # item: [提单号, 产品关键词, 产品关键词HS, 采购商名称, 供应商名称]
-def input_card_content(item_index: int , new_content: str):
+def input_card_content(item_index: int, new_content: str):
     try:
         filter_form_area = driver.find_element(By.CSS_SELECTOR, value='form.ant-form.ant-form-vertical')
         input_item = filter_form_area.find_elements(By.CSS_SELECTOR, value='input.ant-input')[item_index]
@@ -241,7 +241,7 @@ def get_rowInfo(cate_name, row):
     td_list = row.find_elements(By.TAG_NAME, 'td')
     buyer = td_list[1].text.replace('/', '%2F')
     buyer = buyer.replace('\x1e', ' (tim)')
-    task_name = "TICHot_202401"
+    task_name = "TICHot_202402"
     result = [cate_name, td_list[0].text, buyer, td_list[2].text, td_list[3].text, td_list[4].text, td_list[5].text, str(current_page), task_name]
     return result
 
@@ -270,5 +270,5 @@ def main():
 if __name__ == "__main__":
     loginAction(default_url)
     driver.get(default_url)
-    set_filter(start_date='2023-03-05', end_date='2024-03-05')
+    set_filter(start_date='2023-03-21', end_date='2024-03-21')
     main()

@@ -24,7 +24,7 @@ ssl._create_default_https_context = ssl._create_unverified_context
 sourceFile_dic = {'fileName': PathHelp.get_file_path(None, 'TICHot_202401.xlsx'),
                   'sourceSheet': 'buyer',
                   'colIndex': 1,
-                  'startIndex': 12, # page 8， buyer_index is: 0
+                  'startIndex': 134, # page5， buyer_index is:
                   'endIndex': 143}
 
 result_save_file = PathHelp.get_file_path(None, 'TICHot_202401.xlsx')
@@ -116,24 +116,15 @@ def set_filter(start_date:str, end_date:str):
 # search one ppn
 def goToBuyer(buyer: str):
     try:
-        try:
-            clear_button = driver.find_elements(By.CSS_SELECTOR, "span.ant-input-clear-icon")[4]
-            clear_button.click()
-            time.sleep(2.0)
-        except Exception as e:
-            print(f'can not click clear button {e}')
+        input_area_buyer = driver.find_elements(By.CSS_SELECTOR, value='input.ant-input')[5]
+        input_area_buyer.clear()
+        input_area_buyer.send_keys('')
         try:
             clear_button = driver.find_elements(By.CSS_SELECTOR, "span.ant-input-clear-icon")[5]
             clear_button.click()
             time.sleep(2.0)
         except Exception as e:
-            print(f'can not click clear button {e}')
-        try:
-            clear_button = driver.find_elements(By.CSS_SELECTOR, "span.ant-input-clear-icon")[6]
-            clear_button.click()
-            time.sleep(2.0)
-        except Exception as e:
-            print(f'can not click clear button {e}')
+            print(f'can not click clear button 5')
         input_area_buyer = driver.find_elements(By.CSS_SELECTOR, value='input.ant-input')[5]
         input_area_buyer.clear()
         input_area_buyer.send_keys(buyer)
@@ -289,5 +280,5 @@ def main():
 if __name__ == "__main__":
     loginAction(default_url)
     driver.get(default_url)
-    set_filter(start_date='2023-03-05', end_date='2024-03-05')
+    set_filter(start_date='2023-03-18', end_date='2024-03-18')
     main()

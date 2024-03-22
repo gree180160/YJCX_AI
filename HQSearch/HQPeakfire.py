@@ -64,29 +64,7 @@ def getSearchInfo(cate_name,manu, isWeek):
             items = week_baseInfo.find_elements(By.CSS_SELECTOR, 'li.sum-item')
             try:
                 data0 = items[0].find_element(By.CSS_SELECTOR, 'div.sum-data')
-                w_search_current = data0.find_elements(By.TAG_NAME, 'p')[0].text.replace('本周：', '')
-                w_search_hb = data0.find_elements(By.TAG_NAME, 'span')[0].text
-                w_search_index = data0.find_elements(By.TAG_NAME, 'span')[1].text
 
-                data1 = items[1].find_element(By.CSS_SELECTOR, 'div.sum-data')
-                w_quote_current = data1.find_elements(By.TAG_NAME, 'span')[0].text
-                w_quote_brand = data1.find_elements(By.TAG_NAME, 'span')[1].text
-                w_quote_average = data1.find_elements(By.TAG_NAME, 'span')[2].text
-
-                data2 = items[2].find_element(By.CSS_SELECTOR, 'div.sum-data')
-                w_bid_current = data2.find_elements(By.TAG_NAME, 'span')[0].text
-                w_bid_hb = data2.find_elements(By.TAG_NAME, 'span')[0].text
-                w_bid_average = data2.find_elements(By.TAG_NAME, 'span')[0].text
-
-                data3 = items[3].find_element(By.CSS_SELECTOR, 'div.sum-data')
-                w_supplier_current = data3.find_elements(By.TAG_NAME, 'p')[0].text.replace('本周：', '')
-                w_supplier_hb = data3.find_elements(By.TAG_NAME, 'span')[0].text
-                w_supplier_total = data3.find_elements(By.TAG_NAME, 'span')[1].text
-
-                data4 = items[4].find_element(By.CSS_SELECTOR, 'div.sum-data')
-                w_stock_current = data3.find_elements(By.TAG_NAME, 'p')[0].text.replace('本周：', '')
-                w_stock_hb = data3.find_elements(By.TAG_NAME, 'span')[0].text
-                w_stock_total = data3.find_elements(By.TAG_NAME, 'span')[1].text
             except:
                 print('week base info error')
 
@@ -95,21 +73,7 @@ def getSearchInfo(cate_name,manu, isWeek):
             print('week info error')
 
 
-    # w_search_current
-    # w_search_hb
-    # w_search_index
-    # w_quote_current
-    # w_quote_brand
-    # w_quote_average
-    # w_bid_current
-    # w_bid_hb
-    # w_bid_average
-    # w_supplier_current
-    # w_supplier_hb
-    # w_supplier_total
-    # w_stock_current
-    # w_stock_hb
-    # w_stock_total
+
     heat
     stock
     price

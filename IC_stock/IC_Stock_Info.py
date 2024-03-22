@@ -58,19 +58,19 @@ class IC_Stock_Info:
     # *************for not holt **************
     def shouldSave_holt(self):
         result = False
-        if self.isICCP or self.isSSCP or self.isYouXian or self.isHotSell or self.isSpotRanking:
+        if self.isICCP or self.isSSCP or self.isYouXian or self.isSpotRanking:
             result = True
         return result
 
     def is_valid_supplier_holt(self):
-        if self.isICCP or self.isSSCP or self.isYouXian or self.isHotSell or self.isSpotRanking:
+        if self.isICCP or self.isSSCP or self.isYouXian or self.isSpotRanking:
             return True
         else:
             return False
 
     def get_valid_stock_num_holt(self):
         result = 0
-        if self.isICCP or self.isSSCP or self.isYouXian or self.isHotSell or self.isSpotRanking:
+        if self.isICCP or self.isSSCP or self.isYouXian or self.isSpotRanking:   #or self.isHotSell
             result = int(self.stock_num)
         return result
 

@@ -10,12 +10,11 @@ from WRTools import ExcelHelp, WaitHelp, PathHelp, EmailHelper, MySqlHelp_recomm
 
 
 ssl._create_default_https_context = ssl._create_unverified_context
-# arr is: [['OMRON', '36167']]
-sourceFile_dic = {'fileName': PathHelp.get_file_path(None, 'TTIMilitary.xlsx'),
+sourceFile_dic = {'fileName': PathHelp.get_file_path(None, 'TLK240320.xlsx'),
                   'sourceSheet': 'ppn',
                   'colIndex': 1,
-                  'startIndex': 103,
-                  'endIndex': 120}
+                  'startIndex': 0,
+                  'endIndex': 40}
 
 total_page = 1
 current_page = 1
@@ -93,7 +92,10 @@ def get_stock(cate_index, cate_name, st_manu):
                 continue
             # print("li is:", templi.__str__())
             try:
-                supplier = templi.find_element(by=By.CLASS_NAME, value='result_goCompany').text
+                suppliers = templi.find_elements(by=By.CSS_SELECTOR, value='a.result_goCompany')
+                for temp_suppler in suppliers:
+                    if temp_suppler.text.__len__() > 0:
+                        supplier = temp_suppler.text
             except:
                 supplier = "--"
             try:
@@ -155,9 +157,9 @@ def get_stock(cate_index, cate_name, st_manu):
                                           pakaging=pakaging,
                                           supplier_manu=manufacturer,
                                           stock_num=stock_num)
-            if ic_Stock_Info.shouldSave_holt():
+            if ic_Stock_Info.shouldSave():
                 # saveContent_arr = ic_Stock_Info.descritpion_arr() + [TaskManager.Taskmanger().task_name]
-                saveContent_arr = ic_Stock_Info.descritpion_arr() + ["TTIMilitary"]
+                saveContent_arr = ic_Stock_Info.descritpion_arr() + ["TLK240320"]
                 need_save_ic_arr.append(saveContent_arr)
         if need_save_ic_arr.__len__() > 0:
             MySqlHelp_recommanded.DBRecommandChip().ic_stock(need_save_ic_arr)
