@@ -133,6 +133,18 @@ def IC_hot_url(ppn: str):
     return search_url
 
 
+# https://fh.hqew.com/detail/500020657.html
+def HQ_hot_url(ppn: str):
+    cate_str = str(ppn)
+    cate_str = cate_str.replace('/', '%2F')
+    cate_str = cate_str.replace('#', '%23')
+    cate_str = cate_str.replace('+', '%2B')
+    cate_str = cate_str.replace(',', '%2C')
+    search_url = f'https://fh.hqew.com/detail/{cate_str}.html'
+    return search_url
+
+
+
 if __name__ == "__main__":
     octopart_page_more_url(sourcefile=PathHelp.get_file_path(None, file_name='TSkyworks.xlsx'), page0_sheet='page0_ppn_2', manu=Octopart_manu.Skyworks)
 

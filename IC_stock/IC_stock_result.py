@@ -11,7 +11,7 @@ from WRTools import PathHelp, ExcelHelp, MySqlHelp_recommanded
 from Manager import TaskManager
 
 # IC_source_file = PathHelp.get_file_path('TVicor15H', 'IC_stock.xlsx')
-cate_source_file = PathHelp.get_file_path(None, 'Tkuibenshuaimai.xlsx') #PathHelp.get_file_path(None, '/Users/liuhe/Downloads/TTIMilitary.xlsx')
+cate_source_file = PathHelp.get_file_path(None, 'TLK240320.xlsx') #PathHelp.get_file_path(None, '/Users/liuhe/Downloads/TTIMilitary.xlsx')
 result_save_file = cate_source_file
 
 

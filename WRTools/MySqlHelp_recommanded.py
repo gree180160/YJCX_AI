@@ -124,6 +124,10 @@ class DBRecommandChip:
         sql_str = "REPLACE INTO t_ic_des (ppn, manu, todaySearch, todaySearch_person, yesterdaySearch, yesterdaySearch_person, reference_price, week_search, market_hot, risk, mainLand_stock, international_stock, task_name)  VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)"
         self.sql_write(sql_str, data)
 
+    def hq_hot_write(self, data: list):
+        sql_str = "REPLACE INTO t_hq_peakfire (ppn, manu, weak_hot, month_hot, task_name) VALUES (%s, %s, %s, %s, %s)"
+        self.sql_write(sql_str, data)
+
     def bom_price_write(self, data: list):
         sql_str = "REPLACE INTO t_bom_price (ppn, manu, supplier, package, lot, quoted_price, release_time, stock_num, valid_supplier, task_name) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s)"
         self.sql_write(sql_str, data)

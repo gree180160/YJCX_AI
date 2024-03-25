@@ -104,18 +104,6 @@ def Ti():
         ExcelHelp.add_arr_to_sheet(file_name=fold + f'Active {index}.xlsx', sheet_name='Sheet1', dim_arr=temp_row)
 
 
-def mcu2():
-    svicor_sheet = ExcelHelp.read_sheet_content_by_name(file_name=PathHelp.get_file_path(None, 'TVicor.xlsx'), sheet_name='jason')
-    his = ExcelHelp.read_col_content(file_name=PathHelp.get_file_path(None, 'TVicor.xlsx'), sheet_name='ppn', col_index=1)
-    result = []
-    for row_value in svicor_sheet:
-        if not his.__contains__(row_value[0]):
-            result.append(row_value)
-            his.append(row_value[0])
-    ExcelHelp.add_arr_to_sheet(file_name=PathHelp.get_file_path(None, 'TVicor.xlsx'), sheet_name='jason2', dim_arr=result)
-    print(result)
-
-
 def ppn_vicor_all():
     fold = '/Users/liuhe/Downloads/ly/'
     file_name_list = os.listdir(fold)
@@ -306,19 +294,22 @@ def filterNeeds():
     ExcelHelp.add_arr_to_sheet(source_file, 'needs2', result)
 
 
-if __name__ == "__main__":
-    # get_ICSupplierAndHot(20, 300)
-    # get_wheat()
-    # adjustopn()
-    # createDayTask(500)
+# delet finished ppn
+def deletFinished_ppn():
+    wait_file = PathHelp.get_file_path(None, 'TLK240321.xlsx')
+    waiting_ppns = ExcelHelp.read_sheet_content_by_name(wait_file, 'source')
+    history_file = PathHelp.get_file_path(None, 'TLK240320.xlsx')
+    history_ppns = ExcelHelp.read_col_content(history_file, 'ppn', 1)
+    result = []
+    for row_value in waiting_ppns:
+        if not history_ppns.__contains__(row_value[0]):
+            result.append(row_value)
+    ExcelHelp.add_arr_to_sheet(wait_file, sheet_name='ppn', dim_arr=result)
+    print(result)
 
-    # adi_stock()
-    # Ti()
-    # jinshunRenesas2()
-    # write_ppn_to_sql()
-    # filterNeeds(500)
-    # huaqiang_ppn()
+
+if __name__ == "__main__":
     # time.sleep(3.0)
     # ali()
     # getAllICStockRecord()
-    filterNeeds()
+    deletFinished_ppn()
