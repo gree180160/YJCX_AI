@@ -1,5 +1,7 @@
 
 #  记录Task 提供的型号，在IC 中的库存信息
+import time
+
 from selenium.webdriver.common.by import By
 import random
 import undetected_chromedriver as uc
@@ -209,6 +211,8 @@ def main():
         if cate_name.__contains__('?'):
             continue
         elif cate_index in range(sourceFile_dic['startIndex'], sourceFile_dic['endIndex']):
+            if cate_index % 10 == 0 and cate_index > 0:
+                time.sleep(5*60)
             get_stock(cate_index, cate_name, all_manu[cate_index])
 
 
