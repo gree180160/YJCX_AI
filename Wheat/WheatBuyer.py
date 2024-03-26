@@ -26,7 +26,7 @@ ssl._create_default_https_context = ssl._create_unverified_context
 sourceFile_dic = {'fileName': PathHelp.get_file_path(None, 'TICHot_202402.xlsx'),
                   'sourceSheet': 'ppn',
                   'colIndex': 1,
-                  'startIndex': 7,
+                  'startIndex': 30,
                   'endIndex': 30}
 result_save_file = PathHelp.get_file_path(None, 'TICHot_202402.xlsx')
 result_save_sheet = 'Wheat_buyer'

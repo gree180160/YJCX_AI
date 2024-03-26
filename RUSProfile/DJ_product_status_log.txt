@@ -304,3 +304,6 @@ from unknown error: web view not found
 from unknown error: web view not found
   (Session info: chrome=114.0.5735.133)
 
+2024-03-26 17:37:38Ооо Промсервис Солюшнс goto_detail error Message: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id="ab-test-wrp"]/div[2]/div[2]/div[1]/div/div[1]/div[1]/div[2]/span[1]"}
+  (Session info: chrome=114.0.5735.133)
+

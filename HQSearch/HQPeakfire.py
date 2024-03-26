@@ -13,8 +13,8 @@ ssl._create_default_https_context = ssl._create_unverified_context
 sourceFile_dic = {'fileName': PathHelp.get_file_path(None, 'TLK240320.xlsx'),
                   'sourceSheet': 'ppn',
                   'colIndex': 1,
-                  'startIndex': 7,
-                  'endIndex': 43}
+                  'startIndex': 51,
+                  'endIndex': 81}
 
 accouts_arr = [AccManage.HQ_hot['n'], AccManage.HQ_hot['p']]
 
@@ -82,11 +82,13 @@ def main():
                                            sourceFile_dic['colIndex'])
     all_manu = ExcelHelp.read_col_content(sourceFile_dic['fileName'], sourceFile_dic['sourceSheet'], 2)
     for (index, ppn) in enumerate(all_cates):
-        if index in range(0, TaskManager.Taskmanger().end_index): #mac 100   #  if index in range(201, TaskManager.Taskmanger().end_index): #mac 100
+        if ppn.__contains__('?'):
+            continue
+        elif index in range(sourceFile_dic['startIndex'], sourceFile_dic['endIndex']):
             print(f'cate_index is: {index}  cate_name is: {ppn}')
             manu = all_manu[index]
             driver.get(URLManager.HQ_hot_url(ppn))
-            WaitHelp.waitfor_account_import(True, False)
+            WaitHelp.waitfor(True, False)
             week_arr = getSearchInfo(ppn, manu, True)
             time.sleep(10.0)
             if week_arr.__len__() > 0:  # 有周数据，请求月数据

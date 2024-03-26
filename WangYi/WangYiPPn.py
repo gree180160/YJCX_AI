@@ -18,12 +18,12 @@ driver.set_page_load_timeout(480)
 
 default_url = 'https://www.wyselect.com/shop/index'
 
-sourceFile_dic = {'fileName': PathHelp.get_file_path("WangYi", 'Task.xlsx'),
+sourceFile_dic = {'fileName': PathHelp.get_file_path("WangYi", 'WangYiTask2024-03.xlsx'),
                   'sourceSheet': 'manu',
                   'colIndex': 1,
                   'startIndex': 0,
                   'endIndex': 1}
-result_save_file = PathHelp.get_file_path("WangYi", 'Task.xlsx')
+result_save_file = PathHelp.get_file_path("WangYi", 'WangYiTask2024-03.xlsx')
 
 log_file = PathHelp.get_file_path('WangYi', 'WYLog.txt')
 
@@ -33,7 +33,8 @@ current_page = 1
 # 跳转到下一个指定的型号
 def go_to_cate(pn_index, pn, c_page):
     try:
-        url = f'https://www.wyselect.com/shop/itemList?title=%20{pn}%20&store_sort=%20asc&page={c_page}'
+        # 'https://www.wyselect.com/shop/itemList?store_sort=%20asc&page=1&brand_id=9'
+        url = f'https://www.wyselect.com/shop/itemList?&brand_id=%209%20&store_sort=%20asc&page={c_page}'
         url.replace(' ', '')
         driver.get(url)
         WaitHelp.waitfor(True, False)
@@ -66,7 +67,7 @@ def set_page():
 
 def go_to_next_page(pn_index, pn):
     try:
-        url = f'https://www.wyselect.com/shop/itemList?title=%20{pn}%20&store_sort=%20asc&page={current_page + 1}'
+        url = f'https://www.wyselect.com/shop/itemList?&brand_id=%209%20&store_sort=%20asc&page={current_page + 1}'
         url.replace(' ', '')
         driver.get(url)
         WaitHelp.waitfor(True, False)
