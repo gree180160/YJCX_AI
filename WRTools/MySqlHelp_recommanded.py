@@ -225,7 +225,7 @@ class DBRecommandChip:
 
 
 if __name__ == "__main__":
-    # manager = DBRecommandChip()
+    manager = DBRecommandChip()
     # manager.octopart_price_write([['X9317UV8IZ-2.7', 'Renesas', 1, 'DigiKey Marketplace', '2156-X9317UV8IZ-2.7-ND', '0', '1', 'USD', '1.000', '2m', 'X9317UV8'], ['X9317UV8IZ-2.7', 'Renesas', 1, 'Avnet', 'X9317UV8IZ-2.7', '0', '1200', '', '', '1d', 'X9317UV8'], ['X9317UV8IZ-2.7', 'Renesas', 1, 'Newark', '79K9315', '0', '600', 'USD', '5.990', '20h', 'X9317UV8'], ['X9317UV8IZ', 'Renesas', 1, 'Avnet', 'X9317UV8IZ', '0', '800', '', '', '1d', 'X9317UV8'], ['X9317UV8IZ', 'Renesas', 1, 'Newark', '79K9314', '0', '400', 'USD', '5.180', '20h', 'X9317UV8'], ['X9317UV8IZT1', 'Renesas', 1, 'Avnet', 'X9317UV8IZT1', '0', '2500', '', '', '1d', 'X9317UV8'], ['X9317UV8IZT1', 'Renesas', 1, 'Newark', '79K9317', '0', '2500', 'USD', '', '20h', 'X9317UV8'], ['X9317UV8Z', 'Renesas', 1, 'Avnet', 'X9317UV8Z', '0', '1000', '', '', '1d', 'X9317UV8'], ['X9317UV8Z', 'Renesas', 1, 'Newark', '79K9318', '0', '500', 'USD', '4.150', '20h', 'X9317UV8'], ['X9317UV8Z-2.7', 'Renesas', 1, 'Avnet', 'X9317UV8Z-2.7', '0', '1600', '', '', '1d', 'X9317UV8'], ['X9317UV8Z-2.7', 'Renesas', 1, 'Newark', '79K9319', '0', '800', 'USD', '4.530', '20h', 'X9317UV8'], ['X9317UV8IZ-2.7T1', 'Renesas', 1, 'Avnet', 'X9317UV8IZ-2.7T1', '0', '2500', '', '', '1d', 'X9317UV8'], ['X9317UV8IZ-2.7T1', 'Renesas', 1, 'Newark', '79K9316', '0', '2500', 'USD', '', '20h', 'X9317UV8'], ['X9317UV8ZT1', 'Renesas', 1, 'Avnet', 'X9317UV8ZT1', '0', '2500', '', '', '1d', 'X9317UV8'], ['X9317UV8ZT1', 'Renesas', 1, 'Newark', '79K9321', '0', '2500', 'USD', '', '20h', 'X9317UV8'], ['X9317UV8Z-2.7T1', 'Renesas', 1, 'Avnet', 'X9317UV8Z-2.7T1', '0', '2500', '', '', '1d', 'X9317UV8'], ['X9317UV8Z-2.7T1', 'Renesas', 1, 'Newark', '79K9320', '0', '2500', 'USD', '', '20h', 'X9317UV8']])
     # IC_hot_m_read("update_time > '2023/08/15'")
     # IC_hot_w_write(
@@ -235,10 +235,12 @@ if __name__ == "__main__":
     # result = manager.bom_price_read(1)
     # print(list(result).__len__())
   # (keyword, wheat_date, buyer, supplier, description, buy_country, supplier_country, current_page, task_name) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s)"
-    sheet_content = ExcelHelp.read_sheet_content_by_name(PathHelp.get_file_path(None, 'TNewBrand.xlsx'), 'Wheat_buyer')[12000:]
-    result = []
-    for row in sheet_content:
-        if row[0] != 'NONE' and row[0] != 'none' and row[0] != 'None':
-            row_info = [row[0], row[1], row[2], row[3], row[4], row[5], row[6], row[8], 'newbrand_202401']
-            result.append(row_info)
-    DBRecommandChip().wheat_buyer_write(result)
+  #   sheet_content = ExcelHelp.read_sheet_content_by_name(PathHelp.get_file_path(None, 'TNewBrand.xlsx'), 'Wheat_buyer')[12000:]
+  #   result = []
+  #   for row in sheet_content:
+  #       if row[0] != 'NONE' and row[0] != 'none' and row[0] != 'None':
+  #           row_info = [row[0], row[1], row[2], row[3], row[4], row[5], row[6], row[8], 'newbrand_202401']
+  #           result.append(row_info)
+  #   DBRecommandChip().wheat_buyer_write(result)
+    arr = [['500020657', 'Broadcom', "['26', '13', '28', '8', '2', '2', '6', '0', '0', '24', '34', '6', '7']", "['73', '26', '32', '32', '38', '46', '47', '43', '76', '35', '83', '48']", 'TLK240320']]
+    manager.hq_hot_write(arr)

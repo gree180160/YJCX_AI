@@ -13,8 +13,8 @@ ssl._create_default_https_context = ssl._create_unverified_context
 sourceFile_dic = {'fileName': PathHelp.get_file_path(None, 'TLK240320.xlsx'),
                   'sourceSheet': 'ppn',
                   'colIndex': 1,
-                  'startIndex': 36,
-                  'endIndex': 40}
+                  'startIndex': 1,
+                  'endIndex': 43}
 
 accouts_arr = [AccManage.HQ_hot['n'], AccManage.HQ_hot['p']]
 
