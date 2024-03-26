@@ -1,0 +1,40 @@
+/Users/liuhe/PycharmProjects/TransitTech/venv/bin/python /Users/liuhe/PycharmProjects/YJCX_AI/HQSearch/HQPeakfire.py
+cate_index is: 0  cate_name is: 500020657
+write data:
+ 
+yjcx_recommended wirte error Could not process parameters: str(500020657), it must be of type list, tuple or dict ['500020657', 'Broadcom', "['26', '13', '28', '8', '2', '2', '6', '0', '0', '24', '34', '6', '7']", "['73', '26', '32', '32', '38', '46', '47', '43', '76', '35', '83', '48']", 'TLK240320']
+cate_index is: 1  cate_name is: 100-000000245
+write data:
+ 
+yjcx_recommended wirte error Could not process parameters: str(100-000000245), it must be of type list, tuple or dict ['100-000000245', 'AMD', "['0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0']", "['0', '0', '0', '0', '0', '0', '7', '0', '2', '0', '0', '0']", 'TLK240320']
+cate_index is: 2  cate_name is: 5CEBA4F17I7N
+write data:
+ 
+yjcx_recommended wirte error Could not process parameters: str(5CEBA4F17I7N), it must be of type list, tuple or dict ['5CEBA4F17I7N', 'Intel / Altera', "['28', '12', '3', '5', '7', '5', '23', '0', '5', '25', '19', '16', '120']", "['566', '820', '668', '695', '182', '182', '157', '179', '186', '154', '63', '38']", 'TLK240320']
+cate_index is: 3  cate_name is: 8430S10BYI-03LF
+write data:
+ 
+yjcx_recommended wirte error Could not process parameters: str(8430S10BYI-03LF), it must be of type list, tuple or dict ['8430S10BYI-03LF', 'Renesas', "['0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0']", "['2', '1', '0', '2', '0', '0', '0', '0', '0', '16', '6', '0']", 'TLK240320']
+cate_index is: 4  cate_name is: 9260.NGWG.NV
+write data:
+ 
+yjcx_recommended wirte error Could not process parameters: str(9260.NGWG.NV), it must be of type list, tuple or dict ['9260.NGWG.NV', 'Intel', "['12', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '1', '7']", "['8', '47', '4', '28', '4', '26', '12', '27', '2', '96', '12', '0']", 'TLK240320']
+cate_index is: 5  cate_name is: 9260.NGWGII.NV
+write data:
+ 
+yjcx_recommended wirte error Could not process parameters: str(9260.NGWGII.NV), it must be of type list, tuple or dict ['9260.NGWGII.NV', 'Intel', "['0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0']", "['0', '0', '0', '2', '3', '0', '1', '2', '41', '78', '0', '0']", 'TLK240320']
+cate_index is: 6  cate_name is: ACPL-074L-000E
+write data:
+ 
+yjcx_recommended wirte error Could not process parameters: str(ACPL-074L-000E), it must be of type list, tuple or dict ['ACPL-074L-000E', 'Broadcom', "['37', '37', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '1', '2', '34', '34', '5', '4', '0', '0', '15']", "['25', '132', '40', '65', '40', '25', '12', '12', '39', '38', '71', '0']", 'TLK240320']
+cate_index is: 7  cate_name is: AD7656BSTZ-REEL
+Traceback (most recent call last):
+  File "/Users/liuhe/PycharmProjects/YJCX_AI/HQSearch/HQPeakfire.py", line 107, in <module>
+    main()
+  File "/Users/liuhe/PycharmProjects/YJCX_AI/HQSearch/HQPeakfire.py", line 89, in main
+    WaitHelp.waitfor_account_import(True, False)
+  File "/Users/liuhe/PycharmProjects/YJCX_AI/WRTools/WaitHelp.py", line 59, in waitfor_account_import
+    time.sleep(160 + random.randint(1, 120))
+KeyboardInterrupt
+
+Process finished with exit code 130 (interrupted by signal 2: SIGINT)
