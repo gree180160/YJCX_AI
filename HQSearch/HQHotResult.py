@@ -13,7 +13,7 @@ import base64
 from WRTools import PathHelp, ExcelHelp, MySqlHelp_recommanded
 from Manager import TaskManager
 
-cate_source_file = PathHelp.get_file_path(None, 'TLK240320.xlsx') #PathHelp.get_file_path(None, '/Users/liuhe/Downloads/TTIMilitary.xlsx')
+cate_source_file = PathHelp.get_file_path(None, 'TLK240322.xlsx') #PathHelp.get_file_path(None, '/Users/liuhe/Downloads/TTIMilitary.xlsx')
 result_save_file = cate_source_file
 
 

@@ -12,11 +12,12 @@ from WRTools import ExcelHelp, WaitHelp, PathHelp, EmailHelper, MySqlHelp_recomm
 
 
 ssl._create_default_https_context = ssl._create_unverified_context
-sourceFile_dic = {'fileName': PathHelp.get_file_path(None, 'TLK240321.xlsx'),
+sourceFile_dic = {'fileName': PathHelp.get_file_path(None, 'TLK240326.xlsx'),
                   'sourceSheet': 'ppn',
                   'colIndex': 1,
-                  'startIndex': 40,
-                  'endIndex': 40}
+                  'startIndex': 0,
+                  'endIndex': 30}
+task_name = 'TLK240326'
 
 total_page = 1
 current_page = 1
@@ -160,8 +161,7 @@ def get_stock(cate_index, cate_name, st_manu):
                                           supplier_manu=manufacturer,
                                           stock_num=stock_num)
             if ic_Stock_Info.shouldSave():
-                # saveContent_arr = ic_Stock_Info.descritpion_arr() + [TaskManager.Taskmanger().task_name]
-                saveContent_arr = ic_Stock_Info.descritpion_arr() + ["TLK240321"]
+                saveContent_arr = ic_Stock_Info.descritpion_arr() + [task_name]
                 need_save_ic_arr.append(saveContent_arr)
         if need_save_ic_arr.__len__() > 0:
             MySqlHelp_recommanded.DBRecommandChip().ic_stock(need_save_ic_arr)
@@ -208,10 +208,10 @@ def main():
                                            sourceFile_dic['colIndex'])
     all_manu = ExcelHelp.read_col_content(sourceFile_dic['fileName'], sourceFile_dic['sourceSheet'], 2)
     for (cate_index, cate_name) in enumerate(all_cates):
-        print(f'cate_index is: {cate_index}  cate_name is: {cate_name}')
         if cate_name.__contains__('?'):
             continue
         elif cate_index in range(sourceFile_dic['startIndex'], sourceFile_dic['endIndex']):
+            print(f'cate_index is: {cate_index}  cate_name is: {cate_name}')
             if cate_index % 10 == 0 and cate_index > 0:
                 time.sleep(5*60)
             get_stock(cate_index, cate_name, all_manu[cate_index])

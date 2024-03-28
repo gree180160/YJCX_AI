@@ -296,13 +296,20 @@ def filterNeeds():
 
 # delet finished ppn
 def deletFinished_ppn():
-    wait_file = PathHelp.get_file_path(None, 'TLK240321.xlsx')
+    wait_file = PathHelp.get_file_path(None, 'TLK240326.xlsx')
     waiting_ppns = ExcelHelp.read_sheet_content_by_name(wait_file, 'source')
-    history_file = PathHelp.get_file_path(None, 'TLK240320.xlsx')
-    history_ppns = ExcelHelp.read_col_content(history_file, 'ppn', 1)
+    history_files = ["/Users/liuhe/Desktop/CalcitrapaAIProject/T联科/TLK240320.xlsx",
+                     "/Users/liuhe/Desktop/CalcitrapaAIProject/T联科/TLK240321.xlsx",
+                     PathHelp.get_file_path(None, 'TLK240322.xlsx')
+                     ]
+    history_ppns = []
+    for temp_file in history_files:
+        temp_ppns = ExcelHelp.read_col_content(temp_file, 'ppn', 1)
+        history_ppns += temp_ppns
     result = []
     for row_value in waiting_ppns:
-        if not history_ppns.__contains__(row_value[0]):
+        if not history_ppns.__contains__(row_value[0]):  #历史去重
+            history_ppns.append(row_value[0]) # 自身去重
             result.append(row_value)
     ExcelHelp.add_arr_to_sheet(wait_file, sheet_name='ppn', dim_arr=result)
     print(result)

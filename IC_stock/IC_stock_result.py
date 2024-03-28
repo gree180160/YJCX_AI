@@ -11,7 +11,7 @@ from WRTools import PathHelp, ExcelHelp, MySqlHelp_recommanded
 from Manager import TaskManager
 
 # IC_source_file = PathHelp.get_file_path('TVicor15H', 'IC_stock.xlsx')
-cate_source_file = PathHelp.get_file_path(None, 'TLK240320.xlsx') #PathHelp.get_file_path(None, '/Users/liuhe/Downloads/TTIMilitary.xlsx')
+cate_source_file = PathHelp.get_file_path(None, 'TLK240322.xlsx')
 result_save_file = cate_source_file
 
 
@@ -22,6 +22,8 @@ def IC_stock_sum():
     result = []
     for (index, temp_ppn) in enumerate(pps):
         ppn_str = str(temp_ppn)
+        if ppn_str == 'ppn':
+            continue
         valid_supplier_sum = 0
         valid_stock_sum = 0
         IC_stocks = ExcelHelp.read_sheet_content_by_name(cate_source_file, sheet_name='IC_stock')
@@ -35,7 +37,10 @@ def IC_stock_sum():
                 stock_num = int(row_content[11])
                 # if isSSCP or isICCP or isSpotRanking or isHotSell or isYouXian:
                 if isSSCP or isICCP or isSpotRanking:
-                    valid_supplier_sum += 1
+                    if stock_num < 10:
+                        valid_supplier_sum += 0.01
+                    else:
+                        valid_supplier_sum += 1.0
                     valid_stock_sum += stock_num
         result.append([ppn_str, manufactures[index], valid_supplier_sum, int(valid_stock_sum)])
     ExcelHelp.add_arr_to_sheet(file_name=cate_source_file, sheet_name="IC_stock_sum", dim_arr=result)

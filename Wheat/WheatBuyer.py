@@ -23,12 +23,13 @@ ssl._create_default_https_context = ssl._create_unverified_context
 #                   'colIndex': 1,
 #                   'startIndex': 793,
 #                   'endIndex': 1000}
-sourceFile_dic = {'fileName': PathHelp.get_file_path(None, 'TICHot_202402.xlsx'),
+sourceFile_dic = {'fileName': PathHelp.get_file_path(None, 'TSamsungStore.xlsx'),
                   'sourceSheet': 'ppn',
                   'colIndex': 1,
-                  'startIndex': 30,
-                  'endIndex': 30}
-result_save_file = PathHelp.get_file_path(None, 'TICHot_202402.xlsx')
+                  'startIndex': 0,
+                  'endIndex': 6}
+task_name = "TSamsungStore"
+result_save_file = PathHelp.get_file_path(None, 'TSamsungStore.xlsx')
 result_save_sheet = 'Wheat_buyer'
 logFile = PathHelp.get_file_path('Wheat', 'Wheat_log.txt')
 
@@ -242,7 +243,6 @@ def get_rowInfo(cate_name, row):
     td_list = row.find_elements(By.TAG_NAME, 'td')
     buyer = td_list[1].text.replace('/', '%2F')
     buyer = buyer.replace('\x1e', ' (tim)')
-    task_name = "TICHot_202402"
     result = [cate_name, td_list[0].text, buyer, td_list[2].text, td_list[3].text, td_list[4].text, "" , "",  td_list[5].text, td_list[6].text, td_list[7].text, td_list[8].text, str(current_page), task_name]
     return result
 

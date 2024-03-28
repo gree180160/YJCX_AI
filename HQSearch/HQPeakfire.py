@@ -10,14 +10,14 @@ from Manager import AccManage, TaskManager, URLManager
 log_file = PathHelp.get_file_path('IC_search', 'IC_search_Image_log.txt')
 ssl._create_default_https_context = ssl._create_unverified_context
 
-sourceFile_dic = {'fileName': PathHelp.get_file_path(None, 'TLK240320.xlsx'),
+sourceFile_dic = {'fileName': PathHelp.get_file_path(None, 'TLK240326.xlsx'),
                   'sourceSheet': 'ppn',
                   'colIndex': 1,
-                  'startIndex': 51,
-                  'endIndex': 81}
+                  'startIndex': 0,
+                  'endIndex': 30}
 
 accouts_arr = [AccManage.HQ_hot['n'], AccManage.HQ_hot['p']]
-
+task_name = 'TLK240326'
 login_url = "https://passport.hqew.com/login"
 
 if AccManage.chromedriver_path.__len__() > 0:
@@ -75,7 +75,6 @@ def getSearchInfo(cate_name, manu, isWeek):
     return result
 
 
-
 # 查询列表中所有需要查询的型号的搜索指数
 def main():
     all_cates = ExcelHelp.read_col_content(sourceFile_dic['fileName'], sourceFile_dic['sourceSheet'],
@@ -98,7 +97,7 @@ def main():
                 time.sleep(10.0)
                 month_arr = getSearchInfo(ppn, manu, False)
                 if month_arr.__len__() > 0:
-                    cate_info = [ppn, manu, str(week_arr), str(month_arr), 'TLK240320']
+                    cate_info = [ppn, manu, str(week_arr), str(month_arr), task_name]
                     MySqlHelp_recommanded.DBRecommandChip().hq_hot_write([cate_info])
 
 
