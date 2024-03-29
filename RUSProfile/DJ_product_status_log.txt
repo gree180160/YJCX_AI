@@ -307,3 +307,16 @@ from unknown error: web view not found
 2024-03-26 17:37:38Ооо Промсервис Солюшнс goto_detail error Message: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id="ab-test-wrp"]/div[2]/div[2]/div[1]/div/div[1]/div[1]/div[2]/span[1]"}
   (Session info: chrome=114.0.5735.133)
 
+2024-03-28 15:07:13login error
+2024-03-28 15:48:36Ооо Реомакс goto_detail error Message: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id="ab-test-wrp"]/div[2]/div[2]/div[1]/div/div[1]/div[1]/div[2]/span[1]"}
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-28 16:59:01Ооо Рмс goto_detail error Message: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id="ab-test-wrp"]/div[2]/div[2]/div[1]/div/div[1]/div[1]/div[2]/span[1]"}
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-28 17:30:16Ооо Мультибрендовый goto_detail error Message: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id="ab-test-wrp"]/div[2]/div[2]/div[1]/div/div[1]/div[1]/div[2]/span[1]"}
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-28 17:57:09Ооо Мультибрендовый goto_detail error Message: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id="ab-test-wrp"]/div[2]/div[2]/div[1]/div/div[1]/div[1]/div[2]/span[1]"}
+  (Session info: chrome=114.0.5735.133)
+

@@ -3,6 +3,7 @@ import time
 
 from WRTools import ExcelHelp, PathHelp
 from IC_stock import IC_stock_result
+from HQSearch import HQHotResult
 from Findchips_stock import findchips_stock_info, findchips_stock_cate
 import IC_Search.IC_search_Image
 import Statistic_data.statistic_price_sheet
@@ -257,10 +258,44 @@ def statistic_data():
     move_IC_hot(source_file=source_file)
 
 
+# 联科Task
+def lkResult():
+    source_file = PathHelp.get_file_path(None, 'TLK240326.xlsx')
+    # HQHotResult.HQ_hot_result(source_file)
+    # time.sleep(1.0)
+    # IC_stock_result.IC_stock_sum(source_file)
+    # time.sleep(1.0)
+    first_row = ["型号", "品牌", "库存", "批次", "价格", "货期", "SPQ", "IC_supplier", "IC_stock", "HQ_hot_week", 'HQ_hot_month', 'HQ_hot', 'oc_price', 'oc_stock', 'oc_des']
+    result = []
+    result.append(first_row)
+    source_info = ExcelHelp.read_sheet_content_by_name(source_file, 'source')
+    IC_info = ExcelHelp.read_sheet_content_by_name(source_file, 'IC_stock_sum')
+    HQ_hot_info = ExcelHelp.read_sheet_content_by_name(source_file, 'HQ_hot_result')
+    oc_info = ExcelHelp.read_sheet_content_by_name(source_file, 'octopart')
+    ppns_info = ExcelHelp.read_sheet_content_by_name(source_file, 'ppn')
+    for (index, temp_ppnInfo) in enumerate(ppns_info):
+        ppn_result = [temp_ppnInfo[0], temp_ppnInfo[1]]
+        for temp_source in source_info:
+            if temp_source[0] == temp_ppnInfo[0]:
+                ppn_result += [temp_source[i] if i < len(temp_source) else '' for i in range(2, 7)]  # [temp_source[2], temp_ppnInfo[3], temp_ppnInfo[4], temp_source[5], temp_source[6]]
+        for temp_IC in IC_info:
+            if temp_IC[0] == temp_ppnInfo[0]:
+                ppn_result += [temp_IC[2], temp_IC[3]]
+        for temp_HQ in HQ_hot_info:
+            if temp_HQ[0] == temp_ppnInfo[0]:
+                ppn_result += [temp_HQ[2], temp_HQ[3], temp_HQ[4]]
+        for temp_OC in oc_info:
+            if temp_OC[0] == temp_ppnInfo[0]:
+                ppn_result += [temp_OC[3], temp_OC[4], temp_OC[2]]
+        result.append(ppn_result)
+    ExcelHelp.add_arr_to_sheet(source_file, "LKResult", result)
+
+
 if __name__ == "__main__":
-    pre_combine_data()
-    time.sleep(1.0)
-    statistic_data()
+    # pre_combine_data()
+    # time.sleep(1.0)
+    # statistic_data()
+    lkResult()
 
 
 

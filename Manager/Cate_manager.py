@@ -3,6 +3,7 @@ import time
 from WRTools import ExcelHelp, PathHelp, PandasHelp, MySqlHelp_recommanded
 import os
 
+
 def change_file_name():
     path = "/Users/liuhe/Desktop/MMS_html_files"
     batch_rename(path, '.html')
@@ -296,11 +297,12 @@ def filterNeeds():
 
 # delet finished ppn
 def deletFinished_ppn():
-    wait_file = PathHelp.get_file_path(None, 'TLK240326.xlsx')
+    wait_file = PathHelp.get_file_path(None, 'TLK240327.xlsx')
     waiting_ppns = ExcelHelp.read_sheet_content_by_name(wait_file, 'source')
     history_files = ["/Users/liuhe/Desktop/CalcitrapaAIProject/T联科/TLK240320.xlsx",
                      "/Users/liuhe/Desktop/CalcitrapaAIProject/T联科/TLK240321.xlsx",
-                     PathHelp.get_file_path(None, 'TLK240322.xlsx')
+                     "/Users/liuhe/Desktop/CalcitrapaAIProject/T联科/TLK240322.xlsx",
+                     PathHelp.get_file_path(None, 'TLK240326.xlsx')
                      ]
     history_ppns = []
     for temp_file in history_files:

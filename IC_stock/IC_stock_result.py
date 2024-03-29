@@ -11,14 +11,13 @@ from WRTools import PathHelp, ExcelHelp, MySqlHelp_recommanded
 from Manager import TaskManager
 
 # IC_source_file = PathHelp.get_file_path('TVicor15H', 'IC_stock.xlsx')
-cate_source_file = PathHelp.get_file_path(None, 'TLK240322.xlsx')
-result_save_file = cate_source_file
+# cate_source_file = PathHelp.get_file_path(None, 'TLK240322.xlsx')
 
 
 # 将同一个ppn到所有stock 累加，然后按照保存到数组中, 没有数据的，用/填充
-def IC_stock_sum():
-    pps = ExcelHelp.read_col_content(file_name=cate_source_file, sheet_name='ppn', col_index=1)
-    manufactures = ExcelHelp.read_col_content(file_name=cate_source_file, sheet_name='ppn', col_index=2)
+def IC_stock_sum(cate_source_file):
+    pps = ExcelHelp.read_col_content(file_name= cate_source_file, sheet_name='ppn', col_index=1)
+    manufactures = ExcelHelp.read_col_content(file_name= cate_source_file, sheet_name='ppn', col_index=2)
     result = []
     for (index, temp_ppn) in enumerate(pps):
         ppn_str = str(temp_ppn)
@@ -71,5 +70,5 @@ def addIC_info():
 
 
 if __name__ == "__main__":
-    IC_stock_sum()
+    IC_stock_sum(PathHelp.get_file_path(None, 'TLK240322.xlsx'))
     print('over')

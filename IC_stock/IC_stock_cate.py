@@ -12,12 +12,12 @@ from WRTools import ExcelHelp, WaitHelp, PathHelp, EmailHelper, MySqlHelp_recomm
 
 
 ssl._create_default_https_context = ssl._create_unverified_context
-sourceFile_dic = {'fileName': PathHelp.get_file_path(None, 'TLK240326.xlsx'),
+sourceFile_dic = {'fileName': PathHelp.get_file_path(None, 'TLK240327.xlsx'),
                   'sourceSheet': 'ppn',
                   'colIndex': 1,
                   'startIndex': 0,
-                  'endIndex': 30}
-task_name = 'TLK240326'
+                  'endIndex': 23}
+task_name = 'TLK240327'
 
 total_page = 1
 current_page = 1
