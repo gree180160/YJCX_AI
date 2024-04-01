@@ -320,3 +320,12 @@ from unknown error: web view not found
 2024-03-28 17:57:09Ооо Мультибрендовый goto_detail error Message: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id="ab-test-wrp"]/div[2]/div[2]/div[1]/div/div[1]/div[1]/div[2]/span[1]"}
   (Session info: chrome=114.0.5735.133)
 
+2024-03-29 11:24:34Ооо Ронта goto_detail error Message: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id="ab-test-wrp"]/div[2]/div[2]/div[1]/div/div[1]/div[1]/div[2]/span[1]"}
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-29 12:20:43Ооо Рулог goto_detail error Message: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id="ab-test-wrp"]/div[2]/div[2]/div[1]/div/div[1]/div[1]/div[2]/span[1]"}
+  (Session info: chrome=114.0.5735.133)
+
+2024-03-29 17:15:53Ооо Семикон goto_detail error Message: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id="ab-test-wrp"]/div[2]/div[2]/div[1]/div/div[1]/div[1]/div[2]/span[1]"}
+  (Session info: chrome=114.0.5735.133)
+

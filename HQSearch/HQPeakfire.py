@@ -10,14 +10,14 @@ from Manager import AccManage, TaskManager, URLManager
 log_file = PathHelp.get_file_path('IC_search', 'IC_search_Image_log.txt')
 ssl._create_default_https_context = ssl._create_unverified_context
 
-sourceFile_dic = {'fileName': PathHelp.get_file_path(None, 'TLK240327.xlsx'),
+sourceFile_dic = {'fileName': PathHelp.get_file_path(None, 'TLK240329.xlsx'),
                   'sourceSheet': 'ppn',
                   'colIndex': 1,
                   'startIndex': 0,
-                  'endIndex': 23}
+                  'endIndex': 16}
 
 accouts_arr = [AccManage.HQ_hot['n'], AccManage.HQ_hot['p']]
-task_name = 'TLK240327'
+task_name = 'TLK240329'
 login_url = "https://passport.hqew.com/login"
 
 if AccManage.chromedriver_path.__len__() > 0:

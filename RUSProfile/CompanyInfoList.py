@@ -16,7 +16,7 @@ ssl._create_default_https_context = ssl._create_unverified_context
 sourceFile_dic = {'fileName': PathHelp.get_file_path(None, f'TNewBrand.xlsx'),
                   'sourceSheet': 'company',
                   'colIndex': 1,
-                  'startIndex': 910,  #Акционерное Общество Золотые Луга
+                  'startIndex': 958,  #Акционерное Общество Золотые Луга
                   'endIndex': 1313}
 # sourceFile_dic = {'fileName': PathHelp.get_file_path(None, f'TSamsungStore.xlsx'),
 #                   'sourceSheet': 'buyer',
@@ -24,8 +24,8 @@ sourceFile_dic = {'fileName': PathHelp.get_file_path(None, f'TNewBrand.xlsx'),
 #                   'startIndex': 0,  #Акционерное Общество Золотые Луга
 #                   'endIndex': 4}
 
-# task_name = 'newbrand_202401'
-task_name = 'TSamsungStore'
+task_name = 'newbrand_202401'
+# task_name = 'TSamsungStore'
 
 accouts_arr = [AccManage.rusprofile['n'], AccManage.rusprofile['p']]
 default_url = 'https://www.rusprofile.ru/search-advanced'

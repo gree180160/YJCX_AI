@@ -12,12 +12,12 @@ from WRTools import ExcelHelp, WaitHelp, PathHelp, EmailHelper, MySqlHelp_recomm
 
 
 ssl._create_default_https_context = ssl._create_unverified_context
-sourceFile_dic = {'fileName': PathHelp.get_file_path(None, 'TLK240327.xlsx'),
+sourceFile_dic = {'fileName': PathHelp.get_file_path(None, 'TLK240329.xlsx'),
                   'sourceSheet': 'ppn',
                   'colIndex': 1,
                   'startIndex': 0,
-                  'endIndex': 23}
-task_name = 'TLK240327'
+                  'endIndex': 16}
+task_name = 'TLK240329'
 
 total_page = 1
 current_page = 1
@@ -164,6 +164,7 @@ def get_stock(cate_index, cate_name, st_manu):
                 saveContent_arr = ic_Stock_Info.descritpion_arr() + [task_name]
                 need_save_ic_arr.append(saveContent_arr)
         if need_save_ic_arr.__len__() > 0:
+            # print(need_save_ic_arr)
             MySqlHelp_recommanded.DBRecommandChip().ic_stock(need_save_ic_arr)
         # 包含>=3个无效的stock信息就不翻页了
         if current_page >= 2 or len(need_save_ic_arr) <= 46:

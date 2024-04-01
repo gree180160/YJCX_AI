@@ -260,11 +260,11 @@ def statistic_data():
 
 # 联科Task
 def lkResult():
-    source_file = PathHelp.get_file_path(None, 'TLK240326.xlsx')
-    # HQHotResult.HQ_hot_result(source_file)
-    # time.sleep(1.0)
-    # IC_stock_result.IC_stock_sum(source_file)
-    # time.sleep(1.0)
+    source_file = PathHelp.get_file_path(None, 'TLK240328.xlsx')
+    HQHotResult.HQ_hot_result(source_file)
+    time.sleep(1.0)
+    IC_stock_result.IC_stock_sum(source_file)
+    time.sleep(1.0)
     first_row = ["型号", "品牌", "库存", "批次", "价格", "货期", "SPQ", "IC_supplier", "IC_stock", "HQ_hot_week", 'HQ_hot_month', 'HQ_hot', 'oc_price', 'oc_stock', 'oc_des']
     result = []
     result.append(first_row)
