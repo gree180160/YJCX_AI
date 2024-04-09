@@ -46,7 +46,7 @@ def HQ_hot_result(cate_source_file):
 def valid_week(week_data: list):
     result = False
     last_four = sorted(week_data[-4:])
-    if last_four[-1] > 20 and last_four[1] > 5 and last_four[2] > 8:
+    if last_four[1] > 5 and last_four[2] > 8 and last_four[-1] > 12:
         result = True
     return result
 

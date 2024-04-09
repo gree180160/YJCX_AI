@@ -260,7 +260,7 @@ def statistic_data():
 
 # 联科Task
 def lkResult():
-    source_file = PathHelp.get_file_path(None, 'TLK240328.xlsx')
+    source_file = PathHelp.get_file_path(None, 'TLK240329.xlsx')
     HQHotResult.HQ_hot_result(source_file)
     time.sleep(1.0)
     IC_stock_result.IC_stock_sum(source_file)

@@ -76,3 +76,5 @@ var resultDiv = document.createElement('div');
 resultDiv.textContent = textContents.join(', '); // 将数组内容以逗号分隔显示
 document.body.appendChild(resultDiv);
 '''
+# const productNames = Array.from(document.querySelectorAll('.h2')).map(name => name.textContent.trim());
+# console.log(productNames);

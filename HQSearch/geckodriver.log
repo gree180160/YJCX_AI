@@ -1,0 +1,75 @@
+1712630142822	geckodriver	INFO	Listening on 127.0.0.1:62707
+1712630143313	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "--remote-debugging-port" "62708" "--remote-allow-hosts" "localhost" "-foreground" "-no-remote" "-profile" "/var/folders/jc/x8nf5scd28v4wrbkt9l72vd00000gn/T/rust_mozprofilerRXPni"
+1712630143716	Marionette	INFO	Marionette enabled
+1712630143766	Marionette	INFO	Listening on port 62715
+2024-04-09 10:35:43.790 plugin-container[30787:507287] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2024-04-09 10:35:43.790 plugin-container[30787:507287] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2024-04-09 10:35:43.803 plugin-container[30787:507287] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2024-04-09 10:35:43.803 plugin-container[30787:507287] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2024-04-09 10:35:43.803 plugin-container[30787:507292] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2024-04-09 10:35:43.803 plugin-container[30787:507292] nil host used in call to allowsAnyHTTPSCertificateForHost:
+Read port: 62715
+WebDriver BiDi listening on ws://127.0.0.1:62708
+1712630143859	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+UNSUPPORTED (log once): POSSIBLE ISSUE: unit 1 GLD_TEXTURE_INDEX_2D is unloadable and bound to sampler type (Float) - using zero texture because texture unloadable
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /var/folders/jc/x8nf5scd28v4wrbkt9l72vd00000gn/T/rust_mozprofilerRXPni/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:62708/devtools/browser/9b8d5081-959c-48b7-8b9d-7486143bbd73
+JavaScript warning: https://bqq.gtimg.com/qidian/src/wpav2/dist/4.2.0/pk1_v1.js, line 1: unreachable code after return statement
+JavaScript warning: https://bqq.gtimg.com/qidian/src/wpav2/dist/4.2.0/pk1_v1.js, line 1: unreachable code after return statement
+JavaScript warning: https://bqq.gtimg.com/qidian/src/wpav2/dist/4.2.0/pk1_v1.js, line 1: unreachable code after return statement
+JavaScript warning: https://bqq.gtimg.com/qidian/src/wpav2/dist/4.2.0/pk1_v1.js, line 1: unreachable code after return statement
+JavaScript warning: https://pagead2.googlesyndication.com/bg/z5lzzel_gBxf23vn5owcKp-P0AN7MDAe8Cdc7D8abts.js line 2 > eval line 3271 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/z5lzzel_gBxf23vn5owcKp-P0AN7MDAe8Cdc7D8abts.js line 2 > eval line 2217 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: , line 0: uncaught exception: 7
+JavaScript warning: https://webpage.qidian.qq.com/qidian/chatv3-gray/js/chunk-vendors.4821ab84.js, line 1: asm.js type error: expecting argument type declaration for 'e' of the form 'arg = arg|0' or 'arg = +arg' or 'arg = fround(arg)'
+2024-04-09 02:35:53.031 plugin-container[30800:507734] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2024-04-09 02:35:53.034 plugin-container[30800:507734] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2024-04-09 02:35:53.036 plugin-container[30800:507734] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2024-04-09 02:35:53.036 plugin-container[30800:507734] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2024-04-09 02:35:53.036 plugin-container[30800:507748] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2024-04-09 02:35:53.036 plugin-container[30800:507748] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2024-04-09 02:35:53.125 plugin-container[30803:507770] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2024-04-09 02:35:53.125 plugin-container[30803:507770] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2024-04-09 02:35:53.127 plugin-container[30803:507770] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2024-04-09 02:35:53.127 plugin-container[30803:507770] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2024-04-09 02:35:53.127 plugin-container[30803:507774] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2024-04-09 02:35:53.127 plugin-container[30803:507774] nil host used in call to allowsAnyHTTPSCertificateForHost:
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript warning: https://g.alicdn.com/AWSC/et/1.77.4/et_n.js, line 6: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://g.alicdn.com/AWSC/et/1.77.4/et_n.js, line 6: WebGL context was lost.
+JavaScript warning: https://g.alicdn.com/AWSC/et/1.77.4/et_n.js, line 8: WebGL context was lost.
+JavaScript warning: https://g.alicdn.com/AWSC/et/1.77.4/et_n.js, line 4: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://bqq.gtimg.com/qidian/src/wpav2/dist/4.2.0/pk1_v1.js, line 1: unreachable code after return statement
+JavaScript warning: https://bqq.gtimg.com/qidian/src/wpav2/dist/4.2.0/pk1_v1.js, line 1: unreachable code after return statement
+JavaScript warning: https://bqq.gtimg.com/qidian/src/wpav2/dist/4.2.0/pk1_v1.js, line 1: unreachable code after return statement
+JavaScript warning: https://bqq.gtimg.com/qidian/src/wpav2/dist/4.2.0/pk1_v1.js, line 1: unreachable code after return statement
+JavaScript warning: https://webpage.qidian.qq.com/qidian/chatv3-gray/js/chunk-vendors.4821ab84.js, line 1: asm.js type error: expecting argument type declaration for 'e' of the form 'arg = arg|0' or 'arg = +arg' or 'arg = fround(arg)'
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://passport.hqew.com."
+JavaScript warning: https://res-js.hqewimg.com/res/passport/js/login_base.js?v=000a15b0-b24b-4329-bf5b-613cae564697, line 927: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://passport.hqew.com."
+[GFX1-]: Unrecognized feature ACCELERATED_CANVAS2D
+JavaScript warning: https://bqq.gtimg.com/qidian/src/wpav2/dist/4.2.0/pk1_v1.js, line 1: unreachable code after return statement
+JavaScript warning: https://bqq.gtimg.com/qidian/src/wpav2/dist/4.2.0/pk1_v1.js, line 1: unreachable code after return statement
+JavaScript warning: https://bqq.gtimg.com/qidian/src/wpav2/dist/4.2.0/pk1_v1.js, line 1: unreachable code after return statement
+JavaScript warning: https://bqq.gtimg.com/qidian/src/wpav2/dist/4.2.0/pk1_v1.js, line 1: unreachable code after return statement
+JavaScript warning: https://webpage.qidian.qq.com/qidian/chatv3-gray/js/chunk-vendors.4821ab84.js, line 1: asm.js type error: expecting argument type declaration for 'e' of the form 'arg = arg|0' or 'arg = +arg' or 'arg = fround(arg)'
+JavaScript warning: https://bqq.gtimg.com/qidian/src/wpav2/dist/4.2.0/pk1_v1.js, line 1: unreachable code after return statement
+JavaScript warning: https://bqq.gtimg.com/qidian/src/wpav2/dist/4.2.0/pk1_v1.js, line 1: unreachable code after return statement
+JavaScript warning: https://bqq.gtimg.com/qidian/src/wpav2/dist/4.2.0/pk1_v1.js, line 1: unreachable code after return statement
+JavaScript warning: https://bqq.gtimg.com/qidian/src/wpav2/dist/4.2.0/pk1_v1.js, line 1: unreachable code after return statement
+JavaScript warning: https://webpage.qidian.qq.com/qidian/chatv3-gray/js/chunk-vendors.4821ab84.js, line 1: asm.js type error: expecting argument type declaration for 'e' of the form 'arg = arg|0' or 'arg = +arg' or 'arg = fround(arg)'
+JavaScript warning: https://bqq.gtimg.com/qidian/src/wpav2/dist/4.2.0/pk1_v1.js, line 1: unreachable code after return statement
+JavaScript warning: https://bqq.gtimg.com/qidian/src/wpav2/dist/4.2.0/pk1_v1.js, line 1: unreachable code after return statement
+JavaScript warning: https://bqq.gtimg.com/qidian/src/wpav2/dist/4.2.0/pk1_v1.js, line 1: unreachable code after return statement
+JavaScript warning: https://bqq.gtimg.com/qidian/src/wpav2/dist/4.2.0/pk1_v1.js, line 1: unreachable code after return statement
+JavaScript warning: https://webpage.qidian.qq.com/qidian/chatv3-gray/js/chunk-vendors.4821ab84.js, line 1: asm.js type error: expecting argument type declaration for 'e' of the form 'arg = arg|0' or 'arg = +arg' or 'arg = fround(arg)'
+JavaScript warning: https://bqq.gtimg.com/qidian/src/wpav2/dist/4.2.0/pk1_v1.js, line 1: unreachable code after return statement
+JavaScript warning: https://bqq.gtimg.com/qidian/src/wpav2/dist/4.2.0/pk1_v1.js, line 1: unreachable code after return statement
+JavaScript warning: https://bqq.gtimg.com/qidian/src/wpav2/dist/4.2.0/pk1_v1.js, line 1: unreachable code after return statement
+JavaScript warning: https://bqq.gtimg.com/qidian/src/wpav2/dist/4.2.0/pk1_v1.js, line 1: unreachable code after return statement
+JavaScript warning: https://webpage.qidian.qq.com/qidian/chatv3-gray/js/chunk-vendors.4821ab84.js, line 1: asm.js type error: expecting argument type declaration for 'e' of the form 'arg = arg|0' or 'arg = +arg' or 'arg = fround(arg)'
+JavaScript warning: https://webpage.qidian.qq.com/qidian/chatv3-gray/js/chunk-vendors.4821ab84.js, line 1: asm.js type error: expecting argument type declaration for 'e' of the form 'arg = arg|0' or 'arg = +arg' or 'arg = fround(arg)'
+JavaScript warning: https://webpage.qidian.qq.com/qidian/chatv3-gray/js/chunk-vendors.4821ab84.js, line 1: asm.js type error: expecting argument type declaration for 'e' of the form 'arg = arg|0' or 'arg = +arg' or 'arg = fround(arg)'
+JavaScript warning: https://webpage.qidian.qq.com/qidian/chatv3-gray/js/chunk-vendors.4821ab84.js, line 1: asm.js type error: expecting argument type declaration for 'e' of the form 'arg = arg|0' or 'arg = +arg' or 'arg = fround(arg)'
+1712649212077	Marionette	INFO	Stopped listening on port 62715
