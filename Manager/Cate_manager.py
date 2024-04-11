@@ -297,7 +297,7 @@ def filterNeeds():
 
 # delet finished ppn
 def deletFinished_ppn():
-    wait_file = PathHelp.get_file_path(None, 'TLK240403.xlsx')
+    wait_file = PathHelp.get_file_path(None, 'TLK240409.xlsx')
     waiting_ppns = ExcelHelp.read_sheet_content_by_name(wait_file, 'source')
     history_files = ["/Users/liuhe/Desktop/CalcitrapaAIProject/T联科/TLK240320.xlsx",
                      "/Users/liuhe/Desktop/CalcitrapaAIProject/T联科/TLK240321.xlsx",
@@ -307,7 +307,10 @@ def deletFinished_ppn():
                      "/Users/liuhe/Desktop/CalcitrapaAIProject/T联科/TLK240328.xlsx",
                      "/Users/liuhe/Desktop/CalcitrapaAIProject/T联科/TLK240329.xlsx",
                      PathHelp.get_file_path(None, 'TLK240401.xlsx'),
-                     PathHelp.get_file_path(None, 'TLK240402.xlsx')
+                     PathHelp.get_file_path(None, 'TLK240402.xlsx'),
+                     PathHelp.get_file_path(None, 'TLK240403.xlsx'),
+                     PathHelp.get_file_path(None, 'TLK240407.xlsx'),
+                     PathHelp.get_file_path(None, 'TLK240408.xlsx')
                      ]
     history_ppns = []
     for temp_file in history_files:
