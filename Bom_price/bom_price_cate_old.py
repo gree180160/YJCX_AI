@@ -3,7 +3,7 @@ import random
 import ssl
 import time
 
-import undetected_chromedriver as uc
+from WRTools import ChromeDriverManager
 from selenium.webdriver.common.by import By
 from WRTools import LogHelper, PathHelp, ExcelHelp, WaitHelp
 from Manager import AccManage, TaskManager
@@ -11,7 +11,7 @@ import bom_price_info
 
 ssl._create_default_https_context = ssl._create_unverified_context
 
-driver = uc.Chrome(use_subprocess=True)
+driver = ChromeDriverManager.getWebDriver(1)
 driver.set_page_load_timeout(120)
 # logic
 

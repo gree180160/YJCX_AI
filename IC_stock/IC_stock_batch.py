@@ -2,7 +2,7 @@
 #  只保留第一页的记录，只用IC 交易网中的现货排名、ICCP、SSCP中  库存数量  最多那一家，的批次和数量
 from selenium.webdriver.common.by import By
 import random
-import undetected_chromedriver as uc
+from WRTools import ChromeDriverManager
 import ssl
 from IC_stock.IC_Stock_Info import IC_Stock_Info
 from Manager import AccManage, URLManager, TaskManager
@@ -20,20 +20,9 @@ total_page = 1
 current_page = 1
 VerificationCodePage = 0
 accouts_arr = [[AccManage.IC_stock['n'], AccManage.IC_stock['p']]]
-# driver_option = webdriver.ChromeOptions()
-# driver_option.add_argument(f'--proxy-server=http://{IPHelper.getRandowCityIP()}')
-# driver_option.add_argument("–incognito")
-# #  等待初始HTML文档完全加载和解析，
-# driver_option.page_load_strategy = 'eager'
-# driver_option.add_argument(f'user-agent="{UserAgentHelper.getRandowUA_Mac()}"')
-# prefs = {"profile.managed_default_content_settings.images": 2}
-# driver_option.add_experimental_option('prefs', prefs)
+
 try:
-    if AccManage.chromedriver_path.__len__() > 0:
-        driver = uc.Chrome(use_subprocess=True,
-                           driver_executable_path=AccManage.chromedriver_path)  # todo chromedriverPath
-    else:
-        driver = uc.Chrome(use_subprocess=True)
+    driver = ChromeDriverManager.getWebDriver(1)
     driver.set_page_load_timeout(1000)
 except Exception as e:
     print(e)

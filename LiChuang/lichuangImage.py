@@ -2,7 +2,7 @@ import ssl
 import sys
 from urllib import parse
 from urllib.parse import urlparse
-import undetected_chromedriver as uc
+from WRTools import ChromeDriverManager
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from WRTools import ExcelHelp, LogHelper, PathHelp, WaitHelp
@@ -14,7 +14,7 @@ import re
 ssl._create_default_https_context = ssl._create_unverified_context
 
 driver_option = webdriver.ChromeOptions()
-driver = uc.Chrome(use_subprocess=True, driver_executable_path=AccManage.chromedriver_path)
+driver = ChromeDriverManager.getWebDriver(1)
 driver.set_page_load_timeout(480)
 
 default_url = 'https://www.szlcsc.com/'

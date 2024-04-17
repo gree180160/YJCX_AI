@@ -3,7 +3,7 @@ import time
 from WRTools import ExcelHelp, WaitHelp, PathHelp, MySqlHelp_recommanded, EmailHelper, LogHelper
 from selenium.webdriver.common.by import By
 import random
-import undetected_chromedriver as uc
+from WRTools import ChromeDriverManager
 import ssl
 import os
 from Manager import AccManage, TaskManager, URLManager
@@ -16,10 +16,7 @@ total_page = 1
 current_page = 1
 accouts_arr = [[AccManage.IC_hot['n'], AccManage.IC_hot['p']]]
 
-if AccManage.chromedriver_path.__len__() > 0:
-    driver = uc.Chrome(use_subprocess=True, driver_executable_path=AccManage.chromedriver_path) #todo chromedriverPath
-else:
-    driver = uc.Chrome(use_subprocess=True)
+driver = ChromeDriverManager.getWebDriver(1)
 driver.set_window_size(height=800, width=1200)
 current_cate_has_date = True
 

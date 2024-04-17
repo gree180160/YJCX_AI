@@ -5,7 +5,7 @@ import time
 import threading
 from bs4 import BeautifulSoup
 import requests
-from WRTools import IPHelper, UserAgentHelper, LogHelper, WaitHelp, EmailHelper, ExcelHelp, PathHelp
+from WRTools import LogHelper, WaitHelp, EmailHelper, ExcelHelp, PathHelp
 from Manager import URLManager
 
 import json
@@ -22,13 +22,6 @@ result_save_file = PathHelp.get_file_path(None, 'TNXP.xlsx')
 
 log_file = PathHelp.get_file_path('Octopart_category', 'octopart_key_cate_log.txt')
 
-# headers = {'User-Agent': UserAgentHelper.getRandowUA(),
-#            'cache-control':'no-cache',
-#             'Accept-Language': 'zh-CN,zh-Hans;q=0.9',
-#             'Content-Type': 'text/html; charset=utf-8',
-#             'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
-#             'upgrade-insecure-requests': '1',
-#             'Connection': 'keep-alive'}
 headers = {}
 
 totol_page = 1
@@ -82,8 +75,6 @@ def has_content(soup) -> bool:
 def get_category(key_index, key_name,manu_ids):
     global headers
     global current_page
-    # headers['User-Agent'] = UserAgentHelper.getRandowUA()
-    # headers['Connection'] = "close"
     while current_page <= totol_page:
         print(f'key_index is: {key_index} key_name is: {key_name} page is: {current_page}, toalpage is:{totol_page}')
         url = URLManager.octopart_get_page_url(key_name=key_name, page=1, manu=URLManager.Octopart_manu.NXP)

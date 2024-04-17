@@ -4,7 +4,7 @@ import time
 
 from selenium.webdriver.common.by import By
 import random
-import undetected_chromedriver as uc
+from WRTools import ChromeDriverManager
 import ssl
 from IC_stock.IC_Stock_Info import IC_Stock_Info
 from Manager import AccManage, URLManager, TaskManager
@@ -12,25 +12,21 @@ from WRTools import ExcelHelp, WaitHelp, PathHelp, EmailHelper, MySqlHelp_recomm
 
 
 ssl._create_default_https_context = ssl._create_unverified_context
-sourceFile_dic = {'fileName': PathHelp.get_file_path(None, 'TLK240407.xlsx'),
-                  'sourceSheet': 'ppn',
+
+sourceFile_dic = {'fileName': PathHelp.get_file_path('WangYi', 'WangYiTask2024-03.xlsx'),
+                  'sourceSheet': 'ppn2',
                   'colIndex': 1,
                   'startIndex': 0,
-                  'endIndex': 41}
-task_name = 'TLK240407'
+                  'endIndex': 8}
+task_name = 'WangYi202404'
 
 total_page = 1
 current_page = 1
 VerificationCodePage = 0
-accouts_arr = [[AccManage.IC_stock_C['n'], AccManage.IC_stock_C['p']]]
+accouts_arr = [[AccManage.IC_stock_1['n'], AccManage.IC_stock_1['p']]]
 
 try:
-    if AccManage.chromedriver_path.__len__() > 0:
-        driver = uc.Chrome(use_subprocess=True,
-                           driver_executable_path=AccManage.chromedriver_path)  # todo chromedriverPath
-    else:
-        driver = uc.Chrome(use_subprocess=True)
-    driver.set_page_load_timeout(1000)
+    driver = ChromeDriverManager.getWebDriver(1)
 except Exception as e:
     print(e)
 

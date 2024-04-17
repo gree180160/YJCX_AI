@@ -4,14 +4,14 @@ import math
 import time
 from datetime import datetime, timedelta
 
-import undetected_chromedriver as uc
+from WRTools import ChromeDriverManager
 from selenium.webdriver.common.by import By
 
 from WRTools import LogHelper, ExcelHelp, WaitHelp, EmailHelper, PathHelp
 
 ssl._create_default_https_context = ssl._create_unverified_context
 
-driver = uc.Chrome(use_subprocess=True)
+driver = ChromeDriverManager.getWebDriver(1)
 driver.set_page_load_timeout(1000)
 
 default_url = 'https://www.b2b-center.ru/'

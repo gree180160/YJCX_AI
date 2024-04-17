@@ -1,6 +1,6 @@
 import ssl
 import time
-import undetected_chromedriver as uc
+from WRTools import ChromeDriverManager
 import re
 from selenium.webdriver.common.by import By
 from selenium import webdriver
@@ -10,15 +10,7 @@ from WRTools import LogHelper, ExcelHelp, WaitHelp, EmailHelper, PathHelp
 
 ssl._create_default_https_context = ssl._create_unverified_context
 
-# driver_option = webdriver.ChromeOptions()
-# driver_option.add_argument("–incognito")  #隐身模式
-# 等待初始HTML文档完全加载和解析，
-# driver_option.page_load_strategy = 'eager'
-# fire_options = webdriver.FirefoxOptions()
-# fire_options.add_argument('--headless')
-# fire_options.add_argument('blink-settings=imagesEnabled=false')
-# driver = webdriver.Firefox(options=fire_options)
-driver = uc.Chrome(use_subprocess=True)
+driver = ChromeDriverManager.getWebDriver(1)
 driver.set_page_load_timeout(1000)
 # logic
 default_url = 'https://octopart.com/'

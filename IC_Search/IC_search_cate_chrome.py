@@ -1,7 +1,7 @@
 from WRTools import ExcelHelp, WaitHelp, PathHelp, MySqlHelp_recommanded, DDDDOCR, ImageHelp, EmailHelper
 from selenium.webdriver.common.by import By
 import random
-import undetected_chromedriver as uc
+from WRTools import ChromeDriverManager
 import ssl
 import shutil
 import os
@@ -16,7 +16,7 @@ current_page = 1
 accouts_arr = [[AccManage.IC_hot['n'], AccManage.IC_hot['p']]]
 no_data_url = 'https://icpi.ic.net.cn/'
 
-driver = uc.Chrome(use_subprocess=True)
+driver = ChromeDriverManager.getWebDriver(1)
 driver.set_window_size(height=800, width=1200)
 current_cate_has_date = True
 

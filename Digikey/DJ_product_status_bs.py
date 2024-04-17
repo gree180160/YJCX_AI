@@ -3,7 +3,7 @@ import time
 
 from bs4 import BeautifulSoup
 import requests
-from WRTools import IPHelper, UserAgentHelper, LogHelper, WaitHelp, ExcelHelp, PathHelp
+from WRTools import LogHelper, WaitHelp, ExcelHelp, PathHelp
 import os
 
 
@@ -20,7 +20,7 @@ result_save_file = PathHelp.get_file_path('TInfenion_40H', 'digikey_status.xlsx'
 
 log_file = '//Digikey/DJ_product_status_log.txt'
 cookies = {'fc_locale':'zh-CN', 'fc_timezone':'Asia%2FShanghai'}
-headers = {'User-Agent': UserAgentHelper.getRandowUA(),
+headers = {
                'Accept-Language': 'zh-CN,zh-Hans;q=0.9',
                'Accept-Encoding': 'gzip,deflate, br',
                'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
@@ -28,7 +28,6 @@ headers = {'User-Agent': UserAgentHelper.getRandowUA(),
 default_url = 'https://www.digikey.com/'
 
 def get_dg_product_status(cate_index, cate_name):
-    headers['User-Agent'] = UserAgentHelper.getRandowUA_Mac()
     url = f"https://www.digikey.cn/en/products/detail/*/{cate_name}/4914222?amp%3BWT.z_header=search_go"
     print(f'url is: {url}')
     try:

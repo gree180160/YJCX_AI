@@ -4,10 +4,10 @@ import time
 
 from selenium import webdriver
 from selenium.webdriver.common.by import By
-import undetected_chromedriver as uc
+from WRTools import ChromeDriverManager
 import ssl
 from Manager import AccManage, TaskManager
-from WRTools import IPHelper, UserAgentHelper, ExcelHelp, WaitHelp, PathHelp, LogHelper
+from WRTools import ExcelHelp, WaitHelp, PathHelp, LogHelper
 import time
 
 ssl._create_default_https_context = ssl._create_unverified_context
@@ -27,14 +27,12 @@ total_page = 1
 current_page = 1
 
 driver_option = webdriver.ChromeOptions()
-driver_option.add_argument(f'--proxy-server=http://{IPHelper.getRandowCityIP()}')
 driver_option.add_argument("–incognito")
 #  等待初始HTML文档完全加载和解析，
 driver_option.page_load_strategy = 'eager'
-driver_option.add_argument(f'user-agent="{UserAgentHelper.getRandowUA_Mac()}"')
 prefs = {"profile.managed_default_content_settings.images": 2}
 driver_option.add_experimental_option('prefs', prefs)
-driver = uc.Chrome(use_subprocess=True)
+driver = ChromeDriverManager.getWebDriver(1)
 driver.set_page_load_timeout(1000)
 
 

@@ -5,7 +5,7 @@ import re
 import datetime
 from selenium.webdriver.common.by import By
 import time
-import undetected_chromedriver as uc
+from WRTools import ChromeDriverManager
 import ssl
 from WRTools import ExcelHelp, WaitHelp, PathHelp, EmailHelper, StringHelp, MySqlHelp_recommanded, RateHelp
 from Manager import AccManage
@@ -30,7 +30,7 @@ current_page = 1
 total_page = 0
 
 try:
-    driver = uc.Chrome(use_subprocess=True)
+    driver = ChromeDriverManager.getWebDriver(1)
     driver.set_page_load_timeout(1000)
 except Exception as e:
     print(e)

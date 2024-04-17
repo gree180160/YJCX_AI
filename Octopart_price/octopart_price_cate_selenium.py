@@ -2,7 +2,7 @@ import base64
 import ssl
 import sys
 
-import undetected_chromedriver as uc
+from WRTools import ChromeDriverManager
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from WRTools import ExcelHelp, LogHelper, PathHelp, WaitHelp, MySqlHelp_recommanded, EmailHelper
@@ -13,8 +13,7 @@ import time
 ssl._create_default_https_context = ssl._create_unverified_context
 
 driver_option = webdriver.ChromeOptions()
-# driver_option.add_argument("Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/117.0")
-driver = uc.Chrome(use_subprocess=True, options=driver_option)
+driver = ChromeDriverManager.getWebDriver(1)
 driver.set_page_load_timeout(480)
 # logic
 # https://octopart.com/search?q=8P34S1204NLGI8&currency=USD&specs=0

@@ -12,15 +12,15 @@ ssl._create_default_https_context = ssl._create_unverified_context
 sourceFile_dic = {'fileName': PathHelp.get_file_path(None, 'TJoytechStock.xlsx'),
                   'sourceSheet': 'ppn',
                   'colIndex': 1,
-                  'startIndex': 0,
-                  'endIndex': 300}
+                  'startIndex': 900,
+                  'endIndex': 1200}
 task_name = 'WangYi202404'
 
-accouts_arr = [AccManage.HQ_hot_1['n'], AccManage.HQ_hot_1['p']]
+accouts_arr = [AccManage.HQ_hot_4['n'], AccManage.HQ_hot_4['p']]
 
 login_url = "https://passport.hqew.com/login"
 
-driver = ChromeDriverManager.getWebDriver(1)
+driver = ChromeDriverManager.getWebDriver(4)
 driver.set_window_size(height=800, width=1200)
 current_cate_has_date = True
 

@@ -1,6 +1,6 @@
 # 根据关键字查找P/N, manu
 from bs4 import BeautifulSoup
-from WRTools import IPHelper, UserAgentHelper, LogHelper, PathHelp, EmailHelper, ExcelHelp
+from WRTools import LogHelper, PathHelp, EmailHelper, ExcelHelp
 import requests
 import re
 import base64
@@ -17,7 +17,7 @@ result_save_file = PathHelp.get_file_path('TInfenion_40H', 'digikey_status.xlsx'
 log_file = '//Octopart_category/octopart_key_cate_log.txt'
 
 cookies = {'fc_locale':'zh-CN', 'fc_timezone':'Asia%2FShanghai'}
-headers = {'User-Agent': UserAgentHelper.getRandowUA(),
+headers = {
                'Accept-Language': 'zh-CN,zh-Hans;q=0.9',
                'Accept-Encoding': 'gzip,deflate, br',
                'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',

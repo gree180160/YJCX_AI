@@ -4,7 +4,7 @@ import time
 
 from selenium.webdriver.common.by import By
 import random
-import undetected_chromedriver as uc
+from WRTools import ChromeDriverManager
 import ssl
 from IC_stock.IC_Stock_Info import IC_Stock_Info
 from Manager import AccManage, URLManager
@@ -32,11 +32,7 @@ default_url = 'https://www.rusprofile.ru/search-advanced'
 log_file = PathHelp.get_file_path('RUSProfile', 'DJ_product_status_log.txt')
 
 try:
-    if AccManage.chromedriver_path.__len__() > 0:
-        driver = uc.Chrome(use_subprocess=True,
-                           driver_executable_path=AccManage.chromedriver_path)  # todo chromedriverPath
-    else:
-        driver = uc.Chrome(use_subprocess=True)
+    driver = ChromeDriverManager.getWebDriver(1)
     driver.set_page_load_timeout(1000)
 except Exception as e:
     print(e)

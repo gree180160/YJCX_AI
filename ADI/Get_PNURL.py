@@ -1,6 +1,6 @@
 # 根据url查找P/N
 from bs4 import BeautifulSoup
-from WRTools import IPHelper, UserAgentHelper, LogHelper, PathHelp, QGHelp, WaitHelp, ExcelHelp
+from WRTools import LogHelper, PathHelp, WaitHelp, ExcelHelp
 from urllib.parse import urlparse, parse_qs, parse_qsl
 import os
 import re
@@ -13,8 +13,7 @@ ssl._create_default_https_context = ssl._create_unverified_context
 result_save_file = PathHelp.get_file_path('ADI', 'ADI_URLS&PNS.xlsx')
 log_file = '//ADI/ADI_pn_log.txt'
 html_file_path = '/Users/liuhe/Desktop/ADI_html_files'
-headers = {'User-Agent': UserAgentHelper.getRandowUA(),
-               'Accept-Language': 'en,zh;q=0.9,en-US;q=0.8,zh-CN;q=0.7',
+headers = {'Accept-Language': 'en,zh;q=0.9,en-US;q=0.8,zh-CN;q=0.7',
                'Accept-Encoding': 'gzip,deflate, br',
                'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'}
 waitting_urls = []
@@ -91,7 +90,6 @@ def local_html_file():
 # 分析 online——url info
 def links():
     links = ExcelHelp.read_col_content(result_save_file, sheet_name='first_level', col_index=1)
-    headers['User-Agent'] = UserAgentHelper.getRandowUA()
     for (index, url) in enumerate(links):
         print(f'index is :{index} url is : {url}')
         try:
@@ -113,7 +111,6 @@ def links():
 def deal_sub():
     global waitting_urls
     links = ExcelHelp.read_col_content(result_save_file, sheet_name='second_level', col_index=1)
-    headers['User-Agent'] = UserAgentHelper.getRandowUA()
     waitting_urls = links
     while waitting_urls.__len__() > 0:
         current_url = waitting_urls[0]

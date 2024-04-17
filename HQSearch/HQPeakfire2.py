@@ -2,46 +2,25 @@ import time
 
 from WRTools import ExcelHelp, WaitHelp, PathHelp, MySqlHelp_recommanded, LogHelper
 from selenium.webdriver.common.by import By
-from undetected_chromedriver import Chrome, ChromeOptions
-from selenium import webdriver
-
+from WRTools import ChromeDriverManager
 import ssl
 from Manager import AccManage, TaskManager, URLManager
-
 
 log_file = PathHelp.get_file_path('IC_search', 'IC_search_Image_log.txt')
 ssl._create_default_https_context = ssl._create_unverified_context
 
-sourceFile_dic = {'fileName': PathHelp.get_file_path(None, 'TLK240402.xlsx'),
+sourceFile_dic = {'fileName': PathHelp.get_file_path(None, 'TJoytechStock.xlsx'),
                   'sourceSheet': 'ppn',
                   'colIndex': 1,
-                  'startIndex': 0,
-                  'endIndex': 34}
-task_name = 'TLK240402'
+                  'startIndex': 300,
+                  'endIndex': 600}
+task_name = 'WangYi202404'
 
-accouts_arr = [AccManage.HQ_hot_F['n'], AccManage.HQ_hot_F['p']]
+accouts_arr = [AccManage.HQ_hot_2['n'], AccManage.HQ_hot_2['p']]
 
 login_url = "https://passport.hqew.com/login"
 
-# try:
-#     options = ChromeOptions()
-#     options.browser_type = 'firefox'
-#     driver = Chrome(options=options, use_subprocess=True)
-# except Exception as e:
-#     print(e)
-
-# 更改User Agent
-options = webdriver.FirefoxOptions()
-options.set_preference("general.useragent.override", "user-agent-string")
-driver = webdriver.Firefox(options=options)
-
-# 禁用自动化扩展
-profile = webdriver.FirefoxProfile()
-profile.set_preference("dom.webdriver.enabled", False)
-profile.set_preference("dom.webnotifications.enabled", False)
-options = webdriver.FirefoxOptions()
-options.profile = profile
-driver = webdriver.Firefox(options=options)
+driver = ChromeDriverManager.getWebDriver(2)
 driver.set_window_size(height=800, width=1200)
 current_cate_has_date = True
 
@@ -60,6 +39,10 @@ def login_action(aim_url):
         time.sleep(2.0)
         driver.find_element(by=By.ID, value='J_btnLogin').click()
         WaitHelp.waitfor_ICHot(True, False)
+    # if driver.current_url.startswith('https://ibsv3.hqew.com'):  # 首次登录
+    #     driver.get(aim_url)
+    # elif driver.current_url.startswith('https://fh.hqew.com/detail'):  # 查询过程中出现登录
+    #     driver.get(aim_url)
 
 
 def has_hotData() -> bool:

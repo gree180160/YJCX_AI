@@ -3,7 +3,7 @@ import time
 
 from bs4 import BeautifulSoup
 import requests
-from WRTools import UserAgentHelper, LogHelper, WaitHelp, ExcelHelp, PathHelp,MySqlHelp_recommanded
+from WRTools import LogHelper, WaitHelp, ExcelHelp, PathHelp,MySqlHelp_recommanded
 from Findchips_stock.findchips_stock_info import findchips_stock_info_onePart, findchips_stock_info_oneSupplier
 from Manager import TaskManager
 
@@ -18,7 +18,7 @@ sourceFile_dic = {'fileName': PathHelp.get_file_path(None, f'{TaskManager.Taskma
 
 log_file = PathHelp.get_file_path('Findchips_stock', 'findchips_stock_log.txt')
 cookies = {'fc_locale':'zh-CN', 'fc_timezone':'Asia%2FShanghai'}
-headers = {'User-Agent': UserAgentHelper.getRandowUA(),
+headers = {
                'Accept-Language': 'zh-CN,zh-Hans;q=0.9',
                'Accept-Encoding': 'gzip,deflate, br',
                'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
@@ -27,7 +27,6 @@ default_url = 'https://www.findchips.com/'
 
 
 def get_findchips_stock(cate_index, cate_name, send_email):
-    headers['User-Agent'] = UserAgentHelper.getRandowUA_Mac()
     url = f"https://www.findchips.com/search/{cate_name}"
     try:
         req = requests.get(url=url, headers=headers, cookies=cookies, timeout=(240, 360))

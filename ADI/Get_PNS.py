@@ -1,7 +1,7 @@
-import undetected_chromedriver as uc
+from WRTools import ChromeDriverManager
 from selenium import webdriver
 from selenium.webdriver.common.by import By
-from WRTools import IPHelper, UserAgentHelper, LogHelper, PathHelp, WaitHelp, ExcelHelp
+from WRTools import LogHelper, PathHelp, WaitHelp, ExcelHelp
 import os
 import re
 import ssl
@@ -12,14 +12,7 @@ url_file = PathHelp.get_file_path('ADI', 'ADI_URLS&PNS.xlsx')
 log_file = '//ADI/ADI_pn_log.txt'
 default_url = 'https://www.analog.com/cn/index.html'
 
-# driver_option = webdriver.ChromeOptions()
-# driver_option.add_argument(f'--proxy-server=http://{IPHelper.getRandowCityIP()}')
-# #  等待初始HTML文档完全加载和解析，
-# driver_option.page_load_strategy = 'eager'
-# driver_option.add_argument(f'user-agent="{UserAgentHelper.getRandowUA_Mac()}"')
-# prefs = {"profile.managed_default_content_settings.images": 2}
-# driver_option.add_experimental_option('prefs', prefs)
-driver = uc.Chrome(use_subprocess=True)
+driver = ChromeDriverManager.getWebDriver(1)
 driver.set_page_load_timeout(1000)
 
 
@@ -91,7 +84,6 @@ def main():
 
 
 if __name__ == "__main__":
-    UserAgentHelper.driver_update_UA(webdriver=driver)
     driver.get(default_url)
     WaitHelp.waitfor_octopart(True, False)
     main()

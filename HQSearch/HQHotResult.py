@@ -12,11 +12,10 @@ from openpyxl import workbook, load_workbook, Workbook
 import base64
 from WRTools import PathHelp, ExcelHelp, MySqlHelp_recommanded
 from Manager import TaskManager
-
 # cate_source_file = PathHelp.get_file_path(None, 'TLK240322.xlsx') #PathHelp.get_file_path(None, '/Users/liuhe/Downloads/TTIMilitary.xlsx')
-
-
 # 根据规则匹配判断型号是否符合热度标准。
+
+
 def HQ_hot_result(cate_source_file):
     pps = ExcelHelp.read_col_content(file_name=cate_source_file, sheet_name='ppn', col_index=1)
     manufactures = ExcelHelp.read_col_content(file_name=cate_source_file, sheet_name='ppn', col_index=2)
@@ -78,5 +77,5 @@ def valid_month(month_data: list):
 
 
 if __name__ == "__main__":
-    HQ_hot_result(PathHelp.get_file_path(None, 'TLK240326.xlsx'))
+    HQ_hot_result(PathHelp.get_file_path('WangYi', 'WangYiTask2024-03.xlsx'))
     print('over')

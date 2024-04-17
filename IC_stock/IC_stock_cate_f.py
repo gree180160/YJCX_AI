@@ -4,7 +4,7 @@ import time
 
 from selenium.webdriver.common.by import By
 import random
-import undetected_chromedriver as uc
+from WRTools import ChromeDriverManager
 import ssl
 from IC_stock.IC_Stock_Info import IC_Stock_Info
 from Manager import AccManage, URLManager, TaskManager
@@ -22,12 +22,10 @@ task_name = 'TLK240401'
 total_page = 1
 current_page = 1
 VerificationCodePage = 0
-accouts_arr = [[AccManage.IC_stock_F['n'], AccManage.IC_stock_F['p']]]
+accouts_arr = [[AccManage.IC_stock_2['n'], AccManage.IC_stock_2['p']]]
 
 # 更改User Agent
-options = webdriver.FirefoxOptions()
-options.set_preference("general.useragent.override", "user-agent-string")
-driver = webdriver.Firefox(options=options)
+driver = ChromeDriverManager.getWebDriver(2)
 
 # 禁用自动化扩展
 profile = webdriver.FirefoxProfile()

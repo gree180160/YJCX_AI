@@ -1,11 +1,10 @@
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 import time
-import undetected_chromedriver as uc
+from WRTools import ChromeDriverManager
 import ssl
 import re
-from WRTools import IPHelper, UserAgentHelper, WaitHelp, EmailHelper, LogHelper
-from IC_stock import IC_stock_excel_read, IC_Stock_excel_write
+from WRTools import UserAgentHelper, WaitHelp, EmailHelper, LogHelper
 from openpyxl import load_workbook
 import json
 
@@ -19,7 +18,7 @@ log_file = '//TI/TI_buy_log.txt'
 
 ssl._create_default_https_context = ssl._create_unverified_context
 option = webdriver.ChromeOptions()
-driver = uc.Chrome(use_subprocess=True)
+driver = ChromeDriverManager.getWebDriver(1)
 default_url = 'https://www.ti.com.cn/sitesearch/zh-cn/docs/universalsearch.tsp?langPref=zh-CN&searchTerm=TCAN1043DEVM&nr=16#q=TCAN1043DEVM&numberOfResults=25'
 
 
