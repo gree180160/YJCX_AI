@@ -6,14 +6,14 @@ from WRTools import ChromeDriverManager
 import ssl
 from Manager import AccManage, TaskManager, URLManager
 
-log_file = PathHelp.get_file_path('IC_search', 'IC_search_Image_log.txt')
+log_file = PathHelp.get_file_path('HQSearch', 'HQPeakfireLog.txt')
 ssl._create_default_https_context = ssl._create_unverified_context
 
-sourceFile_dic = {'fileName': PathHelp.get_file_path(None, 'TJoytechStock.xlsx'),
+sourceFile_dic = {'fileName': PathHelp.get_file_path(None, 'TLK2404151617.xlsx'),
                   'sourceSheet': 'ppn',
                   'colIndex': 1,
-                  'startIndex': 600,
-                  'endIndex': 900}
+                  'startIndex': 100,
+                  'endIndex': 150}
 task_name = 'WangYi202404'
 
 accouts_arr = [AccManage.HQ_hot_3['n'], AccManage.HQ_hot_3['p']]
@@ -38,11 +38,7 @@ def login_action(aim_url):
         driver.find_element(By.ID, value='J_checkpripolicy_account').click() # 协议
         time.sleep(2.0)
         driver.find_element(by=By.ID, value='J_btnLogin').click()
-        WaitHelp.waitfor_ICHot(True, False)
-    # if driver.current_url.startswith('https://ibsv3.hqew.com'):  # 首次登录
-    #     driver.get(aim_url)
-    # elif driver.current_url.startswith('https://fh.hqew.com/detail'):  # 查询过程中出现登录
-    #     driver.get(aim_url)
+        WaitHelp.waitfor(True, False)
 
 
 def has_hotData() -> bool:

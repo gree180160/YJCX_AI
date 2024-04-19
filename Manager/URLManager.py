@@ -143,6 +143,16 @@ def HQ_hot_url(ppn: str):
     search_url = f'https://fh.hqew.com/detail/{cate_str}.html'
     return search_url
 
+# https://s.hqew.com/ULN2003ADR_10.html
+def HQ_stock_url(ppn: str):
+    cate_str = str(ppn)
+    cate_str = cate_str.replace('/', '%2F')
+    cate_str = cate_str.replace('#', '%23')
+    cate_str = cate_str.replace('+', '%2B')
+    cate_str = cate_str.replace(',', '%2C')
+    search_url = f'https://s.hqew.com/{cate_str}_10.html'
+    return search_url
+
 
 
 if __name__ == "__main__":

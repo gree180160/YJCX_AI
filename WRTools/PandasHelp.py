@@ -21,17 +21,35 @@ def read_sheet_content(file_name):
 
 
 def comineCVS():
-    fold = '/Users/liuhe/Desktop/progress/TRUNeed2024-01-19/'
+    fold = '/Users/liuhe/Desktop/重点系列/'
     list_file = os.listdir(fold)  # 返回指定目录
     result = []
+    firt_row = ['制造商零件编号', '制造商', '描述', '库存', '价格']
+    result.append(firt_row)
     for temp_file in list_file:
         if temp_file.__contains__('.csv'):
             sheet_content = read_sheet_content(f"{fold}{temp_file}")
             for row in sheet_content:
-                new_row = [row[3], row[2], row[0]]
+                new_row = [row[3], row[4], row[6], row[7], row[8]]
                 result.append(new_row)
-    ExcelHelp.add_arr_to_sheet(file_name=f'{fold}sum.xlsx', sheet_name='ppn', dim_arr=result)
+    ExcelHelp.add_arr_to_sheet(file_name=f'{fold}TManuAndSeri.xlsx', sheet_name='ppn', dim_arr=result)
+
+
+def octopart_csv_xlsx():
+    fold = '/Users/liuhe/Desktop/CalcitrapaAIProject/TTIStockArror2404/'
+    list_file = os.listdir(fold)  # 返回指定目录
+    save_file = f'{fold}TTISTOCK2404.xlsx'
+    result = []
+    firt_row = ['制造商零件编号', '制造商', '描述','供应商', '价格', '库存']
+    result.append(firt_row)
+    for temp_file in list_file:
+        if temp_file.__contains__('.csv'):
+            sheet_content = read_sheet_content(f"{fold}{temp_file}")
+            for (index, row) in enumerate(sheet_content):
+                new_row = [row[0], row[2], row[5], row[43], row[46], row[49]]
+                result.append(new_row)
+    ExcelHelp.add_arr_to_sheet(file_name=save_file, sheet_name='octopart', dim_arr=result)
 
 
 if __name__ == '__main__':
-    comineCVS()
+    octopart_csv_xlsx()

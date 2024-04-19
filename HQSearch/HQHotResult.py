@@ -32,9 +32,17 @@ def HQ_hot_result(cate_source_file):
                     hot_week = row_content[2]
                     hot_month = row_content[3]
                     week_data = eval(hot_week)
-                    int_week_data = [int(x) for x in week_data]
+                    try:
+                        int_week_data = [int(x) for x in week_data]
+                    except Exception as e:
+                        int_week_data = ['9999', '9999', '9999', '9999', '9999', '9999', '9999', '9999', '9999', '9999', '9999', '9999']
+                        print(f'{ppn_ic} int_week_data error: {e}')
                     month_data = eval(hot_month)
-                    int_month_data = [int(x) for x in month_data]
+                    try:
+                        int_month_data = [int(x) for x in month_data]
+                    except Exception as e:
+                        int_month_data = ['9999', '9999', '9999', '9999', '9999', '9999', '9999', '9999', '9999', '9999', '9999', '9999']
+                        print(f'{ppn_ic} int_month_data error: {e}')
                     if valid_week(int_week_data) and valid_month(int_month_data):
                         hot_result = 1
         result.append([ppn_str, manufactures[index], hot_week, hot_month, hot_result])
@@ -77,5 +85,5 @@ def valid_month(month_data: list):
 
 
 if __name__ == "__main__":
-    HQ_hot_result(PathHelp.get_file_path('WangYi', 'WangYiTask2024-03.xlsx'))
+    HQ_hot_result(PathHelp.get_file_path(None, 'TLK2404151617.xlsx'))
     print('over')

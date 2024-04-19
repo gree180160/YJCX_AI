@@ -79,6 +79,28 @@ def mail_IC_Stock(device):
 
 
 # IC 交易网查库存，出现验证码
+def mail_HQ_hot(device):
+    ret = True
+    try:
+        new_user = '1459287460@qq.com'
+        # msg=MIMEText('填写邮件内容','plain','utf-8')
+        mail_msg = f'<h2><center>HQ hot</center></h2> 设备: {device} 出现check code'
+        msg = MIMEText(mail_msg, 'html', 'utf-8')
+        msg['From'] = formataddr(["From HQ hot", my_sender])  # 括号里的对应发件人邮箱昵称、发件人邮箱账号
+        msg['To'] = formataddr(["river", new_user])  # 括号里的对应收件人邮箱昵称、收件人邮箱账号
+        msg['Subject'] = "HQ hot"  # 邮件的主题，也可以说是标题
+        #  user email
+        server = smtplib.SMTP_SSL("smtp.qq.com", 465)  # 发件人邮箱中的SMTP服务器，端口是465，固定的，不能更改
+        server.login(my_sender, my_pass)  # 括号中对应的是发件人邮箱账号、邮箱密码
+        server.set_debuglevel(1)
+        server.sendmail(my_sender, [new_user], msg.as_string())  # 括号中对应的是发件人邮箱账号、收件人邮箱账号、发送邮件
+        server.quit()  # 关闭连接
+    except Exception as err:  # 如果 try 中的语句没有执行，则会执行下面的 ret=False
+        ret = False
+    return ret
+
+
+# IC 交易网查库存，出现验证码
 def mail_IC_Hot(device):
     ret = True
     try:

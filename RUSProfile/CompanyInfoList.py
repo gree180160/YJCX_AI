@@ -16,7 +16,7 @@ ssl._create_default_https_context = ssl._create_unverified_context
 sourceFile_dic = {'fileName': PathHelp.get_file_path(None, f'TNewBrand.xlsx'),
                   'sourceSheet': 'company',
                   'colIndex': 1,
-                  'startIndex': 958,  #Акционерное Общество Золотые Луга
+                  'startIndex': 1228,  #Акционерное Общество Золотые Луга
                   'endIndex': 1313}
 # sourceFile_dic = {'fileName': PathHelp.get_file_path(None, f'TSamsungStore.xlsx'),
 #                   'sourceSheet': 'buyer',

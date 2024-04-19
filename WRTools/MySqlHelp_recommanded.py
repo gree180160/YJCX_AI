@@ -124,6 +124,10 @@ class DBRecommandChip:
         sql_str = "REPLACE INTO t_ic_des (ppn, manu, todaySearch, todaySearch_person, yesterdaySearch, yesterdaySearch_person, reference_price, week_search, market_hot, risk, mainLand_stock, international_stock, task_name)  VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)"
         self.sql_write(sql_str, data)
 
+    def hq_stock_write(self, data: list):
+        sql_str = "REPLACE INTO t_hq_stock (ppn, std_manu, supplier, sup_manu, batch, stock, packing, param, place, instruction, publish_date, task_name) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)"
+        self.sql_write(sql_str, data)
+
     def hq_hot_write(self, data: list):
         sql_str = "REPLACE INTO t_hq_peakfire (ppn, manu, weak_hot, month_hot, task_name) VALUES (%s, %s, %s, %s, %s)"
         self.sql_write(sql_str, data)
@@ -181,7 +185,6 @@ class DBRecommandChip:
         result = self.sql_read(query)
         print(result)
         return result
-
 
     def ppn_write(self, data: list):
         sql_str = "REPLACE INTO t_ppn (ppn, manu_id, manu_name, source) VALUES (%s, %s, %s, %s)"
@@ -242,8 +245,6 @@ if __name__ == "__main__":
   #           row_info = [row[0], row[1], row[2], row[3], row[4], row[5], row[6], row[8], 'newbrand_202401']
   #           result.append(row_info)
   #   DBRecommandChip().wheat_buyer_write(result)
-
-
-    arr = [["SN74LVC00APWR","","TEXAS INSTRUMENTS","北京远大创新科技有限公司","0","1","0","0","0","","","102000","test"],
-    ["SN74LVC00APWR","","TEXAS INSTRUMENTS","深圳市与众电子有限公司","0","1","0","0","0","","","80000","test"]]
-    manager.ic_stock(arr)
+    arr = [['MXL1535EEWI+T', 'Analog Devices', '深圳市万电科技有限公司', 'ST/意法', '21+', '8785', 'LQFP48', '', '深圳', '原装正品现货，实单可谈', '  04-19', 'TLK2404151617'], ['MXL1535EEWI+T', 'Analog Devices', '深圳市亿威盛创科技有限公司', 'ST/意法', '23+', '120000', 'LQFP48', '', '深圳', '只做原装*价清货', '  04-19', 'TLK2404151617'], ['MXL1535EEWI+T', 'Analog Devices', '深圳市原之芯科技有限公司', 'ST/意法', '22+', '3954', 'LQFP48', '', '深圳', '专业分销~支持实单~原装价优', '  04-19', 'TLK2404151617'], ['MXL1535EEWI+T', 'Analog Devices', '深圳市致远恒电科技有限公司', 'ST/意法', '23+22+', '30000', 'LQFP48', '', '深圳', '只做进口原装假一罚百', '  04-19', 'TLK2404151617'], ['MXL1535EEWI+T', 'Analog Devices', '深圳市长兴威电子有限公司', 'ST/意法', '22+', '10888', 'LQFP48', '', '深圳', '我做芯片，只做原装正品', '  04-19', 'TLK2404151617'], ['MXL1535EEWI+T', 'Analog Devices', '深圳市展创电子有限公司', 'ST/意法', '2332+', '30000', 'LQFP48', '', '深圳', '只做原装正品可含税13%香港交，', '  04-18', 'TLK2404151617'], ['MXL1535EEWI+T', 'Analog Devices', '深圳市南天星电子科技有限公司', 'ST/意法', '21+', '500', 'LQFP48', '', '深圳', '进口原装正品 深圳现货', '  04-18', 'TLK2404151617'], ['MXL1535EEWI+T', 'Analog Devices', '深圳市金敏瑞半导体科技有限公司', 'ST/意法', '22+', '1700', 'QFP48', '', '深圳', '原装现货，假一赔万', '  04-15', 'TLK2404151617'], ['MXL1535EEWI+T', 'Analog Devices', '深圳市维尼利亚科技有限公司', 'ST/意法', '2021+', '1500', 'LQFP48', '', '深圳', '原装正品力挺实单', '  04-15', 'TLK2404151617'], ['MXL1535EEWI+T', 'Analog Devices', '深圳市顺乐宏业科技有限公司', 'ST/意法', '24+', '376\n1 起订', 'LQFP48', '', '深圳', '原装正品.假一赔百.正规渠道.原厂追溯.', '  04-19', 'TLK2404151617'], ['MXL1535EEWI+T', 'Analog Devices', '深圳市皓星电子有限公司', 'ST/意法', '23+', '680000', 'LQFP48', '', '深圳', '价格优势，原装现货', '  04-19', 'TLK2404151617'], ['MXL1535EEWI+T', 'Analog Devices', '深圳市华芯顿电子科技有限公司', 'ST/意法', '22+21+', '22500', 'LQFP48', '', '', '力挺实单-只做原装 支持美金交易', '  04-19', 'TLK2404151617'], ['MXL1535EEWI+T', 'Analog Devices', '深圳市力兴微电子有限公司', 'ST/意法', '22+', '5000', 'LQFP48', '', '深圳', '原装正品优势现货优势现货', '  04-19', 'TLK2404151617'], ['MXL1535EEWI+T', 'Analog Devices', '深圳市致远恒电科技有限公司', 'ST/意法', '22+', '30000', 'LQFP48', '', '深圳', '只做进口原装假一罚百', '  04-19', 'TLK2404151617'], ['MXL1535EEWI+T', 'Analog Devices', '深圳市波光电子有限公司', 'ST/意法', '23+', '11000', 'LQFP48', '', '深圳', '价格*优可含税TEL15017930304', '  04-19', 'TLK2404151617'], ['MXL1535EEWI+T', 'Analog Devices', '深圳明嘉瑞科技有限公司', 'ST/意法', '23+', '12', 'LQFP-48', '', '深圳', '原装现货', '  04-19', 'TLK2404151617'], ['MXL1535EEWI+T', 'Analog Devices', '深圳市展创电子有限公司', 'ST/意法', '23+', '20000', 'LQFP48', '', '深圳', '进口原装假一赔十', '  04-18', 'TLK2404151617'], ['MXL1535EEWI+T', 'Analog Devices', '深圳市瑞新智能电子有限公司', 'ST/意法', '23+', '3000', 'LQFP48', '', '深圳', '全靠价格好，原装现货/力挺实单', '  04-18', 'TLK2404151617'], ['MXL1535EEWI+T', 'Analog Devices', '深圳市奔池电子有限公司', 'ST/意法', '23+', '3000', 'LQFP48', '', '深圳', '只做原装，承诺假一罚十', '  04-18', 'TLK2404151617'], ['MXL1535EEWI+T', 'Analog Devices', '深圳市芯天地电子科技有限公司', 'ST/意法', '20+', '143', 'LQFP48', '', '深圳', '原装原装原装', '  04-16', 'TLK2404151617']]
+    # manager.ic_stock(arr)
+    manager.hq_stock_write(arr)

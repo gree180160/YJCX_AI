@@ -3,17 +3,17 @@ import time
 from WRTools import ExcelHelp, WaitHelp, PathHelp, MySqlHelp_recommanded, ChromeDriverManager, EmailHelper
 from selenium.webdriver.common.by import By
 import ssl
-from Manager import AccManage, TaskManager, URLManager
+from Manager import AccManage, URLManager
 
 log_file = PathHelp.get_file_path('HQSearch', 'HQPeakfireLog.txt')
 ssl._create_default_https_context = ssl._create_unverified_context
 
-sourceFile_dic = {'fileName': PathHelp.get_file_path(None, 'TLK2404151617.xlsx'),
-                  'sourceSheet': 'ppn',
+sourceFile_dic = {'fileName': PathHelp.get_file_path(None, 'TJoytechStock.xlsx'),
+                  'sourceSheet': 'ppn2',
                   'colIndex': 1,
                   'startIndex': 0,
-                  'endIndex': 50}
-task_name = 'TLK2404151617'
+                  'endIndex': 110}
+task_name = 'TJoytechStock'
 
 accouts_arr = [AccManage.HQ_hot_1['n'], AccManage.HQ_hot_1['p']]
 VerificationCodePage = 0
@@ -63,23 +63,62 @@ def checkVerificationCodePage(ppn) -> bool:
 #     return True
 
 
-# 获取单个型号热度信息
-# cate_name：型号
-# isWeek：【周/月】搜索指数
+# 获取单个型号库存info
 def getSearchInfo(cate_name, manu, isWeek):
-    weekInfos = driver.find_elements(By.ID, 'template_0')
     result = []
-    if weekInfos.__len__() > 0:
-        div_id = 'J-detailChar' if isWeek else 'J-detailChar-Month'
-        try:
-            detail_w_div = driver.find_element(By.ID, div_id)
-            hot_table = detail_w_div.find_elements(By.CSS_SELECTOR, 'g.highcharts-data-labels.highcharts-series-0.highcharts-line-series.highcharts-color-0')[0]
-            dots = hot_table.find_elements(By.CSS_SELECTOR,
-                                            'g.highcharts-label.highcharts-data-label.highcharts-data-label-color-0')
-            for temp_d in dots:
-                result.append(temp_d.find_element(By.TAG_NAME, 'tspan').text)
-        except Exception as e:
-            print('week info error')
+    tables = driver.find_elements(By.CSS_SELECTOR, 'table.list-table')
+    if tables.__len__() > 0:
+        info_table = tables[0]
+        tr_arr = info_table.find_elements(By.TAG_NAME, 'tr')
+        for (index, tr_info) in enumerate(tr_arr):
+            yzpms = tr_info.find_elements(By.CSS_SELECTOR, 'a.icon-yzpm')
+            yzs = tr_info.find_elements(By.CSS_SELECTOR, 'a.i-yuan')
+            if yzpms.__len__() > 0 or yzs.__len__() > 0:
+                row_info = get_saveInfo(cate_name, manu, tr_info)
+                if row_info.__len__() > 0:
+                    result.append(row_info)
+    return result
+
+
+# ppn, std_manu, supplier, sup_manu, batch, stock, packing, param, place, instruction, publish_date, task_name
+def get_saveInfo(ppn, manu, tr):
+    try:
+        supplier_name = tr.find_element(By.CSS_SELECTOR, 'a.company.company-cinfo-click').text
+    except:
+        supplier_name = ''
+    try:
+        sup_manu = tr.find_element(By.CSS_SELECTOR, 'td.td-brand').text
+    except:
+        sup_manu = ''
+    try:
+        batch = tr.find_element(By.CSS_SELECTOR, 'td.td-pproductDate').text
+    except:
+        batch = ''
+    try:
+        stock = tr.find_element(By.CSS_SELECTOR, 'td.td-stockNum').text
+    except:
+        stock = ''
+    try:
+        packing = tr.find_element(By.CSS_SELECTOR, 'td.td-ppackage').text
+    except:
+        packing = ''
+    try:
+        param = tr.find_element(By.CSS_SELECTOR, 'td.td-param').text
+    except:
+        param = ''
+    try:
+        place = tr.find_element(By.CSS_SELECTOR, 'td.td-storeLocation').text
+    except:
+        place = ''
+    try:
+        instruction = tr.find_element(By.CSS_SELECTOR, 'td.td-premark').text
+    except:
+        instruction = ''
+    try:
+        publish_date = tr.find_elements(By.TAG_NAME, 'td')[-2].text
+    except:
+        publish_date = ''
+    result = [ppn, manu, supplier_name, sup_manu, batch, stock, packing, param, place, instruction, publish_date, task_name]
     return result
 
 
@@ -94,7 +133,7 @@ def main():
         elif index in range(sourceFile_dic['startIndex'], sourceFile_dic['endIndex']):
             print(f'cate_index is: {index}  cate_name is: {ppn}')
             manu = all_manu[index]
-            driver.get(URLManager.HQ_hot_url(ppn))
+            driver.get(URLManager.HQ_stock_url(ppn))
             if index > 0 and index % 13 == 0:
                 time.sleep(10*60)
             else:
@@ -103,17 +142,11 @@ def main():
             while showingCheckCode:
                 WaitHelp.waitfor(True, False)
                 showingCheckCode = checkVerificationCodePage(ppn)
-            week_arr = getSearchInfo(ppn, manu, True)
-            time.sleep(10.0)
-            if week_arr.__len__() > 0:  # 有周数据，请求月数据
-                time_lab = driver.find_element(By.ID, 'timetabs')
-                m_link = time_lab.find_elements(By.TAG_NAME, 'a')[1]
-                m_link.click()
-                time.sleep(10.0)
-                month_arr = getSearchInfo(ppn, manu, False)
-                if month_arr.__len__() > 0:
-                    cate_info = [ppn, manu, str(week_arr), str(month_arr), task_name]
-                    MySqlHelp_recommanded.DBRecommandChip().hq_hot_write([cate_info])
+            supplier_info_arr = getSearchInfo(ppn, manu, True)
+            if supplier_info_arr.__len__() > 0:
+                MySqlHelp_recommanded.DBRecommandChip().hq_stock_write(supplier_info_arr)
+            else:
+                print(f"{ppn} without data")
 
 
 if __name__ == "__main__":

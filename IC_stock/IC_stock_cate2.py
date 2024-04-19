@@ -9,33 +9,27 @@ import ssl
 from IC_stock.IC_Stock_Info import IC_Stock_Info
 from Manager import AccManage, URLManager, TaskManager
 from WRTools import ExcelHelp, WaitHelp, PathHelp, EmailHelper, MySqlHelp_recommanded
-from selenium import webdriver
+
 
 ssl._create_default_https_context = ssl._create_unverified_context
-sourceFile_dic = {'fileName': PathHelp.get_file_path(None, 'TLK240401.xlsx'),
-                  'sourceSheet': 'ppn',
+
+sourceFile_dic = {'fileName': PathHelp.get_file_path(None, 'TLK2404151617.xlsx'),
+                  'sourceSheet': 'ppn2',
                   'colIndex': 1,
-                  'startIndex': 0,
-                  'endIndex': 45}
-task_name = 'TLK240401'
+                  'startIndex': 40,
+                  'endIndex': 55}
+task_name = 'TLK2404151617'
+
 
 total_page = 1
 current_page = 1
 VerificationCodePage = 0
 accouts_arr = [[AccManage.IC_stock_2['n'], AccManage.IC_stock_2['p']]]
 
-# 更改User Agent
-driver = ChromeDriverManager.getWebDriver(2)
-
-# 禁用自动化扩展
-profile = webdriver.FirefoxProfile()
-profile.set_preference("dom.webdriver.enabled", False)
-profile.set_preference("dom.webnotifications.enabled", False)
-options = webdriver.FirefoxOptions()
-options.profile = profile
-driver = webdriver.Firefox(options=options)
-driver.set_window_size(height=800, width=1200)
-current_cate_has_date = True
+try:
+    driver = ChromeDriverManager.getWebDriver(0)
+except Exception as e:
+    print(e)
 
 
 def get_total_page():
