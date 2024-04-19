@@ -16,7 +16,7 @@ ssl._create_default_https_context = ssl._create_unverified_context
 sourceFile_dic = {'fileName': PathHelp.get_file_path(None, 'TLK2404151617.xlsx'),
                   'sourceSheet': 'ppn2',
                   'colIndex': 1,
-                  'startIndex': 55,
+                  'startIndex': 59,
                   'endIndex': 68}
 task_name = 'TLK2404151617'
 
