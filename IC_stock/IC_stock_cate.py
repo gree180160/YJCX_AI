@@ -13,22 +13,22 @@ from WRTools import ExcelHelp, WaitHelp, PathHelp, EmailHelper, MySqlHelp_recomm
 
 ssl._create_default_https_context = ssl._create_unverified_context
 
-sourceFile_dic = {'fileName': PathHelp.get_file_path(None, 'TLK2404151617.xlsx'),
-                  'sourceSheet': 'ppn2',
+sourceFile_dic = {'fileName': PathHelp.get_file_path(None, 'TTIJS.xlsx'),
+                  'sourceSheet': 'ppn3',
                   'colIndex': 1,
-                  'startIndex': 59,
-                  'endIndex': 68}
-task_name = 'TLK2404151617'
+                  'startIndex': 24,
+                  'endIndex': 33}
+task_name = 'TTIJS'
 
-total_page = 1
-current_page = 1
-VerificationCodePage = 0
 accouts_arr = [[AccManage.IC_stock_1['n'], AccManage.IC_stock_1['p']]]
-
 try:
     driver = ChromeDriverManager.getWebDriver(1)
 except Exception as e:
     print(e)
+
+total_page = 1
+current_page = 1
+VerificationCodePage = 0
 
 
 def get_total_page():

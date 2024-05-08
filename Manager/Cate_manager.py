@@ -62,8 +62,8 @@ def createDayTask(unit:int):
 
 # 分解数量大的ppn列表
 def decompositionPPN(unit: int):
-    source_file = "/Users/liuhe/Desktop/CalcitrapaAIProject/TTIStockArror2404/TTIStock2404.xlsx"
-    sava_fold = '/Users/liuhe/Desktop/CalcitrapaAIProject/TTIStockArror2404/'
+    source_file = "/Users/liuhe/Desktop/CalcitrapaAIProject/TRU2405/TRU2405.xlsx"
+    sava_fold = '/Users/liuhe/Desktop/CalcitrapaAIProject/TRU2405/'
     source_ppn = ExcelHelp.read_col_content(file_name=source_file, sheet_name='ppn', col_index=1)
     # source_ppn = source_ppn[0:2000]
     # history_sheets = []

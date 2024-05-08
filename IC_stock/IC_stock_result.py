@@ -19,11 +19,14 @@ def IC_stock_sum(cate_source_file):
     pps = ExcelHelp.read_col_content(file_name= cate_source_file, sheet_name='ppn', col_index=1)
     manufactures = ExcelHelp.read_col_content(file_name= cate_source_file, sheet_name='ppn', col_index=2)
     result = []
+    header_row = ['ppn', 'manu','supplier', 'rank', 'stock' ]
+    result.append(header_row)
     for (index, temp_ppn) in enumerate(pps):
         ppn_str = str(temp_ppn)
         if ppn_str == 'ppn':
             continue
         valid_supplier_sum = 0
+        rank_sum = 0
         valid_stock_sum = 0
         IC_stocks = ExcelHelp.read_sheet_content_by_name(cate_source_file, sheet_name='IC_stock')
         # (ppn	st_manu	supplier_manu	supplier	isICCP	isSSCP	iSRanking	isHotSell	isYouXian	batch	pakaging	stock_num	task_name	update_time)
@@ -41,7 +44,12 @@ def IC_stock_sum(cate_source_file):
                     else:
                         valid_supplier_sum += 1.0
                     valid_stock_sum += stock_num
-        result.append([ppn_str, manufactures[index], valid_supplier_sum, int(valid_stock_sum)])
+                    if isSpotRanking:
+                        if stock_num < 10:
+                            rank_sum += 0.01
+                        else:
+                            rank_sum += 1.0
+        result.append([ppn_str, manufactures[index], valid_supplier_sum, rank_sum, int(valid_stock_sum)])
     ExcelHelp.add_arr_to_sheet(file_name=cate_source_file, sheet_name="IC_stock_sum", dim_arr=result)
 
 
@@ -70,5 +78,5 @@ def addIC_info():
 
 
 if __name__ == "__main__":
-    IC_stock_sum(PathHelp.get_file_path(None, 'TLK240322.xlsx'))
+    IC_stock_sum(PathHelp.get_file_path(None, 'TTIJS.xlsx'))
     print('over')

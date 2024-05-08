@@ -1,6 +1,6 @@
 import pandas as pd
 import os
-from WRTools import ExcelHelp
+from WRTools import ExcelHelp, PathHelp
 
 
 def csv_to_xlsx_pd(file):
@@ -35,10 +35,11 @@ def comineCVS():
     ExcelHelp.add_arr_to_sheet(file_name=f'{fold}TManuAndSeri.xlsx', sheet_name='ppn', dim_arr=result)
 
 
+# 文件夹
 def octopart_csv_xlsx():
-    fold = '/Users/liuhe/Desktop/CalcitrapaAIProject/TTIStockArror2404/'
+    fold = '/Users/liuhe/Desktop/CalcitrapaAIProject/TRU2405/'
     list_file = os.listdir(fold)  # 返回指定目录
-    save_file = f'{fold}TTISTOCK2404.xlsx'
+    save_file = f'{fold}TRU2405.xlsx'
     result = []
     firt_row = ['制造商零件编号', '制造商', '描述','供应商', '价格', '库存']
     result.append(firt_row)
@@ -51,5 +52,21 @@ def octopart_csv_xlsx():
     ExcelHelp.add_arr_to_sheet(file_name=save_file, sheet_name='octopart', dim_arr=result)
 
 
+# 只有1个文件
+def octopart_file_arr():
+    source_file = "/Users/liuhe/Downloads/20240501_ttijs_xlsx.csv"
+    save_file = PathHelp.get_file_path(None, 'TTIJS.xlsx')
+    result = []
+    firt_row = ['制造商零件编号', '制造商', '描述', '供应商', '价格', '库存']
+    result.append(firt_row)
+    if source_file.__contains__('.csv'):
+        sheet_content = read_sheet_content(source_file)
+        for (index, row) in enumerate(sheet_content):
+            new_row = [row[0], row[2], row[5], row[43], row[46], row[49]]
+            result.append(new_row)
+    ExcelHelp.add_arr_to_sheet(file_name=save_file, sheet_name='octopart', dim_arr=result)
+
+
 if __name__ == '__main__':
     octopart_csv_xlsx()
+    # octopart_file_arr()

@@ -19,12 +19,13 @@ from Manager import TaskManager
 def HQ_hot_result(cate_source_file):
     pps = ExcelHelp.read_col_content(file_name=cate_source_file, sheet_name='ppn', col_index=1)
     manufactures = ExcelHelp.read_col_content(file_name=cate_source_file, sheet_name='ppn', col_index=2)
+    hq_hot_info = ExcelHelp.read_sheet_content_by_name(cate_source_file, sheet_name='HQ_hot')
     result = []
     for (index, temp_ppn) in enumerate(pps):
         ppn_str = str(temp_ppn)
         hot_result = 0
         hot_week = hot_month = ''
-        hq_hot_info = ExcelHelp.read_sheet_content_by_name(cate_source_file, sheet_name='HQ_hot')
+
         for (row_index, row_content) in enumerate(hq_hot_info):
             if row_index > 0:
                 ppn_ic = str(row_content[0])
@@ -35,13 +36,13 @@ def HQ_hot_result(cate_source_file):
                     try:
                         int_week_data = [int(x) for x in week_data]
                     except Exception as e:
-                        int_week_data = ['9999', '9999', '9999', '9999', '9999', '9999', '9999', '9999', '9999', '9999', '9999', '9999']
+                        int_week_data = [9999, 9999, 9999, 9999, 9999, 9999, 9999, 9999, 9999, 9999, 9999, 9999]
                         print(f'{ppn_ic} int_week_data error: {e}')
                     month_data = eval(hot_month)
                     try:
                         int_month_data = [int(x) for x in month_data]
                     except Exception as e:
-                        int_month_data = ['9999', '9999', '9999', '9999', '9999', '9999', '9999', '9999', '9999', '9999', '9999', '9999']
+                        int_month_data = [9999, 9999, 9999, 9999, 9999, 9999, 9999, 9999, 9999, 9999, 9999, 9999]
                         print(f'{ppn_ic} int_month_data error: {e}')
                     if valid_week(int_week_data) and valid_month(int_month_data):
                         hot_result = 1
@@ -53,7 +54,7 @@ def HQ_hot_result(cate_source_file):
 def valid_week(week_data: list):
     result = False
     last_four = sorted(week_data[-4:])
-    if last_four[1] > 5 and last_four[2] > 8 and last_four[-1] > 12:
+    if last_four[1] > 5 and last_four[2] > 8 and last_four[-1] > 30:
         result = True
     return result
 
@@ -62,18 +63,18 @@ def valid_week(week_data: list):
 def valid_month(month_data: list):
     result = False
     # 条件1
-    condition1_count = sum(1 for month_value in month_data if month_value < 5) < 3
+    condition1_count = sum(1 for month_value in month_data if month_value < 30) < 3
     # 条件2
-    condition2_count = sum(1 for month_value in month_data if month_value > 10) >= 7 and sum(
-        1 for month_value in month_data if month_value > 20) >= 5 and sum(
-        1 for month_value in month_data if month_value > 50) >= 2
+    condition2_count = sum(1 for month_value in month_data if month_value > 30) >= 8 and sum(
+        1 for month_value in month_data if month_value > 50) >= 7 and sum(
+        1 for month_value in month_data if month_value > 100) >= 3
 
     # 条件3
-    condition3 = max(month_data[-3:]) > 20
+    condition3 = max(month_data[-3:]) > 100
     # 条件4 -> True
-    condition4 = max(month_data) > 150 and min(month_data[-2:]) > 10
+    condition4 = max(month_data) > 300 and min(month_data[-2:]) > 20
     # 条件5 -> False
-    condition5 = max(month_data[-3:]) < 5
+    condition5 = max(month_data[-3:]) < 60
     # 验证条件
     if condition4:
         return True
@@ -85,5 +86,5 @@ def valid_month(month_data: list):
 
 
 if __name__ == "__main__":
-    HQ_hot_result(PathHelp.get_file_path(None, 'TLK2404151617.xlsx'))
+    HQ_hot_result(PathHelp.get_file_path(None, 'TTISTOCK2404.xlsx'))
     print('over')

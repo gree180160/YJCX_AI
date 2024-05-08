@@ -8,12 +8,12 @@ from Manager import AccManage, URLManager
 log_file = PathHelp.get_file_path('HQSearch', 'HQPeakfireLog.txt')
 ssl._create_default_https_context = ssl._create_unverified_context
 
-sourceFile_dic = {'fileName': PathHelp.get_file_path(None, 'TJoytechStock.xlsx'),
+sourceFile_dic = {'fileName': PathHelp.get_file_path(None, 'TRU2405.xlsx'),
                   'sourceSheet': 'ppn2',
                   'colIndex': 1,
                   'startIndex': 0,
-                  'endIndex': 110}
-task_name = 'TJoytechStock'
+                  'endIndex': 80}
+task_name = 'TRU2405'
 
 accouts_arr = [AccManage.HQ_hot_1['n'], AccManage.HQ_hot_1['p']]
 VerificationCodePage = 0
@@ -95,7 +95,8 @@ def get_saveInfo(ppn, manu, tr):
     except:
         batch = ''
     try:
-        stock = tr.find_element(By.CSS_SELECTOR, 'td.td-stockNum').text
+        stock_tr = tr.find_element(By.CSS_SELECTOR, 'td.td-stockNum')
+        stock = stock_tr.find_element(By.TAG_NAME, 'p').text
     except:
         stock = ''
     try:

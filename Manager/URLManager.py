@@ -1,5 +1,7 @@
 from WRTools import ExcelHelp, PathHelp
 from enum import Enum
+import base64
+import re
 
 
 class Octopart_manu(Enum):
@@ -136,26 +138,33 @@ def IC_hot_url(ppn: str):
 # https://fh.hqew.com/detail/500020657.html
 def HQ_hot_url(ppn: str):
     cate_str = str(ppn)
-    cate_str = cate_str.replace('/', '%2F')
-    cate_str = cate_str.replace('#', '%23')
-    cate_str = cate_str.replace('+', '%2B')
-    cate_str = cate_str.replace(',', '%2C')
+    if has_special_chars(cate_str):
+        cate_str = '==' + str(base64.b64encode(cate_str.encode('utf-8')), 'utf-8')
     search_url = f'https://fh.hqew.com/detail/{cate_str}.html'
     return search_url
+
 
 # https://s.hqew.com/ULN2003ADR_10.html
 def HQ_stock_url(ppn: str):
     cate_str = str(ppn)
-    cate_str = cate_str.replace('/', '%2F')
-    cate_str = cate_str.replace('#', '%23')
-    cate_str = cate_str.replace('+', '%2B')
-    cate_str = cate_str.replace(',', '%2C')
+    if has_special_chars(cate_str):
+        cate_str = '==' + str(base64.b64encode(cate_str.encode('utf-8')), 'utf-8')
     search_url = f'https://s.hqew.com/{cate_str}_10.html'
     return search_url
 
 
+def has_special_chars(text):
+    pattern = re.compile('[^a-zA-Z0-9\s]')  # 匹配非字母、数字和空格的字符
+    if pattern.search(text):
+        return True
+    else:
+        return False
+
 
 if __name__ == "__main__":
-    octopart_page_more_url(sourcefile=PathHelp.get_file_path(None, file_name='TSkyworks.xlsx'), page0_sheet='page0_ppn_2', manu=Octopart_manu.Skyworks)
+    # octopart_page_more_url(sourcefile=PathHelp.get_file_path(None, file_name='TSkyworks.xlsx'), page0_sheet='page0_ppn_2', manu=Octopart_manu.Skyworks)
+    print(HQ_hot_url('ADC0804LCWMX/NOPB'))
+    print(HQ_hot_url('M4T32-BR12SH1'))
+    print(HQ_hot_url('STB120NF10T4'))
 
 

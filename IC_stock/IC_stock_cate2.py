@@ -13,23 +13,22 @@ from WRTools import ExcelHelp, WaitHelp, PathHelp, EmailHelper, MySqlHelp_recomm
 
 ssl._create_default_https_context = ssl._create_unverified_context
 
-sourceFile_dic = {'fileName': PathHelp.get_file_path(None, 'TLK2404151617.xlsx'),
-                  'sourceSheet': 'ppn2',
+sourceFile_dic = {'fileName': PathHelp.get_file_path(None, 'TTIJS.xlsx'),
+                  'sourceSheet': 'ppn3',
                   'colIndex': 1,
-                  'startIndex': 40,
-                  'endIndex': 55}
-task_name = 'TLK2404151617'
+                  'startIndex': 56,
+                  'endIndex': 66}
+task_name = 'TTIJS'
 
+accouts_arr = [[AccManage.IC_stock_2['n'], AccManage.IC_stock_2['p']]]
+try:
+    driver = ChromeDriverManager.getWebDriver(4)
+except Exception as e:
+    print(e)
 
 total_page = 1
 current_page = 1
 VerificationCodePage = 0
-accouts_arr = [[AccManage.IC_stock_2['n'], AccManage.IC_stock_2['p']]]
-
-try:
-    driver = ChromeDriverManager.getWebDriver(0)
-except Exception as e:
-    print(e)
 
 
 def get_total_page():
@@ -41,7 +40,6 @@ def get_total_page():
         if total_page is not None and len(li_arr) > 0:
             total_page = int(li_arr[len(li_arr) - 1].text)
     except:
-        li_arr = []
         total_page = 1
     current_page = 1
 
