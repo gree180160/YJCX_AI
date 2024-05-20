@@ -1,7 +1,7 @@
 
 #  记录Task 提供的型号，在IC 中的库存信息
 import time
-
+import datetime
 from selenium.webdriver.common.by import By
 import random
 from WRTools import ChromeDriverManager
@@ -13,12 +13,12 @@ from WRTools import ExcelHelp, WaitHelp, PathHelp, EmailHelper, MySqlHelp_recomm
 
 ssl._create_default_https_context = ssl._create_unverified_context
 
-sourceFile_dic = {'fileName': PathHelp.get_file_path(None, 'TTIJS.xlsx'),
+sourceFile_dic = {'fileName': PathHelp.get_file_path(None, 'TManuAndSeri_willTC.xlsx'),
                   'sourceSheet': 'ppn3',
                   'colIndex': 1,
-                  'startIndex': 56,
-                  'endIndex': 66}
-task_name = 'TTIJS'
+                  'startIndex': 30,
+                  'endIndex': 60}
+task_name = 'TManuAndSeri_willTC'
 
 accouts_arr = [[AccManage.IC_stock_2['n'], AccManage.IC_stock_2['p']]]
 try:
@@ -56,7 +56,7 @@ def login_action(aim_url):
         driver.find_element(by=By.ID, value='password').send_keys(accout_current[1])
         WaitHelp.waitfor_account_import(False, False)
         driver.find_element(by=By.ID, value='btn_login').click()
-        WaitHelp.waitfor_account_import(True, False)
+        WaitHelp.waitfor_ICHot(True, False)
     if driver.current_url.startswith('https://member.ic.net'):  # 首次登录
         driver.get(aim_url)
     elif driver.current_url.startswith('https://www.ic.net.cn/search'):  # 查询过程中出现登录
@@ -69,7 +69,7 @@ def get_stock(cate_index, cate_name, st_manu):
     search_url = URLManager.IC_stock_url(cate_name)
     login_action(search_url)
     # 延时几秒确保页面加载完毕
-    WaitHelp.waitfor_account_import(True, False)
+    WaitHelp.waitfor_ICHot(True, False)
     showingCheckCode = checkVerificationCodePage(cate_name)
     while showingCheckCode:
         WaitHelp.waitfor(True, False)
@@ -174,7 +174,7 @@ def get_stock(cate_index, cate_name, st_manu):
                     driver.execute_script(js)
                 except:
                     login_action(search_url)
-                WaitHelp.waitfor_account_import(True, False)
+                WaitHelp.waitfor_ICHot(True, False)
                 waitTime = 0  # wait reload time
                 while driver.current_url == old_url and waitTime <= 5:
                     WaitHelp.waitfor_account_import(False, False)
@@ -204,6 +204,8 @@ def main():
                                            sourceFile_dic['colIndex'])
     all_manu = ExcelHelp.read_col_content(sourceFile_dic['fileName'], sourceFile_dic['sourceSheet'], 2)
     for (cate_index, cate_name) in enumerate(all_cates):
+        while WaitHelp.isSleep_time():
+                time.sleep(60*5)
         if cate_name.__contains__('?'):
             continue
         elif cate_index in range(sourceFile_dic['startIndex'], sourceFile_dic['endIndex']):

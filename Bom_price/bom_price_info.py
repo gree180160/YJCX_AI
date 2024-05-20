@@ -15,6 +15,8 @@ class Bom_price_info:
         self.valid_supplier = self.is_valid_supplier()
 
     def is_valid_supplier(self) -> bool:
+        if self.supplier.__contains__("此供应商选择了隐藏公司名"):
+            return False
         valid_time_arr = ['3天内', '1周内', '今天', '昨天', '1月内']
         if valid_time_arr.__contains__(self.release_time):
             return True
@@ -25,6 +27,7 @@ class Bom_price_info:
             else:
                 print(f'thatDay invalid: {self.release_time}')
             return False
+
 # (`ppn`, `manu`, `supplier`, `package`, `lot`, `quoted_price`, `release_time`, `stock_num`, `valid_supplier`)
     def description_str(self):
         result = f'{self.cate or "--"}, {self.manu or "--"}, {self.supplier}, {self.package}, {self.lot}, {self.quoted_price}, {self.release_time}, {self.stock_num}, {"valid supplier" if self.valid_supplier else "invalid supplier"}'

@@ -62,8 +62,8 @@ def createDayTask(unit:int):
 
 # 分解数量大的ppn列表
 def decompositionPPN(unit: int):
-    source_file = "/Users/liuhe/Desktop/CalcitrapaAIProject/TRU2405/TRU2405.xlsx"
-    sava_fold = '/Users/liuhe/Desktop/CalcitrapaAIProject/TRU2405/'
+    source_file = "/Users/liuhe/Desktop/CalcitrapaAIProject/TTISerail/TTISerial.xlsx"
+    sava_fold = '/Users/liuhe/Desktop/CalcitrapaAIProject/TTISerail/'
     source_ppn = ExcelHelp.read_col_content(file_name=source_file, sheet_name='ppn', col_index=1)
     # source_ppn = source_ppn[0:2000]
     # history_sheets = []
@@ -298,24 +298,13 @@ def filterNeeds():
 
 # delet finished ppn
 def deletFinished_ppn():
-    wait_file = PathHelp.get_file_path(None, 'TLK2404151617.xlsx')
+    wait_file = PathHelp.get_file_path(None, 'TTI_10USD.xlsx')
     waiting_ppns = ExcelHelp.read_sheet_content_by_name(wait_file, 'source')
-    history_files = ["/Users/liuhe/Desktop/CalcitrapaAIProject/T联科/TLK240320.xlsx",
-                     "/Users/liuhe/Desktop/CalcitrapaAIProject/T联科/TLK240321.xlsx",
-                     "/Users/liuhe/Desktop/CalcitrapaAIProject/T联科/TLK240322.xlsx",
-                     "/Users/liuhe/Desktop/CalcitrapaAIProject/T联科/TLK240326.xlsx",
-                     "/Users/liuhe/Desktop/CalcitrapaAIProject/T联科/TLK240327.xlsx",
-                     "/Users/liuhe/Desktop/CalcitrapaAIProject/T联科/TLK240328.xlsx",
-                     "/Users/liuhe/Desktop/CalcitrapaAIProject/T联科/TLK240329.xlsx",
-                     "/Users/liuhe/Desktop/CalcitrapaAIProject/T联科/TLK240401.xlsx",
-                     "/Users/liuhe/Desktop/CalcitrapaAIProject/T联科/TLK240402.xlsx",
-                     "/Users/liuhe/Desktop/CalcitrapaAIProject/T联科/TLK240403.xlsx",
-                     "/Users/liuhe/Desktop/CalcitrapaAIProject/T联科/TLK240407.xlsx",
-                     "/Users/liuhe/Desktop/CalcitrapaAIProject/T联科/TLK240408.xlsx",
-                     "/Users/liuhe/Desktop/CalcitrapaAIProject/T联科/TLK240409.xlsx",
-                     PathHelp.get_file_path(None, 'TLK240410.xlsx'),
-                     PathHelp.get_file_path(None, 'TLK240411.xlsx'),
-                     PathHelp.get_file_path(None, 'TLK240412.xlsx')
+    history_files = [PathHelp.get_file_path(None, 'TTISTOCK2404.xlsx'),
+                     PathHelp.get_file_path(None, 'TRU2405.xlsx'),
+                     PathHelp.get_file_path(None, 'TTIMilitary.xlsx'),
+                     PathHelp.get_file_path(None, 'TTIMilitary.xlsx'),
+                     PathHelp.get_file_path(None, 'TManuAndSeri_willTC.xlsx')
                      ]
     history_ppns = []
     for temp_file in history_files:
@@ -334,5 +323,5 @@ if __name__ == "__main__":
     # time.sleep(3.0)
     # ali()
     # getAllICStockRecord()
-    # deletFinished_ppn()
-    decompositionPPN(500)
+    deletFinished_ppn()
+    # decompositionPPN(500)

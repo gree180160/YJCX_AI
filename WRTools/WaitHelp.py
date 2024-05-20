@@ -1,6 +1,6 @@
-import time
 import random
-from datetime import datetime
+import datetime
+import time
 
 
 # 普通website等待时间，load new page -> 70s; else 20s
@@ -34,7 +34,7 @@ def waitfor_ICHot(is_load_page, isDebug):
     else:
         # load new page
         if is_load_page:
-            time.sleep(130 + random.randint(10, 50))
+            time.sleep(120 + random.randint(10, 300))
         else:
             time.sleep(15 + random.randint(2, 22))
 
@@ -88,6 +88,21 @@ def waitfor_kind(kind:int, is_load_page, isDebug):
         waitfor(is_load_page=is_load_page, isDebug=isDebug)
 
 
+def isSleep_time():
+    current_time = datetime.datetime.now().time()
+    if current_time < datetime.time(8, 0) or (datetime.time(11, 50) <= current_time <= datetime.time(13, 30)) or (datetime.time(17, 50) <= current_time <= datetime.time(18, 30)) or current_time >= datetime.time(22, 0):
+        return True
+    else:
+        return False
+
+
 if __name__ == "__main__":
-    result = daysPassed('2023/08')
+    # result = daysPassed('2023/08')
+    result = isSleep_time()
+    if isSleep_time():
+        print("进入休眠状态")
+        time.sleep(60)  # 每隔60秒检查一次时间
+    else:
+        print("程序继续运行")
+        time.sleep(60)
     print(result)

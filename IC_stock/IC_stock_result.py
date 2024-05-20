@@ -16,10 +16,10 @@ from Manager import TaskManager
 
 # 将同一个ppn到所有stock 累加，然后按照保存到数组中, 没有数据的，用/填充
 def IC_stock_sum(cate_source_file):
-    pps = ExcelHelp.read_col_content(file_name= cate_source_file, sheet_name='ppn', col_index=1)
-    manufactures = ExcelHelp.read_col_content(file_name= cate_source_file, sheet_name='ppn', col_index=2)
+    pps = ExcelHelp.read_col_content(file_name= cate_source_file, sheet_name='ppn3', col_index=1)
+    manufactures = ExcelHelp.read_col_content(file_name= cate_source_file, sheet_name='ppn3', col_index=2)
     result = []
-    header_row = ['ppn', 'manu','supplier', 'rank', 'stock' ]
+    header_row = ['ppn', 'manu','supplier', 'rank', 'stock']
     result.append(header_row)
     for (index, temp_ppn) in enumerate(pps):
         ppn_str = str(temp_ppn)
@@ -40,15 +40,15 @@ def IC_stock_sum(cate_source_file):
                 # if isSSCP or isICCP or isSpotRanking or isHotSell or isYouXian:
                 if isSSCP or isICCP or isSpotRanking:
                     if stock_num < 10:
-                        valid_supplier_sum += 0.01
+                        valid_supplier_sum = round(valid_supplier_sum+0.01, 2)
                     else:
-                        valid_supplier_sum += 1.0
+                        valid_supplier_sum = round(valid_supplier_sum+1.0, 2)
                     valid_stock_sum += stock_num
                     if isSpotRanking:
                         if stock_num < 10:
-                            rank_sum += 0.01
+                            rank_sum = round(rank_sum+0.01, 2)
                         else:
-                            rank_sum += 1.0
+                            rank_sum = round(rank_sum+1.0, 2)
         result.append([ppn_str, manufactures[index], valid_supplier_sum, rank_sum, int(valid_stock_sum)])
     ExcelHelp.add_arr_to_sheet(file_name=cate_source_file, sheet_name="IC_stock_sum", dim_arr=result)
 
@@ -78,5 +78,5 @@ def addIC_info():
 
 
 if __name__ == "__main__":
-    IC_stock_sum(PathHelp.get_file_path(None, 'TTIJS.xlsx'))
+    IC_stock_sum(PathHelp.get_file_path(None, 'TManuAndSeri_willTC.xlsx'))
     print('over')

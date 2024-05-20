@@ -1,7 +1,9 @@
 import base64
 from WRTools import PathHelp, DDDDOCR
-from PIL import Image, ImageDraw, ImageFont
+from PIL import Image, ImageDraw, ImageFont, ImageEnhance
 import os
+import cv2
+import numpy as np
 
 
 def canvasToImage_color(canvas_base64, path, bgColor):
@@ -66,28 +68,69 @@ def adjust_image():
 
 def water_mark():
     # 设置水印文字和字体
-    text = "Kyent Industrial"
-    font_path = "/Library/Fonts/Times New Roman.ttf"  # 修改为系统自带的字体路径
-    font_size = 24  # 设置字号
+    text = "    深圳市风菱电子有限责任公司    "
+    font_path = "/Library/Fonts/AlibabaHealthFont2.0CN-85B.ttf"  # 修改为系统自带的字体路径
+    font_size = 12  # 设置字号
+    text_color = (73, 160, 45, 20)
     font = ImageFont.truetype(font_path, font_size)
 
     # 遍历文件夹里的所有图片
-    folder_path = "/Users/liuhe/Desktop/宝塔/kyent/images/product/product/"
+    folder_path = "/Users/liuhe/Desktop/need_waterMark/"
     for filename in os.listdir(folder_path):
         if filename.endswith(".jpg") or filename.endswith(".png"):
-            # 打开图片
             image_path = os.path.join(folder_path, filename)
-            img = Image.open(image_path)
-
-            # 添加水印
-            draw = ImageDraw.Draw(img)
-            draw.text((120, 220), text, fill="white", font=font)
-
-            # 保存图片
-            img.save(os.path.join(folder_path, f"{filename}"))
+            # once_add_mark(image_path, text, text_color, font)
+            add_watermark_repeat(image_path, text, text_color)
     print("水印添加完成！")
 
 
+# 1. 添加水印，只加一次
+def once_add_mark(image_path, text, color, font):
+    # 打开图片
+    img = Image.open(image_path)
+    draw = ImageDraw.Draw(img)
+    draw.text((120, 220), text, fill=color, font=font)
+    img.save(image_path)
+
+
+def add_watermark_repeat(image_path, text, text_color):
+    # 打开原始图片
+    original = Image.open(image_path).convert("RGBA")
+    width, height = original.size
+
+    # 创建透明背景的水印图片
+    watermark = Image.new("RGBA", original.size, (0, 0, 0, 0))
+    draw = ImageDraw.Draw(watermark)
+
+    # 设置水印字体和大小
+    font_size = int(min(width, height) / 40)
+    font_path = "/Library/Fonts/AlibabaHealthFont2.0CN-85B.ttf"
+    font = ImageFont.truetype(font_path, font_size)
+    text_width, text_height = draw.textsize(text, font)
+
+    # 创建倾斜45度的水印
+    angle = 45
+    rotated_text = Image.new("RGBA", (text_width, text_height), (0, 0, 0, 0))
+    draw_rotated = ImageDraw.Draw(rotated_text)
+    draw_rotated.text((0, 0), text, font=font, fill=(73, 160, 45, 80))
+    rotated_text = rotated_text.rotate(angle, expand=1)
+    # 计算重复水印的数量
+    repeat_x = int(np.ceil(width / rotated_text.width)) + 1
+    repeat_y = int(np.ceil(height / rotated_text.height)) + 1
+
+    # 在水印图像上重复水印
+    for i in range(repeat_x):
+        for j in range(repeat_y):
+            watermark.paste(rotated_text, (i * rotated_text.width, j * rotated_text.height), rotated_text)
+
+    # 合并水印和原始图像
+    watermark = ImageEnhance.Brightness(watermark).enhance(0.5)  # 调整透明度
+    combined = Image.alpha_composite(original, watermark)
+
+    # 保存合并后的图像
+    combined = combined.convert("RGB")  # 转换为RGB模式以保存为JPEG
+    combined.save(image_path, "JPEG")
+
+
 if __name__ == "__main__":
-    # canvasToImage_color()
     water_mark()

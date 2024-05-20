@@ -17,14 +17,14 @@ driver.set_page_load_timeout(120)
 # logic
 
 # accouts_arr = [["深圳市元极创新电子有限公司", "caigou01", "Yjcx123"]]
-accouts_arr = [[AccManage.Bom['c'], AccManage.Bom['n'], AccManage.Bom['p']]]
+accouts_arr = [[AccManage.Bom1['c'], AccManage.Bom1['n'], AccManage.Bom1['p']]]
 
-sourceFile_dic = {'fileName': PathHelp.get_file_path(None, f'{TaskManager.Taskmanger().task_name}.xlsx'),
-                  'sourceSheet': 'ppn',
+sourceFile_dic = {'fileName': PathHelp.get_file_path(None, 'TManuAndSeri_willTC.xlsx'),
+                  'sourceSheet': 'ppn4',
                   'colIndex': 1,
                   'startIndex': 0,
-                  'endIndex':TaskManager.Taskmanger().end_index}
-# result_save_file = PathHelp.get_file_path(TaskManager.Taskmanger().task_name, 'bom_price.xlsx')
+                  'endIndex': 63}
+task_name = 'TManuAndSeri_willTC'
 
 default_url = 'https://www.bom.ai/ic/74LVX4245MTCX.html'
 log_file = PathHelp.get_file_path('Bom_price', 'bom_price_log.txt')
@@ -124,13 +124,9 @@ def analy_html(cate_index, ppn, manu):
         for aside in showed_supplier:
             bom_price_ele = get_supplier_info(aside=aside, cate_index=cate_index, ppn=ppn, manu=manu)
             # 无论是否有效都记录
-            if bom_price_ele and str(bom_price_ele.supplier).__len__() > 0:
+            if bom_price_ele and str(bom_price_ele.supplier).__len__() > 0 and bom_price_ele.is_valid_supplier():
                 valid_supplier_arr.append(bom_price_ele.descritpion_arr() + [TaskManager.Taskmanger.task_name])
         MySqlHelp_recommanded.DBRecommandChip().bom_price_write(valid_supplier_arr)
-        # ExcelHelp.add_arr_to_sheet(
-        #     file_name=result_save_file,
-        #     sheet_name='bom_price',
-        #     dim_arr=valid_supplier_arr)
         valid_supplier_arr.clear()
     else:
         # MySqlHelp_recommanded.DBRecommandChip().bom_price_write([[ppn, '??', '??', "??"]])

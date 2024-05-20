@@ -34,5 +34,5 @@ def HQ_stock_sum(cate_source_file):
 
 
 if __name__ == "__main__":
-    HQ_stock_sum(PathHelp.get_file_path(None, 'TRU2405.xlsx'))
+    HQ_stock_sum(PathHelp.get_file_path(None, 'TTISerial.xlsx'))
     print('over')

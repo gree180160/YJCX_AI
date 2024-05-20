@@ -20,17 +20,17 @@ def read_sheet_content(file_name):
     return list2
 
 
-def comineCVS():
+def comineCVS_digikey():
     fold = '/Users/liuhe/Desktop/重点系列/'
     list_file = os.listdir(fold)  # 返回指定目录
     result = []
-    firt_row = ['制造商零件编号', '制造商', '描述', '库存', '价格']
+    firt_row = ['制造商零件编号', '制造商', '描述', '库存', '价格', 'status', 'kind']
     result.append(firt_row)
     for temp_file in list_file:
         if temp_file.__contains__('.csv'):
             sheet_content = read_sheet_content(f"{fold}{temp_file}")
             for row in sheet_content:
-                new_row = [row[3], row[4], row[6], row[7], row[8]]
+                new_row = [row[3], row[4], row[6], row[7], row[8], row[13], temp_file[0:2]]
                 result.append(new_row)
     ExcelHelp.add_arr_to_sheet(file_name=f'{fold}TManuAndSeri.xlsx', sheet_name='ppn', dim_arr=result)
 
@@ -68,5 +68,5 @@ def octopart_file_arr():
 
 
 if __name__ == '__main__':
-    octopart_csv_xlsx()
+    comineCVS_digikey()
     # octopart_file_arr()

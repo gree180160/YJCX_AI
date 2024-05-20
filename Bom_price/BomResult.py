@@ -7,29 +7,29 @@ from urllib.request import urlopen
 from Manager import TaskManager
 import ssl
 
-cate_source_file = PathHelp.get_file_path(None, f'{TaskManager.Taskmanger().task_name}.xlsx')
-IC_source_file = PathHelp.get_file_path('TVicor15H', 'IC_stock.xlsx')
+cate_source_file = PathHelp.get_file_path(None, 'TRU2405.xlsx')
+IC_source_file = PathHelp.get_file_path(None, 'TRU2405.xlsx')
 result_save_file = cate_source_file
 
 
 # 取3个月内的最高值，没有价格则忽略
 def bom_price_result():
     rate = get_rate()
-    pps = ExcelHelp.read_col_content(file_name=cate_source_file, sheet_name='ppn', col_index=1)[0:18]
-    manufactures = ExcelHelp.read_col_content(file_name=cate_source_file, sheet_name='ppn', col_index=2)
+    pps = ExcelHelp.read_col_content(file_name=cate_source_file, sheet_name='ppn4', col_index=1)
+    manufactures = ExcelHelp.read_col_content(file_name=cate_source_file, sheet_name='ppn4', col_index=2)
+    bom_price_list = ExcelHelp.read_sheet_content_by_name(file_name=cate_source_file, sheet_name='bom_price')
     result = []
     for (index, temp_ppn) in enumerate(pps):
         ppn_str = str(temp_ppn)
         price_arr = []
-        bom_price_list = ExcelHelp.read_sheet_content_by_name(file_name=cate_source_file, sheet_name='bom_price')#MySqlHelp_recommanded.DBRecommandChip().bom_price_read("update_time > '2023/10/28'")
+        #MySqlHelp_recommanded.DBRecommandChip().bom_price_read("update_time > '2023/10/28'")
         started_record = False
         #(`ppn`, `manu`, `supplier`, `package`, `lot`, `quoted_price`, `release_time`, `stock_num`, `valid_supplier`, `update_time`)
-
         for row_content in bom_price_list:
             ppn_bom = str(row_content[0])
             if ppn_bom == ppn_str:
                 started_record = True
-                valid_date = is_valid_supplier(row_content[6])
+                valid_date = is_valid_supplier(row_content[6], row_content[2])
                 if valid_date:
                     bom_price = row_content[5]
                     bom_price_num = change_price_get(bom_price, rate)
@@ -43,7 +43,7 @@ def bom_price_result():
                 min = price_arr[-1]
             else:
                 if price_arr.__len__() >= 2:
-                    min = price_arr[-2]
+                    min = price_arr[-1]
                 else:
                     min = ' '
         else:
@@ -77,7 +77,7 @@ def change_price_get(price_str, rate):
 
 # 计算汇率
 def get_rate():
-    result = 7.1628  # default cate
+    result = 7.22  # default cate
     try:
         url = "https://api.exchangerate-api.com/v4/latest/USD"
         json_str = ''
@@ -100,7 +100,9 @@ def extract_currency(string):
         return '0.00'
 
 
-def is_valid_supplier(date_string) -> bool:
+def is_valid_supplier(date_string, supplier_name) -> bool:
+    if supplier_name.__contains__("此供应商选择了隐藏公司名"):
+        return False
     valid_time_arr = ['3天内', '1周内', '今天', '昨天', '1月内', '2022/09']
     if valid_time_arr.__contains__(date_string):
         return True

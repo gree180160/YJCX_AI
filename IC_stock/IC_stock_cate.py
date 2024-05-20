@@ -1,7 +1,6 @@
 
 #  记录Task 提供的型号，在IC 中的库存信息
 import time
-
 from selenium.webdriver.common.by import By
 import random
 from WRTools import ChromeDriverManager
@@ -13,14 +12,14 @@ from WRTools import ExcelHelp, WaitHelp, PathHelp, EmailHelper, MySqlHelp_recomm
 
 ssl._create_default_https_context = ssl._create_unverified_context
 
-sourceFile_dic = {'fileName': PathHelp.get_file_path(None, 'TTIJS.xlsx'),
+sourceFile_dic = {'fileName': PathHelp.get_file_path(None, 'TManuAndSeri_willTC.xlsx'),
                   'sourceSheet': 'ppn3',
                   'colIndex': 1,
-                  'startIndex': 24,
-                  'endIndex': 33}
-task_name = 'TTIJS'
+                  'startIndex': 0,
+                  'endIndex': 30}
+task_name = 'TManuAndSeri_willTC'
 
-accouts_arr = [[AccManage.IC_stock_1['n'], AccManage.IC_stock_1['p']]]
+accouts_arr = [[AccManage.IC_stock_1['n'], AccManage.IC_stock_1['p']], [AccManage.IC_stock_2['n'], AccManage.IC_stock_2['p']]]
 try:
     driver = ChromeDriverManager.getWebDriver(1)
 except Exception as e:
@@ -29,7 +28,7 @@ except Exception as e:
 total_page = 1
 current_page = 1
 VerificationCodePage = 0
-
+finishedPPN = 0
 
 def get_total_page():
     global total_page
@@ -40,7 +39,6 @@ def get_total_page():
         if total_page is not None and len(li_arr) > 0:
             total_page = int(li_arr[len(li_arr) - 1].text)
     except:
-        li_arr = []
         total_page = 1
     current_page = 1
 
@@ -50,14 +48,14 @@ def login_action(aim_url):
     if current_url == "https://member.ic.net.cn/login.php":
         WaitHelp.waitfor_account_import(False, False)
         # begin login
-        accout_current = random.choice(accouts_arr)
+        accout_current = random.choice(accouts_arr[finishedPPN/10%2])
         driver.find_element(by=By.ID, value='username').clear()
         driver.find_element(by=By.ID, value='username').send_keys(accout_current[0])
         driver.find_element(by=By.ID, value='password').clear()
         driver.find_element(by=By.ID, value='password').send_keys(accout_current[1])
         WaitHelp.waitfor_account_import(False, False)
         driver.find_element(by=By.ID, value='btn_login').click()
-        WaitHelp.waitfor_account_import(True, False)
+        WaitHelp.waitfor_ICHot(True, False)
     if driver.current_url.startswith('https://member.ic.net'):  # 首次登录
         driver.get(aim_url)
     elif driver.current_url.startswith('https://www.ic.net.cn/search'):  # 查询过程中出现登录
@@ -70,7 +68,7 @@ def get_stock(cate_index, cate_name, st_manu):
     search_url = URLManager.IC_stock_url(cate_name)
     login_action(search_url)
     # 延时几秒确保页面加载完毕
-    WaitHelp.waitfor_account_import(True, False)
+    WaitHelp.waitfor_ICHot(True, False)
     showingCheckCode = checkVerificationCodePage(cate_name)
     while showingCheckCode:
         WaitHelp.waitfor(True, False)
@@ -175,7 +173,7 @@ def get_stock(cate_index, cate_name, st_manu):
                     driver.execute_script(js)
                 except:
                     login_action(search_url)
-                WaitHelp.waitfor_account_import(True, False)
+                WaitHelp.waitfor_ICHot(True, False)
                 waitTime = 0  # wait reload time
                 while driver.current_url == old_url and waitTime <= 5:
                     WaitHelp.waitfor_account_import(False, False)
@@ -200,21 +198,33 @@ def checkVerificationCodePage(ppn) -> bool:
     return result
 
 
+def changeAccount():
+    global finishedPPN
+    if finishedPPN > 0:
+        if finishedPPN % 10 == 0:
+            login_action("https://member.ic.net.cn/member/member_index.php")
+    finishedPPN += 1
+
+
 def main():
     all_cates = ExcelHelp.read_col_content(sourceFile_dic['fileName'], sourceFile_dic['sourceSheet'],
                                            sourceFile_dic['colIndex'])
     all_manu = ExcelHelp.read_col_content(sourceFile_dic['fileName'], sourceFile_dic['sourceSheet'], 2)
     for (cate_index, cate_name) in enumerate(all_cates):
+        while WaitHelp.isSleep_time():
+                time.sleep(60*5)
         if cate_name.__contains__('?'):
             continue
         elif cate_index in range(sourceFile_dic['startIndex'], sourceFile_dic['endIndex']):
             print(f'cate_index is: {cate_index}  cate_name is: {cate_name}')
-            if cate_index % 10 == 0 and cate_index > 0:
-                time.sleep(5*60)
+            changeAccount()
             get_stock(cate_index, cate_name, all_manu[cate_index])
 
 
 if __name__ == "__main__":
+    driver.get('https://www.ic.net.cn/')
+    time.sleep(2.0)
     driver.get("https://member.ic.net.cn/login.php")
+    time.sleep(1.5)
     login_action("https://member.ic.net.cn/member/member_index.php")
     main()
