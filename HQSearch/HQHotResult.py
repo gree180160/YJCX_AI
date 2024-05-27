@@ -86,5 +86,5 @@ def valid_month(month_data: list):
 
 
 if __name__ == "__main__":
-    HQ_hot_result(PathHelp.get_file_path(None, 'TManuAndSeri_willTC.xlsx'))
+    HQ_hot_result(PathHelp.get_file_path(None, 'TTE_RU.xlsx'))
     print('over')

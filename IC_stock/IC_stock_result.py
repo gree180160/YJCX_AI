@@ -3,10 +3,6 @@
 # （1） 靠谱供应商数量（ICCP+SSCP）
 # （2） 靠谱库存数量（[现货排名库存总量+非现货排名ICCP库存总量+非现货排名SSCP库存总量]/6)
 
-from openpyxl import workbook, load_workbook, Workbook
-import base64
-import IC_stock.IC_Stock_Info
-import time
 from WRTools import PathHelp, ExcelHelp, MySqlHelp_recommanded
 from Manager import TaskManager
 
@@ -16,8 +12,8 @@ from Manager import TaskManager
 
 # 将同一个ppn到所有stock 累加，然后按照保存到数组中, 没有数据的，用/填充
 def IC_stock_sum(cate_source_file):
-    pps = ExcelHelp.read_col_content(file_name= cate_source_file, sheet_name='ppn3', col_index=1)
-    manufactures = ExcelHelp.read_col_content(file_name= cate_source_file, sheet_name='ppn3', col_index=2)
+    pps = ExcelHelp.read_col_content(file_name= cate_source_file, sheet_name='ppn4', col_index=1)
+    manufactures = ExcelHelp.read_col_content(file_name= cate_source_file, sheet_name='ppn4', col_index=2)
     result = []
     header_row = ['ppn', 'manu','supplier', 'rank', 'stock']
     result.append(header_row)
@@ -78,5 +74,5 @@ def addIC_info():
 
 
 if __name__ == "__main__":
-    IC_stock_sum(PathHelp.get_file_path(None, 'TManuAndSeri_willTC.xlsx'))
+    IC_stock_sum(PathHelp.get_file_path(None, 'TXianYu.xlsx'))
     print('over')

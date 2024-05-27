@@ -62,8 +62,8 @@ def createDayTask(unit:int):
 
 # 分解数量大的ppn列表
 def decompositionPPN(unit: int):
-    source_file = "/Users/liuhe/Desktop/CalcitrapaAIProject/TTISerail/TTISerial.xlsx"
-    sava_fold = '/Users/liuhe/Desktop/CalcitrapaAIProject/TTISerail/'
+    source_file = "/Users/liuhe/Desktop/CalcitrapaAIProject/重点系列/active/TManuAndSeri_active.xlsx"
+    sava_fold = '/Users/liuhe/Desktop/CalcitrapaAIProject/重点系列/active/'
     source_ppn = ExcelHelp.read_col_content(file_name=source_file, sheet_name='ppn', col_index=1)
     # source_ppn = source_ppn[0:2000]
     # history_sheets = []
@@ -298,13 +298,12 @@ def filterNeeds():
 
 # delet finished ppn
 def deletFinished_ppn():
-    wait_file = PathHelp.get_file_path(None, 'TTI_10USD.xlsx')
-    waiting_ppns = ExcelHelp.read_sheet_content_by_name(wait_file, 'source')
+    wait_file = PathHelp.get_file_path(None, 'TManuAndSeri_36H.xlsx')
+    waiting_ppns = ExcelHelp.read_sheet_content_by_name(wait_file, 'Sheet2')
     history_files = [PathHelp.get_file_path(None, 'TTISTOCK2404.xlsx'),
                      PathHelp.get_file_path(None, 'TRU2405.xlsx'),
-                     PathHelp.get_file_path(None, 'TTIMilitary.xlsx'),
-                     PathHelp.get_file_path(None, 'TTIMilitary.xlsx'),
-                     PathHelp.get_file_path(None, 'TManuAndSeri_willTC.xlsx')
+                     "/Users/liuhe/Desktop/CalcitrapaAIProject/重点系列/TManuAndSeri_willTC.xlsx",
+                     "/Users/liuhe/Desktop/CalcitrapaAIProject/TTI_10USD.xlsx"
                      ]
     history_ppns = []
     for temp_file in history_files:
@@ -324,4 +323,4 @@ if __name__ == "__main__":
     # ali()
     # getAllICStockRecord()
     deletFinished_ppn()
-    # decompositionPPN(500)
+    # decompositionPPN(300)

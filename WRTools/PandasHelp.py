@@ -37,9 +37,9 @@ def comineCVS_digikey():
 
 # 文件夹
 def octopart_csv_xlsx():
-    fold = '/Users/liuhe/Desktop/CalcitrapaAIProject/TRU2405/'
+    fold = '/Users/liuhe/Desktop/CalcitrapaAIProject/重点系列/active/octopart/'
     list_file = os.listdir(fold)  # 返回指定目录
-    save_file = f'{fold}TRU2405.xlsx'
+    save_file = PathHelp.get_file_path(None, 'TManuAndSeri_36H.xlsx')# f'{fold}TRU2405.xlsx'
     result = []
     firt_row = ['制造商零件编号', '制造商', '描述','供应商', '价格', '库存']
     result.append(firt_row)
@@ -54,8 +54,8 @@ def octopart_csv_xlsx():
 
 # 只有1个文件
 def octopart_file_arr():
-    source_file = "/Users/liuhe/Downloads/20240501_ttijs_xlsx.csv"
-    save_file = PathHelp.get_file_path(None, 'TTIJS.xlsx')
+    source_file = "/Users/liuhe/Downloads/20240524_tte_ru_xlsx.csv"
+    save_file = PathHelp.get_file_path(None, 'TTE_RU.xlsx')
     result = []
     firt_row = ['制造商零件编号', '制造商', '描述', '供应商', '价格', '库存']
     result.append(firt_row)
@@ -68,5 +68,6 @@ def octopart_file_arr():
 
 
 if __name__ == '__main__':
-    comineCVS_digikey()
+    # comineCVS_digikey()
     # octopart_file_arr()
+    octopart_csv_xlsx()

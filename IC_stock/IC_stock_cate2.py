@@ -1,7 +1,6 @@
 
 #  记录Task 提供的型号，在IC 中的库存信息
 import time
-import datetime
 from selenium.webdriver.common.by import By
 import random
 from WRTools import ChromeDriverManager
@@ -13,23 +12,23 @@ from WRTools import ExcelHelp, WaitHelp, PathHelp, EmailHelper, MySqlHelp_recomm
 
 ssl._create_default_https_context = ssl._create_unverified_context
 
-sourceFile_dic = {'fileName': PathHelp.get_file_path(None, 'TManuAndSeri_willTC.xlsx'),
+sourceFile_dic = {'fileName': PathHelp.get_file_path(None, 'TXianYu.xlsx'),
                   'sourceSheet': 'ppn3',
                   'colIndex': 1,
-                  'startIndex': 30,
-                  'endIndex': 60}
-task_name = 'TManuAndSeri_willTC'
+                  'startIndex': 8,
+                  'endIndex': 16}
+task_name = 'TXianYu'
 
-accouts_arr = [[AccManage.IC_stock_2['n'], AccManage.IC_stock_2['p']]]
+accouts_arr = [[AccManage.IC_stock_3['n'], AccManage.IC_stock_3['p']], [AccManage.IC_stock_4['n'], AccManage.IC_stock_4['p']]]
 try:
-    driver = ChromeDriverManager.getWebDriver(4)
+    driver = ChromeDriverManager.getWebDriver(2)
 except Exception as e:
     print(e)
 
 total_page = 1
 current_page = 1
 VerificationCodePage = 0
-
+finishedPPN = 0
 
 def get_total_page():
     global total_page
@@ -49,7 +48,7 @@ def login_action(aim_url):
     if current_url == "https://member.ic.net.cn/login.php":
         WaitHelp.waitfor_account_import(False, False)
         # begin login
-        accout_current = random.choice(accouts_arr)
+        accout_current = accouts_arr[int(finishedPPN/10%2)]
         driver.find_element(by=By.ID, value='username').clear()
         driver.find_element(by=By.ID, value='username').send_keys(accout_current[0])
         driver.find_element(by=By.ID, value='password').clear()
@@ -142,7 +141,7 @@ def get_stock(cate_index, cate_name, st_manu):
                         stock_num = ele.text
             except:
                 stock_num = '0'
-            #(supplier, isICCP, isSSCP, model, st_manu, isSpotRanking, isHotSell, batch, pakaging, supplier_manu, stock_num)
+            #`ppn`, `st_manu`, `supplier_manu`, `supplier`, `isICCP`, `isSSCP`, `iSRanking`, `isHotSell`, `isYouXian`, `batch`, `pakaging`, `stock_num`
             ic_Stock_Info = IC_Stock_Info(supplier=supplier,
                                           isICCP=isICCP,
                                           isSSCP=isSSCP,
@@ -199,6 +198,14 @@ def checkVerificationCodePage(ppn) -> bool:
     return result
 
 
+def changeAccount():
+    global finishedPPN
+    if finishedPPN > 0:
+        if finishedPPN % 10 == 0:
+            login_action("https://member.ic.net.cn/member/member_index.php")
+    finishedPPN += 1
+
+
 def main():
     all_cates = ExcelHelp.read_col_content(sourceFile_dic['fileName'], sourceFile_dic['sourceSheet'],
                                            sourceFile_dic['colIndex'])
@@ -210,12 +217,14 @@ def main():
             continue
         elif cate_index in range(sourceFile_dic['startIndex'], sourceFile_dic['endIndex']):
             print(f'cate_index is: {cate_index}  cate_name is: {cate_name}')
-            if cate_index % 10 == 0 and cate_index > 0:
-                time.sleep(5*60)
+            changeAccount()
             get_stock(cate_index, cate_name, all_manu[cate_index])
 
 
 if __name__ == "__main__":
+    driver.get('https://www.ic.net.cn/')
+    time.sleep(2.0)
     driver.get("https://member.ic.net.cn/login.php")
+    time.sleep(1.5)
     login_action("https://member.ic.net.cn/member/member_index.php")
     main()

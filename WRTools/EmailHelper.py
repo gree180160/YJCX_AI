@@ -10,7 +10,7 @@ import os
 
 my_sender = '2147770436@qq.com'  # 发件人邮箱账号
 my_pass = 'hfkletvsoglvdjbg'  # 发件人邮箱授权码，第一步得到的
-my_user = '1103385722@qq.com'  # 收件人邮箱账号，可以发送给自己
+my_user = '1459287460@qq.com'  # 收件人邮箱账号，可以发送给自己
 
 
 def mail_TI(cate_name, stock_num, detail_data):
@@ -184,6 +184,40 @@ def sendAttachment(result_save_file, theme):
         print("邮件发送失败")
     return ret
 
+
+def stock_chang_alert(result_save_file, ppnInfo):
+    ret = True
+    try:
+        # new_user_list = ['river@omni-electronics.com', 'river@szyjcx.cn']
+        new_user_list = ['alex@calcitrapa.com', 'river@calcitrapa.com']
+        mail_msg = f'<h2><center> ppn change check </center></h2>'
+        html = mail_msg + ppnInfo
+        part1 = MIMEText(html, "html")
+        # 将MIMEText对象添加到邮件对象中
+        msg = MIMEMultipart()
+        msg['From'] = formataddr([f"From ppn change check", my_sender])  # 括号里的对应发件人邮箱昵称、发件人邮箱账号
+        msg['To'] = ','.join(new_user_list)  # 括号里的对应收件人邮箱昵称、收件人邮箱账号
+        msg['Subject'] = "风菱库存——IC stock 变化"  # 邮件的主题，也可以说是标题
+
+        with open(result_save_file, 'rb') as f:
+            attachment = MIMEApplication(f.read())
+            attachment.add_header('Content-Disposition', 'attachment', filename=os.path.basename(result_save_file))
+            msg.attach(attachment)
+        msg.attach(part1)
+
+        server = smtplib.SMTP_SSL("smtp.qq.com", 465)  # 发件人邮箱中的SMTP服务器，端口是465，固定的，不能更改
+        server.login(my_sender, my_pass)  # 括号中对应的是发件人邮箱账号、邮箱密码
+        server.set_debuglevel(1)
+        server.sendmail(my_sender, new_user_list, msg.as_string())  # 括号中对应的是发件人邮箱账号、收件人邮箱账号、发送邮件
+        server.quit()  # 关闭连接
+    except Exception as e:  # 如果 try 中的语句没有执行，则会执行下面的 ret=False
+        print(e)
+        ret = False
+    if ret:
+        print("邮件发送成功")
+    else:
+        print("邮件发送失败")
+    return ret
 
 
 if __name__ == '__main__':

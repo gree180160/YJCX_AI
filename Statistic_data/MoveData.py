@@ -7,6 +7,7 @@ from HQSearch import HQHotResult
 from Findchips_stock import findchips_stock_info, findchips_stock_cate
 import IC_Search.IC_search_Image
 import Statistic_data.statistic_price_sheet
+from Bom_price import BomResult
 from Manager import TaskManager
 
 # ------------findchip----------------------
@@ -301,7 +302,7 @@ def ICAuction():
     time.sleep(1.0)
     IC_stock_result.IC_stock_sum(source_file)
     time.sleep(1.0)
-    first_row = ["型号", "品牌", "库存", "批次", "价格", "IC_supplier","IC_rank", "IC_stock", "HQ_hot_week", 'HQ_hot_month', 'HQ_hot', 'oc_price', 'oc_stock', 'oc_supplier', 'oc_des', 'IC_hot', 'IC_price', 'bom_price', 'result']
+    first_row = ["型号", "品牌", "库存", "批次", "价格", "IC_supplier","IC_rank", "IC_stock", "HQ_hot_week", 'HQ_hot_month', 'HQ_hot', '¥oc_price¥', 'oc_stock', 'oc_supplier', 'oc_des', 'IC_hot', 'IC_price', 'bom_price', 'result']
     result = []
     result.append(first_row)
     source_info = ExcelHelp.read_sheet_content_by_name(source_file, 'auction')
@@ -328,18 +329,21 @@ def ICAuction():
 
 
 # 联科Task
-def IC_HQ_Result():
-    source_file = PathHelp.get_file_path(None, 'TRU2405.xlsx')
-    # HQHotResult.HQ_hot_result(source_file)
-    # time.sleep(1.0)
-    # IC_stock_result.IC_stock_sum(source_file)
-    # time.sleep(1.0)
-    first_row = ["型号", "品牌","IC_supplier","IC_rank", "IC_stock", "HQ_hot_week", 'HQ_hot_month', 'HQ_hot', 'oc_price', 'oc_stock','oc_supplier', 'oc_des', 'IC_hot', 'IC_price', 'bom_price', 'result']
+def IC_HQ_Result(rate):
+    source_file = PathHelp.get_file_path(None, 'TTE_RU.xlsx')
+    HQHotResult.HQ_hot_result(source_file)
+    time.sleep(1.0)
+    IC_stock_result.IC_stock_sum(source_file)
+    time.sleep(1.0)
+    BomResult.bom_price_result(source_file)
+    time.sleep(1.0)
+    first_row = ["型号", "品牌","IC_supplier","IC_rank", "IC_stock", "HQ_hot_week", 'HQ_hot_month', 'HQ_hot', 'oc_price', 'oc_stock','oc_supplier', 'oc_des', 'bom_price', 'IC_hot', 'IC_price',  'result']
     result = []
     result.append(first_row)
     IC_info = ExcelHelp.read_sheet_content_by_name(source_file, 'IC_stock_sum')
     HQ_hot_info = ExcelHelp.read_sheet_content_by_name(source_file, 'HQ_hot_result')
     oc_info = ExcelHelp.read_sheet_content_by_name(source_file, 'octopart')
+    bom_info = ExcelHelp.read_sheet_content_by_name(source_file, 'bom_price_sum')
     ppns_info = ExcelHelp.read_sheet_content_by_name(source_file, 'ppn4')   # 先过滤HQ_hot_合格的ppn
     for (index, temp_ppnInfo) in enumerate(ppns_info):
         ppn_result = [temp_ppnInfo[0], temp_ppnInfo[1]]
@@ -353,7 +357,15 @@ def IC_HQ_Result():
                 break;
         for temp_OC in oc_info:
             if temp_OC[0] == temp_ppnInfo[0]:
-                ppn_result += [temp_OC[4], temp_OC[5], temp_OC[3], temp_OC[2]]
+                try:
+                    oc_price = round(float(temp_OC[4]) * rate, 2)
+                except:
+                    oc_price = ""
+                ppn_result += [oc_price, temp_OC[5], temp_OC[3], temp_OC[2]]
+                break;
+        for temp_bom in bom_info:
+            if temp_bom[0] == temp_ppnInfo[0]:
+                ppn_result += [temp_bom[2]]
                 break;
         result.append(ppn_result)
     ExcelHelp.add_arr_to_sheet(source_file, "Result", result)
@@ -364,7 +376,7 @@ if __name__ == "__main__":
     # time.sleep(1.0)
     # statistic_data()
     # lkResult()
-    IC_HQ_Result()
+    IC_HQ_Result(7.24)
 
 
 

@@ -12,12 +12,12 @@ from WRTools import ExcelHelp, WaitHelp, PathHelp, EmailHelper, MySqlHelp_recomm
 
 ssl._create_default_https_context = ssl._create_unverified_context
 
-sourceFile_dic = {'fileName': PathHelp.get_file_path(None, 'TManuAndSeri_willTC.xlsx'),
-                  'sourceSheet': 'ppn3',
+sourceFile_dic = {'fileName': PathHelp.get_file_path(None, 'TTE_RU.xlsx'),
+                  'sourceSheet': 'ppn4',
                   'colIndex': 1,
                   'startIndex': 0,
-                  'endIndex': 30}
-task_name = 'TManuAndSeri_willTC'
+                  'endIndex': 4}
+task_name = 'TTE_RU'
 
 accouts_arr = [[AccManage.IC_stock_1['n'], AccManage.IC_stock_1['p']], [AccManage.IC_stock_2['n'], AccManage.IC_stock_2['p']]]
 try:
@@ -48,7 +48,7 @@ def login_action(aim_url):
     if current_url == "https://member.ic.net.cn/login.php":
         WaitHelp.waitfor_account_import(False, False)
         # begin login
-        accout_current = random.choice(accouts_arr[finishedPPN/10%2])
+        accout_current = accouts_arr[int(finishedPPN/10%2)]
         driver.find_element(by=By.ID, value='username').clear()
         driver.find_element(by=By.ID, value='username').send_keys(accout_current[0])
         driver.find_element(by=By.ID, value='password').clear()
@@ -141,7 +141,7 @@ def get_stock(cate_index, cate_name, st_manu):
                         stock_num = ele.text
             except:
                 stock_num = '0'
-            #(supplier, isICCP, isSSCP, model, st_manu, isSpotRanking, isHotSell, batch, pakaging, supplier_manu, stock_num)
+            #`ppn`, `st_manu`, `supplier_manu`, `supplier`, `isICCP`, `isSSCP`, `iSRanking`, `isHotSell`, `isYouXian`, `batch`, `pakaging`, `stock_num`
             ic_Stock_Info = IC_Stock_Info(supplier=supplier,
                                           isICCP=isICCP,
                                           isSSCP=isSSCP,

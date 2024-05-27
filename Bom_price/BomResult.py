@@ -7,13 +7,9 @@ from urllib.request import urlopen
 from Manager import TaskManager
 import ssl
 
-cate_source_file = PathHelp.get_file_path(None, 'TRU2405.xlsx')
-IC_source_file = PathHelp.get_file_path(None, 'TRU2405.xlsx')
-result_save_file = cate_source_file
-
 
 # 取3个月内的最高值，没有价格则忽略
-def bom_price_result():
+def bom_price_result(cate_source_file):
     rate = get_rate()
     pps = ExcelHelp.read_col_content(file_name=cate_source_file, sheet_name='ppn4', col_index=1)
     manufactures = ExcelHelp.read_col_content(file_name=cate_source_file, sheet_name='ppn4', col_index=2)
@@ -77,7 +73,7 @@ def change_price_get(price_str, rate):
 
 # 计算汇率
 def get_rate():
-    result = 7.22  # default cate
+    result = 7.23  # default cate
     try:
         url = "https://api.exchangerate-api.com/v4/latest/USD"
         json_str = ''
@@ -109,20 +105,9 @@ def is_valid_supplier(date_string, supplier_name) -> bool:
 
 
 if __name__ == "__main__":
-    # combine_result(source_files=ICStock_file_arr, aim_file=IC_source_file)
-    # a1 = extract_currency('￥7.6776')
-    # print(a1)
-    # a1 = extract_currency('原装 0.60')
-    # print(a1)
-    # a1 = extract_currency('华强北最真')
-    # print(a1)
-    # a1 = extract_currency('￥99')
-    # print(a1)
-    # a1 = extract_currency('＄41.5')
-    # print(a1)
 #￥99
 # $ 0.0015
-    bom_price_result()
+    bom_price_result(PathHelp.get_file_path(None, 'TManuAndSeri_willTC.xlsx'))
     print('over')
 
 

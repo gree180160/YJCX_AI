@@ -445,3 +445,9 @@ Process finished with exit code 130 (interrupted by signal 2: SIGINT)
 2024-05-20 10:10:43login action exception is: Message: element not interactable
   (Session info: chrome=114.0.5735.133)
 
+2024-05-20 11:03:19click more error Message: element click intercepted: Element <a href="javascript:void(0)" class="bomID_extStock_More" data-startindex="1" data-for="sixpage" data-pagesize="15" data-hasids="3">...</a> is not clickable at point (939, 330). Other element would receive the click: <div class="navbar_default view_chat" style="">...</div>
+  (Session info: chrome=114.0.5735.133)
+
+2024-05-21 15:59:50login check exception：Message: element click intercepted: Element <a href="javascript:;" class="bom_power_a bom_layer_login">...</a> is not clickable at point (418, 290). Other element would receive the click: <img class="advert-img" src="//static.bom.ai//assets/img/shop/direct-sale-store-advertisement.jpg">
+  (Session info: chrome=114.0.5735.133)
+

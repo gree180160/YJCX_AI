@@ -4,17 +4,17 @@ from WRTools import ExcelHelp, WaitHelp, PathHelp, MySqlHelp_recommanded, LogHel
 from selenium.webdriver.common.by import By
 from WRTools import ChromeDriverManager
 import ssl
-from Manager import AccManage, TaskManager, URLManager
+from Manager import AccManage, URLManager
 
 log_file = PathHelp.get_file_path('HQSearch', 'HQPeakfireLog.txt')
 ssl._create_default_https_context = ssl._create_unverified_context
 
-sourceFile_dic = {'fileName': PathHelp.get_file_path(None, 'TTI_10USD.xlsx'),
-                  'sourceSheet': 'ppn',
+sourceFile_dic = {'fileName': PathHelp.get_file_path(None, 'TTE_RU.xlsx'),
+                  'sourceSheet': 'ppn2',
                   'colIndex': 1,
-                  'startIndex': 277,
-                  'endIndex': 300}
-task_name = 'TTI_10USD'
+                  'startIndex': 7,
+                  'endIndex': 13}
+task_name = 'TTE_RU'
 
 accouts_arr = [AccManage.HQ_hot_2['n'], AccManage.HQ_hot_2['p']]
 
