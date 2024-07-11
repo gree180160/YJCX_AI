@@ -8,12 +8,12 @@ from Manager import AccManage, URLManager
 log_file = PathHelp.get_file_path('HQSearch', 'HQPeakfireLog.txt')
 ssl._create_default_https_context = ssl._create_unverified_context
 
-sourceFile_dic = {'fileName': PathHelp.get_file_path(None, 'TXianYu.xlsx'),
+sourceFile_dic = {'fileName': PathHelp.get_file_path(None, 'TManuAndSeri_180H.xlsx'),
                   'sourceSheet': 'ppn2',
                   'colIndex': 1,
-                  'startIndex': 12,
-                  'endIndex': 18}
-task_name = 'TXianYu'
+                  'startIndex': 26,
+                  'endIndex': 39}
+task_name = 'TManuAndSeri_144H'
 
 
 accouts_arr = [AccManage.HQ_hot_3['n'], AccManage.HQ_hot_3['p']]
@@ -69,7 +69,7 @@ def getSearchInfo(cate_name, manu, isWeek):
     result = []
     tables = driver.find_elements(By.CSS_SELECTOR, 'table.list-table')
     if tables.__len__() > 0:
-        info_table = tables[0]
+        info_table = tables[1]
         tr_arr = info_table.find_elements(By.TAG_NAME, 'tr')
         for (index, tr_info) in enumerate(tr_arr):
             yzpms = tr_info.find_elements(By.CSS_SELECTOR, 'a.icon-yzpm')

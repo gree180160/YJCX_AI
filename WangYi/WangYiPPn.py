@@ -7,9 +7,9 @@ from WRTools import ChromeDriverManager
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from WRTools import ExcelHelp, LogHelper, PathHelp, WaitHelp
-from Manager import TaskManager, URLManager
+import time
 import re
-#page 116
+
 ssl._create_default_https_context = ssl._create_unverified_context
 
 driver_option = webdriver.ChromeOptions()
@@ -18,23 +18,24 @@ driver.set_page_load_timeout(480)
 
 default_url = 'https://www.wyselect.com/shop/index'
 
-sourceFile_dic = {'fileName': PathHelp.get_file_path("WangYi", 'WangYiTask2024-03.xlsx'),
+sourceFile_dic = {'fileName': PathHelp.get_file_path("WangYi", 'WangYiTask2024-07.xlsx'),
                   'sourceSheet': 'manu',
                   'colIndex': 1,
                   'startIndex': 0,
-                  'endIndex': 1}
-result_save_file = PathHelp.get_file_path("WangYi", 'WangYiTask2024-03.xlsx')
+                  'endIndex': 2}
+result_save_file = PathHelp.get_file_path("WangYi", 'WangYiTask2024-07.xlsx')
 
 log_file = PathHelp.get_file_path('WangYi', 'WYLog.txt')
 
 total_page = 1
 current_page = 1
 
+
 # 跳转到下一个指定的型号
 def go_to_cate(pn_index, pn, c_page):
     try:
-        # 'https://www.wyselect.com/shop/itemList?store_sort=%20asc&page=1&brand_id=9'
-        url = f'https://www.wyselect.com/shop/itemList?&brand_id=%209%20&store_sort=%20asc&page={c_page}'
+        # https://www.good-choice.com/shop/itemList?title=COSEL&title=COSEL&page=3
+        url = f'https://www.good-choice.com/shop/itemList?title={pn}&title={pn}&page={c_page}'
         url.replace(' ', '')
         driver.get(url)
         WaitHelp.waitfor(True, False)
@@ -51,7 +52,7 @@ def set_page():
     page_area = driver.find_elements(By.CSS_SELECTOR, "div.pagination.pag-normal.flex-center.wrap")
     if page_area.__len__() > 0:
         page_total = page_area[-1].find_element(By.TAG_NAME, "span")
-        total_page = int(re.sub('[^0-9]', '', page_total.text))
+        total_page = min(int(re.sub('[^0-9]', '', page_total.text)), 30)
         try:
             current_url = driver.current_url
             o = urlparse(current_url)
@@ -66,11 +67,12 @@ def set_page():
 
 
 def go_to_next_page(pn_index, pn):
+    global current_page
     try:
-        url = f'https://www.wyselect.com/shop/itemList?&brand_id=%209%20&store_sort=%20asc&page={current_page + 1}'
+        url = f'https://www.good-choice.com/shop/itemList?title={pn}&title={pn}&page={current_page+1}'
         url.replace(' ', '')
         driver.get(url)
-        WaitHelp.waitfor(True, False)
+        WaitHelp.waitfor_account_import(True, False)
         set_page()
         analy_html(pn_index, pn)
     except Exception as e:
@@ -91,6 +93,10 @@ def analy_html(pn_index, pn):
             except:
                 ppn = '--'
             try:
+                application = ppntr.find_element(By.CSS_SELECTOR, 'a.shop-intro.ellip').text
+            except:
+                application = '--'
+            try:
                 supplier = ppntr.find_element(By.CSS_SELECTOR, 'div.shop-store.flex-start-center').text
             except:
                 supplier = '--'
@@ -103,7 +109,7 @@ def analy_html(pn_index, pn):
                 stock = stock_area.find_element(By.CSS_SELECTOR, 'div.flex-end.width-100').text
             except:
                 stock = '--'
-            record = [ppn, supplier, price, stock]
+            record = [ppn, pn, application, supplier, price, stock]
             if ppn != '--':
                 valid_supplier_arr.append(record)
     except Exception as e:
@@ -117,13 +123,13 @@ def analy_html(pn_index, pn):
         go_to_next_page(pn_index, pn)
 
 
-
 def main():
-    # all_cates = ExcelHelp.read_col_content(file_name=sourceFile_dic['fileName'],
-    #                                        sheet_name=sourceFile_dic['sourceSheet'],
-    #                                        col_index=sourceFile_dic['colIndex'])
-    all_cates = ['vicor']
+    all_cates = ExcelHelp.read_col_content(file_name=sourceFile_dic['fileName'],
+                                           sheet_name=sourceFile_dic['sourceSheet'],
+                                           col_index=sourceFile_dic['colIndex'])
     for (pn_index, pn) in enumerate(all_cates):
+        while WaitHelp.isSleep_time():
+                time.sleep(60*5)
         if pn is None or pn.__contains__('?'):
             continue
         elif pn_index in range(sourceFile_dic['startIndex'], sourceFile_dic['endIndex']):
@@ -134,5 +140,5 @@ def main():
 
 if __name__ == "__main__":
     driver.get(default_url)
-    WaitHelp.waitfor_octopart(False, False)
+    WaitHelp.waitfor_account_import(False, False)
     main()

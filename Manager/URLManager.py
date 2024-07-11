@@ -116,13 +116,14 @@ def octopart_page_more_url(sourcefile: str, page0_sheet: str, manu: Octopart_man
 
 
 # IC 交易网
-def IC_stock_url(ppn: str):
+
+def IC_stock_url(ppn: str, page=0):
     cate_str = str(ppn)
     cate_str = cate_str.replace('/', '%2F')
     cate_str = cate_str.replace('#', '%23')
     cate_str = cate_str.replace('+', '%2B')
     cate_str = cate_str.replace(',', '%2C')
-    return f"https://www.ic.net.cn/search/{cate_str}.html?isExact=1"
+    return f"https://www.ic.net.cn/search/{cate_str}.html?isExact=1&page={page}"
 
 
 def IC_hot_url(ppn: str):

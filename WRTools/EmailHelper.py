@@ -189,7 +189,7 @@ def stock_chang_alert(result_save_file, ppnInfo):
     ret = True
     try:
         # new_user_list = ['river@omni-electronics.com', 'river@szyjcx.cn']
-        new_user_list = ['alex@calcitrapa.com', 'river@calcitrapa.com']
+        new_user_list = ['river@calcitrapa.com']
         mail_msg = f'<h2><center> ppn change check </center></h2>'
         html = mail_msg + ppnInfo
         part1 = MIMEText(html, "html")

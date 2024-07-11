@@ -74,5 +74,5 @@ def addIC_info():
 
 
 if __name__ == "__main__":
-    IC_stock_sum(PathHelp.get_file_path(None, 'TXianYu.xlsx'))
+    IC_stock_sum(PathHelp.get_file_path(None, 'TManuAndSeri_36H.xlsx'))
     print('over')

@@ -16,7 +16,7 @@ sourceFile_dic = {'fileName': PathHelp.get_file_path("IC_stock", 'TFL_ICStock.xl
                   'sourceSheet': 'ppn',
                   'colIndex': 1,
                   'startIndex': 0,
-                  'endIndex': 3}
+                  'endIndex': 5}
 task_name = 'TFL_ICStock'
 
 accouts_arr = [[AccManage.IC_FLStock['n'], AccManage.IC_FLStock['p']]]
@@ -77,12 +77,12 @@ def get_stock(cate_index, cate_name, st_manu):
     print(f"index is: {cate_index} cate is:{cate_name} currentPage is: {current_page} totalpage is:{total_page}")
     #  2-loop page arr
     need_load_nextPage = True
+    need_save_ic_arr = []
     while current_page <= total_page and need_load_nextPage:
         try:
             li_arr = driver.find_element(by=By.ID, value='resultList').find_elements(by=By.CSS_SELECTOR, value='li.stair_tr')
         except:
             li_arr = []
-        need_save_ic_arr = []
         #  3-loop table arr
         for templi in li_arr:
             if not templi.is_displayed():
@@ -155,12 +155,27 @@ def get_stock(cate_index, cate_name, st_manu):
                                           supplier_manu=manufacturer,
                                           stock_num=stock_num)
             if ic_Stock_Info.shouldSave():
-                # today = time.strftime('%Y-%m-%d', time.localtime())
                 saveContent_arr = ic_Stock_Info.descritpion_arr()
                 need_save_ic_arr.append(saveContent_arr)
-        if need_save_ic_arr.__len__() > 0:
-            writeRecord(need_save_ic_arr, cate_name)
-            need_load_nextPage = False
+        gotoNextPage(cate_name)
+    if need_save_ic_arr.__len__() > 0:
+        writeRecord(need_save_ic_arr, cate_name)
+        need_save_ic_arr.clear()
+
+
+def gotoNextPage(cate_name):
+    global current_page, total_page
+    if current_page < total_page:
+        new_url = URLManager.IC_stock_url(cate_name, current_page+1)
+        driver.get(new_url)
+        WaitHelp.waitfor_ICHot(True, False)
+        waitTime = 0  # wait reload time
+        while driver.current_url != new_url and waitTime <= 5:
+            waitTime += 1
+            print(f"url is:{new_url} load error:")
+            driver.get(new_url)
+            WaitHelp.waitfor(True, False)
+    current_page += 1
 
 
 def writeRecord(need_save_arr, ppn):
@@ -192,7 +207,7 @@ def writeRecord(need_save_arr, ppn):
     for temp_h in history:
         still_stock = False
         for new_re in result:
-            if temp_h[0] == new_re[0] and temp_h[3] == new_re[3] and temp_h[4] == new_re[4] and temp_h[5] == new_re[5] and temp_h[6] == new_re[6] and temp_h[9] == new_re[9]:
+            if temp_h[0] == new_re[0] and temp_h[3] == new_re[3] and temp_h[4] == new_re[4] and temp_h[5] == new_re[5] and temp_h[6] == new_re[6] and temp_h[9] == new_re[9] and temp_h[10] == new_re[10]:
                 still_stock = True
                 break
         if not still_stock:
@@ -221,8 +236,16 @@ def stock_change_alert(ppn_list):
             except:
                 new_stock = 0
             if last_stock != new_stock:
-                alert_info.append([[temp_record[0], temp_record[3], temp_record[-2], temp_record[-1]]])
+                if temp_record[0] == 'DSPIC30F6014A-30I/PF' and temp_record[3] == '深圳市协鑫半导体有限公司':
+                    try:
+                        if abs(int(temp_record[-2]) - int(temp_record[-1])) == 2000:
+                            continue
+                    except:
+                        continue
+                else:
+                    alert_info.append([temp_record[0], temp_record[3], temp_record[-2], temp_record[-1]])
     if alert_info.__len__() > 0:
+        alert_str = str(alert_info).replace("['DSPIC30F6014A-30I/PF', '深圳市协鑫半导体有限公司', '7000', '5000'],", '')
         EmailHelper.stock_chang_alert(file_name, str(alert_info))
 
 
@@ -247,8 +270,8 @@ def main():
                                            sourceFile_dic['colIndex'])
     all_manu = ExcelHelp.read_col_content(sourceFile_dic['fileName'], sourceFile_dic['sourceSheet'], 2)
     for (cate_index, cate_name) in enumerate(all_cates):
-        while WaitHelp.isSleep_time():
-                time.sleep(60*5)
+        # while WaitHelp.isSleep_time():
+        #         time.sleep(60*5)
         if cate_name.__contains__('?'):
             continue
         elif cate_index in range(sourceFile_dic['startIndex'], sourceFile_dic['endIndex']):

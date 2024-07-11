@@ -18,12 +18,12 @@ driver.set_page_load_timeout(120)
 
 accouts_arr = [[AccManage.Bom1['c'], AccManage.Bom1['n'], AccManage.Bom1['p']]]
 
-sourceFile_dic = {'fileName': PathHelp.get_file_path(None, 'TTE_RU.xlsx'),
-                  'sourceSheet': 'ppn4',
+sourceFile_dic = {'fileName': PathHelp.get_file_path(None, 'TICHot.xlsx'),
+                  'sourceSheet': 'ppn',
                   'colIndex': 1,
-                  'startIndex': 0,
-                  'endIndex': 4}
-task_name = 'TTE_RU'
+                  'startIndex': 52,
+                  'endIndex': 104}
+task_name = 'TICHot'
 
 default_url = 'https://www.bom.ai/ic/74LVX4245MTCX.html'
 log_file = PathHelp.get_file_path('Bom_price', 'bom_price_log.txt')
@@ -31,6 +31,7 @@ log_file = PathHelp.get_file_path('Bom_price', 'bom_price_log.txt')
 
 # 登陆action
 def login_action(aim_url):
+    time.sleep(2.0)
     try:
         erp_entre = driver.find_element(by=By.CLASS_NAME, value='Bom_loging_title_erplogin.login_phone')
         display = erp_entre.is_displayed()

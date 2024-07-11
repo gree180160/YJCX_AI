@@ -12,16 +12,16 @@ from WRTools import ExcelHelp, WaitHelp, PathHelp, EmailHelper, MySqlHelp_recomm
 
 ssl._create_default_https_context = ssl._create_unverified_context
 
-sourceFile_dic = {'fileName': PathHelp.get_file_path(None, 'TXianYu.xlsx'),
-                  'sourceSheet': 'ppn3',
+sourceFile_dic = {'fileName': PathHelp.get_file_path(None, 'TICHot.xlsx'),
+                  'sourceSheet': 'ppn',
                   'colIndex': 1,
-                  'startIndex': 8,
-                  'endIndex': 16}
-task_name = 'TXianYu'
+                  'startIndex': 52,
+                  'endIndex': 104}
+task_name = 'TICHot'
 
 accouts_arr = [[AccManage.IC_stock_3['n'], AccManage.IC_stock_3['p']], [AccManage.IC_stock_4['n'], AccManage.IC_stock_4['p']]]
 try:
-    driver = ChromeDriverManager.getWebDriver(2)
+    driver = ChromeDriverManager.getWebDriver(0)
 except Exception as e:
     print(e)
 
@@ -166,20 +166,16 @@ def get_stock(cate_index, cate_name, st_manu):
         need_save_ic_arr.clear()
         # 翻页
         if need_load_nextPage:
-            old_url = driver.current_url
-            if current_page < total_page:
-                js = f"javascript:pageTo({current_page + 1})"
-                try:
-                    driver.execute_script(js)
-                except:
-                    login_action(search_url)
-                WaitHelp.waitfor_ICHot(True, False)
-                waitTime = 0  # wait reload time
-                while driver.current_url == old_url and waitTime <= 5:
-                    WaitHelp.waitfor_account_import(False, False)
-                    waitTime += 1
-                    print("long page:", driver.current_url)
-            current_page += 1
+            new_url = URLManager.IC_stock_url(cate_name, current_page + 1)
+            driver.get(new_url)
+            WaitHelp.waitfor_ICHot(True, False)
+            waitTime = 0  # wait reload time
+            while driver.current_url != new_url and waitTime <= 5:
+                waitTime += 1
+                print(f"url is:{new_url} load error:")
+                driver.get(new_url)
+                WaitHelp.waitfor(True, False)
+        current_page += 1
 
 
 # 验证当前页面是否正在等待用户验证，连续三次请求出现验证码页面，则关闭页面
@@ -201,7 +197,13 @@ def checkVerificationCodePage(ppn) -> bool:
 def changeAccount():
     global finishedPPN
     if finishedPPN > 0:
-        if finishedPPN % 10 == 0:
+        if finishedPPN % 66 == 0:
+            driver.execute()
+            time.sleep(1.0)
+            ChromeDriverManager.getWebDriver(4)
+            time.sleep(1.0)
+            driver.get('https://www.ic.net.cn/')
+            time.sleep(2.0)
             login_action("https://member.ic.net.cn/member/member_index.php")
     finishedPPN += 1
 

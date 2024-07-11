@@ -9,8 +9,8 @@ from WRTools import PathHelp, ExcelHelp, MySqlHelp_recommanded
 
 # 将同一个ppn到所有stock 累加，然后按照保存到数组中
 def HQ_stock_sum(cate_source_file):
-    pps = ExcelHelp.read_col_content(file_name= cate_source_file, sheet_name='ppn4', col_index=1)
-    manufactures = ExcelHelp.read_col_content(file_name= cate_source_file, sheet_name='ppn4', col_index=2)
+    pps = ExcelHelp.read_col_content(file_name= cate_source_file, sheet_name='ppn2', col_index=1)
+    manufactures = ExcelHelp.read_col_content(file_name= cate_source_file, sheet_name='ppn2', col_index=2)
     HQ_stocks = ExcelHelp.read_sheet_content_by_name(cate_source_file, sheet_name='HQ_stock')
     result = []
     for (index, temp_ppn) in enumerate(pps):
@@ -34,5 +34,5 @@ def HQ_stock_sum(cate_source_file):
 
 
 if __name__ == "__main__":
-    HQ_stock_sum(PathHelp.get_file_path(None, 'TXianYu.xlsx'))
+    HQ_stock_sum(PathHelp.get_file_path(None, 'TManuAndSeri_180H.xlsx'))
     print('over')

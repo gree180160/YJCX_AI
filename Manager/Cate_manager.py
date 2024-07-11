@@ -62,8 +62,8 @@ def createDayTask(unit:int):
 
 # 分解数量大的ppn列表
 def decompositionPPN(unit: int):
-    source_file = "/Users/liuhe/Desktop/CalcitrapaAIProject/重点系列/active/TManuAndSeri_active.xlsx"
-    sava_fold = '/Users/liuhe/Desktop/CalcitrapaAIProject/重点系列/active/'
+    source_file = "/Users/liuhe/Desktop/CalcitrapaAIProject/TRU2407/TRU2407.xlsx"
+    sava_fold = '/Users/liuhe/Desktop/CalcitrapaAIProject/TRU2407/'
     source_ppn = ExcelHelp.read_col_content(file_name=source_file, sheet_name='ppn', col_index=1)
     # source_ppn = source_ppn[0:2000]
     # history_sheets = []
@@ -298,12 +298,13 @@ def filterNeeds():
 
 # delet finished ppn
 def deletFinished_ppn():
-    wait_file = PathHelp.get_file_path(None, 'TManuAndSeri_36H.xlsx')
-    waiting_ppns = ExcelHelp.read_sheet_content_by_name(wait_file, 'Sheet2')
-    history_files = [PathHelp.get_file_path(None, 'TTISTOCK2404.xlsx'),
-                     PathHelp.get_file_path(None, 'TRU2405.xlsx'),
-                     "/Users/liuhe/Desktop/CalcitrapaAIProject/重点系列/TManuAndSeri_willTC.xlsx",
-                     "/Users/liuhe/Desktop/CalcitrapaAIProject/TTI_10USD.xlsx"
+    wait_file = PathHelp.get_file_path(None, 'TRU2407_36H.xlsx')
+    waiting_ppns = ExcelHelp.read_sheet_content_by_name(wait_file, 'octopart')
+    history_files = ['/Users/liuhe/Desktop/CalcitrapaAIProject/重点系列/active/TManuAndSeri_36H.xlsx',
+                     '/Users/liuhe/Desktop/CalcitrapaAIProject/重点系列/active/TManuAndSeri_72H.xlsx',
+                     '/Users/liuhe/Desktop/CalcitrapaAIProject/重点系列/active/TManuAndSeri_108H.xlsx',
+                     PathHelp.get_file_path(None, 'TManuAndSeri_144H.xlsx'),
+                     PathHelp.get_file_path(None, 'TManuAndSeri_180H.xlsx')
                      ]
     history_ppns = []
     for temp_file in history_files:
