@@ -2,7 +2,7 @@ from WRTools import StringHelp
 
 
 class IC_Stock_Info:
-    def __init__(self, supplier, isICCP, isSSCP, model, st_manu, isSpotRanking, isHotSell,isYouXian, batch, pakaging, supplier_manu, stock_num):
+    def __init__(self, supplier, isICCP, isSSCP, model, st_manu, isSpotRanking, isHotSell,isYouXian, batch, pakaging,supplier_ppn, supplier_manu, stock_num):
         self.supplier = supplier
         self.isICCP = isICCP
         self.isSSCP = isSSCP
@@ -13,14 +13,32 @@ class IC_Stock_Info:
         self.isYouXian = isYouXian
         self.batch:str = StringHelp.IC_batch(str(batch))
         self.pakaging = pakaging
+        self.supplier_ppn = supplier_ppn
         self.supplier_manu = supplier_manu
         self.stock_num = stock_num
 
     def description_str(self):
-        result = f'{self.model or "--"},{self.st_manu or "--"}, {self.supplier_manu or "--"} , {self.supplier or "--"}, {"ICCP" if self.isICCP else "notICCP"}, {"SSCP" if self.isSSCP else "notSSCP"}, {"SpotRanking" if self.isSpotRanking else "notSpotRanking"}, {"HotSell" if self.isHotSell else "notHotSell"},{"YouXian" if self.isYouXian else "notYouXian"}, {self.batch}, {self.pakaging}, {self.stock_num}'
+        result = f'{self.model or "--"},{self.st_manu or "--"}, {self.supplier_ppn or "--"}, {self.supplier_manu or "--"} , {self.supplier or "--"}, {"ICCP" if self.isICCP else "notICCP"}, {"SSCP" if self.isSSCP else "notSSCP"}, {"SpotRanking" if self.isSpotRanking else "notSpotRanking"}, {"HotSell" if self.isHotSell else "notHotSell"},{"YouXian" if self.isYouXian else "notYouXian"}, {self.batch}, {self.pakaging}, {self.stock_num}'
         return result
 
     def descritpion_arr(self):
+        # (ppn, st_manu, supplier_manu, supplier, isICCP, isSSCP, iSRanking, isHotSell, stock_num)
+        result = [self.model or "--",
+                  self.st_manu or "--",
+                  self.supplier_ppn or "--",
+                  self.supplier_manu or "--",
+                  self.supplier or "--",
+                  1 if self.isICCP else 0,
+                  1 if self.isSSCP else 0,
+                  1 if self.isSpotRanking else 0,
+                  1 if self.isHotSell else 0,
+                  1 if self.isYouXian else 0,
+                  self.batch,
+                  self.pakaging,
+                  self.stock_num]
+        return result
+
+    def descritpion_arr_fl(self):
         # (ppn, st_manu, supplier_manu, supplier, isICCP, isSSCP, iSRanking, isHotSell, stock_num)
         result = [self.model or "--",
                   self.st_manu or "--",

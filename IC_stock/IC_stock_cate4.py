@@ -15,13 +15,13 @@ ssl._create_default_https_context = ssl._create_unverified_context
 sourceFile_dic = {'fileName': PathHelp.get_file_path(None, 'TRU2407_72H.xlsx'),
                   'sourceSheet': 'ppn3',
                   'colIndex': 1,
-                  'startIndex': 0,
-                  'endIndex': 100}
+                  'startIndex': 305,
+                  'endIndex': 410}
 task_name = 'TRU2407_72H'
 
-accouts_arr = [[AccManage.IC_stock_1['n'], AccManage.IC_stock_1['p']]]
+accouts_arr = [[AccManage.IC_stock_4['n'], AccManage.IC_stock_4['p']]]
 try:
-    driver = ChromeDriverManager.getWebDriver(1)
+    driver = ChromeDriverManager.getWebDriver(4)
 except Exception as e:
     print(e)
 

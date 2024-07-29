@@ -481,3 +481,72 @@ Process finished with exit code 130 (interrupted by signal 2: SIGINT)
 2024-06-24 15:01:54click more error Message: element click intercepted: Element <a href="javascript:void(0)" class="bomID_extStock_More" data-startindex="1" data-for="sixpage" data-pagesize="15" data-hasids="4">...</a> is not clickable at point (935, 435). Other element would receive the click: <div class="layui-layer-shade layui-layer-shade-direct" times="100003" style="z-index:10000; background-color:#000; opacity:0.3; filter:alpha(opacity=30);"></div>
   (Session info: chrome=114.0.5735.133)
 
+2024-07-17 18:38:04click more error Message: element click intercepted: Element <a href="javascript:void(0)" class="bomID_extStock_More" data-startindex="1" data-for="sixpage" data-pagesize="15" data-hasids="4">...</a> is not clickable at point (935, 385). Other element would receive the click: <div class="layui-layer-shade layui-layer-shade-direct" times="100003" style="z-index:10000; background-color:#000; opacity:0.3; filter:alpha(opacity=30);"></div>
+  (Session info: chrome=114.0.5735.133)
+
+2024-07-17 18:49:30click more error Message: element click intercepted: Element <a href="javascript:void(0)" class="bomID_extStock_More" data-startindex="1" data-for="sixpage" data-pagesize="15" data-hasids="3">...</a> is not clickable at point (936, 411). Other element would receive the click: <div class="layui-layer-shade layui-layer-shade-direct" times="100003" style="z-index:10000; background-color:#000; opacity:0.3; filter:alpha(opacity=30);"></div>
+  (Session info: chrome=114.0.5735.133)
+
+2024-07-17 18:57:50click more error Message: element click intercepted: Element <a href="javascript:void(0)" class="bomID_extStock_More" data-startindex="1" data-for="sixpage" data-pagesize="15" data-hasids="4">...</a> is not clickable at point (936, 383). Other element would receive the click: <div class="layui-layer-shade layui-layer-shade-direct" times="100003" style="z-index:10000; background-color:#000; opacity:0.3; filter:alpha(opacity=30);"></div>
+  (Session info: chrome=114.0.5735.133)
+
+2024-07-17 19:03:58click more error Message: element click intercepted: Element <a href="javascript:void(0)" class="bomID_extStock_More" data-startindex="1" data-for="sixpage" data-pagesize="15" data-hasids="3">...</a> is not clickable at point (935, 385). Other element would receive the click: <div class="layui-layer-shade layui-layer-shade-direct" times="100003" style="z-index:10000; background-color:#000; opacity:0.3; filter:alpha(opacity=30);"></div>
+  (Session info: chrome=114.0.5735.133)
+
+2024-07-17 19:05:46click more error Message: element click intercepted: Element <a href="javascript:void(0)" class="bomID_extStock_More" data-startindex="1" data-for="sixpage" data-pagesize="15" data-hasids="3">...</a> is not clickable at point (936, 385). Other element would receive the click: <div class="layui-layer-shade layui-layer-shade-direct" times="100003" style="z-index:10000; background-color:#000; opacity:0.3; filter:alpha(opacity=30);"></div>
+  (Session info: chrome=114.0.5735.133)
+
+2024-07-17 19:11:51click more error Message: element click intercepted: Element <a href="javascript:void(0)" class="bomID_extStock_More" data-startindex="1" data-for="sixpage" data-pagesize="15" data-hasids="3">...</a> is not clickable at point (936, 411). Other element would receive the click: <div class="layui-layer-shade layui-layer-shade-direct" times="100003" style="z-index:10000; background-color:#000; opacity:0.3; filter:alpha(opacity=30);"></div>
+  (Session info: chrome=114.0.5735.133)
+
+2024-07-17 19:34:33click more error Message: element click intercepted: Element <a href="javascript:void(0)" class="bomID_extStock_More" data-startindex="1" data-for="sixpage" data-pagesize="15" data-hasids="3">...</a> is not clickable at point (936, 437). Other element would receive the click: <div class="layui-layer-shade layui-layer-shade-direct" times="100003" style="z-index:10000; background-color:#000; opacity:0.3; filter:alpha(opacity=30);"></div>
+  (Session info: chrome=114.0.5735.133)
+
+2024-07-17 19:35:59click more error Message: element click intercepted: Element <a href="javascript:void(0)" class="bomID_extStock_More" data-startindex="1" data-for="sixpage" data-pagesize="15" data-hasids="3">...</a> is not clickable at point (935, 358). Other element would receive the click: <div class="layui-layer-shade layui-layer-shade-direct" times="100003" style="z-index:10000; background-color:#000; opacity:0.3; filter:alpha(opacity=30);"></div>
+  (Session info: chrome=114.0.5735.133)
+
+2024-07-17 19:40:19click more error Message: element click intercepted: Element <a href="javascript:void(0)" class="bomID_extStock_More" data-startindex="1" data-for="sixpage" data-pagesize="15" data-hasids="3">...</a> is not clickable at point (935, 411). Other element would receive the click: <div class="layui-layer-shade layui-layer-shade-direct" times="100003" style="z-index:10000; background-color:#000; opacity:0.3; filter:alpha(opacity=30);"></div>
+  (Session info: chrome=114.0.5735.133)
+
+2024-07-17 19:58:49click more error Message: element click intercepted: Element <a href="javascript:void(0)" class="bomID_extStock_More" data-startindex="1" data-for="sixpage" data-pagesize="15" data-hasids="4">...</a> is not clickable at point (935, 358). Other element would receive the click: <div class="layui-layer-shade layui-layer-shade-direct" times="100003" style="z-index:10000; background-color:#000; opacity:0.3; filter:alpha(opacity=30);"></div>
+  (Session info: chrome=114.0.5735.133)
+
+2024-07-17 20:02:10click more error Message: element click intercepted: Element <a href="javascript:void(0)" class="bomID_extStock_More" data-startindex="1" data-for="sixpage" data-pagesize="15" data-hasids="3">...</a> is not clickable at point (935, 358). Other element would receive the click: <div class="layui-layer-shade layui-layer-shade-direct" times="100003" style="z-index:10000; background-color:#000; opacity:0.3; filter:alpha(opacity=30);"></div>
+  (Session info: chrome=114.0.5735.133)
+
+2024-07-17 20:17:59click more error Message: element click intercepted: Element <a href="javascript:void(0)" class="bomID_extStock_More" data-startindex="1" data-for="sixpage" data-pagesize="15" data-hasids="6">...</a> is not clickable at point (935, 385). Other element would receive the click: <div class="layui-layer-shade layui-layer-shade-direct" times="100003" style="z-index:10000; background-color:#000; opacity:0.3; filter:alpha(opacity=30);"></div>
+  (Session info: chrome=114.0.5735.133)
+
+2024-07-17 20:20:33click more error Message: element click intercepted: Element <a href="javascript:void(0)" class="bomID_extStock_More" data-startindex="1" data-for="sixpage" data-pagesize="15" data-hasids="3">...</a> is not clickable at point (935, 437). Other element would receive the click: <div class="layui-layer-shade layui-layer-shade-direct" times="100003" style="z-index:10000; background-color:#000; opacity:0.3; filter:alpha(opacity=30);"></div>
+  (Session info: chrome=114.0.5735.133)
+
+2024-07-17 20:26:04click more error Message: element click intercepted: Element <a href="javascript:void(0)" class="bomID_extStock_More" data-startindex="1" data-for="sixpage" data-pagesize="15" data-hasids="3">...</a> is not clickable at point (936, 385). Other element would receive the click: <div class="layui-layer-shade layui-layer-shade-direct" times="100003" style="z-index:10000; background-color:#000; opacity:0.3; filter:alpha(opacity=30);"></div>
+  (Session info: chrome=114.0.5735.133)
+
+2024-07-17 20:28:35click more error Message: element click intercepted: Element <a href="javascript:void(0)" class="bomID_extStock_More" data-startindex="1" data-for="sixpage" data-pagesize="15" data-hasids="3">...</a> is not clickable at point (935, 437). Other element would receive the click: <div class="layui-layer-shade layui-layer-shade-direct" times="100003" style="z-index:10000; background-color:#000; opacity:0.3; filter:alpha(opacity=30);"></div>
+  (Session info: chrome=114.0.5735.133)
+
+2024-07-17 20:47:40click more error Message: element click intercepted: Element <a href="javascript:void(0)" class="bomID_extStock_More" data-startindex="1" data-for="sixpage" data-pagesize="15" data-hasids="3">...</a> is not clickable at point (934, 358). Other element would receive the click: <div class="layui-layer-shade layui-layer-shade-direct" times="100003" style="z-index:10000; background-color:#000; opacity:0.3; filter:alpha(opacity=30);"></div>
+  (Session info: chrome=114.0.5735.133)
+
+2024-07-17 20:50:47click more error Message: element click intercepted: Element <a href="javascript:void(0)" class="bomID_extStock_More" data-startindex="1" data-for="sixpage" data-pagesize="15" data-hasids="3">...</a> is not clickable at point (934, 358). Other element would receive the click: <div class="layui-layer-shade layui-layer-shade-direct" times="100003" style="z-index:10000; background-color:#000; opacity:0.3; filter:alpha(opacity=30);"></div>
+  (Session info: chrome=114.0.5735.133)
+
+2024-07-17 20:54:08click more error Message: element click intercepted: Element <a href="javascript:void(0)" class="bomID_extStock_More" data-startindex="1" data-for="sixpage" data-pagesize="15" data-hasids="3">...</a> is not clickable at point (937, 437). Other element would receive the click: <div class="layui-layer-shade layui-layer-shade-direct" times="100003" style="z-index:10000; background-color:#000; opacity:0.3; filter:alpha(opacity=30);"></div>
+  (Session info: chrome=114.0.5735.133)
+
+2024-07-17 21:45:09click more error Message: element click intercepted: Element <a href="javascript:void(0)" class="bomID_extStock_More" data-startindex="1" data-for="sixpage" data-pagesize="15" data-hasids="3">...</a> is not clickable at point (935, 358). Other element would receive the click: <div class="layui-layer-shade layui-layer-shade-direct" times="100003" style="z-index:10000; background-color:#000; opacity:0.3; filter:alpha(opacity=30);"></div>
+  (Session info: chrome=114.0.5735.133)
+
+2024-07-17 22:32:59click more error Message: element click intercepted: Element <a href="javascript:void(0)" class="bomID_extStock_More" data-startindex="1" data-for="sixpage" data-pagesize="15" data-hasids="4">...</a> is not clickable at point (932, 411). Other element would receive the click: <div class="layui-layer-shade layui-layer-shade-direct" times="100003" style="z-index:10000; background-color:#000; opacity:0.3; filter:alpha(opacity=30);"></div>
+  (Session info: chrome=114.0.5735.133)
+
+2024-07-17 23:17:54click more error Message: element click intercepted: Element <a href="javascript:void(0)" class="bomID_extStock_More" data-startindex="1" data-for="sixpage" data-pagesize="15" data-hasids="4">...</a> is not clickable at point (935, 385). Other element would receive the click: <div class="layui-layer-shade layui-layer-shade-direct" times="100003" style="z-index:10000; background-color:#000; opacity:0.3; filter:alpha(opacity=30);"></div>
+  (Session info: chrome=114.0.5735.133)
+
+2024-07-17 23:45:34click more error Message: element click intercepted: Element <a href="javascript:void(0)" class="bomID_extStock_More" data-startindex="1" data-for="sixpage" data-pagesize="15" data-hasids="3">...</a> is not clickable at point (936, 358). Other element would receive the click: <div class="layui-layer-shade layui-layer-shade-direct" times="100003" style="z-index:10000; background-color:#000; opacity:0.3; filter:alpha(opacity=30);"></div>
+  (Session info: chrome=114.0.5735.133)
+
+2024-07-19 15:40:09click more error Message: element click intercepted: Element <a href="javascript:void(0)" class="bomID_extStock_More" data-startindex="1" data-for="sixpage" data-pagesize="15" data-hasids="5">...</a> is not clickable at point (935, 385). Other element would receive the click: <div class="layui-layer-shade layui-layer-shade-direct" times="100003" style="z-index:10000; background-color:#000; opacity:0.3; filter:alpha(opacity=30);"></div>
+  (Session info: chrome=114.0.5735.133)
+

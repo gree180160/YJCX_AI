@@ -21,7 +21,7 @@ def getWebDriver(index):
                    'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36 Edg/117.0.2045.50',
                    'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36 Edg/116.0.1938.76',
                    ]
-    if AccManage.Device_ID == 'Mac':
+    if AccManage.Device_ID == 'Mac' or AccManage.Device_ID == 'AIR':
         user_agent = mac_arr[index]
     else:
         user_agent = windows_arr[index]

@@ -16,7 +16,7 @@ sourceFile_dic = {'fileName': PathHelp.get_file_path("IC_stock", 'TFL_ICStock.xl
                   'sourceSheet': 'ppn',
                   'colIndex': 1,
                   'startIndex': 0,
-                  'endIndex': 5}
+                  'endIndex': 4}
 task_name = 'TFL_ICStock'
 
 accouts_arr = [[AccManage.IC_FLStock['n'], AccManage.IC_FLStock['p']]]
@@ -65,7 +65,7 @@ def login_action(aim_url):
 #   二维数组，page 列表， table 列表
 def get_stock(cate_index, cate_name, st_manu):
     global current_page
-    search_url = URLManager.IC_stock_url(cate_name)
+    search_url = URLManager.IC_stock_url(cate_name, precise=True)
     login_action(search_url)
     # 延时几秒确保页面加载完毕
     WaitHelp.waitfor_ICHot(True, False)
@@ -145,17 +145,18 @@ def get_stock(cate_index, cate_name, st_manu):
             ic_Stock_Info = IC_Stock_Info(supplier=supplier,
                                           isICCP=isICCP,
                                           isSSCP=isSSCP,
-                                          model=model,
+                                          model=cate_name,
                                           st_manu=st_manu,
                                           isSpotRanking=isSpotRanking,
                                           isHotSell=isHotSell,
                                           isYouXian=isYouXian,
                                           batch=batch,
                                           pakaging=pakaging,
+                                          supplier_ppn=model,
                                           supplier_manu=manufacturer,
                                           stock_num=stock_num)
             if ic_Stock_Info.shouldSave():
-                saveContent_arr = ic_Stock_Info.descritpion_arr()
+                saveContent_arr = ic_Stock_Info.descritpion_arr_fl()
                 need_save_ic_arr.append(saveContent_arr)
         gotoNextPage(cate_name)
     if need_save_ic_arr.__len__() > 0:
@@ -166,7 +167,7 @@ def get_stock(cate_index, cate_name, st_manu):
 def gotoNextPage(cate_name):
     global current_page, total_page
     if current_page < total_page:
-        new_url = URLManager.IC_stock_url(cate_name, current_page+1)
+        new_url = URLManager.IC_stock_url(cate_name, True, current_page+1)
         driver.get(new_url)
         WaitHelp.waitfor_ICHot(True, False)
         waitTime = 0  # wait reload time
@@ -186,7 +187,7 @@ def writeRecord(need_save_arr, ppn):
     except:
         history = []
     result = []
-    # 'ppn', 'st_manu', 'supplier_manu', 'supplier', 'isICCP', 'isSSCP', 'iSRanking', 'isHotSell', 'isYouXian', 'batch', 'pakaging', 'stock_num'
+    # 'ppn', 'st_manu','supplier_ppn', 'supplier_manu', 'supplier', 'isICCP', 'isSSCP', 'iSRanking', 'isHotSell', 'isYouXian', 'batch', 'pakaging', 'stock_num'
     if history.__len__() > 0:
         his_stock_record = history[1].__len__() - 10
         title_row = history[0] + [time.strftime('%Y-%m-%d', time.localtime())]
@@ -198,7 +199,7 @@ def writeRecord(need_save_arr, ppn):
         for i in range(his_stock_record - 1):
             temp_result.insert(-1, 0)
         for temp_history in history:
-            if temp_history[0] == new_record[0] and temp_history[3] == new_record[3] and temp_history[4] == str(new_record[4]) and temp_history[5] == str(new_record[5]) and temp_history[9] == str(new_record[9]) and temp_history[6] == str(new_record[6]):
+            if temp_history[0] == new_record[0] and temp_history[3] == new_record[3] and temp_history[9] == str(new_record[9]) and temp_history[10] == str(new_record[10]):
                 temp_result = temp_history + [new_record[-1]]
                 break
         result.append(temp_result)
@@ -207,7 +208,7 @@ def writeRecord(need_save_arr, ppn):
     for temp_h in history:
         still_stock = False
         for new_re in result:
-            if temp_h[0] == new_re[0] and temp_h[3] == new_re[3] and temp_h[4] == new_re[4] and temp_h[5] == new_re[5] and temp_h[6] == new_re[6] and temp_h[9] == new_re[9] and temp_h[10] == new_re[10]:
+            if temp_h[0] == new_re[0] and temp_h[3] == new_re[3] and temp_h[9] == new_re[9] and temp_h[10] == new_re[10]:
                 still_stock = True
                 break
         if not still_stock:

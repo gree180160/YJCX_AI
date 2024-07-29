@@ -71,6 +71,15 @@ trTags.forEach(function(tr) {
     });
 });
 
+var textContents = [];
+var trTags = document.querySelectorAll('div[data-v-31b6cba6]');
+trTags.forEach(function(tr) {
+    var aTags = tr.querySelectorAll('span');
+    aTags.forEach(function(a) {
+        textContents.push(a.textContent);
+    });
+});
+
 // 创建一个新的div元素来展示结果
 var resultDiv = document.createElement('div');
 resultDiv.textContent = textContents.join(', '); // 将数组内容以逗号分隔显示

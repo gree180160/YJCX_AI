@@ -18,12 +18,12 @@ driver.set_page_load_timeout(120)
 
 accouts_arr = [[AccManage.Bom1['c'], AccManage.Bom1['n'], AccManage.Bom1['p']]]
 
-sourceFile_dic = {'fileName': PathHelp.get_file_path(None, 'TICHot.xlsx'),
-                  'sourceSheet': 'ppn',
+sourceFile_dic = {'fileName': PathHelp.get_file_path(None, 'TRU2407_72H.xlsx'),
+                  'sourceSheet': 'ppn_bom',
                   'colIndex': 1,
-                  'startIndex': 52,
-                  'endIndex': 104}
-task_name = 'TICHot'
+                  'startIndex': 83,
+                  'endIndex': 175}
+task_name = 'TRU2407_72H'
 
 default_url = 'https://www.bom.ai/ic/74LVX4245MTCX.html'
 log_file = PathHelp.get_file_path('Bom_price', 'bom_price_log.txt')

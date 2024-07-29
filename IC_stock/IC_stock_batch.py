@@ -64,7 +64,7 @@ def login_action(aim_url):
 #   二维数组，page 列表， table 列表
 def get_stock(cate_index, cate_name,st_manu):
     global current_page
-    search_url = URLManager.IC_stock_url(cate_name)
+    search_url = URLManager.IC_stock_url(cate_name, True)
     login_action(search_url)
     # 延时几秒确保页面加载完毕
     WaitHelp.waitfor_account_import(True, False)

@@ -342,19 +342,20 @@ def ICAuction():
 
 #  IC_HQ
 def IC_HQ_Result(rate):
-    source_file = PathHelp.get_file_path(None, 'TManuAndSeri_108H.xlsx')
+    source_file = PathHelp.get_file_path(None, 'TRU2407_36H.xlsx')
     # HQHotResult.HQ_hot_result(source_file)
     # time.sleep(1.0)
-    IC_stock_result.IC_stock_sum(source_file)
-    time.sleep(1.0)
-    BomResult.bom_price_result(source_file)
-    time.sleep(1.0)
-    first_row = ["型号", "品牌","IC_supplier","IC_rank", "IC_stock", "HQ_hot_week", 'HQ_hot_month', 'HQ_hot_avg', 'HQ_hot_result', 'oc_price', 'oc_stock','oc_supplier', 'oc_des', 'bom_price', 'IC_hot', 'IC_price',  'result']
+    # IC_stock_result.IC_stock_sum(source_file)
+    # time.sleep(1.0)
+    # BomResult.bom_price_result(source_file)
+    # time.sleep(1.0)
+    first_row = ["型号", "品牌","IC_supplier","IC_rank", "IC_stock", "HQ_hot_week", 'HQ_hot_month', 'HQ_hot_avg', 'HQ_hot_result', 'oc_price', 'oc_stock','oc_supplier', 'oc_des','digikey_status', 'bom_price', 'IC_hot', 'IC_price',  'result']
     result = []
     result.append(first_row)
     IC_info = ExcelHelp.read_sheet_content_by_name(source_file, 'IC_stock_sum')
     HQ_hot_info = ExcelHelp.read_sheet_content_by_name(source_file, 'HQ_hot_result')
     oc_info = ExcelHelp.read_sheet_content_by_name(source_file, 'octopart')
+    dg_info = ExcelHelp.read_sheet_content_by_name(source_file, 'digikey')
     bom_info = ExcelHelp.read_sheet_content_by_name(source_file, 'bom_price_sum')
     ppns_info = ExcelHelp.read_sheet_content_by_name(source_file, 'ppn4')   # 先过滤HQ_hot_合格的ppn
     for (index, temp_ppnInfo) in enumerate(ppns_info):
@@ -375,6 +376,10 @@ def IC_HQ_Result(rate):
                     oc_price = ""
                 ppn_result += [oc_price, temp_OC[5], temp_OC[3], temp_OC[2]]
                 break;
+        for temp_dg in dg_info:
+            if temp_dg[0] == temp_ppnInfo[0]:
+                ppn_result += [temp_dg[3]]
+                break;
         for temp_bom in bom_info:
             if temp_bom[0] == temp_ppnInfo[0]:
                 ppn_result += [temp_bom[2]]
@@ -386,15 +391,16 @@ def IC_HQ_Result(rate):
 def updateICHot(rate):
     source_file = PathHelp.get_file_path(None, 'TICHot.xlsx')
     result = []
-    first_row = ['型号', '品牌', 'oc_price', 'oc_stock','oc_supplier', 'oc_des', '万一价格', '万一库存', '云汉_supplier', '云汉交期', '云汉批次', '云汉库存', '云汉价格', '立创_supplier', '立创交期', '立创库存', '立创价格', 'min_supplier', 'min_price', 'china_stock']
+    first_row = ['型号', '品牌', 'oc_price', 'oc_stock','oc_supplier', 'oc_des', '万一价格', '万一库存', '云汉_supplier', '云汉交期', '云汉批次', '云汉库存', '云汉价格', '立创_supplier', '立创交期', '立创库存', '立创价格','京满仓价格', 'min_supplier', 'min_price', 'china_stock']
     result.append(first_row)
     ppns_info = ExcelHelp.read_sheet_content_by_name(source_file, 'ppn')
     wy_info = ExcelHelp.read_sheet_content_by_name(source_file, 'WY')
     oc_info = ExcelHelp.read_sheet_content_by_name(source_file, 'octopart')
     yh_info = ExcelHelp.read_sheet_content_by_name(source_file, 'yh')
     lc_info = ExcelHelp.read_sheet_content_by_name(source_file, 'lc')
+    jdmc_info = ExcelHelp.read_sheet_content_by_name(source_file, 'jdmc')
     for (index, temp_ppnInfo) in enumerate(ppns_info):
-        ppn_temp = [temp_ppnInfo[0], temp_ppnInfo[1], '/', '/','/', '/', '/', '/', '/', '/', '/', '/', '/', '/', '/', '/', '/', '/', '', '0']
+        ppn_temp = [temp_ppnInfo[0], temp_ppnInfo[1], '/', '/','/', '/', '/', '/', '/', '/', '/', '/', '/', '/', '/', '/', '/','/', '/', '', '0']
         for temp_oc in oc_info:
             if temp_oc[0] == temp_ppnInfo[0]:
                 try:
@@ -426,6 +432,9 @@ def updateICHot(rate):
                 ppn_temp[15] = temp_lc[20]
                 ppn_temp[16] = temp_lc[22]
                 break;
+        for temp_mc in jdmc_info:
+            if temp_mc[0] == temp_ppnInfo[0]:
+                ppn_temp[17] = temp_mc[2]
         try:
             oc_price = float(ppn_temp[2])
         except:
@@ -442,9 +451,13 @@ def updateICHot(rate):
             lc_price = float(ppn_temp[16])
         except:
             lc_price = 99999999.99
-        float_arr = [oc_price, wy_price, yh_price, lc_price]
+        try:
+            jdmc_price = float(ppn_temp[17])
+        except:
+            jdmc_price = 99999999.99
+        float_arr = [oc_price, wy_price, yh_price, lc_price, jdmc_price]
         index_of_min_value = float_arr.index(min(float_arr))
-        min_supplier = ['octopart', '万一', '云汉', '立创'][index_of_min_value]
+        min_supplier = ['octopart', '万一', '云汉', '立创', '京满仓'][index_of_min_value]
         min_price = str(float_arr[index_of_min_value].__round__(2))
         try:
             wy_stock = int(ppn_temp[7].replace(' 可售', ''))
@@ -459,9 +472,9 @@ def updateICHot(rate):
         except:
             lc_stock = 0
         china_stock = wy_stock + yh_stock + lc_stock
-        ppn_temp[17] = min_supplier
-        ppn_temp[18] = min_price
-        ppn_temp[19] = china_stock
+        ppn_temp[18] = min_supplier
+        ppn_temp[19] = min_price
+        ppn_temp[20] = china_stock
         result.append(ppn_temp)
     ExcelHelp.add_arr_to_sheet(source_file, "Result", result)
 
@@ -471,8 +484,8 @@ if __name__ == "__main__":
     # time.sleep(1.0)
     # statistic_data()
     # lkResult(7.27)
-    updateICHot(7.28)
-    # IC_HQ_Result(7.27)
+    # updateICHot(7.28)
+    IC_HQ_Result(7.27)
 
 
 

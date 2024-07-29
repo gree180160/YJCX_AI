@@ -73,7 +73,7 @@ def change_price_get(price_str, rate):
 
 # 计算汇率
 def get_rate():
-    result = 7.23  # default cate
+    result = 7.27  # default cate
     try:
         url = "https://api.exchangerate-api.com/v4/latest/USD"
         json_str = ''
@@ -105,8 +105,6 @@ def is_valid_supplier(date_string, supplier_name) -> bool:
 
 
 if __name__ == "__main__":
-#￥99
-# $ 0.0015
     bom_price_result(PathHelp.get_file_path(None, 'TManuAndSeri_willTC.xlsx'))
     print('over')
 

@@ -34,8 +34,25 @@ def IC_batch(source:str):
     return result
 
 
+# 将价格描述，转成纯数字 ¥119.00/台
+def strToPrice(source_str):
+    try:
+        if len(source_str) == 0:
+            return "0.00"
+        price_str = source_str
+        price_value = re.search(r'\d+\.\d+', price_str).group()
+        price_float = float(price_value)
+        price_rounded = round(price_float, 2)
+        return str(price_rounded)
+    except Exception as e :
+        print(f'{source_str} has exceptio: {e}')
+        return "0.00"
+
+
 if __name__ == "__main__":
-    print( IC_batch("21+/30"), IC_batch("19/20+"), IC_batch("2325/2"),   IC_batch("22+21"))
+    # print( IC_batch("21+/30"), IC_batch("19/20+"), IC_batch("2325/2"),   IC_batch("22+21"))
+    aa = strToPrice('¥1028.50/台')
+    print(aa)
 
 
 

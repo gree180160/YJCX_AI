@@ -319,9 +319,23 @@ def deletFinished_ppn():
     print(result)
 
 
+def ppn_bom():
+    source_file = PathHelp.get_file_path(None, 'TRU2407_72H.xlsx')
+    oc_ppns = ExcelHelp.read_sheet_content_by_name(source_file, 'Sheet2')
+    source_ppn3 = ExcelHelp.read_sheet_content_by_name(source_file, 'Sheet3')
+    result = []
+    for (temp_index, temp_row) in enumerate(source_ppn3):
+       for(oc_index, oc_info) in enumerate(oc_ppns):
+           if temp_row[0] == oc_info[0]:
+               temp = [temp_row[0], temp_row[1], oc_info[1]]
+               result.append(temp)
+    ExcelHelp.add_arr_to_sheet(source_file, 'ppn', result)
+
+
 if __name__ == "__main__":
     # time.sleep(3.0)
     # ali()
     # getAllICStockRecord()
-    deletFinished_ppn()
+    # deletFinished_ppn()
     # decompositionPPN(300)
+    ppn_bom()

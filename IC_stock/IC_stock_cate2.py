@@ -12,14 +12,14 @@ from WRTools import ExcelHelp, WaitHelp, PathHelp, EmailHelper, MySqlHelp_recomm
 
 ssl._create_default_https_context = ssl._create_unverified_context
 
-sourceFile_dic = {'fileName': PathHelp.get_file_path(None, 'TICHot.xlsx'),
-                  'sourceSheet': 'ppn',
+sourceFile_dic = {'fileName': PathHelp.get_file_path(None, 'TRU2407_72H.xlsx'),
+                  'sourceSheet': 'ppn3',
                   'colIndex': 1,
-                  'startIndex': 52,
-                  'endIndex': 104}
-task_name = 'TICHot'
+                  'startIndex': 100,
+                  'endIndex': 200}
+task_name = 'TRU2407_72H'
 
-accouts_arr = [[AccManage.IC_stock_3['n'], AccManage.IC_stock_3['p']], [AccManage.IC_stock_4['n'], AccManage.IC_stock_4['p']]]
+accouts_arr = [[AccManage.IC_stock_2['n'], AccManage.IC_stock_2['p']]]
 try:
     driver = ChromeDriverManager.getWebDriver(0)
 except Exception as e:
@@ -65,7 +65,7 @@ def login_action(aim_url):
 #   二维数组，page 列表， table 列表
 def get_stock(cate_index, cate_name, st_manu):
     global current_page
-    search_url = URLManager.IC_stock_url(cate_name)
+    search_url = URLManager.IC_stock_url(cate_name, False)
     login_action(search_url)
     # 延时几秒确保页面加载完毕
     WaitHelp.waitfor_ICHot(True, False)
@@ -145,13 +145,14 @@ def get_stock(cate_index, cate_name, st_manu):
             ic_Stock_Info = IC_Stock_Info(supplier=supplier,
                                           isICCP=isICCP,
                                           isSSCP=isSSCP,
-                                          model=model,
+                                          model=cate_name,
                                           st_manu=st_manu,
                                           isSpotRanking=isSpotRanking,
                                           isHotSell=isHotSell,
                                           isYouXian=isYouXian,
                                           batch=batch,
                                           pakaging=pakaging,
+                                          supplier_ppn=model,
                                           supplier_manu=manufacturer,
                                           stock_num=stock_num)
             if ic_Stock_Info.shouldSave():
@@ -166,7 +167,7 @@ def get_stock(cate_index, cate_name, st_manu):
         need_save_ic_arr.clear()
         # 翻页
         if need_load_nextPage:
-            new_url = URLManager.IC_stock_url(cate_name, current_page + 1)
+            new_url = URLManager.IC_stock_url(cate_name, False, current_page + 1)
             driver.get(new_url)
             WaitHelp.waitfor_ICHot(True, False)
             waitTime = 0  # wait reload time
@@ -198,9 +199,9 @@ def changeAccount():
     global finishedPPN
     if finishedPPN > 0:
         if finishedPPN % 66 == 0:
-            driver.execute()
+            driver.close()
             time.sleep(1.0)
-            ChromeDriverManager.getWebDriver(4)
+            ChromeDriverManager.getWebDriver(2)
             time.sleep(1.0)
             driver.get('https://www.ic.net.cn/')
             time.sleep(2.0)
@@ -219,7 +220,9 @@ def main():
             continue
         elif cate_index in range(sourceFile_dic['startIndex'], sourceFile_dic['endIndex']):
             print(f'cate_index is: {cate_index}  cate_name is: {cate_name}')
-            changeAccount()
+            if cate_index % 7 == 0:
+                time.sleep(60*5)
+            # changeAccount()
             get_stock(cate_index, cate_name, all_manu[cate_index])
 
 

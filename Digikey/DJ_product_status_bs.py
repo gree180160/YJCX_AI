@@ -172,13 +172,28 @@ def get_encapsulation():
     ExcelHelp.add_arr_to_col(file, 'My Lists Worksheet', result)
 
 
-
-    # row3 最后一个空格后面的内容放到 row7
-
+# 将fold 中的记录digikey信息的Excel 信息进行汇总
+def fold_arr():
+    result_file = PathHelp.get_file_path(None, 'TRU2407_36H.xlsx')
+    fold = '/Users/liuhe/Desktop/CalcitrapaAIProject/TRU2407/36H/'
+    file_name_list = os.listdir(fold)
+    result = []
+    for temp_file in file_name_list:
+        if temp_file.__contains__('.xlsx'):
+            try:
+                content_sheet = ExcelHelp.read_sheet_content_by_name(fold + temp_file, 'My Lists Worksheet')
+            except Exception as e:
+                content_sheet = ''
+                print(f'error file: {temp_file}')
+            for row_content in content_sheet:
+                result.append([row_content[1], row_content[2], row_content[3], row_content[5]])
+    ExcelHelp.add_arr_to_sheet(result_file, sheet_name='digikey',
+                               dim_arr=result)
 
 
 if __name__ == '__main__':
     # deal_upload()
     # combine_upload_result()
-    get_encapsulation()
+    # get_encapsulation()
+    fold_arr()
 
