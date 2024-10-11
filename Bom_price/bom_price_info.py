@@ -17,6 +17,10 @@ class Bom_price_info:
     def is_valid_supplier(self) -> bool:
         if self.supplier.__contains__("此供应商选择了隐藏公司名"):
             return False
+        if self.quoted_price.__contains__("*"):
+            return False
+        if self.release_time.__contains__('周') or self.release_time.__contains__('API实时'):
+            return True
         valid_time_arr = ['3天内', '1周内', '今天', '昨天', '1月内']
         if valid_time_arr.__contains__(self.release_time):
             return True

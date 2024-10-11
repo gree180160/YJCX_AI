@@ -550,3 +550,39 @@ Process finished with exit code 130 (interrupted by signal 2: SIGINT)
 2024-07-19 15:40:09click more error Message: element click intercepted: Element <a href="javascript:void(0)" class="bomID_extStock_More" data-startindex="1" data-for="sixpage" data-pagesize="15" data-hasids="5">...</a> is not clickable at point (935, 385). Other element would receive the click: <div class="layui-layer-shade layui-layer-shade-direct" times="100003" style="z-index:10000; background-color:#000; opacity:0.3; filter:alpha(opacity=30);"></div>
   (Session info: chrome=114.0.5735.133)
 
+2024-07-31 15:33:30login check exception：Message: element click intercepted: Element <a href="javascript:;" class="bom_power_a bom_layer_login">...</a> is not clickable at point (418, 290). Other element would receive the click: <img class="advert-img" src="//static.bom.ai//assets/img/shop/direct-sale-store-advertisement.jpg">
+  (Session info: chrome=114.0.5735.133)
+
+2024-07-31 15:37:28login check exception：Message: element click intercepted: Element <a href="javascript:;" class="bom_power_a bom_layer_login">...</a> is not clickable at point (418, 290). Other element would receive the click: <img class="advert-img" src="//static.bom.ai//assets/img/shop/direct-sale-store-advertisement.jpg">
+  (Session info: chrome=114.0.5735.133)
+
+2024-08-02 15:26:51login check exception：Message: element click intercepted: Element <a href="javascript:;" class="bom_power_a bom_layer_login">...</a> is not clickable at point (418, 290). Other element would receive the click: <img class="advert-img" src="//static.bom.ai//assets/img/shop/direct-sale-store-advertisement.jpg">
+  (Session info: chrome=114.0.5735.133)
+
+2024-08-07 17:12:20login check exception：Message: element click intercepted: Element <a href="javascript:;" class="bom_power_a bom_layer_login">...</a> is not clickable at point (418, 290). Other element would receive the click: <img class="advert-img" src="//static.bom.ai//assets/img/shop/direct-sale-store-advertisement.jpg">
+  (Session info: chrome=114.0.5735.133)
+
+2024-08-07 17:13:05login check exception：Message: element click intercepted: Element <a href="javascript:;" class="bom_power_a bom_layer_login">...</a> is not clickable at point (418, 290). Other element would receive the click: <div class="layui-layer-shade layui-layer-shade-direct" times="100003" style="z-index:10000; background-color:#000; opacity:0.3; filter:alpha(opacity=30);"></div>
+  (Session info: chrome=114.0.5735.133)
+
+2024-08-29 16:48:11login check exception：Message: element click intercepted: Element <a href="javascript:;" class="bom_power_a bom_layer_login">...</a> is not clickable at point (418, 290). Other element would receive the click: <img class="advert-img" src="//static.bom.ai//assets/img/shop/direct-sale-store-advertisement.jpg">
+  (Session info: chrome=114.0.5735.133)
+
+2024-08-29 16:48:42login check exception：Message: element click intercepted: Element <a href="javascript:;" class="bom_power_a bom_layer_login">...</a> is not clickable at point (418, 290). Other element would receive the click: <img class="advert-img" src="//static.bom.ai//assets/img/shop/direct-sale-store-advertisement.jpg">
+  (Session info: chrome=114.0.5735.133)
+
+2024-09-03 14:52:18login check exception：Message: element click intercepted: Element <a href="javascript:;" class="bom_power_a bom_layer_login">...</a> is not clickable at point (418, 290). Other element would receive the click: <img class="advert-img" src="//static.bom.ai//assets/img/shop/direct-sale-store-advertisement.jpg">
+  (Session info: chrome=114.0.5735.133)
+
+2024-09-03 14:53:59login check exception：Message: element click intercepted: Element <a href="javascript:;" class="bom_power_a bom_layer_login">...</a> is not clickable at point (418, 290). Other element would receive the click: <img class="advert-img" src="//static.bom.ai//assets/img/shop/direct-sale-store-advertisement.jpg">
+  (Session info: chrome=114.0.5735.133)
+
+2024-09-10 16:46:47login check exception：Message: element click intercepted: Element <a href="javascript:;" class="bom_power_a bom_layer_login">...</a> is not clickable at point (418, 290). Other element would receive the click: <img class="advert-img" src="//static.bom.ai//assets/img/shop/direct-sale-store-advertisement.jpg">
+  (Session info: chrome=114.0.5735.133)
+
+2024-09-10 16:52:39login check exception：Message: element click intercepted: Element <a href="javascript:;" class="bom_power_a bom_layer_login">...</a> is not clickable at point (418, 290). Other element would receive the click: <input class="Bom_loging_input" id="accountName" type="text" placeholder="请输入账号">
+  (Session info: chrome=114.0.5735.133)
+
+2024-09-18 17:17:42cate is: 35021-1160 index is:1 , error is : Message: stale element reference: stale element not found
+  (Session info: chrome=114.0.5735.133)
+

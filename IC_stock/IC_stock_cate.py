@@ -12,14 +12,15 @@ from WRTools import ExcelHelp, WaitHelp, PathHelp, EmailHelper, MySqlHelp_recomm
 
 ssl._create_default_https_context = ssl._create_unverified_context
 
-sourceFile_dic = {'fileName': PathHelp.get_file_path(None, 'TRU2407_72H.xlsx'),
-                  'sourceSheet': 'ppn3',
+
+sourceFile_dic = {'fileName': PathHelp.get_file_path(None, 'TChanLongTE.xlsx'),
+                  'sourceSheet': 'ppn2',
                   'colIndex': 1,
                   'startIndex': 0,
-                  'endIndex': 100}
-task_name = 'TRU2407_72H'
+                  'endIndex': 30}
+task_name = 'TChanLongTE'
 
-accouts_arr = [[AccManage.IC_stock_1['n'], AccManage.IC_stock_1['p']]]
+accouts_arr = [AccManage.IC_stock_1['n'], AccManage.IC_stock_1['p']]
 try:
     driver = ChromeDriverManager.getWebDriver(1)
 except Exception as e:
@@ -48,7 +49,7 @@ def login_action(aim_url):
     if current_url == "https://member.ic.net.cn/login.php":
         WaitHelp.waitfor_account_import(False, False)
         # begin login
-        accout_current = accouts_arr[int(finishedPPN/10%2)]
+        accout_current = accouts_arr
         driver.find_element(by=By.ID, value='username').clear()
         driver.find_element(by=By.ID, value='username').send_keys(accout_current[0])
         driver.find_element(by=By.ID, value='password').clear()

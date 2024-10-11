@@ -8,10 +8,13 @@ import re
 from urllib.parse import urlparse
 
 
-result_file = PathHelp.get_file_path(None, 'TICHot_202402.xlsx')
-sheet_name = "ppn"
-file_path = PathHelp.get_file_path("IC_stock", 'view-source_https___icpi.ic.net.cn_hotsearch.html')
-log_file = PathHelp.get_file_path("IC_stock", 'IC_log.txt')
+# result_file = PathHelp.get_file_path(None, 'TICHot_202402.xlsx')
+# sheet_name = "ppn"
+# file_path = PathHelp.get_file_path("IC_stock", 'view-source_https___icpi.ic.net.cn_hotsearch.html')
+# log_file = PathHelp.get_file_path("IC_stock", 'IC_log.txt')
+result_file = '/Users/liuhe/Desktop/customers.xlsx'
+sheet_name = "Sheet1"
+file_path = '/Users/liuhe/Desktop/平台贸易商名单.html'
 
 
 # get ppn
@@ -47,6 +50,19 @@ def deal(table, kind) -> list:
         ppn = [a.text, kind]
         reuslt.append(ppn)
     return reuslt
+
+
+def getCustomer(soup):
+    info_list = []
+    try:
+        options = soup.select('option')
+        for (op_index, op) in enumerate(options):
+            customer = op.text
+            info_list.append(customer)
+    except Exception as e:
+        print('analyth_html error')
+    print(info_list)
+    ExcelHelp.add_arr_to_col(result_file, sheet_name, info_list)
 
 
 if __name__ == "__main__":

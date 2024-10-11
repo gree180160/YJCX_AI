@@ -174,6 +174,7 @@ def gotoNextPage(cate_name):
         while driver.current_url != new_url and waitTime <= 5:
             waitTime += 1
             print(f"url is:{new_url} load error:")
+            print(f"current url is :{driver.current_url}")
             driver.get(new_url)
             WaitHelp.waitfor(True, False)
     current_page += 1
@@ -194,7 +195,8 @@ def writeRecord(need_save_arr, ppn):
     else:
         title_row = ['ppn', 'st_manu', 'supplier_manu', 'supplier', 'isICCP', 'isSSCP', 'iSRanking', 'isHotSell', 'isYouXian', 'batch', 'pakaging'] + [time.strftime('%Y-%m-%d', time.localtime())]
         his_stock_record = 0
-    for new_record in need_save_arr:
+    combine_supplier_arr = combine(need_save_arr)
+    for new_record in combine_supplier_arr:
         temp_result = new_record
         for i in range(his_stock_record - 1):
             temp_result.insert(-1, 0)
@@ -217,6 +219,25 @@ def writeRecord(need_save_arr, ppn):
     time.sleep(1.0)
     ExcelHelp.add_arr_to_sheet(file_name, sheet, result + dismiss_suppliers)
     time.sleep(1.0)
+
+
+def combine(source_arr):
+    result = []
+    added_supplier_tags = []
+    for (x, xsupplier) in enumerate(source_arr):
+        tag = str(xsupplier[3]) + str(xsupplier[9])
+        new_stock = int(xsupplier[-1])
+        if added_supplier_tags.__contains__(tag):
+            continue;
+        else:
+            for ysupplier in source_arr[x + 1:]:
+                if xsupplier[3] == ysupplier[3] and xsupplier[9] == ysupplier[9]:
+                    new_stock = new_stock + int(ysupplier[-1])  # todo
+        supplier_sum = xsupplier
+        supplier_sum[-1] = str(new_stock)
+        result.append(supplier_sum)
+        added_supplier_tags.append(tag)
+    return result
 
 
 def stock_change_alert(ppn_list):
@@ -244,16 +265,17 @@ def stock_change_alert(ppn_list):
                     except:
                         continue
                 else:
-                    alert_info.append([temp_record[0], temp_record[3], temp_record[-2], temp_record[-1]])
+                    one_info = [temp_record[0], temp_record[3], temp_record[-2], temp_record[-1]]
+                    alert_info.append(one_info)
     if alert_info.__len__() > 0:
         alert_str = str(alert_info).replace("['DSPIC30F6014A-30I/PF', '深圳市协鑫半导体有限公司', '7000', '5000'],", '')
-        EmailHelper.stock_chang_alert(file_name, str(alert_info))
+        EmailHelper.stock_chang_alert(file_name, str(alert_str))
 
 
 # 验证当前页面是否正在等待用户验证，连续三次请求出现验证码页面，则关闭页面
 def checkVerificationCodePage(ppn) -> bool:
     global VerificationCodePage
-    if driver.current_url == 'https://www.ic.net.cn/searchPnCode.php?l=ins':
+    if driver.current_url.__contains__("searchPnCode"):
         VerificationCodePage += 1
         print(f'{ppn} check code')
         EmailHelper.mail_IC_Stock(AccManage.Device_ID)

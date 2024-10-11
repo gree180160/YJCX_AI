@@ -196,7 +196,7 @@ def stock_chang_alert(result_save_file, ppnInfo):
         # 将MIMEText对象添加到邮件对象中
         msg = MIMEMultipart()
         msg['From'] = formataddr([f"From ppn change check", my_sender])  # 括号里的对应发件人邮箱昵称、发件人邮箱账号
-        msg['To'] = ','.join(new_user_list)  # 括号里的对应收件人邮箱昵称、收件人邮箱账号
+        msg['To'] = ',\n'.join(new_user_list)  # 括号里的对应收件人邮箱昵称、收件人邮箱账号
         msg['Subject'] = "风菱库存——IC stock 变化"  # 邮件的主题，也可以说是标题
 
         with open(result_save_file, 'rb') as f:

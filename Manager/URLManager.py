@@ -166,9 +166,9 @@ def has_special_chars(text):
 
 
 if __name__ == "__main__":
-    # octopart_page_more_url(sourcefile=PathHelp.get_file_path(None, file_name='TSkyworks.xlsx'), page0_sheet='page0_ppn_2', manu=Octopart_manu.Skyworks)
-    print(HQ_hot_url('ADC0804LCWMX/NOPB'))
-    print(HQ_hot_url('M4T32-BR12SH1'))
-    print(HQ_hot_url('STB120NF10T4'))
+    octopart_page_more_url(sourcefile=PathHelp.get_file_path(None, file_name='TSkyworks.xlsx'), page0_sheet='page0_ppn_2', manu=Octopart_manu.Skyworks)
+    # print(HQ_hot_url('ADC0804LCWMX/NOPB'))
+    # print(HQ_hot_url('M4T32-BR12SH1'))
+    # print(HQ_hot_url('STB120NF10T4'))
 
 

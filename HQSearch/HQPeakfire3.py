@@ -9,15 +9,15 @@ from Manager import AccManage, TaskManager, URLManager
 log_file = PathHelp.get_file_path('HQSearch', 'HQPeakfireLog.txt')
 ssl._create_default_https_context = ssl._create_unverified_context
 
-sourceFile_dic = {'fileName': PathHelp.get_file_path(None, 'TRU2407_108H.xlsx'),
+sourceFile_dic = {'fileName': PathHelp.get_file_path('TradeWebs', 'AllChips.xlsx'),
                   'sourceSheet': 'ppn',
                   'colIndex': 1,
-                  'startIndex': 1707,
-                  'endIndex': 2460}
-task_name = 'TRU2407_108H'
+                  'startIndex': 460,
+                  'endIndex': 690}
+task_name = 'AllChips'
+
 
 accouts_arr = [AccManage.HQ_hot_3['n'], AccManage.HQ_hot_3['p']]
-
 login_url = "https://passport.hqew.com/login"
 
 driver = ChromeDriverManager.getWebDriver(3)

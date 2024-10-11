@@ -1,6 +1,6 @@
 import base64
 from WRTools import PathHelp, DDDDOCR
-from PIL import Image, ImageDraw, ImageFont, ImageEnhance
+from PIL import Image, ImageDraw, ImageFont, ImageEnhance, UnidentifiedImageError
 import os
 import cv2
 import numpy as np
@@ -68,16 +68,16 @@ def adjust_image():
 
 def water_mark():
     # 设置水印文字和字体
-    text = "    深圳市风菱电子有限责任公司    "
+    text = "   深圳市风菱电子有限责任公司   "
     font_path = "/Library/Fonts/AlibabaHealthFont2.0CN-85B.ttf"  # 修改为系统自带的字体路径
     font_size = 12  # 设置字号
     text_color = (73, 160, 45, 20)
     font = ImageFont.truetype(font_path, font_size)
 
     # 遍历文件夹里的所有图片
-    folder_path = "/Users/liuhe/Desktop/need_waterMark/"
+    folder_path = "/Users/liuhe/Desktop/产品照片/私印/"
     for filename in os.listdir(folder_path):
-        if filename.endswith(".jpg") or filename.endswith(".png"):
+        if filename.endswith(".HEIC") or filename.endswith(".png"):
             image_path = os.path.join(folder_path, filename)
             # once_add_mark(image_path, text, text_color, font)
             add_watermark_repeat(image_path, text, text_color)
@@ -95,7 +95,16 @@ def once_add_mark(image_path, text, color, font):
 
 def add_watermark_repeat(image_path, text, text_color):
     # 打开原始图片
-    original = Image.open(image_path).convert("RGBA")
+    try:
+        original = Image.open(image_path).convert("RGBA")
+        original.show()
+    except UnidentifiedImageError:
+        print("Error: The image file could not be identified. Please check the file format and path.")
+    except FileNotFoundError:
+        print("Error: The file was not found. Please check the file path.")
+    except Exception as e:
+        print(f"An unexpected error occurred: {e}")
+
     width, height = original.size
 
     # 创建透明背景的水印图片

@@ -1,4 +1,5 @@
 # 对于贸易商数量超过5家的，跑一下正能量里面的价格，取3个月内的最高值，没有价格则忽略
+# 35021-1160 获取云价格
 import base64
 import random
 import ssl
@@ -18,12 +19,12 @@ driver.set_page_load_timeout(120)
 
 accouts_arr = [[AccManage.Bom1['c'], AccManage.Bom1['n'], AccManage.Bom1['p']]]
 
-sourceFile_dic = {'fileName': PathHelp.get_file_path(None, 'TRU2407_72H.xlsx'),
-                  'sourceSheet': 'ppn_bom',
+sourceFile_dic = {'fileName': PathHelp.get_file_path(None, 'TChanLongTE.xlsx'),
+                  'sourceSheet': 'ppn4',
                   'colIndex': 1,
-                  'startIndex': 83,
-                  'endIndex': 175}
-task_name = 'TRU2407_72H'
+                  'startIndex': 48,
+                  'endIndex': 107}
+task_name = 'TChanLongTE'
 
 default_url = 'https://www.bom.ai/ic/74LVX4245MTCX.html'
 log_file = PathHelp.get_file_path('Bom_price', 'bom_price_log.txt')
@@ -162,7 +163,6 @@ def click_more_supplier():
             return False
 
 
-
 # 将页面row的内容 转化成Bom_price_info
 # aside: contain row info
 def get_supplier_info(aside, cate_index, ppn, manu) -> bom_price_info.Bom_price_info:
@@ -191,15 +191,15 @@ def get_supplier_info(aside, cate_index, ppn, manu) -> bom_price_info.Bom_price_
             year_str = '--'
         price_section = section_arr[6]
         try:
-            price_str = price_section.find_element(by=By.TAG_NAME, value='p').text
+            price_str = price_section.text
         except:
             price_str = '--'
-        release_time_section = section_arr[-4]
+        release_time_section = section_arr[7]
         try:
             release_time = release_time_section.find_element(by=By.TAG_NAME, value='p').text
         except:
             release_time = '--'
-        stock_num_section = section_arr[-3]
+        stock_num_section = section_arr[8]
         try:
             stock_num = stock_num_section.find_element(by=By.TAG_NAME, value='p').text
         except:
@@ -234,8 +234,18 @@ def main():
             analy_html(cate_index=ppn_index, ppn=str(ppn), manu=all_manus[ppn_index])
 
 
+def closeAD():
+    try:
+        closeButton = driver.find_elements(By.CSS_SELECTOR, 'i.znlbfont-close_ic')[1]
+        closeButton.click()
+        time.sleep(2.0)
+    except:
+        print('closeAD error')
+
+
 if __name__ == "__main__":
     driver.get(default_url)
+    closeAD()
     current_need_login()
     WaitHelp.waitfor(True, False)
     main()

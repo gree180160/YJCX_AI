@@ -1,10 +1,9 @@
 # 对于贸易商数量超过5家的，跑一下正能量里面的价格，取3个月内的最高值，没有价格则忽略
 #一个月内，实名supplier，至少有三条报价
-from WRTools import PathHelp, ExcelHelp, MySqlHelp_recommanded, WaitHelp
+from WRTools import PathHelp, ExcelHelp, WaitHelp
 import re
 import json
 from urllib.request import urlopen
-from Manager import TaskManager
 import ssl
 
 
@@ -99,13 +98,22 @@ def extract_currency(string):
 def is_valid_supplier(date_string, supplier_name) -> bool:
     if supplier_name.__contains__("此供应商选择了隐藏公司名"):
         return False
-    valid_time_arr = ['3天内', '1周内', '今天', '昨天', '1月内', '2022/09']
+    if date_string.__contains__('周') or date_string.__contains__('API实时'):
+        return True
+    valid_time_arr = ['3天内', '1周内', '今天', '昨天', '1月内']
     if valid_time_arr.__contains__(date_string):
         return True
+    else:
+        numberDays = WaitHelp.daysPassed(date_string)
+        if 0 < numberDays <= 30:  # 8
+            return True
+        else:
+            print(f'thatDay invalid: {date_string}')
+        return False
 
 
 if __name__ == "__main__":
-    bom_price_result(PathHelp.get_file_path(None, 'TManuAndSeri_willTC.xlsx'))
+    bom_price_result(PathHelp.get_file_path(None, 'TChanLongTE.xlsx'))
     print('over')
 
 

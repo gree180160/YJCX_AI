@@ -145,6 +145,6 @@ def getMonthAvg(month_list):
 
 
 if __name__ == "__main__":
-    # HQ_hot_result2(PathHelp.get_file_path("LiChuang", 'TLCClearance.xlsx'))
-    HQ_hot_result2(PathHelp.get_file_path(None, 'TRU2407_72H.xlsx'))
+    HQ_hot_result2(PathHelp.get_file_path("TradeWebs", 'ICShop.xlsx'))
+    # HQ_hot_result2(PathHelp.get_file_path(None, 'TSanyo.xlsx'))
     print('over')

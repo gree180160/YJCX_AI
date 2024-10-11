@@ -319,17 +319,37 @@ def deletFinished_ppn():
     print(result)
 
 
-def ppn_bom():
-    source_file = PathHelp.get_file_path(None, 'TRU2407_72H.xlsx')
-    oc_ppns = ExcelHelp.read_sheet_content_by_name(source_file, 'Sheet2')
-    source_ppn3 = ExcelHelp.read_sheet_content_by_name(source_file, 'Sheet3')
+def fl_sum():
+    source_file = PathHelp.get_file_path('IC_stock', 'TFL_ICStock.xlsx')
+    result_save_file = PathHelp.get_file_path(None, 'TFL_ICStock2.xlsx')
+    sheets= ['LM732', 'OPA35', 'TPS79', 'DSPIC', 'TPS22']
+    for temp_sheet in sheets:
+        sheet_cont = ExcelHelp.read_sheet_content_by_name(source_file, temp_sheet)
+        new_content = combine(sheet_cont)
+        ExcelHelp.add_arr_to_sheet(result_save_file, temp_sheet, new_content)
+        time.sleep(2.0)
+
+
+def combine(source_arr):
     result = []
-    for (temp_index, temp_row) in enumerate(source_ppn3):
-       for(oc_index, oc_info) in enumerate(oc_ppns):
-           if temp_row[0] == oc_info[0]:
-               temp = [temp_row[0], temp_row[1], oc_info[1]]
-               result.append(temp)
-    ExcelHelp.add_arr_to_sheet(source_file, 'ppn', result)
+    added_supplier_tags = []
+    for (x, xsupplier) in enumerate(source_arr):
+        if x > 0:
+            tag = str(xsupplier[3]) + str(xsupplier[9])
+            new_stock = int(xsupplier[-1])
+            if added_supplier_tags.__contains__(tag):
+                continue;
+            else:
+                for ysupplier in source_arr[x + 1:]:
+                    if xsupplier[3] == ysupplier[3] and xsupplier[9] == ysupplier[9]:
+                        new_stock = new_stock + int(ysupplier[-1])  # todo
+            supplier_sum = xsupplier
+            supplier_sum[-1] = str(new_stock)
+            result.append(supplier_sum)
+            added_supplier_tags.append(tag)
+        else:
+            result.append(xsupplier)
+    return result
 
 
 if __name__ == "__main__":
@@ -338,4 +358,4 @@ if __name__ == "__main__":
     # getAllICStockRecord()
     # deletFinished_ppn()
     # decompositionPPN(300)
-    ppn_bom()
+    fl_sum()
