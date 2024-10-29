@@ -1,6 +1,6 @@
 # 将findchips 数据， IC——Stock， IC-Hot， price 合并到一个excel到all_info 中
 import time
-
+import re
 from WRTools import ExcelHelp, PathHelp
 from IC_stock import IC_stock_result
 from HQSearch import HQHotResult
@@ -496,20 +496,6 @@ def updateICHot(rate):
         result.append(ppn_temp)
     ExcelHelp.add_arr_to_sheet(source_file, "Result", result)
 
-
-def temp():
-    file = PathHelp.get_file_path('TradeWebs', 'Integ2410.xlsx')
-    source_content = ExcelHelp.read_sheet_content_by_name(file, 'integ')
-    ppns = ExcelHelp.read_col_content(file, 'HQ_hot_result', 1)
-    result = []
-    for tempPPN in ppns:
-        for temp_row in source_content:
-            if tempPPN == temp_row[0]:
-                temp_reslt = temp_row
-                result.append(temp_reslt)
-    ExcelHelp.add_arr_to_sheet(file, 'result_source', result)
-
-
 # 从OC，LC，YH 中计算最低成本价
 def calculateCost():
     source_file = PathHelp.get_file_path(None, 'TChanLongTE.xlsx')
@@ -556,6 +542,16 @@ def calculateCost():
     ExcelHelp.add_arr_to_sheet(source_file, 'cost', result)
 
 
+def temp():
+    file = PathHelp.get_file_path('TradeWebs', 'AllChips.xlsx')
+    source = ExcelHelp.read_sheet_content_by_name(file, 'allchips')
+    result_file = '/Users/liuhe/Desktop/库存上传.xlsx'
+    ppns = ExcelHelp.read_col_content(file, 'ppn3', 1)
+    result = []
+    for temp_source in source:
+        if ppns.__contains__(temp_source[0]):
+            result.append(temp_source)
+    ExcelHelp.add_arr_to_sheet(file, 'result', result)
 
 
 if __name__ == "__main__":

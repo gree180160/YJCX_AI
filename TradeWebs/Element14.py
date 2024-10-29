@@ -1,3 +1,4 @@
+# 易洛蒙
 import math
 import ssl
 from WRTools import ChromeDriverManager
@@ -14,7 +15,7 @@ ssl._create_default_https_context = ssl._create_unverified_context
 driver_option = webdriver.ChromeOptions()
 driver = uc.Chrome(use_subprocess=True, options=driver_option)
 driver.set_page_load_timeout(480)
-default_url = 'https://cn.element14.com/w/c/semiconductors-ics?gs=true&ICID=I-CT-LP-GET-MORE-FOR-LESS-SEMIS_ICS-MAY_23-WF3726510&st=clearance_cn&range=inc-in-stock-grp'
+default_url = 'https://cn.element14.com/w/search/prl/results?gs=true&ICID=I-CT-LP-GET-MORE-FOR-LESS-ALL_PRODS-MAY_23-WF3726510&st=clearance_cn&range=inc-in-stock-grp'
 
 
 result_save_file = PathHelp.get_file_path('TradeWebs', 'Element14.xlsx')
@@ -61,7 +62,7 @@ def get_page_data():
         result.append(ppnInfo)
     # 保存数据到CSV
     if result.__len__() > 0:
-        ExcelHelp.add_arr_to_sheet(result_save_file, 'element14_IC', result)
+        ExcelHelp.add_arr_to_sheet(result_save_file, 'element14_other', result)
 
 
 def go_to_manu():
@@ -80,7 +81,7 @@ def setTotal_page():
     global total_page
     try:
         pages_area = driver.find_element(By.CSS_SELECTOR, 'div.ProductCategoryTemplatestyles__SearchResultWrapper-sc-1he9gtv-6.ejYNRN')
-        pages_str = pages_area.find_element(By.TAG_NAME, 'span').text
+        pages_str = pages_area.find_element(By.TAG_NAME, 'span').text.replace(',','')
         total_page = math.ceil(int(pages_str)/50)
     except:
         print('get total_page error')

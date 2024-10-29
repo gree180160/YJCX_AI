@@ -1,0 +1,25 @@
+2024-10-28 16:15:36LOF450-20B27-CF week info error Message: no such element: Unable to locate element: {"method":"css selector","selector":"[id="J-detailChar-Month"]"}
+  (Session info: chrome=114.0.5735.133)
+
+2024-10-28 16:29:59LOF550-20B18 week info error Message: no such element: Unable to locate element: {"method":"css selector","selector":"[id="J-detailChar-Month"]"}
+  (Session info: chrome=114.0.5735.133)
+
+2024-10-28 16:52:55LOF550-20B54 week info error Message: no such element: Unable to locate element: {"method":"css selector","selector":"[id="J-detailChar-Month"]"}
+  (Session info: chrome=114.0.5735.133)
+
+2024-10-28 17:32:09URB4824YMD-30WR3 week info error Message: no such element: Unable to locate element: {"method":"css selector","selector":"[id="J-detailChar-Month"]"}
+  (Session info: chrome=114.0.5735.133)
+
+2024-10-28 18:06:41LD10-23B12R2 week info error Message: no such element: Unable to locate element: {"method":"css selector","selector":"[id="J-detailChar-Month"]"}
+  (Session info: chrome=114.0.5735.133)
+
+2024-10-28 18:21:56VRB2412S-3WR3G week info error Message: no such element: Unable to locate element: {"method":"css selector","selector":"[id="J-detailChar-Month"]"}
+  (Session info: chrome=114.0.5735.133)
+
+2024-10-28 19:05:33LM50-20B12 week info error Message: no such element: Unable to locate element: {"method":"css selector","selector":"[id="J-detailChar-Month"]"}
+  (Session info: chrome=114.0.5735.133)
+
+2024-10-28 19:24:55{cate_name} week info error {e}
+2024-10-28 19:49:44UWTH1D05P-6WR3 week info error Message: no such element: Unable to locate element: {"method":"css selector","selector":"[id="J-detailChar-Month"]"}
+  (Session info: chrome=114.0.5735.133)
+

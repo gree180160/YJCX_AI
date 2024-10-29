@@ -9,12 +9,12 @@ from Manager import AccManage, TaskManager, URLManager
 log_file = PathHelp.get_file_path('HQSearch', 'HQPeakfireLog.txt')
 ssl._create_default_https_context = ssl._create_unverified_context
 
-sourceFile_dic = {'fileName': PathHelp.get_file_path('TradeWebs', 'AllChips.xlsx'),
-                  'sourceSheet': 'ppn',
+sourceFile_dic = {'fileName': PathHelp.get_file_path('TradeWebs', 'Mornsun.xlsx'),
+                  'sourceSheet': 'ppn_temp',
                   'colIndex': 1,
-                  'startIndex': 460,
-                  'endIndex': 690}
-task_name = 'AllChips'
+                  'startIndex': 100,
+                  'endIndex': 150}
+task_name = 'Mornsun'
 
 
 accouts_arr = [AccManage.HQ_hot_3['n'], AccManage.HQ_hot_3['p']]
@@ -64,7 +64,7 @@ def getSearchInfo(cate_name, manu, isWeek):
             for temp_d in dots:
                 result.append(temp_d.find_element(By.TAG_NAME, 'tspan').text)
         except Exception as e:
-            print('week info error')
+            LogHelper.write_log(log_file, f'{cate_name} week info error {e}')
     return result
 
 

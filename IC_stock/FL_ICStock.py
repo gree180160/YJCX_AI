@@ -268,7 +268,15 @@ def stock_change_alert(ppn_list):
                     one_info = [temp_record[0], temp_record[3], temp_record[-2], temp_record[-1]]
                     alert_info.append(one_info)
     if alert_info.__len__() > 0:
-        alert_str = str(alert_info).replace("['DSPIC30F6014A-30I/PF', '深圳市协鑫半导体有限公司', '7000', '5000'],", '')
+        result = '<table >'
+        for index, temp_row in enumerate(alert_info):
+            row_str = '<tr style="background-color: lightgray;">' if index % 2 == 0 else '<tr>'
+            for temp_cell in temp_row:
+               row_str += f'<td style="padding: 8px; border-right: 1px solid;">{temp_cell}</td>'
+            row_str += '</tr>'
+            result += row_str
+        result += '</table>'
+        alert_str = result # '<br>'.join([', '.join(sublist) for sublist in alert_info])
         EmailHelper.stock_chang_alert(file_name, str(alert_str))
 
 

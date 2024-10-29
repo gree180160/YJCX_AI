@@ -1,3 +1,4 @@
+# 世强硬创
 import math
 import ssl
 from WRTools import ChromeDriverManager
@@ -102,7 +103,7 @@ def go_nextPage(manu):
 
 def main():
     # 'https://www.sekorm.com/supply/?utm_source=Channel&utm_medium=yingchuangshangcheng&utm_campaign=&p1=1&p3=16&p4=3&p5=1&p6=30&p8=1&p9=4'
-    manus = ['Renesas', 'AMPHENOL%20SENSORS', 'TE%20Connectivity', 'LITTELFUSE']
+    manus = ['LITTELFUSE'] # 'Renesas','AMPHENOL SENSORS','TE Connectivity', 'LITTELFUSE' 234/890
     for temp_manu in manus:
         go_to_manu(temp_manu)
 

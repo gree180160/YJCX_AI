@@ -191,7 +191,7 @@ def stock_chang_alert(result_save_file, ppnInfo):
         # new_user_list = ['river@omni-electronics.com', 'river@szyjcx.cn']
         new_user_list = ['river@calcitrapa.com']
         mail_msg = f'<h2><center> ppn change check </center></h2>'
-        html = mail_msg + ppnInfo
+        html = mail_msg + f'<div>{ppnInfo}</div>'
         part1 = MIMEText(html, "html")
         # 将MIMEText对象添加到邮件对象中
         msg = MIMEMultipart()

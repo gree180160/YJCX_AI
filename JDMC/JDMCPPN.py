@@ -11,10 +11,10 @@ ssl._create_default_https_context = ssl._create_unverified_context
 
 sourceFile = PathHelp.get_file_path(None, 'TJDMC.xlsx')
 logFile = PathHelp.get_file_path('JDMC', 'JDMCLog.txt')
-login_url = 'https://www.vipmro.net/login'
+login_url = 'https://www.vipmro.com/login?backURL=https%3A%2F%2Fwww.vipmro.com%2F'
 total_page = 1
 current_page = 1
-accouts_arr = ['englishmaster2010', 'Oliver12345!']
+accouts_arr = ['river12345654321', 'Calcitrapa0228']
 driver_option = webdriver.ChromeOptions()
 driver_option.add_argument("–incognito")
 #  等待初始HTML文档完全加载和解析，
@@ -26,22 +26,17 @@ driver.set_page_load_timeout(1000)
 
 
 # 通过计算获得产品列表的页面url
+# https://www.vipmro.com/ss/c-522012?stock=1&page=1&#totalGood
+
 def get_urls() -> list:
     munuids = ExcelHelp.read_col_content(file_name=sourceFile, sheet_name='manu', col_index=2)
     result = []
-    for tempManu in munuids:
-        if tempManu:
-            url = f'https://www.vipmro.net/searchModel/c-50/{tempManu}?advantage=0'
+    cates = [522012, 522025, 522026, 522099, 521211, 521210, 24, 522022, 522028, 541110, 541111, 541112, 541199, 541124]
+    for temp in cates:
+        if temp:
+            url = f'https://www.vipmro.com/ss/c-{temp}?stock=1&page=1&#totalGood'
             result.append([url])
     return result
-
-
-# 通过manuID 获得manu name
-def get_manuName(manu_id):
-    manuids = ExcelHelp.read_col_content(file_name=sourceFile, sheet_name='manu', col_index=2)
-    manuNames = ExcelHelp.read_col_content(file_name=sourceFile, sheet_name='manu', col_index=1)
-    index = manuids.index(manu_id)
-    return manuNames[index]
 
 # 登陆
 def loginAction(aim_url):
@@ -59,7 +54,7 @@ def loginAction(aim_url):
     #     driver.find_element(by=By.ID, value='paipaiLoginSubmit').click()
     #     WaitHelp.waitfor_account_import(True, False)
     #     time.sleep(10)
-    # if not driver.current_url.startswith('https://www.vipmro.net/searchModel/'):
+    # if not driver.current_url.startswith('https://www.vipmro.com/searchModel/'):
     #     driver.get(aim_url)
     WaitHelp.waitfor_account_import(True, False)
 
@@ -92,9 +87,6 @@ def goToNextPage():
 # 分析html 文件
 def anly_webdriver(url_index, url_value):
     global current_page
-    url_part_arr = url_value.split('/')
-    manuID = url_part_arr[5]
-    manuName = get_manuName(manuID)
     get_total_page()
     while current_page <= total_page:
         print(f'index is:{url_index} url is:{url_value} current_page is:{current_page} total_page is:{total_page}')
@@ -160,7 +152,7 @@ def anly_webdriver(url_index, url_value):
                     page_ppn_arr.append(info_arr)
                 else:
                     LogHelper.write_log(log_file_name=logFile, content=f'{url_value} row info error')
-            ExcelHelp.add_arr_to_sheet(file_name=sourceFile, sheet_name='ppn3', dim_arr=page_ppn_arr)
+            ExcelHelp.add_arr_to_sheet(file_name=sourceFile, sheet_name='202410', dim_arr=page_ppn_arr)
             if current_page < total_page:
                 goToNextPage()
             else:

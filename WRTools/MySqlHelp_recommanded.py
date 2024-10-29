@@ -132,6 +132,16 @@ class DBRecommandChip:
         sql_str = "REPLACE INTO t_hq_peakfire (ppn, manu, weak_hot, month_hot, task_name) VALUES (%s, %s, %s, %s, %s)"
         self.sql_write(sql_str, data)
 
+    # efind
+    def efind_stock_write(self, data: list):
+        sql_str = "REPLACE INTO t_efind_stock (ppn, manu, sup_manu, supplier, publish_date, info, price, stock, task_name) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s)"
+        self.sql_write(sql_str, data)
+
+    def efind_supplier_write(self, data: list):
+        sql_str = "REPLACE INTO t_efind_supplier (ppn, manu, all_supplier, price_supplier, stock_supplier,stock, middle_price, min_price, max_price, task_name) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s)"
+        self.sql_write(sql_str, data)
+
+    # bom
     def bom_price_write(self, data: list):
         sql_str = "REPLACE INTO t_bom_price (ppn, manu, supplier, package, lot, quoted_price, release_time, stock_num, valid_supplier, task_name) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s)"
         self.sql_write(sql_str, data)

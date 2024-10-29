@@ -1,0 +1,8 @@
+2024-10-15 17:06:27find page element error list index out of range
+2024-10-15 17:10:41find page element error list index out of range
+2024-10-15 17:15:18find page element error list index out of range
+2024-10-15 17:19:21find page element error list index out of range
+2024-10-16 10:11:01find page element error list index out of range
+2024-10-16 11:38:13find page element error Message: no such element: Unable to locate element: {"method":"css selector","selector":"div.list-line-body"}
+  (Session info: chrome=114.0.5735.133)
+

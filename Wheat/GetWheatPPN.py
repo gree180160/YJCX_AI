@@ -16,11 +16,6 @@ import time
 accouts_arr = [AccManage.Wheat['c'], AccManage.Wheat['n'], AccManage.Wheat['p']]
 ssl._create_default_https_context = ssl._create_unverified_context
 
-# sourceFile_dic = {'fileName': PathHelp.get_file_path(None, 'TInfineonIGBT.xlsx'),
-#                   'sourceSheet': 'ppn',
-#                   'colIndex': 1,
-#                   'startIndex': 793,
-#                   'endIndex': 1000}
 sourceFile_dic = {'fileName': PathHelp.get_file_path(None, 'TICHot_202401.xlsx'),
                   'sourceSheet': 'buyer',
                   'colIndex': 1,
@@ -37,7 +32,6 @@ total_page = 1
 current_page = 1 #infenion 305
 
 driver_option = webdriver.ChromeOptions()
-driver_option.add_argument(f'--proxy-server=http://{IPHelper.getRandowCityIP()}')
 driver_option.add_argument("–incognito")
 #  等待初始HTML文档完全加载和解析，
 driver_option.page_load_strategy = 'eager'

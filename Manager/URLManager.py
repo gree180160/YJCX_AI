@@ -157,6 +157,19 @@ def HQ_stock_url(ppn: str):
     return search_url
 
 
+# efind
+def efind_stock_url(ppn: str, ru):
+    cate_str = str(ppn)
+    cate_str = cate_str.replace('/', '%2F')
+    cate_str = cate_str.replace('#', '%23')
+    cate_str = cate_str.replace('+', '%2B')
+    cate_str = cate_str.replace(',', '%2C')
+    if ru:
+        return f"https://efind.ru/offer/{cate_str}?rid=1"
+    else:
+        return f"https://efind.ru/offer/{cate_str}"
+
+
 def has_special_chars(text):
     pattern = re.compile('[^a-zA-Z0-9\s]')  # 匹配非字母、数字和空格的字符
     if pattern.search(text):

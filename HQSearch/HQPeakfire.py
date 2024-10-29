@@ -1,6 +1,6 @@
 import time
 
-from WRTools import ExcelHelp, WaitHelp, PathHelp, MySqlHelp_recommanded, ChromeDriverManager, EmailHelper
+from WRTools import ExcelHelp, WaitHelp, PathHelp, MySqlHelp_recommanded, ChromeDriverManager, EmailHelper, LogHelper
 from selenium.webdriver.common.by import By
 import ssl
 from Manager import AccManage, URLManager
@@ -8,12 +8,12 @@ from Manager import AccManage, URLManager
 log_file = PathHelp.get_file_path('HQSearch', 'HQPeakfireLog.txt')
 ssl._create_default_https_context = ssl._create_unverified_context
 
-sourceFile_dic = {'fileName': PathHelp.get_file_path('TradeWebs', 'AllChips.xlsx'),
-                  'sourceSheet': 'ppn',
+sourceFile_dic = {'fileName': PathHelp.get_file_path('TradeWebs', 'Mornsun.xlsx'),
+                  'sourceSheet': 'ppn_temp',
                   'colIndex': 1,
                   'startIndex': 0,
-                  'endIndex': 230}
-task_name = 'AllChips'
+                  'endIndex': 50}
+task_name = 'Mornsun'
 
 
 accouts_arr = [AccManage.HQ_hot_1['n'], AccManage.HQ_hot_1['p']]
@@ -80,7 +80,8 @@ def getSearchInfo(cate_name, manu, isWeek):
             for temp_d in dots:
                 result.append(temp_d.find_element(By.TAG_NAME, 'tspan').text)
         except Exception as e:
-            print('week info error')
+            weekOrMonth = 'week' if isWeek else 'month'
+            LogHelper.write_log(log_file, f'{cate_name} {weekOrMonth} info error {e}')
     return result
 
 

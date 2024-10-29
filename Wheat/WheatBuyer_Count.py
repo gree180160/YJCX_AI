@@ -2,7 +2,6 @@
 # ['Siemens', '2022-02-24', 'Ооо Сименс', 'Siemens Building Technologies Ltd', 'ИЗДЕЛИЕ ИЗ ПЛАСТМАСС (ШТАМПОВКА):', '俄罗斯', '德国', '2023-05-14', '42']
 # 2021-07-16
 
-
 import datetime
 import sys
 from selenium import webdriver
@@ -15,7 +14,6 @@ from WRTools import ExcelHelp, WaitHelp, PathHelp, LogHelper
 import time
 import re
 
-
 accouts_arr = [AccManage.Wheat['c'], AccManage.Wheat['n'], AccManage.Wheat['p']]
 ssl._create_default_https_context = ssl._create_unverified_context
 
@@ -24,17 +22,17 @@ ssl._create_default_https_context = ssl._create_unverified_context
 #                   'colIndex': 1,
 #                   'startIndex': 793,
 #                   'endIndex': 1000}
-sourceFile_dic = {'fileName': PathHelp.get_file_path(None, 'TKeyword_202402.xlsx'),
+sourceFile_dic = {'fileName': PathHelp.get_file_path('TradeWebs', 'Mornsun.xlsx'),
                   'sourceSheet': 'brand',
                   'colIndex': 1,
-                  'startIndex': 173, # SICK page 4 开始查询
-                  'endIndex': 272}
-result_save_file = PathHelp.get_file_path(None, 'TNewBrand.xlsx')
+                  'startIndex': 0,
+                  'endIndex': 4}
+result_save_file = PathHelp.get_file_path('TradeWebs', 'Mornsun.xlsx')
 result_save_sheet = 'Wheat_buyer'
 logFile = PathHelp.get_file_path('Wheat', 'Wheat_log.txt')
-
 login_url = 'https://app.51wheatsearch.com/gs/index.html#/login'
-default_url = 'https://app.51wheatsearch.com/gs/index.html#/resource/gather/customs'
+# default_url = 'https://app.51wheatsearch.com/gs/index.html#/resource/gather/customs'
+default_url = 'https://app.51wheatsearch.com/gs/index.html#/resource/customs/queryTools'
 total_page = 1
 current_page = 1 #infenion 305
 
@@ -154,7 +152,6 @@ def anly_webdriver(cate_index, cate_name):
         LogHelper.write_log(logFile, f'anly_webdriver error {e}')
 
 
-
 def main():
     global total_page, current_page
     all_cates = ExcelHelp.read_col_content(file_name=sourceFile_dic['fileName'],
@@ -178,5 +175,5 @@ def main():
 if __name__ == "__main__":
     loginAction(default_url)
     driver.get(default_url)
-    set_filter(start_date='2023-02-24', end_date='2024-02-24')
+    set_filter(start_date='2023-10-28', end_date='2024-10-28')
     main()

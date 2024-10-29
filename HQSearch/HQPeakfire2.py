@@ -9,12 +9,12 @@ from Manager import AccManage, URLManager
 log_file = PathHelp.get_file_path('HQSearch', 'HQPeakfireLog.txt')
 ssl._create_default_https_context = ssl._create_unverified_context
 
-sourceFile_dic = {'fileName': PathHelp.get_file_path('TradeWebs', 'AllChips.xlsx'),
-                  'sourceSheet': 'ppn',
+sourceFile_dic = {'fileName': PathHelp.get_file_path('TradeWebs', 'Mornsun.xlsx'),
+                  'sourceSheet': 'ppn_temp',
                   'colIndex': 1,
-                  'startIndex': 230,
-                  'endIndex': 460}
-task_name = 'AllChips'
+                  'startIndex': 50,
+                  'endIndex': 100}
+task_name = 'Mornsun'
 
 
 accouts_arr = [AccManage.HQ_hot_2['n'], AccManage.HQ_hot_2['p']]
