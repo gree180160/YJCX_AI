@@ -21,7 +21,7 @@ sourceFile_dic = {'fileName': PathHelp.get_file_path('TradeWebs', 'Mornsun.xlsx'
 task_name = 'Mornsun'
 
 try:
-    driver = ChromeDriverManager.getWebDriver(1)
+    driver = ChromeDriverManager.getWebDriver(4)
 except Exception as e:
     print(e)
 

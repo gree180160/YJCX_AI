@@ -21,7 +21,7 @@ sourceFile_dic = {'fileName': PathHelp.get_file_path('TradeWebs', 'Mornsun.xlsx'
 task_name = 'Mornsun'
 
 try:
-    driver = ChromeDriverManager.getWebDriver(1)
+    driver = ChromeDriverManager.getWebDriver(0)
 except Exception as e:
     print(e)
 
@@ -131,11 +131,12 @@ def convert_russian_date_to_chinese(russian_date):
         return chinese_date
     return ''
 
+
 # 先查询一个型号，确保多地有库存，然后选择只显示俄罗斯地区的库存
 def select_area():
     input_area = driver.find_element(By.ID, 'sf')
     input_area.clear()
-    input_area.send_keys('')
+    input_area.send_keys('LM7321MFX/NOPB')
     btn = driver.find_element(By.CSS_SELECTOR, 'input.sbtn')
     btn.click()
     WaitHelp.waitfor(True, False)
@@ -161,4 +162,5 @@ def main():
 if __name__ == "__main__":
     driver.get('https://efind.ru/')
     time.sleep(2.0)
+    select_area()
     main()
