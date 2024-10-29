@@ -16,8 +16,8 @@ log_file = PathHelp.get_file_path('EFIND', 'e_find_log.txt')
 sourceFile_dic = {'fileName': PathHelp.get_file_path('TradeWebs', 'Mornsun.xlsx'),
                   'sourceSheet': 'ppn2',
                   'colIndex': 1,
-                  'startIndex': 0,
-                  'endIndex': 65}
+                  'startIndex': 130,
+                  'endIndex': 195}
 task_name = 'Mornsun'
 
 try:
