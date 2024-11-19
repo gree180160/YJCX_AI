@@ -29,13 +29,13 @@ log_file = PathHelp.get_file_path('Octopart_price', 'ocopar_price_log.txt')
 
 
 # 跳转到下一个指定的型号
-def go_to_cate(pn_index, pn):
+def go_manu(pn_index, pn):
     try:
         url = URLManager.octopart_get_page_url(pn, 1, URLManager.Octopart_manu.NoManu)
         url.replace(' ', '')
         driver.get(url)
     except Exception as e:
-        LogHelper.write_log(log_file_name=log_file, content=f'{pn} go_to_cate except: {e}')
+        LogHelper.write_log(log_file_name=log_file, content=f'{pn} go_manu except: {e}')
         if str(e.msg).__contains__('Timed out'):
             driver.reconnect()
             sys.exit()

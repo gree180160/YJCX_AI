@@ -5,25 +5,25 @@ from unknown error: web view not found
 2023-03-27 16:14:5815C01M-TL-E all_cates exception:Message: no such element: Unable to locate element: {"method":"css selector","selector":".jsx-922694994.results"}
   (Session info: chrome=111.0.5563.110)
 
-2023-03-27 16:14:5815C01SS-TL-E go_to_cate except: Message: no such element: Unable to locate element: {"method":"css selector","selector":".jsx-4214615671.search-box"}
+2023-03-27 16:14:5815C01SS-TL-E go_manu except: Message: no such element: Unable to locate element: {"method":"css selector","selector":".jsx-4214615671.search-box"}
   (Session info: chrome=111.0.5563.110)
 
 2023-03-27 16:16:1815C01SS-TL-E all_cates exception:Message: no such element: Unable to locate element: {"method":"css selector","selector":".jsx-922694994.results"}
   (Session info: chrome=111.0.5563.110)
 
-2023-03-27 16:16:1815GN03CA-TB-E go_to_cate except: Message: no such element: Unable to locate element: {"method":"css selector","selector":".jsx-4214615671.search-box"}
+2023-03-27 16:16:1815GN03CA-TB-E go_manu except: Message: no such element: Unable to locate element: {"method":"css selector","selector":".jsx-4214615671.search-box"}
   (Session info: chrome=111.0.5563.110)
 
 2023-03-27 16:18:0215GN03CA-TB-E all_cates exception:Message: no such element: Unable to locate element: {"method":"css selector","selector":".jsx-922694994.results"}
   (Session info: chrome=111.0.5563.110)
 
-2023-03-27 16:18:0215GN03MA-TL-E go_to_cate except: Message: no such element: Unable to locate element: {"method":"css selector","selector":".jsx-4214615671.search-box"}
+2023-03-27 16:18:0215GN03MA-TL-E go_manu except: Message: no such element: Unable to locate element: {"method":"css selector","selector":".jsx-4214615671.search-box"}
   (Session info: chrome=111.0.5563.110)
 
 2023-03-27 16:21:0015C01M-TL-E all_cates exception:Message: no such element: Unable to locate element: {"method":"css selector","selector":".div.jsx-2172888034.prices-view"}
   (Session info: chrome=111.0.5563.110)
 
-2023-03-27 16:21:0015C01SS-TL-E go_to_cate except: Message: no such element: Unable to locate element: {"method":"css selector","selector":".jsx-4214615671.search-box"}
+2023-03-27 16:21:0015C01SS-TL-E go_manu except: Message: no such element: Unable to locate element: {"method":"css selector","selector":".jsx-4214615671.search-box"}
   (Session info: chrome=111.0.5563.110)
 
 2023-03-27 16:22:4815C01SS-TL-E all_cates exception:Message: no such element: Unable to locate element: {"method":"css selector","selector":".div.jsx-2172888034.prices-view"}
@@ -38,7 +38,7 @@ from unknown error: web view not found
 2023-04-10 14:40:02HI-15530CLI all_cates exception:Message: no such element: Unable to locate element: {"method":"css selector","selector":".jsx-2172888034.prices-view"}
   (Session info: chrome=112.0.5615.49)
 
-2023-04-10 14:40:02HI-15530PSIF go_to_cate except: Message: no such element: Unable to locate element: {"method":"tag name","selector":"button"}
+2023-04-10 14:40:02HI-15530PSIF go_manu except: Message: no such element: Unable to locate element: {"method":"tag name","selector":"button"}
   (Session info: chrome=112.0.5615.49)
 
 2023-04-10 14:58:55PIC18F all_cates exception:Message: no such element: Unable to locate element: {"method":"css selector","selector":".jsx-2172888034.prices-view"}
@@ -55,77 +55,77 @@ from unknown error: web view not found
 2023-04-11 11:01:28XLH53V034.560000X click more exception: Message: no such element: Unable to locate element: {"method":"css selector","selector":"button.jsx-1990075996.show-button"}
   (Session info: chrome=112.0.5615.49)
 
-2023-04-11 11:01:28XLH53V040.000000X go_to_cate except: Message: no such element: Unable to locate element: {"method":"tag name","selector":"button"}
+2023-04-11 11:01:28XLH53V040.000000X go_manu except: Message: no such element: Unable to locate element: {"method":"tag name","selector":"button"}
   (Session info: chrome=112.0.5615.49)
 
 2023-04-11 11:04:10XLH53V040.000000X cannot match
 2023-04-11 11:04:10XLH53V040.000000X cannot match
-2023-04-11 11:04:10XLH730040.078900X go_to_cate except: Message: no such element: Unable to locate element: {"method":"tag name","selector":"button"}
+2023-04-11 11:04:10XLH730040.078900X go_manu except: Message: no such element: Unable to locate element: {"method":"tag name","selector":"button"}
   (Session info: chrome=112.0.5615.49)
 
 2023-04-11 11:07:01XLH730040.078900X cannot match
 2023-04-11 11:07:01XLH730040.078900X cannot match
-2023-04-11 11:07:01XLH735018.432000I go_to_cate except: Message: no such element: Unable to locate element: {"method":"tag name","selector":"button"}
+2023-04-11 11:07:01XLH735018.432000I go_manu except: Message: no such element: Unable to locate element: {"method":"tag name","selector":"button"}
   (Session info: chrome=112.0.5615.49)
 
 2023-04-11 11:09:42XLH735018.432000I cannot match
 2023-04-11 11:09:42XLH735018.432000I cannot match
-2023-04-11 11:09:42XLH735066.000000X go_to_cate except: Message: no such element: Unable to locate element: {"method":"tag name","selector":"button"}
+2023-04-11 11:09:42XLH735066.000000X go_manu except: Message: no such element: Unable to locate element: {"method":"tag name","selector":"button"}
   (Session info: chrome=112.0.5615.49)
 
 2023-04-11 11:13:07XLH735066.000000X cannot match
 2023-04-11 11:13:07XLH735066.000000X cannot match
-2023-04-11 11:13:07XLH736020.000000I go_to_cate except: Message: no such element: Unable to locate element: {"method":"tag name","selector":"button"}
+2023-04-11 11:13:07XLH736020.000000I go_manu except: Message: no such element: Unable to locate element: {"method":"tag name","selector":"button"}
   (Session info: chrome=112.0.5615.49)
 
 2023-04-11 11:16:29XLH736020.000000I cannot match
 2023-04-11 11:16:29XLH736020.000000I cannot match
-2023-04-11 11:16:29XLH738032.000000X go_to_cate except: Message: no such element: Unable to locate element: {"method":"tag name","selector":"button"}
+2023-04-11 11:16:29XLH738032.000000X go_manu except: Message: no such element: Unable to locate element: {"method":"tag name","selector":"button"}
   (Session info: chrome=112.0.5615.49)
 
 2023-04-11 11:19:48XLH738032.000000X cannot match
 2023-04-11 11:19:48XLH738032.000000X cannot match
-2023-04-11 11:19:48XLH73V027.000000I go_to_cate except: Message: no such element: Unable to locate element: {"method":"tag name","selector":"button"}
+2023-04-11 11:19:48XLH73V027.000000I go_manu except: Message: no such element: Unable to locate element: {"method":"tag name","selector":"button"}
   (Session info: chrome=112.0.5615.49)
 
 2023-04-11 11:22:58XLH73V027.000000I cannot match
 2023-04-11 11:22:58XLH73V027.000000I cannot match
-2023-04-11 11:22:58ZIOL2211BI1R go_to_cate except: Message: no such element: Unable to locate element: {"method":"tag name","selector":"button"}
+2023-04-11 11:22:58ZIOL2211BI1R go_manu except: Message: no such element: Unable to locate element: {"method":"tag name","selector":"button"}
   (Session info: chrome=112.0.5615.49)
 
 2023-04-11 11:26:09ZIOL2211BI1R cannot match
 2023-04-11 11:26:09ZIOL2211BI1R cannot match
-2023-04-11 11:26:09ZL8800-2PH-DEMO1Z go_to_cate except: Message: no such element: Unable to locate element: {"method":"tag name","selector":"button"}
+2023-04-11 11:26:09ZL8800-2PH-DEMO1Z go_manu except: Message: no such element: Unable to locate element: {"method":"tag name","selector":"button"}
   (Session info: chrome=112.0.5615.49)
 
 2023-04-11 11:29:21ZL8800-2PH-DEMO1Z cannot match
 2023-04-11 11:29:21ZL8800-2PH-DEMO1Z cannot match
-2023-04-11 11:29:21ZL8800ALBFT7A go_to_cate except: Message: no such element: Unable to locate element: {"method":"tag name","selector":"button"}
+2023-04-11 11:29:21ZL8800ALBFT7A go_manu except: Message: no such element: Unable to locate element: {"method":"tag name","selector":"button"}
   (Session info: chrome=112.0.5615.49)
 
 2023-04-11 11:32:46ZL8800ALBFT7A cannot match
 2023-04-11 11:32:46ZL8800ALBFT7A cannot match
-2023-04-11 11:32:47ZL8802ALAFTR5966 go_to_cate except: Message: no such element: Unable to locate element: {"method":"tag name","selector":"button"}
+2023-04-11 11:32:47ZL8802ALAFTR5966 go_manu except: Message: no such element: Unable to locate element: {"method":"tag name","selector":"button"}
   (Session info: chrome=112.0.5615.49)
 
 2023-04-11 11:35:57ZL8802ALAFTR5966 cannot match
 2023-04-11 11:35:57ZL8802ALAFTR5966 cannot match
-2023-04-11 11:35:57ZMID4200STKIT go_to_cate except: Message: no such element: Unable to locate element: {"method":"tag name","selector":"button"}
+2023-04-11 11:35:57ZMID4200STKIT go_manu except: Message: no such element: Unable to locate element: {"method":"tag name","selector":"button"}
   (Session info: chrome=112.0.5615.49)
 
 2023-04-11 11:39:21ZMID4200STKIT cannot match
 2023-04-11 11:39:21ZMID4200STKIT cannot match
-2023-04-11 11:39:21ZMID5201AE1T go_to_cate except: Message: no such element: Unable to locate element: {"method":"tag name","selector":"button"}
+2023-04-11 11:39:21ZMID5201AE1T go_manu except: Message: no such element: Unable to locate element: {"method":"tag name","selector":"button"}
   (Session info: chrome=112.0.5615.49)
 
 2023-04-11 11:42:03ZMID5201AE1T cannot match
 2023-04-11 11:42:03ZMID5201AE1T cannot match
-2023-04-11 11:42:03ZMID5201-EVK go_to_cate except: Message: no such element: Unable to locate element: {"method":"tag name","selector":"button"}
+2023-04-11 11:42:03ZMID5201-EVK go_manu except: Message: no such element: Unable to locate element: {"method":"tag name","selector":"button"}
   (Session info: chrome=112.0.5615.49)
 
 2023-04-11 11:44:43ZMID5201-EVK cannot match
 2023-04-11 11:44:43ZMID5201-EVK cannot match
-2023-04-11 11:44:43ZMID5202MLIN01201 go_to_cate except: Message: no such element: Unable to locate element: {"method":"tag name","selector":"button"}
+2023-04-11 11:44:43ZMID5202MLIN01201 go_manu except: Message: no such element: Unable to locate element: {"method":"tag name","selector":"button"}
   (Session info: chrome=112.0.5615.49)
 
 2023-04-11 11:52:10XLH53V034.560000X click more exception: Message: no such element: Unable to locate element: {"method":"css selector","selector":"button.jsx-1990075996.show-button"}
@@ -720,20 +720,20 @@ from unknown error: web view not found
 2023-04-11 19:11:495P49V60A116NLG2 more 解析异常：Message: timeout: Timed out receiving message from renderer: 480.000
   (Session info: chrome=112.0.5615.49)
 
-2023-04-11 19:19:505P49V60A116NLG28 go_to_cate except: Message: timeout: Timed out receiving message from renderer: 480.000
+2023-04-11 19:19:505P49V60A116NLG28 go_manu except: Message: timeout: Timed out receiving message from renderer: 480.000
   (Session info: chrome=112.0.5615.49)
 
 2023-04-11 19:38:445P49V60A116NLG28 more 解析异常：Message: timeout: Timed out receiving message from renderer: 480.000
   (Session info: chrome=112.0.5615.49)
 
-2023-04-11 19:46:445P49V6901A565NLGI go_to_cate except: Message: timeout: Timed out receiving message from renderer: 480.000
+2023-04-11 19:46:445P49V6901A565NLGI go_manu except: Message: timeout: Timed out receiving message from renderer: 480.000
   (Session info: chrome=112.0.5615.49)
 
 2023-04-11 20:08:315P49V6901A565NLGI more 解析异常：Message: disconnected: not connected to DevTools
   (failed to check if window was closed: disconnected: not connected to DevTools)
   (Session info: chrome=112.0.5615.49)
 
-2023-04-11 20:08:315P49V6901A590NLGI go_to_cate except: Message: disconnected: not connected to DevTools
+2023-04-11 20:08:315P49V6901A590NLGI go_manu except: Message: disconnected: not connected to DevTools
   (failed to check if window was closed: disconnected: not connected to DevTools)
   (Session info: chrome=112.0.5615.49)
 
@@ -1551,55 +1551,55 @@ from unknown error: web view not found
 2023-04-12 15:56:5870V658S12BF8 页面 解析异常：Message: timeout: Timed out receiving message from renderer: 480.000
   (Session info: chrome=112.0.5615.49)
 
-2023-04-12 16:04:5870V658S12BFGI go_to_cate except: Message: timeout: Timed out receiving message from renderer: 480.000
+2023-04-12 16:04:5870V658S12BFGI go_manu except: Message: timeout: Timed out receiving message from renderer: 480.000
   (Session info: chrome=112.0.5615.49)
 
 2023-04-12 16:24:0570V658S12BFGI 页面 解析异常：Message: timeout: Timed out receiving message from renderer: 480.000
   (Session info: chrome=112.0.5615.49)
 
-2023-04-12 16:32:0570V658S12BFGI8 go_to_cate except: Message: timeout: Timed out receiving message from renderer: 480.000
+2023-04-12 16:32:0570V658S12BFGI8 go_manu except: Message: timeout: Timed out receiving message from renderer: 480.000
   (Session info: chrome=112.0.5615.49)
 
 2023-04-12 16:50:5870V658S12BFGI8 页面 解析异常：Message: timeout: Timed out receiving message from renderer: 480.000
   (Session info: chrome=112.0.5615.49)
 
-2023-04-12 16:58:5870V658S12BFI go_to_cate except: Message: timeout: Timed out receiving message from renderer: 480.000
+2023-04-12 16:58:5870V658S12BFI go_manu except: Message: timeout: Timed out receiving message from renderer: 480.000
   (Session info: chrome=112.0.5615.49)
 
 2023-04-12 17:17:4870V658S12BFI 页面 解析异常：Message: timeout: Timed out receiving message from renderer: 480.000
   (Session info: chrome=112.0.5615.49)
 
-2023-04-12 17:25:4870V658S12BFI8 go_to_cate except: Message: timeout: Timed out receiving message from renderer: 480.000
+2023-04-12 17:25:4870V658S12BFI8 go_manu except: Message: timeout: Timed out receiving message from renderer: 480.000
   (Session info: chrome=112.0.5615.49)
 
 2023-04-12 17:45:1170V658S12BFI8 页面 解析异常：Message: timeout: Timed out receiving message from renderer: 480.000
   (Session info: chrome=112.0.5615.49)
 
-2023-04-12 17:53:1270V658S12DR go_to_cate except: Message: timeout: Timed out receiving message from renderer: 480.000
+2023-04-12 17:53:1270V658S12DR go_manu except: Message: timeout: Timed out receiving message from renderer: 480.000
   (Session info: chrome=112.0.5615.49)
 
 2023-04-12 18:12:0070V658S12DR 页面 解析异常：Message: timeout: Timed out receiving message from renderer: 480.000
   (Session info: chrome=112.0.5615.49)
 
-2023-04-12 18:20:0070V658S12DR8 go_to_cate except: Message: timeout: Timed out receiving message from renderer: 480.000
+2023-04-12 18:20:0070V658S12DR8 go_manu except: Message: timeout: Timed out receiving message from renderer: 480.000
   (Session info: chrome=112.0.5615.49)
 
 2023-04-12 18:38:5570V658S12DR8 页面 解析异常：Message: timeout: Timed out receiving message from renderer: 480.000
   (Session info: chrome=112.0.5615.49)
 
-2023-04-12 18:46:5570V658S12DR9 go_to_cate except: Message: timeout: Timed out receiving message from renderer: 480.000
+2023-04-12 18:46:5570V658S12DR9 go_manu except: Message: timeout: Timed out receiving message from renderer: 480.000
   (Session info: chrome=112.0.5615.49)
 
 2023-04-12 19:05:3470V658S12DR9 页面 解析异常：Message: timeout: Timed out receiving message from renderer: 480.000
   (Session info: chrome=112.0.5615.49)
 
-2023-04-12 19:13:3470V658S12DRI go_to_cate except: Message: timeout: Timed out receiving message from renderer: 480.000
+2023-04-12 19:13:3470V658S12DRI go_manu except: Message: timeout: Timed out receiving message from renderer: 480.000
   (Session info: chrome=112.0.5615.49)
 
 2023-04-12 19:32:3770V658S12DRI 页面 解析异常：Message: timeout: Timed out receiving message from renderer: 480.000
   (Session info: chrome=112.0.5615.49)
 
-2023-04-12 19:40:3770V658S15BC go_to_cate except: Message: timeout: Timed out receiving message from renderer: 480.000
+2023-04-12 19:40:3770V658S15BC go_manu except: Message: timeout: Timed out receiving message from renderer: 480.000
   (Session info: chrome=112.0.5615.49)
 
 2023-04-12 22:35:2170V658S12BF8 click more exception: 
@@ -1987,31 +1987,31 @@ from unknown error: web view not found
 2023-04-14 17:46:27STPS40120CR 当个cate 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"tbody.jsx-4253165187"}
   (Session info: chrome=112.0.5615.49)
 
-2023-04-14 17:54:27STPS340B-TR go_to_cate except: Message: timeout: Timed out receiving message from renderer: -0.009
+2023-04-14 17:54:27STPS340B-TR go_manu except: Message: timeout: Timed out receiving message from renderer: -0.009
   (Session info: chrome=112.0.5615.49)
 
 2023-04-14 18:13:43STPS340B-TR 页面 解析异常：Message: timeout: Timed out receiving message from renderer: 480.000
   (Session info: chrome=112.0.5615.49)
 
-2023-04-14 18:21:43STTH10R04BTR go_to_cate except: Message: timeout: Timed out receiving message from renderer: 480.000
+2023-04-14 18:21:43STTH10R04BTR go_manu except: Message: timeout: Timed out receiving message from renderer: 480.000
   (Session info: chrome=112.0.5615.49)
 
 2023-04-14 18:40:24STTH10R04BTR 页面 解析异常：Message: timeout: Timed out receiving message from renderer: 480.000
   (Session info: chrome=112.0.5615.49)
 
-2023-04-14 18:48:24ESDA14V2-1BF3 go_to_cate except: Message: timeout: Timed out receiving message from renderer: 480.000
+2023-04-14 18:48:24ESDA14V2-1BF3 go_manu except: Message: timeout: Timed out receiving message from renderer: 480.000
   (Session info: chrome=112.0.5615.49)
 
 2023-04-14 19:07:11ESDA14V2-1BF3 页面 解析异常：Message: timeout: Timed out receiving message from renderer: 480.000
   (Session info: chrome=112.0.5615.49)
 
-2023-04-14 19:15:11TDA7498L go_to_cate except: Message: timeout: Timed out receiving message from renderer: 480.000
+2023-04-14 19:15:11TDA7498L go_manu except: Message: timeout: Timed out receiving message from renderer: 480.000
   (Session info: chrome=112.0.5615.49)
 
 2023-04-14 19:34:25TDA7498L 页面 解析异常：Message: timeout: Timed out receiving message from renderer: 480.000
   (Session info: chrome=112.0.5615.49)
 
-2023-04-14 19:42:26STPS2H100RL go_to_cate except: Message: timeout: Timed out receiving message from renderer: 480.000
+2023-04-14 19:42:26STPS2H100RL go_manu except: Message: timeout: Timed out receiving message from renderer: 480.000
   (Session info: chrome=112.0.5615.49)
 
 2023-04-14 20:01:48STPS2H100RL 页面 解析异常：Message: timeout: Timed out receiving message from renderer: 480.000
@@ -3066,7 +3066,7 @@ from unknown error: web view not found
   (Session info: chrome=112.0.5615.49)
 
 2023-04-18 18:32:46L9338MD cannot match
-2023-04-18 18:32:46STTH8L06DIRG go_to_cate except: Message: disconnected: not connected to DevTools
+2023-04-18 18:32:46STTH8L06DIRG go_manu except: Message: disconnected: not connected to DevTools
   (failed to check if window was closed: disconnected: not connected to DevTools)
   (Session info: chrome=112.0.5615.49)
 
@@ -3074,7 +3074,7 @@ from unknown error: web view not found
   (failed to check if window was closed: disconnected: not connected to DevTools)
   (Session info: chrome=112.0.5615.49)
 
-2023-04-18 22:07:02VNP10N07 go_to_cate except: Message: disconnected: not connected to DevTools
+2023-04-18 22:07:02VNP10N07 go_manu except: Message: disconnected: not connected to DevTools
   (failed to check if window was closed: disconnected: not connected to DevTools)
   (Session info: chrome=112.0.5615.49)
 
@@ -3082,7 +3082,7 @@ from unknown error: web view not found
   (failed to check if window was closed: disconnected: not connected to DevTools)
   (Session info: chrome=112.0.5615.49)
 
-2023-04-18 22:10:06LD1086V18 go_to_cate except: Message: disconnected: not connected to DevTools
+2023-04-18 22:10:06LD1086V18 go_manu except: Message: disconnected: not connected to DevTools
   (failed to check if window was closed: disconnected: not connected to DevTools)
   (Session info: chrome=112.0.5615.49)
 
@@ -3090,7 +3090,7 @@ from unknown error: web view not found
   (failed to check if window was closed: disconnected: not connected to DevTools)
   (Session info: chrome=112.0.5615.49)
 
-2023-04-18 22:13:31TS822IZAP go_to_cate except: Message: disconnected: not connected to DevTools
+2023-04-18 22:13:31TS822IZAP go_manu except: Message: disconnected: not connected to DevTools
   (failed to check if window was closed: disconnected: not connected to DevTools)
   (Session info: chrome=112.0.5615.49)
 
@@ -3103,7 +3103,7 @@ from unknown error: web view not found
   (failed to check if window was closed: disconnected: not connected to DevTools)
   (Session info: chrome=112.0.5615.49)
 
-2023-04-18 22:16:06TS488IST go_to_cate except: Message: disconnected: not connected to DevTools
+2023-04-18 22:16:06TS488IST go_manu except: Message: disconnected: not connected to DevTools
   (failed to check if window was closed: disconnected: not connected to DevTools)
   (Session info: chrome=112.0.5615.49)
 
@@ -3111,7 +3111,7 @@ from unknown error: web view not found
   (failed to check if window was closed: disconnected: not connected to DevTools)
   (Session info: chrome=112.0.5615.49)
 
-2023-04-18 22:18:43VND5E160J-E go_to_cate except: Message: disconnected: not connected to DevTools
+2023-04-18 22:18:43VND5E160J-E go_manu except: Message: disconnected: not connected to DevTools
   (failed to check if window was closed: disconnected: not connected to DevTools)
   (Session info: chrome=112.0.5615.49)
 
@@ -3123,7 +3123,7 @@ from unknown error: web view not found
   (failed to check if window was closed: disconnected: not connected to DevTools)
   (Session info: chrome=112.0.5615.49)
 
-2023-04-18 22:21:24BZW04P6V4 go_to_cate except: Message: disconnected: not connected to DevTools
+2023-04-18 22:21:24BZW04P6V4 go_manu except: Message: disconnected: not connected to DevTools
   (failed to check if window was closed: disconnected: not connected to DevTools)
   (Session info: chrome=112.0.5615.49)
 
@@ -3131,7 +3131,7 @@ from unknown error: web view not found
   (failed to check if window was closed: disconnected: not connected to DevTools)
   (Session info: chrome=112.0.5615.49)
 
-2023-04-18 22:24:36M24C16-RDS6TG go_to_cate except: Message: disconnected: not connected to DevTools
+2023-04-18 22:24:36M24C16-RDS6TG go_manu except: Message: disconnected: not connected to DevTools
   (failed to check if window was closed: disconnected: not connected to DevTools)
   (Session info: chrome=112.0.5615.49)
 
@@ -3140,7 +3140,7 @@ from unknown error: web view not found
   (failed to check if window was closed: disconnected: not connected to DevTools)
   (Session info: chrome=112.0.5615.49)
 
-2023-04-18 22:27:43TS821IZAP go_to_cate except: Message: disconnected: not connected to DevTools
+2023-04-18 22:27:43TS821IZAP go_manu except: Message: disconnected: not connected to DevTools
   (failed to check if window was closed: disconnected: not connected to DevTools)
   (Session info: chrome=112.0.5615.49)
 
@@ -3148,7 +3148,7 @@ from unknown error: web view not found
   (failed to check if window was closed: disconnected: not connected to DevTools)
   (Session info: chrome=112.0.5615.49)
 
-2023-04-18 22:30:27EVALED2000P go_to_cate except: Message: disconnected: not connected to DevTools
+2023-04-18 22:30:27EVALED2000P go_manu except: Message: disconnected: not connected to DevTools
   (failed to check if window was closed: disconnected: not connected to DevTools)
   (Session info: chrome=112.0.5615.49)
 
@@ -3156,7 +3156,7 @@ from unknown error: web view not found
   (failed to check if window was closed: disconnected: not connected to DevTools)
   (Session info: chrome=112.0.5615.49)
 
-2023-04-18 22:33:39STTH1210G go_to_cate except: Message: disconnected: not connected to DevTools
+2023-04-18 22:33:39STTH1210G go_manu except: Message: disconnected: not connected to DevTools
   (failed to check if window was closed: disconnected: not connected to DevTools)
   (Session info: chrome=112.0.5615.49)
 
@@ -3164,7 +3164,7 @@ from unknown error: web view not found
   (failed to check if window was closed: disconnected: not connected to DevTools)
   (Session info: chrome=112.0.5615.49)
 
-2023-04-18 22:37:00M74HC148RM13TR go_to_cate except: Message: disconnected: not connected to DevTools
+2023-04-18 22:37:00M74HC148RM13TR go_manu except: Message: disconnected: not connected to DevTools
   (failed to check if window was closed: disconnected: not connected to DevTools)
   (Session info: chrome=112.0.5615.49)
 
@@ -3172,7 +3172,7 @@ from unknown error: web view not found
   (failed to check if window was closed: disconnected: not connected to DevTools)
   (Session info: chrome=112.0.5615.49)
 
-2023-04-18 22:40:10TS1872ID go_to_cate except: Message: disconnected: not connected to DevTools
+2023-04-18 22:40:10TS1872ID go_manu except: Message: disconnected: not connected to DevTools
   (failed to check if window was closed: disconnected: not connected to DevTools)
   (Session info: chrome=112.0.5615.49)
 
@@ -3180,7 +3180,7 @@ from unknown error: web view not found
   (failed to check if window was closed: disconnected: not connected to DevTools)
   (Session info: chrome=112.0.5615.49)
 
-2023-04-18 22:43:04L9911K go_to_cate except: Message: disconnected: not connected to DevTools
+2023-04-18 22:43:04L9911K go_manu except: Message: disconnected: not connected to DevTools
   (failed to check if window was closed: disconnected: not connected to DevTools)
   (Session info: chrome=112.0.5615.49)
 
@@ -3208,7 +3208,7 @@ from unknown error: web view not found
   (failed to check if window was closed: disconnected: not connected to DevTools)
   (Session info: chrome=112.0.5615.49)
 
-2023-04-18 22:46:11TL061CN go_to_cate except: Message: disconnected: not connected to DevTools
+2023-04-18 22:46:11TL061CN go_manu except: Message: disconnected: not connected to DevTools
   (failed to check if window was closed: disconnected: not connected to DevTools)
   (Session info: chrome=112.0.5615.49)
 
@@ -3216,7 +3216,7 @@ from unknown error: web view not found
   (failed to check if window was closed: disconnected: not connected to DevTools)
   (Session info: chrome=112.0.5615.49)
 
-2023-04-18 22:49:24M74HC4851RM13TR go_to_cate except: Message: disconnected: not connected to DevTools
+2023-04-18 22:49:24M74HC4851RM13TR go_manu except: Message: disconnected: not connected to DevTools
   (failed to check if window was closed: disconnected: not connected to DevTools)
   (Session info: chrome=112.0.5615.49)
 
@@ -3791,19 +3791,19 @@ from unknown error: web view not found
 2023-04-20 16:15:32HFA3102B96 页面 解析异常：Message: timeout: Timed out receiving message from renderer: 480.000
   (Session info: chrome=112.0.5615.121)
 
-2023-04-20 16:23:32HFA3102BZ go_to_cate except: Message: timeout: Timed out receiving message from renderer: 480.000
+2023-04-20 16:23:32HFA3102BZ go_manu except: Message: timeout: Timed out receiving message from renderer: 480.000
   (Session info: chrome=112.0.5615.121)
 
 2023-04-20 16:42:55HFA3102BZ 页面 解析异常：Message: timeout: Timed out receiving message from renderer: 480.000
   (Session info: chrome=112.0.5615.121)
 
-2023-04-20 16:50:55HFA3102BZ96 go_to_cate except: Message: timeout: Timed out receiving message from renderer: 480.000
+2023-04-20 16:50:55HFA3102BZ96 go_manu except: Message: timeout: Timed out receiving message from renderer: 480.000
   (Session info: chrome=112.0.5615.121)
 
 2023-04-20 17:10:05HFA3102BZ96 页面 解析异常：Message: timeout: Timed out receiving message from renderer: 480.000
   (Session info: chrome=112.0.5615.121)
 
-2023-04-20 17:18:05HFA3127 go_to_cate except: Message: timeout: Timed out receiving message from renderer: 480.000
+2023-04-20 17:18:05HFA3127 go_manu except: Message: timeout: Timed out receiving message from renderer: 480.000
   (Session info: chrome=112.0.5615.121)
 
 2023-04-20 17:46:18HFA3127B 当个cate 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"tbody.jsx-4253165187"}
@@ -5237,13 +5237,13 @@ from unknown error: web view not found
 2023-04-24 17:15:48STTS7511WB3F 页面 解析异常：Message: timeout: Timed out receiving message from renderer: 480.000
   (Session info: chrome=112.0.5615.137)
 
-2023-04-24 17:23:48TS942AIPT go_to_cate except: Message: timeout: Timed out receiving message from renderer: 480.000
+2023-04-24 17:23:48TS942AIPT go_manu except: Message: timeout: Timed out receiving message from renderer: 480.000
   (Session info: chrome=112.0.5615.137)
 
 2023-04-24 17:42:54TS942AIPT 页面 解析异常：Message: timeout: Timed out receiving message from renderer: 480.000
   (Session info: chrome=112.0.5615.137)
 
-2023-04-24 17:50:54LD1084D2M-R go_to_cate except: Message: timeout: Timed out receiving message from renderer: 480.000
+2023-04-24 17:50:54LD1084D2M-R go_manu except: Message: timeout: Timed out receiving message from renderer: 480.000
   (Session info: chrome=112.0.5615.137)
 
 2023-04-24 18:09:56LD1084D2M-R 页面 解析异常：Message: timeout: Timed out receiving message from renderer: 480.000
@@ -5686,7 +5686,7 @@ from unknown error: web view not found
 2023-04-26 16:50:3571T75802S133PFG 页面 解析异常：Message: timeout: Timed out receiving message from renderer: 480.000
   (Session info: chrome=112.0.5615.137)
 
-2023-04-26 16:58:3671T75802S133PFG8 go_to_cate except: Message: timeout: Timed out receiving message from renderer: 480.000
+2023-04-26 16:58:3671T75802S133PFG8 go_manu except: Message: timeout: Timed out receiving message from renderer: 480.000
   (Session info: chrome=112.0.5615.137)
 
 2023-04-26 17:17:4371T75802S133PFG8 页面 解析异常：Message: timeout: Timed out receiving message from renderer: 480.000
@@ -6301,55 +6301,55 @@ from unknown error: web view not found
 2023-04-27 15:21:3071V3577SYZC3G 页面 解析异常：Message: timeout: Timed out receiving message from renderer: 480.000
   (Session info: chrome=112.0.5615.137)
 
-2023-04-27 15:29:3071V3577YS75PFG go_to_cate except: Message: timeout: Timed out receiving message from renderer: 480.000
+2023-04-27 15:29:3071V3577YS75PFG go_manu except: Message: timeout: Timed out receiving message from renderer: 480.000
   (Session info: chrome=112.0.5615.137)
 
 2023-04-27 15:48:2271V3577YS75PFG 页面 解析异常：Message: timeout: Timed out receiving message from renderer: 480.000
   (Session info: chrome=112.0.5615.137)
 
-2023-04-27 15:56:2271V3577YS85PF go_to_cate except: Message: timeout: Timed out receiving message from renderer: 480.000
+2023-04-27 15:56:2271V3577YS85PF go_manu except: Message: timeout: Timed out receiving message from renderer: 480.000
   (Session info: chrome=112.0.5615.137)
 
 2023-04-27 16:15:4271V3577YS85PF 页面 解析异常：Message: timeout: Timed out receiving message from renderer: 480.000
   (Session info: chrome=112.0.5615.137)
 
-2023-04-27 16:23:4271V3578S133PFG go_to_cate except: Message: timeout: Timed out receiving message from renderer: 480.000
+2023-04-27 16:23:4271V3578S133PFG go_manu except: Message: timeout: Timed out receiving message from renderer: 480.000
   (Session info: chrome=112.0.5615.137)
 
 2023-04-27 16:42:4471V3578S133PFG 页面 解析异常：Message: timeout: Timed out receiving message from renderer: 480.000
   (Session info: chrome=112.0.5615.137)
 
-2023-04-27 16:50:4571V3578S133PFG8 go_to_cate except: Message: timeout: Timed out receiving message from renderer: 480.000
+2023-04-27 16:50:4571V3578S133PFG8 go_manu except: Message: timeout: Timed out receiving message from renderer: 480.000
   (Session info: chrome=112.0.5615.137)
 
 2023-04-27 17:09:4971V3578S133PFG8 页面 解析异常：Message: timeout: Timed out receiving message from renderer: 480.000
   (Session info: chrome=112.0.5615.137)
 
-2023-04-27 17:17:4971V3578S133PFGI go_to_cate except: Message: timeout: Timed out receiving message from renderer: 480.000
+2023-04-27 17:17:4971V3578S133PFGI go_manu except: Message: timeout: Timed out receiving message from renderer: 480.000
   (Session info: chrome=112.0.5615.137)
 
 2023-04-27 17:36:2671V3578S133PFGI 页面 解析异常：Message: timeout: Timed out receiving message from renderer: 480.000
   (Session info: chrome=112.0.5615.137)
 
-2023-04-27 17:44:2671V3578S133PFGI8 go_to_cate except: Message: timeout: Timed out receiving message from renderer: 480.000
+2023-04-27 17:44:2671V3578S133PFGI8 go_manu except: Message: timeout: Timed out receiving message from renderer: 480.000
   (Session info: chrome=112.0.5615.137)
 
 2023-04-27 18:03:2571V3578S133PFGI8 页面 解析异常：Message: timeout: Timed out receiving message from renderer: 480.000
   (Session info: chrome=112.0.5615.137)
 
-2023-04-27 18:11:2571V3578S150PFG go_to_cate except: Message: timeout: Timed out receiving message from renderer: 480.000
+2023-04-27 18:11:2571V3578S150PFG go_manu except: Message: timeout: Timed out receiving message from renderer: 480.000
   (Session info: chrome=112.0.5615.137)
 
 2023-04-27 18:30:0371V3578S150PFG 页面 解析异常：Message: timeout: Timed out receiving message from renderer: 480.000
   (Session info: chrome=112.0.5615.137)
 
-2023-04-27 18:38:0371V3578S150PFG8 go_to_cate except: Message: timeout: Timed out receiving message from renderer: 480.000
+2023-04-27 18:38:0371V3578S150PFG8 go_manu except: Message: timeout: Timed out receiving message from renderer: 480.000
   (Session info: chrome=112.0.5615.137)
 
 2023-04-27 18:56:4571V3578S150PFG8 页面 解析异常：Message: timeout: Timed out receiving message from renderer: 480.000
   (Session info: chrome=112.0.5615.137)
 
-2023-04-27 19:03:2871V3578S150PFGI go_to_cate except: Message: disconnected: unable to send message to renderer
+2023-04-27 19:03:2871V3578S150PFGI go_manu except: Message: disconnected: unable to send message to renderer
   (failed to check if window was closed: disconnected: not connected to DevTools)
   (Session info: chrome=112.0.5615.137)
 
@@ -6357,7 +6357,7 @@ from unknown error: web view not found
   (failed to check if window was closed: disconnected: not connected to DevTools)
   (Session info: chrome=112.0.5615.137)
 
-2023-04-27 21:03:4171V3578S150PFGI8 go_to_cate except: Message: disconnected: not connected to DevTools
+2023-04-27 21:03:4171V3578S150PFGI8 go_manu except: Message: disconnected: not connected to DevTools
   (failed to check if window was closed: disconnected: not connected to DevTools)
   (Session info: chrome=112.0.5615.137)
 
@@ -6365,7 +6365,7 @@ from unknown error: web view not found
   (failed to check if window was closed: disconnected: not connected to DevTools)
   (Session info: chrome=112.0.5615.137)
 
-2023-04-27 22:49:5371V3579S65PFG go_to_cate except: Message: disconnected: not connected to DevTools
+2023-04-27 22:49:5371V3579S65PFG go_manu except: Message: disconnected: not connected to DevTools
   (failed to check if window was closed: disconnected: not connected to DevTools)
   (Session info: chrome=112.0.5615.137)
 
@@ -6373,7 +6373,7 @@ from unknown error: web view not found
   (failed to check if window was closed: disconnected: not connected to DevTools)
   (Session info: chrome=112.0.5615.137)
 
-2023-04-27 22:52:2971V3579S75BQ go_to_cate except: Message: disconnected: not connected to DevTools
+2023-04-27 22:52:2971V3579S75BQ go_manu except: Message: disconnected: not connected to DevTools
   (failed to check if window was closed: disconnected: not connected to DevTools)
   (Session info: chrome=112.0.5615.137)
 
@@ -6381,7 +6381,7 @@ from unknown error: web view not found
   (failed to check if window was closed: disconnected: not connected to DevTools)
   (Session info: chrome=112.0.5615.137)
 
-2023-04-27 22:55:0971V3579S75PFG8 go_to_cate except: Message: disconnected: not connected to DevTools
+2023-04-27 22:55:0971V3579S75PFG8 go_manu except: Message: disconnected: not connected to DevTools
   (failed to check if window was closed: disconnected: not connected to DevTools)
   (Session info: chrome=112.0.5615.137)
 
@@ -6389,7 +6389,7 @@ from unknown error: web view not found
   (failed to check if window was closed: disconnected: not connected to DevTools)
   (Session info: chrome=112.0.5615.137)
 
-2023-04-27 22:57:4971V3579S75PFGI8 go_to_cate except: Message: disconnected: not connected to DevTools
+2023-04-27 22:57:4971V3579S75PFGI8 go_manu except: Message: disconnected: not connected to DevTools
   (failed to check if window was closed: disconnected: not connected to DevTools)
   (Session info: chrome=112.0.5615.137)
 
@@ -6397,7 +6397,7 @@ from unknown error: web view not found
   (failed to check if window was closed: disconnected: not connected to DevTools)
   (Session info: chrome=112.0.5615.137)
 
-2023-04-27 23:00:3671V3579S80PF go_to_cate except: Message: disconnected: not connected to DevTools
+2023-04-27 23:00:3671V3579S80PF go_manu except: Message: disconnected: not connected to DevTools
   (failed to check if window was closed: disconnected: not connected to DevTools)
   (Session info: chrome=112.0.5615.137)
 
@@ -6405,7 +6405,7 @@ from unknown error: web view not found
   (failed to check if window was closed: disconnected: not connected to DevTools)
   (Session info: chrome=112.0.5615.137)
 
-2023-04-27 23:03:2171V3579S80PFG go_to_cate except: Message: disconnected: not connected to DevTools
+2023-04-27 23:03:2171V3579S80PFG go_manu except: Message: disconnected: not connected to DevTools
   (failed to check if window was closed: disconnected: not connected to DevTools)
   (Session info: chrome=112.0.5615.137)
 
@@ -6413,7 +6413,7 @@ from unknown error: web view not found
   (failed to check if window was closed: disconnected: not connected to DevTools)
   (Session info: chrome=112.0.5615.137)
 
-2023-04-27 23:06:3771V3579S80PFG8 go_to_cate except: Message: disconnected: not connected to DevTools
+2023-04-27 23:06:3771V3579S80PFG8 go_manu except: Message: disconnected: not connected to DevTools
   (failed to check if window was closed: disconnected: not connected to DevTools)
   (Session info: chrome=112.0.5615.137)
 
@@ -6421,7 +6421,7 @@ from unknown error: web view not found
   (failed to check if window was closed: disconnected: not connected to DevTools)
   (Session info: chrome=112.0.5615.137)
 
-2023-04-27 23:09:5671V3579S80PFI go_to_cate except: Message: disconnected: not connected to DevTools
+2023-04-27 23:09:5671V3579S80PFI go_manu except: Message: disconnected: not connected to DevTools
   (failed to check if window was closed: disconnected: not connected to DevTools)
   (Session info: chrome=112.0.5615.137)
 
@@ -6429,7 +6429,7 @@ from unknown error: web view not found
   (failed to check if window was closed: disconnected: not connected to DevTools)
   (Session info: chrome=112.0.5615.137)
 
-2023-04-27 23:12:5671V3579S85BG go_to_cate except: Message: disconnected: not connected to DevTools
+2023-04-27 23:12:5671V3579S85BG go_manu except: Message: disconnected: not connected to DevTools
   (failed to check if window was closed: disconnected: not connected to DevTools)
   (Session info: chrome=112.0.5615.137)
 
@@ -6437,7 +6437,7 @@ from unknown error: web view not found
   (failed to check if window was closed: disconnected: not connected to DevTools)
   (Session info: chrome=112.0.5615.137)
 
-2023-04-27 23:15:4271V3579S85PF go_to_cate except: Message: disconnected: not connected to DevTools
+2023-04-27 23:15:4271V3579S85PF go_manu except: Message: disconnected: not connected to DevTools
   (failed to check if window was closed: disconnected: not connected to DevTools)
   (Session info: chrome=112.0.5615.137)
 
@@ -6445,7 +6445,7 @@ from unknown error: web view not found
   (failed to check if window was closed: disconnected: not connected to DevTools)
   (Session info: chrome=112.0.5615.137)
 
-2023-04-27 23:18:3071V3579S85PFG go_to_cate except: Message: disconnected: not connected to DevTools
+2023-04-27 23:18:3071V3579S85PFG go_manu except: Message: disconnected: not connected to DevTools
   (failed to check if window was closed: disconnected: not connected to DevTools)
   (Session info: chrome=112.0.5615.137)
 
@@ -6453,7 +6453,7 @@ from unknown error: web view not found
   (failed to check if window was closed: disconnected: not connected to DevTools)
   (Session info: chrome=112.0.5615.137)
 
-2023-04-27 23:21:2671V3579S85PFG8 go_to_cate except: Message: disconnected: not connected to DevTools
+2023-04-27 23:21:2671V3579S85PFG8 go_manu except: Message: disconnected: not connected to DevTools
   (failed to check if window was closed: disconnected: not connected to DevTools)
   (Session info: chrome=112.0.5615.137)
 
@@ -6461,7 +6461,7 @@ from unknown error: web view not found
   (failed to check if window was closed: disconnected: not connected to DevTools)
   (Session info: chrome=112.0.5615.137)
 
-2023-04-27 23:24:2171V3579S85PFGI go_to_cate except: Message: disconnected: not connected to DevTools
+2023-04-27 23:24:2171V3579S85PFGI go_manu except: Message: disconnected: not connected to DevTools
   (failed to check if window was closed: disconnected: not connected to DevTools)
   (Session info: chrome=112.0.5615.137)
 
@@ -6469,7 +6469,7 @@ from unknown error: web view not found
   (failed to check if window was closed: disconnected: not connected to DevTools)
   (Session info: chrome=112.0.5615.137)
 
-2023-04-27 23:27:2071V3579S85PFGI8 go_to_cate except: Message: disconnected: not connected to DevTools
+2023-04-27 23:27:2071V3579S85PFGI8 go_manu except: Message: disconnected: not connected to DevTools
   (failed to check if window was closed: disconnected: not connected to DevTools)
   (Session info: chrome=112.0.5615.137)
 
@@ -6477,7 +6477,7 @@ from unknown error: web view not found
   (failed to check if window was closed: disconnected: not connected to DevTools)
   (Session info: chrome=112.0.5615.137)
 
-2023-04-27 23:30:3671V3579S85PFI go_to_cate except: Message: disconnected: not connected to DevTools
+2023-04-27 23:30:3671V3579S85PFI go_manu except: Message: disconnected: not connected to DevTools
   (failed to check if window was closed: disconnected: not connected to DevTools)
   (Session info: chrome=112.0.5615.137)
 
@@ -6485,7 +6485,7 @@ from unknown error: web view not found
   (failed to check if window was closed: disconnected: not connected to DevTools)
   (Session info: chrome=112.0.5615.137)
 
-2023-04-27 23:33:4071V3579SA75BQG go_to_cate except: Message: disconnected: not connected to DevTools
+2023-04-27 23:33:4071V3579SA75BQG go_manu except: Message: disconnected: not connected to DevTools
   (failed to check if window was closed: disconnected: not connected to DevTools)
   (Session info: chrome=112.0.5615.137)
 
@@ -6561,7 +6561,7 @@ from unknown error: web view not found
 2023-04-28 11:51:25SI51218-A09762-GM click more exception: 
 2023-04-28 11:51:26SI51218-A09762-GM click more exception: 
 2023-04-28 11:51:26SI51218-A09762-GMR click more exception: 
-2023-04-28 11:56:37SI51218-A09931-GM go_to_cate except: Message: unknown error: net::ERR_CONNECTION_TIMED_OUT
+2023-04-28 11:56:37SI51218-A09931-GM go_manu except: Message: unknown error: net::ERR_CONNECTION_TIMED_OUT
   (Session info: chrome=112.0.5615.137)
 
 2023-04-28 12:00:45SI51218-A09931-GM click more exception: 
@@ -6574,12 +6574,12 @@ from unknown error: web view not found
 
 2023-04-28 12:04:03SI51218-A10976-GMR click more exception: 
 2023-04-28 12:04:03SI51218-A10976-GMR click more exception: 
-2023-04-28 12:09:15SI52111-A1-GM2 go_to_cate except: Message: unknown error: net::ERR_CONNECTION_TIMED_OUT
+2023-04-28 12:09:15SI52111-A1-GM2 go_manu except: Message: unknown error: net::ERR_CONNECTION_TIMED_OUT
   (Session info: chrome=112.0.5615.137)
 
 2023-04-28 12:14:20SI52111-A1-GM2 页面 解析异常：local variable 'showed_rows' referenced before assignment 
 2023-04-28 12:21:14SI52111-A1-GM2R click more exception: 
-2023-04-28 12:36:26SI52111-A2-GM2 go_to_cate except: Message: timeout: Timed out receiving message from renderer: 25.499
+2023-04-28 12:36:26SI52111-A2-GM2 go_manu except: Message: timeout: Timed out receiving message from renderer: 25.499
   (Session info: chrome=112.0.5615.137)
 
 2023-04-28 12:39:22SI52111-A2-GM2 click more exception: 
@@ -6625,7 +6625,7 @@ from unknown error: web view not found
 
 2023-04-28 14:40:01SI53019-A02AGMR click more exception: 
 2023-04-28 14:43:36SI53019-A02AGMR click more exception: 
-2023-04-28 14:49:21SI53119-A01AGMR go_to_cate except: Message: unknown error: net::ERR_CONNECTION_TIMED_OUT
+2023-04-28 14:49:21SI53119-A01AGMR go_manu except: Message: unknown error: net::ERR_CONNECTION_TIMED_OUT
   (Session info: chrome=112.0.5615.137)
 
 2023-05-04 11:33:16SI52112A4-EVB 当个cate 解析异常：Message: no such element: Unable to locate element: {"method":"css selector","selector":"tbody.jsx-4253165187"}
@@ -8057,26 +8057,26 @@ from unknown error: web view not found
   (Session info: chrome=113.0.5672.63)
 
 2023-05-05 10:53:19STM32F429IGT6 当个cate 解析异常：get_supplier_info() got an unexpected keyword argument 'cate_name' 
-2023-05-05 16:02:3871V67703S80BQGI8 go_to_cate except: Message: timeout: Timed out receiving message from renderer: -0.009
+2023-05-05 16:02:3871V67703S80BQGI8 go_manu except: Message: timeout: Timed out receiving message from renderer: -0.009
   (Session info: chrome=113.0.5672.63)
 
 2023-05-05 16:21:2471V67703S80BQGI8 页面 解析异常：Message: timeout: Timed out receiving message from renderer: 480.000
   (Session info: chrome=113.0.5672.63)
 
-2023-05-05 16:29:2471V67703S80BQI go_to_cate except: Message: timeout: Timed out receiving message from renderer: 480.000
+2023-05-05 16:29:2471V67703S80BQI go_manu except: Message: timeout: Timed out receiving message from renderer: 480.000
   (Session info: chrome=113.0.5672.63)
 
 2023-05-06 11:14:537204L35P 页面 解析异常：local variable 'showed_rows' referenced before assignment 
 2023-05-06 14:25:587205L30TDB 页面 解析异常：Message: timeout: Timed out receiving message from renderer: 480.000
   (Session info: chrome=113.0.5672.63)
 
-2023-05-06 14:33:587205L35J go_to_cate except: Message: timeout: Timed out receiving message from renderer: 480.000
+2023-05-06 14:33:587205L35J go_manu except: Message: timeout: Timed out receiving message from renderer: 480.000
   (Session info: chrome=113.0.5672.63)
 
 2023-05-06 14:52:597205L35J 页面 解析异常：Message: timeout: Timed out receiving message from renderer: 480.000
   (Session info: chrome=113.0.5672.63)
 
-2023-05-06 15:00:597205L35J/6280 go_to_cate except: Message: timeout: Timed out receiving message from renderer: 480.000
+2023-05-06 15:00:597205L35J/6280 go_manu except: Message: timeout: Timed out receiving message from renderer: 480.000
   (Session info: chrome=113.0.5672.63)
 
 2023-05-08 09:24:2972V2113L7-5PF8 页面 解析异常：local variable 'showed_rows' referenced before assignment 
@@ -8093,294 +8093,294 @@ from unknown error: web view not found
 2023-05-08 15:21:4672V243L6BCG 页面 解析异常：Message: timeout: Timed out receiving message from renderer: 480.000
   (Session info: chrome=113.0.5672.63)
 
-2023-05-08 15:29:4672V243L6PF go_to_cate except: Message: timeout: Timed out receiving message from renderer: 480.000
+2023-05-08 15:29:4672V243L6PF go_manu except: Message: timeout: Timed out receiving message from renderer: 480.000
   (Session info: chrome=113.0.5672.63)
 
 2023-05-08 15:49:0972V243L6PF 页面 解析异常：Message: timeout: Timed out receiving message from renderer: 480.000
   (Session info: chrome=113.0.5672.63)
 
-2023-05-08 15:57:0972V243L6PF8 go_to_cate except: Message: timeout: Timed out receiving message from renderer: 480.000
+2023-05-08 15:57:0972V243L6PF8 go_manu except: Message: timeout: Timed out receiving message from renderer: 480.000
   (Session info: chrome=113.0.5672.63)
 
 2023-05-08 16:16:1572V243L6PF8 页面 解析异常：Message: timeout: Timed out receiving message from renderer: 480.000
   (Session info: chrome=113.0.5672.63)
 
-2023-05-08 16:24:1572V243L6PFG8 go_to_cate except: Message: timeout: Timed out receiving message from renderer: 480.000
+2023-05-08 16:24:1572V243L6PFG8 go_manu except: Message: timeout: Timed out receiving message from renderer: 480.000
   (Session info: chrome=113.0.5672.63)
 
 2023-05-09 13:43:4072V835L15PF8 页面 解析异常：Message: timeout: Timed out receiving message from renderer: 480.000
   (Session info: chrome=113.0.5672.63)
 
-2023-05-09 13:51:4072V835L15PF9 go_to_cate except: Message: timeout: Timed out receiving message from renderer: 480.000
+2023-05-09 13:51:4072V835L15PF9 go_manu except: Message: timeout: Timed out receiving message from renderer: 480.000
   (Session info: chrome=113.0.5672.63)
 
-2023-05-09 15:54:1772V841L15PFG8 go_to_cate except: Message: timeout: Timed out receiving message from renderer: 477.942
+2023-05-09 15:54:1772V841L15PFG8 go_manu except: Message: timeout: Timed out receiving message from renderer: 477.942
   (Session info: chrome=113.0.5672.63)
 
-2023-05-10 09:21:1974LVC162245APAG go_to_cate except: Message: no such window: target window already closed
+2023-05-10 09:21:1974LVC162245APAG go_manu except: Message: no such window: target window already closed
 from unknown error: web view not found
   (Session info: chrome=113.0.5672.63)
 
-2023-05-10 14:14:5380HCPS1848CHMI go_to_cate except: Message: timeout: Timed out receiving message from renderer: 478.955
+2023-05-10 14:14:5380HCPS1848CHMI go_manu except: Message: timeout: Timed out receiving message from renderer: 478.955
   (Session info: chrome=113.0.5672.63)
 
 2023-05-10 14:33:5480HCPS1848CHMI 页面 解析异常：Message: timeout: Timed out receiving message from renderer: 480.000
   (Session info: chrome=113.0.5672.63)
 
-2023-05-10 14:41:5580HCPS1848CRM go_to_cate except: Message: timeout: Timed out receiving message from renderer: 480.000
+2023-05-10 14:41:5580HCPS1848CRM go_manu except: Message: timeout: Timed out receiving message from renderer: 480.000
   (Session info: chrome=113.0.5672.63)
 
-2023-05-12 12:21:548N3DV85FC-0174CDI go_to_cate except: Message: unknown error: net::ERR_CONNECTION_TIMED_OUT
+2023-05-12 12:21:548N3DV85FC-0174CDI go_manu except: Message: unknown error: net::ERR_CONNECTION_TIMED_OUT
   (Session info: chrome=113.0.5672.92)
 
-2023-05-12 12:52:438N3DV85KC-0001CDI go_to_cate except: Message: unknown error: net::ERR_CONNECTION_CLOSED
+2023-05-12 12:52:438N3DV85KC-0001CDI go_manu except: Message: unknown error: net::ERR_CONNECTION_CLOSED
   (Session info: chrome=113.0.5672.92)
 
-2023-05-12 13:05:468N3DV85KC-0003CDI8 go_to_cate except: Message: timeout: Timed out receiving message from renderer: -0.008
+2023-05-12 13:05:468N3DV85KC-0003CDI8 go_manu except: Message: timeout: Timed out receiving message from renderer: -0.008
   (Session info: chrome=113.0.5672.92)
 
 2023-05-12 13:09:098N3DV85KC-0003CDI8 页面 解析异常：Message: invalid session id
 
-2023-05-12 13:09:098N3DV85KC-0004CDI8 go_to_cate except: Message: invalid session id
+2023-05-12 13:09:098N3DV85KC-0004CDI8 go_manu except: Message: invalid session id
 
 2023-05-12 13:11:588N3DV85KC-0004CDI8 页面 解析异常：Message: invalid session id
 
-2023-05-12 13:11:588N3DV85KC-0006CDI go_to_cate except: Message: invalid session id
+2023-05-12 13:11:588N3DV85KC-0006CDI go_manu except: Message: invalid session id
 
 2023-05-12 13:14:408N3DV85KC-0006CDI 页面 解析异常：Message: invalid session id
 
-2023-05-12 13:14:408N3DV85KC-0007CDI8 go_to_cate except: Message: invalid session id
+2023-05-12 13:14:408N3DV85KC-0007CDI8 go_manu except: Message: invalid session id
 
 2023-05-12 13:17:208N3DV85KC-0007CDI8 页面 解析异常：Message: invalid session id
 
-2023-05-12 13:17:208N3DV85KC-0008CDI go_to_cate except: Message: invalid session id
+2023-05-12 13:17:208N3DV85KC-0008CDI go_manu except: Message: invalid session id
 
 2023-05-12 13:20:388N3DV85KC-0008CDI 页面 解析异常：Message: invalid session id
 
-2023-05-12 13:20:388N3DV85KC-0008CDI8 go_to_cate except: Message: invalid session id
+2023-05-12 13:20:388N3DV85KC-0008CDI8 go_manu except: Message: invalid session id
 
 2023-05-12 13:23:328N3DV85KC-0008CDI8 页面 解析异常：Message: invalid session id
 
-2023-05-12 13:23:328N3DV85KC-0010CDI go_to_cate except: Message: invalid session id
+2023-05-12 13:23:328N3DV85KC-0010CDI go_manu except: Message: invalid session id
 
 2023-05-12 13:26:158N3DV85KC-0010CDI 页面 解析异常：Message: invalid session id
 
-2023-05-12 13:26:158N3DV85KC-0011CDI go_to_cate except: Message: invalid session id
+2023-05-12 13:26:158N3DV85KC-0011CDI go_manu except: Message: invalid session id
 
 2023-05-12 13:29:388N3DV85KC-0011CDI 页面 解析异常：Message: invalid session id
 
-2023-05-12 13:29:388N3DV85KC-0012CDI8 go_to_cate except: Message: invalid session id
+2023-05-12 13:29:388N3DV85KC-0012CDI8 go_manu except: Message: invalid session id
 
 2023-05-12 13:32:238N3DV85KC-0012CDI8 页面 解析异常：Message: invalid session id
 
-2023-05-12 13:32:238N3DV85KC-0013CDI8 go_to_cate except: Message: invalid session id
+2023-05-12 13:32:238N3DV85KC-0013CDI8 go_manu except: Message: invalid session id
 
 2023-05-12 13:35:118N3DV85KC-0013CDI8 页面 解析异常：Message: invalid session id
 
-2023-05-12 13:35:118N3DV85KC-0015CDI go_to_cate except: Message: invalid session id
+2023-05-12 13:35:118N3DV85KC-0015CDI go_manu except: Message: invalid session id
 
 2023-05-12 13:37:488N3DV85KC-0015CDI 页面 解析异常：Message: invalid session id
 
-2023-05-12 13:37:498N3DV85KC-0017CDI8 go_to_cate except: Message: invalid session id
+2023-05-12 13:37:498N3DV85KC-0017CDI8 go_manu except: Message: invalid session id
 
 2023-05-12 13:41:068N3DV85KC-0017CDI8 页面 解析异常：Message: invalid session id
 
-2023-05-12 13:41:068N3DV85KC-0019CDI go_to_cate except: Message: invalid session id
+2023-05-12 13:41:068N3DV85KC-0019CDI go_manu except: Message: invalid session id
 
 2023-05-12 13:43:508N3DV85KC-0019CDI 页面 解析异常：Message: invalid session id
 
-2023-05-12 13:43:508N3DV85KC-0019CDI8 go_to_cate except: Message: invalid session id
+2023-05-12 13:43:508N3DV85KC-0019CDI8 go_manu except: Message: invalid session id
 
 2023-05-12 13:46:478N3DV85KC-0019CDI8 页面 解析异常：Message: invalid session id
 
-2023-05-12 13:46:478N3DV85KC-0020CDI go_to_cate except: Message: invalid session id
+2023-05-12 13:46:478N3DV85KC-0020CDI go_manu except: Message: invalid session id
 
 2023-05-12 13:50:048N3DV85KC-0020CDI 页面 解析异常：Message: invalid session id
 
-2023-05-12 13:50:048N3DV85KC-0021CDI go_to_cate except: Message: invalid session id
+2023-05-12 13:50:048N3DV85KC-0021CDI go_manu except: Message: invalid session id
 
 2023-05-12 14:48:178N3DV85FC-0175CDI 页面 解析异常：Message: no such window: target window already closed
 from unknown error: web view not found
   (Session info: chrome=113.0.5672.92)
 
-2023-05-12 14:48:178N3DV85FC-0175CDI8 go_to_cate except: Message: no such window: target window already closed
+2023-05-12 14:48:178N3DV85FC-0175CDI8 go_manu except: Message: no such window: target window already closed
 from unknown error: web view not found
   (Session info: chrome=113.0.5672.92)
 
-2023-05-12 17:13:578N3DV85FC-0175CDI go_to_cate except: Message: unknown error: net::ERR_CONNECTION_TIMED_OUT
+2023-05-12 17:13:578N3DV85FC-0175CDI go_manu except: Message: unknown error: net::ERR_CONNECTION_TIMED_OUT
   (Session info: chrome=113.0.5672.92)
 
-2023-05-12 17:28:008N3DV85FC-0176CDI go_to_cate except: Message: unknown error: net::ERR_CONNECTION_CLOSED
+2023-05-12 17:28:008N3DV85FC-0176CDI go_manu except: Message: unknown error: net::ERR_CONNECTION_CLOSED
   (Session info: chrome=113.0.5672.92)
 
 2023-05-16 15:23:049FGL0451BKILF 页面 解析异常：Message: timeout: Timed out receiving message from renderer: 480.000
   (Session info: chrome=113.0.5672.92)
 
-2023-05-16 15:31:049FGL0451BKILFT go_to_cate except: Message: timeout: Timed out receiving message from renderer: 480.000
+2023-05-16 15:31:049FGL0451BKILFT go_manu except: Message: timeout: Timed out receiving message from renderer: 480.000
   (Session info: chrome=113.0.5672.92)
 
 2023-05-17 13:07:439FGV1006B209LTGI 页面 解析异常：local variable 'showed_rows' referenced before assignment 
-2023-05-17 15:59:579FGV1006C201LTGI8 go_to_cate except: Message: timeout: Timed out receiving message from renderer: 479.591
+2023-05-17 15:59:579FGV1006C201LTGI8 go_manu except: Message: timeout: Timed out receiving message from renderer: 479.591
   (Session info: chrome=113.0.5672.92)
 
 2023-05-18 14:30:24AT25XE081D-DWF 页面 解析异常：Message: timeout: Timed out receiving message from renderer: 480.000
   (Session info: chrome=113.0.5672.92)
 
-2023-05-18 14:38:24AT25XE081D-MAHN-T go_to_cate except: Message: timeout: Timed out receiving message from renderer: 480.000
+2023-05-18 14:38:24AT25XE081D-MAHN-T go_manu except: Message: timeout: Timed out receiving message from renderer: 480.000
   (Session info: chrome=113.0.5672.92)
 
 2023-05-22 16:45:53R5F563NYDDFB#10 页面 解析异常：Message: timeout: Timed out receiving message from renderer: 480.000
   (Session info: chrome=113.0.5672.126)
 
-2023-05-22 16:53:53UPD70F4016M2GJA-GAE-G go_to_cate except: Message: timeout: Timed out receiving message from renderer: 480.000
+2023-05-22 16:53:53UPD70F4016M2GJA-GAE-G go_manu except: Message: timeout: Timed out receiving message from renderer: 480.000
   (Session info: chrome=113.0.5672.126)
 
 2023-05-22 17:37:08UPD70F4016M2GJA-GAE-G 页面 解析异常：Message: invalid session id
 
-2023-05-22 17:37:08R5F100GCAFB#30 go_to_cate except: Message: invalid session id
+2023-05-22 17:37:08R5F100GCAFB#30 go_manu except: Message: invalid session id
 
 2023-05-22 17:39:45R5F100GCAFB#30 页面 解析异常：Message: invalid session id
 
-2023-05-22 17:39:45R5F10378ANA#W0 go_to_cate except: Message: invalid session id
+2023-05-22 17:39:45R5F10378ANA#W0 go_manu except: Message: invalid session id
 
 2023-05-22 17:42:45R5F10378ANA#W0 页面 解析异常：Message: invalid session id
 
-2023-05-22 17:42:45R5F51406ADNE#10 go_to_cate except: Message: invalid session id
+2023-05-22 17:42:45R5F51406ADNE#10 go_manu except: Message: invalid session id
 
 2023-05-22 17:45:59R5F51406ADNE#10 页面 解析异常：Message: invalid session id
 
-2023-05-22 17:45:59R5F51305AGFM#10 go_to_cate except: Message: invalid session id
+2023-05-22 17:45:59R5F51305AGFM#10 go_manu except: Message: invalid session id
 
 2023-05-22 17:49:01R5F51305AGFM#10 页面 解析异常：Message: invalid session id
 
-2023-05-22 17:49:02R5F100EDANA#W0 go_to_cate except: Message: invalid session id
+2023-05-22 17:49:02R5F100EDANA#W0 go_manu except: Message: invalid session id
 
 2023-05-22 17:51:57R5F100EDANA#W0 页面 解析异常：Message: invalid session id
 
-2023-05-22 17:51:57R5F12018ASP#10 go_to_cate except: Message: invalid session id
+2023-05-22 17:51:57R5F12018ASP#10 go_manu except: Message: invalid session id
 
 2023-05-22 17:55:05R5F12018ASP#10 页面 解析异常：Message: invalid session id
 
-2023-05-22 17:55:05R5F52317AGNE#00 go_to_cate except: Message: invalid session id
+2023-05-22 17:55:05R5F52317AGNE#00 go_manu except: Message: invalid session id
 
 2023-05-22 17:58:14R5F52317AGNE#00 页面 解析异常：Message: invalid session id
 
-2023-05-22 17:58:14R7FA6T1AB3CFP#HA0 go_to_cate except: Message: invalid session id
+2023-05-22 17:58:14R7FA6T1AB3CFP#HA0 go_manu except: Message: invalid session id
 
-2023-05-30 12:42:34R5F572NDDDFB#10 go_to_cate except: Message: timeout: Timed out receiving message from renderer: 479.680
+2023-05-30 12:42:34R5F572NDDDFB#10 go_manu except: Message: timeout: Timed out receiving message from renderer: 479.680
   (Session info: chrome=113.0.5672.126)
 
 2023-05-30 13:25:35R5F572NDDDFB#10 页面 解析异常：Message: invalid session id
 
-2023-05-30 13:25:35R5F100GLDFB#30 go_to_cate except: Message: invalid session id
+2023-05-30 13:25:35R5F100GLDFB#30 go_manu except: Message: invalid session id
 
 2023-05-30 13:28:12R5F100GLDFB#30 页面 解析异常：Message: invalid session id
 
-2023-05-30 13:28:12R5F101GJAFB#V0 go_to_cate except: Message: invalid session id
+2023-05-30 13:28:12R5F101GJAFB#V0 go_manu except: Message: invalid session id
 
 2023-05-30 13:30:53R5F101GJAFB#V0 页面 解析异常：Message: invalid session id
 
-2023-05-30 13:30:53R5F100LHAFB#X0 go_to_cate except: Message: invalid session id
+2023-05-30 13:30:53R5F100LHAFB#X0 go_manu except: Message: invalid session id
 
 2023-05-30 13:33:56R5F100LHAFB#X0 页面 解析异常：Message: invalid session id
 
-2023-05-30 13:33:56R5F100GGAFB#30 go_to_cate except: Message: invalid session id
+2023-05-30 13:33:56R5F100GGAFB#30 go_manu except: Message: invalid session id
 
 2023-05-30 13:37:09R5F100GGAFB#30 页面 解析异常：Message: invalid session id
 
-2023-05-30 13:37:09R5F571MGCDFP#V0 go_to_cate except: Message: invalid session id
+2023-05-30 13:37:09R5F571MGCDFP#V0 go_manu except: Message: invalid session id
 
 2023-05-30 13:40:29R5F571MGCDFP#V0 页面 解析异常：Message: invalid session id
 
-2023-05-30 13:40:29R5F51101ADNE#00 go_to_cate except: Message: invalid session id
+2023-05-30 13:40:29R5F51101ADNE#00 go_manu except: Message: invalid session id
 
 2023-05-30 13:43:47R5F51101ADNE#00 页面 解析异常：Message: invalid session id
 
-2023-05-30 13:43:47R5F571MLCDLK#20 go_to_cate except: Message: invalid session id
+2023-05-30 13:43:47R5F571MLCDLK#20 go_manu except: Message: invalid session id
 
 2023-05-30 13:47:11R5F571MLCDLK#20 页面 解析异常：Message: invalid session id
 
-2023-05-30 13:47:11R5F572MDDGBG#20 go_to_cate except: Message: invalid session id
+2023-05-30 13:47:11R5F572MDDGBG#20 go_manu except: Message: invalid session id
 
 2023-05-30 13:50:13R5F572MDDGBG#20 页面 解析异常：Message: invalid session id
 
-2023-05-30 13:50:13R5F113GKKFB#X5 go_to_cate except: Message: invalid session id
+2023-05-30 13:50:13R5F113GKKFB#X5 go_manu except: Message: invalid session id
 
 2023-05-30 13:53:13R5F113GKKFB#X5 页面 解析异常：Message: invalid session id
 
-2023-05-30 13:53:13R7F100GGL2DFB#AA0 go_to_cate except: Message: invalid session id
+2023-05-30 13:53:13R7F100GGL2DFB#AA0 go_manu except: Message: invalid session id
 
 2023-05-30 13:55:53R7F100GGL2DFB#AA0 页面 解析异常：Message: invalid session id
 
-2023-05-30 13:55:53R5F101GEAFB#V0 go_to_cate except: Message: invalid session id
+2023-05-30 13:55:53R5F101GEAFB#V0 go_manu except: Message: invalid session id
 
 2023-05-30 13:58:58R5F101GEAFB#V0 页面 解析异常：Message: invalid session id
 
-2023-05-30 13:58:58R5F100JLAFA#10 go_to_cate except: Message: invalid session id
+2023-05-30 13:58:58R5F100JLAFA#10 go_manu except: Message: invalid session id
 
 2023-05-30 14:01:54R5F100JLAFA#10 页面 解析异常：Message: invalid session id
 
-2023-05-30 14:01:54R5F100AEASP#50 go_to_cate except: Message: invalid session id
+2023-05-30 14:01:54R5F100AEASP#50 go_manu except: Message: invalid session id
 
 2023-05-30 14:04:40R5F100AEASP#50 页面 解析异常：Message: invalid session id
 
-2023-05-30 14:04:40R5F100LKDFB#X0 go_to_cate except: Message: invalid session id
+2023-05-30 14:04:40R5F100LKDFB#X0 go_manu except: Message: invalid session id
 
 2023-05-30 14:07:27R5F100LKDFB#X0 页面 解析异常：Message: invalid session id
 
-2023-05-30 14:07:27R5F100EDDNA#W0 go_to_cate except: Message: invalid session id
+2023-05-30 14:07:27R5F100EDDNA#W0 go_manu except: Message: invalid session id
 
 2023-05-30 14:10:36R5F100EDDNA#W0 页面 解析异常：Message: invalid session id
 
-2023-05-30 14:10:36R5F100JKDFA#10 go_to_cate except: Message: invalid session id
+2023-05-30 14:10:36R5F100JKDFA#10 go_manu except: Message: invalid session id
 
 2023-05-30 14:13:11R5F100JKDFA#10 页面 解析异常：Message: invalid session id
 
-2023-05-30 14:13:11R5F563NDCDLK#U0 go_to_cate except: Message: invalid session id
+2023-05-30 14:13:11R5F563NDCDLK#U0 go_manu except: Message: invalid session id
 
 2023-05-30 14:15:50R5F563NDCDLK#U0 页面 解析异常：Message: invalid session id
 
-2023-05-30 14:15:50R5F10AGACLFB#55 go_to_cate except: Message: invalid session id
+2023-05-30 14:15:50R5F10AGACLFB#55 go_manu except: Message: invalid session id
 
 2023-05-30 14:18:53R5F10AGACLFB#55 页面 解析异常：Message: invalid session id
 
-2023-05-30 14:18:54R5F5634EYDFB#30 go_to_cate except: Message: invalid session id
+2023-05-30 14:18:54R5F5634EYDFB#30 go_manu except: Message: invalid session id
 
 2023-05-30 14:22:17R5F5634EYDFB#30 页面 解析异常：Message: invalid session id
 
-2023-05-30 14:22:17R5F565N9BGFP#30 go_to_cate except: Message: invalid session id
+2023-05-30 14:22:17R5F565N9BGFP#30 go_manu except: Message: invalid session id
 
 2023-05-30 14:25:41R5F565N9BGFP#30 页面 解析异常：Message: invalid session id
 
-2023-05-30 14:25:41UPD703213GC-XXX-8EU-A go_to_cate except: Message: invalid session id
+2023-05-30 14:25:41UPD703213GC-XXX-8EU-A go_manu except: Message: invalid session id
 
 2023-05-30 14:28:46UPD703213GC-XXX-8EU-A 页面 解析异常：Message: invalid session id
 
-2023-05-30 14:28:46R5F100FCAFP#10 go_to_cate except: Message: invalid session id
+2023-05-30 14:28:46R5F100FCAFP#10 go_manu except: Message: invalid session id
 
 2023-05-30 14:32:05R5F100FCAFP#10 页面 解析异常：Message: invalid session id
 
-2023-05-30 14:32:05R5F5671CHDBP#20 go_to_cate except: Message: invalid session id
+2023-05-30 14:32:05R5F5671CHDBP#20 go_manu except: Message: invalid session id
 
 2023-05-30 14:34:40R5F5671CHDBP#20 页面 解析异常：Message: invalid session id
 
-2023-05-30 14:34:40R5F10BACYSP#W5 go_to_cate except: Message: invalid session id
+2023-05-30 14:34:40R5F10BACYSP#W5 go_manu except: Message: invalid session id
 
 2023-05-30 14:37:41R5F10BACYSP#W5 页面 解析异常：Message: invalid session id
 
-2023-05-30 14:37:41R5F10AGCKFB#H5 go_to_cate except: Message: invalid session id
+2023-05-30 14:37:41R5F10AGCKFB#H5 go_manu except: Message: invalid session id
 
 2023-05-30 14:40:38R5F10AGCKFB#H5 页面 解析异常：Message: invalid session id
 
-2023-05-30 14:40:38R5F565N7BDFP#30 go_to_cate except: Message: invalid session id
+2023-05-30 14:40:38R5F565N7BDFP#30 go_manu except: Message: invalid session id
 
 2023-05-30 14:43:47R5F565N7BDFP#30 页面 解析异常：Message: invalid session id
 
-2023-05-30 14:43:47R5F56719HDBP#20 go_to_cate except: Message: invalid session id
+2023-05-30 14:43:47R5F56719HDBP#20 go_manu except: Message: invalid session id
 
 2023-05-30 14:47:06R5F56719HDBP#20 页面 解析异常：Message: invalid session id
 
-2023-05-30 14:47:06R9A07G044L13GBG#AC0 go_to_cate except: Message: invalid session id
+2023-05-30 14:47:06R9A07G044L13GBG#AC0 go_manu except: Message: invalid session id
 
 2023-05-31 17:05:46R7F7010443AFP 页面 解析异常：local variable 'showed_rows' referenced before assignment 
 2023-06-01 13:17:19R5F11CCCGBG#W0 页面 解析异常：local variable 'showed_rows' referenced before assignment 
@@ -8404,13 +8404,13 @@ from unknown error: web view not found
 2023-06-06 15:09:29R5F52316CGFM#30 页面 解析异常：Message: timeout: Timed out receiving message from renderer: 480.000
   (Session info: chrome=114.0.5735.90)
 
-2023-06-06 15:17:29R5F100AFGSP#10 go_to_cate except: Message: timeout: Timed out receiving message from renderer: 480.000
+2023-06-06 15:17:29R5F100AFGSP#10 go_manu except: Message: timeout: Timed out receiving message from renderer: 480.000
   (Session info: chrome=114.0.5735.90)
 
 2023-06-06 17:32:22R5F104LEAFB#V0 页面 解析异常：local variable 'showed_rows' referenced before assignment 
 2023-06-06 17:42:57R5F5111JAGFK#3A 页面 解析异常：local variable 'showed_rows' referenced before assignment 
 2023-06-06 18:06:53UPD70F3557AM1GMA-GBK-AX 页面 解析异常：local variable 'showed_rows' referenced before assignment 
-2023-06-07 11:41:37R5F100LHDFA#X0 go_to_cate except: Message: unknown error: net::ERR_CONNECTION_TIMED_OUT
+2023-06-07 11:41:37R5F100LHDFA#X0 go_manu except: Message: unknown error: net::ERR_CONNECTION_TIMED_OUT
   (Session info: chrome=114.0.5735.90)
 
 2023-06-07 12:34:48R7F102GBC2DNP#HA0 页面 解析异常：local variable 'showed_rows' referenced before assignment 
@@ -8418,14 +8418,14 @@ from unknown error: web view not found
 2023-06-07 15:31:55RH850/P1L-C 页面 解析异常：Message: timeout: Timed out receiving message from renderer: 480.000
   (Session info: chrome=114.0.5735.90)
 
-2023-06-07 15:39:55R5F52108BDLK#U0 go_to_cate except: Message: timeout: Timed out receiving message from renderer: 480.000
+2023-06-07 15:39:55R5F52108BDLK#U0 go_manu except: Message: timeout: Timed out receiving message from renderer: 480.000
   (Session info: chrome=114.0.5735.90)
 
 2023-06-08 09:32:24UPD70F3592AM1GMA1-GBK-AX 页面 解析异常：local variable 'showed_rows' referenced before assignment 
 2023-06-08 14:56:59R5F12017MSP#30 页面 解析异常：Message: timeout: Timed out receiving message from renderer: 480.000
   (Session info: chrome=114.0.5735.106)
 
-2023-06-08 15:04:59R5F56318SDLK#U0 go_to_cate except: Message: timeout: Timed out receiving message from renderer: 480.000
+2023-06-08 15:04:59R5F56318SDLK#U0 go_manu except: Message: timeout: Timed out receiving message from renderer: 480.000
   (Session info: chrome=114.0.5735.106)
 
 2023-06-08 16:22:53R7F102GBC2DNP#AA0 页面 解析异常：local variable 'showed_rows' referenced before assignment 
@@ -8440,27 +8440,27 @@ from unknown error: web view not found
 2023-06-13 15:28:20R5F562T7BDFP#13 页面 解析异常：Message: timeout: Timed out receiving message from renderer: 480.000
   (Session info: chrome=114.0.5735.106)
 
-2023-06-13 15:36:21R5F101LLDFB#X0 go_to_cate except: Message: timeout: Timed out receiving message from renderer: 480.000
+2023-06-13 15:36:21R5F101LLDFB#X0 go_manu except: Message: timeout: Timed out receiving message from renderer: 480.000
   (Session info: chrome=114.0.5735.106)
 
 2023-06-14 14:59:03R7F7010073AFP 页面 解析异常：Message: timeout: Timed out receiving message from renderer: 480.000
   (Session info: chrome=114.0.5735.106)
 
-2023-06-14 15:07:03R7S721030VLFP#AA0 go_to_cate except: Message: timeout: Timed out receiving message from renderer: 480.000
+2023-06-14 15:07:03R7S721030VLFP#AA0 go_manu except: Message: timeout: Timed out receiving message from renderer: 480.000
   (Session info: chrome=114.0.5735.106)
 
 2023-06-14 17:15:01R7S910007CBG#AC0 页面 解析异常：local variable 'showed_rows' referenced before assignment 
 2023-06-15 15:17:11R5F566NNHDFB#30 页面 解析异常：Message: timeout: Timed out receiving message from renderer: 480.000
   (Session info: chrome=114.0.5735.133)
 
-2023-06-15 15:25:11R5F1176AGSM#10 go_to_cate except: Message: timeout: Timed out receiving message from renderer: 480.000
+2023-06-15 15:25:11R5F1176AGSM#10 go_manu except: Message: timeout: Timed out receiving message from renderer: 480.000
   (Session info: chrome=114.0.5735.133)
 
 2023-06-16 09:18:00R5F563TEADFH#V1 页面 解析异常：Message: disconnected: not connected to DevTools
   (failed to check if window was closed: disconnected: not connected to DevTools)
   (Session info: chrome=114.0.5735.133)
 
-2023-06-16 09:18:00R5F51403AGFK#30 go_to_cate except: Message: disconnected: not connected to DevTools
+2023-06-16 09:18:00R5F51403AGFK#30 go_manu except: Message: disconnected: not connected to DevTools
   (failed to check if window was closed: disconnected: not connected to DevTools)
   (Session info: chrome=114.0.5735.133)
 
@@ -8570,7 +8570,7 @@ from unknown error: web view not found
 2023-06-26 12:03:59RL78/L1C cannot check keyname: Message: no such element: Unable to locate element: {"method":"tag name","selector":"mark"}
   (Session info: chrome=114.0.5735.133)
 
-2023-06-26 14:51:59R5F101GKANA#U0 go_to_cate except: Message: timeout: Timed out receiving message from renderer: 479.547
+2023-06-26 14:51:59R5F101GKANA#U0 go_manu except: Message: timeout: Timed out receiving message from renderer: 479.547
   (Session info: chrome=114.0.5735.133)
 
 2023-06-27 09:23:40R5F11ZBADFP#50 当个cate 解析异常：list index out of range 
@@ -8668,7 +8668,7 @@ from unknown error: web view not found
 2023-06-28 15:43:49R7FA2E1A92DFK#HA0 页面 解析异常：Message: timeout: Timed out receiving message from renderer: 480.000
   (Session info: chrome=114.0.5735.198)
 
-2023-06-28 15:51:49R5F10BMGYFB#X5 go_to_cate except: Message: timeout: Timed out receiving message from renderer: 480.000
+2023-06-28 15:51:49R5F10BMGYFB#X5 go_manu except: Message: timeout: Timed out receiving message from renderer: 480.000
   (Session info: chrome=114.0.5735.198)
 
 2023-06-29 14:16:25R5F523W8CDLN#20 页面 解析异常：local variable 'showed_rows' referenced before assignment 
@@ -8707,7 +8707,7 @@ from unknown error: web view not found
 2023-06-30 15:38:25R5F10ELCGFB#V0 页面 解析异常：Message: timeout: Timed out receiving message from renderer: 480.000
   (Session info: chrome=114.0.5735.198)
 
-2023-06-30 15:46:25R5F111MEAFB#10 go_to_cate except: Message: timeout: Timed out receiving message from renderer: 480.000
+2023-06-30 15:46:25R5F111MEAFB#10 go_manu except: Message: timeout: Timed out receiving message from renderer: 480.000
   (Session info: chrome=114.0.5735.198)
 
 2023-06-30 16:30:16R5F10ELCGFB#V0 当个cate 解析异常：list index out of range 
@@ -9040,43 +9040,43 @@ from unknown error: web view not found
 2023-07-06 16:14:50F1975 cannot check keyname: Message: no such element: Unable to locate element: {"method":"tag name","selector":"mark"}
   (Session info: chrome=114.0.5735.198)
 
-2023-07-21 16:54:24M3032316035NX0IBCR go_to_cate except: Message: unknown error: net::ERR_INTERNET_DISCONNECTED
+2023-07-21 16:54:24M3032316035NX0IBCR go_manu except: Message: unknown error: net::ERR_INTERNET_DISCONNECTED
   (Session info: chrome=114.0.5735.198)
 
-2023-07-24 12:56:02QS3306AS18 go_to_cate except: Message: unknown error: net::ERR_PROXY_CONNECTION_FAILED
+2023-07-24 12:56:02QS3306AS18 go_manu except: Message: unknown error: net::ERR_PROXY_CONNECTION_FAILED
   (Session info: chrome=114.0.5735.198)
 
 2023-07-24 12:59:24QS3306AS18 页面 解析异常：local variable 'showed_rows' referenced before assignment 
-2023-07-24 12:59:24QS3306AS1G go_to_cate except: Message: unknown error: net::ERR_PROXY_CONNECTION_FAILED
+2023-07-24 12:59:24QS3306AS1G go_manu except: Message: unknown error: net::ERR_PROXY_CONNECTION_FAILED
   (Session info: chrome=114.0.5735.198)
 
 2023-07-24 13:02:23QS3306AS1G 页面 解析异常：local variable 'showed_rows' referenced before assignment 
 2023-07-25 18:27:45SLG46867M 页面 解析异常：Message: timeout: Timed out receiving message from renderer: 480.000
   (Session info: chrome=114.0.5735.248)
 
-2023-07-25 18:35:45SLG46867M-DIP go_to_cate except: Message: timeout: Timed out receiving message from renderer: 480.000
+2023-07-25 18:35:45SLG46867M-DIP go_manu except: Message: timeout: Timed out receiving message from renderer: 480.000
   (Session info: chrome=114.0.5735.248)
 
 2023-07-26 16:36:41UPC451G2(5)-E1-A 页面 解析异常：Message: timeout: Timed out receiving message from renderer: 480.000
   (Session info: chrome=115.0.5790.102)
 
-2023-07-26 16:44:41UPC451G2(5)-E2-A go_to_cate except: Message: timeout: Timed out receiving message from renderer: 480.000
+2023-07-26 16:44:41UPC451G2(5)-E2-A go_manu except: Message: timeout: Timed out receiving message from renderer: 480.000
   (Session info: chrome=115.0.5790.102)
 
 2023-07-27 16:41:39X5325S8IZT1 页面 解析异常：Message: timeout: Timed out receiving message from renderer: 480.000
   (Session info: chrome=115.0.5790.114)
 
-2023-07-27 16:49:39X5325S8Z-4.5A go_to_cate except: Message: timeout: Timed out receiving message from renderer: 480.000
+2023-07-27 16:49:39X5325S8Z-4.5A go_manu except: Message: timeout: Timed out receiving message from renderer: 480.000
   (Session info: chrome=115.0.5790.114)
 
 2023-07-28 10:07:39X9315WMI 页面 解析异常：local variable 'showed_rows' referenced before assignment 
 2023-07-28 15:38:38X9317US8 页面 解析异常：Message: timeout: Timed out receiving message from renderer: 480.000
   (Session info: chrome=115.0.5790.114)
 
-2023-07-28 15:46:38X9317US8I go_to_cate except: Message: timeout: Timed out receiving message from renderer: 480.000
+2023-07-28 15:46:38X9317US8I go_manu except: Message: timeout: Timed out receiving message from renderer: 480.000
   (Session info: chrome=115.0.5790.114)
 
-2023-08-02 10:17:03XLH536040.000JS4X go_to_cate except: Message: unknown error: net::ERR_CONNECTION_TIMED_OUT
+2023-08-02 10:17:03XLH536040.000JS4X go_manu except: Message: unknown error: net::ERR_CONNECTION_TIMED_OUT
   (Session info: chrome=115.0.5790.114)
 
 2023-08-02 10:28:04XLH536045.000000I 页面 解析异常：local variable 'showed_rows' referenced before assignment 
@@ -9103,7 +9103,7 @@ from unknown error: web view not found
 2023-09-18 13:19:59ADM485ARZ 页面 解析异常：local variable 'showed_rows' referenced before assignment 
 2023-09-18 14:28:30ADP151ACPZ-2,5-R7 页面 解析异常：local variable 'showed_rows' referenced before assignment 
 2023-09-18 14:35:09ADM485AR 页面 解析异常：local variable 'showed_rows' referenced before assignment 
-2023-09-18 18:27:31ADuM162N1BRZ go_to_cate except: Message: disconnected: not connected to DevTools
+2023-09-18 18:27:31ADuM162N1BRZ go_manu except: Message: disconnected: not connected to DevTools
   (failed to check if window was closed: disconnected: not connected to DevTools)
   (Session info: chrome=114.0.5735.198)
 

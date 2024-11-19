@@ -27,7 +27,7 @@ def go_to_page(url):
         WaitHelp.waitfor_octopart(True, False)
         analyth_html(url)
     except Exception as e:
-        LogHelper.write_log(log_file_name=log_file, content=f'go_to_cate except: {e}')
+        LogHelper.write_log(log_file_name=log_file, content=f'go_manu except: {e}')
         if str(e.msg).__contains__('Timed out'):
             driver.reconnect()
 

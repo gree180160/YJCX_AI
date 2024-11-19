@@ -13,12 +13,12 @@ from WRTools import ExcelHelp, WaitHelp, PathHelp, EmailHelper, MySqlHelp_recomm
 ssl._create_default_https_context = ssl._create_unverified_context
 
 
-sourceFile_dic = {'fileName': PathHelp.get_file_path(None, 'TChanLongTE.xlsx'),
-                  'sourceSheet': 'ppn2',
+sourceFile_dic = {'fileName': PathHelp.get_file_path('TradeWebs', 'AllChips.xlsx'),
+                  'sourceSheet': 'ppn3',
                   'colIndex': 1,
-                  'startIndex': 30,
-                  'endIndex': 60}
-task_name = 'TChanLongTE'
+                  'startIndex': 225,
+                  'endIndex': 140*2}
+task_name = 'AllChips'
 
 accouts_arr = [[AccManage.IC_stock_2['n'], AccManage.IC_stock_2['p']]]
 try:
@@ -30,6 +30,7 @@ total_page = 1
 current_page = 1
 VerificationCodePage = 0
 finishedPPN = 0
+
 
 def get_total_page():
     global total_page

@@ -8,12 +8,12 @@ from Manager import AccManage, URLManager
 log_file = PathHelp.get_file_path('HQSearch', 'HQPeakfireLog.txt')
 ssl._create_default_https_context = ssl._create_unverified_context
 
-sourceFile_dic = {'fileName': PathHelp.get_file_path('TradeWebs', 'Mornsun.xlsx'),
+sourceFile_dic = {'fileName': PathHelp.get_file_path('TradeWebs', 'UIC.xlsx'),
                   'sourceSheet': 'ppn2',
                   'colIndex': 1,
-                  'startIndex': 65,
-                  'endIndex': 130}
-task_name = 'Mornsun'
+                  'startIndex': 99,
+                  'endIndex': 142}
+task_name = 'UIC'
 
 accouts_arr = [AccManage.HQ_hot_2['n'], AccManage.HQ_hot_2['p']]
 VerificationCodePage = 0
@@ -67,7 +67,7 @@ def checkVerificationCodePage(ppn) -> bool:
 def getSearchInfo(cate_name, manu, isWeek):
     result = []
     tables = driver.find_elements(By.CSS_SELECTOR, 'table.list-table')
-    if tables.__len__() > 0:
+    if tables.__len__() > 1:
         info_table = tables[1]
         tr_arr = info_table.find_elements(By.TAG_NAME, 'tr')
         for (index, tr_info) in enumerate(tr_arr):

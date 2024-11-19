@@ -9,8 +9,8 @@ from WRTools import PathHelp, ExcelHelp, MySqlHelp_recommanded
 
 # 将同一个ppn到所有stock 累加，然后按照保存到数组中
 def HQ_stock_sum(cate_source_file):
-    pps = ExcelHelp.read_col_content(file_name= cate_source_file, sheet_name='ppn2', col_index=1)
-    manufactures = ExcelHelp.read_col_content(file_name= cate_source_file, sheet_name='ppn2', col_index=2)
+    pps = ExcelHelp.read_col_content(file_name= cate_source_file, sheet_name='ppn', col_index=1)
+    manufactures = ExcelHelp.read_col_content(file_name= cate_source_file, sheet_name='ppn', col_index=2)
     HQ_stocks = ExcelHelp.read_sheet_content_by_name(cate_source_file, sheet_name='HQ_stock')
     result = []
     for (index, temp_ppn) in enumerate(pps):
@@ -33,6 +33,14 @@ def HQ_stock_sum(cate_source_file):
     ExcelHelp.add_arr_to_sheet(file_name=cate_source_file, sheet_name="HQ_stock_sum", dim_arr=result)
 
 
+def read_record(save_file, task_name):
+    record = MySqlHelp_recommanded.DBRecommandChip().hq_stock_read(f'task_name = "{task_name}"')
+    ExcelHelp.add_arr_to_sheet(save_file, 'HQ_stock', record)
+
+
 if __name__ == "__main__":
-    HQ_stock_sum(PathHelp.get_file_path('TradeWebs', 'Element14.xlsx'))
+    aim_file = PathHelp.get_file_path(None, 'TFiber.xlsx')
+    task_name = 'TFiber'
+    read_record(aim_file, task_name)
+    HQ_stock_sum(aim_file)
     print('over')

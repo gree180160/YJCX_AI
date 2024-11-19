@@ -1,9 +1,9 @@
-2023-07-14 20:50:05LPC4330FET100551 go_to_cate except: Message: unknown error: net::ERR_CONNECTION_TIMED_OUT
+2023-07-14 20:50:05LPC4330FET100551 go_manu except: Message: unknown error: net::ERR_CONNECTION_TIMED_OUT
   (Session info: chrome=114.0.5735.198)
 
-2023-07-14 21:03:55LPC4330FET180551 go_to_cate except: Message: unknown error: net::ERR_CONNECTION_TIMED_OUT
+2023-07-14 21:03:55LPC4330FET180551 go_manu except: Message: unknown error: net::ERR_CONNECTION_TIMED_OUT
   (Session info: chrome=114.0.5735.198)
 
-2023-07-14 23:09:38LPC43S30FET100K go_to_cate except: Message: unknown error: net::ERR_CONNECTION_TIMED_OUT
+2023-07-14 23:09:38LPC43S30FET100K go_manu except: Message: unknown error: net::ERR_CONNECTION_TIMED_OUT
   (Session info: chrome=114.0.5735.198)
 

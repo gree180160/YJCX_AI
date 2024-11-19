@@ -5,6 +5,8 @@ from selenium.webdriver.common.by import By
 from WRTools import ChromeDriverManager
 import ssl
 import datetime
+import re
+from selenium.webdriver.common.action_chains import ActionChains
 from Manager import AccManage, URLManager, TaskManager
 from WRTools import ExcelHelp, WaitHelp, PathHelp, EmailHelper, MySqlHelp_recommanded, LogHelper
 
@@ -13,12 +15,12 @@ ssl._create_default_https_context = ssl._create_unverified_context
 
 log_file = PathHelp.get_file_path('EFIND', 'e_find_log.txt')
 
-sourceFile_dic = {'fileName': PathHelp.get_file_path('TradeWebs', 'Mornsun.xlsx'),
+sourceFile_dic = {'fileName': PathHelp.get_file_path('TradeWebs', 'TESignalRelay.xlsx'),
                   'sourceSheet': 'ppn2',
                   'colIndex': 1,
                   'startIndex': 0,
-                  'endIndex': 65}
-task_name = 'Mornsun'
+                  'endIndex': 6}
+task_name = 'TESignalRelay'
 
 try:
     driver = ChromeDriverManager.getWebDriver(0)
@@ -33,6 +35,8 @@ def analy_html(cate_index, cate_name, st_manu):
     input_area.send_keys(cate_name)
     btn = driver.find_element(By.CSS_SELECTOR, 'input.sbtn')
     btn.click()
+    # url = URLManager.efind_stock_url(cate_name, True)
+    # driver.get(url)
     WaitHelp.waitfor(True, False)
     total_stock = 0
     all_supplier = []
@@ -85,14 +89,26 @@ def get_supplier(ppn, manu, stock):
         prf = driver.find_element(By.ID, 'prf')
         price_sup = prf.find_element(By.CSS_SELECTOR, 'span.prss').text
         price_stat = driver.find_element(By.ID, 'pricestat_data')
-        mid_price = price_stat.find_elements(By.TAG_NAME, 'i')[0].text
-        min_price = price_stat.find_elements(By.TAG_NAME, 'i')[1].text
-        max_price = price_stat.find_elements(By.TAG_NAME, 'i')[2].text
+        mid_price = format_price(price_stat.find_elements(By.TAG_NAME, 'i')[0].text)
+        min_price = format_price(price_stat.find_elements(By.TAG_NAME, 'i')[1].text)
+        max_price = format_price(price_stat.find_elements(By.TAG_NAME, 'i')[2].text)
         info = [ppn, manu, total_sup, price_sup, stock_sup, stock, mid_price, min_price, max_price, task_name]
         # (ppn, manu, all_supplier, price_supplier, stock_supplier,stock, middle_price, min_price, max_price, task_name)
         MySqlHelp_recommanded.DBRecommandChip().efind_supplier_write([info])
     except:
         print(f'{ppn} get_supplier error')
+
+
+def format_price(amount_str):
+    # 使用正则表达式提取数值部分
+    match = re.search(r"(\d+\.\d+|\d+)", amount_str)
+    if match:
+        amount = match.group(0)  # 提取数值部分
+        amount_float = float(amount)  # 转换为浮点数
+        formatted_amount = f"{amount_float:.2f}"  # 保留两位小数
+        return f"{formatted_amount} р."  # 返回格式化后的字符串
+    else:
+        return amount_str
 
 
 def convert_russian_date_to_chinese(russian_date):

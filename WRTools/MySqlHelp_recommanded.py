@@ -128,9 +128,19 @@ class DBRecommandChip:
         sql_str = "REPLACE INTO t_hq_stock (ppn, std_manu, supplier, sup_manu, batch, stock, packing, param, place, instruction, publish_date, task_name) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)"
         self.sql_write(sql_str, data)
 
+    def hq_stock_read(self, filter_contend):
+        query = f"SELECT * FROM t_hq_stock where {filter_contend}"
+        result = self.sql_read(query)
+        return result
+
     def hq_hot_write(self, data: list):
         sql_str = "REPLACE INTO t_hq_peakfire (ppn, manu, weak_hot, month_hot, task_name) VALUES (%s, %s, %s, %s, %s)"
         self.sql_write(sql_str, data)
+
+    def hq_hot_read(self, filter_contend):
+        query = f"SELECT * FROM t_hq_peakfire where {filter_contend}"
+        result = self.sql_read(query)
+        return result
 
     # efind
     def efind_stock_write(self, data: list):
@@ -255,5 +265,5 @@ if __name__ == "__main__":
   #           row_info = [row[0], row[1], row[2], row[3], row[4], row[5], row[6], row[8], 'newbrand_202401']
   #           result.append(row_info)
   #   DBRecommandChip().wheat_buyer_write(result)
-    arr = [['ADuM1300ARWZ', 'ADI', 'ADUM1300ARWZ-RL', 'ADI', '深圳市云宝国际电子有限公司', 0, 1, 1, 0, 0, '23+', 'SOP16', '1000', 'TRU2407_36H'], ['ADuM1300ARWZ', 'ADI', 'ADUM1300ARWZ', 'ADI', '深圳市博金源科技有限公司', 0, 1, 1, 0, 0, '22+', 'SOP-16', '140', 'TRU2407_36H'], ['ADuM1300ARWZ', 'ADI', 'ADUM1300ARWZ-RL', 'ADI', '深圳裕伟达科技有限公司', 0, 1, 1, 0, 0, '22+', 'SOT23-5', '1000', 'TRU2407_36H'], ['ADuM1300ARWZ', 'ADI', 'ADUM1300ARWZ-RL', 'ADI', '深圳市佰一科技有限公司', 0, 0, 1, 0, 0, '22+', 'SOP-16', '8', 'TRU2407_36H'], ['ADuM1300ARWZ', 'ADI', 'ADUM1300ARWZ-RL', 'ADI', '深圳市纳芯创展科技有限公司', 0, 1, 1, 0, 0, '22+', 'SOP-16', '5000', 'TRU2407_36H'], ['ADuM1300ARWZ', 'ADI', 'ADUM1300ARWZ-RL', 'ADI', '深圳市善芯微电子有限公司', 0, 1, 1, 0, 0, '23+', 'SOIC-16', '3000', 'TRU2407_36H'], ['ADuM1300ARWZ', 'ADI', 'ADUM1300ARWZ-RL', 'ADI', '芯源科技亚洲有限公司', 0, 1, 1, 0, 0, '22+', 'SOIC-16', '3723', 'TRU2407_36H'], ['ADuM1300ARWZ', 'ADI', 'ADUM1300ARWZ-RL', 'ADI', '深圳市科讯达微科技有限公司', 1, 0, 1, 0, 0, '22+', 'SOP', '5000', 'TRU2407_36H'], ['ADuM1300ARWZ', 'ADI', 'ADUM1300ARWZ-RL', 'ADI', '深圳市合福科技有限公司', 0, 1, 1, 0, 0, '23+', 'SOP16', '6000', 'TRU2407_36H'], ['ADuM1300ARWZ', 'ADI', 'ADUM1300ARWZ-RL', 'ADI', '深圳市芯泰城科技有限公司', 1, 0, 0, 0, 0, '22+', 'SOP16', '323', 'TRU2407_36H'], ['ADuM1300ARWZ', 'ADI', 'ADUM1300ARWZ-RL', 'ADI', '深圳市誉光国际进出口有限公司', 1, 0, 0, 0, 0, '22+', 'SOP16', '5000', 'TRU2407_36H'], ['ADuM1300ARWZ', 'ADI', 'ADUM1300ARWZ-RL', 'ADI / 亚德诺 好价', '深圳市云宝国际电子有限公司', 0, 1, 0, 0, 0, '23+', 'SOP-16', '1000', 'TRU2407_36H'], ['ADuM1300ARWZ', 'ADI', 'ADUM1300ARWZ-RL', 'ADI', '深圳裕伟达科技有限公司', 0, 1, 0, 0, 0, '22+', 'SOP16', '2243', 'TRU2407_36H'], ['ADuM1300ARWZ', 'ADI', 'ADUM1300ARWZ', 'ADI', '深圳市创凯微电子科技有限公司', 0, 1, 0, 0, 0, '22+', 'SOP-16', '1000', 'TRU2407_36H'], ['ADuM1300ARWZ', 'ADI', 'ADUM1300ARWZ-RL', 'ADI', '深圳市东豪微电子有限公司', 0, 1, 0, 0, 0, '22+', 'SOP16', '4000', 'TRU2407_36H'], ['ADuM1300ARWZ', 'ADI', 'ADUM1300ARWZ-RL', 'ADI', '深圳市桦阳佳业科技有限公司', 0, 1, 0, 0, 0, '22+', 'SOP-16', '1034', 'TRU2407_36H'], ['ADuM1300ARWZ', 'ADI', 'ADUM1300ARWZ-RL', 'ADI', '深圳市轩盛达电子有限公司', 0, 1, 0, 0, 0, '18+,22+,+', 'SOP', '1588', 'TRU2407_36H'], ['ADuM1300ARWZ', 'ADI', 'ADUM1300ARWZ-RL', 'ADI', '深圳市铭微讯电子有限公司', 0, 1, 0, 0, 0, '22+', 'SOP-16', '2283', 'TRU2407_36H'], ['ADuM1300ARWZ', 'ADI', 'ADUM1300ARWZ-RL', 'ADI', '北京英赛尔科技有限公司', 0, 1, 0, 0, 0, '23+', 'SOIC16', '3000', 'TRU2407_36H'], ['ADuM1300ARWZ', 'ADI', 'ADUM1300ARWZ-RL', 'ADI', '深圳市华欣通电子科技有限公司', 0, 1, 0, 0, 0, '21+', 'SOP16', '570', 'TRU2407_36H'], ['ADuM1300ARWZ', 'ADI', 'ADUM1300ARWZ-RL', 'ADI', '北京洋海科信电子技术有限公司', 0, 1, 0, 0, 0, '22+', 'SOIC-16', '5439', 'TRU2407_36H'], ['ADuM1300ARWZ', 'ADI', 'ADUM1300ARWZ-RL', 'ADI', '深圳市纳芯创展科技有限公司', 0, 1, 0, 0, 0, '22+', 'SOP-16', '5000', 'TRU2407_36H'], ['ADuM1300ARWZ', 'ADI', 'ADUM1300ARWZ-RL', 'ADI', '深圳市善芯微电子有限公司', 0, 1, 0, 0, 0, '2302+', '', '5000', 'TRU2407_36H'], ['ADuM1300ARWZ', 'ADI', 'ADUM1300ARWZ-RL', 'ADI', '芯源科技亚洲有限公司', 0, 1, 0, 0, 0, '22+', 'SOIC-16', '3723', 'TRU2407_36H'], ['ADuM1300ARWZ', 'ADI', 'ADUM1300ARWZ-RL', 'ADI', '深圳市润橙科技有限公司', 0, 1, 0, 0, 0, '22+', '16-SOIC', '999', 'TRU2407_36H'], ['ADuM1300ARWZ', 'ADI', 'ADUM1300ARWZ-RL', 'ADI', '深圳市克林利科技有限公司', 0, 1, 0, 0, 0, '22+', 'SOP16', '2000', 'TRU2407_36H'], ['ADuM1300ARWZ', 'ADI', 'ADUM1300ARWZ-RL', 'ADI', '深圳竹开电子科技有限公司', 0, 1, 0, 0, 0, '22+', 'SOP16', '1000', 'TRU2407_36H'], ['ADuM1300ARWZ', 'ADI', 'ADUM1300ARWZ-RL', 'ADI', '深圳市云宝国际电子有限公司', 0, 1, 0, 1, 0, '', 'SOP16', '1143', 'TRU2407_36H'], ['ADuM1300ARWZ', 'ADI', 'ADUM1300ARWZ-RL', 'ADI', '深圳市润橙科技有限公司', 0, 1, 0, 1, 0, '22+', '16-SOIC', '999', 'TRU2407_36H']]
-    manager.ic_stock(arr)
+    arr = [['PVA70-27B24', 'TE', '3', '2', '', 10, '9942.23 р.', '55.46 р.', '19829.00 р.', 'TESignalRelay']]
+    manager.efind_supplier_write(arr)

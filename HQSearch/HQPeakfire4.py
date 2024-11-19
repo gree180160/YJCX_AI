@@ -10,12 +10,12 @@ log_file = PathHelp.get_file_path('HQSearch', 'HQPeakfireLog.txt')
 
 ssl._create_default_https_context = ssl._create_unverified_context
 
-sourceFile_dic = {'fileName': PathHelp.get_file_path('TradeWebs', 'Mornsun.xlsx'),
+sourceFile_dic = {'fileName': PathHelp.get_file_path('TradeWebs', 'UIC.xlsx'),
                   'sourceSheet': 'ppn_temp',
                   'colIndex': 1,
-                  'startIndex': 150,
-                  'endIndex': 200}
-task_name = 'Mornsun'
+                  'startIndex': 36,
+                  'endIndex': 50}
+task_name = 'UIC'
 
 accouts_arr = [AccManage.HQ_hot_4['n'], AccManage.HQ_hot_4['p']]
 
@@ -65,7 +65,7 @@ def getSearchInfo(cate_name, manu, isWeek):
             for temp_d in dots:
                 result.append(temp_d.find_element(By.TAG_NAME, 'tspan').text)
         except Exception as e:
-            LogHelper.write_log(log_file, '{cate_name} week info error {e}')
+            LogHelper.write_log(log_file, f'{cate_name} week info error {e}')
     return result
 
 

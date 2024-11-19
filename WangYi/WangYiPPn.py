@@ -32,7 +32,7 @@ current_page = 1
 
 
 # 跳转到下一个指定的型号
-def go_to_cate(pn_index, pn, c_page):
+def go_manu(pn_index, pn, c_page):
     try:
         # https://www.good-choice.com/shop/itemList?title=COSEL&title=COSEL&page=3
         url = f'https://www.good-choice.com/shop/itemList?title={pn}&title={pn}&page={c_page}'
@@ -41,7 +41,7 @@ def go_to_cate(pn_index, pn, c_page):
         WaitHelp.waitfor(True, False)
         set_page()
     except Exception as e:
-        LogHelper.write_log(log_file_name=log_file, content=f'{pn} go_to_cate except: {e}')
+        LogHelper.write_log(log_file_name=log_file, content=f'{pn} go_manu except: {e}')
         if str(e.msg).__contains__('Timed out'):
             driver.reconnect()
             sys.exit()
@@ -76,7 +76,7 @@ def go_to_next_page(pn_index, pn):
         set_page()
         analy_html(pn_index, pn)
     except Exception as e:
-        LogHelper.write_log(log_file_name=log_file, content=f'{pn} go_to_cate except: {e}')
+        LogHelper.write_log(log_file_name=log_file, content=f'{pn} go_manu except: {e}')
         if str(e.msg).__contains__('Timed out'):
             driver.reconnect()
             sys.exit()

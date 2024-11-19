@@ -19,12 +19,12 @@ driver.set_page_load_timeout(120)
 
 accouts_arr = [[AccManage.Bom2['c'], AccManage.Bom2['n'], AccManage.Bom2['p']]]
 
-sourceFile_dic = {'fileName': PathHelp.get_file_path(None, 'TChanLongTE.xlsx'),
-                  'sourceSheet': 'ppn4',
+sourceFile_dic = {'fileName': PathHelp.get_file_path(None, 'TFiber.xlsx'),
+                  'sourceSheet': 'ppn',
                   'colIndex': 1,
-                  'startIndex': 159,
-                  'endIndex': 213}
-task_name = 'TChanLongTE'
+                  'startIndex': 35,
+                  'endIndex': 71}
+task_name = 'TFiber'
 
 default_url = 'https://www.bom.ai/ic/74LVX4245MTCX.html'
 log_file = PathHelp.get_file_path('Bom_price', 'bom_price_log.txt')

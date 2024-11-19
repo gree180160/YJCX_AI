@@ -64,6 +64,15 @@ def addIC_info():
     ExcelHelp.add_arr_to_sheet('/Users/liuhe/Desktop/progress/TRuStock/2023.09/hxl.xlsx', 'Sheet5', result_arr)
 
 
+def read_record(save_file, task_name):
+    record = MySqlHelp_recommanded.DBRecommandChip().ic_stock_read(f'task_name = "{task_name}"')
+    ExcelHelp.add_arr_to_sheet(save_file, 'IC_stock', record)
+
+
 if __name__ == "__main__":
-    IC_stock_sum(PathHelp.get_file_path(None, 'TChanLongTE.xlsx'))
+    aim_file = PathHelp.get_file_path(None, 'TFiber.xlsx')
+    task_name = 'TFiber'
+    read_record(aim_file, task_name)
+    IC_stock_sum(aim_file)
     print('over')
+

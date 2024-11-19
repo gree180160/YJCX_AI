@@ -30,7 +30,7 @@ log_file = PathHelp.get_file_path('LiChuang', 'lichuangLog.txt')
 
 
 # 跳转到下一个指定的型号
-def go_to_cate(pn_index, pn, c_page):
+def go_manu(pn_index, pn, c_page):
     try:
         input_area = driver.find_element(By.ID, 'search-input')
         input_area.clear()
@@ -39,7 +39,7 @@ def go_to_cate(pn_index, pn, c_page):
         search_button.click()
         WaitHelp.waitfor_account_import(True, False)
     except Exception as e:
-        LogHelper.write_log(log_file_name=log_file, content=f'{pn} go_to_cate except: {e}')
+        LogHelper.write_log(log_file_name=log_file, content=f'{pn} go_manu except: {e}')
         if str(e.msg).__contains__('Timed out'):
             driver.reconnect()
             sys.exit()

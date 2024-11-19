@@ -406,6 +406,81 @@ def IC_HQ_Result(rate):
     ExcelHelp.add_arr_to_sheet(source_file, "Result", result)
 
 
+def IC_HQ_Result2(rate):
+    source_file = PathHelp.get_file_path(None, 'TFiber.xlsx')
+    # HQHotResult.HQ_hot_result(source_file)
+    # time.sleep(1.0)
+    # IC_stock_result.IC_stock_sum(source_file)
+    # time.sleep(1.0)
+    # BomResult.bom_price_result(source_file)
+    # time.sleep(1.0)
+    first_row = ["型号", "品牌","IC_supplier","IC_rank", "IC_stock", "efind_allSup","efind_priceSup", "efind_stockSup", "HQ_hot_week", 'HQ_hot_month', 'HQ_hot_avg', 'HQ_hot_result', 'oc_price', 'oc_stock','oc_supplier', 'oc_des','digikey_status', 'bom_price', 'IC_hot', 'IC_price',  'result']
+    result = []
+    result.append(first_row)
+    IC_info = ExcelHelp.read_sheet_content_by_name(source_file, 'IC_stock_sum')
+    HQ_hot_info = ExcelHelp.read_sheet_content_by_name(source_file, 'HQ_hot_result')
+    try:
+        oc_info = ExcelHelp.read_sheet_content_by_name(source_file, 'octopart')
+    except:
+        oc_info = []
+    try:
+        dg_info = ExcelHelp.read_sheet_content_by_name(source_file, 'digikey')
+    except:
+        dg_info = []
+    try:
+        efind_info = ExcelHelp.read_sheet_content_by_name(source_file, 'efind_supplier')
+    except:
+        efind_info = []
+    bom_info = ExcelHelp.read_sheet_content_by_name(source_file, 'bom_price_sum')
+    ppns_info = ExcelHelp.read_sheet_content_by_name(source_file, 'ppn4')   # 先过滤HQ_hot_合格的ppn
+    for (index, temp_ppnInfo) in enumerate(ppns_info):
+        ppn_result = [temp_ppnInfo[0], temp_ppnInfo[1], ' ', ' ', ' ',' ', ' ', ' ',
+                      ' ', ' ', ' ', ' ', ' ',
+                      ' ', ' ', ' ', ' ', ' ',
+                      ' ', ' ', '']
+        for temp_IC in IC_info:
+            if temp_IC[0] == temp_ppnInfo[0]:
+                ppn_result[2] = temp_IC[2]
+                ppn_result[3] = temp_IC[3]
+                ppn_result[4] = temp_IC[4]
+                break;
+        for temp_efind in efind_info:
+            if temp_efind[0] == temp_ppnInfo[0]:
+                ppn_result[5] = temp_efind[2]
+                ppn_result[6] = temp_efind[3]
+                ppn_result[7] = temp_efind[4]
+                break;
+        for temp_HQ in HQ_hot_info:
+            if temp_HQ[0] == temp_ppnInfo[0]:
+                ppn_result[8] = temp_HQ[2]
+                ppn_result[9] = temp_HQ[3]
+                ppn_result[10] = temp_HQ[4]
+                ppn_result[11] = temp_HQ[5]
+                break;
+        for temp_OC in oc_info:
+            if temp_OC[0] == temp_ppnInfo[0]:
+                try:
+                    tax = 1.13
+                    oc_price = round(float(temp_OC[4]) * rate * tax, 2)
+                except:
+                    oc_price = ""
+                ppn_result[12] = oc_price
+                ppn_result[13] = temp_OC[5]
+                ppn_result[14] = temp_OC[3]
+                ppn_result[15] = temp_OC[2]
+                break;
+        for temp_dg in dg_info:
+            if temp_dg[4] == temp_ppnInfo[0]:
+                ppn_result[16] = temp_dg[5]
+                break;
+        for temp_bom in bom_info:
+            if temp_bom[0] == temp_ppnInfo[0]:
+                ppn_result[17] = temp_bom[2]
+                break;
+        result.append(ppn_result)
+    ExcelHelp.add_arr_to_sheet(source_file, "Result", result)
+
+
 def updateICHot(rate):
     source_file = PathHelp.get_file_path(None, 'TICHot.xlsx')
     result = []
@@ -496,6 +571,7 @@ def updateICHot(rate):
         result.append(ppn_temp)
     ExcelHelp.add_arr_to_sheet(source_file, "Result", result)
 
+
 # 从OC，LC，YH 中计算最低成本价
 def calculateCost():
     source_file = PathHelp.get_file_path(None, 'TChanLongTE.xlsx')
@@ -543,15 +619,16 @@ def calculateCost():
 
 
 def temp():
-    file = PathHelp.get_file_path('TradeWebs', 'AllChips.xlsx')
-    source = ExcelHelp.read_sheet_content_by_name(file, 'allchips')
-    result_file = '/Users/liuhe/Desktop/库存上传.xlsx'
-    ppns = ExcelHelp.read_col_content(file, 'ppn3', 1)
+    result_file = PathHelp.get_file_path(None, 'TFiber.xlsx')
+    # file_fiber = '/Users/liuhe/Downloads/fiber.xlsx'
+    source = ExcelHelp.read_sheet_content_by_name(result_file, 'IC_stock')
+    result_file = result_file
+    ppns = ExcelHelp.read_col_content(result_file, 'ppn4', 1)
     result = []
     for temp_source in source:
         if ppns.__contains__(temp_source[0]):
             result.append(temp_source)
-    ExcelHelp.add_arr_to_sheet(file, 'result', result)
+    ExcelHelp.add_arr_to_sheet(result_file, 'IC_stock2', result)
 
 
 if __name__ == "__main__":
@@ -563,9 +640,5 @@ if __name__ == "__main__":
     # IC_HQ_Result(7.01)
     # calculateCost()
     temp()
-
-
-
-
-
+    # IC_HQ_Result2(7.24)
 

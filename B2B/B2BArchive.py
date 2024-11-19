@@ -93,7 +93,7 @@ def go_to_page(keyword, page):
         WaitHelp.waitfor_account_import(True, False)
         analyth_page(url, keyword)
     except Exception as e:
-        LogHelper.write_log(log_file_name=log_file, content=f'go_to_cate except: {e}')
+        LogHelper.write_log(log_file_name=log_file, content=f'go_manu except: {e}')
         if str(e.msg).__contains__('Timed out'):
             driver.reconnect()
 

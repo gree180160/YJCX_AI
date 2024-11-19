@@ -54,14 +54,17 @@ def octopart_get_page_url(key_name, page, manu: Octopart_manu) -> str:
     cate_str = cate_str.replace('#', '%23')
     cate_str = cate_str.replace('+', '%2B')
     cate_str = cate_str.replace(',', '%2C')
-
+    if key_name.__len__() > 0:
+        key_param = f'q={cate_str}'
+    else:
+        key_param = ''
     if manu.value > 0:
         manu_str = manu.get_manu()
         manu_param = '&manufacturer_id=' + manu_str.replace(';', '&manufacturer_id=')
     else:
         manu_param = ''
     page_param = '' if page == 1 else '&start=' + str(page*10 - 10)
-    url = f'https://octopart.com/search?q={cate_str}&currency=USD&specs=0{manu_param}{page_param}'
+    url = f'https://octopart.com/search?{key_param}&currency=USD&specs=0{manu_param}{page_param}'
     return url
 
 
@@ -142,6 +145,7 @@ def IC_hot_url(ppn: str):
 # https://fh.hqew.com/detail/500020657.html
 def HQ_hot_url(ppn: str):
     cate_str = str(ppn)
+    cate_str = cate_str.replace('(UMW)', '')
     if has_special_chars(cate_str):
         cate_str = '==' + str(base64.b64encode(cate_str.encode('utf-8')), 'utf-8')
     search_url = f'https://fh.hqew.com/detail/{cate_str}.html'

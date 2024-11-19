@@ -23,3 +23,64 @@
 2024-10-28 19:49:44UWTH1D05P-6WR3 week info error Message: no such element: Unable to locate element: {"method":"css selector","selector":"[id="J-detailChar-Month"]"}
   (Session info: chrome=114.0.5735.133)
 
+2024-10-31 14:34:12{cate_name} week info error {e}
+2024-10-31 15:20:02{cate_name} week info error {e}
+2024-10-31 15:38:32{cate_name} week info error {e}
+2024-10-31 15:57:12{cate_name} week info error {e}
+2024-10-31 16:26:11{cate_name} week info error {e}
+2024-10-31 16:27:11SP2555NUTG week info error Message: no such element: Unable to locate element: {"method":"css selector","selector":"[id="J-detailChar-Month"]"}
+  (Session info: chrome=114.0.5735.133)
+
+2024-10-31 17:00:12{cate_name} week info error {e}
+2024-10-31 17:29:35{cate_name} week info error {e}
+2024-10-31 19:28:101206L035/16YR month info error Message: no such element: Unable to locate element: {"method":"css selector","selector":"[id="J-detailChar-Month"]"}
+  (Session info: chrome=114.0.5735.133)
+
+2024-11-01 11:41:51HMB1201K01P week info error Message: no such element: Unable to locate element: {"method":"css selector","selector":"[id="J-detailChar-Month"]"}
+  (Session info: chrome=114.0.5735.133)
+
+2024-11-01 11:55:42J1MAP-26XP week info error Message: no such element: Unable to locate element: {"method":"css selector","selector":"[id="J-detailChar-Month"]"}
+  (Session info: chrome=114.0.5735.133)
+
+2024-11-01 17:09:451617121-5 week info error Message: no such element: Unable to locate element: {"method":"css selector","selector":"[id="J-detailChar-Month"]"}
+  (Session info: chrome=114.0.5735.133)
+
+2024-11-13 15:18:292309413-1 month info error Message: no such element: Unable to locate element: {"method":"css selector","selector":"[id="J-detailChar-Month"]"}
+  (Session info: chrome=114.0.5735.133)
+
+2024-11-13 16:15:402834167-3 week info error Message: no such element: Unable to locate element: {"method":"css selector","selector":"[id="J-detailChar-Month"]"}
+  (Session info: chrome=114.0.5735.133)
+
+2024-11-13 16:15:50SMAJ28CA month info error Message: no such element: Unable to locate element: {"method":"css selector","selector":"[id="J-detailChar-Month"]"}
+  (Session info: chrome=114.0.5735.133)
+
+2024-11-13 16:16:091.5KE350CA week info error Message: no such element: Unable to locate element: {"method":"css selector","selector":"[id="J-detailChar-Month"]"}
+  (Session info: chrome=114.0.5735.133)
+
+2024-11-13 16:16:461318124-1 week info error Message: no such element: Unable to locate element: {"method":"css selector","selector":"[id="J-detailChar-Month"]"}
+  (Session info: chrome=114.0.5735.133)
+
+2024-11-13 16:54:342344064-4 week info error Message: no such element: Unable to locate element: {"method":"css selector","selector":"[id="J-detailChar-Month"]"}
+  (Session info: chrome=114.0.5735.133)
+
+2024-11-13 18:10:35SR05-02CTG week info error Message: no such element: Unable to locate element: {"method":"css selector","selector":"[id="J-detailChar-Month"]"}
+  (Session info: chrome=114.0.5735.133)
+
+2024-11-13 19:10:19X9511WSIZT1 week info error Message: no such element: Unable to locate element: {"method":"css selector","selector":"[id="J-detailChar-Month"]"}
+  (Session info: chrome=114.0.5735.133)
+
+2024-11-15 16:48:22FDV301N month info error Message: no such element: Unable to locate element: {"method":"css selector","selector":"[id="J-detailChar-Month"]"}
+  (Session info: chrome=114.0.5735.133)
+
+2024-11-15 17:00:40STD35NF06L month info error Message: no such element: Unable to locate element: {"method":"css selector","selector":"[id="J-detailChar-Month"]"}
+  (Session info: chrome=114.0.5735.133)
+
+2024-11-15 19:11:14HT7039-1 month info error Message: no such element: Unable to locate element: {"method":"css selector","selector":"[id="J-detailChar-Month"]"}
+  (Session info: chrome=114.0.5735.133)
+
+2024-11-15 20:54:50MOC3020SM week info error Message: no such element: Unable to locate element: {"method":"css selector","selector":"[id="J-detailChar-Month"]"}
+  (Session info: chrome=114.0.5735.133)
+
+2024-11-15 20:55:43MC33063ADR(UMW) month info error Message: no such element: Unable to locate element: {"method":"css selector","selector":"[id="J-detailChar-Month"]"}
+  (Session info: chrome=114.0.5735.133)
+

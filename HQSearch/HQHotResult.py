@@ -7,6 +7,7 @@
 # 月：5. max(new1, new2, new3) < 5 -> False
 # 周: 1. count((new1, new2, new3, new4) > 10) > 2, count((new1, new2, new3, new4) <5 ) < 2,
 # 周: 2. min(new1, new2, new3, new4) >= 10 -> True
+import time
 
 from openpyxl import workbook, load_workbook, Workbook
 import base64
@@ -89,15 +90,14 @@ def valid_month(month_data: list):
 
 # 加权平均数
 def HQ_hot_result2(cate_source_file):
-    pps = ExcelHelp.read_col_content(file_name=cate_source_file, sheet_name='ppn', col_index=1)
-    manufactures = ExcelHelp.read_col_content(file_name=cate_source_file, sheet_name='ppn', col_index=2)
+    pps = ExcelHelp.read_col_content(file_name=cate_source_file, sheet_name='UMW', col_index=1)
+    manufactures = ExcelHelp.read_col_content(file_name=cate_source_file, sheet_name='UMW', col_index=2)
     hq_hot_info = ExcelHelp.read_sheet_content_by_name(cate_source_file, sheet_name='HQ_hot')
     result = []
     for (index, temp_ppn) in enumerate(pps):
         ppn_str = str(temp_ppn)
         avg = hot_result = 0
         hot_week = hot_month = ''
-
         for (row_index, row_content) in enumerate(hq_hot_info):
             if row_index > 0:
                 ppn_ic = str(row_content[0])
@@ -144,7 +144,15 @@ def getMonthAvg(month_list):
     return result
 
 
+def read_record(save_file, task_name):
+    record = MySqlHelp_recommanded.DBRecommandChip().hq_hot_read(f'task_name = "{task_name}"')
+    ExcelHelp.add_arr_to_sheet(save_file, 'HQ_hot', record)
+
+
 if __name__ == "__main__":
-    HQ_hot_result2(PathHelp.get_file_path("TradeWebs", 'Mornsun.xlsx'))
-    # HQ_hot_result2(PathHelp.get_file_path(None, 'TSanyo.xlsx'))
+    aim_file = PathHelp.get_file_path('TradeWebs', 'UIC.xlsx')
+    task_name = 'UIC'
+    read_record(aim_file, task_name)
+    time.sleep(3.0)
+    HQ_hot_result2(aim_file)
     print('over')

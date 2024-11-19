@@ -55,8 +55,8 @@ def octopart_fold_csv_xlsx():
 
 # 只有1个文件
 def octopart_file_arr():
-    source_file = "/Users/liuhe/Downloads/20240925_tchanlongte_xlsx.csv"
-    save_file = PathHelp.get_file_path(None, 'TChanLongTE.xlsx')
+    source_file = "/Users/liuhe/Downloads/20241112_tfiber_xlsx.csv"
+    save_file = PathHelp.get_file_path(None, 'TFiber.xlsx')
     result = []
     firt_row = ['制造商零件编号', '制造商', '描述', '供应商', '价格', '库存']
     result.append(firt_row)

@@ -1,6 +1,6 @@
 # 对于贸易商数量超过5家的，跑一下正能量里面的价格，取3个月内的最高值，没有价格则忽略
 #一个月内，实名supplier，至少有三条报价
-from WRTools import PathHelp, ExcelHelp, WaitHelp
+from WRTools import PathHelp, ExcelHelp, WaitHelp, MySqlHelp_recommanded
 import re
 import json
 from urllib.request import urlopen
@@ -112,9 +112,18 @@ def is_valid_supplier(date_string, supplier_name) -> bool:
         return False
 
 
+def read_record(save_file, task_name):
+    record = MySqlHelp_recommanded.DBRecommandChip().bom_price_read(f'task_name = "{task_name}"')
+    ExcelHelp.add_arr_to_sheet(save_file, 'bom_price', record)
+
+
 if __name__ == "__main__":
-    bom_price_result(PathHelp.get_file_path(None, 'TChanLongTE.xlsx'))
+    aim_file = PathHelp.get_file_path(None, 'TFiber.xlsx')
+    task_name = 'TFiber'
+    read_record(aim_file, task_name)
+    bom_price_result(aim_file)
     print('over')
+
 
 
 

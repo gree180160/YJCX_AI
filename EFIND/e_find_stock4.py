@@ -135,7 +135,7 @@ def convert_russian_date_to_chinese(russian_date):
 def select_area():
     input_area = driver.find_element(By.ID, 'sf')
     input_area.clear()
-    input_area.send_keys('')
+    input_area.send_keys('LM7321MFX/NOPB')
     btn = driver.find_element(By.CSS_SELECTOR, 'input.sbtn')
     btn.click()
     WaitHelp.waitfor(True, False)
@@ -161,4 +161,5 @@ def main():
 if __name__ == "__main__":
     driver.get('https://efind.ru/')
     time.sleep(2.0)
+    select_area()
     main()
