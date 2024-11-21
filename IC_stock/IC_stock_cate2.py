@@ -13,12 +13,12 @@ from WRTools import ExcelHelp, WaitHelp, PathHelp, EmailHelper, MySqlHelp_recomm
 ssl._create_default_https_context = ssl._create_unverified_context
 
 
-sourceFile_dic = {'fileName': PathHelp.get_file_path('TradeWebs', 'AllChips.xlsx'),
+sourceFile_dic = {'fileName': PathHelp.get_file_path(None, 'TMitsubishiIGBT2411.xlsx'),
                   'sourceSheet': 'ppn3',
                   'colIndex': 1,
-                  'startIndex': 225,
-                  'endIndex': 140*2}
-task_name = 'AllChips'
+                  'startIndex': 11,
+                  'endIndex': 14}
+task_name = 'TMitsubishiIGBT2411'
 
 accouts_arr = [[AccManage.IC_stock_2['n'], AccManage.IC_stock_2['p']]]
 try:

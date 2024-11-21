@@ -71,15 +71,15 @@ def setTotal_page():
         total_page = int(page_str.split(' ')[0])
     except:
         print('get total_page error')
-        total_page = 0
-        driver.get(default_url)
+        total_page = 6 # //TODO wr
+        # driver.get(default_url)
         time.sleep(10.0)
 
 
 def go_nextPage():
     global current_page
     actions = ActionChains(driver)
-    next_button = driver.find_element(By.CSS_SELECTOR, 'a.icon-arrow-right-fill pagination__button')
+    next_button = driver.find_element(By.CSS_SELECTOR, 'a.icon-arrow-right-fill')
     driver.execute_script("arguments[0].scrollIntoView(true);", next_button)
     actions.move_to_element(next_button).click().perform()
     WaitHelp.waitfor(True, False)

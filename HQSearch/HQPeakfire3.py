@@ -9,13 +9,12 @@ from Manager import AccManage, TaskManager, URLManager
 log_file = PathHelp.get_file_path('HQSearch', 'HQPeakfireLog.txt')
 ssl._create_default_https_context = ssl._create_unverified_context
 
-sourceFile_dic = {'fileName': PathHelp.get_file_path('TradeWebs', 'UIC.xlsx'),
-                  'sourceSheet': 'ppn_temp',
+sourceFile_dic = {'fileName': PathHelp.get_file_path(None, 'TArrowStock2411.xlsx'),
+                  'sourceSheet': 'ppn2',
                   'colIndex': 1,
-                  'startIndex': 24,
-                  'endIndex': 36}
-task_name = 'UIC'
-
+                  'startIndex': 180*2,
+                  'endIndex': 180*3}
+task_name = 'TArrowStock2411.xlsx'
 
 accouts_arr = [AccManage.HQ_hot_3['n'], AccManage.HQ_hot_3['p']]
 login_url = "https://passport.hqew.com/login"

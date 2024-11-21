@@ -90,8 +90,8 @@ def valid_month(month_data: list):
 
 # 加权平均数
 def HQ_hot_result2(cate_source_file):
-    pps = ExcelHelp.read_col_content(file_name=cate_source_file, sheet_name='UMW', col_index=1)
-    manufactures = ExcelHelp.read_col_content(file_name=cate_source_file, sheet_name='UMW', col_index=2)
+    pps = ExcelHelp.read_col_content(file_name=cate_source_file, sheet_name='ppn', col_index=1)
+    manufactures = ExcelHelp.read_col_content(file_name=cate_source_file, sheet_name='ppn', col_index=2)
     hq_hot_info = ExcelHelp.read_sheet_content_by_name(cate_source_file, sheet_name='HQ_hot')
     result = []
     for (index, temp_ppn) in enumerate(pps):
@@ -150,8 +150,8 @@ def read_record(save_file, task_name):
 
 
 if __name__ == "__main__":
-    aim_file = PathHelp.get_file_path('TradeWebs', 'UIC.xlsx')
-    task_name = 'UIC'
+    aim_file = PathHelp.get_file_path(None, 'THolt2411.xlsx')
+    task_name = 'THolt2411'
     read_record(aim_file, task_name)
     time.sleep(3.0)
     HQ_hot_result2(aim_file)
