@@ -87,6 +87,10 @@ def get_saveInfo(ppn, manu, tr):
     except:
         supplier_name = ''
     try:
+        sup_ppn = tr.find_element(By.CSS_SELECTOR, 'td.td-model').find_element(By.TAG_NAME, 'a').text # todo, 数据库
+    except:
+        sup_ppn = ''
+    try:
         sup_manu = tr.find_element(By.CSS_SELECTOR, 'td.td-brand').text
     except:
         sup_manu = ''
@@ -119,7 +123,7 @@ def get_saveInfo(ppn, manu, tr):
         publish_date = tr.find_elements(By.TAG_NAME, 'td')[-2].text
     except:
         publish_date = ''
-    result = [ppn, manu, supplier_name, sup_manu, batch, stock, packing, param, place, instruction, publish_date, task_name]
+    result = [ppn, manu, supplier_name, sup_ppn, sup_manu, batch, stock, packing, param, place, instruction, publish_date, task_name]
     return result
 
 

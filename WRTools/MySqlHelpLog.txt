@@ -1,2 +1,3 @@
 
 2024-11-04 11:42:39yjcx_recommended wirte error 1406 (22001): Data too long for column 'max_price' at row 1 [['PVA70-27B24', 'TE', '3', '2', '', 10, '9942.23 р.', '55.46 р.', '19829.00719 р.', 'TESignalRelay']]
+2024-12-06 15:38:20yjcx_recommended wirte error Not enough parameters for the SQL statement [['PC28F256P30BFE', 'Alliance Memory', '深圳市轩特电子有限公司', 'MICRON/美光', '18+', '876', 'BGA64', '', '深圳', '实单申请*低价，值得信赖的存储专家', '  12-06', 'TRU202412_1k']]
