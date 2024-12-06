@@ -125,7 +125,7 @@ class DBRecommandChip:
         self.sql_write(sql_str, data)
 
     def hq_stock_write(self, data: list):
-        sql_str = "REPLACE INTO t_hq_stock (ppn, std_manu, supplier, sup_manu, batch, stock, packing, param, place, instruction, publish_date, task_name) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)"
+        sql_str = "REPLACE INTO t_hq_stock (ppn, std_manu, supplier, sup_ppn, sup_manu, batch, stock, packing, param, place, instruction, publish_date, task_name) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)"
         self.sql_write(sql_str, data)
 
     def hq_stock_read(self, filter_contend):

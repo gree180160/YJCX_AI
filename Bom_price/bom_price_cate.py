@@ -19,12 +19,12 @@ driver.set_page_load_timeout(120)
 
 accouts_arr = [[AccManage.Bom1['c'], AccManage.Bom1['n'], AccManage.Bom1['p']]]
 
-sourceFile_dic = {'fileName': PathHelp.get_file_path(None, 'TFiber.xlsx'),
-                  'sourceSheet': 'ppn',
+sourceFile_dic = {'fileName': PathHelp.get_file_path(None, 'TMitsubishiIGBT2411.xlsx'),
+                  'sourceSheet': 'ppn4',
                   'colIndex': 1,
                   'startIndex': 0,
-                  'endIndex': 35}
-task_name = 'TFiber'
+                  'endIndex': 5}
+task_name = 'TMitsubishiIGBT2411'
 
 
 default_url = 'https://www.bom.ai/ic/74LVX4245MTCX.html'

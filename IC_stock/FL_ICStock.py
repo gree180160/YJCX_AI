@@ -16,7 +16,7 @@ sourceFile_dic = {'fileName': PathHelp.get_file_path("IC_stock", 'TFL_ICStock.xl
                   'sourceSheet': 'ppn',
                   'colIndex': 1,
                   'startIndex': 0,
-                  'endIndex': 4}
+                  'endIndex': 6}
 task_name = 'TFL_ICStock'
 
 accouts_arr = [[AccManage.IC_FLStock['n'], AccManage.IC_FLStock['p']]]

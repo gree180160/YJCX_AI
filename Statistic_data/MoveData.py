@@ -406,14 +406,14 @@ def IC_HQ_Result(rate):
     ExcelHelp.add_arr_to_sheet(source_file, "Result", result)
 
 
-def IC_HQ_Result2(rate):
-    source_file = PathHelp.get_file_path(None, 'TFiber.xlsx')
+def IC_HQ_Result2(save_file, rate):
     # HQHotResult.HQ_hot_result(source_file)
     # time.sleep(1.0)
     # IC_stock_result.IC_stock_sum(source_file)
     # time.sleep(1.0)
     # BomResult.bom_price_result(source_file)
     # time.sleep(1.0)
+    source_file = save_file
     first_row = ["型号", "品牌","IC_supplier","IC_rank", "IC_stock", "efind_allSup","efind_priceSup", "efind_stockSup", "HQ_hot_week", 'HQ_hot_month', 'HQ_hot_avg', 'HQ_hot_result', 'oc_price', 'oc_stock','oc_supplier', 'oc_des','digikey_status', 'bom_price', 'IC_hot', 'IC_price',  'result']
     result = []
     result.append(first_row)
@@ -461,7 +461,7 @@ def IC_HQ_Result2(rate):
             if temp_OC[0] == temp_ppnInfo[0]:
                 try:
                     tax = 1.13
-                    oc_price = round(float(temp_OC[4]) * rate * tax, 2)
+                    oc_price = round(float(temp_OC[4]) * rate, 2)
                 except:
                     oc_price = ""
                 ppn_result[12] = oc_price
@@ -478,7 +478,7 @@ def IC_HQ_Result2(rate):
                 ppn_result[17] = temp_bom[2]
                 break;
         result.append(ppn_result)
-    ExcelHelp.add_arr_to_sheet(source_file, "Result", result)
+    ExcelHelp.add_arr_to_sheet(save_file, "Result", result)
 
 
 def updateICHot(rate):
@@ -639,6 +639,7 @@ if __name__ == "__main__":
     # updateICHot(7.28)
     # IC_HQ_Result(7.01)
     # calculateCost()
-    temp()
-    # IC_HQ_Result2(7.24)
+    # temp()
+    save_file = PathHelp.get_file_path(None, 'TMitsubishiIGBT2411.xlsx')
+    IC_HQ_Result2(save_file, 1.0)
 

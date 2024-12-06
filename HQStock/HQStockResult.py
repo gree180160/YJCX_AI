@@ -8,9 +8,9 @@ from WRTools import PathHelp, ExcelHelp, MySqlHelp_recommanded
 
 
 # 将同一个ppn到所有stock 累加，然后按照保存到数组中
-def HQ_stock_sum(cate_source_file):
-    pps = ExcelHelp.read_col_content(file_name= cate_source_file, sheet_name='ppn2', col_index=1)
-    manufactures = ExcelHelp.read_col_content(file_name= cate_source_file, sheet_name='ppn2', col_index=2)
+def HQ_stock_sum(cate_source_file, sheetname):
+    pps = ExcelHelp.read_col_content(file_name= cate_source_file, sheet_name=sheetname, col_index=1)
+    manufactures = ExcelHelp.read_col_content(file_name= cate_source_file, sheet_name=sheetname, col_index=2)
     HQ_stocks = ExcelHelp.read_sheet_content_by_name(cate_source_file, sheet_name='HQ_stock')
     result = []
     for (index, temp_ppn) in enumerate(pps):
@@ -23,7 +23,7 @@ def HQ_stock_sum(cate_source_file):
         for (row_index, row_content) in enumerate(HQ_stocks):
             ppn_ic = str(row_content[0])
             if ppn_ic.upper() == ppn_str.upper():
-                stock_num = int(row_content[5])
+                stock_num = int(row_content[6])
                 if stock_num < 10:
                     valid_supplier_sum += 0.01
                 else:
@@ -39,8 +39,8 @@ def read_record(save_file, task_name):
 
 
 if __name__ == "__main__":
-    aim_file = PathHelp.get_file_path(None, 'TMitsubishiIGBT2411.xlsx')
-    task_name = 'TMitsubishiIGBT2411'
+    aim_file = PathHelp.get_file_path(None, 'TRU202412_1k.xlsx')
+    task_name = 'TRU202412_1k'
     read_record(aim_file, task_name)
-    HQ_stock_sum(aim_file)
+    HQ_stock_sum(aim_file, 'ppn')
     print('over')

@@ -118,8 +118,8 @@ def read_record(save_file, task_name):
 
 
 if __name__ == "__main__":
-    aim_file = PathHelp.get_file_path(None, 'TFiber.xlsx')
-    task_name = 'TFiber'
+    aim_file = PathHelp.get_file_path(None, 'TMitsubishiIGBT2411.xlsx')
+    task_name = 'TMitsubishiIGBT2411'
     read_record(aim_file, task_name)
     bom_price_result(aim_file)
     print('over')

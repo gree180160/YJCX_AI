@@ -8,12 +8,12 @@ from Manager import AccManage, URLManager
 log_file = PathHelp.get_file_path('HQSearch', 'HQPeakfireLog.txt')
 ssl._create_default_https_context = ssl._create_unverified_context
 
-sourceFile_dic = {'fileName': PathHelp.get_file_path(None, 'TMitsubishiIGBT2411.xlsx'),
-                  'sourceSheet': 'ppn2',
+sourceFile_dic = {'fileName': PathHelp.get_file_path(None, 'TRU202412_1k.xlsx'),
+                  'sourceSheet': 'ppn',
                   'colIndex': 1,
                   'startIndex': 0,
-                  'endIndex': 5}
-task_name = 'TMitsubishiIGBT2411'
+                  'endIndex': 7}
+task_name = 'TRU202412_1k'
 
 accouts_arr = [AccManage.HQ_hot_1['n'], AccManage.HQ_hot_1['p']]
 VerificationCodePage = 0
@@ -87,6 +87,10 @@ def get_saveInfo(ppn, manu, tr):
     except:
         supplier_name = ''
     try:
+        sup_ppn = tr.find_element(By.CSS_SELECTOR, 'td.td-model').find_element(By.TAG_NAME, 'a').text # todo, 数据库
+    except:
+        sup_ppn = ''
+    try:
         sup_manu = tr.find_element(By.CSS_SELECTOR, 'td.td-brand').text
     except:
         sup_manu = ''
@@ -119,12 +123,12 @@ def get_saveInfo(ppn, manu, tr):
         publish_date = tr.find_elements(By.TAG_NAME, 'td')[-2].text
     except:
         publish_date = ''
-    result = [ppn, manu, supplier_name, sup_manu, batch, stock, packing, param, place, instruction, publish_date, task_name]
+    result = [ppn, manu, supplier_name, sup_ppn, sup_manu, batch, stock, packing, param, place, instruction, publish_date, task_name]
     return result
 
 
 # 查询列表中所有需要查询的型号的搜索指数
-def main():
+def main(precise):
     all_cates = ExcelHelp.read_col_content(sourceFile_dic['fileName'], sourceFile_dic['sourceSheet'],
                                            sourceFile_dic['colIndex'])
     all_manu = ExcelHelp.read_col_content(sourceFile_dic['fileName'], sourceFile_dic['sourceSheet'], 2)
@@ -134,7 +138,7 @@ def main():
         elif index in range(sourceFile_dic['startIndex'], sourceFile_dic['endIndex']):
             print(f'cate_index is: {index}  cate_name is: {ppn}')
             manu = all_manu[index]
-            driver.get(URLManager.HQ_stock_url(ppn))
+            driver.get(URLManager.HQ_stock_url(ppn, precise))
             if index > 0 and index % 13 == 0:
                 time.sleep(10*60)
             else:
@@ -153,4 +157,4 @@ def main():
 if __name__ == "__main__":
     driver.get("https://www.hqew.com/")
     login_action(login_url)
-    main()
+    main(False)

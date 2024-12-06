@@ -8,19 +8,18 @@ from Manager import AccManage, URLManager
 log_file = PathHelp.get_file_path('HQSearch', 'HQPeakfireLog.txt')
 ssl._create_default_https_context = ssl._create_unverified_context
 
-sourceFile_dic = {'fileName': PathHelp.get_file_path(None, 'THolt2411.xlsx'),
-                  'sourceSheet': 'ppn2',
+sourceFile_dic = {'fileName': PathHelp.get_file_path(None, 'TRU202412_1k.xlsx'),
+                  'sourceSheet': 'ppn',
                   'colIndex': 1,
-                  'startIndex': 7,
-                  'endIndex': 14}
-task_name = 'THolt2411'
-
+                  'startIndex': 300,
+                  'endIndex': 400}
+task_name = 'TRU202412_1k'
 
 accouts_arr = [AccManage.HQ_hot_4['n'], AccManage.HQ_hot_4['p']]
 VerificationCodePage = 0
 login_url = "https://passport.hqew.com/login"
 
-driver = ChromeDriverManager.getWebDriver(4)
+driver = ChromeDriverManager.getWebDriver(0)
 driver.set_window_size(height=800, width=1200)
 current_cate_has_date = True
 
@@ -125,7 +124,7 @@ def get_saveInfo(ppn, manu, tr):
 
 
 # 查询列表中所有需要查询的型号的搜索指数
-def main():
+def main(precise):
     all_cates = ExcelHelp.read_col_content(sourceFile_dic['fileName'], sourceFile_dic['sourceSheet'],
                                            sourceFile_dic['colIndex'])
     all_manu = ExcelHelp.read_col_content(sourceFile_dic['fileName'], sourceFile_dic['sourceSheet'], 2)
@@ -135,7 +134,7 @@ def main():
         elif index in range(sourceFile_dic['startIndex'], sourceFile_dic['endIndex']):
             print(f'cate_index is: {index}  cate_name is: {ppn}')
             manu = all_manu[index]
-            driver.get(URLManager.HQ_stock_url(ppn))
+            driver.get(URLManager.HQ_stock_url(ppn, precise))
             if index > 0 and index % 13 == 0:
                 time.sleep(10*60)
             else:
@@ -154,4 +153,4 @@ def main():
 if __name__ == "__main__":
     driver.get("https://www.hqew.com/")
     login_action(login_url)
-    main()
+    main(False)

@@ -153,11 +153,14 @@ def HQ_hot_url(ppn: str):
 
 
 # https://s.hqew.com/ULN2003ADR_10.html
-def HQ_stock_url(ppn: str):
+def HQ_stock_url(ppn: str, Precise):
     cate_str = str(ppn)
     if has_special_chars(cate_str):
         cate_str = '==' + str(base64.b64encode(cate_str.encode('utf-8')), 'utf-8')
-    search_url = f'https://s.hqew.com/{cate_str}_10.html'
+    if Precise:
+        search_url = f'https://s.hqew.com/{cate_str}_10.html'
+    else:
+        search_url = f'https://s.hqew.com/{cate_str}.html'
     return search_url
 
 

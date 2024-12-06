@@ -39,39 +39,27 @@ def get_page_more_PN():
 
 # 将大项目拆分成一天天的任务
 def createDayTask(unit:int):
-    i = 15  # 删除ppn 里面的历史数据,Renesas_all_165H
-    while i < 20:
-        file_name = PathHelp.get_file_path(f'TVicor{i}H', 'Task.xlsx')
-        ExcelHelp.remove_sheet(file_name, 'ppn')
-        i += int(unit/100)
-    # sheet_content = ExcelHelp.read_sheet_content_by_name(file_name=PathHelp.get_file_path(None, 'TNXP.xlsx'), sheet_name='discontinue')
-    sheet_content = ExcelHelp.read_sheet_content_by_name(file_name=PathHelp.get_file_path(None, 'TVicor.xlsx'), sheet_name='ppn')
-    sheet_content = sheet_content[1000:]
+    i = 0  # 删除ppn 里面的历史数据,Renesas_all_165H
+
+    sheet_content = ExcelHelp.read_sheet_content_by_name(file_name=PathHelp.get_file_path(None, 'TRU202412.xlsx'), sheet_name='ppn')
     task_value = []
-    start_index = 15
+    start_index = 0
     for (row_index, row_value) in enumerate(sheet_content):
-        row_info = [row_value[0], 'Vicor']
+        row_info = [row_value[0], row_value[1]]
         if row_value[0]:
             task_value.append(row_info)
             if task_value.__len__() == unit:
-                file_name = PathHelp.get_file_path(f'TVicor{start_index}H', 'Task.xlsx')
-                ExcelHelp.add_arr_to_sheet(file_name=file_name, sheet_name='ppn', dim_arr=task_value)
+                save_file = f'/Users/liuhe/Desktop/京创智通/询价2412/task/TRU202412_{start_index+1}k.xlsx' #PathHelp.get_file_path(f'TRU202412{start_index}H', 'Task.xlsx')
+                ExcelHelp.add_arr_to_sheet(file_name=save_file, sheet_name='ppn', dim_arr=task_value)
                 task_value = []
-                start_index += int(unit/100)
+                start_index += int(unit/1000)
 
 
 # 分解数量大的ppn列表
 def decompositionPPN(unit: int):
-    source_file = "/Users/liuhe/Desktop/CalcitrapaAIProject/TRU2407/TRU2407.xlsx"
-    sava_fold = '/Users/liuhe/Desktop/CalcitrapaAIProject/TRU2407/'
+    source_file = PathHelp.get_file_path(None, 'TRU202412.xlsx')
+    sava_fold = '/Users/liuhe/Desktop/京创智通/询价2412/'
     source_ppn = ExcelHelp.read_col_content(file_name=source_file, sheet_name='ppn', col_index=1)
-    # source_ppn = source_ppn[0:2000]
-    # history_sheets = []
-    # history_ppn = set()
-    # for sheet_name in history_sheets:
-    #     history_ppn = history_ppn.union(set(ExcelHelp.read_col_content(file_name=source_file, sheet_name=sheet_name, col_index=1)))
-    # ppn_all = list(set(source_ppn).difference(set(history_ppn)))
-
     ppn_all = source_ppn[0:]
     # ppn_all.sort()
     stop_quotient = 0
@@ -357,5 +345,5 @@ if __name__ == "__main__":
     # ali()
     # getAllICStockRecord()
     # deletFinished_ppn()
-    # decompositionPPN(300)
-    fl_sum()
+    createDayTask(1000)
+    # fl_sum()
