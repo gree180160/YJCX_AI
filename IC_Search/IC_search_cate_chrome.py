@@ -5,7 +5,7 @@ from WRTools import ChromeDriverManager
 import ssl
 import shutil
 import os
-from Manager import AccManage, TaskManager, URLManager
+from Manager import AccManage, URLManager
 import base64
 
 
@@ -19,12 +19,6 @@ no_data_url = 'https://icpi.ic.net.cn/'
 driver = ChromeDriverManager.getWebDriver(1)
 driver.set_window_size(height=800, width=1200)
 current_cate_has_date = True
-
-# sourceFile_dic = {'fileName': PathHelp.get_file_path(None, f'{TaskManager.Taskmanger().task_name}.xlsx'),
-#                   'sourceSheet': 'M10ppn',
-#                   'colIndex': 1,
-#                   'startIndex': 55,
-#                   'endIndex':  TaskManager.Taskmanger().end_index}
 
 def login_action(aim_url):
     current_url = driver.current_url
@@ -104,7 +98,7 @@ def anlyth_page(aim_url, cate_name, manu, isWeek):
 
 
 def deal_sql_data(ppn, manu, isWeek, rec_arr):
-    image_hot_data = [ppn, manu] + rec_arr + TaskManager.Taskmanger.task_name
+    image_hot_data = [ppn, manu] + rec_arr
     if isWeek:
         MySqlHelp_recommanded.DBRecommandChip().IC_hot_w_write([image_hot_data])
     else:
@@ -148,7 +142,7 @@ def isCheckCode():
 
 # 查询列表中所有需要查询的型号的搜索指数
 def main():
-    pn_file = PathHelp.get_file_path(None, f'{TaskManager.Taskmanger().task_name}.xlsx')
+    pn_file = PathHelp.get_file_path(None, f'00.xlsx')
     ppn_list = ExcelHelp.read_col_content(file_name=pn_file, sheet_name='M10ppn', col_index=1)
     manu_list = ExcelHelp.read_col_content(file_name=pn_file, sheet_name='M10ppn', col_index=2)
     for (index, ppn) in enumerate(ppn_list):

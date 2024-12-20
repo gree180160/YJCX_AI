@@ -1,7 +1,6 @@
 from WRTools import ExcelHelp, PathHelp, WaitHelp
 import Manager.URLManager
 import webbrowser
-from Manager import TaskManager
 
 
 # #  manu part
@@ -17,10 +16,10 @@ def open_url(isWeek):
     chrome_path = '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome'
     webbrowser.register('Chrome', None, webbrowser.BackgroundBrowser(chrome_path))
 
-    pn_file = PathHelp.get_file_path(None, f'{TaskManager.Task_IC_hot_C_manger().task_name}.xlsx')
+    pn_file = PathHelp.get_file_path(None, f'00.xlsx')
     ppn_list = ExcelHelp.read_col_content(file_name=pn_file, sheet_name='ppn', col_index=1)
     for (index, ppn) in enumerate(ppn_list):
-        if index in range(TaskManager.Task_IC_hot_C_manger().start_index, TaskManager.Task_IC_hot_C_manger.end_index):
+        if index in range(0, 0):
             url = Manager.URLManager.IC_hot_url(ppn)
             print(f'index is：{index} USL is: {url}')
             webbrowser.get('Chrome').open_new(url)

@@ -10,7 +10,15 @@ import os
 
 my_sender = '2147770436@qq.com'  # 发件人邮箱账号
 my_pass = 'hfkletvsoglvdjbg'  # 发件人邮箱授权码，第一步得到的
-my_user = '1459287460@qq.com'  # 收件人邮箱账号，可以发送给自己
+
+
+def sendWho(device):
+    river = '1459287460@qq.com'  # 收件人邮箱账号，可以发送给自己
+    alex = 'alex@calcitrapa.com'
+    if device == 'AOC':
+        return [river, alex]
+    else:
+        return [river]
 
 
 def mail_TI(cate_name, stock_num, detail_data):
@@ -20,13 +28,14 @@ def mail_TI(cate_name, stock_num, detail_data):
         mail_msg = f'<h2><center>Ti</center></h2> 以下型号有库存:  {cate_name}  <br>   limit数量是: {str(stock_num)} <br> distributorsList 信息: {detail_data}'
         msg = MIMEText(mail_msg, 'html', 'utf-8')
         msg['From'] = formataddr(["From Ti buy", my_sender])  # 括号里的对应发件人邮箱昵称、发件人邮箱账号
-        msg['To'] = formataddr(["Jason", my_user])  # 括号里的对应收件人邮箱昵称、收件人邮箱账号
+        receives = sendWho("")
+        msg['To'] = ', '.join(receives)  # 括号里的对应收件人邮箱昵称、收件人邮箱账号
         msg['Subject'] = "发现目标TI"  # 邮件的主题，也可以说是标题
         #  user email
         server = smtplib.SMTP_SSL("smtp.qq.com", 465)  # 发件人邮箱中的SMTP服务器，端口是465，固定的，不能更改
         server.login(my_sender, my_pass)  # 括号中对应的是发件人邮箱账号、邮箱密码
         server.set_debuglevel(1)
-        server.sendmail(my_sender, [my_user], msg.as_string())  # 括号中对应的是发件人邮箱账号、收件人邮箱账号、发送邮件
+        server.sendmail(my_sender, receives, msg.as_string())  # 括号中对应的是发件人邮箱账号、收件人邮箱账号、发送邮件
         server.quit()  # 关闭连接
     except Exception as err:  # 如果 try 中的语句没有执行，则会执行下面的 ret=False
         ret = False
@@ -43,13 +52,14 @@ def mail_Findchips(supplier_list):
             mail_msg = mail_msg + f'在平台: {temp_supplier[0]}  <br> 以下型号有库存:  {temp_supplier[1]}  <br> 数量为: {str(temp_supplier[2])}  <br> #################### <br>'
         msg = MIMEText(mail_msg, 'html', 'utf-8')
         msg['From'] = formataddr(["From Findchips buy", my_sender])  # 括号里的对应发件人邮箱昵称、发件人邮箱账号
-        msg['To'] = formataddr(["Jason", my_user])  # 括号里的对应收件人邮箱昵称、收件人邮箱账号
+        receives = sendWho("")
+        msg['To'] =', '.join(receives)  # 括号里的对应收件人邮箱昵称、收件人邮箱账号
         msg['Subject'] = "发现目标Findchips"  # 邮件的主题，也可以说是标题
         #  user email
         server = smtplib.SMTP_SSL("smtp.qq.com", 465)  # 发件人邮箱中的SMTP服务器，端口是465，固定的，不能更改
         server.login(my_sender, my_pass)  # 括号中对应的是发件人邮箱账号、邮箱密码
         server.set_debuglevel(1)
-        server.sendmail(my_sender, [my_user], msg.as_string())  # 括号中对应的是发件人邮箱账号、收件人邮箱账号、发送邮件
+        server.sendmail(my_sender, receives, msg.as_string())  # 括号中对应的是发件人邮箱账号、收件人邮箱账号、发送邮件
         server.quit()  # 关闭连接
     except Exception as err:  # 如果 try 中的语句没有执行，则会执行下面的 ret=False
         ret = False
@@ -65,13 +75,14 @@ def mail_IC_Stock(device):
         mail_msg = f'<h2><center>IC_stock</center></h2> 设备: {device} 出现check code'
         msg = MIMEText(mail_msg, 'html', 'utf-8')
         msg['From'] = formataddr(["From IC Stock", my_sender])  # 括号里的对应发件人邮箱昵称、发件人邮箱账号
-        msg['To'] = formataddr(["river", new_user])  # 括号里的对应收件人邮箱昵称、收件人邮箱账号
+        receives = sendWho(device)
+        msg['To'] = ', '.join(receives)
         msg['Subject'] = "IC_Stock"  # 邮件的主题，也可以说是标题
         #  user email
         server = smtplib.SMTP_SSL("smtp.qq.com", 465)  # 发件人邮箱中的SMTP服务器，端口是465，固定的，不能更改
         server.login(my_sender, my_pass)  # 括号中对应的是发件人邮箱账号、邮箱密码
         server.set_debuglevel(1)
-        server.sendmail(my_sender, [new_user], msg.as_string())  # 括号中对应的是发件人邮箱账号、收件人邮箱账号、发送邮件
+        server.sendmail(my_sender, receives, msg.as_string())  # 括号中对应的是发件人邮箱账号、收件人邮箱账号、发送邮件
         server.quit()  # 关闭连接
     except Exception as err:  # 如果 try 中的语句没有执行，则会执行下面的 ret=False
         ret = False
@@ -87,13 +98,14 @@ def mail_HQ_hot(device):
         mail_msg = f'<h2><center>HQ hot</center></h2> 设备: {device} 出现check code'
         msg = MIMEText(mail_msg, 'html', 'utf-8')
         msg['From'] = formataddr(["From HQ hot", my_sender])  # 括号里的对应发件人邮箱昵称、发件人邮箱账号
-        msg['To'] = formataddr(["river", new_user])  # 括号里的对应收件人邮箱昵称、收件人邮箱账号
+        receives = sendWho(device)
+        msg['To'] = ', '.join(receives)
         msg['Subject'] = "HQ hot"  # 邮件的主题，也可以说是标题
         #  user email
         server = smtplib.SMTP_SSL("smtp.qq.com", 465)  # 发件人邮箱中的SMTP服务器，端口是465，固定的，不能更改
         server.login(my_sender, my_pass)  # 括号中对应的是发件人邮箱账号、邮箱密码
         server.set_debuglevel(1)
-        server.sendmail(my_sender, [new_user], msg.as_string())  # 括号中对应的是发件人邮箱账号、收件人邮箱账号、发送邮件
+        server.sendmail(my_sender, receives, msg.as_string())  # 括号中对应的是发件人邮箱账号、收件人邮箱账号、发送邮件
         server.quit()  # 关闭连接
     except Exception as err:  # 如果 try 中的语句没有执行，则会执行下面的 ret=False
         ret = False
@@ -109,13 +121,14 @@ def mail_IC_Hot(device):
         mail_msg = f'<h2><center>IC_Hot</center></h2> 设备: {device} 出现check code'
         msg = MIMEText(mail_msg, 'html', 'utf-8')
         msg['From'] = formataddr(["From IC_hot", my_sender])  # 括号里的对应发件人邮箱昵称、发件人邮箱账号
-        msg['To'] = formataddr(["river", new_user])  # 括号里的对应收件人邮箱昵称、收件人邮箱账号
+        receives = sendWho(device)
+        msg['To'] = ', '.join(receives)
         msg['Subject'] = "IC_Hot"  # 邮件的主题，也可以说是标题
         #  user email
         server = smtplib.SMTP_SSL("smtp.qq.com", 465)  # 发件人邮箱中的SMTP服务器，端口是465，固定的，不能更改
         server.login(my_sender, my_pass)  # 括号中对应的是发件人邮箱账号、邮箱密码
         server.set_debuglevel(1)
-        server.sendmail(my_sender, [new_user], msg.as_string())  # 括号中对应的是发件人邮箱账号、收件人邮箱账号、发送邮件
+        server.sendmail(my_sender, receives, msg.as_string())  # 括号中对应的是发件人邮箱账号、收件人邮箱账号、发送邮件
         server.quit()  # 关闭连接
     except Exception as err:  # 如果 try 中的语句没有执行，则会执行下面的 ret=False
         ret = False
@@ -188,7 +201,6 @@ def sendAttachment(result_save_file, theme):
 def stock_chang_alert(result_save_file, ppnInfo):
     ret = True
     try:
-        # new_user_list = ['river@omni-electronics.com', 'river@szyjcx.cn']
         new_user_list = ['river@calcitrapa.com']
         mail_msg = f'<h2><center> ppn change check </center></h2>'
         html = mail_msg + f'<div>{ppnInfo}</div>'

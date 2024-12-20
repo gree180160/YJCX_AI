@@ -6,19 +6,20 @@ import random
 from WRTools import ChromeDriverManager
 import ssl
 from IC_stock.IC_Stock_Info import IC_Stock_Info
-from Manager import AccManage, URLManager, TaskManager
+from Manager import AccManage, URLManager
 from WRTools import ExcelHelp, WaitHelp, PathHelp, EmailHelper, MySqlHelp_recommanded
 
 
 ssl._create_default_https_context = ssl._create_unverified_context
 
 
-sourceFile_dic = {'fileName': PathHelp.get_file_path(None, 'THolt2411.xlsx'),
-                  'sourceSheet': 'ppn2',
+sourceFile_dic = {'fileName': PathHelp.get_file_path(None, 'TRU202412_13k.xlsx'),
+                  'sourceSheet': 'ppn3',
                   'colIndex': 1,
-                  'startIndex': 9,
-                  'endIndex': 11}
-task_name = 'THolt2411'
+                  'startIndex': 150,
+                  'endIndex': 104+52}
+task_name = 'TRU202412_13k'
+
 
 accouts_arr = [[AccManage.IC_stock_3['n'], AccManage.IC_stock_3['p']]]
 try:

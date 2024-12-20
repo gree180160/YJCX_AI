@@ -151,6 +151,11 @@ class DBRecommandChip:
         sql_str = "REPLACE INTO t_efind_supplier (ppn, manu, all_supplier, price_supplier, stock_supplier,stock, middle_price, min_price, max_price, task_name) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s)"
         self.sql_write(sql_str, data)
 
+    def efind_supplier_read(self, filter_contend):
+        query = f"SELECT * FROM t_efind_supplier where {filter_contend}"
+        result = self.sql_read(query)
+        return result
+
     # bom
     def bom_price_write(self, data: list):
         sql_str = "REPLACE INTO t_bom_price (ppn, manu, supplier, package, lot, quoted_price, release_time, stock_num, valid_supplier, task_name) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s)"

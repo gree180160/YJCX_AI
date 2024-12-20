@@ -5,7 +5,8 @@ from selenium.webdriver.common.by import By
 from WRTools import ChromeDriverManager
 import ssl
 import datetime
-from Manager import AccManage, URLManager, TaskManager
+import re
+
 from WRTools import ExcelHelp, WaitHelp, PathHelp, EmailHelper, MySqlHelp_recommanded, LogHelper
 
 
@@ -13,12 +14,12 @@ ssl._create_default_https_context = ssl._create_unverified_context
 
 log_file = PathHelp.get_file_path('EFIND', 'e_find_log.txt')
 
-sourceFile_dic = {'fileName': PathHelp.get_file_path('TradeWebs', 'Mornsun.xlsx'),
-                  'sourceSheet': 'ppn2',
+sourceFile_dic = {'fileName': PathHelp.get_file_path(None, 'TRU202412_7k.xlsx'),
+                  'sourceSheet': 'ppn4',
                   'colIndex': 1,
-                  'startIndex': 65,
-                  'endIndex': 130}
-task_name = 'Mornsun'
+                  'startIndex': 83,
+                  'endIndex': 166}
+task_name = 'TRU202412_7k'
 
 try:
     driver = ChromeDriverManager.getWebDriver(1)
@@ -33,6 +34,8 @@ def analy_html(cate_index, cate_name, st_manu):
     input_area.send_keys(cate_name)
     btn = driver.find_element(By.CSS_SELECTOR, 'input.sbtn')
     btn.click()
+    # url = URLManager.efind_stock_url(cate_name, True)
+    # driver.get(url)
     WaitHelp.waitfor(True, False)
     total_stock = 0
     all_supplier = []
@@ -42,36 +45,37 @@ def analy_html(cate_index, cate_name, st_manu):
         print("check code")
         check = driver.find_elements(By.ID, 'fbMan1')
     try:
-        sup_list = driver.find_elements(by=By.CSS_SELECTOR, value='div.sr')
-        if sup_list and len(sup_list) > 0:
-            for templi in sup_list:
-                supplier_name = templi.find_element(By.CSS_SELECTOR, 'a.n').text
-                publish_date_ru = templi.find_element(By.CSS_SELECTOR, 'div.l').find_element(By.TAG_NAME, 'span').text
-                publish_date = convert_russian_date_to_chinese(publish_date_ru)
-                table = templi.find_element(By.CSS_SELECTOR, 'table.r')
-                tr_list = table.find_elements(By.CSS_SELECTOR, 'tr.rw')
-                for temp_tr in tr_list:
-                    sup_manu = temp_tr.find_element(By.CSS_SELECTOR, 'td.m').text
-                    sup_ppn = temp_tr.find_element(By.CSS_SELECTOR, 'td.c').find_element(By.TAG_NAME, 'i').text.strip()
-                    if sup_ppn.__contains__(cate_name) or cate_name.__contains__(sup_ppn):
-                        des = temp_tr.find_element(By.CSS_SELECTOR, 'td.n').text.strip()
-                        des = des[0:255]
-                        try:
-                            price = temp_tr.find_element(By.CSS_SELECTOR, 'td.p').find_element(By.TAG_NAME, 'ul').text
-                        except:
-                            price = ''
-                        try:
-                            stock_str = temp_tr.find_element(By.CSS_SELECTOR, 'td.s').text.split()[0].strip()
-                            stock = int(stock_str)
-                        except:
-                            stock = 0
-                        total_stock += stock
-                        # # (ppn, manu, sup_manu, supplier, publish_date, info, price, stock, task_name)
-                        all_supplier.append([cate_name, st_manu, sup_manu, supplier_name, publish_date, des, price, str(stock), task_name])
-            if len(all_supplier) > 0:
-                MySqlHelp_recommanded.DBRecommandChip().efind_stock_write(all_supplier)
-                time.sleep(5.0)
-                get_supplier(cate_name, st_manu, total_stock)
+        get_supplier(cate_name, st_manu, total_stock)
+    #     sup_list = driver.find_elements(by=By.CSS_SELECTOR, value='div.sr')
+    #     if sup_list and len(sup_list) > 0:
+    #         for templi in sup_list:
+    #             supplier_name = templi.find_element(By.CSS_SELECTOR, 'a.n').text
+    #             publish_date_ru = templi.find_element(By.CSS_SELECTOR, 'div.l').find_element(By.TAG_NAME, 'span').text
+    #             publish_date = convert_russian_date_to_chinese(publish_date_ru)
+    #             table = templi.find_element(By.CSS_SELECTOR, 'table.r')
+    #             tr_list = table.find_elements(By.CSS_SELECTOR, 'tr.rw')
+    #             for temp_tr in tr_list:
+    #                 sup_manu = temp_tr.find_element(By.CSS_SELECTOR, 'td.m').text
+    #                 sup_ppn = temp_tr.find_element(By.CSS_SELECTOR, 'td.c').find_element(By.TAG_NAME, 'i').text.strip()
+    #                 if sup_ppn.__contains__(cate_name) or cate_name.__contains__(sup_ppn):
+    #                     des = temp_tr.find_element(By.CSS_SELECTOR, 'td.n').text.strip()
+    #                     des = des[0:255]
+    #                     try:
+    #                         price = temp_tr.find_element(By.CSS_SELECTOR, 'td.p').find_element(By.TAG_NAME, 'ul').text
+    #                     except:
+    #                         price = ''
+    #                     try:
+    #                         stock_str = temp_tr.find_element(By.CSS_SELECTOR, 'td.s').text.split()[0].strip()
+    #                         stock = int(stock_str)
+    #                     except:
+    #                         stock = 0
+    #                     total_stock += stock
+    #                     # # (ppn, manu, sup_manu, supplier, publish_date, info, price, stock, task_name)
+    #                     all_supplier.append([cate_name, st_manu, sup_manu, supplier_name, publish_date, des, price, str(stock), task_name])
+    #         if len(all_supplier) > 0:
+    #             MySqlHelp_recommanded.DBRecommandChip().efind_stock_write(all_supplier)
+    #             time.sleep(5.0)
+    #            get_supplier(cate_name, st_manu, total_stock)
     except Exception as e:
         LogHelper.write_log(log_file, f'analy_html error:{e}')
 
@@ -85,14 +89,26 @@ def get_supplier(ppn, manu, stock):
         prf = driver.find_element(By.ID, 'prf')
         price_sup = prf.find_element(By.CSS_SELECTOR, 'span.prss').text
         price_stat = driver.find_element(By.ID, 'pricestat_data')
-        mid_price = price_stat.find_elements(By.TAG_NAME, 'i')[0].text
-        min_price = price_stat.find_elements(By.TAG_NAME, 'i')[1].text
-        max_price = price_stat.find_elements(By.TAG_NAME, 'i')[2].text
+        mid_price = format_price(price_stat.find_elements(By.TAG_NAME, 'i')[0].text)
+        min_price = format_price(price_stat.find_elements(By.TAG_NAME, 'i')[1].text)
+        max_price = format_price(price_stat.find_elements(By.TAG_NAME, 'i')[2].text)
         info = [ppn, manu, total_sup, price_sup, stock_sup, stock, mid_price, min_price, max_price, task_name]
         # (ppn, manu, all_supplier, price_supplier, stock_supplier,stock, middle_price, min_price, max_price, task_name)
         MySqlHelp_recommanded.DBRecommandChip().efind_supplier_write([info])
     except:
         print(f'{ppn} get_supplier error')
+
+
+def format_price(amount_str):
+    # 使用正则表达式提取数值部分
+    match = re.search(r"(\d+\.\d+|\d+)", amount_str)
+    if match:
+        amount = match.group(0)  # 提取数值部分
+        amount_float = float(amount)  # 转换为浮点数
+        formatted_amount = f"{amount_float:.2f}"  # 保留两位小数
+        return f"{formatted_amount} р."  # 返回格式化后的字符串
+    else:
+        return amount_str
 
 
 def convert_russian_date_to_chinese(russian_date):
@@ -131,6 +147,7 @@ def convert_russian_date_to_chinese(russian_date):
         return chinese_date
     return ''
 
+
 # 先查询一个型号，确保多地有库存，然后选择只显示俄罗斯地区的库存
 def select_area():
     input_area = driver.find_element(By.ID, 'sf')
@@ -139,6 +156,14 @@ def select_area():
     btn = driver.find_element(By.CSS_SELECTOR, 'input.sbtn')
     btn.click()
     WaitHelp.waitfor(True, False)
+    # city = driver.find_element(By.ID, 'filter_city')
+    # filter_button = city.find_element(By.CSS_SELECTOR, 'a.filter_button')
+    # filter_button.click()
+    # time.sleep(5.0)
+    # towns_list = driver.find_element(By.ID, 'towns_list')
+    # ru = towns_list.find_element(By.XPATH, "//li[@title='Только компании из региона: Россия']")
+    # ru.click()
+    # time.sleep(3.0)
 
 
 def main():
@@ -154,10 +179,9 @@ def main():
                 time.sleep(60*5)
             analy_html(cate_index, cate_name, all_manu[cate_index])
 
+
 # [['LM35-23B05R2', 'mornsun', 'MORNSUN', 'Chang Ming International Technology Co., Limited', '2024.10.25', 'Дата изготовления:2023', '', '5000', 'Mornsun'], ['LM35-23B05R2', 'mornsun', 'MORNSUN', 'Shenzhen Haoxinsheng Technology Co., Ltd', '2023.09.7', 'DC: within 2 years, NEW ORIGINAL\nДата изготовления:23+\nТип упаковки: Static-Free Vacuum T\nМинимальный заказ:1pcs', '', '6689', 'Mornsun'], ['LM35-23B05R2', 'mornsun', 'Mornsun', 'Триатрон', '2024.10.27', 'LM35-23B05R2, AC-DC преобразователь в корпусе, MORNSUN\nВ упаковке: 10 шт.\nМинимальный заказ:10 шт.', '10+ 1065.96 р.', '13', 'Mornsun'], ['LM35-23B05R2', 'mornsun', 'MORNSUN', 'Энергофлот', '2024.10.28', 'Минимальный заказ:1', '1+ 1315.41 р.', '16', 'Mornsun'], ['LM35-23B05R2', 'mornsun', 'MORNSUN', 'МирКомпонентов', '2024.10.28', 'AC/DC преобразователи корпусированные\nВ упаковке: 20\nМинимальный заказ:1', '1+ 1652.65 р.\n6+ 1449.69 р.\n120+ 1304.72 р.', '16', 'Mornsun'], ['LM35-23B05R2', 'mornsun', 'MORNSUN', 'Контест', '2024.10.28', '', '1+ 1425.42 р.', '12', 'Mornsun'], ['LM35-23B05R2', 'mornsun', 'MORNSUN', 'Триема', '2024.10.28', 'LM35-23B05R2. Товар в наличии. Доставк…раскрыть', '1+ 1213 р.', '26', 'Mornsun'], ['LM35-23B05R2', 'mornsun', 'MORNSUN', 'ЗУМ-ЭК', '2024.10.5', 'AC/DC преобразователи корпусированные', '', '16', 'Mornsun'], ['LM35-23B05R2', 'mornsun', 'MORNSUN', 'Интер Чип', '2024.10.28', '', '', '16', 'Mornsun'], ['LM35-23B05R2', 'mornsun', 'MORNSUN', 'Электроник +', '2024.10.28', 'Минимальный заказ:1 штука', '1+ 1240.44 р.\n100+ 1088.11 р.\n1000+ 979.3 р.', '18', 'Mornsun'], ['LM35-23B05R2', 'mornsun', 'MORNSUN', 'РИВ Электроникс', '2024.10.28', 'Минимум 1шт.\nМинимальный заказ:1', '1+ 1277 р.\n7+ 1093 р.\n130+ 883.8 р.', '0', 'Mornsun'], ['LM35-23B05R2', 'mornsun', 'MORNSUN', 'Интерия ЭК', '2024.10.28', 'AC/DC преобразователи корпусированные', '1+ 915.64 р.', '0', 'Mornsun'], ['LM35-23B05R2', 'mornsun', 'MORNSUN', 'АВЕОР', '2024.10.28', '', '168+ 836.09 р.', '0', 'Mornsun'], ['LM35-23B05R2', 'mornsun', 'MORNSUN', 'НТК МОСТЭК', '2024.10.28', '', '10+ 975.58 р.', '0', 'Mornsun'], ['LM35-23B05R2', 'mornsun', 'Mornsun Guangzhou Science & Technology Co.', 'Берёзка Электронные Компоненты', '2024.10.28', 'AC/DC преобразователи корпусированные …раскрыть\nВ упаковке: 1\nМинимальный заказ:1', '', '0', 'Mornsun'], ['LM35-23B05R2', 'mornsun', '', 'База Электроники', '2024.10.28', 'Минимальный заказ:1', '1+ 1333.69 р.', '16', 'Mornsun'], ['LM35-23B05R2', 'mornsun', '', 'База Электроники', '2024.10.28', 'Минимальный заказ:1', '1+ 1786.24 р.', '16', 'Mornsun'], ['LM35-23B05R2', 'mornsun', 'MORNSUN', 'Гамма-Компоненты', '2024.10.7', 'AC/DC преобразователи корпусированные\nМинимальный заказ:3', '1+ 11.73 $', '16', 'Mornsun'], ['LM35-23B05R2', 'mornsun', '', 'Фирма Миком', '2024.10.27', '', '1+ 1395.5 р.\n6+ 1178.78 р.\n20+ 1044.47 р.\n60+ 971.03 р.', '15', 'Mornsun'], ['LM35-23B05R2', 'mornsun', 'MORNSUN', 'Светозар Компонент', '2024.10.28', 'Минимальный заказ:6', '', '16', 'Mornsun'], ['LM35-23B05R2', 'mornsun', 'MORNSUN Guangzhou S& T', 'Клик-ПРО', '2024.10.28', '', '', '1', 'Mornsun'], ['LM35-23B05R2', 'mornsun', 'MORNSUN', 'АВЭЛКОМ', '2024.10.28', 'AC/DC преобразователи корпусированные\nВ упаковке: 20\nМинимальный заказ:1', '1+ 1265.27 р.\n20+ 1037.11 р.', '0', 'Mornsun'], ['LM35-23B05R2', 'mornsun', 'MORNSUN', 'Элвек', '2024.10.28', 'Минимальный заказ:1', '1+ 1367.14 р.\n6+ 1066 р.\n120+ 835.48 р.', '0', 'Mornsun'], ['LM35-23B05R2', 'mornsun', 'MORNSUN', 'Промчип', '2024.10.21', '', '120+ 833.29 р.', '0', 'Mornsun'], ['LM35-23B05R2', 'mornsun', '', 'Элсин (Торгэлектроника)', '2024.10.27', 'Источники питания', '120+ 912.58 р.', '0', 'Mornsun'], ['LM35-23B05R2', 'mornsun', 'Mornsun Guangzhou Science & Technology Co., Ltd', 'Промэлектроника', '2024.10.28', '', '', '0', 'Mornsun'], ['LM35-23B05R2', 'mornsun', 'Mornsun Power', 'Элитан', '2024.10.28', '', '', '0', 'Mornsun'], ['LM35-23B05R2', 'mornsun', 'Mornsun Power', 'Элитан', '2024.10.28', '', '', '0', 'Mornsun'], ['LM35-23B05R2', 'mornsun', 'MORNSUN(金升阳)', 'Микротел компонент', '2024.10.28', '', '1+ 11.983 $', '104', 'Mornsun']]
 # ['LM35-23B05R2', 'mornsun', '25', '18', '13', 12006, '1240.44 р.', '833.29 р.', '1786.24 р.', 'Mornsun']
-
-
 if __name__ == "__main__":
     driver.get('https://efind.ru/')
     time.sleep(2.0)

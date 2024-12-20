@@ -6,7 +6,7 @@ import random
 from WRTools import ChromeDriverManager
 import ssl
 from IC_stock.IC_Stock_Info import IC_Stock_Info
-from Manager import AccManage, URLManager, TaskManager
+from Manager import AccManage, URLManager
 from WRTools import ExcelHelp, WaitHelp, PathHelp, EmailHelper
 
 
@@ -15,8 +15,8 @@ ssl._create_default_https_context = ssl._create_unverified_context
 sourceFile_dic = {'fileName': PathHelp.get_file_path("IC_stock", 'TFL_ICStock.xlsx'),
                   'sourceSheet': 'ppn',
                   'colIndex': 1,
-                  'startIndex': 0,
-                  'endIndex': 6}
+                  'startIndex': 5,
+                  'endIndex': 7}
 task_name = 'TFL_ICStock'
 
 accouts_arr = [[AccManage.IC_FLStock['n'], AccManage.IC_FLStock['p']]]
@@ -74,6 +74,7 @@ def get_stock(cate_index, cate_name, st_manu):
         WaitHelp.waitfor(True, False)
         showingCheckCode = checkVerificationCodePage(cate_name)
     get_total_page()
+    stored_supplier = []
     print(f"index is: {cate_index} cate is:{cate_name} currentPage is: {current_page} totalpage is:{total_page}")
     #  2-loop page arr
     need_load_nextPage = True
@@ -157,10 +158,12 @@ def get_stock(cate_index, cate_name, st_manu):
                                           stock_num=stock_num)
             if ic_Stock_Info.shouldSave():
                 saveContent_arr = ic_Stock_Info.descritpion_arr_fl()
-                need_save_ic_arr.append(saveContent_arr)
+                if not stored_supplier.__contains__(supplier):
+                    need_save_ic_arr.append(saveContent_arr)
+                    stored_supplier.append(supplier)
         gotoNextPage(cate_name)
     if need_save_ic_arr.__len__() > 0:
-        writeRecord(need_save_ic_arr, cate_name)
+        writeRecord(need_save_ic_arr, cate_name, st_manu)
         need_save_ic_arr.clear()
 
 
@@ -180,7 +183,7 @@ def gotoNextPage(cate_name):
     current_page += 1
 
 
-def writeRecord(need_save_arr, ppn):
+def writeRecord(need_save_arr, ppn, st_manu):
     file_name = sourceFile_dic['fileName']
     sheet = ppn[0:5]
     try:
@@ -188,56 +191,35 @@ def writeRecord(need_save_arr, ppn):
     except:
         history = []
     result = []
-    # 'ppn', 'st_manu','supplier_ppn', 'supplier_manu', 'supplier', 'isICCP', 'isSSCP', 'iSRanking', 'isHotSell', 'isYouXian', 'batch', 'pakaging', 'stock_num'
+    # (ppn, st_manu, supplier_manu, supplier, stock_num)
     if history.__len__() > 0:
-        his_stock_record = history[1].__len__() - 10
+        his_stock_record = history[1].__len__() - 5 #5条项本信息
         title_row = history[0] + [time.strftime('%Y-%m-%d', time.localtime())]
     else:
-        title_row = ['ppn', 'st_manu', 'supplier_manu', 'supplier', 'isICCP', 'isSSCP', 'iSRanking', 'isHotSell', 'isYouXian', 'batch', 'pakaging'] + [time.strftime('%Y-%m-%d', time.localtime())]
+        # (ppn, st_manu, supplier_manu, supplier, stock_num)
+        title_row = ['ppn', 'st_manu', 'supplier_manu', 'supplier'] + [time.strftime('%Y-%m-%d', time.localtime())]
         his_stock_record = 0
-    combine_supplier_arr = combine(need_save_arr)
-    for new_record in combine_supplier_arr:
-        temp_result = new_record
-        for i in range(his_stock_record - 1):
-            temp_result.insert(-1, 0)
-        for temp_history in history:
-            if temp_history[0] == new_record[0] and temp_history[3] == new_record[3] and temp_history[9] == str(new_record[9]) and temp_history[10] == str(new_record[10]):
-                temp_result = temp_history + [new_record[-1]]
-                break
-        result.append(temp_result)
-    result.insert(0, title_row)
-    dismiss_suppliers = []
-    for temp_h in history:
-        still_stock = False
-        for new_re in result:
-            if temp_h[0] == new_re[0] and temp_h[3] == new_re[3] and temp_h[9] == new_re[9] and temp_h[10] == new_re[10]:
-                still_stock = True
-                break
-        if not still_stock:
-            dismiss_suppliers.append(temp_h+[0])
+    result.append(title_row)
+    history_sup_names = ExcelHelp.read_col_content(file_name, sheet, 4)
+    now_sup_names = []
+    for now_supplier in need_save_arr:
+        now_sup_name = now_supplier[3]
+        now_sup_names.append(now_sup_name)
+        if now_sup_name in history_sup_names: #以前有货，现在还有货
+            index = history_sup_names.index(now_sup_name)
+            new_row = history[index] + [now_supplier[-1]]
+        else: #以前没货，现在有货
+            new_row = now_supplier[:-1] + ['0'] * his_stock_record + now_supplier[-1:]
+        result.append(new_row)
+    #以前有货，现在没货
+    for (index, temp_his) in enumerate(history):
+        if index > 0:
+            if not now_sup_names.__contains__(temp_his[3]):
+                new_row = temp_his + ["0"]
+                result.append(new_row)
     ExcelHelp.delete_sheet_content(file_name, sheet)
     time.sleep(1.0)
-    ExcelHelp.add_arr_to_sheet(file_name, sheet, result + dismiss_suppliers)
-    time.sleep(1.0)
-
-
-def combine(source_arr):
-    result = []
-    added_supplier_tags = []
-    for (x, xsupplier) in enumerate(source_arr):
-        tag = str(xsupplier[3]) + str(xsupplier[9])
-        new_stock = int(xsupplier[-1])
-        if added_supplier_tags.__contains__(tag):
-            continue;
-        else:
-            for ysupplier in source_arr[x + 1:]:
-                if xsupplier[3] == ysupplier[3] and xsupplier[9] == ysupplier[9]:
-                    new_stock = new_stock + int(ysupplier[-1])  # todo
-        supplier_sum = xsupplier
-        supplier_sum[-1] = str(new_stock)
-        result.append(supplier_sum)
-        added_supplier_tags.append(tag)
-    return result
+    ExcelHelp.add_arr_to_sheet(file_name, sheet, result)
 
 
 def stock_change_alert(ppn_list):
@@ -247,7 +229,7 @@ def stock_change_alert(ppn_list):
         sheet_content = ExcelHelp.read_sheet_content_by_name(file_name, temp_ppn[0:5])
         history += sheet_content
     alert_info = []
-    if history[0].__len__() > 12:
+    if history[0].__len__() > 3:
         for temp_record in history:
             try:
                 last_stock = int(temp_record[-2])
@@ -258,15 +240,8 @@ def stock_change_alert(ppn_list):
             except:
                 new_stock = 0
             if last_stock != new_stock:
-                if temp_record[0] == 'DSPIC30F6014A-30I/PF' and temp_record[3] == '深圳市协鑫半导体有限公司':
-                    try:
-                        if abs(int(temp_record[-2]) - int(temp_record[-1])) == 2000:
-                            continue
-                    except:
-                        continue
-                else:
-                    one_info = [temp_record[0], temp_record[3], temp_record[-2], temp_record[-1]]
-                    alert_info.append(one_info)
+                one_info = [temp_record[0], temp_record[3], temp_record[-2], temp_record[-1]]
+                alert_info.append(one_info)
     if alert_info.__len__() > 0:
         result = '<table >'
         for index, temp_row in enumerate(alert_info):

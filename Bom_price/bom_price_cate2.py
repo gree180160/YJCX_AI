@@ -8,56 +8,70 @@ import time
 from WRTools import ChromeDriverManager
 from selenium.webdriver.common.by import By
 from WRTools import LogHelper, PathHelp, ExcelHelp, WaitHelp, MySqlHelp_recommanded
-from Manager import AccManage, TaskManager
+from Manager import AccManage
 import bom_price_info
 import re
 
 ssl._create_default_https_context = ssl._create_unverified_context
-driver = ChromeDriverManager.getWebDriver(0)    # todo chromedriverPath
+driver = ChromeDriverManager.getWebDriver(0)
 driver.set_page_load_timeout(120)
 # logic
 
-accouts_arr = [[AccManage.Bom2['c'], AccManage.Bom2['n'], AccManage.Bom2['p']]]
+accouts_arr = [AccManage.Bom2['c'], AccManage.Bom2['n'], AccManage.Bom2['p']]
 
-sourceFile_dic = {'fileName': PathHelp.get_file_path(None, 'TMitsubishiIGBT2411.xlsx'),
+sourceFile_dic = {'fileName': PathHelp.get_file_path(None, 'TRU202412_7k.xlsx'),
                   'sourceSheet': 'ppn4',
                   'colIndex': 1,
-                  'startIndex': 5,
-                  'endIndex': 10}
-task_name = 'TMitsubishiIGBT2411'
+                  'startIndex': 166,
+                  'endIndex': 333}
+task_name = 'TRU202412_7k'
 
-default_url = 'https://www.bom.ai/ic/74LVX4245MTCX.html'
+
+default_url = 'https://www.bom.ai/'
 log_file = PathHelp.get_file_path('Bom_price', 'bom_price_log.txt')
 
 
 # 登陆action
 def login_action(aim_url):
     time.sleep(2.0)
+    login_url = 'https://mm.bom.ai/#/loginbom'
+    driver.get(login_url)
+    time.sleep(5.0)
     try:
-        erp_entre = driver.find_element(by=By.CLASS_NAME, value='Bom_loging_title_erplogin.login_phone')
-        display = erp_entre.is_displayed()
-        if display:
-            WaitHelp.waitfor(False, False)
-            erp_entre.click()
-            WaitHelp.waitfor(False, False)
-            login_action(aim_url)
-        else:
-            # begin login
-            accout_current = random.choice(accouts_arr)
-            compay = driver.find_element(by=By.ID, value='companyName')
-            compay.clear()
-            compay.send_keys(accout_current[0])
-            username = driver.find_element(by=By.ID, value='accountName')
-            username.clear()
-            username.send_keys(accout_current[1])
-            password = driver.find_element(by=By.ID, value='smspassword')
-            password.clear()
-            password.send_keys(accout_current[2])
-            time.sleep(3)
-            driver.find_element(by=By.ID, value='smsLoginBtn').click()
-        WaitHelp.waitfor(True, False)
+        login_are = driver.find_element(By.CSS_SELECTOR, 'div.Bom_loging_left')
+        account_li = login_are.find_elements(By.TAG_NAME, 'li')[1]
+        account_li.click()
+        time.sleep(2.0)
+        accout_current = accouts_arr
+        compay = driver.find_elements(By.CSS_SELECTOR, 'input.Bom_loging_input')[0]
+        compay.clear()
+        compay.send_keys(accout_current[0])
+        username = driver.find_elements(By.CSS_SELECTOR, 'input.Bom_loging_input')[1]
+        username.clear()
+        username.send_keys(accout_current[1])
+        password = driver.find_elements(By.CSS_SELECTOR, 'input.Bom_loging_input')[2]
+        password.clear()
+        password.send_keys(accout_current[2])
+        time.sleep(1)
+        driver.find_element(by=By.CSS_SELECTOR, value='input.Bom_loging_login').click()
+        time.sleep(10.0)
+        #关闭绑定
+        unbind = driver.find_element(By.CSS_SELECTOR, 'div.unbind-module')
+        unbind.click()
+        time.sleep(10.0)
+        unbind = driver.find_element(By.CSS_SELECTOR, 'div.unbind-module')
+        unbind.click()
+        time.sleep(10.0)
     except Exception as e:
-        LogHelper.write_log(log_file_name=log_file, content=f'login action exception is: {e}')
+        print(f"登陆操作失败:{e}")
+    time.sleep(15.0)
+    if driver.current_url.__contains__('HomeMain'): #登陆后，回到控制台页面
+        print("login_success")
+    if aim_url.__len__() > 0: #查询过程中的登陆
+        driver.get(aim_url)
+    else: #第一次的登陆
+        driver.get('https://www.bom.ai/ic/==QURVQzg0MkJDUFo2Mi01.html')
+    time.sleep(30.0)
 
 
 # 判断是否需要登陆，如果需要就登陆
@@ -236,7 +250,7 @@ def main():
 
 def closeAD():
     try:
-        closeButton = driver.find_elements(By.CSS_SELECTOR, 'i.znlbfont-close_ic')[1]
+        closeButton = driver.find_elements(By.CSS_SELECTOR, 'i.znlbfont-close_ic')[-1]
         closeButton.click()
         time.sleep(2.0)
     except:
@@ -245,7 +259,7 @@ def closeAD():
 
 if __name__ == "__main__":
     driver.get(default_url)
-    closeAD()
-    current_need_login()
+    login_action("")
     WaitHelp.waitfor(True, False)
+    closeAD()
     main()

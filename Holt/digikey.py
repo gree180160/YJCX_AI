@@ -7,7 +7,7 @@ import time
 from WRTools import ChromeDriverManager
 from selenium.webdriver.common.by import By
 from WRTools import LogHelper, PathHelp, ExcelHelp, WaitHelp, MySqlHelp_recommanded
-from Manager import TaskManager, AccManage
+from Manager import AccManage
 from selenium.webdriver.common.action_chains import ActionChains
 
 ssl._create_default_https_context = ssl._create_unverified_context

@@ -39,18 +39,11 @@ class IC_Stock_Info:
         return result
 
     def descritpion_arr_fl(self):
-        # (ppn, st_manu, supplier_manu, supplier, isICCP, isSSCP, iSRanking, isHotSell, stock_num)
+        # (ppn, st_manu, supplier_manu, supplier, stock_num)
         result = [self.model or "--",
                   self.st_manu or "--",
                   self.supplier_manu or "--",
                   self.supplier or "--",
-                  1 if self.isICCP else 0,
-                  1 if self.isSSCP else 0,
-                  1 if self.isSpotRanking else 0,
-                  1 if self.isHotSell else 0,
-                  1 if self.isYouXian else 0,
-                  self.batch,
-                  self.pakaging,
                   self.stock_num]
         return result
 

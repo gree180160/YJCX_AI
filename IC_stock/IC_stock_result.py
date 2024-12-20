@@ -4,7 +4,7 @@
 # （2） 靠谱库存数量（[现货排名库存总量+非现货排名ICCP库存总量+非现货排名SSCP库存总量]/6)
 
 from WRTools import PathHelp, ExcelHelp, MySqlHelp_recommanded
-from Manager import TaskManager
+import re
 
 # IC_source_file = PathHelp.get_file_path('TVicor15H', 'IC_stock.xlsx')
 # cate_source_file = PathHelp.get_file_path(None, 'TLK240322.xlsx')
@@ -25,7 +25,9 @@ def IC_stock_sum(cate_source_file):
         rank_sum = 0
         valid_stock_sum = 0
         IC_stocks = ExcelHelp.read_sheet_content_by_name(cate_source_file, sheet_name='IC_stock')
-        # (ppn	st_manu	supplier_manu	supplier	isICCP	isSSCP	iSRanking	isHotSell	isYouXian	batch	pakaging	stock_num	task_name	update_time)
+        # (ppn,st_manu,supplier_ppn, supplier_manu,supplier,isICCP,isSSCP,iSRanking,isHotSell,isYouXian,batch,pakaging,stock_num,task_name,update_time)
+        max_stock = 0 # 保留库存最大的供应商的所有信息
+        max_info = []
         for (row_index, row_content) in enumerate(IC_stocks):
             ppn_ic = str(row_content[0])
             if ppn_ic.upper() == ppn_str.upper():
@@ -33,6 +35,10 @@ def IC_stock_sum(cate_source_file):
                 isSSCP = str(row_content[6]) == "1"
                 isSpotRanking = str(row_content[7]) == "1"
                 stock_num = int(row_content[12])
+                if stock_num > max_stock:
+                    max_stock = stock_num
+                    sup_manu = ruleManu(row_content[3], row_content[1])
+                    max_info = [row_content[2], sup_manu, row_content[4], row_content[10], row_content[11], row_content[12]]
                 # if isSSCP or isICCP or isSpotRanking or isHotSell or isYouXian:
                 if isSSCP or isICCP or isSpotRanking:
                     if stock_num < 10:
@@ -45,9 +51,24 @@ def IC_stock_sum(cate_source_file):
                             rank_sum = round(rank_sum+0.01, 2)
                         else:
                             rank_sum = round(rank_sum+1.0, 2)
-        result.append([ppn_str, manufactures[index], valid_supplier_sum, rank_sum, int(valid_stock_sum)])
+        result.append([ppn_str, manufactures[index], valid_supplier_sum, rank_sum, int(valid_stock_sum)] + max_info)
     ExcelHelp.add_arr_to_sheet(file_name=cate_source_file, sheet_name="IC_stock_sum", dim_arr=result)
 
+
+def ruleManu(input_string, st_manu):
+    # if input_string == '--':
+    #     return st_manu
+    # 1. 删除 “/中文字”
+    cleaned = re.sub(r'/[\u4e00-\u9fff]+', '', input_string)
+    # 2. 删除 “(中文字)”
+    cleaned = re.sub(r'\(（[\u4e00-\u9fff]+）\)', '', cleaned)
+    # 3. 删除 “（中文字）”
+    cleaned = re.sub(r'（[\u4e00-\u9fff]+）', '', cleaned)
+    # 4. 删除 “(中文字)”
+    cleaned = re.sub(r'\([\u4e00-\u9fff]+\)', '', cleaned)
+    # 5. 删除字母后面的汉字
+    cleaned = re.sub(r'[\u4e00-\u9fff]+', '', cleaned)
+    return cleaned.strip()
 
 
 def printPPN():
@@ -70,8 +91,8 @@ def read_record(save_file, task_name):
 
 
 if __name__ == "__main__":
-    aim_file = PathHelp.get_file_path(None, 'TMitsubishiIGBT2411.xlsx')
-    task_name = 'TMitsubishiIGBT2411'
+    aim_file = PathHelp.get_file_path(None, 'TRU202412_8k.xlsx')
+    task_name = 'TRU202412_8k'
     read_record(aim_file, task_name)
     IC_stock_sum(aim_file)
     print('over')

@@ -2,7 +2,7 @@
 # 输入型号 输出两个字段：
 # （1） 靠谱供应商数量（记录中有且只有'原装'&'原装排名'两种)
 # （2） 靠谱库存数量
-
+import time
 
 from WRTools import PathHelp, ExcelHelp, MySqlHelp_recommanded
 
@@ -39,8 +39,13 @@ def read_record(save_file, task_name):
 
 
 if __name__ == "__main__":
-    aim_file = PathHelp.get_file_path(None, 'TRU202412_1k.xlsx')
-    task_name = 'TRU202412_1k'
+    aim_file = PathHelp.get_file_path(None, 'TRU202412_15k.xlsx')
+    task_name = 'TRU202412_15k'
+    read_record(aim_file, task_name)
+    HQ_stock_sum(aim_file, 'ppn')
+    time.sleep(5.0)
+    aim_file = PathHelp.get_file_path(None, 'TRU202412_16k.xlsx')
+    task_name = 'TRU202412_16k'
     read_record(aim_file, task_name)
     HQ_stock_sum(aim_file, 'ppn')
     print('over')

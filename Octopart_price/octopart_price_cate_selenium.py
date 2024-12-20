@@ -7,7 +7,7 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 from WRTools import ExcelHelp, LogHelper, PathHelp, WaitHelp, MySqlHelp_recommanded, EmailHelper
 import octopart_price_info
-from Manager import TaskManager, URLManager, AccManage
+from Manager import URLManager, AccManage
 import time
 
 ssl._create_default_https_context = ssl._create_unverified_context
@@ -19,11 +19,11 @@ driver.set_page_load_timeout(480)
 # https://octopart.com/search?q=8P34S1204NLGI8&currency=USD&specs=0
 default_url = 'https://octopart.com/what-is-octopart'
 
-sourceFile_dic = {'fileName': PathHelp.get_file_path(None, f'{TaskManager.Taskmanger().task_name}.xlsx'),
+sourceFile_dic = {'fileName': PathHelp.get_file_path(None, f'00.xlsx'),
                   'sourceSheet': 'ppn',
                   'colIndex': 1,
                   'startIndex': 499, #M9
-                  'endIndex': TaskManager.Taskmanger().end_index}
+                  'endIndex': 0}
 
 log_file = PathHelp.get_file_path('Octopart_price', 'ocopar_price_log.txt')
 

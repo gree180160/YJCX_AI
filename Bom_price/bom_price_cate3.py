@@ -13,19 +13,18 @@ import bom_price_info
 import re
 
 ssl._create_default_https_context = ssl._create_unverified_context
-driver = ChromeDriverManager.getWebDriver(1)    # todo chromedriverPath
+driver = ChromeDriverManager.getWebDriver(0)    # todo chromedriverPath
 driver.set_page_load_timeout(120)
 # logic
 
-accouts_arr = [AccManage.Bom1['c'], AccManage.Bom1['n'], AccManage.Bom1['p']]
+accouts_arr = [[AccManage.Bom2['c'], AccManage.Bom2['n'], AccManage.Bom2['p']]]
 
-sourceFile_dic = {'fileName': PathHelp.get_file_path(None, 'TRU202412_7k.xlsx'),
+sourceFile_dic = {'fileName': PathHelp.get_file_path(None, 'TRU202412_4k.xlsx'),
                   'sourceSheet': 'ppn4',
                   'colIndex': 1,
-                  'startIndex': 0,
-                  'endIndex': 166}
-task_name = 'TRU202412_7k'
-
+                  'startIndex': 112,
+                  'endIndex': 225}
+task_name = 'TRU202412_4k'
 
 default_url = 'https://www.bom.ai/'
 log_file = PathHelp.get_file_path('Bom_price', 'bom_price_log.txt')
@@ -43,27 +42,20 @@ def login_action(aim_url):
         account_li.click()
         time.sleep(2.0)
         accout_current = accouts_arr
-        compay = driver.find_elements(By.CSS_SELECTOR, 'input.Bom_loging_input')[0]
+        compay = driver.find_element(By.CSS_SELECTOR, 'input.Bom_loging_input')[0]
         compay.clear()
         compay.send_keys(accout_current[0])
-        username = driver.find_elements(By.CSS_SELECTOR, 'input.Bom_loging_input')[1]
+        username = driver.find_element(By.CSS_SELECTOR, 'input.Bom_loging_input')[0]
         username.clear()
         username.send_keys(accout_current[1])
-        password = driver.find_elements(By.CSS_SELECTOR, 'input.Bom_loging_input')[2]
+        password = driver.find_element(By.CSS_SELECTOR, 'input.Bom_loging_input')[0]
         password.clear()
         password.send_keys(accout_current[2])
         time.sleep(1)
         driver.find_element(by=By.CSS_SELECTOR, value='input.Bom_loging_login').click()
-        time.sleep(10.0)
-        #关闭绑定
-        unbind = driver.find_element(By.CSS_SELECTOR, 'div.unbind-module')
-        unbind.click()
-        time.sleep(10.0)
-        unbind = driver.find_element(By.CSS_SELECTOR, 'div.unbind-module')
-        unbind.click()
-        time.sleep(10.0)
-    except Exception as e:
-        print(f"登陆操作失败:{e}")
+        time.sleep(2.0)
+    except:
+        print("登陆操作失败")
     time.sleep(15.0)
     if driver.current_url.__contains__('HomeMain'): #登陆后，回到控制台页面
         print("login_success")

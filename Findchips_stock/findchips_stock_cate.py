@@ -5,16 +5,15 @@ from bs4 import BeautifulSoup
 import requests
 from WRTools import LogHelper, WaitHelp, ExcelHelp, PathHelp,MySqlHelp_recommanded
 from Findchips_stock.findchips_stock_info import findchips_stock_info_onePart, findchips_stock_info_oneSupplier
-from Manager import TaskManager
 
 
 ssl._create_default_https_context = ssl._create_unverified_context
 
-sourceFile_dic = {'fileName': PathHelp.get_file_path(None, f'{TaskManager.Taskmanger().task_name}.xlsx'),
+sourceFile_dic = {'fileName': PathHelp.get_file_path(None, '00.xlsx'),
                   'sourceSheet': 'ppn',
                   'colIndex': 1,
                   'startIndex': 0,
-                  'endIndex': TaskManager.Taskmanger().end_index}
+                  'endIndex': 0}
 
 log_file = PathHelp.get_file_path('Findchips_stock', 'findchips_stock_log.txt')
 cookies = {'fc_locale':'zh-CN', 'fc_timezone':'Asia%2FShanghai'}
@@ -90,7 +89,7 @@ def get_findchips_stock(cate_index, cate_name, send_email):
                                                                      supplier=supplier_name,
                                                                      authorized=is_author, part_url=part_url,
                                                                      stock_sum=stock_sum)
-                    supplier_info_arr.append(supplier_info.descritpion_arr() + [TaskManager.Taskmanger().task_name])
+                    supplier_info_arr.append(supplier_info.descritpion_arr() + '')
         MySqlHelp_recommanded.DBRecommandChip().findchip_stock_write(data=supplier_info_arr)
         supplier_info_arr.clear()
         WaitHelp.waitfor(False, isDebug=False)
@@ -133,8 +132,8 @@ def main():
 
 
 def db_read():
-    findchip_list = ExcelHelp.read_sheet_content_by_name(PathHelp.get_file_path(None, f'{TaskManager.Taskmanger().task_name}.xlsx'), sheet_name='findchips')
-    cate_source_file = PathHelp.get_file_path(None, f'{TaskManager.Taskmanger().task_name}.xlsx')
+    findchip_list = ExcelHelp.read_sheet_content_by_name(PathHelp.get_file_path(None, '00.xlsx'), sheet_name='findchips')
+    cate_source_file = PathHelp.get_file_path(None, f'0.xlsx')
     pps = ExcelHelp.read_col_content(file_name=cate_source_file, sheet_name='ppn', col_index=1)
     manus = ExcelHelp.read_col_content(file_name=cate_source_file, sheet_name='ppn', col_index=2)
     result = []

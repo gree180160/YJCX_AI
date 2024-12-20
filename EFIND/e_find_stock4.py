@@ -5,7 +5,6 @@ from selenium.webdriver.common.by import By
 from WRTools import ChromeDriverManager
 import ssl
 import datetime
-from Manager import AccManage, URLManager, TaskManager
 from WRTools import ExcelHelp, WaitHelp, PathHelp, EmailHelper, MySqlHelp_recommanded, LogHelper
 
 
@@ -13,12 +12,13 @@ ssl._create_default_https_context = ssl._create_unverified_context
 
 log_file = PathHelp.get_file_path('EFIND', 'e_find_log.txt')
 
-sourceFile_dic = {'fileName': PathHelp.get_file_path('TradeWebs', 'Mornsun.xlsx'),
-                  'sourceSheet': 'ppn2',
+sourceFile_dic = {'fileName': PathHelp.get_file_path(None, 'TRU202412_7k.xlsx'),
+                  'sourceSheet': 'ppn4',
                   'colIndex': 1,
-                  'startIndex': 195,
-                  'endIndex': 260}
-task_name = 'Mornsun'
+                  'startIndex':166+83,
+                  'endIndex': 333}
+task_name = 'TRU202412_7k'
+
 
 try:
     driver = ChromeDriverManager.getWebDriver(4)
@@ -33,6 +33,8 @@ def analy_html(cate_index, cate_name, st_manu):
     input_area.send_keys(cate_name)
     btn = driver.find_element(By.CSS_SELECTOR, 'input.sbtn')
     btn.click()
+    # url = URLManager.efind_stock_url(cate_name, True)
+    # driver.get(url)
     WaitHelp.waitfor(True, False)
     total_stock = 0
     all_supplier = []
@@ -42,36 +44,37 @@ def analy_html(cate_index, cate_name, st_manu):
         print("check code")
         check = driver.find_elements(By.ID, 'fbMan1')
     try:
-        sup_list = driver.find_elements(by=By.CSS_SELECTOR, value='div.sr')
-        if sup_list and len(sup_list) > 0:
-            for templi in sup_list:
-                supplier_name = templi.find_element(By.CSS_SELECTOR, 'a.n').text
-                publish_date_ru = templi.find_element(By.CSS_SELECTOR, 'div.l').find_element(By.TAG_NAME, 'span').text
-                publish_date = convert_russian_date_to_chinese(publish_date_ru)
-                table = templi.find_element(By.CSS_SELECTOR, 'table.r')
-                tr_list = table.find_elements(By.CSS_SELECTOR, 'tr.rw')
-                for temp_tr in tr_list:
-                    sup_manu = temp_tr.find_element(By.CSS_SELECTOR, 'td.m').text
-                    sup_ppn = temp_tr.find_element(By.CSS_SELECTOR, 'td.c').find_element(By.TAG_NAME, 'i').text.strip()
-                    if sup_ppn.__contains__(cate_name) or cate_name.__contains__(sup_ppn):
-                        des = temp_tr.find_element(By.CSS_SELECTOR, 'td.n').text.strip()
-                        des = des[0:255]
-                        try:
-                            price = temp_tr.find_element(By.CSS_SELECTOR, 'td.p').find_element(By.TAG_NAME, 'ul').text
-                        except:
-                            price = ''
-                        try:
-                            stock_str = temp_tr.find_element(By.CSS_SELECTOR, 'td.s').text.split()[0].strip()
-                            stock = int(stock_str)
-                        except:
-                            stock = 0
-                        total_stock += stock
-                        # # (ppn, manu, sup_manu, supplier, publish_date, info, price, stock, task_name)
-                        all_supplier.append([cate_name, st_manu, sup_manu, supplier_name, publish_date, des, price, str(stock), task_name])
-            if len(all_supplier) > 0:
-                MySqlHelp_recommanded.DBRecommandChip().efind_stock_write(all_supplier)
-                time.sleep(5.0)
-                get_supplier(cate_name, st_manu, total_stock)
+        get_supplier(cate_name, st_manu, total_stock)
+    #     sup_list = driver.find_elements(by=By.CSS_SELECTOR, value='div.sr')
+    #     if sup_list and len(sup_list) > 0:
+    #         for templi in sup_list:
+    #             supplier_name = templi.find_element(By.CSS_SELECTOR, 'a.n').text
+    #             publish_date_ru = templi.find_element(By.CSS_SELECTOR, 'div.l').find_element(By.TAG_NAME, 'span').text
+    #             publish_date = convert_russian_date_to_chinese(publish_date_ru)
+    #             table = templi.find_element(By.CSS_SELECTOR, 'table.r')
+    #             tr_list = table.find_elements(By.CSS_SELECTOR, 'tr.rw')
+    #             for temp_tr in tr_list:
+    #                 sup_manu = temp_tr.find_element(By.CSS_SELECTOR, 'td.m').text
+    #                 sup_ppn = temp_tr.find_element(By.CSS_SELECTOR, 'td.c').find_element(By.TAG_NAME, 'i').text.strip()
+    #                 if sup_ppn.__contains__(cate_name) or cate_name.__contains__(sup_ppn):
+    #                     des = temp_tr.find_element(By.CSS_SELECTOR, 'td.n').text.strip()
+    #                     des = des[0:255]
+    #                     try:
+    #                         price = temp_tr.find_element(By.CSS_SELECTOR, 'td.p').find_element(By.TAG_NAME, 'ul').text
+    #                     except:
+    #                         price = ''
+    #                     try:
+    #                         stock_str = temp_tr.find_element(By.CSS_SELECTOR, 'td.s').text.split()[0].strip()
+    #                         stock = int(stock_str)
+    #                     except:
+    #                         stock = 0
+    #                     total_stock += stock
+    #                     # # (ppn, manu, sup_manu, supplier, publish_date, info, price, stock, task_name)
+    #                     all_supplier.append([cate_name, st_manu, sup_manu, supplier_name, publish_date, des, price, str(stock), task_name])
+    #         if len(all_supplier) > 0:
+    #             MySqlHelp_recommanded.DBRecommandChip().efind_stock_write(all_supplier)
+    #             time.sleep(5.0)
+    #            get_supplier(cate_name, st_manu, total_stock)
     except Exception as e:
         LogHelper.write_log(log_file, f'analy_html error:{e}')
 

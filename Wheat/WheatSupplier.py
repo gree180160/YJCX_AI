@@ -6,7 +6,7 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 from WRTools import ChromeDriverManager
 import ssl
-from Manager import AccManage, TaskManager
+from Manager import AccManage
 from WRTools import ExcelHelp, WaitHelp, PathHelp, LogHelper
 import time
 

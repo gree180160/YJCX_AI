@@ -595,3 +595,237 @@ Process finished with exit code 130 (interrupted by signal 2: SIGINT)
 2024-11-21 17:00:33login check exception：Message: element click intercepted: Element <a href="javascript:;" class="bom_power_a bom_layer_login">...</a> is not clickable at point (418, 342). Other element would receive the click: <img class="advert-img" src="//static.bom.ai/assets/img/dialogAdvert/dzw.jpg">
   (Session info: chrome=114.0.5735.133)
 
+2024-12-11 15:31:11login check exception：Message: element click intercepted: Element <a href="javascript:;" class="bom_power_a bom_layer_login">...</a> is not clickable at point (418, 526). Other element would receive the click: <img class="advert-img" src="//static.bom.ai/assets/img/dialogAdvert/dzw.jpg">
+  (Session info: chrome=114.0.5735.133)
+
+2024-12-11 15:33:42login check exception：Message: element click intercepted: Element <a href="javascript:;" class="bom_power_a bom_layer_login">...</a> is not clickable at point (418, 526). Other element would receive the click: <img class="advert-img" src="//static.bom.ai/assets/img/dialogAdvert/dzw.jpg">
+  (Session info: chrome=114.0.5735.133)
+
+2024-12-12 09:55:05login check exception：Message: element click intercepted: Element <a href="javascript:;" class="bom_power_a bom_layer_login">...</a> is not clickable at point (418, 526). Other element would receive the click: <img class="advert-img" src="//static.bom.ai/assets/img/dialogAdvert/dzw.jpg">
+  (Session info: chrome=114.0.5735.133)
+
+2024-12-12 09:57:09login check exception：Message: element click intercepted: Element <a href="javascript:;" class="bom_power_a bom_layer_login">...</a> is not clickable at point (418, 526). Other element would receive the click: <img class="advert-img" src="//static.bom.ai/assets/img/dialogAdvert/dzw.jpg">
+  (Session info: chrome=114.0.5735.133)
+
+2024-12-12 18:37:21click more error Message: element not interactable
+  (Session info: chrome=114.0.5735.133)
+
+2024-12-13 09:31:40login check exception：Message: element click intercepted: Element <a href="javascript:;" class="bom_power_a bom_layer_login">...</a> is not clickable at point (418, 526). Other element would receive the click: <img class="advert-img" src="//static.bom.ai/assets/img/dialogAdvert/dzw.jpg">
+  (Session info: chrome=114.0.5735.133)
+
+2024-12-13 09:35:02login check exception：Message: element click intercepted: Element <a href="javascript:;" class="bom_power_a bom_layer_login">...</a> is not clickable at point (418, 526). Other element would receive the click: <img class="advert-img" src="//static.bom.ai/assets/img/dialogAdvert/dzw.jpg">
+  (Session info: chrome=114.0.5735.133)
+
+2024-12-14 16:04:18login check exception：Message: element click intercepted: Element <a href="javascript:;" class="bom_power_a bom_layer_login">...</a> is not clickable at point (418, 526). Other element would receive the click: <img class="advert-img" src="//static.bom.ai/assets/img/dialogAdvert/dzw.jpg">
+  (Session info: chrome=114.0.5735.133)
+
+2024-12-14 16:07:09login check exception：Message: element click intercepted: Element <a href="javascript:;" class="bom_power_a bom_layer_login">...</a> is not clickable at point (418, 526). Other element would receive the click: <img class="advert-img" src="//static.bom.ai/assets/img/dialogAdvert/dzw.jpg">
+  (Session info: chrome=114.0.5735.133)
+
+2024-12-16 11:17:42login check exception：Message: element click intercepted: Element <a href="javascript:;" class="bom_power_a bom_layer_login">...</a> is not clickable at point (418, 526). Other element would receive the click: <img class="advert-img" src="//static.bom.ai/assets/img/dialogAdvert/dzw.jpg">
+  (Session info: chrome=114.0.5735.133)
+
+2024-12-16 11:18:37login check exception：Message: element click intercepted: Element <a href="javascript:;" class="bom_power_a bom_layer_login">...</a> is not clickable at point (418, 526). Other element would receive the click: <img class="advert-img" src="//static.bom.ai/assets/img/dialogAdvert/dzw.jpg">
+  (Session info: chrome=114.0.5735.133)
+
+2024-12-16 18:17:14click more error Message: element not interactable
+  (Session info: chrome=114.0.5735.133)
+
+2024-12-17 10:25:06cate is: SDM03U40-7 index is:98 , error is : expected 1 argument, got 0
+2024-12-17 10:25:07cate is: SDM03U40-7 index is:98 , error is : expected 1 argument, got 0
+2024-12-17 10:27:56cate is: S8MC-13 index is:99 , error is : expected 1 argument, got 0
+2024-12-17 10:27:56cate is: S8MC-13 index is:99 , error is : expected 1 argument, got 0
+2024-12-17 10:28:23cate is: ACPL-333J-500E index is:202 , error is : expected 1 argument, got 0
+2024-12-17 10:28:24cate is: ACPL-333J-500E index is:202 , error is : expected 1 argument, got 0
+2024-12-17 10:28:24cate is: ACPL-333J-500E index is:202 , error is : expected 1 argument, got 0
+2024-12-17 10:31:34cate is: ACPL-C87B-500E index is:203 , error is : expected 1 argument, got 0
+2024-12-17 10:33:15cate is: ZRC250F01TA index is:100 , error is : expected 1 argument, got 0
+2024-12-17 10:33:16cate is: ZRC250F01TA index is:100 , error is : expected 1 argument, got 0
+2024-12-17 10:33:16cate is: ZRC250F01TA index is:100 , error is : expected 1 argument, got 0
+2024-12-17 10:33:16cate is: ZRC250F01TA index is:100 , error is : expected 1 argument, got 0
+2024-12-17 10:33:16cate is: ZRC250F01TA index is:100 , error is : expected 1 argument, got 0
+2024-12-17 10:33:17cate is: ZRC250F01TA index is:100 , error is : expected 1 argument, got 0
+2024-12-17 10:33:17cate is: ZRC250F01TA index is:100 , error is : expected 1 argument, got 0
+2024-12-17 10:33:17cate is: ZRC250F01TA index is:100 , error is : expected 1 argument, got 0
+2024-12-17 10:37:05cate is: HFBR-2522Z index is:205 , error is : expected 1 argument, got 0
+2024-12-17 10:37:06cate is: HFBR-2522Z index is:205 , error is : expected 1 argument, got 0
+2024-12-17 10:37:07cate is: BZT52C12-7-F index is:101 , error is : expected 1 argument, got 0
+2024-12-17 10:40:34cate is: BC847B-7-F index is:102 , error is : expected 1 argument, got 0
+2024-12-17 10:40:34cate is: BC847B-7-F index is:102 , error is : expected 1 argument, got 0
+2024-12-17 10:40:35cate is: BC847B-7-F index is:102 , error is : expected 1 argument, got 0
+2024-12-17 10:40:35cate is: BC847B-7-F index is:102 , error is : expected 1 argument, got 0
+2024-12-17 10:40:35cate is: BC847B-7-F index is:102 , error is : expected 1 argument, got 0
+2024-12-17 10:40:35cate is: BC847B-7-F index is:102 , error is : expected 1 argument, got 0
+2024-12-17 10:40:35cate is: BC847B-7-F index is:102 , error is : expected 1 argument, got 0
+2024-12-17 10:40:35cate is: BC847B-7-F index is:102 , error is : expected 1 argument, got 0
+2024-12-17 10:40:35cate is: BC847B-7-F index is:102 , error is : expected 1 argument, got 0
+2024-12-17 10:40:36cate is: BC847B-7-F index is:102 , error is : expected 1 argument, got 0
+2024-12-17 10:40:36cate is: BC847B-7-F index is:102 , error is : expected 1 argument, got 0
+2024-12-17 10:43:44cate is: HFBR-1531Z index is:206 , error is : expected 1 argument, got 0
+2024-12-17 10:43:44cate is: HFBR-1531Z index is:206 , error is : expected 1 argument, got 0
+2024-12-17 10:43:44cate is: HFBR-1531Z index is:206 , error is : expected 1 argument, got 0
+2024-12-17 10:43:45cate is: HFBR-1531Z index is:206 , error is : expected 1 argument, got 0
+2024-12-17 10:43:45cate is: HFBR-1531Z index is:206 , error is : expected 1 argument, got 0
+2024-12-17 10:47:04cate is: HCPL-181-000E index is:207 , error is : expected 1 argument, got 0
+2024-12-17 10:47:05cate is: HCPL-181-000E index is:207 , error is : expected 1 argument, got 0
+2024-12-17 10:49:08cate is: PAM8302AASCR index is:104 , error is : expected 1 argument, got 0
+2024-12-17 10:49:08cate is: PAM8302AASCR index is:104 , error is : expected 1 argument, got 0
+2024-12-17 10:51:24cate is: HFBR-2531Z index is:208 , error is : expected 1 argument, got 0
+2024-12-17 10:55:28cate is: HCPL-0201-500E index is:209 , error is : expected 1 argument, got 0
+2024-12-17 10:55:28cate is: HCPL-0201-500E index is:209 , error is : expected 1 argument, got 0
+2024-12-17 10:55:28cate is: HCPL-0201-500E index is:209 , error is : expected 1 argument, got 0
+2024-12-17 10:55:28cate is: HCPL-0201-500E index is:209 , error is : expected 1 argument, got 0
+2024-12-17 10:55:28cate is: HCPL-0201-500E index is:209 , error is : expected 1 argument, got 0
+2024-12-17 11:02:37cate is: AH180N-WG-7 index is:106 , error is : expected 1 argument, got 0
+2024-12-17 11:02:37cate is: AH180N-WG-7 index is:106 , error is : expected 1 argument, got 0
+2024-12-17 11:11:09cate is: KBP206G-LS index is:108 , error is : expected 1 argument, got 0
+2024-12-17 11:11:10cate is: KBP206G-LS index is:108 , error is : expected 1 argument, got 0
+2024-12-17 11:12:51cate is: HFBR-4501Z index is:211 , error is : expected 1 argument, got 0
+2024-12-17 11:12:51cate is: HFBR-4501Z index is:211 , error is : expected 1 argument, got 0
+2024-12-17 11:16:06cate is: HFBR-4511Z index is:212 , error is : expected 1 argument, got 0
+2024-12-17 11:16:07cate is: HFBR-4511Z index is:212 , error is : expected 1 argument, got 0
+2024-12-17 11:16:07cate is: HFBR-4511Z index is:212 , error is : expected 1 argument, got 0
+2024-12-17 11:20:17cate is: ACPL-W61L-500E index is:213 , error is : expected 1 argument, got 0
+2024-12-17 11:23:39cate is: AFBR-2521CZ index is:214 , error is : expected 1 argument, got 0
+2024-12-17 11:23:39cate is: AFBR-2521CZ index is:214 , error is : expected 1 argument, got 0
+2024-12-17 11:23:39cate is: AFBR-2521CZ index is:214 , error is : expected 1 argument, got 0
+2024-12-17 11:31:07cate is: HCPL-181-00AE index is:216 , error is : expected 1 argument, got 0
+2024-12-17 11:34:25cate is: ACPL-352J-500E index is:217 , error is : expected 1 argument, got 0
+2024-12-17 11:38:14cate is: HCNW3120-000E index is:218 , error is : expected 1 argument, got 0
+2024-12-17 11:38:15cate is: HCNW3120-000E index is:218 , error is : expected 1 argument, got 0
+2024-12-17 11:38:15cate is: HCNW3120-000E index is:218 , error is : expected 1 argument, got 0
+2024-12-17 11:38:15cate is: HCNW3120-000E index is:218 , error is : expected 1 argument, got 0
+2024-12-17 11:42:37cate is: 1N4148W index is:219 , error is : expected 1 argument, got 0
+2024-12-17 11:42:37cate is: 1N4148W index is:219 , error is : expected 1 argument, got 0
+2024-12-17 11:42:37cate is: 1N4148W index is:219 , error is : expected 1 argument, got 0
+2024-12-17 11:42:37cate is: 1N4148W index is:219 , error is : expected 1 argument, got 0
+2024-12-17 11:42:37cate is: 1N4148W index is:219 , error is : expected 1 argument, got 0
+2024-12-17 11:42:37cate is: 1N4148W index is:219 , error is : expected 1 argument, got 0
+2024-12-17 11:42:37cate is: 1N4148W index is:219 , error is : expected 1 argument, got 0
+2024-12-17 11:42:37cate is: 1N4148W index is:219 , error is : expected 1 argument, got 0
+2024-12-17 11:42:38cate is: 1N4148W index is:219 , error is : expected 1 argument, got 0
+2024-12-17 11:42:38cate is: 1N4148W index is:219 , error is : expected 1 argument, got 0
+2024-12-17 11:42:38cate is: 1N4148W index is:219 , error is : expected 1 argument, got 0
+2024-12-17 11:42:38cate is: 1N4148W index is:219 , error is : expected 1 argument, got 0
+2024-12-17 11:42:38cate is: 1N4148W index is:219 , error is : expected 1 argument, got 0
+2024-12-17 11:42:38cate is: 1N4148W index is:219 , error is : expected 1 argument, got 0
+2024-12-17 11:42:38cate is: 1N4148W index is:219 , error is : expected 1 argument, got 0
+2024-12-17 11:42:38cate is: 1N4148W index is:219 , error is : expected 1 argument, got 0
+2024-12-17 11:42:38cate is: 1N4148W index is:219 , error is : expected 1 argument, got 0
+2024-12-17 11:42:38cate is: 1N4148W index is:219 , error is : expected 1 argument, got 0
+2024-12-17 11:42:38cate is: 1N4148W index is:219 , error is : expected 1 argument, got 0
+2024-12-17 11:42:38cate is: 1N4148W index is:219 , error is : expected 1 argument, got 0
+2024-12-17 11:42:38cate is: 1N4148W index is:219 , error is : expected 1 argument, got 0
+2024-12-17 11:42:39cate is: 1N4148W index is:219 , error is : expected 1 argument, got 0
+2024-12-17 11:42:39cate is: 1N4148W index is:219 , error is : expected 1 argument, got 0
+2024-12-17 11:42:39cate is: 1N4148W index is:219 , error is : expected 1 argument, got 0
+2024-12-17 11:42:39cate is: 1N4148W index is:219 , error is : expected 1 argument, got 0
+2024-12-17 11:42:39cate is: 1N4148W index is:219 , error is : expected 1 argument, got 0
+2024-12-17 11:42:39cate is: 1N4148W index is:219 , error is : expected 1 argument, got 0
+2024-12-17 11:42:39cate is: 1N4148W index is:219 , error is : expected 1 argument, got 0
+2024-12-17 11:42:39cate is: 1N4148W index is:219 , error is : expected 1 argument, got 0
+2024-12-17 11:42:39cate is: 1N4148W index is:219 , error is : expected 1 argument, got 0
+2024-12-17 11:42:39cate is: 1N4148W index is:219 , error is : expected 1 argument, got 0
+2024-12-17 11:42:39cate is: 1N4148W index is:219 , error is : expected 1 argument, got 0
+2024-12-17 11:42:39cate is: 1N4148W index is:219 , error is : expected 1 argument, got 0
+2024-12-17 11:42:39cate is: 1N4148W index is:219 , error is : expected 1 argument, got 0
+2024-12-17 11:42:39cate is: 1N4148W index is:219 , error is : expected 1 argument, got 0
+2024-12-17 11:42:39cate is: 1N4148W index is:219 , error is : expected 1 argument, got 0
+2024-12-17 11:42:40cate is: 1N4148W index is:219 , error is : expected 1 argument, got 0
+2024-12-17 11:42:40cate is: 1N4148W index is:219 , error is : expected 1 argument, got 0
+2024-12-17 11:42:40cate is: 1N4148W index is:219 , error is : expected 1 argument, got 0
+2024-12-17 11:42:40cate is: 1N4148W index is:219 , error is : expected 1 argument, got 0
+2024-12-17 11:42:40cate is: 1N4148W index is:219 , error is : expected 1 argument, got 0
+2024-12-17 11:42:40cate is: 1N4148W index is:219 , error is : expected 1 argument, got 0
+2024-12-17 11:42:40cate is: 1N4148W index is:219 , error is : expected 1 argument, got 0
+2024-12-17 11:42:40cate is: 1N4148W index is:219 , error is : expected 1 argument, got 0
+2024-12-17 11:42:40cate is: 1N4148W index is:219 , error is : expected 1 argument, got 0
+2024-12-17 11:42:40cate is: 1N4148W index is:219 , error is : expected 1 argument, got 0
+2024-12-17 11:42:40cate is: 1N4148W index is:219 , error is : expected 1 argument, got 0
+2024-12-17 11:42:40cate is: 1N4148W index is:219 , error is : expected 1 argument, got 0
+2024-12-17 11:42:40cate is: 1N4148W index is:219 , error is : expected 1 argument, got 0
+2024-12-17 11:42:40cate is: 1N4148W index is:219 , error is : expected 1 argument, got 0
+2024-12-17 11:42:40cate is: 1N4148W index is:219 , error is : expected 1 argument, got 0
+2024-12-17 11:42:41cate is: 1N4148W index is:219 , error is : expected 1 argument, got 0
+2024-12-17 11:42:41cate is: 1N4148W index is:219 , error is : expected 1 argument, got 0
+2024-12-17 11:42:41cate is: 1N4148W index is:219 , error is : expected 1 argument, got 0
+2024-12-17 11:42:41cate is: 1N4148W index is:219 , error is : expected 1 argument, got 0
+2024-12-17 11:42:41cate is: 1N4148W index is:219 , error is : expected 1 argument, got 0
+2024-12-17 11:42:41cate is: 1N4148W index is:219 , error is : expected 1 argument, got 0
+2024-12-17 11:42:41cate is: 1N4148W index is:219 , error is : expected 1 argument, got 0
+2024-12-17 11:42:41cate is: 1N4148W index is:219 , error is : expected 1 argument, got 0
+2024-12-17 11:42:41cate is: 1N4148W index is:219 , error is : expected 1 argument, got 0
+2024-12-17 11:42:41cate is: 1N4148W index is:219 , error is : expected 1 argument, got 0
+2024-12-17 11:42:41cate is: 1N4148W index is:219 , error is : expected 1 argument, got 0
+2024-12-17 11:42:41cate is: 1N4148W index is:219 , error is : expected 1 argument, got 0
+2024-12-17 11:42:41cate is: 1N4148W index is:219 , error is : expected 1 argument, got 0
+2024-12-17 11:42:41cate is: 1N4148W index is:219 , error is : expected 1 argument, got 0
+2024-12-17 11:42:42cate is: 1N4148W index is:219 , error is : expected 1 argument, got 0
+2024-12-17 11:42:42cate is: 1N4148W index is:219 , error is : expected 1 argument, got 0
+2024-12-17 11:42:42cate is: 1N4148W index is:219 , error is : expected 1 argument, got 0
+2024-12-17 11:42:42cate is: 1N4148W index is:219 , error is : expected 1 argument, got 0
+2024-12-17 11:42:42cate is: 1N4148W index is:219 , error is : expected 1 argument, got 0
+2024-12-17 11:42:42cate is: 1N4148W index is:219 , error is : expected 1 argument, got 0
+2024-12-17 11:42:42cate is: 1N4148W index is:219 , error is : expected 1 argument, got 0
+2024-12-17 11:42:42cate is: 1N4148W index is:219 , error is : expected 1 argument, got 0
+2024-12-17 11:42:42cate is: 1N4148W index is:219 , error is : expected 1 argument, got 0
+2024-12-17 11:42:42cate is: 1N4148W index is:219 , error is : expected 1 argument, got 0
+2024-12-17 11:42:42cate is: 1N4148W index is:219 , error is : expected 1 argument, got 0
+2024-12-17 11:42:42cate is: 1N4148W index is:219 , error is : expected 1 argument, got 0
+2024-12-17 11:42:42cate is: 1N4148W index is:219 , error is : expected 1 argument, got 0
+2024-12-17 11:42:42cate is: 1N4148W index is:219 , error is : expected 1 argument, got 0
+2024-12-17 11:42:42cate is: 1N4148W index is:219 , error is : expected 1 argument, got 0
+2024-12-17 11:42:43cate is: 1N4148W index is:219 , error is : expected 1 argument, got 0
+2024-12-17 11:42:43cate is: 1N4148W index is:219 , error is : expected 1 argument, got 0
+2024-12-17 11:42:43cate is: 1N4148W index is:219 , error is : expected 1 argument, got 0
+2024-12-17 11:42:43cate is: 1N4148W index is:219 , error is : expected 1 argument, got 0
+2024-12-17 11:42:43cate is: 1N4148W index is:219 , error is : expected 1 argument, got 0
+2024-12-17 11:42:43cate is: 1N4148W index is:219 , error is : expected 1 argument, got 0
+2024-12-17 11:42:43cate is: 1N4148W index is:219 , error is : expected 1 argument, got 0
+2024-12-17 11:42:43cate is: 1N4148W index is:219 , error is : expected 1 argument, got 0
+2024-12-17 11:42:43cate is: 1N4148W index is:219 , error is : expected 1 argument, got 0
+2024-12-17 11:42:43cate is: 1N4148W index is:219 , error is : expected 1 argument, got 0
+2024-12-17 11:42:43cate is: 1N4148W index is:219 , error is : expected 1 argument, got 0
+2024-12-17 11:42:43cate is: 1N4148W index is:219 , error is : expected 1 argument, got 0
+2024-12-17 11:42:43cate is: 1N4148W index is:219 , error is : expected 1 argument, got 0
+2024-12-17 11:42:43cate is: 1N4148W index is:219 , error is : expected 1 argument, got 0
+2024-12-17 11:42:43cate is: 1N4148W index is:219 , error is : expected 1 argument, got 0
+2024-12-17 11:42:43cate is: 1N4148W index is:219 , error is : expected 1 argument, got 0
+2024-12-17 11:42:44cate is: 1N4148W index is:219 , error is : expected 1 argument, got 0
+2024-12-17 11:42:44cate is: 1N4148W index is:219 , error is : expected 1 argument, got 0
+2024-12-17 11:42:44cate is: 1N4148W index is:219 , error is : expected 1 argument, got 0
+2024-12-17 11:42:44cate is: 1N4148W index is:219 , error is : expected 1 argument, got 0
+2024-12-17 11:49:16cate is: AP2210N-3.3TRG1 index is:109 , error is : expected 1 argument, got 0
+2024-12-17 11:49:56cate is: AP2210N-3.3TRG1 index is:109 , error is : expected 1 argument, got 0
+2024-12-17 11:49:56cate is: AP2210N-3.3TRG1 index is:109 , error is : expected 1 argument, got 0
+2024-12-17 11:51:14cate is: BZT52C5V1S-7-F index is:221 , error is : expected 1 argument, got 0
+2024-12-17 11:51:14cate is: BZT52C5V1S-7-F index is:221 , error is : expected 1 argument, got 0
+2024-12-17 11:51:15cate is: BZT52C5V1S-7-F index is:221 , error is : expected 1 argument, got 0
+2024-12-17 11:53:19cate is: DMP3013SFV-7 index is:110 , error is : expected 1 argument, got 0
+2024-12-17 11:53:20cate is: DMP3013SFV-7 index is:110 , error is : expected 1 argument, got 0
+2024-12-17 11:55:29cate is: BCM89811B1AWMLG index is:222 , error is : expected 1 argument, got 0
+2024-12-17 11:55:29cate is: BCM89811B1AWMLG index is:222 , error is : expected 1 argument, got 0
+2024-12-17 11:57:12cate is: AP7335-WG-7 index is:111 , error is : expected 1 argument, got 0
+2024-12-17 11:57:13cate is: AP7335-WG-7 index is:111 , error is : expected 1 argument, got 0
+2024-12-17 11:57:13cate is: AP7335-WG-7 index is:111 , error is : expected 1 argument, got 0
+2024-12-17 11:57:13cate is: AP7335-WG-7 index is:111 , error is : expected 1 argument, got 0
+2024-12-17 12:02:43cate is: ES1A-13-F index is:224 , error is : expected 1 argument, got 0
+2024-12-17 12:02:43cate is: ES1A-13-F index is:224 , error is : expected 1 argument, got 0
+2024-12-17 17:13:47click more error Message: element click intercepted: Element <a href="javascript:void(0)" class="bomID_extStock_More" data-startindex="1" data-for="sixpage" data-pagesize="15" data-hasids="4">...</a> is not clickable at point (891, 370). Other element would receive the click: <div class="title">...</div>
+  (Session info: chrome=114.0.5735.133)
+
+2024-12-17 17:22:35click more error Message: element click intercepted: Element <a href="javascript:void(0)" class="bomID_extStock_More" data-startindex="1" data-for="sixpage" data-pagesize="15" data-hasids="4">...</a> is not clickable at point (890, 370). Other element would receive the click: <div class="title">...</div>
+  (Session info: chrome=114.0.5735.133)
+
+2024-12-18 11:40:43click more error Message: element not interactable
+  (Session info: chrome=114.0.5735.133)
+
+2024-12-19 16:39:20click more error Message: element not interactable
+  (Session info: chrome=114.0.5735.133)
+
+2024-12-19 19:38:43click more error Message: element not interactable
+  (Session info: chrome=114.0.5735.133)
+
+2024-12-19 20:11:50click more error Message: element not interactable
+  (Session info: chrome=114.0.5735.133)
+

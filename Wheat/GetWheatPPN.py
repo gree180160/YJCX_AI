@@ -8,7 +8,7 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.common.action_chains import ActionChains
 from WRTools import ChromeDriverManager
 import ssl
-from Manager import AccManage, TaskManager
+from Manager import AccManage
 from WRTools import ExcelHelp, WaitHelp, PathHelp, LogHelper, MySqlHelp_recommanded
 import time
 

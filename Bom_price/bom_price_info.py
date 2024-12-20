@@ -19,10 +19,9 @@ class Bom_price_info:
             return False
         if self.quoted_price.__contains__("*"):
             return False
-        if self.release_time.__contains__('周') or self.release_time.__contains__('API实时'):
+        if self.release_time.__contains__('1月内') or self.release_time.__contains__("周内") or self.release_time.__contains__('API实时'):
             return True
-        valid_time_arr = ['3天内', '1周内', '今天', '昨天', '1月内']
-        if valid_time_arr.__contains__(self.release_time):
+        elif self.release_time.__contains__('天') or self.release_time.__contains__('小时'):
             return True
         else:
             numberDays = WRTools.WaitHelp.daysPassed(self.release_time)

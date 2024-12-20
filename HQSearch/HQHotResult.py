@@ -14,7 +14,6 @@ import base64
 from statistics import mean
 import math
 from WRTools import PathHelp, ExcelHelp, MySqlHelp_recommanded
-from Manager import TaskManager
 # cate_source_file = PathHelp.get_file_path(None, 'TLK240322.xlsx') #PathHelp.get_file_path(None, '/Users/liuhe/Downloads/TTIMilitary.xlsx')
 # 根据规则匹配判断型号是否符合热度标准。
 
@@ -150,8 +149,8 @@ def read_record(save_file, task_name):
 
 
 if __name__ == "__main__":
-    aim_file = PathHelp.get_file_path(None, 'THolt2411.xlsx')
-    task_name = 'THolt2411'
+    aim_file = PathHelp.get_file_path(None, 'TNXP_RF.xlsx')
+    task_name = 'TNXP_RF'
     read_record(aim_file, task_name)
     time.sleep(3.0)
     HQ_hot_result2(aim_file)

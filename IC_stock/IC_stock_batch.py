@@ -5,16 +5,16 @@ import random
 from WRTools import ChromeDriverManager
 import ssl
 from IC_stock.IC_Stock_Info import IC_Stock_Info
-from Manager import AccManage, URLManager, TaskManager
+from Manager import AccManage, URLManager
 from WRTools import ExcelHelp, WaitHelp, PathHelp, EmailHelper, MySqlHelp_recommanded
 
 ssl._create_default_https_context = ssl._create_unverified_context
 
-sourceFile_dic = {'fileName': PathHelp.get_file_path(None, f'{TaskManager.Taskmanger().task_name}.xlsx'),
+sourceFile_dic = {'fileName': PathHelp.get_file_path(None, f'00.xlsx'),
                   'sourceSheet': 'ppn',
                   'colIndex': 1,
                   'startIndex': 549,
-                  'endIndex': TaskManager.Taskmanger().end_index}
+                  'endIndex': 0}
 
 total_page = 1
 current_page = 1
@@ -148,7 +148,7 @@ def get_stock(cate_index, cate_name,st_manu):
                                           supplier_manu=manufacturer,
                                           stock_num=stock_num)
             if ic_Stock_Info.shouldSave():
-                saveContent_arr = ic_Stock_Info.descritpion_arr() + [TaskManager.Taskmanger().task_name]
+                saveContent_arr = ic_Stock_Info.descritpion_arr()
                 if int(ic_Stock_Info.stock_num) > max_stock:
                     need_save_ic_info = saveContent_arr
                     max_stock = int(ic_Stock_Info.stock_num)

@@ -8,7 +8,6 @@ from Findchips_stock import findchips_stock_info, findchips_stock_cate
 import IC_Search.IC_search_Image
 import Statistic_data.statistic_price_sheet
 from Bom_price import BomResult
-from Manager import TaskManager
 
 # ------------findchip----------------------
 # 将临时保存的数据转移到汇总数据到excel
@@ -475,7 +474,10 @@ def IC_HQ_Result2(save_file, rate):
                 break;
         for temp_bom in bom_info:
             if temp_bom[0] == temp_ppnInfo[0]:
-                ppn_result[17] = temp_bom[2]
+                if temp_bom.__len__() > 2:
+                    ppn_result[17] = temp_bom[2]
+                else:
+                    ppn_result[17] = ''
                 break;
         result.append(ppn_result)
     ExcelHelp.add_arr_to_sheet(save_file, "Result", result)
@@ -640,6 +642,6 @@ if __name__ == "__main__":
     # IC_HQ_Result(7.01)
     # calculateCost()
     # temp()
-    save_file = PathHelp.get_file_path(None, 'TMitsubishiIGBT2411.xlsx')
+    save_file = PathHelp.get_file_path(None, 'TNXP_RF.xlsx')
     IC_HQ_Result2(save_file, 1.0)
 

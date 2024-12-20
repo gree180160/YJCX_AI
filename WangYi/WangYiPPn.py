@@ -18,12 +18,12 @@ driver.set_page_load_timeout(480)
 
 default_url = 'https://www.wyselect.com/shop/index'
 
-sourceFile_dic = {'fileName': PathHelp.get_file_path("WangYi", 'WangYiTask2024-07.xlsx'),
+sourceFile_dic = {'fileName': PathHelp.get_file_path("WangYi", 'WangYiTask202412.xlsx'),
                   'sourceSheet': 'manu',
                   'colIndex': 1,
                   'startIndex': 0,
                   'endIndex': 2}
-result_save_file = PathHelp.get_file_path("WangYi", 'WangYiTask2024-07.xlsx')
+result_save_file = PathHelp.get_file_path("WangYi", 'WangYiTask202412.xlsx')
 
 log_file = PathHelp.get_file_path('WangYi', 'WYLog.txt')
 
@@ -32,9 +32,8 @@ current_page = 1
 
 
 # 跳转到下一个指定的型号
-def go_manu(pn_index, pn, c_page):
+def go_manu(pn, c_page):
     try:
-        # https://www.good-choice.com/shop/itemList?title=COSEL&title=COSEL&page=3
         url = f'https://www.good-choice.com/shop/itemList?title={pn}&title={pn}&page={c_page}'
         url.replace(' ', '')
         driver.get(url)
@@ -134,7 +133,7 @@ def main():
             continue
         elif pn_index in range(sourceFile_dic['startIndex'], sourceFile_dic['endIndex']):
             print(f'pn_index is: {pn_index}  pn is: {pn}')
-            go_to_cate(pn_index, pn, 1)
+            go_manu(pn, 1)
             analy_html(pn_index, pn)
 
 

@@ -1,9 +1,8 @@
 # 统计pn 在IC 交谊网的热度
 from WRTools import ExcelHelp, PathHelp, MySqlHelp_recommanded
-from Manager import TaskManager
 import base64
 
-pn_file = PathHelp.get_file_path(None, f'{TaskManager.Taskmanger().task_name}.xlsx')
+pn_file = PathHelp.get_file_path(None, f'00.xlsx')
 
 def get_price_level(pn) ->str:
     result = ""

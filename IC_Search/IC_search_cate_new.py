@@ -6,7 +6,7 @@ import random
 from WRTools import ChromeDriverManager
 import ssl
 import os
-from Manager import AccManage, TaskManager, URLManager
+from Manager import AccManage, URLManager
 import base64
 
 log_file = PathHelp.get_file_path('IC_search', 'IC_search_Image_log.txt')
@@ -90,7 +90,7 @@ def anlyth_page(aim_url, cate_name, manu, isWeek):
 
 
 def deal_sql_data(ppn, manu, isWeek, rec_arr):
-    image_hot_data = [ppn, manu] + rec_arr + [TaskManager.Taskmanger.task_name]
+    image_hot_data = [ppn, manu] + rec_arr
     if isWeek:
         MySqlHelp_recommanded.DBRecommandChip().IC_hot_w_write([image_hot_data])
     else:
@@ -136,20 +136,20 @@ def getIC_des(ppn ,manu):
         risk = orangTs[3].text
         mainLand_stock = orangTs[4].text
         international_stock = orangTs[5].text
-        info = [ppn, manu, todaySearch, todaySearch_person, yesterdaySearch, yesterdaySearch_person, reference_price, week_search, market_hot, risk, mainLand_stock, international_stock, TaskManager.Taskmanger().task_name]
+        info = [ppn, manu, todaySearch, todaySearch_person, yesterdaySearch, yesterdaySearch_person, reference_price, week_search, market_hot, risk, mainLand_stock, international_stock]
     except:
-        info = [ppn, manu, '-',  '-',  '-',  '-',  '-', '-',  '-',  '-'  '-',  '-', TaskManager.Taskmanger().task_name]
+        info = [ppn, manu, '-',  '-',  '-',  '-',  '-', '-',  '-',  '-'  '-',  '-']
     result = [info]
     MySqlHelp_recommanded.DBRecommandChip().ic_des_write(result)
 
 
 # 查询列表中所有需要查询的型号的搜索指数
 def main():
-    pn_file = PathHelp.get_file_path(None, f'{TaskManager.Taskmanger().task_name}.xlsx')
+    pn_file = PathHelp.get_file_path(None)
     ppn_list = ExcelHelp.read_col_content(file_name=pn_file, sheet_name='ppn', col_index=1)
     manu_list = ExcelHelp.read_col_content(file_name=pn_file, sheet_name='ppn', col_index=2)
     for (index, ppn) in enumerate(ppn_list):
-        if index in range(0, TaskManager.Taskmanger().end_index): #mac 100   #  if index in range(201, TaskManager.Taskmanger().end_index): #mac 100
+        if index in range(0, 0):
             print(f'cate_index is: {index}  cate_name is: {ppn}')
             manu = manu_list[index]
             getSearchInfo(ppn, manu, True)

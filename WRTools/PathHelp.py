@@ -1,7 +1,6 @@
 from sys import platform
 import os
 import sys
-from Manager import TaskManager
 from WRTools import ExcelHelp
 
 
@@ -58,8 +57,8 @@ def resource_path(relative_path):
 
 
 def change_screenShotName_Firfox(fold_path):
-    pn_file = get_file_path(None, f'{TaskManager.Task_IC_hot_F_manger().task_name}.xlsx')
-    ppn_list = ExcelHelp.read_col_content(file_name=pn_file, sheet_name='ppn', col_index=1)[TaskManager.Task_IC_hot_F_manger().start_index: TaskManager.Task_IC_hot_F_manger().end_index]
+    pn_file = get_file_path(None, f'00.xlsx')
+    ppn_list = ExcelHelp.read_col_content(file_name=pn_file, sheet_name='ppn', col_index=1)[0,0]
     file_name_list = os.listdir(fold_path)
     valid_files = []
     for (index, temp) in enumerate(file_name_list):
@@ -78,8 +77,8 @@ def change_screenShotName_Firfox(fold_path):
 
 
 def change_screenShotName_Chrome(fold_path):
-    pn_file = get_file_path(TaskManager.Task_IC_hot_C_manger().task_name, 'Task.xlsx')
-    ppn_list = ExcelHelp.read_col_content(file_name=pn_file, sheet_name='ppn', col_index=1)[TaskManager.Task_IC_hot_C_manger().start_index: TaskManager.Task_IC_hot_C_manger().end_index]
+    pn_file = get_file_path('0', 'Task.xlsx')
+    ppn_list = ExcelHelp.read_col_content(file_name=pn_file, sheet_name='ppn', col_index=1)[0: 0]
     file_name_list = os.listdir(fold_path)
     valid_files = []
     for (index, temp) in enumerate(file_name_list):
