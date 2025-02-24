@@ -292,36 +292,54 @@ def filterNeeds():
 
 # delet finished ppn
 def deletFinished_ppn():
-    wait_file = PathHelp.get_file_path(None, 'TRU2407_36H.xlsx')
-    waiting_ppns = ExcelHelp.read_sheet_content_by_name(wait_file, 'octopart')
-    history_files = ['/Users/liuhe/Desktop/CalcitrapaAIProject/重点系列/active/TManuAndSeri_36H.xlsx',
-                     '/Users/liuhe/Desktop/CalcitrapaAIProject/重点系列/active/TManuAndSeri_72H.xlsx',
-                     '/Users/liuhe/Desktop/CalcitrapaAIProject/重点系列/active/TManuAndSeri_108H.xlsx',
-                     PathHelp.get_file_path(None, 'TManuAndSeri_144H.xlsx'),
-                     PathHelp.get_file_path(None, 'TManuAndSeri_180H.xlsx')
-                     ]
-    history_ppns = []
-    for temp_file in history_files:
-        temp_ppns = ExcelHelp.read_col_content(temp_file, 'ppn', 1)
-        history_ppns += temp_ppns
+    fold = '/Users/liuhe/Desktop/京创智通/RU询价2412/task'
+    list_file = os.listdir(fold)  # 返回指定目录
     result = []
-    for row_value in waiting_ppns:
-        if not history_ppns.__contains__(row_value[0]):  #历史去重
-            history_ppns.append(row_value[0]) # 自身去重
-            result.append(row_value)
-    ExcelHelp.add_arr_to_sheet(wait_file, sheet_name='ppn', dim_arr=result)
-    print(result)
+    for (index, temp_file) in enumerate(list_file):
+        file_path = fold + "/" + temp_file
+        time.sleep(3.0)
+        print(temp_file)
+        if str(temp_file).__contains__("_Store"):
+            continue
+        sheet_content = ExcelHelp.read_sheet_content_by_name(file_path, 'Result')
+        result += sheet_content
+    ExcelHelp.add_arr_to_sheet(PathHelp.get_file_path(None, 'TRU202412.xlsx'), 'Result', result)
 
 
-def fl_sum():
-    source_file = PathHelp.get_file_path('IC_stock', 'TFL_ICStock.xlsx')
-    result_save_file = PathHelp.get_file_path(None, 'TFL_ICStock2.xlsx')
-    sheets= ['LM732', 'OPA35', 'TPS79', 'DSPIC', 'TPS22']
-    for temp_sheet in sheets:
-        sheet_cont = ExcelHelp.read_sheet_content_by_name(source_file, temp_sheet)
-        new_content = combine(sheet_cont)
-        ExcelHelp.add_arr_to_sheet(result_save_file, temp_sheet, new_content)
-        time.sleep(2.0)
+def contains_chinese(text):
+    for char in text:
+        if '\u4e00' <= char <= '\u9fff':  # 中文字符范围
+            return True
+    return False
+
+def remove_chinese(text):
+    # 使用列表推导式过滤掉中文字符
+    result = ''.join(char for char in text if not ('\u4e00' <= char <= '\u9fff'))
+    return result
+
+
+def remove_repeat():
+    source_file = PathHelp.get_file_path(None, 'TVicorOffboard.xlsx')
+    sheets = "digikey"
+    sheet_cont = ExcelHelp.read_sheet_content_by_name(source_file, sheets)
+
+    history_files = [PathHelp.get_file_path(None, 'TVicorOther.xlsx'),
+                     PathHelp.get_file_path(None, 'TVicorPMIC.xlsx'),
+                     PathHelp.get_file_path(None, 'TVicorOnboard.xlsx')
+                     ]
+    history_apps = []
+    for temp_file in history_files:
+        col_content = ExcelHelp.read_col_content(temp_file, 'ppn', 1)
+        history_apps += col_content
+    result = []
+    for row in sheet_cont:
+       ppn = row[0]
+       if not history_apps.__contains__(ppn):
+          result.append(row)
+          history_apps.append(ppn)
+    ExcelHelp.add_arr_to_sheet(source_file, 'ppn', result)
+
+
 
 
 def combine(source_arr):
@@ -350,7 +368,6 @@ if __name__ == "__main__":
     # time.sleep(3.0)
     # ali()
     # getAllICStockRecord()
-    # deletFinished_ppn()
-    createDayTask(1000)
-    # fl_sum()
+    remove_repeat()
+    # createDayTask(1000)
     # decompositionPPN(300)

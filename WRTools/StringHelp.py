@@ -22,11 +22,14 @@ def IC_batch(source:str):
             result = result + "+"
         elif re.match(r'\d{4}/\d{1,2}', source): # 2325/2
             result = source[0:2]+'+'
+        elif re.match(r'\d+\+\d+\+', source):  # 20+21+
+            result = re.sub(r'\+', '+,', source, count=1)
         elif re.match(r'\d+\+\d+', source): # 22+21
             result = source.replace("+", '+,')
             result = result + "+"
         elif re.match(r'\d+/\d+\+', source): # 19/20+
             result = source.replace("/", '+,')
+
         else:
             result = source
         if result.startswith('0'):
@@ -51,7 +54,7 @@ def strToPrice(source_str):
 
 if __name__ == "__main__":
     # print( IC_batch("21+/30"), IC_batch("19/20+"), IC_batch("2325/2"),   IC_batch("22+21"))
-    aa = strToPrice('¥1028.50/台')
+    aa = IC_batch('20+21+')
     print(aa)
 
 

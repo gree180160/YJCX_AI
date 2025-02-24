@@ -26,7 +26,6 @@ total_page = 0
 login_url = 'https://www.vipmro.com/login?backURL=https%3A%2F%2Fwww.vipmro.com%2F'
 accouts_arr = ['river12345654321', 'Calcitrapa0228']
 
-
 # 获取当前页面的数据
 def get_page_data(manu_id):
     print(f'cate_id is:{manu_id}  current_page is:{current_page} total_page is:{total_page}')
@@ -134,9 +133,11 @@ def loginAction(aim_url):
 
 
 def main():
-    cates = [541112, 541199, 541124, 522012] # 522025, 522026, 522099, 521211, 521210, 24, 522022, 522028, 541110, 541111,
-    for temp in cates:
-        go_to_manu(temp)
+    cates = ExcelHelp.read_col_content(result_save_file, 'cate', 1)
+    for (index, temp) in enumerate(cates):
+        if index >= 26:
+            print(f'index is : {index}')
+            go_to_manu(temp)
 
 
 if __name__ == "__main__":

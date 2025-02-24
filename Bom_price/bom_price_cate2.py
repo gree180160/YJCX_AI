@@ -19,12 +19,12 @@ driver.set_page_load_timeout(120)
 
 accouts_arr = [AccManage.Bom2['c'], AccManage.Bom2['n'], AccManage.Bom2['p']]
 
-sourceFile_dic = {'fileName': PathHelp.get_file_path(None, 'TRU202412_7k.xlsx'),
-                  'sourceSheet': 'ppn4',
+sourceFile_dic = {'fileName': PathHelp.get_file_path(None, 'TInfineonPowerManger.xlsx'),
+                  'sourceSheet': 'ppn2',
                   'colIndex': 1,
-                  'startIndex': 166,
-                  'endIndex': 333}
-task_name = 'TRU202412_7k'
+                  'startIndex': 183,
+                  'endIndex': 238}
+task_name = 'TInfineonPowerManger'
 
 
 default_url = 'https://www.bom.ai/'

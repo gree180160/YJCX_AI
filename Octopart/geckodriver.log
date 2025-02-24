@@ -1,0 +1,86 @@
+1739520577791	geckodriver	INFO	Listening on 127.0.0.1:59933
+1739520578201	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "--remote-debugging-port" "59934" "--remote-allow-hosts" "localhost" "-foreground" "-no-remote" "-profile" "/var/folders/jc/x8nf5scd28v4wrbkt9l72vd00000gn/T/rust_mozprofileLJ60Qy"
+1739520578740	Marionette	INFO	Marionette enabled
+1739520578788	Marionette	INFO	Listening on port 59941
+2025-02-14 16:09:38.857 plugin-container[45329:9321374] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2025-02-14 16:09:38.857 plugin-container[45329:9321374] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2025-02-14 16:09:38.861 plugin-container[45329:9321374] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2025-02-14 16:09:38.861 plugin-container[45329:9321374] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2025-02-14 16:09:38.861 plugin-container[45329:9321376] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2025-02-14 16:09:38.861 plugin-container[45329:9321376] nil host used in call to allowsAnyHTTPSCertificateForHost:
+WebDriver BiDi listening on ws://127.0.0.1:59934
+Read port: 59941
+1739520578923	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+UNSUPPORTED (log once): POSSIBLE ISSUE: unit 1 GLD_TEXTURE_INDEX_2D is unloadable and bound to sampler type (Float) - using zero texture because texture unloadable
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /var/folders/jc/x8nf5scd28v4wrbkt9l72vd00000gn/T/rust_mozprofileLJ60Qy/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:59934/devtools/browser/392474aa-ff97-458d-bc9f-57c5cf5a79e0
+1739520604192	geckodriver	INFO	Listening on 127.0.0.1:60021
+1739520604703	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "--remote-debugging-port" "60022" "--remote-allow-hosts" "localhost" "-foreground" "-no-remote" "-profile" "/var/folders/jc/x8nf5scd28v4wrbkt9l72vd00000gn/T/rust_mozprofilewkUknP"
+1739520605076	Marionette	INFO	Marionette enabled
+2025-02-14 16:10:05.159 plugin-container[45379:9322222] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2025-02-14 16:10:05.160 plugin-container[45379:9322222] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2025-02-14 16:10:05.162 plugin-container[45379:9322222] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2025-02-14 16:10:05.162 plugin-container[45379:9322222] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2025-02-14 16:10:05.163 plugin-container[45379:9322224] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2025-02-14 16:10:05.163 plugin-container[45379:9322224] nil host used in call to allowsAnyHTTPSCertificateForHost:
+1739520605224	Marionette	INFO	Listening on port 60029
+WebDriver BiDi listening on ws://127.0.0.1:60022
+Read port: 60029
+1739520605408	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+UNSUPPORTED (log once): POSSIBLE ISSUE: unit 1 GLD_TEXTURE_INDEX_2D is unloadable and bound to sampler type (Float) - using zero texture because texture unloadable
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /var/folders/jc/x8nf5scd28v4wrbkt9l72vd00000gn/T/rust_mozprofilewkUknP/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:60022/devtools/browser/d6f6493c-1147-40a9-881f-bf4dc686d540
+console.error: (new TypeError("NetworkError: Network request failed", "resource://services-settings/Utils.jsm", 230))
+console.error: (new TypeError("NetworkError: Network request failed", "resource://services-settings/Utils.jsm", 230))
+console.error: (new Error("Polling for changes failed: NetworkError: Network request failed.", "resource://services-settings/remote-settings.js", 334))
+console.error: (new Error("Polling for changes failed: NetworkError: Network request failed.", "resource://services-settings/remote-settings.js", 334))
+1739521240009	geckodriver	INFO	Listening on 127.0.0.1:61923
+1739521240528	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "--remote-debugging-port" "61924" "--r ... s" "localhost" "-foreground" "-no-remote" "-profile" "/var/folders/jc/x8nf5scd28v4wrbkt9l72vd00000gn/T/rust_mozprofileFjaG5z"
+1739521240977	Marionette	INFO	Marionette enabled
+1739521241037	Marionette	INFO	Listening on port 61932
+Read port: 61932
+2025-02-14 16:20:41.054 plugin-container[46341:9334745] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2025-02-14 16:20:41.054 plugin-container[46341:9334745] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2025-02-14 16:20:41.078 plugin-container[46341:9334745] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2025-02-14 16:20:41.078 plugin-container[46341:9334745] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2025-02-14 16:20:41.080 plugin-container[46341:9334751] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2025-02-14 16:20:41.081 plugin-container[46341:9334751] nil host used in call to allowsAnyHTTPSCertificateForHost:
+WebDriver BiDi listening on ws://127.0.0.1:61924
+1739521241200	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+UNSUPPORTED (log once): POSSIBLE ISSUE: unit 1 GLD_TEXTURE_INDEX_2D is unloadable and bound to sampler type (Float) - using zero texture because texture unloadable
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /var/folders/jc/x8nf5scd28v4wrbkt9l72vd00000gn/T/rust_mozprofileFjaG5z/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:61924/devtools/browser/b7810160-e6a1-419c-9da4-c22b6cb5ba15
+2025-02-14 08:21:15.453 plugin-container[46405:9336084] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2025-02-14 08:21:15.454 plugin-container[46405:9336084] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2025-02-14 08:21:15.471 plugin-container[46405:9336084] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2025-02-14 08:21:15.471 plugin-container[46405:9336084] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2025-02-14 08:21:15.471 plugin-container[46405:9336116] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2025-02-14 08:21:15.471 plugin-container[46405:9336116] nil host used in call to allowsAnyHTTPSCertificateForHost:
+JavaScript warning: https://octopart.com/kdRQnL15/init.js, line 3: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+2025-02-14 16:21:31.711 firefox-bin[46339:9334629] TSM AdjustCapsLockLEDForKeyTransitionHandling - _ISSetPhysicalKeyboardCapsLockLED Inhibit
+JavaScript error: https://octopart.com/zh, line 152: ReferenceError: withOneTrust is not defined
+JavaScript warning: https://octopart.com/kdRQnL15/init.js, line 3: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1739521326522	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'interactive'.
+1739521326526	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'interactive'.
+1739521326527	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'interactive'.
+1739521326530	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'interactive'.
+1739521326531	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'interactive'.
+JavaScript warning: https://client.px-cloud.net/PXkdRQnL15/main.min.js, line 3: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+console.error: (new TypeError("lazy.AsyncShutdown.profileBeforeChange is undefined", "resource://services-settings/Database.jsm", 510))
+1739521346348	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'interactive'.
+1739521346349	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'interactive'.
+1739521346350	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'interactive'.
+1739521346353	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'interactive'.
+1739521346354	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'interactive'.
+JavaScript warning: https://client.px-cloud.net/PXkdRQnL15/main.min.js, line 3: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1739521359345	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'interactive'.
+1739521359347	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'interactive'.
+1739521359348	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'interactive'.
+1739521359349	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'interactive'.
+1739521359352	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'interactive'.
+JavaScript warning: https://client.px-cloud.net/PXkdRQnL15/main.min.js, line 3: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+console.error: (new TypeError("NetworkError: Network request failed", "resource://services-settings/Utils.jsm", 230))
+2025-02-14 16:23:47.580 firefox-bin[45327:9321266] TSM AdjustCapsLockLEDForKeyTransitionHandling - _ISSetPhysicalKeyboardCapsLockLED Inhibit
+1739521427694	Marionette	INFO	Stopped listening on port 59941
+1739521431416	Marionette	INFO	Stopped listening on port 60029
+1739521439172	Marionette	INFO	Stopped listening on port 61932

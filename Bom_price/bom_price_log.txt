@@ -829,3 +829,24 @@ Process finished with exit code 130 (interrupted by signal 2: SIGINT)
 2024-12-19 20:11:50click more error Message: element not interactable
   (Session info: chrome=114.0.5735.133)
 
+2024-12-24 17:39:49click more error Message: element not interactable
+  (Session info: chrome=114.0.5735.133)
+
+2024-12-25 13:23:49click more error Message: element not interactable
+  (Session info: chrome=114.0.5735.133)
+
+2024-12-25 13:39:45click more error Message: element not interactable
+  (Session info: chrome=114.0.5735.133)
+
+2024-12-25 13:54:35click more error Message: element not interactable
+  (Session info: chrome=114.0.5735.133)
+
+2024-12-25 13:55:11click more error Message: element not interactable
+  (Session info: chrome=114.0.5735.133)
+
+2024-12-26 11:00:17click more error Message: element click intercepted: Element <a href="javascript:void(0)" class="bomID_extStock_More" data-startindex="1" data-for="sixpage" data-pagesize="15" data-hasids="4">...</a> is not clickable at point (935, 8). Other element would receive the click: <section class="bom_search_length ">...</section>
+  (Session info: chrome=114.0.5735.133)
+
+2024-12-27 10:19:50click more error Message: element not interactable
+  (Session info: chrome=114.0.5735.133)
+

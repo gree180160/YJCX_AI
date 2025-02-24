@@ -1,4 +1,7 @@
-# 根据buyer 获取record
+# 根据ppn获取buyer index 4 page 134 goon;
+# ['Siemens', '2022-02-24', 'Ооо Сименс', 'Siemens Building Technologies Ltd', 'ИЗДЕЛИЕ ИЗ ПЛАСТМАСС (ШТАМПОВКА):', '俄罗斯', '德国', '2023-05-14', '42']
+# 2021-07-16
+# 全世界是最近三年，俄罗斯是打仗前3年
 
 
 import datetime
@@ -16,18 +19,23 @@ import time
 accouts_arr = [AccManage.Wheat['c'], AccManage.Wheat['n'], AccManage.Wheat['p']]
 ssl._create_default_https_context = ssl._create_unverified_context
 
-sourceFile_dic = {'fileName': PathHelp.get_file_path(None, 'TICHot_202401.xlsx'),
-                  'sourceSheet': 'buyer',
+# sourceFile_dic = {'fileName': PathHelp.get_file_path(None, 'TInfineonIGBT.xlsx'),
+#                   'sourceSheet': 'ppn',
+#                   'colIndex': 1,
+#                   'startIndex': 793,
+#                   'endIndex': 1000}
+sourceFile_dic = {'fileName': PathHelp.get_file_path(None, 'TInfineonPowerManger.xlsx'),
+                  'sourceSheet': 'ppn2',
                   'colIndex': 1,
-                  'startIndex': 134, # page5， buyer_index is:
-                  'endIndex': 143}
-
-result_save_file = PathHelp.get_file_path(None, 'TICHot_202401.xlsx')
+                  'startIndex': 0,
+                  'endIndex': 6}
+task_name = "TInfineonPowerManger"
+result_save_file = PathHelp.get_file_path(None, 'TInfineonPowerManger.xlsx')
 result_save_sheet = 'Wheat_buyer'
 logFile = PathHelp.get_file_path('Wheat', 'Wheat_log.txt')
 
-login_url = 'https://app.51wheatsearch.com/gs/index.html#/login'
-default_url = 'https://app.51wheatsearch.com/gs/index.html#/resource/gather/customs'
+login_url = 'https://app.51wheatsearch.com/gs/#/login'
+default_url = 'https://app.51wheatsearch.com/gs/index.html#/resource/customs/queryTools' # 海关数据
 total_page = 1
 current_page = 1 #infenion 305
 
@@ -69,24 +77,41 @@ def loginAction(aim_url):
         sys.exit()
 
 
-def set_filter(start_date:str, end_date:str):
+def set_filter_all():
+    # 获取今天的日期
+    today = datetime.date.today()
+    # 计算三年前的日期
+    three_years_ago = today - datetime.timedelta(days=365 * 3)  # 近似三年
+    # 格式化日期为 'YYYY-MM-DD' 格式
+    end_date = today.strftime('%Y-%m-%d')
+    start_date = three_years_ago.strftime('%Y-%m-%d')
+    set_filter("", start_date, end_date)
+
+
+def set_filter_all():
+    start_date = '2019-12-31'
+    end_date = '2021-12-31'
+    set_filter("俄罗斯", start_date, end_date)
+
+
+def set_filter(country:str, start_date:str, end_date:str):
     driver.get(default_url)
     WaitHelp.waitfor(True, False)
-    #submit form
-    card_one = driver.find_elements(By.CSS_SELECTOR, 'div.ant-card-body')[0]
-    sub_form = card_one.find_elements(By.CSS_SELECTOR, 'div.ant-space-item')[2]
+    # submit form
+    card_one = driver.find_element(By.CSS_SELECTOR, 'div.ant-tabs-nav-list')
+    sub_form = card_one.find_elements(By.CSS_SELECTOR, 'div.ant-tabs-tab')[2]
     sub_form.click()
     WaitHelp.waitfor(False, False)
-    #set filters
-    # contry
-    select_contry = driver.find_elements(By.CSS_SELECTOR, 'span.anticon.anticon-down')[0]
-    select_contry.click()
-    time.sleep(3.0)
-    alert_area = driver.find_elements(By.CSS_SELECTOR, 'div.ant-modal-body')[0]
-    ru_button = alert_area.find_elements(By.XPATH, "//button[@title='俄罗斯']")[0]
-    ru_button.click()
+    # set filters
+    if country.__len__() > 0:
+        select_contry = driver.find_elements(By.CSS_SELECTOR, 'span.anticon.anticon-down')[0]
+        select_contry.click()
+        time.sleep(3.0)
+        alert_area = driver.find_elements(By.CSS_SELECTOR, 'div.ant-modal-body')[0]
+        xpath = f"//button[@title='{country}']"
+        ru_button = alert_area.find_elements(By.XPATH, xpath)[0]
+        ru_button.click()
     # from date
-    # clear default date
     ac = ActionChains(driver)
     pick_start = driver.find_elements(By.CSS_SELECTOR, 'span.ant-picker-suffix')[0]
     ac.move_to_element(pick_start)
@@ -107,38 +132,29 @@ def set_filter(start_date:str, end_date:str):
 
 
 # search one ppn
-def goToBuyer(buyer: str):
+def goToPPN(ppn: str, manu: str):
     try:
-        input_area_buyer = driver.find_elements(By.CSS_SELECTOR, value='input.ant-input')[5]
-        input_area_buyer.clear()
-        input_area_buyer.send_keys('')
-        try:
-            clear_button = driver.find_elements(By.CSS_SELECTOR, "span.ant-input-clear-icon")[5]
-            clear_button.click()
-            time.sleep(2.0)
-        except Exception as e:
-            print(f'can not click clear button 5')
-        input_area_buyer = driver.find_elements(By.CSS_SELECTOR, value='input.ant-input')[5]
-        input_area_buyer.clear()
-        input_area_buyer.send_keys(buyer)
+        input_card_content(0, ppn)
+        # if manu and manu.__len__() > 0:
+        #     input_card_content(12, manu)
+        time.sleep(2.0)
+        #ant-btn ant-btn-primary , 保持搜索按钮在关键词下面
         search_button = driver.find_elements(By.CSS_SELECTOR, 'button.ant-btn.ant-btn-primary')[1]
         search_button.click()
-    except:
-        print('input buyer error')
+    except Exception as e:
+        LogHelper.write_log(logFile, f'click search_button error {e}')
 
 
 # 在input 中delete old content ,input new content
 # item: [提单号, 产品关键词, 产品关键词HS, 采购商名称, 供应商名称]
-def input_card_content(item_index: int , new_content: str):
+def input_card_content(item_index: int, new_content: str):
     try:
-        filter_form_area = driver.find_element(By.CSS_SELECTOR, value='form.ant-form.ant-form-vertical')
-        input_item = filter_form_area.find_elements(By.CSS_SELECTOR, value='input.ant-input')[item_index]
+        input_item = driver.find_elements(By.CSS_SELECTOR, value='input.ant-input')[item_index]
         old_keyword = input_item.get_attribute('value')
         if old_keyword and old_keyword.__len__() > 0:
             ac = ActionChains(driver)
             try:
-                clear_button = filter_form_area.find_elements(By.CSS_SELECTOR, value='span.ant-input-clear-icon')[
-                    item_index]
+                clear_button = driver.find_elements(By.CSS_SELECTOR, value='span.ant-input-clear-icon')[item_index]
                 svg = clear_button.find_element(By.TAG_NAME, 'svg')
                 ac.move_to_element(svg)
                 ac.click(svg).perform()
@@ -160,14 +176,14 @@ def get_page_info(for_current):
             print('get current page error')
     else:
         try:
-            page_container = driver.find_elements(By.TAG_NAME, 'ul')[3]
+            page_container = driver.find_elements(By.TAG_NAME, 'ul')[2]
             page_elements = page_container.find_elements(By.TAG_NAME, 'li')
             if page_elements.__len__() == 3:
                 total_page = 1
             else:
                 total_page_li = page_elements[-3]
                 total_page = int(total_page_li.text)
-                total_page = min(10, total_page) #max page is 50
+                total_page = min(50, total_page) #max page is 50
             print(f'total_page is: {total_page}')
         except Exception as e:
             total_page = 0
@@ -193,7 +209,7 @@ def set_page_count():
         LogHelper.write_log(logFile, f'set_page_count error {e}')
 
 
-def go_to_next_page(buyer_index, buyer_name):
+def go_to_next_page(cate_index, cate_name):
     now = datetime.datetime.now()
     h_value = (now.hour)
     if h_value >= 22 or h_value <= 8:
@@ -204,49 +220,24 @@ def go_to_next_page(buyer_index, buyer_name):
             next_button = next_page_li.find_element(By.CSS_SELECTOR, 'button.ant-pagination-item-link')
             next_button.click()
             WaitHelp.waitfor_account_import(True, False)
-            anly_webdriver(buyer_index, buyer_name)
+            anly_webdriver(cate_index, cate_name)
         except Exception as e:
             LogHelper.write_log(f'click next page button error {e}')
             return
 
 
 # 分析html 文件
-def anly_webdriver(buyer_index, buyer_name):
+def anly_webdriver(cate_index, cate_name, isRU):
     get_page_info(for_current=True)
-    if total_page == 1:
+    if total_page == 1: # 只获取一次total_page
         get_page_info(for_current=False)
     if total_page <= 0:
         return
-    result = []
     try:
-        table_container = driver.find_element(By.CSS_SELECTOR, 'div.ant-table.ant-table-ping-right.ant-table-fixed-column.ant-table-scroll-horizontal.ant-table-has-fix-right')
-        table = table_container.find_element(By.TAG_NAME, 'table')
-        tbody = table.find_element(By.CSS_SELECTOR, 'tbody.ant-table-tbody')
-        row_list = tbody.find_elements(By.CSS_SELECTOR, 'tr.ant-table-row.ant-table-row-level-0')
-        for row in row_list:
-            row_info = get_rowInfo(buyer_name, row)
-            result.append(row_info)
-        if row_list.__len__() > 0:
-            # ExcelHelp.add_arr_to_sheet(file_name=result_save_file, sheet_name=result_save_sheet, dim_arr=result)
-            try:
-                MySqlHelp_recommanded.DBRecommandChip().wheat_buyer_write(result)
-            except:
-                print('write db error')
-            if current_page < total_page:
-                go_to_next_page(buyer_index, buyer_name)
+        print('do what you want')
+          # todo
     except Exception as e:
         LogHelper.write_log(logFile, f'anly_webdriver error {e}')
-
-
-def get_rowInfo(buyer_name, row):
-    # old ['buyer_name', 'data', 'buyer', 'supplier', 'des', 'buy_contry', 'supplier_contry', record_time]
-    #new  (keyword, wheat_date, buyer, supplier, HSCode, description, buy_country, supplier_country, productContry, weight, number, totalValue, current_page, task_name)
-    td_list = row.find_elements(By.TAG_NAME, 'td')
-    buyer = td_list[1].text.replace('/', '%2F')
-    buyer = buyer.replace('\x1e', ' (tim)')
-    task_name = "TICHot_202401"
-    result = [buyer_name, td_list[0].text, buyer, td_list[2].text, td_list[3].text, td_list[4].text, "" , "",  td_list[5].text, td_list[6].text, td_list[7].text, td_list[8].text, str(current_page), task_name]
-    return result
 
 
 def main():
@@ -254,24 +245,24 @@ def main():
     all_cates = ExcelHelp.read_col_content(file_name=sourceFile_dic['fileName'],
                                            sheet_name=sourceFile_dic['sourceSheet'],
                                            col_index=sourceFile_dic['colIndex'])
-    for (buyer_index, buyer_name) in enumerate(all_cates):
+    for (cate_index, cate_name) in enumerate(all_cates):
         now = datetime.datetime.now()
         h_value = now.hour
         if h_value >= 22 or h_value <= 8:
             continue
-        if buyer_name is None or buyer_name.__contains__('?'):
+        if cate_name is None or cate_name.__contains__('?'):
             continue
-        elif buyer_index in range(sourceFile_dic['startIndex'], sourceFile_dic['endIndex']):
-            print(f'buyer_index is: {buyer_index}  buyer_name is: {buyer_name}')
-            goToBuyer(buyer_name)
+        elif cate_index in range(sourceFile_dic['startIndex'], sourceFile_dic['endIndex']):
+            print(f'cate_index is: {cate_index}  cate_name is: {cate_name}')
+            goToPPN(ppn=cate_name, manu="")
             WaitHelp.waitfor_account_import(True, False)
             set_page_count()
             current_page = total_page = 1
-            anly_webdriver(buyer_index, buyer_name)
+            anly_webdriver(cate_index=cate_index, cate_name=cate_name)
 
 
 if __name__ == "__main__":
     loginAction(default_url)
     driver.get(default_url)
-    set_filter(start_date='2023-03-18', end_date='2024-03-18')
+    set_filter(start_date='2019-12-31', end_date='2021-12-31')
     main()

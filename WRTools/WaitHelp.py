@@ -22,9 +22,9 @@ def waitfor_octopart(is_load_page, isDebug):
     else:
         # load new page
         if is_load_page:
-            time.sleep(150 + random.randint(5, 55))
+            time.sleep(180 + random.randint(10, 55))
         else:
-            time.sleep(15 + random.randint(2, 22))
+            time.sleep(30 + random.randint(2, 22))
 
 
 # test ， for octopart
@@ -34,7 +34,7 @@ def waitfor_ICHot(is_load_page, isDebug):
     else:
         # load new page
         if is_load_page:
-            time.sleep(120 + random.randint(10, 300))
+            time.sleep(120 + random.randint(10, 200))
         else:
             time.sleep(15 + random.randint(2, 22))
 

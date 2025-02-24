@@ -39,13 +39,9 @@ def read_record(save_file, task_name):
 
 
 if __name__ == "__main__":
-    aim_file = PathHelp.get_file_path(None, 'TRU202412_15k.xlsx')
-    task_name = 'TRU202412_15k'
+    aim_file = PathHelp.get_file_path(None, 'TInfineonPowerManger.xlsx')
+    task_name = 'TInfineonPowerManger'
     read_record(aim_file, task_name)
-    HQ_stock_sum(aim_file, 'ppn')
+    HQ_stock_sum(aim_file, 'ppn2')
     time.sleep(5.0)
-    aim_file = PathHelp.get_file_path(None, 'TRU202412_16k.xlsx')
-    task_name = 'TRU202412_16k'
-    read_record(aim_file, task_name)
-    HQ_stock_sum(aim_file, 'ppn')
-    print('over')
+

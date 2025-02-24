@@ -2,21 +2,20 @@
 # 输入型号，爬取现货排名和ICCP和SSCP的库存数据，输出两个字段：
 # （1） 靠谱供应商数量（ICCP+SSCP）
 # （2） 靠谱库存数量（[现货排名库存总量+非现货排名ICCP库存总量+非现货排名SSCP库存总量]/6)
+import time
 
 from WRTools import PathHelp, ExcelHelp, MySqlHelp_recommanded
 import re
-
+import os
 # IC_source_file = PathHelp.get_file_path('TVicor15H', 'IC_stock.xlsx')
 # cate_source_file = PathHelp.get_file_path(None, 'TLK240322.xlsx')
 
 
 # 将同一个ppn到所有stock 累加，然后按照保存到数组中, 没有数据的，用/填充
 def IC_stock_sum(cate_source_file):
-    pps = ExcelHelp.read_col_content(file_name= cate_source_file, sheet_name='ppn3', col_index=1)
-    manufactures = ExcelHelp.read_col_content(file_name= cate_source_file, sheet_name='ppn3', col_index=2)
+    pps = ExcelHelp.read_col_content(file_name= cate_source_file, sheet_name='ppn2', col_index=1)
+    manufactures = ExcelHelp.read_col_content(file_name= cate_source_file, sheet_name='ppn2', col_index=2)
     result = []
-    header_row = ['ppn', 'manu','supplier', 'rank', 'stock']
-    result.append(header_row)
     for (index, temp_ppn) in enumerate(pps):
         ppn_str = str(temp_ppn)
         if ppn_str == 'ppn':
@@ -91,8 +90,8 @@ def read_record(save_file, task_name):
 
 
 if __name__ == "__main__":
-    aim_file = PathHelp.get_file_path(None, 'TRU202412_8k.xlsx')
-    task_name = 'TRU202412_8k'
+    aim_file = PathHelp.get_file_path(None, 'TInfineonPowerManger.xlsx')
+    task_name = 'TInfineonPowerManger'
     read_record(aim_file, task_name)
     IC_stock_sum(aim_file)
     print('over')

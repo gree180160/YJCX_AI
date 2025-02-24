@@ -13,17 +13,18 @@ from WRTools import ExcelHelp, WaitHelp, PathHelp, EmailHelper, MySqlHelp_recomm
 ssl._create_default_https_context = ssl._create_unverified_context
 
 
-sourceFile_dic = {'fileName': PathHelp.get_file_path(None, 'TRU202412_13k.xlsx'),
-                  'sourceSheet': 'ppn3',
+sourceFile_dic = {'fileName': PathHelp.get_file_path(None, 'TInfineonPowerManger.xlsx'),
+                  'sourceSheet': 'ppn2',
                   'colIndex': 1,
-                  'startIndex': 90,
-                  'endIndex': 104}
-task_name = 'TRU202412_13k'
+                  'startIndex': 185,
+                  'endIndex': 190}
+task_name = 'TInfineonPowerManger'
 
 
-accouts_arr = [[AccManage.IC_stock_2['n'], AccManage.IC_stock_2['p']]]
+accouts_arr = [AccManage.IC_stock_2['n'], AccManage.IC_stock_2['p']]
+turn_page = False # 是否需要翻页
 try:
-    driver = ChromeDriverManager.getWebDriver(0)
+    driver = ChromeDriverManager.getWebDriver(2)
 except Exception as e:
     print(e)
 
@@ -31,7 +32,6 @@ total_page = 1
 current_page = 1
 VerificationCodePage = 0
 finishedPPN = 0
-
 
 def get_total_page():
     global total_page
@@ -51,7 +51,7 @@ def login_action(aim_url):
     if current_url == "https://member.ic.net.cn/login.php":
         WaitHelp.waitfor_account_import(False, False)
         # begin login
-        accout_current = accouts_arr[int(finishedPPN/10%2)]
+        accout_current = accouts_arr
         driver.find_element(by=By.ID, value='username').clear()
         driver.find_element(by=By.ID, value='username').send_keys(accout_current[0])
         driver.find_element(by=By.ID, value='password').clear()
@@ -165,21 +165,26 @@ def get_stock(cate_index, cate_name, st_manu):
             # print(need_save_ic_arr)
             MySqlHelp_recommanded.DBRecommandChip().ic_stock(need_save_ic_arr)
         # 包含>=3个无效的stock信息就不翻页了
-        if current_page >= 2 or len(need_save_ic_arr) <= 46:
+        if not(turn_page and current_page <2 and need_save_ic_arr.__len__ > 46):
             need_load_nextPage = False
-        need_save_ic_arr.clear()
-        # 翻页
         if need_load_nextPage:
-            new_url = URLManager.IC_stock_url(cate_name, False, current_page + 1)
-            driver.get(new_url)
-            WaitHelp.waitfor_ICHot(True, False)
-            waitTime = 0  # wait reload time
-            while driver.current_url != new_url and waitTime <= 5:
-                waitTime += 1
-                print(f"url is:{new_url} load error:")
-                driver.get(new_url)
-                WaitHelp.waitfor(True, False)
-        current_page += 1
+            if current_page < total_page:
+                go_to_nex_page(cate_name)
+
+
+def go_to_nex_page(cate_name):
+    global current_page
+    new_url = URLManager.IC_stock_url(cate_name, False, current_page + 1)
+    driver.get(new_url)
+    WaitHelp.waitfor_ICHot(True, False)
+    waitTime = 0  # wait reload time
+    while driver.current_url != new_url and waitTime <= 5:
+        waitTime += 1
+        print(f"url is:{new_url} load error:")
+        driver.get(new_url)
+        WaitHelp.waitfor(True, False)
+    current_page += 1
+
 
 
 # 验证当前页面是否正在等待用户验证，连续三次请求出现验证码页面，则关闭页面

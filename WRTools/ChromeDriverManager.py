@@ -1,6 +1,10 @@
 import undetected_chromedriver as uc
 from undetected_chromedriver import ChromeOptions
 from Manager import AccManage
+from selenium import webdriver
+from selenium.webdriver import Firefox
+from selenium.webdriver import FirefoxOptions
+import pickle
 
 
 def getWebDriver(index):
@@ -31,5 +35,21 @@ def getWebDriver(index):
         driver = uc.Chrome(use_subprocess=True, driver_executable_path=AccManage.chromedriver_path, options=options) #todo chromedriverPath
     else:
         driver = uc.Chrome(use_subprocess=True, options=options)
-        driver.set_window_size(height=800, width=1200)
+        driver.set_window_size(height=900, width=1400)
+    cookies = driver.get_cookies()
+    with open('cookies.pkl', 'wb') as file:
+        pickle.dump(cookies, file)
+
+        # 加载 cookies
+    with open('cookies.pkl', 'rb') as file:
+        cookies = pickle.load(file)
+        for cookie in cookies:
+            driver.add_cookie(cookie)
     return driver
+
+
+def get_firfox_driver():
+    option = FirefoxOptions()
+    # option.add_argument("--headless")  # 隐藏浏览器
+    browser = Firefox(executable_path='/usr/local/bin/geckodriver', options=option)
+    return browser

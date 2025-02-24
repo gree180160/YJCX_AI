@@ -71,13 +71,13 @@ def water_mark():
     text = "   深圳市风菱电子有限责任公司   "
     font_path = "/Library/Fonts/AlibabaHealthFont2.0CN-85B.ttf"  # 修改为系统自带的字体路径
     font_size = 12  # 设置字号
-    text_color = (73, 160, 45, 20)
+    text_color = (73, 160, 45, 30)
     font = ImageFont.truetype(font_path, font_size)
 
     # 遍历文件夹里的所有图片
     folder_path = "/Users/liuhe/Desktop/产品照片/私印/"
     for filename in os.listdir(folder_path):
-        if filename.endswith(".HEIC") or filename.endswith(".png"):
+        if filename.endswith(".HEIC") or filename.endswith(".png") or filename.endswith(".jpeg"):
             image_path = os.path.join(folder_path, filename)
             # once_add_mark(image_path, text, text_color, font)
             add_watermark_repeat(image_path, text, text_color)
@@ -139,6 +139,45 @@ def add_watermark_repeat(image_path, text, text_color):
     # 保存合并后的图像
     combined = combined.convert("RGB")  # 转换为RGB模式以保存为JPEG
     combined.save(image_path, "JPEG")
+
+def remove_black():
+    # 读取图像
+    image = cv2.imread('/Users/liuhe/PycharmProjects/YJCX_AI/WRTools/zz.png')
+
+    # 获取图像的高度和宽度
+    height, width, channels = image.shape
+
+    # 遍历每个像素
+    for i in range(height):
+        for j in range(width):
+            # 获取当前像素的RGB值
+            b, g, r = image[i, j]
+
+            # 检查是否是相同的RGB值
+            if b == g == r:  # 如果RGB三个值相同
+                # 将该颜色点设置为纯白色
+                image[i, j] = [255, 255, 255]  # OpenCV中顺序是BGR
+
+    # 确保背景是白色
+    # 将所有接近白色的背景（，例如 RGB < 255 - tolerance）也设为白色
+    tolerance = 10  # 可调容差
+    for i in range(height):
+        for j in range(width):
+            b, g, r = image[i, j]
+            avg = (b + g + r) / 3
+            if (abs(avg - b) <= 20) and (abs(avg - g) <= 20) and (abs(avg - r) <= 20):
+                # 将该颜色点设置为纯白色
+                image[i, j] = [255, 255, 255]  # OpenCV中顺序是BGR
+            if r < 200:
+                image[i, j] = [255, 255, 255]
+
+                # 保存处理后的图像
+    cv2.imwrite('output_image.png', image)
+
+    # 显示处理结果
+    cv2.imshow('Processed Image', image)
+    cv2.waitKey(0)
+    cv2.destroyAllWindows()
 
 
 if __name__ == "__main__":

@@ -15,8 +15,8 @@ ssl._create_default_https_context = ssl._create_unverified_context
 sourceFile_dic = {'fileName': PathHelp.get_file_path("IC_stock", 'TFL_ICStock.xlsx'),
                   'sourceSheet': 'ppn',
                   'colIndex': 1,
-                  'startIndex': 5,
-                  'endIndex': 7}
+                  'startIndex': 0,
+                  'endIndex': 10}
 task_name = 'TFL_ICStock'
 
 accouts_arr = [[AccManage.IC_FLStock['n'], AccManage.IC_FLStock['p']]]
@@ -225,7 +225,10 @@ def writeRecord(need_save_arr, ppn, st_manu):
 def stock_change_alert(ppn_list):
     file_name = sourceFile_dic['fileName']
     history = []
+    ignore_list = ["MPXM2202AS", "TPS22810DRVR"]
     for temp_ppn in ppn_list:
+        if ignore_list.__contains__(temp_ppn):     # 已卖完，或者供应商太多无需关注
+            continue
         sheet_content = ExcelHelp.read_sheet_content_by_name(file_name, temp_ppn[0:5])
         history += sheet_content
     alert_info = []

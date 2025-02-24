@@ -1,3 +1,5 @@
+import time
+
 from WRTools import PathHelp, ExcelHelp, WaitHelp, MySqlHelp_recommanded
 import re
 import json
@@ -10,8 +12,7 @@ def read_record(save_file, task_name):
 
 
 if __name__ == "__main__":
-    aim_file = PathHelp.get_file_path(None, 'TRU202412_7k.xlsx')
-    task_name = 'TRU202412_7k'
+    aim_file = PathHelp.get_file_path(None, 'TInfineonPowerManger.xlsx')
+    task_name = 'TInfineonPowerManger'
     read_record(aim_file, task_name)
-    # HQ_stock_sum(aim_file, 'ppn4')
     print('over')

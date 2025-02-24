@@ -69,20 +69,20 @@ def octopart_get_page_url(key_name, page, manu: Octopart_manu) -> str:
 
 
 # octopart
-def octopart_get_code_url(key_name, page, manu: Octopart_manu) -> str:
+def octopart_get_code_url(key_name, page, manu: str) -> str:
     cate_str = str(key_name)
     cate_str = cate_str.replace('/', '%2F')
     cate_str = cate_str.replace('#', '%23')
     cate_str = cate_str.replace('+', '%2B')
     cate_str = cate_str.replace(',', '%2C')
 
-    if manu.value > 0:
+    if manu.__len__() > 0:
         manu_str = manu.get_manu()
         manu_param = '&manufacturer_id=' + manu_str.replace(';', '&manufacturer_id=')
     else:
         manu_param = ''
     page_param = '' if page == 1 else '&start=' + str(page*10 - 10)
-    url = f'view-source:https://octopart.com/search?q={cate_str}&currency=USD&specs=0{manu_param}{page_param}'
+    url = f'https://octopart.com/search?q={cate_str}&currency=USD&specs=0{manu_param}{page_param}'
     return url
 
 
@@ -186,9 +186,9 @@ def has_special_chars(text):
 
 
 if __name__ == "__main__":
-    octopart_page_more_url(sourcefile=PathHelp.get_file_path(None, file_name='TSkyworks.xlsx'), page0_sheet='page0_ppn_2', manu=Octopart_manu.Skyworks)
+    # octopart_page_more_url(sourcefile=PathHelp.get_file_path(None, file_name='TSkyworks.xlsx'), page0_sheet='page0_ppn_2', manu=Octopart_manu.Skyworks)
     # print(HQ_hot_url('ADC0804LCWMX/NOPB'))
     # print(HQ_hot_url('M4T32-BR12SH1'))
-    # print(HQ_hot_url('STB120NF10T4'))
+    print(IC_stock_url('LSM6DS3TR-C', False))
 
 

@@ -17,14 +17,14 @@ driver = ChromeDriverManager.getWebDriver(0)    # todo chromedriverPath
 driver.set_page_load_timeout(120)
 # logic
 
-accouts_arr = [[AccManage.Bom2['c'], AccManage.Bom2['n'], AccManage.Bom2['p']]]
+accouts_arr = [[AccManage.Bom3['c'], AccManage.Bom3['n'], AccManage.Bom3['p']]]
 
-sourceFile_dic = {'fileName': PathHelp.get_file_path(None, 'TRU202412_4k.xlsx'),
-                  'sourceSheet': 'ppn4',
+sourceFile_dic = {'fileName': PathHelp.get_file_path(None, 'TVibrationMeter.xlsx'),
+                  'sourceSheet': 'ppn2',
                   'colIndex': 1,
-                  'startIndex': 112,
-                  'endIndex': 225}
-task_name = 'TRU202412_4k'
+                  'startIndex': 0,
+                  'endIndex': 2}
+task_name = 'TVibrationMeter'
 
 default_url = 'https://www.bom.ai/'
 log_file = PathHelp.get_file_path('Bom_price', 'bom_price_log.txt')

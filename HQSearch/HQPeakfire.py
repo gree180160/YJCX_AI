@@ -8,12 +8,12 @@ from Manager import AccManage, URLManager
 log_file = PathHelp.get_file_path('HQSearch', 'HQPeakfireLog.txt')
 ssl._create_default_https_context = ssl._create_unverified_context
 
-sourceFile_dic = {'fileName': PathHelp.get_file_path(None, 'TRU202412_13k.xlsx'),
+sourceFile_dic = {'fileName': PathHelp.get_file_path(None, 'TVicorOnboard.xlsx'),
                   'sourceSheet': 'ppn',
                   'colIndex': 1,
                   'startIndex': 0,
-                  'endIndex': 100}
-task_name = 'TRU202412_13k.xlsx'
+                  'endIndex': 900}
+task_name = 'TVicorOnboard'
 
 
 accouts_arr = [AccManage.HQ_hot_1['n'], AccManage.HQ_hot_1['p']]
@@ -91,6 +91,8 @@ def main():
                                            sourceFile_dic['colIndex'])
     all_manu = ExcelHelp.read_col_content(sourceFile_dic['fileName'], sourceFile_dic['sourceSheet'], 2)
     for (index, ppn) in enumerate(all_cates):
+        while WaitHelp.isSleep_time():
+                time.sleep(60*5)
         if ppn.__contains__('?'):
             continue
         elif index in range(sourceFile_dic['startIndex'], sourceFile_dic['endIndex']):

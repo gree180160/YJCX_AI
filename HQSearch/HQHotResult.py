@@ -91,6 +91,7 @@ def valid_month(month_data: list):
 def HQ_hot_result2(cate_source_file):
     pps = ExcelHelp.read_col_content(file_name=cate_source_file, sheet_name='ppn', col_index=1)
     manufactures = ExcelHelp.read_col_content(file_name=cate_source_file, sheet_name='ppn', col_index=2)
+    status = ExcelHelp.read_col_content(file_name=cate_source_file, sheet_name='ppn', col_index=3)
     hq_hot_info = ExcelHelp.read_sheet_content_by_name(cate_source_file, sheet_name='HQ_hot')
     result = []
     for (index, temp_ppn) in enumerate(pps):
@@ -121,7 +122,7 @@ def HQ_hot_result2(cate_source_file):
                     else:
                         hot_result = 0
                     break;
-        result.append([ppn_str, manufactures[index], hot_week, hot_month, avg, hot_result])
+        result.append([ppn_str, manufactures[index],status[index], hot_week, hot_month, avg, hot_result])
     ExcelHelp.add_arr_to_sheet(file_name=cate_source_file, sheet_name="HQ_hot_result", dim_arr=result)
 
 
@@ -149,8 +150,8 @@ def read_record(save_file, task_name):
 
 
 if __name__ == "__main__":
-    aim_file = PathHelp.get_file_path(None, 'TNXP_RF.xlsx')
-    task_name = 'TNXP_RF'
+    aim_file = PathHelp.get_file_path(None, 'TInfineonPowerManger.xlsx')
+    task_name = 'TInfineonPowerManger'
     read_record(aim_file, task_name)
     time.sleep(3.0)
     HQ_hot_result2(aim_file)

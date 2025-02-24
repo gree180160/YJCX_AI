@@ -17,18 +17,17 @@ import re
 accouts_arr = [AccManage.Wheat['c'], AccManage.Wheat['n'], AccManage.Wheat['p']]
 ssl._create_default_https_context = ssl._create_unverified_context
 
-# sourceFile_dic = {'fileName': PathHelp.get_file_path(None, 'TInfineonIGBT.xlsx'),
-#                   'sourceSheet': 'ppn',
-#                   'colIndex': 1,
-#                   'startIndex': 793,
-#                   'endIndex': 1000}
-sourceFile_dic = {'fileName': PathHelp.get_file_path('TradeWebs', 'Mornsun.xlsx'),
-                  'sourceSheet': 'brand',
+
+sourceFile_dic = {'fileName': PathHelp.get_file_path(None, 'TRenesasRF.xlsx'),
+                  'sourceSheet': 'ppn3',
                   'colIndex': 1,
                   'startIndex': 0,
-                  'endIndex': 4}
-result_save_file = PathHelp.get_file_path('TradeWebs', 'Mornsun.xlsx')
+                  'endIndex': 7}
+task_name = 'TRenesasRF'
+
+result_save_file = sourceFile_dic["fileName"]
 result_save_sheet = 'Wheat_buyer'
+
 logFile = PathHelp.get_file_path('Wheat', 'Wheat_log.txt')
 login_url = 'https://app.51wheatsearch.com/gs/index.html#/login'
 # default_url = 'https://app.51wheatsearch.com/gs/index.html#/resource/gather/customs'
@@ -175,5 +174,5 @@ def main():
 if __name__ == "__main__":
     loginAction(default_url)
     driver.get(default_url)
-    set_filter(start_date='2023-10-28', end_date='2024-10-28')
+    set_filter(start_date='2019-12-31', end_date='2021-12-31')
     main()

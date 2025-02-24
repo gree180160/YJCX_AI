@@ -1,0 +1,26 @@
+1739520723078	geckodriver	INFO	Listening on 127.0.0.1:60369
+1739520723154	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "--remote-debugging-port" "60370" "--r ... s" "localhost" "-foreground" "-no-remote" "-profile" "/var/folders/jc/x8nf5scd28v4wrbkt9l72vd00000gn/T/rust_mozprofileHHCXuR"
+1739520723479	Marionette	INFO	Marionette enabled
+2025-02-14 16:12:03.554 plugin-container[45568:9324815] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2025-02-14 16:12:03.554 plugin-container[45568:9324815] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2025-02-14 16:12:03.557 plugin-container[45568:9324815] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2025-02-14 16:12:03.557 plugin-container[45568:9324815] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2025-02-14 16:12:03.557 plugin-container[45568:9324821] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2025-02-14 16:12:03.557 plugin-container[45568:9324821] nil host used in call to allowsAnyHTTPSCertificateForHost:
+1739520723626	Marionette	INFO	Listening on port 60377
+Read port: 60377
+WebDriver BiDi listening on ws://127.0.0.1:60370
+1739520723696	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+UNSUPPORTED (log once): POSSIBLE ISSUE: unit 1 GLD_TEXTURE_INDEX_2D is unloadable and bound to sampler type (Float) - using zero texture because texture unloadable
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /var/folders/jc/x8nf5scd28v4wrbkt9l72vd00000gn/T/rust_mozprofileHHCXuR/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:60370/devtools/browser/5a3fcbf1-6600-4d2d-8b2f-f38ce8ee6f8d
+2025-02-14 08:12:37.572 plugin-container[45627:9326054] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2025-02-14 08:12:37.572 plugin-container[45627:9326054] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2025-02-14 08:12:37.595 plugin-container[45627:9326054] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2025-02-14 08:12:37.595 plugin-container[45627:9326054] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2025-02-14 08:12:37.595 plugin-container[45627:9326065] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2025-02-14 08:12:37.595 plugin-container[45627:9326065] nil host used in call to allowsAnyHTTPSCertificateForHost:
+JavaScript warning: https://octopart.com/kdRQnL15/init.js, line 3: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+console.error: (new TypeError("NetworkError: Network request failed", "resource://services-settings/Utils.jsm", 230))
+console.error: (new Error("Polling for changes failed: NetworkError: Network request failed.", "resource://services-settings/remote-settings.js", 334))
+1739521435452	Marionette	INFO	Stopped listening on port 60377
