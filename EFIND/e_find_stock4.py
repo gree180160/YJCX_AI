@@ -12,12 +12,12 @@ ssl._create_default_https_context = ssl._create_unverified_context
 
 log_file = PathHelp.get_file_path('EFIND', 'e_find_log.txt')
 
-sourceFile_dic = {'fileName': PathHelp.get_file_path(None, 'TInfineonPowerManger.xlsx'),
+sourceFile_dic = {'fileName': PathHelp.get_file_path(None, 'TInfenionMos.xlsx'),
                   'sourceSheet': 'ppn2',
                   'colIndex': 1,
-                  'startIndex': 180,
-                  'endIndex': 238}
-task_name = 'TInfineonPowerManger'
+                  'startIndex': 55,
+                  'endIndex': 65}
+task_name = 'TInfenionMos'
 
 try:
     driver = ChromeDriverManager.getWebDriver(3)

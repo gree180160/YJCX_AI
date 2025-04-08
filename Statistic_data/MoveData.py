@@ -389,10 +389,14 @@ def IC_HQ_Result2(save_file, rate, ppn_sheet):
     # BomResult.bom_price_result(source_file)
     # time.sleep(1.0)
     source_file = save_file
-    first_row = ["型号", "品牌","IC_supplier","IC_rank", "IC_stock", "IC_maxStock_supplier", "supplier_batch", "efind_allSup","efind_priceSup", "efind_stockSup", "HQ_hot_week", 'HQ_hot_month', 'HQ_hot_avg', 'HQ_hot_result', 'oc_price', 'oc_stock','oc_supplier', 'oc_des','digikey_status', 'bom_price','bom_supplier', 'IC_hot_max', 'IC_hot_min','IC_hot_avg', 'IC_price',  'result']
+    first_row = ["型号", "品牌","IC_supplier","IC_rank", "IC_stock", "IC_maxStock_supplier", "supplier_batch", "efind_allSup","efind_priceSup", "efind_stockSup","wheat_global", "wheat_ru", "HQ_supplier", "HQ_stock", "HQ_hot_week", 'HQ_hot_month', 'last_month', 'HQ_hot_avg', 'HQ_hot_result', 'oc_price', 'oc_stock','oc_supplier', 'oc_des','digikey_status', 'bom_price','bom_supplier', 'IC_hot_max', 'IC_hot_min','IC_hot_avg', 'IC_price',  'result']
     result = []
     result.append(first_row)
     IC_info = ExcelHelp.read_sheet_content_by_name(source_file, 'IC_stock_sum')
+    try:
+        HQ_stock_info = ExcelHelp.read_sheet_content_by_name(source_file, 'HQ_stock_sum')
+    except:
+        HQ_stock_info = []
     try:
         HQ_hot_info = ExcelHelp.read_sheet_content_by_name(source_file, 'HQ_hot_result')
     except:
@@ -409,11 +413,15 @@ def IC_HQ_Result2(save_file, rate, ppn_sheet):
         efind_info = ExcelHelp.read_sheet_content_by_name(source_file, 'efind_supplier')
     except:
         efind_info = []
+    try:
+        wheat_info = ExcelHelp.read_sheet_content_by_name(source_file, 'wheat_record')
+    except:
+        wheat_info = []
     bom_info = ExcelHelp.read_sheet_content_by_name(source_file, 'bom_price_sum')
-    ppns_info = ExcelHelp.read_sheet_content_by_name(source_file, 'ppn2')   # 先过滤HQ_hot_合格的ppn
+    ppns_info = ExcelHelp.read_sheet_content_by_name(source_file, ppn_sheet)   # 先过滤HQ_hot_合格的ppn
     for (index, temp_ppnInfo) in enumerate(ppns_info):
         ppn_result = [temp_ppnInfo[0], temp_ppnInfo[1], ' ', ' ', ' ',' ', ' ', ' ',' ',' ',
-                      ' ', ' ', ' ', ' ', ' ',
+                      ' ', ' ', ' ', ' ', ' ',' ',' ',' ',' ', ' ',
                       ' ', ' ', ' ', ' ', ' ',' ',
                       ' ', ' ', '', '', '']
         for temp_IC in IC_info:
@@ -422,8 +430,8 @@ def IC_HQ_Result2(save_file, rate, ppn_sheet):
                 ppn_result[start] = temp_IC[2]
                 ppn_result[start+1] = temp_IC[3]
                 ppn_result[start+2] = temp_IC[4]
-                ppn_result[start+3] = temp_IC[7]
-                ppn_result[start+4] = temp_IC[8]
+                ppn_result[start+3] = temp_IC[7] if len(temp_IC) > 7 and temp_IC[7] is not None else ''
+                ppn_result[start+4] = temp_IC[8] if len(temp_IC) > 8 and temp_IC[8] is not None else ''
                 break;
         for temp_efind in efind_info:
             if temp_efind[0] == temp_ppnInfo[0]:
@@ -432,13 +440,26 @@ def IC_HQ_Result2(save_file, rate, ppn_sheet):
                 ppn_result[start+1] = temp_efind[3]
                 ppn_result[start+2] = temp_efind[4]
                 break;
+        for temp_wheat in wheat_info:
+            if temp_wheat[0] == temp_ppnInfo[0]:
+                start = 10
+                ppn_result[start] = temp_wheat[1]
+                ppn_result[start+1] = temp_wheat[2]
+                break;
+        for temp_hqStock in HQ_stock_info:
+            if temp_hqStock[0] == temp_ppnInfo[0]:
+                start = 12
+                ppn_result[start] = temp_hqStock[2]
+                ppn_result[start+1] = temp_hqStock[3]
+                break;
         for temp_HQ in HQ_hot_info:
             if temp_HQ[0] == temp_ppnInfo[0]:
-                start = 10
-                ppn_result[start] = temp_HQ[2]
-                ppn_result[start+1] = temp_HQ[3]
-                ppn_result[start+2] = temp_HQ[4]
-                ppn_result[start+3] = temp_HQ[5]
+                start = 14
+                ppn_result[start] = temp_HQ[3]
+                ppn_result[start+1] = temp_HQ[4]
+                ppn_result[start+2] = temp_HQ[5]
+                ppn_result[start+3] = temp_HQ[6]
+                ppn_result[start+4] = temp_HQ[7]
                 break;
         for temp_OC in oc_info:
             if temp_OC[0] == temp_ppnInfo[0]:
@@ -447,7 +468,7 @@ def IC_HQ_Result2(save_file, rate, ppn_sheet):
                     oc_price = round(float(temp_OC[4]) * rate, 2)
                 except:
                     oc_price = ""
-                start = 14
+                start = 19
                 ppn_result[start] = oc_price
                 ppn_result[start+1] = temp_OC[5]
                 ppn_result[start+2] = temp_OC[3]
@@ -455,11 +476,11 @@ def IC_HQ_Result2(save_file, rate, ppn_sheet):
                 break;
         for temp_dg in dg_info:
             if temp_dg[0] == temp_ppnInfo[0]: # digikey 状态来自jason的原始文件
-                ppn_result[18] = temp_dg[2]
+                ppn_result[23] = temp_dg[2]
                 break;
         for temp_bom in bom_info:
             if temp_bom[0] == temp_ppnInfo[0]:
-                start = 19
+                start = 24
                 if temp_bom.__len__() > 2:
                     ppn_result[start] = temp_bom[2]
                     ppn_result[start+1] = temp_bom[3]
@@ -469,6 +490,8 @@ def IC_HQ_Result2(save_file, rate, ppn_sheet):
                 break;
         result.append(ppn_result)
     ExcelHelp.add_arr_to_sheet(save_file, "Result", result)
+    time.sleep(3.0)
+    ExcelHelp.set_col_width(aim_file, 'Result', 14.0)
 
 
 def temp():
@@ -485,9 +508,8 @@ def temp():
 
 
 if __name__ == "__main__":
-    aim_file = PathHelp.get_file_path(None, 'TInfineonPowerManger.xlsx')
-    IC_HQ_Result2(aim_file, 1.0, 'ppn2')
+    aim_file = PathHelp.get_file_path(None, 'TNXPCircutProtect.xlsx')
+    IC_HQ_Result2(aim_file, 1.0, 'ppn3')
     print('over')
     # save_file = PathHelp.get_file_path(None, 'TAccelerationSensor.xlsx')
     # HQ_simple(save_file)
-

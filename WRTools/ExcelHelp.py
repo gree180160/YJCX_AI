@@ -3,7 +3,7 @@ import openpyxl
 import os
 import time
 from datetime import datetime, timedelta
-from WRTools import StringHelp
+from openpyxl.styles import PatternFill
 
 # READ
 # 获取某一列的内容返回cate list
@@ -335,6 +335,31 @@ def mergeExcel(source_files, aim_file):
             add_arr_to_sheet(file_name=aim_file, sheet_name=temp_sheet, dim_arr=sheet_content)
 
 
+def set_col_width(file_name, sheet_name, width):
+    workbook = openpyxl.load_workbook(file_name)
+    sheet = workbook[sheet_name]
+    for col in sheet.columns:
+        column_letter = col[0].column_letter  # 获取列的字母标识（如 'A', 'B' 等）
+        sheet.column_dimensions[column_letter].width = width
+    workbook.save(file_name)
+    workbook.close()
+
+
+def set_col_color(file_name, sheet_name, color_str, startCol, endCol):
+    workbook = openpyxl.load_workbook(file_name)
+    # 选择 Sheet1
+    sheet = workbook[sheet_name]
+    # 定义颜色
+    blue_fill = PatternFill(start_color=color_str, end_color=color_str, fill_type='solid')
+    # 设置第 1、2 列背景色为蓝色
+    for row in sheet.iter_rows(min_col=startCol, max_col=endCol):  # 遍历第 1、2 列
+        for cell in row:
+            cell.fill = blue_fill
+    # 保存修改后的文件
+    workbook.save('your_file_modified.xlsx')
+    workbook.close()
+
+
 def render_date():
     files = ['/Users/liuhe/Downloads/tender_info_2023-07-27_B.xlsx', '/Users/liuhe/Downloads/tender_info_2023-07-27_A.xlsx']
     for temp_file in files:
@@ -348,68 +373,7 @@ def render_date():
             new_content.append(new_row_value)
         add_arr_to_sheet(file_name=temp_file, sheet_name='Sheet', dim_arr=new_content)
 
-
-def purchase():
-    #7194531.13
-    result = []
-    last_brand = ''
-    source_file = '/Users/liuhe/Downloads/purchase2.xlsx'
-    orders = read_sheet_content_by_name(source_file, 'sales')
-    brands = read_sheet_content_by_name(source_file, 'brand')
-    sale_amount = 0
-    for temp_order in orders:
-        if temp_order and temp_order.__len__() > 0 and temp_order[0] != 'None':
-            manu = temp_order[4]
-            try:
-                temp_money = float(temp_order[5])
-                print(temp_order)
-            except:
-                print(temp_order)
-            if manu == last_brand:
-                sale_amount += temp_money
-            else:
-                if last_brand != '':
-                    info = [last_brand, sale_amount]
-                    for temp_brand in brands:
-                        s1 = temp_brand[0].replace(' ', '').lower()
-                        s2 = last_brand.replace(' ', '').lower()
-                        if s1 == s2:
-                            info = [last_brand, sale_amount, temp_brand[1], temp_brand[3]]
-                    result.append(info)
-                sale_amount = temp_money
-                last_brand = manu
-    add_arr_to_sheet(source_file, 'task', result)
-
-
-def purchase2():
-    source_file_record = '/Users/liuhe/Desktop/progress/TYjcxCloudStock/p1/TYjcxCloudStock2.xlsx'
-    source_file_ppn = '/Users/liuhe/Desktop/progress/TYjcxCloudStock/p1/TYjcxCloundStock.xlsx'
-    record_info = read_sheet_content_by_name(source_file_record, 'Sheet1')
-    ppn_info = read_sheet_content_by_name(source_file_ppn, 'ppn')
-    result = []
-    for temp_rec in record_info:
-        ppn = temp_rec[0]
-        manu = ''
-        for temp_ppn in ppn_info:
-            if ppn == temp_ppn[0]:
-                manu = temp_ppn[1]
-        source_batch = temp_rec[7]
-        batch = StringHelp.IC_batch(source_batch)
-        one_record = [ppn, manu, temp_rec[1], temp_rec[2],temp_rec[3],temp_rec[4],temp_rec[5],temp_rec[6], str(batch), temp_rec[8], temp_rec[9], temp_rec[10], temp_rec[11]]
-        result.append(one_record)
-    add_arr_to_sheet(source_file_record, 'result', result)
-
-
 if __name__ == "__main__":
-    # delete_sheet_content('/Users/liuhe/PycharmProjects/YJCX_AI/TDigikey_upload.xlsx', 'Sheet1')
-    # active_excel('/Users/liuhe/PycharmProjects/YJCX_AI/TInfenion_5H.xlsx', "Sheet1")
-    # remove_sheets('/Users/liuhe/PycharmProjects/YJCX_AI/Renesas_all_165H/IC_stock.xlsx')
-    # deal_keyword_result()
-    # row_value = read_col_content(file_name='/Users/liuhe/PycharmProjects/YJCX_AI/TKWPage0.xlsx', sheet_name='hot_month', col_index=1)
-    # index = row_value.index('46546546546545645')
-    # result_save_file = PathHelp.get_file_path(None, 'TCY8C_IC_Hot.xlsx')
-    # active_excel(result_save_file, 'Sheet1')
-    # sheet_isEmpty(file_name='/Users/liuhe/PycharmProjects/YJCX_AI/TKWPage0.xlsx', sheet_name1='Sheet1', sheet_name2='Sheet2')
     source_file = '/Users/liuhe/PycharmProjects/YJCX_AI/TICHot.xlsx'
     sheet_content = read_sheet_content_by_name(source_file, 'jdmc')
     print(sheet_content[0])

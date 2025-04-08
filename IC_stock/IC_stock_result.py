@@ -13,8 +13,8 @@ import os
 
 # 将同一个ppn到所有stock 累加，然后按照保存到数组中, 没有数据的，用/填充
 def IC_stock_sum(cate_source_file):
-    pps = ExcelHelp.read_col_content(file_name= cate_source_file, sheet_name='ppn2', col_index=1)
-    manufactures = ExcelHelp.read_col_content(file_name= cate_source_file, sheet_name='ppn2', col_index=2)
+    pps = ExcelHelp.read_col_content(file_name= cate_source_file, sheet_name='ppn3', col_index=1)
+    manufactures = ExcelHelp.read_col_content(file_name= cate_source_file, sheet_name='ppn3', col_index=2)
     result = []
     for (index, temp_ppn) in enumerate(pps):
         ppn_str = str(temp_ppn)
@@ -90,9 +90,8 @@ def read_record(save_file, task_name):
 
 
 if __name__ == "__main__":
-    aim_file = PathHelp.get_file_path(None, 'TInfineonPowerManger.xlsx')
-    task_name = 'TInfineonPowerManger'
+    aim_file = PathHelp.get_file_path(None, 'TNXPCircutProtect.xlsx')
+    task_name = 'TNXPCircutProtect'
     read_record(aim_file, task_name)
     IC_stock_sum(aim_file)
     print('over')
-

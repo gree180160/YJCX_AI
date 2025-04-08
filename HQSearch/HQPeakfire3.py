@@ -9,12 +9,12 @@ from Manager import AccManage, URLManager
 log_file = PathHelp.get_file_path('HQSearch', 'HQPeakfireLog.txt')
 ssl._create_default_https_context = ssl._create_unverified_context
 
-sourceFile_dic = {'fileName': PathHelp.get_file_path(None, 'TVicorOnboard.xlsx'),
+sourceFile_dic = {'fileName': PathHelp.get_file_path(None, 'TNXPMPU.xlsx'),
                   'sourceSheet': 'ppn',
                   'colIndex': 1,
-                  'startIndex': 1800,
-                  'endIndex': 2700}
-task_name = 'TVicorOnboard'
+                  'startIndex': 1949,
+                  'endIndex': 836*3}
+task_name = 'TNXPMPU'
 
 
 accouts_arr = [AccManage.HQ_hot_3['n'], AccManage.HQ_hot_3['p']]
@@ -89,8 +89,14 @@ def main():
                 time_lab = driver.find_element(By.ID, 'timetabs')
                 m_link = time_lab.find_elements(By.TAG_NAME, 'a')[1]
                 m_link.click()
-                time.sleep(10.0)
+                time.sleep(20.0)
                 month_arr = getSearchInfo(ppn, manu, False)
+                if month_arr.__len__() == 0:
+                    time_lab = driver.find_element(By.ID, 'timetabs')
+                    m_link = time_lab.find_elements(By.TAG_NAME, 'a')[1]
+                    m_link.click()
+                    time.sleep(10.0)
+                    month_arr = getSearchInfo(ppn, manu, False)
                 if month_arr.__len__() > 0:
                     cate_info = [ppn, manu, str(week_arr), str(month_arr), task_name]
                     MySqlHelp_recommanded.DBRecommandChip().hq_hot_write([cate_info])

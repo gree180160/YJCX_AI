@@ -64,7 +64,7 @@ def for_statistic():
 
 
 if __name__ == "__main__":
-    for_ppn()
+    # for_ppn()
     # for_ppn2()
-    # for_statistic()
+    for_statistic()
 

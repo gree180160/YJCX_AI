@@ -8,23 +8,24 @@ import time
 from PIL import Image
 import io
 import base64
-from selenium.webdriver.common.keys import Keys
+from selenium.webdriver.common.action_chains import ActionChains
 import random
 
 ssl._create_default_https_context = ssl._create_unverified_context
 
 driver = ChromeDriverManager.getWebDriver(0)
 
-accouts_arr = AccManage.oc_stock1
-
+accouts_arr = AccManage.oc_stock3
+altium_home = 'https://altium.com'
+altium_login = 'https://auth.altium.com/?ReturnUrl=https://www.altium.com/'
 default_url = 'https://octopart.com/'
 
-sourceFile_dic = {'fileName': PathHelp.get_file_path(None, 'TInfineonPowerManger.xlsx'),
-                  'sourceSheet': 'ppn2',
+sourceFile_dic = {'fileName': PathHelp.get_file_path(None, 'TNXPCircutProtect.xlsx'),
+                  'sourceSheet': 'ppn3',
                   'colIndex': 1,
-                  'startIndex': 168,
-                  'endIndex': 238}
-task_name = 'TInfineonPowerManger'
+                  'startIndex': 11,
+                  'endIndex': 11}
+task_name = 'TNXPCircutProtect'
 
 log_file = PathHelp.get_file_path('Octopart_price', 'ocopar_price_log.txt')
 
@@ -83,11 +84,11 @@ def analy_html(pn_index, pn):
         except Exception as e:
             LogHelper.write_log(log_file_name=log_file, content=f'{pn} 没有历史库存记录 ')
             stock_pic = ''
-        #(ppn, manu, des, distribute, stock, currency_type, k_price, stock_pic, opn, task_name)
+        #ppn, manu, des, distribute, stock, currency_type, k_price, stock_pic, opn, task_name)
         info = [part_number, part_manu, part_des, distribute, stock, kprice_type, kprice, stock_pic, pn, task_name]
+        MySqlHelp_recommanded.DBRecommandChip().octopart_market_write([info])
     except Exception as e:
         LogHelper.write_log(log_file_name=log_file, content=f'{pn} 页面 解析异常：{e} ')
-    MySqlHelp_recommanded.DBRecommandChip().octopart_market_write([info])
 
 
 def getBase64(a_link):
@@ -131,13 +132,19 @@ def getBase64(a_link):
 
 # 验证是否处于验证IP 页面
 def is_security_check() -> bool:
-    # 400：Bad Request
-    if driver.title == 'Please complete the security check - Octopart':
-        result = True
-        EmailHelper.mail_ip_error(AccManage.Device_ID)
-    else:
-        result = False
-    return result
+    times = 0
+    while driver.find_elements(By.ID, 'px-captcha').__len__() > 0:
+        # 创建 ActionChains 对象
+        times += 1
+        actions = ActionChains(driver)
+        # 模拟长按操作
+        actions.click_and_hold(driver.find_element(By.ID, 'px-captcha')).perform()
+        # 保持长按状态一段时间（例如 3 秒）
+        time.sleep(15)
+        # 释放鼠标
+        actions.release().perform()
+        time.sleep(52.5 + random.uniform(1, 10))
+    return times > 5
 
 
 def main():
@@ -155,29 +162,27 @@ def main():
                 time.sleep(10*60)
             else:
                 WaitHelp.waitfor_octopart(True, False)
-            while True:
-                if is_security_check():
-                    time.sleep(60+random.uniform(1, 10))
-                    print('is security ip')
-                else:
-                    break
-
+            if is_security_check():
+                print('is security ip')
+                driver.close()
             analy_html(ppn_index, ppn)
 
 
-def login():
+def ocLogin():
     login_span = driver.find_element(By.CSS_SELECTOR, 'span.truncate')
     login_span.click()
-    time.sleep(15.0+random.uniform(1, 10))
+    time.sleep(45.0+random.uniform(1, 20))
     altiumAuthButton = driver.find_element(By.CSS_SELECTOR, "[data-sentry-component='AltiumAuthButton']")
     altiumAuthButton.click()
-    time.sleep(18.0 + random.uniform(2, 15))
+    time.sleep(60.0 + random.uniform(2, 25))
 
+
+def altiumLogin():
     email_input = driver.find_element(By.CSS_SELECTOR, "[data-locator='signin-email']")
     email_input.clear()
-    time.sleep(3.0 + random.uniform(1, 10))
+    time.sleep(5.0 + random.uniform(3, 13))
     email_input.send_keys(accouts_arr[0])
-    time.sleep(2.0 + random.uniform(1, 10))
+    time.sleep(2.0 + random.uniform(2, 20))
     pw_input = driver.find_elements(By.CSS_SELECTOR, "[data-locator='signin-password']")[1]
     pw_input.clear()
     time.sleep(2.5 + random.uniform(1, 10))
@@ -187,11 +192,20 @@ def login():
     login_btn = driver.find_element(By.CSS_SELECTOR, "[data-locator='signin-submit']")
     # 对找到的元素执行操作，例如点击
     login_btn.click()
-    time.sleep(60.0+random.uniform(5, 15))
+    time.sleep(60.0 + random.uniform(5, 15))
 
 
 if __name__ == "__main__":
+    driver.get(altium_home)
+    time.sleep(50.0 + random.uniform(1, 10))
+    driver.get(altium_login)
+    time.sleep(90.0 + random.uniform(1, 10))
+    altiumLogin()
+
     driver.get(default_url)
     time.sleep(90.0+random.uniform(1, 10))
-    login()
+    driver.get(default_url)
+    time.sleep(90.0 + random.uniform(1, 10))
+    ocLogin()
+
     main()

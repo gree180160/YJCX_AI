@@ -15,7 +15,7 @@ driver.set_page_load_timeout(480)
 default_url = 'https://www.integ.cn/goods/?isstock=1'
 
 
-result_save_file = PathHelp.get_file_path('TradeWebs', 'Integ2412.xlsx')
+result_save_file = PathHelp.get_file_path('TradeWebs', 'Integ2502.xlsx')
 log_file = PathHelp.get_file_path('TradeWebs', 'log.txt')
 current_page = 1
 total_page = 0

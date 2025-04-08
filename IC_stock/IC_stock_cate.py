@@ -13,12 +13,12 @@ from WRTools import ExcelHelp, WaitHelp, PathHelp, EmailHelper, MySqlHelp_recomm
 ssl._create_default_https_context = ssl._create_unverified_context
 
 
-sourceFile_dic = {'fileName': PathHelp.get_file_path(None, 'TInfineonPowerManger.xlsx'),
-                  'sourceSheet': 'ppn2',
+sourceFile_dic = {'fileName': PathHelp.get_file_path(None, 'TInfineonFIFO.xlsx'),
+                  'sourceSheet': 'ppn3',
                   'colIndex': 1,
-                  'startIndex': 180,
-                  'endIndex': 185}
-task_name = 'TInfineonPowerManger'
+                  'startIndex': 0,
+                  'endIndex': 7}
+task_name = 'TInfineonFIFO'
 
 
 accouts_arr = [AccManage.IC_stock_1['n'], AccManage.IC_stock_1['p']]
@@ -54,8 +54,10 @@ def login_action(aim_url):
         accout_current = accouts_arr
         driver.find_element(by=By.ID, value='username').clear()
         driver.find_element(by=By.ID, value='username').send_keys(accout_current[0])
+        time.sleep(5.0)
         driver.find_element(by=By.ID, value='password').clear()
         driver.find_element(by=By.ID, value='password').send_keys(accout_current[1])
+        time.sleep(5.0)
         WaitHelp.waitfor_account_import(False, False)
         driver.find_element(by=By.ID, value='btn_login').click()
         WaitHelp.waitfor_ICHot(True, False)
@@ -228,7 +230,7 @@ def main():
             continue
         elif cate_index in range(sourceFile_dic['startIndex'], sourceFile_dic['endIndex']):
             print(f'cate_index is: {cate_index}  cate_name is: {cate_name}')
-            if cate_index % 7 == 0:
+            if cate_index % 7 == 0 and cate_index > 0:
                 time.sleep(60*5)
             # changeAccount()
             get_stock(cate_index, cate_name, all_manu[cate_index])

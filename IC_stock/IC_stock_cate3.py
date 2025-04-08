@@ -13,12 +13,12 @@ from WRTools import ExcelHelp, WaitHelp, PathHelp, EmailHelper, MySqlHelp_recomm
 ssl._create_default_https_context = ssl._create_unverified_context
 
 
-sourceFile_dic = {'fileName': PathHelp.get_file_path(None, 'TInfineonPowerManger.xlsx'),
-                  'sourceSheet': 'ppn2',
+sourceFile_dic = {'fileName': PathHelp.get_file_path(None, 'TInfenionMos.xlsx'),
+                  'sourceSheet': 'ppn',
                   'colIndex': 1,
-                  'startIndex': 190,
-                  'endIndex': 195}
-task_name = 'TInfineonPowerManger'
+                  'startIndex': 136,
+                  'endIndex': 140}
+task_name = 'TInfenionMos'
 
 
 accouts_arr = [AccManage.IC_stock_3['n'], AccManage.IC_stock_3['p']]

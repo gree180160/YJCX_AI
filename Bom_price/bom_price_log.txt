@@ -850,3 +850,9 @@ Process finished with exit code 130 (interrupted by signal 2: SIGINT)
 2024-12-27 10:19:50click more error Message: element not interactable
   (Session info: chrome=114.0.5735.133)
 
+2025-03-26 01:55:34click more error Message: element click intercepted: Element <a href="javascript:void(0)" class="bomID_extStock_More" data-startindex="1" data-for="sixpage" data-pagesize="15" data-hasids="3">...</a> is not clickable at point (969, 323). Other element would receive the click: <div class="layui-layer-shade layui-layer-shade-direct" times="100003" style="z-index:10000; background-color:#000; opacity:0.3; filter:alpha(opacity=30);"></div>
+  (Session info: chrome=114.0.5735.133)
+
+2025-03-26 02:28:10click more error Message: element click intercepted: Element <a href="javascript:void(0)" class="bomID_extStock_More" data-startindex="1" data-for="sixpage" data-pagesize="15" data-hasids="4">...</a> is not clickable at point (965, 420). Other element would receive the click: <img class="advert-img" src="//static.bom.ai/assets/img/dialogAdvert/dzw.jpg">
+  (Session info: chrome=114.0.5735.133)
+

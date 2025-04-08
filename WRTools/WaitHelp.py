@@ -10,9 +10,9 @@ def waitfor(is_load_page, isDebug):
     else:
         # load new page
         if is_load_page:
-            time.sleep(120 + random.randint(5, 80))
+            time.sleep(100 + random.randint(5, 150))
         else:
-            time.sleep(20 + random.randint(2, 22))
+            time.sleep(10 + random.randint(2, 90))
 
 
 # test ， for octopart
@@ -22,7 +22,7 @@ def waitfor_octopart(is_load_page, isDebug):
     else:
         # load new page
         if is_load_page:
-            time.sleep(180 + random.randint(10, 55))
+            time.sleep(150 + random.randint(10, 680))
         else:
             time.sleep(30 + random.randint(2, 22))
 
@@ -34,7 +34,7 @@ def waitfor_ICHot(is_load_page, isDebug):
     else:
         # load new page
         if is_load_page:
-            time.sleep(120 + random.randint(10, 200))
+            time.sleep(120 + random.randint(10, 600))
         else:
             time.sleep(15 + random.randint(2, 22))
 
@@ -56,7 +56,7 @@ def waitfor_account_import(is_load_page, isDebug):
         time.sleep(5 + random.randint(1, 3))
     else:
         if is_load_page:
-            time.sleep(160 + random.randint(1, 120))
+            time.sleep(120 + random.randint(1, 480))
         else:
             time.sleep(5 + random.randint(1, 10))
 

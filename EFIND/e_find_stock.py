@@ -12,12 +12,12 @@ ssl._create_default_https_context = ssl._create_unverified_context
 
 log_file = PathHelp.get_file_path('EFIND', 'e_find_log.txt')
 
-sourceFile_dic = {'fileName': PathHelp.get_file_path(None, 'TInfineonPowerManger.xlsx'),
-                  'sourceSheet': 'ppn2',
+sourceFile_dic = {'fileName': PathHelp.get_file_path(None, 'TNXPCircutProtect.xlsx'),
+                  'sourceSheet': 'ppn3',
                   'colIndex': 1,
                   'startIndex': 0,
-                  'endIndex': 60}
-task_name = 'TInfineonPowerManger'
+                  'endIndex': 11}
+task_name = 'TNXPCircutProtect'
 
 try:
     driver = ChromeDriverManager.getWebDriver(0)
@@ -40,22 +40,30 @@ def analy_html(cate_index, cate_name, st_manu):
         print("check code")
         check = driver.find_elements(By.ID, 'fbMan1')
     # check code
-    sresult = driver.find_element(By.ID, 'sresults')
-    match = (sresult.find_element(By.CSS_SELECTOR, 'span.sterm').text == cate_name)
-    while not match:
-        driver.refresh()
-        time.sleep(60)
+    if not no_result():
+        sresult = driver.find_element(By.ID, 'sresults')
         match = (sresult.find_element(By.CSS_SELECTOR, 'span.sterm').text == cate_name)
-    try:
-        get_supplier(cate_name, st_manu, total_stock)
-    except Exception as e:
-        LogHelper.write_log(log_file, f'analy_html error:{e}')
+        while not match:
+            driver.refresh()
+            time.sleep(60)
+            match = (sresult.find_element(By.CSS_SELECTOR, 'span.sterm').text == cate_name)
+        try:
+            get_supplier(cate_name, st_manu, total_stock)
+        except Exception as e:
+            LogHelper.write_log(log_file, f'analy_html error:{e}')
+
+
+# 没有查询结果
+def no_result():
+    noresult = driver.find_elements(By.ID, 'fltrs')
+    if noresult.__len__() > 0:
+        return True
+    else:
+        return False
 
 
 # 获取supplier 总揽
 def get_supplier(ppn, manu, stock):
-
-
     try:
         isf = driver.find_element(By.ID, 'isf')
         total_sup = isf.find_element(By.CSS_SELECTOR, 'span.alls').text

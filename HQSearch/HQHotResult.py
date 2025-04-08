@@ -96,7 +96,7 @@ def HQ_hot_result2(cate_source_file):
     result = []
     for (index, temp_ppn) in enumerate(pps):
         ppn_str = str(temp_ppn)
-        avg = hot_result = 0
+        avg = hot_result = last_month = 0
         hot_week = hot_month = ''
         for (row_index, row_content) in enumerate(hq_hot_info):
             if row_index > 0:
@@ -117,12 +117,13 @@ def HQ_hot_result2(cate_source_file):
                         int_month_data = [9999, 9999, 9999, 9999, 9999, 9999, 9999, 9999, 9999, 9999, 9999, 9999]
                         print(f'{ppn_ic} int_month_data error: {e}')
                     avg = getMonthAvg(int_month_data)
+                    last_month = int_month_data[-1]
                     if valid_week(int_week_data) and valid_month(int_month_data):
                         hot_result = 1
                     else:
                         hot_result = 0
                     break;
-        result.append([ppn_str, manufactures[index],status[index], hot_week, hot_month, avg, hot_result])
+        result.append([ppn_str, manufactures[index],status[index], hot_week, hot_month, last_month, avg, hot_result])
     ExcelHelp.add_arr_to_sheet(file_name=cate_source_file, sheet_name="HQ_hot_result", dim_arr=result)
 
 
@@ -150,8 +151,8 @@ def read_record(save_file, task_name):
 
 
 if __name__ == "__main__":
-    aim_file = PathHelp.get_file_path(None, 'TInfineonPowerManger.xlsx')
-    task_name = 'TInfineonPowerManger'
+    aim_file = PathHelp.get_file_path(None, 'TNXPLineProduct.xlsx')
+    task_name = 'TNXPLineProduct'
     read_record(aim_file, task_name)
     time.sleep(3.0)
     HQ_hot_result2(aim_file)

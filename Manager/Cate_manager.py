@@ -312,6 +312,7 @@ def contains_chinese(text):
             return True
     return False
 
+
 def remove_chinese(text):
     # 使用列表推导式过滤掉中文字符
     result = ''.join(char for char in text if not ('\u4e00' <= char <= '\u9fff'))
@@ -319,15 +320,23 @@ def remove_chinese(text):
 
 
 def remove_repeat():
-    source_file = PathHelp.get_file_path(None, 'TVicorOffboard.xlsx')
+    source_file = PathHelp.get_file_path(None, 'TNXPMPU.xlsx')
     sheets = "digikey"
     sheet_cont = ExcelHelp.read_sheet_content_by_name(source_file, sheets)
 
-    history_files = [PathHelp.get_file_path(None, 'TVicorOther.xlsx'),
-                     PathHelp.get_file_path(None, 'TVicorPMIC.xlsx'),
-                     PathHelp.get_file_path(None, 'TVicorOnboard.xlsx')
+    history_files = [PathHelp.get_file_path(None, 'TNXPPowerDevice.xlsx'),
+                     PathHelp.get_file_path(None, 'TNXPSensor.xlsx'),
+                     PathHelp.get_file_path(None, 'TNXPCircutProtect.xlsx'),
+                     PathHelp.get_file_path(None, 'TNXPFilter.xlsx'),
+                     PathHelp.get_file_path(None, 'TNXPIsolation.xlsx'),
+                     PathHelp.get_file_path(None, 'TNXPClock.xlsx'),
+                     PathHelp.get_file_path(None, 'TNXPOtherControl.xlsx'),
+                     PathHelp.get_file_path(None, 'TNXPOther.xlsx'),
+                     PathHelp.get_file_path(None, 'TNXPLineProduct.xlsx'),
+                     PathHelp.get_file_path(None, 'TNXPMCU.xlsx'),
+                     PathHelp.get_file_path(None, 'TNXPCollectData.xlsx')
                      ]
-    history_apps = []
+    history_apps = ["型号"]
     for temp_file in history_files:
         col_content = ExcelHelp.read_col_content(temp_file, 'ppn', 1)
         history_apps += col_content
@@ -338,8 +347,6 @@ def remove_repeat():
           result.append(row)
           history_apps.append(ppn)
     ExcelHelp.add_arr_to_sheet(source_file, 'ppn', result)
-
-
 
 
 def combine(source_arr):

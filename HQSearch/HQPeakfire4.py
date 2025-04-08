@@ -10,20 +10,19 @@ log_file = PathHelp.get_file_path('HQSearch', 'HQPeakfireLog.txt')
 
 ssl._create_default_https_context = ssl._create_unverified_context
 
-sourceFile_dic = {'fileName': PathHelp.get_file_path(None, 'TVicorOnboard.xlsx'),
+sourceFile_dic = {'fileName': PathHelp.get_file_path(None, 'TNXPMPU.xlsx'),
                   'sourceSheet': 'ppn',
                   'colIndex': 1,
-                  'startIndex': 2700,
-                  'endIndex': 3600}
-task_name = 'TVicorOnboard'
-
+                  'startIndex': 2792,
+                  'endIndex': 3345}
+task_name = 'TNXPMPU'
 
 
 accouts_arr = [AccManage.HQ_hot_4['n'], AccManage.HQ_hot_4['p']]
 
 login_url = "https://passport.hqew.com/login"
 
-driver = ChromeDriverManager.getWebDriver(4)
+driver = ChromeDriverManager.getWebDriver(0)
 driver.set_window_size(height=800, width=1200)
 current_cate_has_date = True
 
@@ -92,8 +91,14 @@ def main():
                 time_lab = driver.find_element(By.ID, 'timetabs')
                 m_link = time_lab.find_elements(By.TAG_NAME, 'a')[1]
                 m_link.click()
-                time.sleep(10.0)
+                time.sleep(20.0)
                 month_arr = getSearchInfo(ppn, manu, False)
+                if month_arr.__len__() == 0:
+                    time_lab = driver.find_element(By.ID, 'timetabs')
+                    m_link = time_lab.find_elements(By.TAG_NAME, 'a')[1]
+                    m_link.click()
+                    time.sleep(10.0)
+                    month_arr = getSearchInfo(ppn, manu, False)
                 if month_arr.__len__() > 0:
                     cate_info = [ppn, manu, str(week_arr), str(month_arr), task_name]
                     MySqlHelp_recommanded.DBRecommandChip().hq_hot_write([cate_info])

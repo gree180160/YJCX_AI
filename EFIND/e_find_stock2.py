@@ -12,12 +12,13 @@ ssl._create_default_https_context = ssl._create_unverified_context
 
 log_file = PathHelp.get_file_path('EFIND', 'e_find_log.txt')
 
-sourceFile_dic = {'fileName': PathHelp.get_file_path(None, 'TInfineonPowerManger.xlsx'),
-                  'sourceSheet': 'ppn2',
+sourceFile_dic = {'fileName': PathHelp.get_file_path(None, 'TInfineonFIFO.xlsx'),
+                  'sourceSheet': 'ppn3',
                   'colIndex': 1,
-                  'startIndex': 100,
-                  'endIndex': 120}
-task_name = 'TInfineonPowerManger'
+                  'startIndex': 15,
+                  'endIndex': 30}
+task_name = 'TInfineonFIFO'
+
 
 try:
     driver = ChromeDriverManager.getWebDriver(1)

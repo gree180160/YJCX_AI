@@ -8,14 +8,14 @@ from Manager import AccManage, URLManager
 log_file = PathHelp.get_file_path('HQSearch', 'HQPeakfireLog.txt')
 ssl._create_default_https_context = ssl._create_unverified_context
 
-sourceFile_dic = {'fileName': PathHelp.get_file_path(None, 'TInfineonPowerManger.xlsx'),
+sourceFile_dic = {'fileName': PathHelp.get_file_path(None, 'TNXPPowerDevice.xlsx'),
                   'sourceSheet': 'ppn2',
                   'colIndex': 1,
-                  'startIndex': 10,
-                  'endIndex': 20}
-task_name = 'TInfineonPowerManger'
+                  'startIndex': 37,
+                  'endIndex': 45}
+task_name = 'TNXPPowerDevice'
 
-accouts_arr = [AccManage.HQ_hot_2['n'], AccManage.HQ_hot_2['p']]
+accouts_arr = [AccManage.HQ_hot_6['n'], AccManage.HQ_hot_6['p']]
 VerificationCodePage = 0
 login_url = "https://passport.hqew.com/login"
 

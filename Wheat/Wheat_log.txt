@@ -10078,3 +10078,1167 @@ from unknown error: web view not found
 2024-03-27 18:13:03get total page error list index out of range
 2024-03-27 18:17:32get total page error list index out of range
 2024-03-27 18:31:40get total page error list index out of range
+2025-02-24 10:51:41cannot get count Message: no such element: Unable to locate element: {"method":"css selector","selector":"[id="rc-tabs-13-tab-direct"]"}
+  (Session info: chrome=114.0.5735.133)
+
+2025-02-24 10:55:14cannot get count Message: no such element: Unable to locate element: {"method":"css selector","selector":"[id="rc-tabs-13-tab-direct"]"}
+  (Session info: chrome=114.0.5735.133)
+
+2025-02-24 10:59:14cannot get count Message: no such element: Unable to locate element: {"method":"css selector","selector":"[id="rc-tabs-13-tab-direct"]"}
+  (Session info: chrome=114.0.5735.133)
+
+2025-02-24 11:13:19cannot get count DBRecommandChip.wheat_record_write() missing 1 required positional argument: 'isRU'
+2025-02-24 11:16:35cannot get count DBRecommandChip.wheat_record_write() missing 1 required positional argument: 'isRU'
+2025-02-24 11:19:19cannot get count DBRecommandChip.wheat_record_write() missing 1 required positional argument: 'isRU'
+2025-02-24 11:22:16cannot get count DBRecommandChip.wheat_record_write() missing 1 required positional argument: 'isRU'
+2025-02-24 11:26:48cannot get count DBRecommandChip.wheat_record_write() missing 1 required positional argument: 'isRU'
+2025-02-24 11:30:11cannot get count DBRecommandChip.wheat_record_write() missing 1 required positional argument: 'isRU'
+2025-02-24 19:04:25cannot get count Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2025-02-24 19:04:25set input content error item_index is: 0, new content is :AFT09MP055GNR1 Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2025-02-24 19:04:27click search_button error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2025-02-24 19:07:20cannot get count Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2025-02-24 19:07:20set input content error item_index is: 0, new content is :A5G23H065NT4 Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2025-02-24 19:07:22click search_button error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2025-02-24 19:11:44cannot get count Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2025-02-24 19:11:44set input content error item_index is: 0, new content is :A5G35H055NT4 Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2025-02-24 19:11:46click search_button error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2025-02-24 19:15:01cannot get count Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2025-02-24 19:15:01set input content error item_index is: 0, new content is :AFT09MP055NR1 Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2025-02-24 19:15:03click search_button error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2025-02-24 19:17:58cannot get count Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2025-02-24 19:17:58set input content error item_index is: 0, new content is :A3T09S100NR1 Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2025-02-24 19:18:00click search_button error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2025-02-24 19:20:45cannot get count Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2025-02-24 19:20:45set input content error item_index is: 0, new content is :A5G38H055NT4 Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2025-02-24 19:20:47click search_button error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2025-02-24 19:23:56cannot get count Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2025-02-24 19:23:56set input content error item_index is: 0, new content is :A2T27S020GNR1 Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2025-02-24 19:23:58click search_button error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2025-02-24 19:27:17cannot get count Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2025-02-24 19:27:17set input content error item_index is: 0, new content is :MMRF1004GNR1 Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2025-02-24 19:27:19click search_button error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2025-02-24 19:30:33cannot get count Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2025-02-24 19:30:33set input content error item_index is: 0, new content is :A2I20H060NR1 Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2025-02-24 19:30:35click search_button error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2025-02-24 19:34:41cannot get count Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2025-02-24 19:34:41set input content error item_index is: 0, new content is :A3I25D080NR1 Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2025-02-24 19:34:43click search_button error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2025-02-24 19:37:51cannot get count Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2025-02-24 19:37:51set input content error item_index is: 0, new content is :A3I25D080GNR1 Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2025-02-24 19:37:53click search_button error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2025-02-24 19:42:25cannot get count Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2025-02-24 19:42:25set input content error item_index is: 0, new content is :A2I20H060GNR1 Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2025-02-24 19:42:27click search_button error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2025-02-24 19:46:44cannot get count Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2025-02-24 19:46:44set input content error item_index is: 0, new content is :MMRF1320GNR1 Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2025-02-24 19:46:46click search_button error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2025-02-24 19:50:04cannot get count Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2025-02-24 19:50:04set input content error item_index is: 0, new content is :A5G35H110NT4 Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2025-02-24 19:50:06click search_button error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2025-02-24 19:53:25cannot get count Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2025-02-24 19:53:25set input content error item_index is: 0, new content is :MMRF1304GNR1 Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2025-02-24 19:53:27click search_button error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2025-02-24 19:58:05cannot get count Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2025-02-24 19:58:05set input content error item_index is: 0, new content is :A5G23H110NT4 Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2025-02-24 19:58:07click search_button error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2025-02-24 20:02:47cannot get count Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2025-02-24 20:02:47set input content error item_index is: 0, new content is :A5G26H110NT4 Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2025-02-24 20:02:49click search_button error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2025-02-24 20:06:56cannot get count Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2025-02-24 20:06:56set input content error item_index is: 0, new content is :MRFE6S9060GNR1 Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2025-02-24 20:06:58click search_button error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2025-02-24 20:10:32cannot get count Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2025-02-24 20:10:32set input content error item_index is: 0, new content is :MMRF1304NR1 Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2025-02-24 20:10:34click search_button error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2025-02-24 20:15:14cannot get count Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2025-02-24 20:15:14set input content error item_index is: 0, new content is :A5G37H110NT4 Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2025-02-24 20:15:16click search_button error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2025-02-24 20:18:43cannot get count Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2025-02-24 20:18:43set input content error item_index is: 0, new content is :A5G35H120NT2 Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2025-02-24 20:18:45click search_button error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2025-02-24 20:21:33cannot get count Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2025-02-24 20:21:33set input content error item_index is: 0, new content is :AFIC31025NR1 Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2025-02-24 20:21:35click search_button error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2025-02-24 20:25:59cannot get count Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2025-02-24 20:25:59set input content error item_index is: 0, new content is :A2T09VD250NR1 Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2025-02-24 20:26:01click search_button error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2025-02-24 20:30:00cannot get count Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2025-02-24 20:30:00set input content error item_index is: 0, new content is :MMRF1320NR1 Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2025-02-24 20:30:02click search_button error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2025-02-24 20:34:26cannot get count Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2025-02-24 20:34:26set input content error item_index is: 0, new content is :A3T21H360W23SR6 Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2025-02-24 20:34:28click search_button error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2025-02-24 20:37:23cannot get count Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2025-02-24 20:37:23set input content error item_index is: 0, new content is :A2T07D160W04SR3 Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2025-02-24 20:37:25click search_button error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2025-02-24 20:41:22cannot get count Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2025-02-24 20:41:22set input content error item_index is: 0, new content is :A3T18H360W23SR6 Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2025-02-24 20:41:24click search_button error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2025-02-24 20:45:43cannot get count Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2025-02-24 20:45:43set input content error item_index is: 0, new content is :A3T18H400W23SR6 Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2025-02-24 20:45:45click search_button error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2025-02-24 20:49:13cannot get count Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2025-02-24 20:49:13set input content error item_index is: 0, new content is :AFV09P350-04GNR3 Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2025-02-24 20:49:15click search_button error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2025-02-24 20:52:05cannot get count Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2025-02-24 20:52:05set input content error item_index is: 0, new content is :AFV09P350-04NR3 Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2025-02-24 20:52:07click search_button error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2025-02-24 20:55:13cannot get count Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2025-02-24 20:55:13set input content error item_index is: 0, new content is :A3T21H400W23SR6 Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2025-02-24 20:55:15click search_button error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2025-02-24 20:59:09cannot get count Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2025-02-24 20:59:09set input content error item_index is: 0, new content is :A3T23H300W23SR6 Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2025-02-24 20:59:11click search_button error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2025-02-24 21:02:39cannot get count Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2025-02-24 21:02:39set input content error item_index is: 0, new content is :A2V09H400-04SR3 Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2025-02-24 21:02:41click search_button error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2025-02-24 21:06:34cannot get count Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2025-02-24 21:06:34set input content error item_index is: 0, new content is :MRFE6VP6600GNR3 Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2025-02-24 21:06:36click search_button error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2025-02-24 21:09:21cannot get count Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2025-02-24 21:09:21set input content error item_index is: 0, new content is :A2V07H400-04NR3 Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2025-02-24 21:09:23click search_button error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2025-02-24 21:13:14cannot get count Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2025-02-24 21:13:14set input content error item_index is: 0, new content is :MMRF1305HSR5 Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2025-02-24 21:13:16click search_button error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2025-02-24 21:17:34cannot get count Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2025-02-24 21:17:34set input content error item_index is: 0, new content is :A2T21H100-25SR3 Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2025-02-24 21:17:36click search_button error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2025-02-24 21:21:49cannot get count Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2025-02-24 21:21:49set input content error item_index is: 0, new content is :MRFX035HR5 Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2025-02-24 21:21:51click search_button error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2025-02-24 21:24:49cannot get count Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2025-02-24 21:24:49set input content error item_index is: 0, new content is :A2T09D400-23NR6 Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2025-02-24 21:24:51click search_button error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2025-02-24 21:28:08cannot get count Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2025-02-24 21:28:08set input content error item_index is: 0, new content is :A3T19H455W23SR6 Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2025-02-24 21:28:10click search_button error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2025-02-24 21:31:32cannot get count Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2025-02-24 21:31:32set input content error item_index is: 0, new content is :A3T21H456W23SR6 Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2025-02-24 21:31:34click search_button error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2025-02-24 21:35:49cannot get count Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2025-02-24 21:35:49set input content error item_index is: 0, new content is :A2V09H300-04NR3 Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2025-02-24 21:35:51click search_button error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2025-02-24 21:40:05cannot get count Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2025-02-24 21:40:05set input content error item_index is: 0, new content is :A3T18H455W23SR6 Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2025-02-24 21:40:07click search_button error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2025-02-24 21:44:27cannot get count Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2025-02-24 21:44:27set input content error item_index is: 0, new content is :A2V07H525-04NR6 Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2025-02-24 21:44:29click search_button error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2025-02-24 21:47:12cannot get count Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2025-02-24 21:47:12set input content error item_index is: 0, new content is :MMRF1310HSR5 Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2025-02-24 21:47:14click search_button error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2025-02-24 21:49:58cannot get count Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2025-02-24 21:49:58set input content error item_index is: 0, new content is :A2T14H450-23NR6 Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2025-02-24 21:50:00click search_button error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2025-02-24 21:53:54cannot get count Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2025-02-24 21:53:54set input content error item_index is: 0, new content is :A2V09H525-04NR6 Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2025-02-24 21:53:56click search_button error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2025-02-24 21:57:50cannot get count Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2025-02-24 21:57:50set input content error item_index is: 0, new content is :A3V07H600-42NR6 Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2025-02-24 21:57:52click search_button error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2025-02-24 22:01:32cannot get count Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2025-03-05 18:50:28click search_button error list index out of range
+2025-03-05 18:58:24click search_button error list index out of range
+2025-03-05 19:10:38click search_button error list index out of range
+2025-03-05 19:19:26click search_button error list index out of range
+2025-03-05 19:25:11click search_button error list index out of range
+2025-03-05 19:30:36click search_button error list index out of range
+2025-03-05 19:38:32click search_button error list index out of range
+2025-03-05 19:45:24click search_button error list index out of range
+2025-03-05 19:48:39click search_button error list index out of range
+2025-03-05 19:56:17click search_button error list index out of range
+2025-03-05 20:04:00click search_button error list index out of range
+2025-03-05 20:14:48click search_button error list index out of range
+2025-03-05 20:24:53click search_button error list index out of range
+2025-03-06 08:00:47click search_button error list index out of range
+2025-03-06 08:03:03click search_button error list index out of range
+2025-03-06 08:06:02click search_button error list index out of range
+2025-03-06 08:08:48click search_button error list index out of range
+2025-03-06 08:16:51click search_button error list index out of range
+2025-03-06 08:22:44click search_button error list index out of range
+2025-03-06 08:26:18click search_button error list index out of range
+2025-03-06 08:31:49click search_button error list index out of range
+2025-03-06 08:36:00click search_button error list index out of range
+2025-03-06 08:45:58click search_button error list index out of range
+2025-03-06 08:48:48click search_button error list index out of range
+2025-03-06 08:51:49click search_button error list index out of range
+2025-03-06 09:00:58click search_button error list index out of range
+2025-03-06 09:03:40click search_button error list index out of range
+2025-03-06 09:09:35click search_button error list index out of range
+2025-03-06 09:19:16click search_button error list index out of range
+2025-03-06 09:21:46click search_button error list index out of range
+2025-03-06 09:26:00click search_button error list index out of range
+2025-03-06 09:29:04click search_button error list index out of range
+2025-03-06 09:33:51click search_button error list index out of range
+2025-03-06 09:41:54click search_button error list index out of range
+2025-03-06 09:48:41click search_button error list index out of range
+2025-03-06 09:53:29click search_button error list index out of range
+2025-03-10 10:28:54set input content error item_index is: 0, new content is :MW6S004NT1 Message: stale element reference: stale element not found
+  (Session info: chrome=114.0.5735.133)
+
+2025-03-12 16:33:07set input content error item_index is: 0, new content is :ADXL355BEZ-RL Message: stale element reference: stale element not found
+  (Session info: chrome=114.0.5735.133)
+
+2025-03-13 18:41:22click search_button error list index out of range
+2025-03-13 18:51:09click search_button error list index out of range
+2025-03-13 18:57:15click search_button error list index out of range
+2025-03-13 19:05:22click search_button error list index out of range
+2025-03-13 19:09:59click search_button error list index out of range
+2025-03-13 19:14:04click search_button error list index out of range
+2025-03-13 19:18:57click search_button error list index out of range
+2025-03-13 19:28:05click search_button error list index out of range
+2025-03-13 19:33:12click search_button error list index out of range
+2025-03-13 19:38:55click search_button error list index out of range
+2025-03-13 19:41:14click search_button error list index out of range
+2025-03-13 19:48:58click search_button error list index out of range
+2025-03-13 19:55:47click search_button error list index out of range
+2025-03-13 20:05:08click search_button error list index out of range
+2025-03-13 20:14:27click search_button error list index out of range
+2025-03-13 20:18:13click search_button error list index out of range
+2025-03-13 20:24:11click search_button error list index out of range
+2025-03-13 20:26:36click search_button error list index out of range
+2025-03-14 08:01:05click search_button error list index out of range
+2025-03-14 08:11:01click search_button error list index out of range
+2025-03-14 08:20:11click search_button error list index out of range
+2025-03-14 08:27:36click search_button error list index out of range
+2025-03-14 08:36:40click search_button error list index out of range
+2025-03-14 08:39:26click search_button error list index out of range
+2025-03-14 08:44:53click search_button error list index out of range
+2025-03-14 08:50:09click search_button error list index out of range
+2025-03-14 09:00:06click search_button error list index out of range
+2025-03-14 09:02:44click search_button error list index out of range
+2025-03-14 09:10:18click search_button error list index out of range
+2025-03-14 09:19:00click search_button error list index out of range
+2025-03-14 09:21:29click search_button error list index out of range
+2025-03-14 09:24:52click search_button error list index out of range
+2025-03-14 09:34:30click search_button error list index out of range
+2025-03-14 09:40:04click search_button error list index out of range
+2025-03-14 09:45:49click search_button error list index out of range
+2025-03-14 09:52:34cannot get count Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2025-03-14 09:52:34set input content error item_index is: 0, new content is :MMA8452QT Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2025-03-14 09:52:36click search_button error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2025-03-14 09:59:21cannot get count Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2025-03-14 09:59:21set input content error item_index is: 0, new content is :MXD2020EL Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2025-03-14 09:59:23click search_button error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2025-03-14 10:05:19cannot get count Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2025-03-14 10:05:19set input content error item_index is: 0, new content is :IIS3DHHCTR Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2025-03-14 10:05:21click search_button error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2025-03-14 10:07:38cannot get count Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2025-03-14 10:07:38set input content error item_index is: 0, new content is :MC3630 Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2025-03-14 10:07:40click search_button error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2025-03-14 10:15:58cannot get count Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2025-03-14 10:15:58set input content error item_index is: 0, new content is :KX122-1037 Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2025-03-14 10:16:00click search_button error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2025-03-14 10:19:42cannot get count Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2025-03-14 10:19:42set input content error item_index is: 0, new content is :ADXL326BCPZ-RL7 Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2025-03-14 10:19:44click search_button error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2025-03-14 10:26:27cannot get count Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2025-03-14 10:26:27set input content error item_index is: 0, new content is :ADXL345BCCZ-RL Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2025-03-14 10:26:29click search_button error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2025-03-14 10:34:59cannot get count Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2025-03-14 10:34:59set input content error item_index is: 0, new content is :ADXL359BCCZ Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2025-03-14 10:35:01click search_button error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2025-03-14 10:41:19cannot get count Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2025-03-14 10:41:19set input content error item_index is: 0, new content is :ADXL1004BCPZ Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2025-03-14 10:41:21click search_button error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2025-03-14 10:45:24cannot get count Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2025-03-14 10:45:24set input content error item_index is: 0, new content is :AIS2IHTR Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2025-03-14 10:45:26click search_button error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2025-03-14 10:54:15cannot get count Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2025-03-14 10:54:15set input content error item_index is: 0, new content is :MC3419 Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2025-03-14 10:54:17click search_button error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2025-03-14 10:59:50cannot get count Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2025-03-14 10:59:50set input content error item_index is: 0, new content is :BMA150 Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2025-03-14 10:59:52click search_button error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2025-03-14 11:08:06cannot get count Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2025-03-14 11:08:06set input content error item_index is: 0, new content is :MMA8451QT Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2025-03-14 11:08:08click search_button error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2025-03-14 11:13:13cannot get count Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2025-03-14 11:13:13set input content error item_index is: 0, new content is :MMA8453QR1 Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2025-03-14 11:13:15click search_button error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2025-03-14 11:17:06cannot get count Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2025-03-14 11:17:06set input content error item_index is: 0, new content is :MC3635 Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2025-03-14 11:17:08click search_button error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2025-03-14 11:25:59cannot get count Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2025-03-14 11:25:59set input content error item_index is: 0, new content is :MC3632 Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2025-03-14 11:26:01click search_button error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2025-03-14 11:34:40cannot get count Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2025-03-14 11:34:40set input content error item_index is: 0, new content is :LIS2DWLTR Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2025-03-14 11:34:42click search_button error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2025-03-14 11:37:05cannot get count Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2025-03-14 11:37:05set input content error item_index is: 0, new content is :IIS2DHTR Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2025-03-14 11:37:07click search_button error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2025-03-14 11:39:33cannot get count Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2025-03-14 11:39:33set input content error item_index is: 0, new content is :BMA223 Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2025-03-14 11:39:35click search_button error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2025-03-14 11:49:33cannot get count Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2025-03-14 11:49:33set input content error item_index is: 0, new content is :ADXL375BCCZ-RL7 Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2025-03-14 11:49:35click search_button error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2025-03-14 11:55:30cannot get count Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2025-03-14 13:14:43cannot get count 2013 (HY000): Lost connection to MySQL server at 'reading initial communication packet', system error: 60
+2025-03-14 13:30:30set input content error item_index is: 0, new content is :BMA423 Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2025-03-14 13:30:32click search_button error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2025-03-14 13:32:38cannot get count Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2025-03-14 13:32:38set input content error item_index is: 0, new content is :ADXL354CEZ Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2025-03-14 13:32:40click search_button error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2025-03-14 13:36:08cannot get count Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2025-03-14 13:36:08set input content error item_index is: 0, new content is :MC3416 Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2025-03-14 13:36:10click search_button error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2025-03-14 13:41:08cannot get count Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2025-03-14 13:41:08set input content error item_index is: 0, new content is :SCA3100-D07-1 Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2025-03-14 13:41:10click search_button error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2025-03-14 13:43:40cannot get count Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2025-03-14 13:43:40set input content error item_index is: 0, new content is :ADXL213AE-REEL Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2025-03-14 13:43:42click search_button error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2025-03-14 13:52:05cannot get count Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2025-03-14 13:52:05set input content error item_index is: 0, new content is :ADXL343BCCZ-RL7 Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2025-03-14 13:52:07click search_button error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2025-03-14 14:02:04cannot get count Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2025-03-14 14:02:04set input content error item_index is: 0, new content is :ADXL377BCPZ-RL7 Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2025-03-14 14:02:06click search_button error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2025-03-14 14:11:43cannot get count Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2025-03-14 14:11:43set input content error item_index is: 0, new content is :LIS2DTW12TR Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2025-03-14 14:11:45click search_button error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2025-03-14 14:17:59cannot get count Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2025-03-14 14:17:59set input content error item_index is: 0, new content is :ADXL354BEZ-RL7 Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2025-03-14 14:18:01click search_button error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2025-03-14 14:28:01cannot get count Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2025-03-14 14:28:01set input content error item_index is: 0, new content is :IIM-42351 Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2025-03-14 14:28:03click search_button error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2025-03-14 14:33:22cannot get count Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2025-03-14 14:33:22set input content error item_index is: 0, new content is :AD22293Z Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2025-03-14 14:33:24click search_button error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2025-03-14 14:41:52cannot get count Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2025-03-14 14:41:52set input content error item_index is: 0, new content is :LIS302DLTR Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2025-03-14 14:41:54click search_button error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2025-03-14 14:46:39cannot get count Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2025-03-14 14:46:39set input content error item_index is: 0, new content is :ADXL355BEZ-RL Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2025-03-14 14:46:41click search_button error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2025-03-14 14:53:16cannot get count Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2025-03-14 14:53:16set input content error item_index is: 0, new content is :AD22037Z Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2025-03-14 14:53:18click search_button error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2025-03-14 15:00:14cannot get count Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2025-03-14 15:00:14set input content error item_index is: 0, new content is :H3LIS100DLTR Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2025-03-14 15:00:16click search_button error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2025-03-14 15:05:54cannot get count Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2025-03-14 15:05:54set input content error item_index is: 0, new content is :ADXL103CE-REEL Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2025-03-14 15:05:56click search_button error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2025-03-14 15:15:35cannot get count Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2025-03-14 15:15:35set input content error item_index is: 0, new content is :MMA7455LR1 Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2025-03-14 15:15:37click search_button error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2025-03-14 15:23:04cannot get count Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2025-03-14 15:23:04set input content error item_index is: 0, new content is :ADXL372BCCZ-RL Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2025-03-14 15:23:06click search_button error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2025-03-14 15:32:27cannot get count Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2025-03-14 15:32:27set input content error item_index is: 0, new content is :H3LIS200DL Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2025-03-14 15:32:29click search_button error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2025-03-14 15:35:01cannot get count Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2025-03-14 15:35:01set input content error item_index is: 0, new content is :KXTC9-2050-FR Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2025-03-14 15:35:03click search_button error Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2025-03-14 15:44:48cannot get count Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.133)
+
+2025-03-21 11:49:56set input content error item_index is: 0, new content is :IAUA200N04S5N010 Message: stale element reference: stale element not found
+  (Session info: chrome=114.0.5735.133)
+
+2025-03-24 15:55:25cannot get count 2013 (HY000): Lost connection to MySQL server at 'reading initial communication packet', system error: 60
+2025-03-28 14:46:26set input content error item_index is: 0, new content is :FF1200R17KP4_B2 Message: stale element reference: stale element not found
+  (Session info: chrome=114.0.5735.133)
+

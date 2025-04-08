@@ -137,8 +137,8 @@ def read_record(save_file, task_name):
 
 
 if __name__ == "__main__":
-    aim_file = PathHelp.get_file_path(None, 'TInfineonPowerManger.xlsx')
-    task_name = 'TInfineonPowerManger'
+    aim_file = PathHelp.get_file_path(None, 'TNXPCircutProtect.xlsx')
+    task_name = 'TNXPCircutProtect'
     read_record(aim_file, task_name)
     bom_price_result(aim_file, 'ppn2')
     print('over')

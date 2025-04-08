@@ -50,6 +50,6 @@ if __name__ == "__main__":
     # save_file = PathHelp.get_file_path(None, 'TTIDiscontiueIC.xlsx')
     # octopart_fold_csv_xlsx(source_file, save_file)
 
-    source_file = "/Users/liuhe/Downloads/20250221_tinfineonpowermanger_xlsx.csv"
-    save_file = PathHelp.get_file_path(None, 'TInfineonPowerManger.xlsx')
+    source_file = "/Users/liuhe/Downloads/20250407_tnxpcircutprotect_xlsx.csv"
+    save_file = PathHelp.get_file_path(None, 'TNXPCircutProtect.xlsx')
     octopart_file_arr(source_file, save_file)

@@ -39,9 +39,8 @@ def read_record(save_file, task_name):
 
 
 if __name__ == "__main__":
-    aim_file = PathHelp.get_file_path(None, 'TInfineonPowerManger.xlsx')
-    task_name = 'TInfineonPowerManger'
+    aim_file = PathHelp.get_file_path(None, 'TNXPPowerDevice.xlsx')
+    task_name = 'TNXPPowerDevice'
     read_record(aim_file, task_name)
     HQ_stock_sum(aim_file, 'ppn2')
     time.sleep(5.0)
-

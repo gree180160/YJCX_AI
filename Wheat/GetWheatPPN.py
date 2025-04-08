@@ -24,13 +24,13 @@ ssl._create_default_https_context = ssl._create_unverified_context
 #                   'colIndex': 1,
 #                   'startIndex': 793,
 #                   'endIndex': 1000}
-sourceFile_dic = {'fileName': PathHelp.get_file_path(None, 'TInfineonPowerManger.xlsx'),
+sourceFile_dic = {'fileName': PathHelp.get_file_path(None, 'TInfenionMos.xlsx'),
                   'sourceSheet': 'ppn2',
                   'colIndex': 1,
                   'startIndex': 0,
                   'endIndex': 6}
-task_name = "TInfineonPowerManger"
-result_save_file = PathHelp.get_file_path(None, 'TInfineonPowerManger.xlsx')
+task_name = "TInfenionMos"
+result_save_file = PathHelp.get_file_path(None, 'TInfenionMos.xlsx')
 result_save_sheet = 'Wheat_buyer'
 logFile = PathHelp.get_file_path('Wheat', 'Wheat_log.txt')
 

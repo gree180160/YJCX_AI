@@ -39,11 +39,12 @@ class IC_Stock_Info:
         return result
 
     def descritpion_arr_fl(self):
-        # (ppn, st_manu, supplier_manu, supplier, stock_num)
+        # (ppn, st_manu, supplier, sup_ppn, sup_manu, stock_num)
         result = [self.model or "--",
                   self.st_manu or "--",
-                  self.supplier_manu or "--",
                   self.supplier or "--",
+                  self.supplier_ppn or "--",
+                  self.supplier_manu or "--",
                   self.stock_num]
         return result
 

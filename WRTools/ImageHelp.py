@@ -71,13 +71,13 @@ def water_mark():
     text = "   深圳市风菱电子有限责任公司   "
     font_path = "/Library/Fonts/AlibabaHealthFont2.0CN-85B.ttf"  # 修改为系统自带的字体路径
     font_size = 12  # 设置字号
-    text_color = (73, 160, 45, 30)
+    text_color = (78, 160, 85, 30)
     font = ImageFont.truetype(font_path, font_size)
 
     # 遍历文件夹里的所有图片
-    folder_path = "/Users/liuhe/Desktop/产品照片/私印/"
+    folder_path = "/Users/liuhe/Downloads/IMG_20250331_0001 conv_png/"
     for filename in os.listdir(folder_path):
-        if filename.endswith(".HEIC") or filename.endswith(".png") or filename.endswith(".jpeg"):
+        if filename.endswith(".HEIC") or filename.endswith(".png") or filename.endswith(".jpeg") or filename.endswith(".jpg"):
             image_path = os.path.join(folder_path, filename)
             # once_add_mark(image_path, text, text_color, font)
             add_watermark_repeat(image_path, text, text_color)
@@ -97,7 +97,7 @@ def add_watermark_repeat(image_path, text, text_color):
     # 打开原始图片
     try:
         original = Image.open(image_path).convert("RGBA")
-        original.show()
+        # original.show()
     except UnidentifiedImageError:
         print("Error: The image file could not be identified. Please check the file format and path.")
     except FileNotFoundError:
