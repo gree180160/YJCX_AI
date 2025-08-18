@@ -1,4 +1,6 @@
 import base64
+from io import BytesIO
+
 from WRTools import PathHelp, DDDDOCR
 from PIL import Image, ImageDraw, ImageFont, ImageEnhance, UnidentifiedImageError
 import os
@@ -71,7 +73,7 @@ def water_mark():
     text = "   深圳市风菱电子有限责任公司   "
     font_path = "/Library/Fonts/AlibabaHealthFont2.0CN-85B.ttf"  # 修改为系统自带的字体路径
     font_size = 12  # 设置字号
-    text_color = (78, 160, 85, 30)
+    text_color = (255, 255, 255, 30)
     font = ImageFont.truetype(font_path, font_size)
 
     # 遍历文件夹里的所有图片

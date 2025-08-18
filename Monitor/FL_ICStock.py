@@ -15,19 +15,19 @@ ssl._create_default_https_context = ssl._create_unverified_context
 sourceFile_dic = {'fileName': PathHelp.get_file_path("Monitor", 'TFL_ICStock.xlsx'),
                   'sourceSheet': 'ppn',
                   'colIndex': 1,
-                  'startIndex': 6,
-                  'endIndex': 6}
+                  'startIndex': 10,
+                  'endIndex': 11} # 0- 11
 
 accouts_arr = [[AccManage.IC_stock_1['n'], AccManage.IC_stock_1['p']]]
 try:
-    driver = ChromeDriverManager.getWebDriver(1)
+    driver = ChromeDriverManager.getWebDriver(0)
 except Exception as e:
     print(e)
 
 total_page = 1
 current_page = 1
 VerificationCodePage = 0
-ignore_list = ['967067-1', 'HFW4A1201K00', 'PI3301-00-LGIZ']
+ignore_list = []
 
 
 def get_total_page():
@@ -56,9 +56,7 @@ def login_action(aim_url):
         WaitHelp.waitfor_account_import(False, False)
         driver.find_element(by=By.ID, value='btn_login').click()
         WaitHelp.waitfor_ICHot(True, False)
-    if driver.current_url.startswith('https://member.ic.net'):  # 首次登录
-        driver.get(aim_url)
-    elif driver.current_url.startswith('https://www.ic.net.cn/search'):  # 查询过程中出现登录
+    else:
         driver.get(aim_url)
 
 
@@ -80,6 +78,7 @@ def get_stock(cate_index, cate_name, st_manu):
     need_load_nextPage = True
     need_save_ic_arr = []
     while current_page <= total_page and need_load_nextPage:
+        current_page_saved_supplier_count = 0
         try:
             li_arr = driver.find_element(by=By.ID, value='resultList').find_elements(by=By.CSS_SELECTOR, value='li.stair_tr')
         except:
@@ -90,7 +89,8 @@ def get_stock(cate_index, cate_name, st_manu):
                 continue
             # print("li is:", templi.__str__())
             try:
-                suppliers = templi.find_elements(by=By.CSS_SELECTOR, value='a.result_goCompany')
+                supplier_container = templi.find_element(By.CSS_SELECTOR, 'div.result_supply')
+                suppliers = supplier_container.find_elements(by=By.CSS_SELECTOR, value='a.result_goCompany')
                 for temp_suppler in suppliers:
                     if temp_suppler.text.__len__() > 0:
                         supplier = temp_suppler.text
@@ -157,11 +157,15 @@ def get_stock(cate_index, cate_name, st_manu):
                                           supplier_manu=manufacturer,
                                           stock_num=stock_num)
             if ic_Stock_Info.shouldSave():
+                current_page_saved_supplier_count += 1
                 saveContent_arr = ic_Stock_Info.descritpion_arr_fl()
                 if not stored_supplier.__contains__(supplier):
                     need_save_ic_arr.append(saveContent_arr)
                     stored_supplier.append(supplier)
-        gotoNextPage(cate_name)
+        if current_page_saved_supplier_count > 10:
+            gotoNextPage(cate_name)
+        else:
+            return need_save_ic_arr
     return need_save_ic_arr
 
 
@@ -181,10 +185,6 @@ def gotoNextPage(cate_name):
     current_page += 1
 
 
-def stock_change_alert(ppn_list):
-    print('todo') # //TODO wr
-
-
 # 验证当前页面是否正在等待用户验证，连续三次请求出现验证码页面，则关闭页面
 def checkVerificationCodePage(ppn) -> bool:
     global VerificationCodePage
@@ -202,6 +202,13 @@ def checkVerificationCodePage(ppn) -> bool:
 
 
 def main():
+    confuse_actions = [
+        confuse_supplier_info,
+        confuse_storePPN,
+        confuse_helpCenter,
+        confuse_pilot,
+        confuse_home
+    ]
     db_manager = MySqlHelp_monitor.MonitorDatabaseManager()
     # 创建连接
     all_cates = ExcelHelp.read_col_content(sourceFile_dic['fileName'], sourceFile_dic['sourceSheet'],
@@ -223,8 +230,83 @@ def main():
                     db_manager.insert_monitor_ics(need_save_ic_arr)
                 finally:
                     db_manager.close_connection()
+                    # Every three categories, perform a confuse action
+                if cate_index > 0:
+                    random_action = random.choice(confuse_actions)
+                    confuseAction(random_action)
     except Exception as e:
         print(e)
+
+
+def confuseAction(action):
+    if action:
+        a_item = action()
+        try:
+            a_item.click()
+            time.sleep(8.5 + random.uniform(1, 10))
+            # 关闭新页面（如果打开了新的窗口）
+            if len(driver.window_handles) > 1:
+                driver.close()
+            # 返回初始页面（如果需要）
+            driver.switch_to.window(driver.window_handles[0])
+        except:
+            print('confuse error')
+    else:
+        print('action is None')
+
+
+def confuse_leftAD():
+    try:
+        ad1 = driver.find_element(By.ID, 'SD1').find_element(By.TAG_NAME, 'a')
+        return ad1
+    except:
+        return None
+
+
+def confuse_supplier_info():
+    try:
+        suppliers = driver.find_elements(By.CSS_SELECTOR, 'div.result_supply')
+        if suppliers.__len__() > 0:
+            last_link = suppliers[-1].find_elements(By.TAG_NAME, 'a')[-1]
+            return last_link
+    except:
+        return None
+
+
+def confuse_storePPN():
+    try:
+        store = driver.find_element(By.CSS_SELECTOR, 'li.iconfont.icon-aixin')
+        return store
+    except:
+        return None
+
+
+def confuse_helpCenter():
+    try:
+        topNav = driver.find_element(By.CSS_SELECTOR, 'div.topnav_content')
+        help_center = topNav.find_elements(By.CSS_SELECTOR, 'div.fl')[-2]
+        help_link = help_center.find_element(By.TAG_NAME, 'a')
+        return help_link
+    except:
+        return None
+
+
+def confuse_pilot():
+    try:
+        topNav = driver.find_element(By.CSS_SELECTOR, 'div.topnav_content')
+        pilot_center = topNav.find_elements(By.CSS_SELECTOR, 'div.fl')[-4]
+        pilot_link = pilot_center.find_element(By.TAG_NAME, 'a')
+        return pilot_link
+    except:
+        return None
+
+
+def confuse_home():
+    try:
+        pilot_link = driver.find_element(By.CSS_SELECTOR, 'a.icHome')
+        return pilot_link
+    except:
+        return None
 
 
 if __name__ == "__main__":
@@ -235,3 +317,33 @@ if __name__ == "__main__":
     login_action("https://member.ic.net.cn/member/member_index.php")
     main()
 
+
+
+'''
+-- 创建临时表，只选择 sup_stock 是数字的记录  
+CREATE TEMPORARY TABLE temp_stock AS  
+SELECT  
+    st_ppn,  
+    st_manu,  
+    supplier,  
+    COALESCE(SUM(CASE WHEN m_date = '2025-07-15' THEN CAST(sup_stock AS DECIMAL) END), 0) AS stock1,  
+    COALESCE(SUM(CASE WHEN m_date = '2025-08-13' THEN CAST(sup_stock AS DECIMAL) END), 0) AS stock2  
+FROM  
+    monitor_ic  
+WHERE  
+    m_date IN ('2025-07-15', '2025-08-13') AND  
+    sup_stock REGEXP '^[0-9]+$'  -- 只选择 sup_stock 是数字的记录  
+GROUP BY  
+    st_ppn, st_manu, supplier;  
+
+-- 删除 stock1 和 stock2 都为 0 的记录  
+DELETE FROM temp_stock  
+WHERE stock1 = 0 AND stock2 = 0;  
+
+-- 删除 stock1 = stock2 的记录，确保不删除 stock1 和 stock2 都为 0 的情况  
+DELETE FROM temp_stock  
+WHERE stock1 = stock2 AND stock1 != 0;  
+
+-- 查询最终结果  
+SELECT * FROM temp_stock;  
+'''

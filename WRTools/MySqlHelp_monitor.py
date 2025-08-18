@@ -85,18 +85,38 @@ class MonitorDatabaseManager:
         finally:
             cursor.close()
 
+    def ic_supplier_info_write(self, name, age, address, hot, qq, tel, phone):
+        # 插入数据的 SQL 语句
+        insert_query = """  
+        REPLACE INTO IC_supplier_info (name, age, address, hot, qq, tel, phone)  
+        VALUES (%s, %s, %s, %s, %s, %s, %s)  
+        """
+        self.execute_query(insert_query, (name, age, address, hot, qq, tel, phone))
+
+    def insert_ic_supplier_list(self, records):
+        insert_query = """  
+                REPLACE INTO IC_supplier_info (name, age, address, hot, qq, tel, phone)  
+                VALUES (%s, %s, %s, %s, %s, %s, %s)  
+                """
+        try:
+            cursor = self.connection.cursor()
+            cursor.executemany(insert_query, records)
+            self.connection.commit()
+            print(f"成功插入 {cursor.rowcount} 条记录")
+        except Error as e:
+            LogHelper.write_log(log_file_name=PathHelp.get_file_path('WRTools', 'MySqlHelpLog.txt'),
+                                content=f'monitor wirte error: {records}')
+        finally:
+            cursor.close()
+
 
 if __name__ == "__main__":
+    arr = []
     db_manager = MonitorDatabaseManager()
     # 创建连接
     db_manager.create_connection()
     try:
-        arr = []
-        result = []
-        for element in arr:
-            temp = [element[0], element[1], element[3], element[0], element[2], element[4]]
-            result.append(temp)
-        db_manager.insert_monitor_ics(result)
+        db_manager.insert_ic_supplier_list(arr)
     except Exception as e:
         print(e)
     finally:

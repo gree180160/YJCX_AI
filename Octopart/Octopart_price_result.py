@@ -45,11 +45,12 @@ def searchLowestIndex(source_file):
         return 0
 
 
-if __name__ == "__main__":
-    # source_file = "/Users/liuhe/Desktop/京创智通/停产料/octopart/"
-    # save_file = PathHelp.get_file_path(None, 'TTIDiscontiueIC.xlsx')
-    # octopart_fold_csv_xlsx(source_file, save_file)
+def read_record(save_file, task_name):
+    record = MySqlHelp_recommanded.DBRecommandChip().octopart_market_read(f'task_name = "{task_name}"')
+    ExcelHelp.add_arr_to_sheet(save_file, 'octopart', record)
 
-    source_file = "/Users/liuhe/Downloads/20250407_tnxpcircutprotect_xlsx.csv"
-    save_file = PathHelp.get_file_path(None, 'TNXPCircutProtect.xlsx')
-    octopart_file_arr(source_file, save_file)
+
+if __name__ == "__main__":
+    aim_file = PathHelp.get_file_path(None, 'TRenesasIsolators.xlsx')
+    task_name = 'TRenesasIsolators'
+    read_record(aim_file, task_name)

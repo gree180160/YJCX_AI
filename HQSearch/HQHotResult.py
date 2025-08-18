@@ -9,12 +9,8 @@
 # 周: 2. min(new1, new2, new3, new4) >= 10 -> True
 import time
 
-from openpyxl import workbook, load_workbook, Workbook
-import base64
 from statistics import mean
-import math
 from WRTools import PathHelp, ExcelHelp, MySqlHelp_recommanded
-# cate_source_file = PathHelp.get_file_path(None, 'TLK240322.xlsx') #PathHelp.get_file_path(None, '/Users/liuhe/Downloads/TTIMilitary.xlsx')
 # 根据规则匹配判断型号是否符合热度标准。
 
 
@@ -104,13 +100,19 @@ def HQ_hot_result2(cate_source_file):
                 if ppn_ic.upper() == ppn_str.upper():
                     hot_week = row_content[2]
                     hot_month = row_content[3]
-                    week_data = eval(hot_week)
+                    try:
+                        week_data = eval(hot_week)
+                    except:
+                        week_data = ['0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0']
                     try:
                         int_week_data = [int(x) for x in week_data]
                     except Exception as e:
                         int_week_data = [9999, 9999, 9999, 9999, 9999, 9999, 9999, 9999, 9999, 9999, 9999, 9999]
                         print(f'{ppn_ic} int_week_data error: {e}')
-                    month_data = eval(hot_month)
+                    try:
+                        month_data = eval(hot_month)
+                    except:
+                        month_data = ['0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0']
                     try:
                         int_month_data = [int(x) for x in month_data]
                     except Exception as e:
@@ -151,8 +153,8 @@ def read_record(save_file, task_name):
 
 
 if __name__ == "__main__":
-    aim_file = PathHelp.get_file_path(None, 'TNXPLineProduct.xlsx')
-    task_name = 'TNXPLineProduct'
+    aim_file = PathHelp.get_file_path(None, 'TTILinearSwitch.xlsx')
+    task_name = 'TTILinearSwitch'
     read_record(aim_file, task_name)
     time.sleep(3.0)
     HQ_hot_result2(aim_file)

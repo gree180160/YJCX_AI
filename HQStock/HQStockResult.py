@@ -24,6 +24,9 @@ def HQ_stock_sum(cate_source_file, sheetname):
             ppn_ic = str(row_content[0])
             if ppn_ic.upper() == ppn_str.upper():
                 stock_num = int(row_content[6])
+                batch = str(row_content[5])
+                if not checkBatch(batch):
+                    continue
                 if stock_num < 10:
                     valid_supplier_sum += 0.01
                 else:
@@ -38,9 +41,21 @@ def read_record(save_file, task_name):
     ExcelHelp.add_arr_to_sheet(save_file, 'HQ_stock', record)
 
 
+# 只统计批次在5年内的supplier 数量
+def checkBatch(batch: str):
+    return True
+    if not batch or batch.__len__() == 0:
+        return False
+    else:
+        if batch[0] == '2':
+            return True
+        else:
+            return False
+
+
 if __name__ == "__main__":
-    aim_file = PathHelp.get_file_path(None, 'TNXPPowerDevice.xlsx')
-    task_name = 'TNXPPowerDevice'
+    aim_file = PathHelp.get_file_path(None, 'TTILinearSwitch.xlsx')
+    task_name = 'TTILinearSwitch'
     read_record(aim_file, task_name)
     HQ_stock_sum(aim_file, 'ppn2')
     time.sleep(5.0)

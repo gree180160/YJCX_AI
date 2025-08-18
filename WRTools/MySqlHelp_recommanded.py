@@ -58,6 +58,9 @@ class DBRecommandChip:
                 print(f"{e}")
                 LogHelper.write_log(log_file_name=PathHelp.get_file_path('WRTools', 'MySqlHelpLog.txt'),
                                 content=f'yjcx_recommended wirte error: {data}')
+                # 关闭游标和数据库连接
+                cursor.close()
+                cnx.close()
             return False
 
     def sql_write_twice(self, sql, data):
@@ -190,7 +193,7 @@ class DBRecommandChip:
         self.sql_write_twice(sql_str, data)
 
     def octopart_market_read(self, filter_contend):
-        query = f"SELECT * FROM t_octopart_market where {filter_contend} order by ppn"
+        query = f"SELECT ppn, manu, des, distribute, stock, currency_type, k_price, opn, task_name, update_time  FROM t_octopart_market WHERE {filter_contend} order by opn"
         result = self.sql_read(query)
         return result
 
@@ -243,6 +246,24 @@ class DBRecommandChip:
         print(result)
         return result
 
+    def future_info_write(self, data: list):
+        sql_str = "REPLACE INTO t_futrue(st_part, st_manu, f_ppn, f_manu, OnOrder, stock, leadTime, unitPrice, task_name) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s)"
+        self.sql_write_twice(sql_str, data)
+
+    def future_info_read(self, filter_contend):
+        query = f"SELECT * FROM t_futrue where {filter_contend} order by st_part"
+        result = self.sql_read(query)
+        return result
+
+    def arrow_info_write(self, data: list):
+        sql_str = "REPLACE INTO t_arrow(st_part, st_manu, a_ppn, a_manu, stock, leadTime, price, batch, task_name) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s)"
+        self.sql_write_twice(sql_str, data)
+
+    def arrow_info_read(self, filter_contend):
+        query = f"SELECT * FROM t_arrow where {filter_contend} order by st_part"
+        result = self.sql_read(query)
+        return result
+
     def ppn_write(self, data: list):
         sql_str = "REPLACE INTO t_ppn (ppn, manu_id, manu_name, source) VALUES (%s, %s, %s, %s)"
         self.sql_write_twice(sql_str, data)
@@ -284,13 +305,39 @@ class DBRecommandChip:
         cnx.close()
 
 
+def query_ppn_by_models(model_list):
+        # 连接数据库
+        conn = mysql.connector.connect(
+            host=AccManage.mys['h'],
+            user=AccManage.mys['n'],
+            password=AccManage.mys['p'],
+            database="yjcx_recommended",
+            ssl_disabled=True,  # 忽略 SSL 验证
+            buffered=True, # 添加缓冲参数
+            connection_timeout=120
+        )
+
+        cursor = conn.cursor()
+
+        results = []
+        for model in model_list:
+            # 查询每个元素
+            query = "SELECT * FROM t_hq_peakfire WHERE ppn = %s"
+            cursor.execute(query, (model,))
+            record = cursor.fetchone()
+            if record:
+                results.append(record)
+            else:
+                results.append([model, '--', '--'])
+
+        cursor.close()
+        conn.close()
+        return results
+
+
 if __name__ == "__main__":
     manager = DBRecommandChip()
-    arr = [['CY7C4225V-15ASC', 'Infineon', "['1', '0', '0', '2', '0', '0', '3', '0', '0', '0', '0', '0', '0']", "['3', '0', '1', '0', '0', '9', '1', '5', '0', '3', '2', '4']", 'TInfineonFIFO'],
-['CY7C4245-15ASC', 'Infineon', "['2', '0', '0', '0', '1', '0', '0', '0', '0', '0', '0', '0', '3']", "['2', '0', '1', '0', '0', '6', '3', '2', '0', '5', '1', '3']", 'TInfineonFIFO'],
-['CY7C4245-15ASXC', 'Infineon', "['0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0']", "['0', '11', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0']", 'TInfineonFIFO'],
-['CY7C4245-15JXC', 'Infineon', "['0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0']", "['0', '0', '0', '0', '0', '0', '0', '0', '0', '1', '0', '0']", 'TInfineonFIFO'],
-['CY7C425-10JXC', 'Infineon', "['0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0']", "['0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0']", 'TInfineonFIFO'],
-['CY7C425-10JXCT', 'Infineon', "['0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0']", "['0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0']", 'TInfineonFIFO'],
-['CY7C425-15JXCT', 'Infineon', "['0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0']", "['0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0']", 'TInfineonFIFO']]
-    manager.hq_hot_write(arr)
+    # # (name, age, address, hot, qq, tel, phone)
+    arr1 = [['SN74AUC1G02DCKR', 'TI', "['3', '0', '2', '1', '8', '4', '4', '12', '1', '2', '10', '3', '26']", "['6', '3', '12', '2', '15', '4', '33', '5', '1', '12', '1', '28']", 'TTIGateDriver']]
+    manager.hq_hot_write(arr1)
+

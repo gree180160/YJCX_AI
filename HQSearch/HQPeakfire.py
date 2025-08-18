@@ -3,17 +3,20 @@ import time
 from WRTools import ExcelHelp, WaitHelp, PathHelp, MySqlHelp_recommanded, ChromeDriverManager, EmailHelper, LogHelper
 from selenium.webdriver.common.by import By
 import ssl
+
+
 from Manager import AccManage, URLManager
 
 log_file = PathHelp.get_file_path('HQSearch', 'HQPeakfireLog.txt')
 ssl._create_default_https_context = ssl._create_unverified_context
 
-sourceFile_dic = {'fileName': PathHelp.get_file_path(None, 'TNXPMPU.xlsx'),
+sourceFile_dic = {'fileName': PathHelp.get_file_path(None, 'TTILDOVoltageStabilizer.xlsx'),
                   'sourceSheet': 'ppn',
                   'colIndex': 1,
-                  'startIndex': 286,
-                  'endIndex': 836}
-task_name = 'TNXPMPU'
+                  'startIndex': 5317,
+                  'endIndex': 6000}
+task_name = 'TTILDOVoltageStabilizer'
+
 
 accouts_arr = [AccManage.HQ_hot_1['n'], AccManage.HQ_hot_1['p']]
 VerificationCodePage = 0

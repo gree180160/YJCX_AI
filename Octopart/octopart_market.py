@@ -15,17 +15,17 @@ ssl._create_default_https_context = ssl._create_unverified_context
 
 driver = ChromeDriverManager.getWebDriver(0)
 
-accouts_arr = AccManage.oc_stock3
+accouts_arr = AccManage.oc_stock1
 altium_home = 'https://altium.com'
 altium_login = 'https://auth.altium.com/?ReturnUrl=https://www.altium.com/'
 default_url = 'https://octopart.com/'
 
-sourceFile_dic = {'fileName': PathHelp.get_file_path(None, 'TNXPCircutProtect.xlsx'),
-                  'sourceSheet': 'ppn3',
+sourceFile_dic = {'fileName': PathHelp.get_file_path(None, 'TRenesasIsolators.xlsx'),
+                  'sourceSheet': 'ppn2',
                   'colIndex': 1,
-                  'startIndex': 11,
-                  'endIndex': 11}
-task_name = 'TNXPCircutProtect'
+                  'startIndex': 0,
+                  'endIndex': 7}
+task_name = 'TRenesasIsolators'
 
 log_file = PathHelp.get_file_path('Octopart_price', 'ocopar_price_log.txt')
 
@@ -61,14 +61,16 @@ def analy_html(pn_index, pn):
         min_index = -1
         min_value = sys.float_info.max
         for (temp_index, temp_supplier) in enumerate(supplier_list):
-            k_pirce = temp_supplier.find_elements(By.TAG_NAME, 'td')[11].text
-            try:
-                temp_price = float(k_pirce)
-            except:
-                temp_price = sys.float_info.max
-            if temp_price < min_value:
-                min_value = temp_price
-                min_index = temp_index
+            authors = temp_supplier.find_elements(By.CSS_SELECTOR, '[data-testid="authorized"]')
+            if authors.__len__() > 0:
+                k_pirce = temp_supplier.find_elements(By.TAG_NAME, 'td')[11].text
+                try:
+                    temp_price = float(k_pirce)
+                except:
+                    temp_price = sys.float_info.max
+                if temp_price < min_value:
+                    min_value = temp_price
+                    min_index = temp_index
         if min_index >= 0: # 有价格信息
             min_distribute_info = supplier_list[min_index]
             distribute = min_distribute_info.find_elements(By.TAG_NAME, 'td')[1].text
@@ -140,7 +142,7 @@ def is_security_check() -> bool:
         # 模拟长按操作
         actions.click_and_hold(driver.find_element(By.ID, 'px-captcha')).perform()
         # 保持长按状态一段时间（例如 3 秒）
-        time.sleep(15)
+        time.sleep(25)
         # 释放鼠标
         actions.release().perform()
         time.sleep(52.5 + random.uniform(1, 10))

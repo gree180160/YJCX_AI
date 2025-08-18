@@ -8,12 +8,12 @@ from Manager import AccManage, URLManager
 log_file = PathHelp.get_file_path('HQSearch', 'HQPeakfireLog.txt')
 ssl._create_default_https_context = ssl._create_unverified_context
 
-sourceFile_dic = {'fileName': PathHelp.get_file_path(None, 'TInfenionMos.xlsx'),
+sourceFile_dic = {'fileName': PathHelp.get_file_path(None, 'TTIVoltageRegulator.xlsx'),
                   'sourceSheet': 'ppn2',
                   'colIndex': 1,
-                  'startIndex': 210,
-                  'endIndex': 278}
-task_name = 'TInfenionMos'
+                  'startIndex': 0,
+                  'endIndex': 21}
+task_name = 'TTIVoltageRegulator'
 
 accouts_arr = [AccManage.HQ_hot_4['n'], AccManage.HQ_hot_4['p']]
 VerificationCodePage = 0
@@ -136,6 +136,8 @@ def main(precise):
         if ppn.__contains__('?'):
             continue
         elif index in range(sourceFile_dic['startIndex'], sourceFile_dic['endIndex']):
+            while WaitHelp.isSleep_time():
+                time.sleep(60 * 5)
             print(f'cate_index is: {index}  cate_name is: {ppn}')
             manu = all_manu[index]
             driver.get(URLManager.HQ_stock_url(ppn, precise))

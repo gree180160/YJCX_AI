@@ -12,12 +12,12 @@ ssl._create_default_https_context = ssl._create_unverified_context
 
 log_file = PathHelp.get_file_path('EFIND', 'e_find_log.txt')
 
-sourceFile_dic = {'fileName': PathHelp.get_file_path(None, 'TInfenionMos.xlsx'),
-                  'sourceSheet': 'ppn2',
+sourceFile_dic = {'fileName': PathHelp.get_file_path(None, 'TNXPMPU.xlsx'),
+                  'sourceSheet': 'ppn3',
                   'colIndex': 1,
-                  'startIndex': 55,
-                  'endIndex': 65}
-task_name = 'TInfenionMos'
+                  'startIndex': 51,
+                  'endIndex': 67}
+task_name = 'TNXPMPU'
 
 try:
     driver = ChromeDriverManager.getWebDriver(3)

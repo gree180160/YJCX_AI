@@ -8,21 +8,20 @@ from Manager import AccManage, URLManager
 log_file = PathHelp.get_file_path('HQSearch', 'HQPeakfireLog.txt')
 ssl._create_default_https_context = ssl._create_unverified_context
 
-sourceFile_dic = {'fileName': PathHelp.get_file_path(None, 'TNXPPowerDevice.xlsx'),
+sourceFile_dic = {'fileName': PathHelp.get_file_path(None, 'TInfineonM20.xlsx'),
                   'sourceSheet': 'ppn2',
                   'colIndex': 1,
-                  'startIndex': 37,
-                  'endIndex': 45}
-task_name = 'TNXPPowerDevice'
+                  'startIndex': 3600,
+                  'endIndex': 4000}
+task_name = 'TInfineonM20'
 
-accouts_arr = [AccManage.HQ_hot_6['n'], AccManage.HQ_hot_6['p']]
+accouts_arr = [AccManage.HQ_hot_2['n'], AccManage.HQ_hot_2['p']]
 VerificationCodePage = 0
 login_url = "https://passport.hqew.com/login"
 
 driver = ChromeDriverManager.getWebDriver(2)
 driver.set_window_size(height=800, width=1200)
 current_cate_has_date = True
-
 
 def login_action(aim_url):
     driver.get(login_url)
@@ -136,6 +135,8 @@ def main(precise):
         if ppn.__contains__('?'):
             continue
         elif index in range(sourceFile_dic['startIndex'], sourceFile_dic['endIndex']):
+            while WaitHelp.isSleep_time():
+                time.sleep(60 * 5)
             print(f'cate_index is: {index}  cate_name is: {ppn}')
             manu = all_manu[index]
             driver.get(URLManager.HQ_stock_url(ppn, precise))

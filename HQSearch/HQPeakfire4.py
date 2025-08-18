@@ -10,12 +10,12 @@ log_file = PathHelp.get_file_path('HQSearch', 'HQPeakfireLog.txt')
 
 ssl._create_default_https_context = ssl._create_unverified_context
 
-sourceFile_dic = {'fileName': PathHelp.get_file_path(None, 'TNXPMPU.xlsx'),
+sourceFile_dic = {'fileName': PathHelp.get_file_path(None, 'TTILDOVoltageStabilizer.xlsx'),
                   'sourceSheet': 'ppn',
                   'colIndex': 1,
-                  'startIndex': 2792,
-                  'endIndex': 3345}
-task_name = 'TNXPMPU'
+                  'startIndex': 7000,
+                  'endIndex': 7600}
+task_name = 'TTILDOVoltageStabilizer'
 
 
 accouts_arr = [AccManage.HQ_hot_4['n'], AccManage.HQ_hot_4['p']]

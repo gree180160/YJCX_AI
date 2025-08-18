@@ -17,7 +17,7 @@ ssl._create_default_https_context = ssl._create_unverified_context
 cate_source_file = PathHelp.get_file_path(super_path='TVicor15H', file_name='Task.xlsx')
 result_save_file = cate_source_file
 octopart_sheet_name = 'octopart_price'
-bom_sheet_name = 'bom_price'
+bom_sheet_name = 'zhengnengliang_price'
 
 
 octopart_file_arr = ['/Users/liuhe/Desktop/progress/TVicor/15H/04/octopart_price.xlsx',
@@ -194,7 +194,7 @@ def calculater_price():
                 pm_dic = get_bom_price(file_index=bom_index[0], ppn_index=bom_index[1], rate=rate, ppn=cate_name)
             else:
                 pm_dic = {"bom_price": 0, "has_supplier": False, 'max_price': 0}
-            pm = pm_dic['bom_price']
+            pm = pm_dic['zhengnengliang_price']
             bom_has_supplier = pm_dic['has_supplier']
             bom_max_price = pm_dic['max_price']
             if oct_index is not None:

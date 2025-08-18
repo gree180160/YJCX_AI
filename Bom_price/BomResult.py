@@ -16,7 +16,7 @@ def bom_price_result(cate_source_file, sheet_name):
     rate = get_rate()
     pps = ExcelHelp.read_col_content(file_name=cate_source_file, sheet_name=sheet_name, col_index=1)
     manufactures = ExcelHelp.read_col_content(file_name=cate_source_file, sheet_name=sheet_name, col_index=2)
-    bom_price_list = ExcelHelp.read_sheet_content_by_name(file_name=cate_source_file, sheet_name='bom_price')
+    bom_price_list = ExcelHelp.read_sheet_content_by_name(file_name=cate_source_file, sheet_name='zhengnengliang_price')
     result = []
     for (index, temp_ppn) in enumerate(pps):
         ppn_str = str(temp_ppn)
@@ -52,7 +52,7 @@ def bom_price_result(cate_source_file, sheet_name):
             ppn_result = [ppn_str, manufactures[index], "", ""]
         print(ppn_result)
         result.append(ppn_result)
-    ExcelHelp.add_arr_to_sheet(file_name=cate_source_file, sheet_name='bom_price_sum', dim_arr=result)
+    ExcelHelp.add_arr_to_sheet(file_name=cate_source_file, sheet_name='zhengnengliang_price_sum', dim_arr=result)
 
 
 # 获取倒数第二小的价格，及其对应的index，为获取supplier等信息做准备
@@ -133,12 +133,12 @@ def is_valid_supplier(date_string, supplier_name) -> bool:
 
 def read_record(save_file, task_name):
     record = MySqlHelp_recommanded.DBRecommandChip().bom_price_read(f'task_name = "{task_name}"')
-    ExcelHelp.add_arr_to_sheet(save_file, 'bom_price', record)
+    ExcelHelp.add_arr_to_sheet(save_file, 'zhengnengliang_price', record)
 
 
 if __name__ == "__main__":
-    aim_file = PathHelp.get_file_path(None, 'TNXPCircutProtect.xlsx')
-    task_name = 'TNXPCircutProtect'
+    aim_file = PathHelp.get_file_path(None, 'TRenesasIsolators.xlsx')
+    task_name = 'TRenesasIsolators'
     read_record(aim_file, task_name)
     bom_price_result(aim_file, 'ppn2')
     print('over')

@@ -12,12 +12,12 @@ ssl._create_default_https_context = ssl._create_unverified_context
 
 log_file = PathHelp.get_file_path('EFIND', 'e_find_log.txt')
 
-sourceFile_dic = {'fileName': PathHelp.get_file_path(None, 'TInfenionMos.xlsx'),
+sourceFile_dic = {'fileName': PathHelp.get_file_path(None, 'TNXPICOther.xlsx'),
                   'sourceSheet': 'ppn2',
                   'colIndex': 1,
-                  'startIndex': 45,
-                  'endIndex': 55}
-task_name = 'TInfenionMos'
+                  'startIndex': 0,
+                  'endIndex': 3}
+task_name = 'TNXPICOther'
 
 try:
     driver = ChromeDriverManager.getWebDriver(2)
@@ -54,8 +54,6 @@ def analy_html(cate_index, cate_name, st_manu):
 
 # 获取supplier 总揽
 def get_supplier(ppn, manu, stock):
-
-
     try:
         isf = driver.find_element(By.ID, 'isf')
         total_sup = isf.find_element(By.CSS_SELECTOR, 'span.alls').text

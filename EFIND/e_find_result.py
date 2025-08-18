@@ -12,7 +12,7 @@ def read_record(save_file, task_name):
 
 
 if __name__ == "__main__":
-    aim_file = PathHelp.get_file_path(None, 'TNXPCircutProtect.xlsx')
-    task_name = 'TNXPCircutProtect'
+    aim_file = PathHelp.get_file_path(None, 'TRenesasIsolators.xlsx')
+    task_name = 'TRenesasIsolators'
     read_record(aim_file, task_name)
     print('over')

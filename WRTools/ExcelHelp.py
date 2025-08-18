@@ -105,6 +105,15 @@ def isSheetExist(sheet_name, wb):
         return False
 
 
+def sheetRename(file_path, old_sheet, new_sheet):
+    wb = load_workbook(file_path)
+    # 获取 Sheet1 工作表
+    sheet = wb[old_sheet]
+    # 修改工作表名称
+    sheet.title = new_sheet
+    # 保存修改后的文件
+    wb.save(file_path)
+
 # 将库存数据保存到sheet 中
 # sheet_name
 # arr 是二维数组[[cate1_name, cate1_supplier], [cate2_name, cate2_supplier]]

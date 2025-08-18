@@ -12,9 +12,9 @@ import os
 
 
 # 将同一个ppn到所有stock 累加，然后按照保存到数组中, 没有数据的，用/填充
-def IC_stock_sum(cate_source_file):
-    pps = ExcelHelp.read_col_content(file_name= cate_source_file, sheet_name='ppn3', col_index=1)
-    manufactures = ExcelHelp.read_col_content(file_name= cate_source_file, sheet_name='ppn3', col_index=2)
+def IC_stock_sum(cate_source_file, sheet_name):
+    pps = ExcelHelp.read_col_content(file_name= cate_source_file, sheet_name=sheet_name, col_index=1)
+    manufactures = ExcelHelp.read_col_content(file_name= cate_source_file, sheet_name=sheet_name, col_index=2)
     result = []
     for (index, temp_ppn) in enumerate(pps):
         ppn_str = str(temp_ppn)
@@ -40,6 +40,9 @@ def IC_stock_sum(cate_source_file):
                     max_info = [row_content[2], sup_manu, row_content[4], row_content[10], row_content[11], row_content[12]]
                 # if isSSCP or isICCP or isSpotRanking or isHotSell or isYouXian:
                 if isSSCP or isICCP or isSpotRanking:
+                    batch = str(row_content[10])
+                    if not checkBatch(batch):
+                        continue
                     if stock_num < 10:
                         valid_supplier_sum = round(valid_supplier_sum+0.01, 2)
                     else:
@@ -84,14 +87,26 @@ def addIC_info():
     ExcelHelp.add_arr_to_sheet('/Users/liuhe/Desktop/progress/TRuStock/2023.09/hxl.xlsx', 'Sheet5', result_arr)
 
 
+# 只统计批次在5年内的supplier 数量
+def checkBatch(batch: str):
+    return True
+    if not batch or batch.__len__() == 0:
+        return False
+    else:
+        if batch[0] == '2':
+            return True
+        else:
+            return False
+
+
 def read_record(save_file, task_name):
     record = MySqlHelp_recommanded.DBRecommandChip().ic_stock_read(f'task_name = "{task_name}"')
     ExcelHelp.add_arr_to_sheet(save_file, 'IC_stock', record)
 
 
 if __name__ == "__main__":
-    aim_file = PathHelp.get_file_path(None, 'TNXPCircutProtect.xlsx')
-    task_name = 'TNXPCircutProtect'
+    aim_file = PathHelp.get_file_path(None, 'TTILinearSwitch.xlsx')
+    task_name = 'TTILinearSwitch'
     read_record(aim_file, task_name)
-    IC_stock_sum(aim_file)
+    IC_stock_sum(aim_file, 'ppn3')
     print('over')

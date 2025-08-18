@@ -92,7 +92,8 @@ def get_stock(cate_index, cate_name, st_manu):
                 continue
             # print("li is:", templi.__str__())
             try:
-                suppliers = templi.find_elements(by=By.CSS_SELECTOR, value='a.result_goCompany')
+                supplier_container = templi.find_element(By.CSS_SELECTOR, 'div.result_supply')
+                suppliers = supplier_container.find_elements(by=By.CSS_SELECTOR, value='a.result_goCompany')
                 for temp_suppler in suppliers:
                     if temp_suppler.text.__len__() > 0:
                         supplier = temp_suppler.text
@@ -186,7 +187,6 @@ def go_to_nex_page(cate_name):
     current_page += 1
 
 
-
 # 验证当前页面是否正在等待用户验证，连续三次请求出现验证码页面，则关闭页面
 def checkVerificationCodePage(ppn) -> bool:
     global VerificationCodePage
@@ -203,41 +203,97 @@ def checkVerificationCodePage(ppn) -> bool:
     return result
 
 
-def changeAccount():
-    global finishedPPN
-    if finishedPPN > 0:
-        if finishedPPN % 66 == 0:
+def confuseAction(action):
+    a_item = action()
+    try:
+        a_item.click()
+        time.sleep(8.5 + random.uniform(1, 10))
+        # 关闭新页面（如果打开了新的窗口）
+        if len(driver.window_handles) > 1:
             driver.close()
-            time.sleep(1.0)
-            ChromeDriverManager.getWebDriver(2)
-            time.sleep(1.0)
-            driver.get('https://www.ic.net.cn/')
-            time.sleep(2.0)
-            login_action("https://member.ic.net.cn/member/member_index.php")
-    finishedPPN += 1
+        # 返回初始页面（如果需要）
+        driver.switch_to.window(driver.window_handles[0])
+    except:
+        print('confuse error')
+
+
+def confuse_leftAD():
+    try:
+        ad1 = driver.find_element(By.ID, 'SD1').find_element(By.TAG_NAME, 'a')
+        ad1.click()
+        time.sleep(8.5 + random.uniform(1, 10))
+        # 关闭新页面（如果打开了新的窗口）
+        driver.close()
+        # 返回初始页面（如果需要）
+        driver.switch_to.window(driver.window_handles[0])
+    except:
+        print('confuse_leftAD error')
+
+
+def confuse_supplier_info():
+    suppliers = driver.find_elements(By.CSS_SELECTOR, 'div.result_supply')
+    if suppliers.__len__() > 0:
+        last_link = suppliers[-1].find_elements(By.TAG_NAME, 'a')[-1]
+        return last_link
+    return None
+
+
+def confuse_storePPN():
+    store = driver.find_element(By.CSS_SELECTOR, 'li.iconfont.icon-aixin')
+    return store
+
+
+def confuse_helpCenter():
+    topNav = driver.find_element(By.CSS_SELECTOR, 'div.topnav_content')
+    help_center = topNav.find_elements(By.CSS_SELECTOR, 'div.fl')[-2]
+    help_link = help_center.find_element(By.TAG_NAME, 'a')
+    help_link.click()
+
+
+def confuse_pilot():
+    topNav = driver.find_element(By.CSS_SELECTOR, 'div.topnav_content')
+    pilot_center = topNav.find_elements(By.CSS_SELECTOR, 'div.fl')[-4]
+    pilot_link = pilot_center.find_element(By.TAG_NAME, 'a')
+    return pilot_link
+
+
+def confuse_home():
+    pilot_link = driver.find_element(By.CSS_SELECTOR, 'a.icHome')
+    return pilot_link
 
 
 def main():
+    # List of confuse actions
+    confuse_actions = [
+        confuse_supplier_info,
+        confuse_storePPN,
+        confuse_helpCenter,
+        confuse_pilot,
+        confuse_home
+    ]
     all_cates = ExcelHelp.read_col_content(sourceFile_dic['fileName'], sourceFile_dic['sourceSheet'],
                                            sourceFile_dic['colIndex'])
     all_manu = ExcelHelp.read_col_content(sourceFile_dic['fileName'], sourceFile_dic['sourceSheet'], 2)
     for (cate_index, cate_name) in enumerate(all_cates):
         while WaitHelp.isSleep_time():
-                time.sleep(60*5)
+            time.sleep(60 * 5)
         if cate_name.__contains__('?'):
             continue
         elif cate_index in range(sourceFile_dic['startIndex'], sourceFile_dic['endIndex']):
             print(f'cate_index is: {cate_index}  cate_name is: {cate_name}')
-            if cate_index % 7 == 0:
-                time.sleep(60*5)
-            # changeAccount()
+            if cate_index % 7 == 0 and cate_index > 0:
+                time.sleep(60 * 5)
             get_stock(cate_index, cate_name, all_manu[cate_index])
+            # Every three categories, perform a confuse action
+            if (cate_index + 1) % 3 == 0:
+                random_action = random.choice(confuse_actions)
+                confuseAction(random_action)
 
 
 if __name__ == "__main__":
     driver.get('https://www.ic.net.cn/')
-    time.sleep(2.0)
+    time.sleep(2.5 + random.uniform(1, 10))
     driver.get("https://member.ic.net.cn/login.php")
-    time.sleep(1.5)
+    time.sleep(3.5 + random.uniform(1, 10))
     login_action("https://member.ic.net.cn/member/member_index.php")
     main()

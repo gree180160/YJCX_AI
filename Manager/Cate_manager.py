@@ -4,6 +4,7 @@ from WRTools import ExcelHelp, PathHelp, PandasHelp, MySqlHelp_recommanded
 import os
 
 
+
 def change_file_name():
     path = "/Users/liuhe/Desktop/MMS_html_files"
     batch_rename(path, '.html')
@@ -229,18 +230,18 @@ def ali():
     ExcelHelp.add_arr_to_sheet(cate_source_file, 'hxl2', result)
 
 
-def temp():
-    ppn_file = '/Users/liuhe/Desktop/卖什么/hxl.xlsx'
-    ppn_list = ExcelHelp.read_col_content(ppn_file, 'TIBrandS1', col_index=1)
-    search_data_file = '/Users/liuhe/Desktop/progress/TTI/S1/Task.xlsx'
-    search_sheet = ExcelHelp.read_sheet_content_by_name(search_data_file, 'ic_search')
+def getDigikeyStatus(source_file):
+    ppn_list = ExcelHelp.read_sheet_content_by_name(source_file, 'ppn')
+    digikey_list = ExcelHelp.read_sheet_content_by_name(source_file, 'digikey')
     result = []
     for ppn1 in ppn_list:
-        for info in search_sheet:
-            if ppn1 == info[0]:
-                result.append(info)
-                break;
-    ExcelHelp.add_arr_to_sheet(ppn_file, 'ic_search', result)
+        for info in digikey_list:
+            if ppn1[0] == info[0]:
+               status = info[2]
+        result.append([ppn1[0], ppn1[1], status])
+    ExcelHelp.remove_sheet(source_file, 'ppn')
+    time.sleep(2.0)
+    ExcelHelp.add_arr_to_sheet(source_file, 'ppn', result)
 
 
 def find_macTask_folders(folder_path):
@@ -320,22 +321,68 @@ def remove_chinese(text):
 
 
 def remove_repeat():
-    source_file = PathHelp.get_file_path(None, 'TNXPMPU.xlsx')
-    sheets = "digikey"
-    sheet_cont = ExcelHelp.read_sheet_content_by_name(source_file, sheets)
+    #TRenesasAudio.xlsx, TRenesasWangTong.xlsx, TRenesasChangeV.xlsx, TRenesasUndefined.xlsx
+    source_file = PathHelp.get_file_path(None, 'TTIThermalManagement.xlsx')
+    new_sheet = "digikey"
+    ExcelHelp.sheetRename(source_file, 'Sheet1', new_sheet)
 
-    history_files = [PathHelp.get_file_path(None, 'TNXPPowerDevice.xlsx'),
-                     PathHelp.get_file_path(None, 'TNXPSensor.xlsx'),
-                     PathHelp.get_file_path(None, 'TNXPCircutProtect.xlsx'),
-                     PathHelp.get_file_path(None, 'TNXPFilter.xlsx'),
-                     PathHelp.get_file_path(None, 'TNXPIsolation.xlsx'),
-                     PathHelp.get_file_path(None, 'TNXPClock.xlsx'),
-                     PathHelp.get_file_path(None, 'TNXPOtherControl.xlsx'),
-                     PathHelp.get_file_path(None, 'TNXPOther.xlsx'),
-                     PathHelp.get_file_path(None, 'TNXPLineProduct.xlsx'),
-                     PathHelp.get_file_path(None, 'TNXPMCU.xlsx'),
-                     PathHelp.get_file_path(None, 'TNXPCollectData.xlsx')
+    sheet_cont = ExcelHelp.read_sheet_content_by_name(source_file, new_sheet)
+    history_files = [
+        PathHelp.get_file_path(None, 'TTIInterface.xlsx'),
+        PathHelp.get_file_path(None, 'TTISensor.xlsx'),
+        PathHelp.get_file_path(None, 'TTIMCU.xlsx'),
+        PathHelp.get_file_path(None, 'TTILineProduct.xlsx'),
+        PathHelp.get_file_path(None, 'TTICache.xlsx'),
+        PathHelp.get_file_path(None, 'TTICalculator.xlsx'),
+        PathHelp.get_file_path(None, 'TTIConfigurableGatesAndInverters.xlsx'),
+        PathHelp.get_file_path(None, 'TTIMultivibrators.xlsx'),
+        PathHelp.get_file_path(None, 'TTIFlipflop.xlsx'),
+        PathHelp.get_file_path(None, 'TTIGateDriver.xlsx'),
+        PathHelp.get_file_path(None, 'TTILatches.xlsx'),
+        PathHelp.get_file_path(None, 'TTISignalSwitch.xlsx'),
+        PathHelp.get_file_path(None, 'TTITranslate.xlsx'),
+        PathHelp.get_file_path(None, 'TTIDCDCSwitch.xlsx'),
+        PathHelp.get_file_path(None, 'TTIVoltageRegulator.xlsx'),
+        PathHelp.get_file_path(None, 'TTIShiftRegister.xlsx'),
+        PathHelp.get_file_path(None, 'TTIACDCOfflineSwitch.xlsx'),
+        PathHelp.get_file_path(None, 'TTIBatteryCharge.xlsx'),
+        PathHelp.get_file_path(None, 'TTIBatteryManagement.xlsx'),
+        PathHelp.get_file_path(None, 'TTIBridgeDriver.xlsx'),
+        PathHelp.get_file_path(None, 'TTICurrentRegulation.xlsx'),
+        PathHelp.get_file_path(None, 'TTIElectricEnergyMetering.xlsx'),
+        PathHelp.get_file_path(None, 'TTILaserDriver.xlsx'),
+        PathHelp.get_file_path(None, 'TTILDOVoltageStabilizer.xlsx'),
+        PathHelp.get_file_path(None, 'TTILEDDriver.xlsx'),
+        PathHelp.get_file_path(None, 'TTILinearSwitch.xlsx'),
+        PathHelp.get_file_path(None, 'TTILinearVoltageRegulatorControl.xlsx'),
+        PathHelp.get_file_path(None, 'TTIMonitor.xlsx'),
+        PathHelp.get_file_path(None, 'TTIMotorDriver.xlsx'),
+        PathHelp.get_file_path(None, 'TTIORControl.xlsx'),
+        PathHelp.get_file_path(None, 'TTIPOEControl.xlsx'),
+        PathHelp.get_file_path(None, 'TTIPowerDistribution.xlsx'),
+        PathHelp.get_file_path(None, 'TTIPowerFactorCorrection.xlsx'),
+        PathHelp.get_file_path(None, 'TTIPowerMonitor.xlsx'),
+        PathHelp.get_file_path(None, 'TTISpecialLogicProducts.xlsx'),
+        PathHelp.get_file_path(None, 'TTISpecialPowerManger.xlsx'),
+        PathHelp.get_file_path(None, 'TTIUniversalBus.xlsx'),
+        PathHelp.get_file_path(None, 'TTIVFAndFV.xlsx'),
+        PathHelp.get_file_path(None, 'TTIDCSwitchingRegulator.xlsx'),
+        PathHelp.get_file_path(None, 'TTIDisplayDriver.xlsx'),
+        PathHelp.get_file_path(None, 'TTIGateDriver.xlsx'),
+        PathHelp.get_file_path(None, 'TTIHotSwapController.xlsx'),
+        PathHelp.get_file_path(None, 'TTILighting.xlsx'),
+        PathHelp.get_file_path(None, 'TTISpecialVoltageRegulator.xlsx')
                      ]
+
+    # history_files = [
+    #     PathHelp.get_file_path(None, 'TInfineonMCU.xlsx')
+    #                  ]
+    source_fold = '/Users/liuhe/Desktop/京创智通/专项分析/TI/'
+    list_file = os.listdir(source_fold)  # 返回指定目录
+    for temp_file in list_file:
+        if temp_file.__contains__('.xlsx'):
+            task_file = (f"{source_fold}{temp_file}")
+            history_files.append(task_file)
     history_apps = ["型号"]
     for temp_file in history_files:
         col_content = ExcelHelp.read_col_content(temp_file, 'ppn', 1)
@@ -344,7 +391,7 @@ def remove_repeat():
     for row in sheet_cont:
        ppn = row[0]
        if not history_apps.__contains__(ppn):
-          result.append(row)
+          result.append([row[0], row[1], row[2]])
           history_apps.append(ppn)
     ExcelHelp.add_arr_to_sheet(source_file, 'ppn', result)
 
@@ -375,6 +422,8 @@ if __name__ == "__main__":
     # time.sleep(3.0)
     # ali()
     # getAllICStockRecord()
-    remove_repeat()
+
     # createDayTask(1000)
     # decompositionPPN(300)
+    remove_repeat()
+# getDigikeyStatus(PathHelp.get_file_path(None, 'TRenesasMemory.xlsx'))

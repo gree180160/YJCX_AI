@@ -8,14 +8,14 @@ from Manager import AccManage, URLManager
 log_file = PathHelp.get_file_path('HQSearch', 'HQPeakfireLog.txt')
 ssl._create_default_https_context = ssl._create_unverified_context
 
-sourceFile_dic = {'fileName': PathHelp.get_file_path(None, 'TInfineonPowerManger2.xlsx'),
+sourceFile_dic = {'fileName': PathHelp.get_file_path(None, 'TInfineonM20.xlsx'),
                   'sourceSheet': 'ppn2',
                   'colIndex': 1,
-                  'startIndex': 90,
-                  'endIndex': 116}
-task_name = 'TInfineonPowerManger'
+                  'startIndex': 4360,
+                  'endIndex': 4400}
+task_name = 'TInfineonM20'
 
-accouts_arr = [AccManage.HQ_hot_7['n'], AccManage.HQ_hot_7['p']]
+accouts_arr = [AccManage.HQ_hot_3['n'], AccManage.HQ_hot_3['p']]
 VerificationCodePage = 0
 login_url = "https://passport.hqew.com/login"
 
@@ -136,6 +136,8 @@ def main(precise):
         if ppn.__contains__('?'):
             continue
         elif index in range(sourceFile_dic['startIndex'], sourceFile_dic['endIndex']):
+            while WaitHelp.isSleep_time():
+                time.sleep(60 * 5)
             print(f'cate_index is: {index}  cate_name is: {ppn}')
             manu = all_manu[index]
             driver.get(URLManager.HQ_stock_url(ppn, precise))

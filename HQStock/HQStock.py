@@ -8,12 +8,13 @@ from Manager import AccManage, URLManager
 log_file = PathHelp.get_file_path('HQSearch', 'HQPeakfireLog.txt')
 ssl._create_default_https_context = ssl._create_unverified_context
 
-sourceFile_dic = {'fileName': PathHelp.get_file_path(None, 'TNXPPowerDevice.xlsx'),
+sourceFile_dic = {'fileName': PathHelp.get_file_path(None, 'TTILinearSwitch.xlsx'),
                   'sourceSheet': 'ppn2',
                   'colIndex': 1,
-                  'startIndex': 31,
-                  'endIndex': 37}
-task_name = 'TNXPPowerDevice'
+                  'startIndex': 0,
+                  'endIndex': 2}
+task_name = 'TTILinearSwitch'
+
 
 accouts_arr = [AccManage.HQ_hot_5['n'], AccManage.HQ_hot_5['p']]
 VerificationCodePage = 0
@@ -21,7 +22,6 @@ login_url = "https://passport.hqew.com/login"
 
 driver = ChromeDriverManager.getWebDriver(1)
 driver.set_window_size(height=800, width=1200)
-current_cate_has_date = True
 
 
 def login_action(aim_url):

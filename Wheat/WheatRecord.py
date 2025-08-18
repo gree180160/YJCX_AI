@@ -14,17 +14,18 @@ from Manager import AccManage
 from WRTools import ExcelHelp, WaitHelp, PathHelp, LogHelper, MySqlHelp_recommanded
 import time
 
-# ru [['MW6S004NT1', '1', 'TNXP_RF']]，save to mysql
+# ru [['MW6S004NT1', '1', 'TNXP_RF']]，save to mysql   # ICL7107CM44  ru 1
 accouts_arr = [AccManage.Wheat['c'], AccManage.Wheat['n'], AccManage.Wheat['p']]
 ssl._create_default_https_context = ssl._create_unverified_context
 
-sourceFile_dic = {'fileName': PathHelp.get_file_path(None, 'TNXPCircutProtect.xlsx'),
-                  'sourceSheet': 'ppn3',
+sourceFile_dic = {'fileName': PathHelp.get_file_path(None, 'TRenesasIsolators.xlsx'),
+                  'sourceSheet': 'ppn2',
                   'colIndex': 1,
                   'startIndex': 0,
-                  'endIndex': 11}
-task_name = 'TNXPCircutProtect'
-isRu = True
+                  'endIndex': 14}
+task_name = 'TRenesasIsolators'
+
+isRu = True,
 
 logFile = PathHelp.get_file_path('Wheat', 'Wheat_log.txt')
 
@@ -97,8 +98,18 @@ def set_filter(country:str, start_date:str, end_date:str):
         xpath = f"//button[@title='{country}']"
         ru_button = alert_area.find_elements(By.XPATH, xpath)[0]
         ru_button.click()
-    # from date
+    # set filter date
     ac = ActionChains(driver)
+    # end date
+    pick_end = driver.find_elements(By.CSS_SELECTOR, 'span.ant-picker-suffix')[1]
+    ac.move_to_element(pick_end)
+    ac.click(pick_end).perform()
+    end_picker = driver.find_elements(By.CSS_SELECTOR, 'div.ant-picker')[1]
+    end_picker = end_picker.find_element(By.TAG_NAME, 'input')
+    end_picker.send_keys(end_date)
+    # 为了让结束日期有效，假装设置提单号，让日历选择器结束工作
+    input_card_content(0, '')
+    # from date
     pick_start = driver.find_elements(By.CSS_SELECTOR, 'span.ant-picker-suffix')[0]
     ac.move_to_element(pick_start)
     ac.click(pick_start).perform()
@@ -108,15 +119,6 @@ def set_filter(country:str, start_date:str, end_date:str):
     # 为了让开始日期有效，假装设置提单号，让日历选择器结束工作
     input_card_content(0, '')
     # end date
-    # clear default date
-    pick_end = driver.find_elements(By.CSS_SELECTOR, 'span.ant-picker-suffix')[1]
-    ac.move_to_element(pick_end)
-    ac.click(pick_end).perform()
-    end_picker = driver.find_elements(By.CSS_SELECTOR, 'div.ant-picker')[1]
-    end_picker = end_picker.find_element(By.TAG_NAME, 'input')
-    end_picker.send_keys(end_date)
-    # 为了让结束日期有效，假装设置提单号，让日历选择器结束工作
-    input_card_content(0, '')
 
 
 # search one ppn
@@ -148,7 +150,7 @@ def input_card_content(item_index: int, new_content: str):
                 print('can not click keyword clear button')
         input_item.send_keys(new_content)
     except Exception as e:
-        LogHelper.write_log(logFile, f'set input content error item_index is: {item_index}, new content is :{new_content} {e}')
+        LogHelper.write_log(logFile, f'set input content error item_index is: {item_index}, new content is :{new_content}{e}')
 
 
 # 分析html 文件
@@ -161,16 +163,16 @@ def anly_webdriver(cate_index, cate_name, isRU):
             count_des = count_des.replace(')', '')
             MySqlHelp_recommanded.DBRecommandChip().wheat_record_write([[cate_name, count_des, task_name]], isRU)
         else:
-            MySqlHelp_recommanded.DBRecommandChip().wheat_record_write([[cate_name, "0", task_name]], isRU)
+            MySqlHelp_recommanded.DBRecommandChip().wheat_record_write([[cate_name, 0, task_name]], isRU)
     except Exception as e:
         LogHelper.write_log(logFile, f'cannot get count {e}')
 
 
 def search(all_cates, isRu):
-    if not isRu:
-        set_filter_all()
-    else:
+    if isRu:
         set_filter_ru()
+    else:
+        set_filter_all()
     time.sleep(10.0)
     for (cate_index, cate_name) in enumerate(all_cates):
         while WaitHelp.isSleep_time():
