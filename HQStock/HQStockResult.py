@@ -54,8 +54,8 @@ def checkBatch(batch: str):
 
 
 if __name__ == "__main__":
-    aim_file = PathHelp.get_file_path(None, 'TTILinearSwitch.xlsx')
-    task_name = 'TTILinearSwitch'
+    aim_file = PathHelp.get_file_path(None, 'TInfineonM20_V2.xlsx')
+    task_name = 'TInfineonM20_V2'
     read_record(aim_file, task_name)
     HQ_stock_sum(aim_file, 'ppn2')
     time.sleep(5.0)

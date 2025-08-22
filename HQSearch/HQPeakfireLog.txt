@@ -884,3 +884,105 @@
 2025-08-18 13:59:03TLV71330PDBVT week info error Message: no such element: Unable to locate element: {"method":"css selector","selector":"[id="J-detailChar-Month"]"}
   (Session info: chrome=114.0.5735.133)
 
+2025-08-18 16:40:04TLV70018DDCT week info error Message: no such element: Unable to locate element: {"method":"css selector","selector":"[id="J-detailChar-Month"]"}
+  (Session info: chrome=114.0.5735.133)
+
+2025-08-18 16:40:15TLV70018DDCT week info error Message: no such element: Unable to locate element: {"method":"css selector","selector":"[id="J-detailChar-Month"]"}
+  (Session info: chrome=114.0.5735.133)
+
+2025-08-18 18:54:33LP38852T-ADJ/NOPB week info error Message: no such element: Unable to locate element: {"method":"css selector","selector":"[id="J-detailChar-Month"]"}
+  (Session info: chrome=114.0.5735.133)
+
+2025-08-18 19:22:57TPS73718DCQR week info error Message: no such element: Unable to locate element: {"method":"css selector","selector":"[id="J-detailChar-Month"]"}
+  (Session info: chrome=114.0.5735.133)
+
+2025-08-18 19:23:07TPS73718DCQR week info error Message: no such element: Unable to locate element: {"method":"css selector","selector":"[id="J-detailChar-Month"]"}
+  (Session info: chrome=114.0.5735.133)
+
+2025-08-18 19:56:18LM2937ET-2.5/NOPB week info error Message: no such element: Unable to locate element: {"method":"css selector","selector":"[id="J-detailChar-Month"]"}
+  (Session info: chrome=114.0.5735.133)
+
+2025-08-18 19:56:28LM2937ET-2.5/NOPB week info error Message: no such element: Unable to locate element: {"method":"css selector","selector":"[id="J-detailChar-Month"]"}
+  (Session info: chrome=114.0.5735.133)
+
+2025-08-19 15:07:37TPS76328DBVR week info error Message: no such element: Unable to locate element: {"method":"css selector","selector":"[id="J-detailChar-Month"]"}
+  (Session info: chrome=114.0.5735.133)
+
+2025-08-19 15:07:47TPS76328DBVR week info error Message: no such element: Unable to locate element: {"method":"css selector","selector":"[id="J-detailChar-Month"]"}
+  (Session info: chrome=114.0.5735.133)
+
+2025-08-19 15:08:53TPS73633DRBT month info error Message: no such element: Unable to locate element: {"method":"css selector","selector":"[id="J-detailChar-Month"]"}
+  (Session info: chrome=114.0.5735.133)
+
+2025-08-19 15:09:03TPS73633DRBT month info error Message: no such element: Unable to locate element: {"method":"css selector","selector":"[id="J-detailChar-Month"]"}
+  (Session info: chrome=114.0.5735.133)
+
+2025-08-19 15:09:03LM79L12ACZ/NOPB week info error Message: no such element: Unable to locate element: {"method":"css selector","selector":"[id="J-detailChar-Month"]"}
+  (Session info: chrome=114.0.5735.133)
+
+2025-08-19 18:37:33TPS78415QWDRBRQ1 month info error Message: no such element: Unable to locate element: {"method":"css selector","selector":"[id="J-detailChar-Month"]"}
+  (Session info: chrome=114.0.5735.133)
+
+2025-08-19 18:37:43TPS78415QWDRBRQ1 month info error Message: no such element: Unable to locate element: {"method":"css selector","selector":"[id="J-detailChar-Month"]"}
+  (Session info: chrome=114.0.5735.133)
+
+2025-08-19 18:37:56TLV70933PKR week info error Message: no such element: Unable to locate element: {"method":"css selector","selector":"[id="J-detailChar-Month"]"}
+  (Session info: chrome=114.0.5735.133)
+
+2025-08-19 18:38:07TLV70933PKR week info error Message: no such element: Unable to locate element: {"method":"css selector","selector":"[id="J-detailChar-Month"]"}
+  (Session info: chrome=114.0.5735.133)
+
+2025-08-19 18:38:18REG113NA-5/250 week info error Message: no such element: Unable to locate element: {"method":"css selector","selector":"[id="J-detailChar-Month"]"}
+  (Session info: chrome=114.0.5735.133)
+
+2025-08-19 18:38:28REG113NA-5/250 week info error Message: no such element: Unable to locate element: {"method":"css selector","selector":"[id="J-detailChar-Month"]"}
+  (Session info: chrome=114.0.5735.133)
+
+2025-08-19 18:42:02V62/06626-06XE week info error list index out of range
+2025-08-19 18:42:05TPS784085BQWDRBRQ1 week info error list index out of range
+2025-08-19 18:42:50TLV76133KVUR week info error list index out of range
+2025-08-19 18:43:37TL750L05CKCS week info error list index out of range
+2025-08-19 18:45:33TPS78418BQWDRBRQ1 week info error list index out of range
+2025-08-19 18:46:05REG113NA-5/3K week info error list index out of range
+2025-08-19 18:46:13TLV761C0KVUR week info error list index out of range
+2025-08-19 18:46:51LP2954IT/NOPB week info error list index out of range
+2025-08-19 18:48:56V62/06626-04XE week info error list index out of range
+2025-08-19 18:49:13TL1963A-18DCQR week info error list index out of range
+2025-08-19 18:49:18UA79M08CKVURG3 week info error list index out of range
+2025-08-19 18:49:23TPS78430QWDRBRQ1 week info error list index out of range
+2025-08-19 18:51:45TLV70950PKR week info error list index out of range
+2025-08-19 18:52:13REG101NA-A/250 week info error list index out of range
+2025-08-19 18:53:00TL1963ADCQT week info error list index out of range
+2025-08-19 18:53:04TPS78408BQWDRBRQ1 week info error list index out of range
+2025-08-19 18:54:42TLV1117-15IKVURG3 week info error list index out of range
+2025-08-19 18:54:51V62/06626-01XE week info error list index out of range
+2025-08-19 18:55:48TPS78618DCQR week info error list index out of range
+2025-08-19 18:56:08TPS78411QWDRBRQ1 week info error list index out of range
+2025-08-19 18:58:26TPS72118MDBVREP week info error list index out of range
+2025-08-19 18:58:30LM2936Z-5.0/LFT3 week info error list index out of range
+2025-08-19 18:59:15TPS72525DCQR week info error list index out of range
+2025-08-19 19:00:32TPS73625MDBVREP week info error list index out of range
+2025-08-19 19:01:11LM2936Z-5.0/LFT4 week info error list index out of range
+2025-08-19 19:02:54TPS7A4518DCQT week info error list index out of range
+2025-08-19 19:04:54REG102NA-3.3/250 week info error list index out of range
+2025-08-19 19:05:11LM9036DTX-5.0/NOPB week info error list index out of range
+2025-08-19 19:06:19TPS78412QWDRBRQ1 week info error list index out of range
+2025-08-19 19:06:44TPS75833KCG3 week info error list index out of range
+2025-08-19 19:07:54REG102NA-5/250 week info error list index out of range
+2025-08-19 19:08:28LM2936QDTX-3.0/NOPB week info error list index out of range
+2025-08-19 19:09:08TPS75901KC week info error list index out of range
+2025-08-19 19:10:17LP3986TLX285285/NOPB week info error list index out of range
+2025-08-19 19:11:00TLV73333PDBVR week info error list index out of range
+2025-08-19 19:11:35TPS75925KC week info error list index out of range
+2025-08-19 19:12:38SM72238TDX-3.3/NOPB week info error list index out of range
+2025-08-19 19:13:44LP3996SD-3333/NOPB week info error list index out of range
+2025-08-19 19:13:48TPS7A2018PDBVR week info error list index out of range
+2025-08-19 19:14:53TPS7B8150QKVURQ1 week info error list index out of range
+2025-08-19 19:15:41TPS75733KC week info error list index out of range
+2025-08-19 19:17:08SM72238TD-5.0/NOPB week info error list index out of range
+2025-08-19 19:17:21LP3986TL-2828/NOPB week info error list index out of range
+2025-08-19 19:17:53TPS7A2033PDBVR week info error list index out of range
+2025-08-19 19:19:28LM2936QDT-3.3/NOPB week info error list index out of range
+2025-08-19 19:19:47LM78M05CH week info error list index out of range
+2025-08-19 19:20:21TPS74615PQWDRBRQ1 week info error list index out of range
+2025-08-19 19:20:39LP2981-33DBVR week info error list index out of range
