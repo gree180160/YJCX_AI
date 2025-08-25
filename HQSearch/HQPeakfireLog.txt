@@ -986,3 +986,6 @@
 2025-08-19 19:19:47LM78M05CH week info error list index out of range
 2025-08-19 19:20:21TPS74615PQWDRBRQ1 week info error list index out of range
 2025-08-19 19:20:39LP2981-33DBVR week info error list index out of range
+2025-08-22 19:55:39主程序错误: Message: element click intercepted: Element <div id="monthTab" class="date-tab" data-index="2">...</div> is not clickable at point (1170, 391). Other element would receive the click: <a href="javascript:;" class="nav-right hqYunArouse">...</a>
+  (Session info: chrome=114.0.5735.133)
+

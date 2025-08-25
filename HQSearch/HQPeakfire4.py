@@ -1,4 +1,5 @@
 import time
+
 from WRTools import ExcelHelp, WaitHelp, PathHelp, MySqlHelp_recommanded, LogHelper
 from selenium.webdriver.common.by import By
 from WRTools import ChromeDriverManager
@@ -24,7 +25,7 @@ accouts_arr = [AccManage.HQ_hot_4['n'], AccManage.HQ_hot_4['p']]
 login_url = "https://passport.hqew.com/login"
 
 driver = ChromeDriverManager.getWebDriver(0)
-driver.set_window_size(height=800, width=1200)
+driver.set_window_size(height=800, width=1250)
 current_cate_has_date = True
 
 
@@ -57,24 +58,43 @@ def has_hotData() -> bool:
 def getSearchInfo(cate_name, manu, isWeek):
     result = []
     try:
-        # 等待图表数据加载（关键：确保切换标签后数据已刷新）
+        # 1. 根据isWeek确定目标图表的ID
+        chart_id = "J-detailChar" if isWeek else "J-detailChar-Month"
+        period = "周" if isWeek else "月"
+
+        # 2. 等待目标图表容器加载，并获取其data-highcharts-chart属性（图表索引）
+        chart_container = driver.find_element(By.ID, chart_id)
+        chart_index = int(chart_container.get_attribute("data-highcharts-chart"))
+        # print(f"型号 {cate_name} {period}数据图表索引: {chart_index}")
+
+        # 3. 等待图表数据加载完成（确保系列和数据点存在）
         WebDriverWait(driver, 15).until(
-            lambda d: d.execute_script("return window.Highcharts && window.Highcharts.charts.length > 0")
+            lambda d: d.execute_script(f"""
+                const chart = window.Highcharts.charts[{chart_index}];
+                return chart && chart.series && chart.series.length > 0 && chart.series[0].data.length > 0;
+            """)
         )
-        # 执行JS前先确认图表和系列存在
-        y_values = driver.execute_script("""
-            const chart = window.Highcharts.charts[0];  // 确认索引正确
-            if (!chart || !chart.series || chart.series.length === 0) return [];
+
+        # 4. 执行JS提取对应图表的数据
+        y_values = driver.execute_script(f"""
+            const chart = window.Highcharts.charts[{chart_index}];
             const series = chart.series[0];  // 确认系列索引正确
-            return series.data.map(p => p.options?.y ?? null);  // 兼容null值
+            return series.data.map(p => p.options?.y ?? null);
         """)
-        # 数据清洗
-        arr1_cleaned = [None if v is None or (isinstance(v, float) and not v == v) else v for v in y_values]
+
+        # 5. 数据清洗
+        arr1_cleaned = [
+            None if v is None or (isinstance(v, float) and not v == v)  # 处理null和NaN
+            else v
+            for v in y_values
+        ]
         result = arr1_cleaned
-        print(f"型号 {cate_name} {'周' if isWeek else '月'} 数据获取成功，长度: {result}")
+        # print(f"型号 {cate_name} {period}数据获取成功，长度: {len(result)}")
+
     except Exception as e:
-        print(f"型号 {cate_name} 数据获取失败: {str(e)}")
-        LogHelper.write_log(log_file, f"型号 {cate_name} 错误: {str(e)}")  # 记录错误日志
+        period = "周" if isWeek else "月"
+        print(f"型号 {cate_name} {period}数据获取失败: {str(e)}")
+        LogHelper.write_log(log_file, f"型号 {cate_name} {period}数据错误: {str(e)}")
     return result
 
 
@@ -100,16 +120,8 @@ def main():
                     month_lab = driver.find_element(By.ID, 'monthTab')
                     month_lab.click()
                     # 等待月数据图表刷新
-                    WebDriverWait(driver, 10).until(
-                        lambda d: d.execute_script("return window.Highcharts.charts[0].series[0].data.length > 0")
-                    )
+                    WaitHelp.waitfor(True, False)
                     month_arr = getSearchInfo(ppn, manu, False)
-                    if month_arr.__len__() == 0:
-                        time_lab = driver.find_element(By.ID, 'timetabs')
-                        m_link = time_lab.find_elements(By.TAG_NAME, 'a')[1]
-                        m_link.click()
-                        time.sleep(10.0)
-                        month_arr = getSearchInfo(ppn, manu, False)
                     if month_arr.__len__() > 0:
                         cate_info = [ppn, manu, str(week_arr), str(month_arr), task_name]
                         MySqlHelp_recommanded.DBRecommandChip().hq_hot_write([cate_info])
