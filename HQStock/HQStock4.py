@@ -1,6 +1,6 @@
 import time
 
-from WRTools import ExcelHelp, WaitHelp, PathHelp, MySqlHelp_recommanded, ChromeDriverManager, EmailHelper
+from WRTools import ExcelHelp, WaitHelp, PathHelp, Record_data, ChromeDriverManager, EmailHelper
 from selenium.webdriver.common.by import By
 import ssl
 from Manager import AccManage, URLManager
@@ -8,12 +8,12 @@ from Manager import AccManage, URLManager
 log_file = PathHelp.get_file_path('HQSearch', 'HQPeakfireLog.txt')
 ssl._create_default_https_context = ssl._create_unverified_context
 
-sourceFile_dic = {'fileName': PathHelp.get_file_path(None, 'TTIVoltageRegulator.xlsx'),
+sourceFile_dic = {'fileName': PathHelp.get_file_path(None, 'TRFDiodes.xlsx'),
                   'sourceSheet': 'ppn2',
                   'colIndex': 1,
-                  'startIndex': 0,
-                  'endIndex': 21}
-task_name = 'TTIVoltageRegulator'
+                  'startIndex': 30,
+                  'endIndex': 40}
+task_name = 'TRFDiodes'
 
 accouts_arr = [AccManage.HQ_hot_4['n'], AccManage.HQ_hot_4['p']]
 VerificationCodePage = 0
@@ -151,7 +151,7 @@ def main(precise):
                 showingCheckCode = checkVerificationCodePage(ppn)
             supplier_info_arr = getSearchInfo(ppn, manu, True)
             if supplier_info_arr.__len__() > 0:
-                MySqlHelp_recommanded.DBRecommandChip().hq_stock_write(supplier_info_arr)
+                Record_data.RecordData().hq_stock_write(supplier_info_arr)
             else:
                 print(f"{ppn} without data")
 

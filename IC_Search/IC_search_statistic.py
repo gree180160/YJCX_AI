@@ -1,5 +1,5 @@
 # 统计pn 在IC 交谊网的热度
-from WRTools import ExcelHelp, PathHelp, MySqlHelp_recommanded
+from WRTools import ExcelHelp, PathHelp, Record_data
 import base64
 
 pn_file = PathHelp.get_file_path(None, f'00.xlsx')
@@ -113,7 +113,7 @@ def statistic_excel():
 ############################   DB    #####################################################
 def getDBData_m():
     # IC_hot_m_read
-    IC_Search_list_m = MySqlHelp_recommanded.DBRecommandChip().IC_hot_m_read("update_time > '2023/10/08'")
+    IC_Search_list_m = Record_data.RecordData().IC_hot_m_read("update_time > '2023/10/08'")
     result_m = []
     for temp in IC_Search_list_m:
         search_num_arr = [temp[2], temp[3], temp[4], temp[5], temp[6], temp[7], temp[8], temp[9], temp[10], temp[11], temp[12], temp[13]]
@@ -126,7 +126,7 @@ def getDBData_m():
 
 
 def getDBData_w():
-    IC_Search_list_w = MySqlHelp_recommanded.DBRecommandChip().IC_hot_w_read("update_time > '2023/10/08'")
+    IC_Search_list_w = Record_data.RecordData().IC_hot_w_read("update_time > '2023/10/08'")
     result_w = []
     for temp in IC_Search_list_w:
         search_num_arr = [temp[2], temp[3], temp[4], temp[5], temp[6], temp[7], temp[8], temp[9], temp[10],

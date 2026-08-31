@@ -3,7 +3,7 @@ import time
 
 from bs4 import BeautifulSoup
 import requests
-from WRTools import LogHelper, WaitHelp, ExcelHelp, PathHelp,MySqlHelp_recommanded
+from WRTools import LogHelper, WaitHelp, ExcelHelp, PathHelp,Record_data
 from Findchips_stock.findchips_stock_info import findchips_stock_info_onePart, findchips_stock_info_oneSupplier
 
 
@@ -90,7 +90,7 @@ def get_findchips_stock(cate_index, cate_name, send_email):
                                                                      authorized=is_author, part_url=part_url,
                                                                      stock_sum=stock_sum)
                     supplier_info_arr.append(supplier_info.descritpion_arr() + '')
-        MySqlHelp_recommanded.DBRecommandChip().findchip_stock_write(data=supplier_info_arr)
+        Record_data.RecordData().findchip_stock_write(data=supplier_info_arr)
         supplier_info_arr.clear()
         WaitHelp.waitfor(False, isDebug=False)
     except Exception as e:

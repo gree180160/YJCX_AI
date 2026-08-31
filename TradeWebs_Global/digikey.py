@@ -6,7 +6,7 @@ import time
 
 from WRTools import ChromeDriverManager
 from selenium.webdriver.common.by import By
-from WRTools import LogHelper, PathHelp, ExcelHelp, WaitHelp, MySqlHelp_recommanded
+from WRTools import LogHelper, PathHelp, ExcelHelp, WaitHelp, Record_data
 from Manager import AccManage
 from selenium.webdriver.common.action_chains import ActionChains
 

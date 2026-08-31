@@ -5,7 +5,7 @@ import sys
 from WRTools import ChromeDriverManager
 from selenium import webdriver
 from selenium.webdriver.common.by import By
-from WRTools import ExcelHelp, LogHelper, PathHelp, WaitHelp, MySqlHelp_recommanded, EmailHelper
+from WRTools import ExcelHelp, LogHelper, PathHelp, WaitHelp, Record_data, EmailHelper
 import octopart_price_info
 from Manager import URLManager, AccManage
 import time
@@ -172,7 +172,7 @@ def analy_html(pn_index, pn):
     except Exception as e:
         LogHelper.write_log(log_file_name=log_file, content=f'{pn} 页面 解析异常：{e} ')
     if valid_supplier_arr.__len__() > 0:
-        MySqlHelp_recommanded.DBRecommandChip().octopart_price_write(valid_supplier_arr)
+        Record_data.RecordData().octopart_price_write(valid_supplier_arr)
     # ExcelHelp.add_arr_to_sheet(
     #     file_name=result_save_file,
     #     sheet_name='octopart_price',

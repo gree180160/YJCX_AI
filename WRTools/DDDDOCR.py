@@ -27,7 +27,7 @@ def reco(source_image) -> int:
 
 def test():
     for i in range(1, 12):
-        with open(f'/Users/liuhe/PycharmProjects/YJCX_AI/IC_Search/CroppedImages/M_{i}.png', 'rb') as f:
+        with open(f'/Users/liuhe/Documents/WebProjects/ChipPower/IC_Search/CroppedImages/M_{i}.png', 'rb') as f:
             img_bytes = f.read()
         result = ocr.classification(img_bytes)
         print(result)

@@ -1,6 +1,6 @@
 import time
 
-from WRTools import ExcelHelp, LogHelper, PathHelp, WaitHelp, MySqlHelp_recommanded, EmailHelper, PandasHelp
+from WRTools import ExcelHelp, LogHelper, PathHelp, WaitHelp, Record_data, EmailHelper, PandasHelp
 import os
 
 # 文件夹
@@ -46,7 +46,7 @@ def searchLowestIndex(source_file):
 
 
 def read_record(save_file, task_name):
-    record = MySqlHelp_recommanded.DBRecommandChip().octopart_market_read(f'task_name = "{task_name}"')
+    record = Record_data.RecordData().octopart_market_read(f'task_name = "{task_name}"')
     ExcelHelp.add_arr_to_sheet(save_file, 'octopart', record)
 
 

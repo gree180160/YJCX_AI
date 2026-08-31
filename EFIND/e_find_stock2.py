@@ -5,7 +5,7 @@ from selenium.webdriver.common.by import By
 from WRTools import ChromeDriverManager
 import ssl
 import datetime
-from WRTools import ExcelHelp, WaitHelp, PathHelp, EmailHelper, MySqlHelp_recommanded, LogHelper
+from WRTools import ExcelHelp, WaitHelp, PathHelp, EmailHelper, Record_data, LogHelper
 
 
 ssl._create_default_https_context = ssl._create_unverified_context
@@ -67,7 +67,7 @@ def get_supplier(ppn, manu, stock):
         min_price = price_stat.find_elements(By.TAG_NAME, 'i')[1].text
         max_price = price_stat.find_elements(By.TAG_NAME, 'i')[2].text
         info = [ppn, manu, total_sup, price_sup, stock_sup, stock, mid_price, min_price, max_price, task_name]
-        MySqlHelp_recommanded.DBRecommandChip().efind_supplier_write([info])
+        Record_data.RecordData().efind_supplier_write([info])
     except:
         print(f'{ppn} get_supplier error')
 

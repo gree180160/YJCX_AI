@@ -6,7 +6,7 @@ from WRTools import ChromeDriverManager
 import ssl
 from IC_stock.IC_Stock_Info import IC_Stock_Info
 from Manager import AccManage, URLManager
-from WRTools import ExcelHelp, WaitHelp, PathHelp, EmailHelper, MySqlHelp_monitor
+from WRTools import ExcelHelp, WaitHelp, PathHelp, EmailHelper, Record_data
 import random
 
 
@@ -15,8 +15,8 @@ ssl._create_default_https_context = ssl._create_unverified_context
 sourceFile_dic = {'fileName': PathHelp.get_file_path("Monitor", 'TFL_ICStock.xlsx'),
                   'sourceSheet': 'ppn',
                   'colIndex': 1,
-                  'startIndex': 10,
-                  'endIndex': 11} # 0- 11
+                  'startIndex': 0,
+                  'endIndex': 12}
 
 accouts_arr = [[AccManage.IC_stock_1['n'], AccManage.IC_stock_1['p']]]
 try:
@@ -209,15 +209,15 @@ def main():
         confuse_pilot,
         confuse_home
     ]
-    db_manager = MySqlHelp_monitor.MonitorDatabaseManager()
+    db = Record_data.RecordData()
     # 创建连接
     all_cates = ExcelHelp.read_col_content(sourceFile_dic['fileName'], sourceFile_dic['sourceSheet'],
                                            sourceFile_dic['colIndex'])
     all_manu = ExcelHelp.read_col_content(sourceFile_dic['fileName'], sourceFile_dic['sourceSheet'], 2)
     try:
         for (cate_index, cate_name) in enumerate(all_cates):
-            while WaitHelp.isSleep_time():
-                    time.sleep(60*5)
+            # while WaitHelp.isSleep_time():
+            #         time.sleep(60*5)
             if cate_name.__contains__('?'):
                 continue
             elif ignore_list.__contains__(cate_name):  # 已卖完，或者供应商太多无需关注
@@ -225,12 +225,9 @@ def main():
             elif cate_index in range(sourceFile_dic['startIndex'], sourceFile_dic['endIndex']):
                 print(f'cate_index is: {cate_index}  cate_name is: {cate_name}')
                 need_save_ic_arr = get_stock(cate_index, cate_name, all_manu[cate_index])
-                try:
-                    db_manager.create_connection()
-                    db_manager.insert_monitor_ics(need_save_ic_arr)
-                finally:
-                    db_manager.close_connection()
-                    # Every three categories, perform a confuse action
+                if need_save_ic_arr and len(need_save_ic_arr) > 0:
+                    db.monitor_ic_write(need_save_ic_arr)
+                # Every three categories, perform a confuse action
                 if cate_index > 0:
                     random_action = random.choice(confuse_actions)
                     confuseAction(random_action)
@@ -326,12 +323,12 @@ SELECT
     st_ppn,  
     st_manu,  
     supplier,  
-    COALESCE(SUM(CASE WHEN m_date = '2025-07-15' THEN CAST(sup_stock AS DECIMAL) END), 0) AS stock1,  
-    COALESCE(SUM(CASE WHEN m_date = '2025-08-13' THEN CAST(sup_stock AS DECIMAL) END), 0) AS stock2  
+    COALESCE(SUM(CASE WHEN m_date = '2025-12-30' THEN CAST(sup_stock AS DECIMAL) END), 0) AS stock1,  
+    COALESCE(SUM(CASE WHEN m_date = '2026-01-15' THEN CAST(sup_stock AS DECIMAL) END), 0) AS stock2  
 FROM  
     monitor_ic  
 WHERE  
-    m_date IN ('2025-07-15', '2025-08-13') AND  
+    m_date IN ('2025-12-30', '2026-01-15') AND  
     sup_stock REGEXP '^[0-9]+$'  -- 只选择 sup_stock 是数字的记录  
 GROUP BY  
     st_ppn, st_manu, supplier;  

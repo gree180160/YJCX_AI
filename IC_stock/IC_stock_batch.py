@@ -6,7 +6,7 @@ from WRTools import ChromeDriverManager
 import ssl
 from IC_stock.IC_Stock_Info import IC_Stock_Info
 from Manager import AccManage, URLManager
-from WRTools import ExcelHelp, WaitHelp, PathHelp, EmailHelper, MySqlHelp_recommanded
+from WRTools import ExcelHelp, WaitHelp, PathHelp, EmailHelper, Record_data
 
 ssl._create_default_https_context = ssl._create_unverified_context
 
@@ -153,7 +153,7 @@ def get_stock(cate_index, cate_name,st_manu):
                     need_save_ic_info = saveContent_arr
                     max_stock = int(ic_Stock_Info.stock_num)
         if need_save_ic_info.__len__() > 0:
-            MySqlHelp_recommanded.DBRecommandChip().ic_stock([need_save_ic_info])
+            Record_data.RecordData().ic_stock([need_save_ic_info])
         need_load_nextPage = False
         # 包含>=3个无效的stock信息就不翻页了
         # if current_page >= 2 or len(need_save_ic_arr) <= 46:

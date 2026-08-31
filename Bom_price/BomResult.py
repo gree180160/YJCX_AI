@@ -2,7 +2,7 @@
 #一个月内，实名supplier，至少有5条报价,云汉，圣禾堂一家算三家，取价格第二低的报价
 import time
 
-from WRTools import PathHelp, ExcelHelp, WaitHelp, MySqlHelp_recommanded
+from WRTools import PathHelp, ExcelHelp, WaitHelp, Record_data
 import re
 import json
 from urllib.request import urlopen
@@ -21,7 +21,7 @@ def bom_price_result(cate_source_file, sheet_name):
     for (index, temp_ppn) in enumerate(pps):
         ppn_str = str(temp_ppn)
         price_info_arr = []
-        #MySqlHelp_recommanded.DBRecommandChip().bom_price_read("update_time > '2023/10/28'")
+        #Record_data.RecordData().bom_price_read("update_time > '2023/10/28'")
         started_record = False
         #(`ppn`, `manu`, `supplier`, `package`, `lot`, `quoted_price`, `release_time`, `stock_num`, `valid_supplier`, `update_time`)
         supplier_count = 0
@@ -44,13 +44,19 @@ def bom_price_result(cate_source_file, sheet_name):
                 if started_record:
                     break #结束这个ppn 的查找
 
-        # 至少有5条报价, 云汉，圣禾堂一家算三家，取价格第二低的报价
-        if price_info_arr.__len__() > 0 and supplier_count >= 3:
-            second_smallest_arr = second_smallest(price_info_arr)
-            ppn_result = [ppn_str, manufactures[index], second_smallest_arr[0], bom_price_list[second_smallest_arr[1]][2]]
+        if price_info_arr.__len__() > 0 and supplier_count >= 1:
+            first_smallest_arr = first_smallest(price_info_arr)
+            ppn_result = [ppn_str, manufactures[index], first_smallest_arr[0],
+                          bom_price_list[first_smallest_arr[1]][2]]
         else:
             ppn_result = [ppn_str, manufactures[index], "", ""]
-        print(ppn_result)
+        # # 至少有5条报价, 云汉，圣禾堂一家算三家，取价格第二低的报价
+        # if price_info_arr.__len__() > 0 and supplier_count >= 3:
+        #     second_smallest_arr = second_smallest(price_info_arr)
+        #     ppn_result = [ppn_str, manufactures[index], second_smallest_arr[0], bom_price_list[second_smallest_arr[1]][2]]
+        # else:
+        #     ppn_result = [ppn_str, manufactures[index], "", ""]
+        # print(ppn_result)
         result.append(ppn_result)
     ExcelHelp.add_arr_to_sheet(file_name=cate_source_file, sheet_name='zhengnengliang_price_sum', dim_arr=result)
 
@@ -66,6 +72,20 @@ def second_smallest(arr):
     # 找到对应的row_index
     for item in sorted_arr:
         if abs(float(item[0]) - float(second_smallest_price[0])) < 0.0001:
+            return item  # 返回[price, row_index]
+
+
+# 获取倒数第二小的价格，及其对应的index，为获取supplier等信息做准备
+def first_smallest(arr):
+    # 排序数组，根据price的值进行排序
+    sorted_arr = sorted(arr, key=lambda x: x[0])
+            # 找到倒数第二小的price
+    if len(sorted_arr) < 1:
+        return arr[0]  # 如果没有倒数第二小的元素，则返回None
+    first_smallest_price = sorted_arr[0]
+    # 找到对应的row_index
+    for item in sorted_arr:
+        if abs(float(item[0]) - float(first_smallest_price[0])) < 0.0001:
             return item  # 返回[price, row_index]
 
 
@@ -132,15 +152,15 @@ def is_valid_supplier(date_string, supplier_name) -> bool:
 
 
 def read_record(save_file, task_name):
-    record = MySqlHelp_recommanded.DBRecommandChip().bom_price_read(f'task_name = "{task_name}"')
+    record = Record_data.RecordData().bom_price_read(f'task_name = "{task_name}"')
     ExcelHelp.add_arr_to_sheet(save_file, 'zhengnengliang_price', record)
 
 
 if __name__ == "__main__":
-    aim_file = PathHelp.get_file_path(None, 'TRenesasIsolators.xlsx')
-    task_name = 'TRenesasIsolators'
+    aim_file = PathHelp.get_file_path(None, 'TBomHot.xlsx')
+    task_name = 'TFL_ICStock1'
     read_record(aim_file, task_name)
-    bom_price_result(aim_file, 'ppn2')
+    bom_price_result(aim_file, 'price')
     print('over')
 
 

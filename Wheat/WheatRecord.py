@@ -11,7 +11,7 @@ from selenium.webdriver.common.action_chains import ActionChains
 from WRTools import ChromeDriverManager
 import ssl
 from Manager import AccManage
-from WRTools import ExcelHelp, WaitHelp, PathHelp, LogHelper, MySqlHelp_recommanded
+from WRTools import ExcelHelp, WaitHelp, PathHelp, LogHelper, Record_data
 import time
 
 # ru [['MW6S004NT1', '1', 'TNXP_RF']]，save to mysql   # ICL7107CM44  ru 1
@@ -161,9 +161,9 @@ def anly_webdriver(cate_index, cate_name, isRU):
             count_des = count_des_list[3].text
             count_des = count_des.replace('进出口数据(', '')
             count_des = count_des.replace(')', '')
-            MySqlHelp_recommanded.DBRecommandChip().wheat_record_write([[cate_name, count_des, task_name]], isRU)
+            Record_data.RecordData().wheat_record_write([[cate_name, count_des, task_name]], isRU)
         else:
-            MySqlHelp_recommanded.DBRecommandChip().wheat_record_write([[cate_name, 0, task_name]], isRU)
+            Record_data.RecordData().wheat_record_write([[cate_name, 0, task_name]], isRU)
     except Exception as e:
         LogHelper.write_log(logFile, f'cannot get count {e}')
 

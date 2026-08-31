@@ -10,7 +10,7 @@
 import time
 
 from statistics import mean
-from WRTools import PathHelp, ExcelHelp, MySqlHelp_recommanded
+from WRTools import PathHelp, ExcelHelp, Record_data
 # 根据规则匹配判断型号是否符合热度标准。
 
 
@@ -87,74 +87,92 @@ def valid_month(month_data: list):
 def HQ_hot_result2(cate_source_file):
     pps = ExcelHelp.read_col_content(file_name=cate_source_file, sheet_name='ppn', col_index=1)
     manufactures = ExcelHelp.read_col_content(file_name=cate_source_file, sheet_name='ppn', col_index=2)
-    status = ExcelHelp.read_col_content(file_name=cate_source_file, sheet_name='ppn', col_index=3)
+    source_info = ExcelHelp.read_sheet_content_by_name(file_name=cate_source_file, sheet_name='source')
     hq_hot_info = ExcelHelp.read_sheet_content_by_name(cate_source_file, sheet_name='HQ_hot')
     result = []
     for (index, temp_ppn) in enumerate(pps):
         ppn_str = str(temp_ppn)
         avg = hot_result = last_month = 0
         hot_week = hot_month = ''
+        stock = "--"
+        ppn_status = ""
+        found = False
         for (row_index, row_content) in enumerate(hq_hot_info):
+            ppn_ic = str(row_content[0])
+            if ppn_ic.upper() == ppn_str.upper():
+                hot_week = row_content[2]
+                hot_month = row_content[3]
+                try:
+                    week_data = eval(hot_week)
+                except:
+                    week_data = ['0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0']
+                try:
+                    int_week_data = [int(x) for x in week_data]
+                except Exception as e:
+                    int_week_data = [9999, 9999, 9999, 9999, 9999, 9999, 9999, 9999, 9999, 9999, 9999, 9999]
+                    print(f'{ppn_ic} int_week_data error: {e}')
+                try:
+                    month_data = eval(hot_month)
+                except:
+                    month_data = ['0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0']
+                try:
+                    int_month_data = [int(x) for x in month_data]
+                except Exception as e:
+                    int_month_data = [9999, 9999, 9999, 9999, 9999, 9999, 9999, 9999, 9999, 9999, 9999, 9999]
+                    print(f'{ppn_ic} int_month_data error: {e}')
+                avg = getMonthAvg(int_month_data)
+                if int_month_data:
+                    last_month = int_month_data[-1]
+                if valid_week(int_week_data) and valid_month(int_month_data):
+                    hot_result = 1
+                else:
+                    hot_result = 0
+                found = True
+                break;
+        if not found:
+            print(f'未找到匹配的 ppn: {ppn_str}')
+        for (row_index, row_content) in enumerate(source_info):
             if row_index > 0:
                 ppn_ic = str(row_content[0])
                 if ppn_ic.upper() == ppn_str.upper():
-                    hot_week = row_content[2]
-                    hot_month = row_content[3]
                     try:
-                        week_data = eval(hot_week)
+                        ppn_status = str(row_content[2]).replace(",", "")
+                        ppn_status = ppn_status.replace(" ", "")
+                        # stock = str(int(stock_des))  #这里使用了库存状态
                     except:
-                        week_data = ['0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0']
-                    try:
-                        int_week_data = [int(x) for x in week_data]
-                    except Exception as e:
-                        int_week_data = [9999, 9999, 9999, 9999, 9999, 9999, 9999, 9999, 9999, 9999, 9999, 9999]
-                        print(f'{ppn_ic} int_week_data error: {e}')
-                    try:
-                        month_data = eval(hot_month)
-                    except:
-                        month_data = ['0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0']
-                    try:
-                        int_month_data = [int(x) for x in month_data]
-                    except Exception as e:
-                        int_month_data = [9999, 9999, 9999, 9999, 9999, 9999, 9999, 9999, 9999, 9999, 9999, 9999]
-                        print(f'{ppn_ic} int_month_data error: {e}')
-                    avg = getMonthAvg(int_month_data)
-                    last_month = int_month_data[-1]
-                    if valid_week(int_week_data) and valid_month(int_month_data):
-                        hot_result = 1
-                    else:
-                        hot_result = 0
+                        stock = '--'
                     break;
-        result.append([ppn_str, manufactures[index],status[index], hot_week, hot_month, last_month, avg, hot_result])
+        # 本次不使用 stock 列
+        result.append([ppn_str, manufactures[index], ppn_status, hot_week, hot_month, last_month, avg, hot_result])
     ExcelHelp.add_arr_to_sheet(file_name=cate_source_file, sheet_name="HQ_hot_result", dim_arr=result)
 
 
-# 去掉最小值，前四个月数据*0.8， 后四个月数据*1.2，再算平均数，再/10
+# 计算月平均值，取消加权，处理数组长度不固定的情况
 def getMonthAvg(month_list):
+    if not month_list:
+        return 0
     new_list = []
-    for (index, value) in enumerate(month_list):
+    for value in month_list:
         try:
-            if index <= 3:
-                new_value = value * 0.8
-            elif index >= 8:
-                new_value = value * 1.2
-            else:
-                new_value = value * 1.0
-        except:
-            new_value = 9999
-        new_list.append(new_value)
+            new_value = float(value)
+            new_list.append(new_value)
+        except Exception as e:
+            print(f'getMonthAvg error: {e}')
+            continue
+    if not new_list:
+        return 0
     result = round(mean(new_list), 2)
     return result
 
 
 def read_record(save_file, task_name):
-    record = MySqlHelp_recommanded.DBRecommandChip().hq_hot_read(f'task_name = "{task_name}"')
+    record = Record_data.RecordData().hq_hot_read(f'task_name = "{task_name}"')
     ExcelHelp.add_arr_to_sheet(save_file, 'HQ_hot', record)
 
 
 if __name__ == "__main__":
-    aim_file = PathHelp.get_file_path(None, 'TTILinearSwitch.xlsx')
-    task_name = 'TTILinearSwitch'
+    aim_file = PathHelp.get_file_path(None, 'TBomHot.xlsx')
+    task_name = 'TBomHot'
     read_record(aim_file, task_name)
     time.sleep(3.0)
     HQ_hot_result2(aim_file)

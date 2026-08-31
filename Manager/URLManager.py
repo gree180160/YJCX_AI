@@ -142,6 +142,18 @@ def IC_hot_url(ppn: str):
     return search_url
 
 
+def cxyx_stock_url(ppn: str, qty: int):
+    cate_str = str(ppn)
+    cate_str = cate_str.replace('/', '%252F')
+    cate_str = cate_str.replace('#', '%2523')
+    cate_str = cate_str.replace('+', '%252B')
+    cate_str = cate_str.replace(',', '%252C')
+    # https://www.icweb.net/mall/product/search.php?Key=STM32F10%252C3C8T6&Qty=1
+    search_url = f'https://www.icweb.net/mall/product/search.php?Key={cate_str}&Qty={qty}'
+    return search_url
+
+
+
 # https://fh.hqew.com/detail/500020657.html
 def HQ_hot_url(ppn: str):
     cate_str = str(ppn)

@@ -7,24 +7,24 @@ from WRTools import ChromeDriverManager
 import ssl
 from IC_stock.IC_Stock_Info import IC_Stock_Info
 from Manager import AccManage, URLManager
-from WRTools import ExcelHelp, WaitHelp, PathHelp, EmailHelper, MySqlHelp_recommanded
+from WRTools import ExcelHelp, WaitHelp, PathHelp, EmailHelper, Record_data
 
 
 ssl._create_default_https_context = ssl._create_unverified_context
 
-
-sourceFile_dic = {'fileName': PathHelp.get_file_path(None, 'TInfenionMos.xlsx'),
-                  'sourceSheet': 'ppn',
+sourceFile_dic = {'fileName': PathHelp.get_file_path(None, 'TBomHot.xlsx'),
+                  'sourceSheet': 'ppn3',
                   'colIndex': 1,
-                  'startIndex': 136,
-                  'endIndex': 140}
-task_name = 'TInfenionMos'
+                  'startIndex': 0,
+                  'endIndex': 2}
+task_name = 'TBomHot'
 
+accouts_arr = [AccManage.IC_stock_1['n'], AccManage.IC_stock_1['p']]
 
-accouts_arr = [AccManage.IC_stock_3['n'], AccManage.IC_stock_3['p']]
+db = Record_data.RecordData()
 turn_page = False # 是否需要翻页
 try:
-    driver = ChromeDriverManager.getWebDriver(3)
+    driver = ChromeDriverManager.getWebDriver(1)
 except Exception as e:
     print(e)
 
@@ -32,6 +32,8 @@ total_page = 1
 current_page = 1
 VerificationCodePage = 0
 finishedPPN = 0
+cp_count = 0
+rank_count = 0
 
 def get_total_page():
     global total_page
@@ -54,24 +56,27 @@ def login_action(aim_url):
         accout_current = accouts_arr
         driver.find_element(by=By.ID, value='username').clear()
         driver.find_element(by=By.ID, value='username').send_keys(accout_current[0])
+        time.sleep(5.0)
         driver.find_element(by=By.ID, value='password').clear()
         driver.find_element(by=By.ID, value='password').send_keys(accout_current[1])
+        time.sleep(5.0)
         WaitHelp.waitfor_account_import(False, False)
         driver.find_element(by=By.ID, value='btn_login').click()
         WaitHelp.waitfor_ICHot(True, False)
-    if driver.current_url.startswith('https://member.ic.net'):  # 首次登录
-        driver.get(aim_url)
-    elif driver.current_url.startswith('https://www.ic.net.cn/search'):  # 查询过程中出现登录
+    else:
         driver.get(aim_url)
 
 
 #   二维数组，page 列表， table 列表
 def get_stock(cate_index, cate_name, st_manu):
-    global current_page
+    global current_page, cp_count, rank_count
     search_url = URLManager.IC_stock_url(cate_name, False)
     login_action(search_url)
     # 延时几秒确保页面加载完毕
     WaitHelp.waitfor_ICHot(True, False)
+    # confuse 行为- 滑动任意高度
+    scroll_height = 25.0 + random.uniform(1, 30)
+    driver.execute_script("window.scrollBy(0, arguments[0]);", scroll_height)
     showingCheckCode = checkVerificationCodePage(cate_name)
     while showingCheckCode:
         WaitHelp.waitfor(True, False)
@@ -160,13 +165,17 @@ def get_stock(cate_index, cate_name, st_manu):
                                           supplier_manu=manufacturer,
                                           stock_num=stock_num)
             if ic_Stock_Info.shouldSave():
+                if isSpotRanking:
+                    rank_count += 1
+                elif isSSCP or isICCP:
+                    cp_count += 1
                 saveContent_arr = ic_Stock_Info.descritpion_arr() + [task_name]
                 need_save_ic_arr.append(saveContent_arr)
         if need_save_ic_arr.__len__() > 0:
             # print(need_save_ic_arr)
-            MySqlHelp_recommanded.DBRecommandChip().ic_stock(need_save_ic_arr)
+            db.ic_stock(need_save_ic_arr)
         # 包含>=3个无效的stock信息就不翻页了
-        if not(turn_page and current_page <2 and need_save_ic_arr.__len__ > 46):
+        if not(turn_page and current_page < 2 and need_save_ic_arr.__len__ > 46):
             need_load_nextPage = False
         if need_load_nextPage:
             if current_page < total_page:
@@ -187,6 +196,24 @@ def go_to_nex_page(cate_name):
     current_page += 1
 
 
+# 获取参考价格和月搜索量
+def get_priceAndDemand(cate_name, st_manu):
+    supply_container = driver.find_element(By.CSS_SELECTOR, 'p.result_number')
+    supply_count = supply_container.find_element(By.ID, 'icCount').text
+    # 保存到数据库
+    price = ''
+    demand = ''
+    elements = driver.find_elements(By.CSS_SELECTOR, 'span.orangeT')
+    if len(elements) >= 3:
+        price = elements[2].text
+        if price:
+            price = price.replace("￥", "")
+    if len(elements) >= 4:
+        demand = elements[3].text
+    # (ppn, manu, price, ppn, manu, price, month_search_count, supplierCount, cp_count, rank_count, task_name)
+    db.ic_price_demand_write([[cate_name, st_manu, price, demand, supply_count, cp_count, rank_count, task_name]])
+
+
 # 验证当前页面是否正在等待用户验证，连续三次请求出现验证码页面，则关闭页面
 def checkVerificationCodePage(ppn) -> bool:
     global VerificationCodePage
@@ -204,66 +231,79 @@ def checkVerificationCodePage(ppn) -> bool:
 
 
 def confuseAction(action):
-    a_item = action()
-    try:
-        a_item.click()
-        time.sleep(8.5 + random.uniform(1, 10))
-        # 关闭新页面（如果打开了新的窗口）
-        if len(driver.window_handles) > 1:
-            driver.close()
-        # 返回初始页面（如果需要）
-        driver.switch_to.window(driver.window_handles[0])
-    except:
-        print('confuse error')
+    if action:
+        a_item = action()
+        try:
+            a_item.click()
+            time.sleep(8.5 + random.uniform(1, 10))
+            # 关闭新页面（如果打开了新的窗口）
+            if len(driver.window_handles) > 1:
+                driver.close()
+            # 返回初始页面（如果需要）
+            driver.switch_to.window(driver.window_handles[0])
+        except:
+            print('confuse error')
+    else:
+        print('action is None')
 
 
 def confuse_leftAD():
     try:
         ad1 = driver.find_element(By.ID, 'SD1').find_element(By.TAG_NAME, 'a')
-        ad1.click()
-        time.sleep(8.5 + random.uniform(1, 10))
-        # 关闭新页面（如果打开了新的窗口）
-        driver.close()
-        # 返回初始页面（如果需要）
-        driver.switch_to.window(driver.window_handles[0])
+        return ad1
     except:
-        print('confuse_leftAD error')
+        return None
 
 
 def confuse_supplier_info():
-    suppliers = driver.find_elements(By.CSS_SELECTOR, 'div.result_supply')
-    if suppliers.__len__() > 0:
-        last_link = suppliers[-1].find_elements(By.TAG_NAME, 'a')[-1]
-        return last_link
-    return None
+    try:
+        suppliers = driver.find_elements(By.CSS_SELECTOR, 'div.result_supply')
+        if suppliers.__len__() > 0:
+            last_link = suppliers[-1].find_elements(By.TAG_NAME, 'a')[-1]
+            return last_link
+    except:
+        return None
 
 
 def confuse_storePPN():
-    store = driver.find_element(By.CSS_SELECTOR, 'li.iconfont.icon-aixin')
-    return store
+    try:
+        store = driver.find_element(By.CSS_SELECTOR, 'li.iconfont.icon-aixin')
+        return store
+    except:
+        return None
 
 
 def confuse_helpCenter():
-    topNav = driver.find_element(By.CSS_SELECTOR, 'div.topnav_content')
-    help_center = topNav.find_elements(By.CSS_SELECTOR, 'div.fl')[-2]
-    help_link = help_center.find_element(By.TAG_NAME, 'a')
-    help_link.click()
+    try:
+        topNav = driver.find_element(By.CSS_SELECTOR, 'div.topnav_content')
+        help_center = topNav.find_elements(By.CSS_SELECTOR, 'div.fl')[-2]
+        help_link = help_center.find_element(By.TAG_NAME, 'a')
+        return help_link
+    except:
+        return None
 
 
 def confuse_pilot():
-    topNav = driver.find_element(By.CSS_SELECTOR, 'div.topnav_content')
-    pilot_center = topNav.find_elements(By.CSS_SELECTOR, 'div.fl')[-4]
-    pilot_link = pilot_center.find_element(By.TAG_NAME, 'a')
-    return pilot_link
+    try:
+        topNav = driver.find_element(By.CSS_SELECTOR, 'div.topnav_content')
+        pilot_center = topNav.find_elements(By.CSS_SELECTOR, 'div.fl')[-4]
+        pilot_link = pilot_center.find_element(By.TAG_NAME, 'a')
+        return pilot_link
+    except:
+        return None
 
 
 def confuse_home():
-    pilot_link = driver.find_element(By.CSS_SELECTOR, 'a.icHome')
-    return pilot_link
+    try:
+        pilot_link = driver.find_element(By.CSS_SELECTOR, 'a.icHome')
+        return pilot_link
+    except:
+        return None
 
 
 def main():
     # List of confuse actions
+    global cp_count, rank_count
     confuse_actions = [
         confuse_supplier_info,
         confuse_storePPN,
@@ -275,6 +315,8 @@ def main():
                                            sourceFile_dic['colIndex'])
     all_manu = ExcelHelp.read_col_content(sourceFile_dic['fileName'], sourceFile_dic['sourceSheet'], 2)
     for (cate_index, cate_name) in enumerate(all_cates):
+        cp_count = 0
+        rank_count = 0
         while WaitHelp.isSleep_time():
             time.sleep(60 * 5)
         if cate_name.__contains__('?'):
@@ -284,6 +326,7 @@ def main():
             if cate_index % 7 == 0 and cate_index > 0:
                 time.sleep(60 * 5)
             get_stock(cate_index, cate_name, all_manu[cate_index])
+            get_priceAndDemand(cate_name, all_manu[cate_index])
             # Every three categories, perform a confuse action
             if (cate_index + 1) % 3 == 0:
                 random_action = random.choice(confuse_actions)

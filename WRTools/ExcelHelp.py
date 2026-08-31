@@ -5,6 +5,7 @@ import time
 from datetime import datetime, timedelta
 from openpyxl.styles import PatternFill
 
+
 # READ
 # 获取某一列的内容返回cate list
 def read_col_content(file_name: str, sheet_name: str, col_index: int) -> list:
@@ -383,7 +384,7 @@ def render_date():
         add_arr_to_sheet(file_name=temp_file, sheet_name='Sheet', dim_arr=new_content)
 
 if __name__ == "__main__":
-    source_file = '/Users/liuhe/PycharmProjects/YJCX_AI/TICHot.xlsx'
+    source_file = '/Users/liuhe/Documents/WebProjects/ChipPower/TICHot.xlsx'
     sheet_content = read_sheet_content_by_name(source_file, 'jdmc')
     print(sheet_content[0])
     print(sheet_content[1])

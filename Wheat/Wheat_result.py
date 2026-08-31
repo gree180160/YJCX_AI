@@ -1,4 +1,4 @@
-from WRTools import ExcelHelp, PathHelp, MySqlHelp_recommanded
+from WRTools import ExcelHelp, PathHelp, Record_data
 
 
 def statistic_buy():
@@ -20,7 +20,7 @@ def statistic_buy():
 
 
 def read_record(save_file, task_name):
-    record = MySqlHelp_recommanded.DBRecommandChip().wheat_record_read(f'task_name = "{task_name}"')
+    record = Record_data.RecordData().wheat_record_read(f'task_name = "{task_name}"')
     ExcelHelp.add_arr_to_sheet(save_file, 'wheat_record', record)
 
 

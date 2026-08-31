@@ -2,7 +2,7 @@ import ssl
 import sys
 from selenium.webdriver.common.by import By
 from WRTools import ChromeDriverManager
-from WRTools import ExcelHelp, LogHelper, PathHelp, WaitHelp, MySqlHelp_recommanded, EmailHelper
+from WRTools import ExcelHelp, LogHelper, PathHelp, WaitHelp, Record_data, EmailHelper
 from Manager import AccManage, URLManager
 import time
 from PIL import Image
@@ -88,7 +88,7 @@ def analy_html(pn_index, pn):
             stock_pic = ''
         #ppn, manu, des, distribute, stock, currency_type, k_price, stock_pic, opn, task_name)
         info = [part_number, part_manu, part_des, distribute, stock, kprice_type, kprice, stock_pic, pn, task_name]
-        MySqlHelp_recommanded.DBRecommandChip().octopart_market_write([info])
+        Record_data.RecordData().octopart_market_write([info])
     except Exception as e:
         LogHelper.write_log(log_file_name=log_file, content=f'{pn} 页面 解析异常：{e} ')
 

@@ -1,6 +1,6 @@
 import time
 
-from WRTools import ExcelHelp, PathHelp, PandasHelp, MySqlHelp_recommanded
+from WRTools import ExcelHelp, PathHelp, PandasHelp, Record_data
 import os
 
 
@@ -64,10 +64,10 @@ def createDayTask(unit:int):
 
 # 分解数量大的ppn列表
 def decompositionPPN(unit: int):
-    source_file = "/Users/liuhe/Desktop/京创智通/停产料/TTIDiscontiueIC.xlsx" # PathHelp.get_file_path(None, 'TRU202412.xlsx')
-    sava_fold = '/Users/liuhe/Desktop/京创智通/停产料/'
+    source_file = PathHelp.get_file_path(None, 'TMWC.xlsx')
+    sava_fold = '//Users/liuhe/Desktop/京创智通/GlobalSupplier/MWC'
     source_ppn = ExcelHelp.read_col_content(file_name=source_file, sheet_name='ppn', col_index=1)
-    ppn_all = source_ppn[0:]
+    ppn_all = source_ppn[100:]
     # ppn_all.sort()
     stop_quotient = 0
     result = []
@@ -75,7 +75,7 @@ def decompositionPPN(unit: int):
         if ppn:
             quotient = int(index / unit)
             if quotient > stop_quotient:
-                file_name = f'Sub{quotient}.xlsx'
+                file_name = f'TMWC_{quotient}.xlsx'
                 file_path = sava_fold + file_name
                 ExcelHelp.add_arr_to_sheet(file_name=file_path, sheet_name='Sheet', dim_arr=result)
                 result.clear()
@@ -85,7 +85,7 @@ def decompositionPPN(unit: int):
             break
     if ppn_all.__len__() % unit > 0:
         # 保存最后的尾巴
-        file_name = f'Sub{quotient + 1}.xlsx'
+        file_name = f'TMWC_{quotient + 1}.xlsx'
         file_path = sava_fold + file_name
         ExcelHelp.add_arr_to_sheet(file_name=file_path, sheet_name='Sheet', dim_arr=result)
 
@@ -120,7 +120,7 @@ def write_ppn_to_sql():
     ppn_list_file = PathHelp.get_file_path(None, 'TMitsubishi.xlsx')
     sheet_name = 'Sheet1'
     ppn_file = ExcelHelp.read_col_content(ppn_list_file, sheet_name=sheet_name, col_index=1)
-    # ppn_db = MySqlHelp_recommanded.DBRecommandChip().ppn_read('1')
+    # ppn_db = Record_data.RecordData().ppn_read('1')
     # ppn_db = [item[0] for item in ppn_db]
     ppn_list = ppn_file
     manu_id_list = ExcelHelp.read_col_content(ppn_list_file, sheet_name=sheet_name, col_index=3)
@@ -130,7 +130,7 @@ def write_ppn_to_sql():
         if ppn:
             row = [ppn, manu_id_list[index1],manu_name_list[index1], 'TinaMitsubishiIGBT']
             result.append(row)
-    MySqlHelp_recommanded.DBRecommandChip().ppn_write(result)
+    Record_data.RecordData().ppn_write(result)
 
 
 def ru_stock_nonRepeat():
@@ -396,26 +396,63 @@ def remove_repeat():
     ExcelHelp.add_arr_to_sheet(source_file, 'ppn', result)
 
 
-def combine(source_arr):
-    result = []
-    added_supplier_tags = []
-    for (x, xsupplier) in enumerate(source_arr):
-        if x > 0:
-            tag = str(xsupplier[3]) + str(xsupplier[9])
-            new_stock = int(xsupplier[-1])
-            if added_supplier_tags.__contains__(tag):
-                continue;
+def combine():
+    new_file = PathHelp.get_file_path(None, 'TInfineonNew2.xlsx')
+    new_cates = ExcelHelp.read_col_content(new_file, 'ppn', 1)
+    finished_file = PathHelp.get_file_path(None, 'TInfineonNew.xlsx')
+    finished_cates = ExcelHelp.read_col_content(finished_file, 'ppn', 1)
+    result = [item for item in new_cates if item not in finished_cates]
+    ExcelHelp.add_arr_to_col(new_file, 'ppn3', result)
+
+
+def leadTime():
+    source_file = PathHelp.get_file_path(None, 'TRenesasM20_V2.xlsx')
+    oldReuslt_content = ExcelHelp.read_sheet_content_by_name(source_file, 'result')
+    leadTime_tile = ["提前周数", "前置週數"]
+    original_title = ["原始零件编号", "请求的零件编号", "原始零件編號"]
+    dg_fold = '/Users/liuhe/Desktop/京创智通/temp/result/'
+    list_file = os.listdir(dg_fold)  # 返回指定目录
+    all_leadTime = []
+    for temp_file in list_file:
+        if temp_file.startswith('TRenesasM20_V'):
+            dg_file = (f"{dg_fold}{temp_file}")
+            dgfile_title = ExcelHelp.read_row_content(dg_file, 'My Lists Worksheet', 1)
+            dgfile_content = ExcelHelp.read_sheet_content_by_name(dg_file, 'My Lists Worksheet')
+            col_original_ppn = 0
+            if dgfile_title.__contains__(original_title[0]):
+                col_original_ppn = dgfile_title.index(original_title[0])
+            elif dgfile_title.__contains__(original_title[1]):
+                col_original_ppn = dgfile_title.index(original_title[1])
+            elif dgfile_title.__contains__(original_title[2]):
+                col_original_ppn = dgfile_title.index(original_title[2])
             else:
-                for ysupplier in source_arr[x + 1:]:
-                    if xsupplier[3] == ysupplier[3] and xsupplier[9] == ysupplier[9]:
-                        new_stock = new_stock + int(ysupplier[-1])  # todo
-            supplier_sum = xsupplier
-            supplier_sum[-1] = str(new_stock)
-            result.append(supplier_sum)
-            added_supplier_tags.append(tag)
-        else:
-            result.append(xsupplier)
-    return result
+                print('not found leadTime')
+            col_leadTime = 0
+            if dgfile_title.__contains__(leadTime_tile[0]):
+                col_leadTime = dgfile_title.index(leadTime_tile[0])
+            elif dgfile_title.__contains__(leadTime_tile[1]):
+                col_leadTime = dgfile_title.index(leadTime_tile[1])
+            else:
+                continue
+            for (row_index, row_value) in enumerate(dgfile_content):
+                if row_index > 0:
+                    temp_value = [str(row_value[1]), str(row_value[col_leadTime]), str(row_value[col_original_ppn])]
+                    all_leadTime.append(temp_value)
+    new_reuslt_content = []
+    for temp_value in oldReuslt_content:
+        ppn = temp_value[0]
+        has_leadTime = False
+        for temp_leadTime in all_leadTime:
+            if temp_leadTime[0] == ppn:
+                has_leadTime = True
+                temp_value.append(temp_leadTime[1])
+                new_reuslt_content.append(temp_value)
+                break
+        if not has_leadTime:
+            temp_value.append('NoRecord')
+            new_reuslt_content.append(temp_value)
+    ExcelHelp.add_arr_to_sheet(source_file, 'resultLeadTime', new_reuslt_content)
+    ExcelHelp.add_arr_to_sheet(source_file, 'all_leadTime', all_leadTime)
 
 
 if __name__ == "__main__":
@@ -425,5 +462,5 @@ if __name__ == "__main__":
 
     # createDayTask(1000)
     # decompositionPPN(300)
-    remove_repeat()
-# getDigikeyStatus(PathHelp.get_file_path(None, 'TRenesasMemory.xlsx'))
+    # remove_repeat()
+    combine()

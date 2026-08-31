@@ -144,7 +144,7 @@ def add_watermark_repeat(image_path, text, text_color):
 
 def remove_black():
     # 读取图像
-    image = cv2.imread('/Users/liuhe/PycharmProjects/YJCX_AI/WRTools/zz.png')
+    image = cv2.imread('/Users/liuhe/Documents/WebProjects/ChipPower/WRTools/zz.png')
 
     # 获取图像的高度和宽度
     height, width, channels = image.shape

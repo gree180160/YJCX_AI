@@ -4,7 +4,7 @@
 # （2） 靠谱库存数量
 import time
 
-from WRTools import PathHelp, ExcelHelp, MySqlHelp_recommanded
+from WRTools import PathHelp, ExcelHelp, Record_data
 
 
 # 将同一个ppn到所有stock 累加，然后按照保存到数组中
@@ -37,13 +37,12 @@ def HQ_stock_sum(cate_source_file, sheetname):
 
 
 def read_record(save_file, task_name):
-    record = MySqlHelp_recommanded.DBRecommandChip().hq_stock_read(f'task_name = "{task_name}"')
+    record = Record_data.RecordData().hq_stock_read(f'task_name = "{task_name}"')
     ExcelHelp.add_arr_to_sheet(save_file, 'HQ_stock', record)
 
 
 # 只统计批次在5年内的supplier 数量
 def checkBatch(batch: str):
-    return True
     if not batch or batch.__len__() == 0:
         return False
     else:
@@ -54,8 +53,8 @@ def checkBatch(batch: str):
 
 
 if __name__ == "__main__":
-    aim_file = PathHelp.get_file_path(None, 'TInfineonM20_V2.xlsx')
-    task_name = 'TInfineonM20_V2'
+    aim_file = PathHelp.get_file_path(None, 'TBomHot.xlsx')
+    task_name = 'TBomHot'
     read_record(aim_file, task_name)
     HQ_stock_sum(aim_file, 'ppn2')
     time.sleep(5.0)

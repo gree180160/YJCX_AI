@@ -3,7 +3,7 @@ import re
 import ssl
 import undetected_chromedriver as uc
 from selenium.webdriver.common.by import By
-from WRTools import ExcelHelp, PathHelp, WaitHelp, MySqlHelp_recommanded
+from WRTools import ExcelHelp, PathHelp, WaitHelp, Record_data
 import time
 import random
 
@@ -68,7 +68,7 @@ def get_page_data(ppn, manu):
             print(f'get element error {e}')
     else:
         print('no result')
-    MySqlHelp_recommanded.DBRecommandChip().arrow_info_write([result])
+    Record_data.RecordData().arrow_info_write([result])
 
 
 def go_to_ppn(ppn, manu):

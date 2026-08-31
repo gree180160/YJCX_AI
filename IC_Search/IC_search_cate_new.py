@@ -1,6 +1,6 @@
 import time
 
-from WRTools import ExcelHelp, WaitHelp, PathHelp, MySqlHelp_recommanded, EmailHelper, LogHelper
+from WRTools import ExcelHelp, WaitHelp, PathHelp, Record_data, EmailHelper, LogHelper
 from selenium.webdriver.common.by import By
 import random
 from WRTools import ChromeDriverManager
@@ -92,9 +92,9 @@ def anlyth_page(aim_url, cate_name, manu, isWeek):
 def deal_sql_data(ppn, manu, isWeek, rec_arr):
     image_hot_data = [ppn, manu] + rec_arr
     if isWeek:
-        MySqlHelp_recommanded.DBRecommandChip().IC_hot_w_write([image_hot_data])
+        Record_data.RecordData().IC_hot_w_write([image_hot_data])
     else:
-        MySqlHelp_recommanded.DBRecommandChip().IC_hot_m_write([image_hot_data])
+        Record_data.RecordData().IC_hot_m_write([image_hot_data])
 
 
 def isNeedLogin(aim_url):
@@ -140,7 +140,7 @@ def getIC_des(ppn ,manu):
     except:
         info = [ppn, manu, '-',  '-',  '-',  '-',  '-', '-',  '-',  '-'  '-',  '-']
     result = [info]
-    MySqlHelp_recommanded.DBRecommandChip().ic_des_write(result)
+    Record_data.RecordData().ic_des_write(result)
 
 
 # 查询列表中所有需要查询的型号的搜索指数

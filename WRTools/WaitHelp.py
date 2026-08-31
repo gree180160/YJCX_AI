@@ -90,7 +90,7 @@ def waitfor_kind(kind:int, is_load_page, isDebug):
 
 def isSleep_time():
     current_time = datetime.datetime.now().time()
-    if current_time < datetime.time(8, 0) or (datetime.time(11, 50) <= current_time <= datetime.time(13, 30)) or (datetime.time(17, 50) <= current_time <= datetime.time(18, 30)) or current_time >= datetime.time(20, 30):
+    if current_time < datetime.time(8, 30) or (datetime.time(11, 50) <= current_time <= datetime.time(13, 30)) or (datetime.time(17, 50) <= current_time <= datetime.time(18, 30)) or current_time >= datetime.time(20, 30):
         return True
     else:
         return False

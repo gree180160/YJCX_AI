@@ -7,7 +7,7 @@ import time
 
 from WRTools import ChromeDriverManager
 from selenium.webdriver.common.by import By
-from WRTools import LogHelper, PathHelp, ExcelHelp, WaitHelp, MySqlHelp_recommanded
+from WRTools import LogHelper, PathHelp, ExcelHelp, WaitHelp, Record_data
 from Manager import AccManage
 import bom_price_info
 import re
@@ -141,10 +141,10 @@ def analy_html(cate_index, ppn, manu):
             # 无论是否有效都记录
             if bom_price_ele and str(bom_price_ele.supplier).__len__() > 0 and bom_price_ele.is_valid_supplier():
                 valid_supplier_arr.append(bom_price_ele.descritpion_arr() + [task_name])
-        MySqlHelp_recommanded.DBRecommandChip().bom_price_write(valid_supplier_arr)
+        Record_data.RecordData().bom_price_write(valid_supplier_arr)
         valid_supplier_arr.clear()
     else:
-        # MySqlHelp_recommanded.DBRecommandChip().bom_price_write([[ppn, '??', '??', "??"]])
+        # Record_data.RecordData().bom_price_write([[ppn, '??', '??', "??"]])
         print(f'{cate_index}th {ppn} has no record')
 
 

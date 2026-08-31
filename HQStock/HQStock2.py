@@ -1,6 +1,6 @@
 import time
 
-from WRTools import ExcelHelp, WaitHelp, PathHelp, MySqlHelp_recommanded, ChromeDriverManager, EmailHelper
+from WRTools import ExcelHelp, WaitHelp, PathHelp, Record_data, ChromeDriverManager, EmailHelper
 from selenium.webdriver.common.by import By
 import ssl
 from Manager import AccManage, URLManager
@@ -8,12 +8,12 @@ from Manager import AccManage, URLManager
 log_file = PathHelp.get_file_path('HQSearch', 'HQPeakfireLog.txt')
 ssl._create_default_https_context = ssl._create_unverified_context
 
-sourceFile_dic = {'fileName': PathHelp.get_file_path(None, 'TInfineonM20.xlsx'),
+sourceFile_dic = {'fileName': PathHelp.get_file_path(None, 'TRFBJT.xlsx'),
                   'sourceSheet': 'ppn2',
                   'colIndex': 1,
-                  'startIndex': 3600,
-                  'endIndex': 4000}
-task_name = 'TInfineonM20'
+                  'startIndex': 0,
+                  'endIndex': 19}
+task_name = 'TRFBJT'
 
 accouts_arr = [AccManage.HQ_hot_2['n'], AccManage.HQ_hot_2['p']]
 VerificationCodePage = 0
@@ -22,6 +22,7 @@ login_url = "https://passport.hqew.com/login"
 driver = ChromeDriverManager.getWebDriver(2)
 driver.set_window_size(height=800, width=1200)
 current_cate_has_date = True
+
 
 def login_action(aim_url):
     driver.get(login_url)
@@ -150,7 +151,7 @@ def main(precise):
                 showingCheckCode = checkVerificationCodePage(ppn)
             supplier_info_arr = getSearchInfo(ppn, manu, True)
             if supplier_info_arr.__len__() > 0:
-                MySqlHelp_recommanded.DBRecommandChip().hq_stock_write(supplier_info_arr)
+                Record_data.RecordData().hq_stock_write(supplier_info_arr)
             else:
                 print(f"{ppn} without data")
 

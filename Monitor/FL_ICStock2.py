@@ -15,8 +15,8 @@ ssl._create_default_https_context = ssl._create_unverified_context
 sourceFile_dic = {'fileName': PathHelp.get_file_path("Monitor", 'TFL_ICStock.xlsx'),
                   'sourceSheet': 'ppn',
                   'colIndex': 1,
-                  'startIndex': 21,
-                  'endIndex': 22} # 11 - 22
+                  'startIndex': 12,
+                  'endIndex': 24}
 
 accouts_arr = [[AccManage.IC_stock_2['n'], AccManage.IC_stock_2['p']]]
 try:

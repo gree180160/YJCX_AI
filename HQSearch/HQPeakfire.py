@@ -1,32 +1,29 @@
 import time
-
-from WRTools import ExcelHelp, WaitHelp, PathHelp, MySqlHelp_recommanded, LogHelper
+from WRTools import ExcelHelp, WaitHelp, PathHelp, LogHelper, EmailHelper, Record_data
 from selenium.webdriver.common.by import By
 from WRTools import ChromeDriverManager
 import ssl
 from Manager import AccManage, URLManager
-# 替换 time.sleep(10.0) 为显式等待（示例）
 from selenium.webdriver.support.ui import WebDriverWait
 
 log_file = PathHelp.get_file_path('HQSearch', 'HQPeakfireLog.txt')
 
 ssl._create_default_https_context = ssl._create_unverified_context
 
-sourceFile_dic = {'fileName': PathHelp.get_file_path(None, 'TTILDOVoltageStabilizer.xlsx'),
+sourceFile_dic = {'fileName': PathHelp.get_file_path(None, 'TRFBJT.xlsx'),
                   'sourceSheet': 'ppn',
                   'colIndex': 1,
-                  'startIndex': 5505,
-                  'endIndex': 6000}
-task_name = 'TTILDOVoltageStabilizer'
+                  'startIndex': 193,
+                  'endIndex': 194}
+task_name = 'TRFBJT'
 
-
+db = Record_data.RecordData()
 accouts_arr = [AccManage.HQ_hot_1['n'], AccManage.HQ_hot_1['p']]
-
 login_url = "https://passport.hqew.com/login"
-
 driver = ChromeDriverManager.getWebDriver(1)
-driver.set_window_size(height=800, width=1250)
+driver.set_window_size(height=800, width=1380)
 current_cate_has_date = True
+VerificationCodePage = 0
 
 
 def login_action(aim_url):
@@ -56,16 +53,18 @@ def has_hotData() -> bool:
 # cate_name：型号
 # isWeek：【周/月】搜索指数
 def getSearchInfo(cate_name, manu, isWeek):
+    showingCheckCode = checkVerificationCodePage(cate_name)
+    while showingCheckCode:
+        WaitHelp.waitfor(True, False)
+        showingCheckCode = checkVerificationCodePage(cate_name)
     result = []
     try:
         # 1. 根据isWeek确定目标图表的ID
         chart_id = "J-detailChar" if isWeek else "J-detailChar-Month"
-        period = "周" if isWeek else "月"
 
         # 2. 等待目标图表容器加载，并获取其data-highcharts-chart属性（图表索引）
         chart_container = driver.find_element(By.ID, chart_id)
         chart_index = int(chart_container.get_attribute("data-highcharts-chart"))
-        # print(f"型号 {cate_name} {period}数据图表索引: {chart_index}")
 
         # 3. 等待图表数据加载完成（确保系列和数据点存在）
         WebDriverWait(driver, 15).until(
@@ -94,7 +93,24 @@ def getSearchInfo(cate_name, manu, isWeek):
     except Exception as e:
         period = "周" if isWeek else "月"
         print(f"型号 {cate_name} {period}数据获取失败: {str(e)}")
+        print(f"url is: {str(driver.current_url)}")
         LogHelper.write_log(log_file, f"型号 {cate_name} {period}数据错误: {str(e)}")
+    return result
+
+
+# 验证当前页面是否正在等待用户验证，连续三次请求出现验证码页面，则关闭页面
+def checkVerificationCodePage(ppn) -> bool:
+    global VerificationCodePage
+    if driver.current_url.__contains__('https://passport.hqew.com/robottocheck'):
+        VerificationCodePage += 1
+        print(f'{ppn} check code')
+        EmailHelper.mail_HQ_hot(AccManage.Device_ID)
+        result = True
+    else:
+        VerificationCodePage = 0
+        result = False
+    if VerificationCodePage >= 20:
+        driver.close()
     return result
 
 
@@ -114,30 +130,43 @@ def main():
                 manu = all_manu[index]
                 driver.get(URLManager.HQ_hot_url(ppn))
                 WaitHelp.waitfor(True, False)
-                week_arr = getSearchInfo(ppn, manu, True)
-                time.sleep(1.0)
-                if week_arr.__len__() > 0:  # 有周数据，请求月数据
-                    month_lab = driver.find_element(By.ID, 'monthTab')
-                    month_lab.click()
-                    # 等待月数据图表刷新
-                    WaitHelp.waitfor(True, False)
-                    month_arr = getSearchInfo(ppn, manu, False)
-                    if month_arr.__len__() > 0:
-                        cate_info = [ppn, manu, str(week_arr), str(month_arr), task_name]
-                        MySqlHelp_recommanded.DBRecommandChip().hq_hot_write([cate_info])
+                if has_hotData():
+                    week_arr = getSearchInfo(ppn, manu, True)
+                    time.sleep(1.0)
+                    if week_arr.__len__() > 0:  # 有周数据，请求月数据
+                        is_month_active = False
+                        while not is_month_active:
+                            month_lab = driver.find_element(By.ID, 'monthTab')
+                            month_lab.click()
+                            # 等待月数据图表刷新
+                            WaitHelp.waitfor(True, False)
+                            is_month_active = "active" in month_lab.get_attribute("class")
+                        month_arr = getSearchInfo(ppn, manu, False)
+                        if month_arr.__len__() > 0:
+                            cate_info = [ppn, manu, str(week_arr), str(month_arr), task_name]
+                            db.hq_hot_write([cate_info])
+                else:
+                    print(f"型号 {ppn} 没有数据")
+                    cate_info = [ppn, manu, '[0.00, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]', '[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]', task_name]
+                    db.hq_hot_write([cate_info])
+
     finally:
         driver.quit()  # 无论是否出错，都关闭浏览器
 
 
 if __name__ == "__main__":
-    try:
-        driver.get("https://www.hqew.com/")
-        login_action(login_url)
-        WaitHelp.waitfor_account_import(True, False)
-        main()
-    except Exception as e:
-        print(f"主程序错误: {str(e)}")
-        LogHelper.write_log(log_file, f"主程序错误: {str(e)}")
-    finally:
-        if 'driver' in locals():
-            driver.quit()
+    # try:
+    #     driver.get("https://www.hqew.com/")
+    #     login_action(login_url)
+    #     WaitHelp.waitfor_account_import(True, False)
+    #     main()
+    # except Exception as e:
+    #     print(f"主程序错误: {str(e)}")
+    #     LogHelper.write_log(log_file, f"主程序错误: {str(e)}")
+    # finally:
+    #     if 'driver' in locals():
+    #         driver.quit()
+    cate_info = ["Test", "Test", '[0.00, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]',
+                 '[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]', "Test"]
+    db.hq_hot_write([cate_info])
+

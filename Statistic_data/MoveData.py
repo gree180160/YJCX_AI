@@ -131,7 +131,7 @@ def HQ_simple(save_file, ppn_sheet):
     except:
         IC_info = []
     try:
-        dg_info = ExcelHelp.read_sheet_content_by_name(source_file, 'digikey')
+        dg_info = ExcelHelp.read_sheet_content_by_name(source_file, 'source') # or digikey
     except:
         dg_info = []
     ppns_info = ExcelHelp.read_sheet_content_by_name(source_file, ppn_sheet)  # 先过滤HQ_hot_合格的ppn
@@ -149,7 +149,7 @@ def HQ_simple(save_file, ppn_sheet):
                 break;
         for temp_hqStock in HQ_stock_info:
             if temp_hqStock[0] == temp_ppnInfo[0]:
-                start =7
+                start = 7
                 ppn_result[start] = temp_hqStock[2]
                 ppn_result[start + 1] = temp_hqStock[3]
                 break;
@@ -305,16 +305,22 @@ def IC_HQ_Result2(save_file, rate, ppn_sheet):
 
 
 def temp():
-    result_file = PathHelp.get_file_path(None, 'TFiber.xlsx')
-    # file_fiber = '/Users/liuhe/Downloads/fiber.xlsx'
-    source = ExcelHelp.read_sheet_content_by_name(result_file, 'IC_stock')
-    result_file = result_file
-    ppns = ExcelHelp.read_col_content(result_file, 'ppn4', 1)
+    result_file = PathHelp.get_file_path(None, 'TES_CO_TH.xlsx')
     result = []
-    for temp_source in source:
-        if ppns.__contains__(temp_source[0]):
-            result.append(temp_source)
-    ExcelHelp.add_arr_to_sheet(result_file, 'IC_stock2', result)
+    source_content = ExcelHelp.read_sheet_content_by_name(result_file, 'result')
+    for source_row in source_content:
+        row = [source_row[0], source_row[1], source_row[2], "", "", source_row[4], source_row[5], source_row[6]]
+        price = str(source_row[3])
+        if price.__contains__(">"):
+            number = price.split(">")[0]
+            per_price = price.split(">")[1]
+        else:
+            number = ''
+            per_price = price
+        row = [source_row[0], source_row[1], source_row[2], number, per_price, source_row[4], source_row[5], source_row[6]]
+        result.append(row)
+    ExcelHelp.add_arr_to_sheet(result_file, "result2", result)
+    time.sleep(3.0)
 
 
 def month_ave_20():
@@ -337,8 +343,9 @@ def month_ave_20():
 
 
 if __name__ == "__main__":
-    aim_file = PathHelp.get_file_path(None, 'TTILinearSwitch.xlsx')
-    # IC_HQ_Result2(aim_file, 7.19, 'ppn2')
-    HQ_simple(aim_file, 'ppn2')
+    aim_file = PathHelp.get_file_path(None, 'TBomHot.xlsx')
+    # # IC_HQ_Result2(aim_file, 7.19, 'ppn2')
+    HQ_simple(aim_file, 'ppn3')
     print('over')
     # month_ave_20()
+    # temp()

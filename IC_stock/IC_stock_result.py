@@ -4,7 +4,7 @@
 # （2） 靠谱库存数量（[现货排名库存总量+非现货排名ICCP库存总量+非现货排名SSCP库存总量]/6)
 import time
 
-from WRTools import PathHelp, ExcelHelp, MySqlHelp_recommanded
+from WRTools import PathHelp, ExcelHelp, Record_data
 import re
 import os
 # IC_source_file = PathHelp.get_file_path('TVicor15H', 'IC_stock.xlsx')
@@ -89,7 +89,7 @@ def addIC_info():
 
 # 只统计批次在5年内的supplier 数量
 def checkBatch(batch: str):
-    return True
+    # return True
     if not batch or batch.__len__() == 0:
         return False
     else:
@@ -100,13 +100,14 @@ def checkBatch(batch: str):
 
 
 def read_record(save_file, task_name):
-    record = MySqlHelp_recommanded.DBRecommandChip().ic_stock_read(f'task_name = "{task_name}"')
+    record = Record_data.RecordData().ic_stock_read(f'task_name = "{task_name}"')
+    print(record)
     ExcelHelp.add_arr_to_sheet(save_file, 'IC_stock', record)
 
 
 if __name__ == "__main__":
-    aim_file = PathHelp.get_file_path(None, 'TTILinearSwitch.xlsx')
-    task_name = 'TTILinearSwitch'
+    aim_file = PathHelp.get_file_path(None, 'TBomHot.xlsx')
+    task_name = 'TBomHot'
     read_record(aim_file, task_name)
     IC_stock_sum(aim_file, 'ppn3')
     print('over')

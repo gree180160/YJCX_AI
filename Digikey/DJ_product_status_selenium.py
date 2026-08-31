@@ -6,7 +6,7 @@ import time
 
 from WRTools import ChromeDriverManager
 from selenium.webdriver.common.by import By
-from WRTools import LogHelper, PathHelp, ExcelHelp, WaitHelp, MySqlHelp_recommanded
+from WRTools import LogHelper, PathHelp, ExcelHelp, WaitHelp, Record_data
 from selenium.common.exceptions import TimeoutException
 from Manager import AccManage
 from selenium.webdriver.common.action_chains import ActionChains
@@ -131,7 +131,7 @@ def getElement(keyword):
         product_code = tr_list[19].find_elements(By.TAG_NAME, 'td')[1].text
         attr_arr = [category, serial, package, status, kind, single_channel, voltage_reverse, voltage_breakdown, voltage_ipp, peakCurrentPulse, peakPowerPulse, protect_power, apply, capacitance, operating_temperature, install_kind, shell, supplier_packeage, product_code]
     result = base_info_ar + attr_arr + [sourceFile_dic['sourceSheet']]
-    MySqlHelp_recommanded.DBRecommandChip().digikey_attr_write(data=[result])
+    Record_data.RecordData().digikey_attr_write(data=[result])
     time.sleep(2.0)
 
 

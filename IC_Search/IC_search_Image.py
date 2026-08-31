@@ -3,7 +3,7 @@ import os
 import time
 
 from PIL import Image, ImageGrab
-from WRTools import ChracterReconition, ExcelHelp, PathHelp, MySqlHelp_recommanded
+from WRTools import ChracterReconition, ExcelHelp, PathHelp, Record_data
 
 
 # 是否是周指数
@@ -109,11 +109,11 @@ def rec_image(fold_path, manu, task_name):
             if temp.endswith('_M.png'):
                 image_hot_data = ChracterReconition.SplitPic_month(fold_path + '/' + temp)
                 image_hot_data = [ppn, manu] + image_hot_data + task_name
-                MySqlHelp_recommanded.DBRecommandChip().IC_hot_m_write([image_hot_data])
+                Record_data.RecordData().IC_hot_m_write([image_hot_data])
             elif temp.endswith('_W.png'):
                 image_hot_data = ChracterReconition.SplitPic_week(fold_path + '/' + temp)
                 image_hot_data = [ppn, manu] + image_hot_data + task_name
-                MySqlHelp_recommanded.DBRecommandChip().IC_hot_w_write([image_hot_data])
+                Record_data.RecordData().IC_hot_w_write([image_hot_data])
 
 
 if __name__ == "__main__":

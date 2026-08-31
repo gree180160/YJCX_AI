@@ -12,7 +12,7 @@ from selenium.webdriver.common.action_chains import ActionChains
 from WRTools import ChromeDriverManager
 import ssl
 from Manager import AccManage
-from WRTools import ExcelHelp, WaitHelp, PathHelp, LogHelper, MySqlHelp_recommanded
+from WRTools import ExcelHelp, WaitHelp, PathHelp, LogHelper, Record_data
 import time
 
 

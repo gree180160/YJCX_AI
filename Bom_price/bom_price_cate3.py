@@ -7,7 +7,7 @@ import time
 
 from WRTools import ChromeDriverManager
 from selenium.webdriver.common.by import By
-from WRTools import LogHelper, PathHelp, ExcelHelp, WaitHelp, MySqlHelp_recommanded
+from WRTools import LogHelper, PathHelp, ExcelHelp, WaitHelp, Record_data
 from Manager import AccManage
 import bom_price_info
 import re
@@ -19,12 +19,12 @@ driver.set_page_load_timeout(120)
 
 accouts_arr = [[AccManage.Bom3['c'], AccManage.Bom3['n'], AccManage.Bom3['p']]]
 
-sourceFile_dic = {'fileName': PathHelp.get_file_path(None, 'TVibrationMeter.xlsx'),
+sourceFile_dic = {'fileName': PathHelp.get_file_path(None, 'TBomHot.xlsx'),
                   'sourceSheet': 'ppn2',
                   'colIndex': 1,
                   'startIndex': 0,
-                  'endIndex': 2}
-task_name = 'TVibrationMeter'
+                  'endIndex': 5}
+task_name = 'TBomHot'
 
 default_url = 'https://www.bom.ai/'
 log_file = PathHelp.get_file_path('Bom_price', 'bom_price_log.txt')
@@ -133,10 +133,10 @@ def analy_html(cate_index, ppn, manu):
             # 无论是否有效都记录
             if bom_price_ele and str(bom_price_ele.supplier).__len__() > 0 and bom_price_ele.is_valid_supplier():
                 valid_supplier_arr.append(bom_price_ele.descritpion_arr() + [task_name])
-        MySqlHelp_recommanded.DBRecommandChip().bom_price_write(valid_supplier_arr)
+        Record_data.RecordData().bom_price_write(valid_supplier_arr)
         valid_supplier_arr.clear()
     else:
-        # MySqlHelp_recommanded.DBRecommandChip().bom_price_write([[ppn, '??', '??', "??"]])
+        # Record_data.RecordData().bom_price_write([[ppn, '??', '??', "??"]])
         print(f'{cate_index}th {ppn} has no record')
 
 
