@@ -130,7 +130,6 @@ class RecordData:
             # 如果不是最后一次尝试，等待一下再重试
             if attempt < max_retries - 1:
                 time.sleep(1)  # 重试前等待1秒
-
         print(f'{endpoint} 写入失败，已重试{max_retries}次，最终错误: {last_error}')
         return False
 
@@ -336,9 +335,13 @@ class RecordData:
     def hq_hot_write(self, data: List[List[Any]]) -> bool:
         """
         写入华强热度数据
-        data格式: [[ppn, manu, weak_hot, month_hot, task_name], ...]
+        data格式: [[ppn, manu, week_hot, month_hot, week_price, month_stock, week_price, month_price, task_name], ...]
         """
-        dicts = [{'ppn': row[0], 'manu': row[1], 'weak_hot': row[2], 'month_hot': row[3], 'task_name': row[4]}
+        dicts = [{'ppn': row[0], 'manu': row[1],
+                  'week_hot': row[2], 'month_hot': row[3],
+                  'week_stock': row[4], 'month_stock': row[5],
+                  'week_price': row[6], 'month_price': row[7],
+                  'task_name': row[8]}
                  for row in data]
         return self._post_dicts('hq_hot/write', dicts)
 
@@ -353,12 +356,16 @@ class RecordData:
             response.raise_for_status()
             result = response.json()
             if result.get('code') == 200:
-                return [[item.get('ppn'), item.get('manu'), item.get('weak_hot'), item.get('month_hot')]
+                return [[item.get('ppn'), item.get('manu'),
+                         item.get('week_hot'), item.get('month_hot'),
+                         item.get('week_stock'), item.get('month_stock'),
+                         item.get('week_price'), item.get('month_price'),
+                         ]
                         for item in result.get('data', [])]
-            return [[model, '--', '--', '--'] for model in model_list]
+            return [[model, '--', '--', '--', '--', '--', '--', '--'] for model in model_list]
         except Exception as e:
             print(f"query_ppn_by_models失败: {e}")
-            return [[model, '--', '--', '--'] for model in model_list]
+            return [[model, '--', '--', '--', '--', '--', '--', '--'] for model in model_list]
 
     # ==================== EFind Stock 维库库存 ====================
     def efind_stock_write(self, data: List[List[Any]]) -> bool:

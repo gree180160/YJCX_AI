@@ -22,9 +22,9 @@ def get_search_data(isWeek, pn, week_info, month_info) ->list:
         for row_info in week_info:
             if row_info[0] == pn:
                 try:
-                    first_weak = int(row_info[2])
+                    first_week = int(row_info[2])
                 except:
-                    first_weak = 0
+                    first_week = 0
                 number_arr = []
                 for index in range(2, 53):
                     try:
@@ -33,7 +33,7 @@ def get_search_data(isWeek, pn, week_info, month_info) ->list:
                         hot_value = 0
                     number_arr.append(hot_value)
                 number_arr.sort()
-                return [first_weak, number_arr[-1], number_arr[-2], number_arr[0]]
+                return [first_week, number_arr[-1], number_arr[-2], number_arr[0]]
         return ['--', '--', '--', '--']
     else:
         for row_info in month_info:

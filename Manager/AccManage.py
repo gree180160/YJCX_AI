@@ -30,9 +30,6 @@ oc_stock3 = ["jingchuangsan@calcitrapa.com", "Calcitrapa0228"]
 oc_stock4 = ["jingchuangqi@calcitrapa.com", "Calcitrapa0228"]
 
 Wheat = {'c':"深圳市元极创新电子有限公司", 'n':"17304475938", 'p':"Yjcx123!"}
-mys = {'h':"8.219.49.4", 'n':"yjcx_recommended", 'p':"Yjcx1010"}
-mymonitor = {'h':"8.219.49.4", 'n':"monitorDBA", 'p':"Calcitrapa0228."}
-tener_info = {'h':"8.219.49.4", 'n':'tender_manager', 'p':'ZGKHyuE2t8GBsmDn'}
 ros = {'n':'tim616', 'p':'4IPZjmst'}
 digikey = {'n':'1459287460@qq.com', 'p':'Yjcx0718'}
 digikey2 = {'n':'river@calcitrapa.com', 'p':'Calcitrapa0228'}

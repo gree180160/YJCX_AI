@@ -153,8 +153,7 @@ def cxyx_stock_url(ppn: str, qty: int):
     return search_url
 
 
-
-# https://fh.hqew.com/detail/500020657.html
+# https://fh.hqew.com/detail/TPS5430DDAR.html
 def HQ_hot_url(ppn: str):
     cate_str = str(ppn)
     cate_str = cate_str.replace('(UMW)', '')

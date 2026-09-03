@@ -8216,3 +8216,128 @@ from unknown error: web view not found
 2026-08-13 17:20:44型号 XCF04SVOG20C 周数据错误: int() argument must be a string, a bytes-like object or a real number, not 'NoneType'
 2026-08-13 17:24:03型号 XC95288XL-10TQG144I 周数据错误: int() argument must be a string, a bytes-like object or a real number, not 'NoneType'
 2026-08-13 17:27:23型号 XC7Z020-2CLG484I 周数据错误: int() argument must be a string, a bytes-like object or a real number, not 'NoneType'
+2026-08-31 18:34:24型号 MAX13256ATB+T 周数据错误: int() argument must be a string, a bytes-like object or a real number, not 'NoneType'
+2026-08-31 18:36:32型号 MAX256ASA+T 周数据错误: int() argument must be a string, a bytes-like object or a real number, not 'NoneType'
+2026-08-31 18:40:23型号 MAX256ASA+ 周数据错误: int() argument must be a string, a bytes-like object or a real number, not 'NoneType'
+2026-08-31 18:43:19型号 MAX25256ATBA/V+ 周数据错误: int() argument must be a string, a bytes-like object or a real number, not 'NoneType'
+2026-08-31 18:46:57型号 MAX22256AATB+ 周数据错误: int() argument must be a string, a bytes-like object or a real number, not 'NoneType'
+2026-08-31 18:48:59型号 LTC7066RMSE#WPBF 周数据错误: int() argument must be a string, a bytes-like object or a real number, not 'NoneType'
+2026-08-31 18:51:23型号 LT3572EUF#TRPBF 周数据错误: int() argument must be a string, a bytes-like object or a real number, not 'NoneType'
+2026-08-31 18:55:18型号 LT3572EUF#PBF 周数据错误: int() argument must be a string, a bytes-like object or a real number, not 'NoneType'
+2026-08-31 18:58:10型号 MAX22258AUD+ 周数据错误: int() argument must be a string, a bytes-like object or a real number, not 'NoneType'
+2026-08-31 19:01:28型号 MAX20766EPE+ 周数据错误: int() argument must be a string, a bytes-like object or a real number, not 'NoneType'
+2026-08-31 19:03:25型号 LTC7068RMSE#PBF 周数据错误: int() argument must be a string, a bytes-like object or a real number, not 'NoneType'
+2026-08-31 19:06:17型号 MAX22256CATB+ 周数据错误: Message: no such element: Unable to locate element: {"method":"css selector","selector":"[id="J-detailChar"]"}
+  (Session info: chrome=114.0.5735.133)
+
+2026-08-31 19:08:46型号 MAX22256BATB+ 周数据错误: Message: no such element: Unable to locate element: {"method":"css selector","selector":"[id="J-detailChar"]"}
+  (Session info: chrome=114.0.5735.133)
+
+2026-08-31 19:11:45型号 MAX20781EAFC+ 周数据错误: Message: no such element: Unable to locate element: {"method":"css selector","selector":"[id="J-detailChar"]"}
+  (Session info: chrome=114.0.5735.133)
+
+2026-08-31 19:15:53型号 MAX20781CAFC+ 周数据错误: Message: no such element: Unable to locate element: {"method":"css selector","selector":"[id="J-detailChar"]"}
+  (Session info: chrome=114.0.5735.133)
+
+2026-08-31 19:19:12型号 MAX20781BAFC+ 周数据错误: Message: no such element: Unable to locate element: {"method":"css selector","selector":"[id="J-detailChar"]"}
+  (Session info: chrome=114.0.5735.133)
+
+2026-08-31 19:22:09型号 MAX20781AAFC+ 周数据错误: Message: no such element: Unable to locate element: {"method":"css selector","selector":"[id="J-detailChar"]"}
+  (Session info: chrome=114.0.5735.133)
+
+2026-08-31 19:26:02型号 LTC7051AV#PBF 周数据错误: Message: no such element: Unable to locate element: {"method":"css selector","selector":"[id="J-detailChar"]"}
+  (Session info: chrome=114.0.5735.133)
+
+2026-08-31 19:27:49型号 LTC7051AV-1#PBF 周数据错误: Message: no such element: Unable to locate element: {"method":"css selector","selector":"[id="J-detailChar"]"}
+  (Session info: chrome=114.0.5735.133)
+
+2026-08-31 19:31:42型号 VT1697SBFQX 周数据错误: Message: no such element: Unable to locate element: {"method":"css selector","selector":"[id="J-detailChar"]"}
+  (Session info: chrome=114.0.5735.133)
+
+2026-08-31 19:33:57型号 VT1697SBFQ 周数据错误: Message: no such element: Unable to locate element: {"method":"css selector","selector":"[id="J-detailChar"]"}
+  (Session info: chrome=114.0.5735.133)
+
+2026-08-31 19:37:51型号 LTC7050AV-1#PBF 周数据错误: Message: no such element: Unable to locate element: {"method":"css selector","selector":"[id="J-detailChar"]"}
+  (Session info: chrome=114.0.5735.133)
+
+2026-08-31 19:41:02型号 LTC7068RMSE#TRPBF 周数据错误: Message: no such element: Unable to locate element: {"method":"css selector","selector":"[id="J-detailChar"]"}
+  (Session info: chrome=114.0.5735.133)
+
+2026-08-31 19:43:58型号 MAX256ASA/V+T 周数据错误: Message: no such element: Unable to locate element: {"method":"css selector","selector":"[id="J-detailChar"]"}
+  (Session info: chrome=114.0.5735.133)
+
+2026-08-31 19:45:56型号 MAX22256CATB+T 周数据错误: Message: no such element: Unable to locate element: {"method":"css selector","selector":"[id="J-detailChar"]"}
+  (Session info: chrome=114.0.5735.133)
+
+2026-08-31 19:48:26型号 MAX22256BATB+T 周数据错误: Message: no such element: Unable to locate element: {"method":"css selector","selector":"[id="J-detailChar"]"}
+  (Session info: chrome=114.0.5735.133)
+
+2026-08-31 19:51:16型号 MAX22256AATB+T 周数据错误: Message: no such element: Unable to locate element: {"method":"css selector","selector":"[id="J-detailChar"]"}
+  (Session info: chrome=114.0.5735.133)
+
+2026-08-31 19:54:52型号 MAX22258AUD+T 周数据错误: Message: no such element: Unable to locate element: {"method":"css selector","selector":"[id="J-detailChar"]"}
+  (Session info: chrome=114.0.5735.133)
+
+2026-08-31 19:57:43型号 MAX256ASA/V+ 周数据错误: Message: no such element: Unable to locate element: {"method":"css selector","selector":"[id="J-detailChar"]"}
+  (Session info: chrome=114.0.5735.133)
+
+2026-08-31 19:59:35型号 MAX20781EAFC+T 周数据错误: Message: no such element: Unable to locate element: {"method":"css selector","selector":"[id="J-detailChar"]"}
+  (Session info: chrome=114.0.5735.133)
+
+2026-08-31 20:02:45型号 MAX20781HAFC+T 周数据错误: Message: no such element: Unable to locate element: {"method":"css selector","selector":"[id="J-detailChar"]"}
+  (Session info: chrome=114.0.5735.133)
+
+2026-08-31 20:04:44型号 MAX20781GAFC+T 周数据错误: Message: no such element: Unable to locate element: {"method":"css selector","selector":"[id="J-detailChar"]"}
+  (Session info: chrome=114.0.5735.133)
+
+2026-08-31 20:07:45型号 MAX20781CAFC+T 周数据错误: Message: no such element: Unable to locate element: {"method":"css selector","selector":"[id="J-detailChar"]"}
+  (Session info: chrome=114.0.5735.133)
+
+2026-09-01 13:35:23主程序错误: Message: no such element: Unable to locate element: {"method":"css selector","selector":"[id="monthTab"]"}
+  (Session info: chrome=114.0.5735.133)
+
+2026-09-01 14:25:35型号 MAX13256ATB+T 周数据错误: Message: no such element: Unable to locate element: {"method":"css selector","selector":"[id="J-detailChar"]"}
+  (Session info: chrome=114.0.5735.133)
+
+2026-09-01 19:05:25型号 MAX20781FAFC+T 周数据错误: Message: no such element: Unable to locate element: {"method":"css selector","selector":"[id="J-detailChar"]"}
+  (Session info: chrome=114.0.5735.133)
+
+2026-09-01 19:08:46型号 MAX20781DAFC+T 周数据错误: Message: no such element: Unable to locate element: {"method":"css selector","selector":"[id="J-detailChar"]"}
+  (Session info: chrome=114.0.5735.133)
+
+2026-09-01 19:10:53型号 VT1677SBFQX 周数据错误: Message: no such element: Unable to locate element: {"method":"css selector","selector":"[id="J-detailChar"]"}
+  (Session info: chrome=114.0.5735.133)
+
+2026-09-01 19:14:58型号 MAX20781FAFC+ 周数据错误: Message: no such element: Unable to locate element: {"method":"css selector","selector":"[id="J-detailChar"]"}
+  (Session info: chrome=114.0.5735.133)
+
+2026-09-01 19:18:44型号 MAX20781DAFC+ 周数据错误: Message: no such element: Unable to locate element: {"method":"css selector","selector":"[id="J-detailChar"]"}
+  (Session info: chrome=114.0.5735.133)
+
+2026-09-01 19:21:49型号 MAX14900SPM+ 周数据错误: Message: no such element: Unable to locate element: {"method":"css selector","selector":"[id="J-detailChar"]"}
+  (Session info: chrome=114.0.5735.133)
+
+2026-09-01 19:23:45型号 VT1697SCFQX 周数据错误: Message: no such element: Unable to locate element: {"method":"css selector","selector":"[id="J-detailChar"]"}
+  (Session info: chrome=114.0.5735.133)
+
+2026-09-01 19:26:19型号 VT1677SBFQR 周数据错误: Message: no such element: Unable to locate element: {"method":"css selector","selector":"[id="J-detailChar"]"}
+  (Session info: chrome=114.0.5735.133)
+
+2026-09-01 19:29:35型号 VT1697SCFQR 周数据错误: Message: no such element: Unable to locate element: {"method":"css selector","selector":"[id="J-detailChar"]"}
+  (Session info: chrome=114.0.5735.133)
+
+2026-09-01 19:32:04型号 VT1697SBFQR 周数据错误: Message: no such element: Unable to locate element: {"method":"css selector","selector":"[id="J-detailChar"]"}
+  (Session info: chrome=114.0.5735.133)
+
+2026-09-01 19:34:39型号 MAX15566GTG+ 周数据错误: Message: no such element: Unable to locate element: {"method":"css selector","selector":"[id="J-detailChar"]"}
+  (Session info: chrome=114.0.5735.133)
+
+2026-09-01 19:37:37型号 VT1677SBFQ 周数据错误: Message: no such element: Unable to locate element: {"method":"css selector","selector":"[id="J-detailChar"]"}
+  (Session info: chrome=114.0.5735.133)
+
+2026-09-01 19:39:31型号 VT1677SBFQX+CN8 周数据错误: Message: no such element: Unable to locate element: {"method":"css selector","selector":"[id="J-detailChar"]"}
+  (Session info: chrome=114.0.5735.133)
+
+2026-09-01 19:41:19型号 VT1677SBFQX+CNQ 周数据错误: Message: no such element: Unable to locate element: {"method":"css selector","selector":"[id="J-detailChar"]"}
+  (Session info: chrome=114.0.5735.133)
+

@@ -10,12 +10,12 @@ log_file = PathHelp.get_file_path('HQSearch', 'HQPeakfireLog.txt')
 
 ssl._create_default_https_context = ssl._create_unverified_context
 
-sourceFile_dic = {'fileName': PathHelp.get_file_path(None, 'TRFBJT.xlsx'),
+sourceFile_dic = {'fileName': PathHelp.get_file_path(None, 'TADIPMICBrigeDrivers.xlsx'),
                   'sourceSheet': 'ppn',
                   'colIndex': 1,
-                  'startIndex': 193,
-                  'endIndex': 194}
-task_name = 'TRFBJT'
+                  'startIndex': 0,
+                  'endIndex': 53}
+task_name = 'TADIPMICBrigeDrivers'
 
 db = Record_data.RecordData()
 accouts_arr = [AccManage.HQ_hot_1['n'], AccManage.HQ_hot_1['p']]
@@ -59,29 +59,39 @@ def getSearchInfo(cate_name, manu, isWeek):
         showingCheckCode = checkVerificationCodePage(cate_name)
     result = []
     try:
-        # 1. 根据isWeek确定目标图表的ID
+        # 1. 根据isWeek确定目标图表的容器ID（页面已从Highcharts改版为ECharts）
         chart_id = "J-detailChar" if isWeek else "J-detailChar-Month"
 
-        # 2. 等待目标图表容器加载，并获取其data-highcharts-chart属性（图表索引）
+        # 2. 等待目标图表容器加载
         chart_container = driver.find_element(By.ID, chart_id)
-        chart_index = int(chart_container.get_attribute("data-highcharts-chart"))
 
-        # 3. 等待图表数据加载完成（确保系列和数据点存在）
+        # 3. 等待ECharts实例初始化和系列数据加载完成
         WebDriverWait(driver, 15).until(
             lambda d: d.execute_script(f"""
-                const chart = window.Highcharts.charts[{chart_index}];
-                return chart && chart.series && chart.series.length > 0 && chart.series[0].data.length > 0;
+                const dom = document.getElementById('{chart_id}');
+                const chart = echarts.getInstanceByDom(dom);
+                if (!chart) return false;
+                const option = chart.getOption();
+                return option && option.series && option.series.length > 0 &&
+                       option.series[0].data && option.series[0].data.length > 0;
             """)
         )
 
-        # 4. 执行JS提取对应图表的数据
+        # 4. 执行JS从ECharts实例提取对应图表的数据
         y_values = driver.execute_script(f"""
-            const chart = window.Highcharts.charts[{chart_index}];
-            const series = chart.series[0];  // 确认系列索引正确
-            return series.data.map(p => p.options?.y ?? null);
+            const dom = document.getElementById('{chart_id}');
+            const chart = echarts.getInstanceByDom(dom);
+            const option = chart.getOption();
+            const series = option.series[0];
+            const data = series.data.map(function(item) {{
+                // data可能为数值，或对象（如 {{value: <数值>}}）
+                if (item === null || item === undefined || typeof item !== 'object') return item;
+                return item.value;
+            }});
+            return data;
         """)
 
-        # 5. 数据清洗
+        # 5. 数据清洗（处理null和NaN）
         arr1_cleaned = [
             None if v is None or (isinstance(v, float) and not v == v)  # 处理null和NaN
             else v
@@ -89,7 +99,6 @@ def getSearchInfo(cate_name, manu, isWeek):
         ]
         result = arr1_cleaned
         # print(f"型号 {cate_name} {period}数据获取成功，长度: {len(result)}")
-
     except Exception as e:
         period = "周" if isWeek else "月"
         print(f"型号 {cate_name} {period}数据获取失败: {str(e)}")
@@ -101,7 +110,7 @@ def getSearchInfo(cate_name, manu, isWeek):
 # 验证当前页面是否正在等待用户验证，连续三次请求出现验证码页面，则关闭页面
 def checkVerificationCodePage(ppn) -> bool:
     global VerificationCodePage
-    if driver.current_url.__contains__('https://passport.hqew.com/robottocheck'):
+    if driver.find_element(By.TAG_NAME, 'body').text.__contains__('频繁') or driver.find_element(By.TAG_NAME, 'body').text.__contains__('访问太快了'):
         VerificationCodePage += 1
         print(f'{ppn} check code')
         EmailHelper.mail_HQ_hot(AccManage.Device_ID)
@@ -127,9 +136,17 @@ def main():
                 continue
             elif index in range(sourceFile_dic['startIndex'], sourceFile_dic['endIndex']):
                 print(f'cate_index is: {index}  cate_name is: {ppn}')
-                manu = all_manu[index]
-                driver.get(URLManager.HQ_hot_url(ppn))
-                WaitHelp.waitfor(True, False)
+                if index - sourceFile_dic['startIndex'] <= 2:
+                    search_sup(ppn)
+                    link_elem = driver.find_element(By.CSS_SELECTOR, "a.yun-zhishu")
+                    # 关键：移除target="_blank"，点击不会新开tab，直接本页跳转
+                    driver.execute_script("arguments[0].removeAttribute('target');", link_elem)
+                    link_elem.click()
+                    WaitHelp.waitfor(True, False)
+                else:
+                    manu = all_manu[index]
+                    driver.get(URLManager.HQ_hot_url(ppn))
+                    WaitHelp.waitfor(True, False)
                 if has_hotData():
                     week_arr = getSearchInfo(ppn, manu, True)
                     time.sleep(1.0)
@@ -149,24 +166,29 @@ def main():
                     print(f"型号 {ppn} 没有数据")
                     cate_info = [ppn, manu, '[0.00, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]', '[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]', task_name]
                     db.hq_hot_write([cate_info])
-
     finally:
         driver.quit()  # 无论是否出错，都关闭浏览器
 
 
-if __name__ == "__main__":
-    # try:
-    #     driver.get("https://www.hqew.com/")
-    #     login_action(login_url)
-    #     WaitHelp.waitfor_account_import(True, False)
-    #     main()
-    # except Exception as e:
-    #     print(f"主程序错误: {str(e)}")
-    #     LogHelper.write_log(log_file, f"主程序错误: {str(e)}")
-    # finally:
-    #     if 'driver' in locals():
-    #         driver.quit()
-    cate_info = ["Test", "Test", '[0.00, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]',
-                 '[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]', "Test"]
-    db.hq_hot_write([cate_info])
+# 混淆作用
+def search_sup(ppn):
+    sup_url = URLManager.HQ_hot_url(ppn)
+    driver.get(sup_url)
+    WaitHelp.waitfor(True, False)
 
+
+if __name__ == "__main__":
+    try:
+        driver.get("https://www.hqew.com/")
+        time.sleep(60)
+        login_action(login_url)
+        WaitHelp.waitfor_account_import(True, False)
+        driver.get("https://www.hqew.com/")
+        time.sleep(60)
+        main()
+    except Exception as e:
+        print(f"主程序错误: {str(e)}")
+        LogHelper.write_log(log_file, f"主程序错误: {str(e)}")
+    finally:
+        if 'driver' in locals():
+            driver.quit()

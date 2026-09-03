@@ -8,12 +8,19 @@ from Manager import AccManage, URLManager
 log_file = PathHelp.get_file_path('HQSearch', 'HQPeakfireLog.txt')
 ssl._create_default_https_context = ssl._create_unverified_context
 
-sourceFile_dic = {'fileName': PathHelp.get_file_path(None, 'TBomHot.xlsx'),
-                  'sourceSheet': 'ppn2',
+sourceFile_dic = {'fileName': PathHelp.get_file_path(None, 'TADIPMICEnergyMetering.xlsx'),
+                  'sourceSheet': 'ppn',
                   'colIndex': 1,
                   'startIndex': 0,
-                  'endIndex': 5}
-task_name = 'TBomHot'
+                  'endIndex': 343}
+task_name = 'TADIPMICEnergyMetering'
+
+# sourceFile_dic = {'fileName': PathHelp.get_file_path(None, 'TBomHot.xlsx'),
+#                   'sourceSheet': 'ppn2',
+#                   'colIndex': 1,
+#                   'startIndex': 0,
+#                   'endIndex': 5}
+# task_name = 'TBomHot'
 
 accouts_arr = [AccManage.HQ_hot_1['n'], AccManage.HQ_hot_1['p']]
 VerificationCodePage = 0
