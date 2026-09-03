@@ -2,18 +2,16 @@ from sys import platform
 import os
 import sys
 from WRTools import ExcelHelp
+from pathlib import Path
 
 
-def get_file_path(super_path, file_name) -> str:
-    result = root_path = getRootPath()
-    if platform.startswith('linux'):
-        tail = ''
-    elif platform.startswith('win'):
-        tail = f'\\{super_path}\\{file_name}' if super_path else f'\\{file_name}'
-    else:
-        tail = f'/{super_path}/{file_name}' if super_path else f'/{file_name}'
-    result = root_path + tail
-    return result
+def get_file_path(super_path: str | None, file_name: str) -> str:
+    root_path = getRootPath()
+    parts = [root_path]
+    if super_path:
+        parts.append(super_path)
+    parts.append(file_name)
+    return os.path.join(*parts)
 
 
 def get_IC_hot_image_fold(task_name):
@@ -21,18 +19,11 @@ def get_IC_hot_image_fold(task_name):
     return image_fold
 
 
-# 获得根路径
-def getRootPath():
-    # 获取文件目录
-    curPath = os.path.abspath(os.path.dirname(__file__))
-    # 获取项目根路径，内容为当前项目的名字
-    if platform.startswith('linux'):
-        tail = ''
-    elif platform.startswith('win'):
-        tail = rootPath = curPath[:curPath.find('project') + len('project')]
-    else:
-        tail = rootPath = curPath[:curPath.find('ChipCrawler') + len('ChipCrawler')]
-    return rootPath
+def getRootPath() -> str:
+    # 项目根目录 = ChipCrawler 目录(本文件位于 ChipCrawler/WRTools/PathHelp.py,向上两级)
+    current_file = Path(__file__).resolve()
+    project_root = current_file.parent.parent
+    return str(project_root)
 
 
 # 从根目录下开始获取其他路径
@@ -97,11 +88,11 @@ def change_screenShotName_Chrome(fold_path):
 
 
 if __name__ == "__main__":
-    # keyword_source_file = get_file_path(super_path=None, file_name='Tkeyword.xlsx')
+    keyword_source_file = get_file_path(super_path=None, file_name='TADIPMICBatteryManagement.xlsx')
     # log_file = get_file_path(super_path='Octopart_category', file_name='octopart_key_cate_log.txt')
-    # print(keyword_source_file)
+    print(keyword_source_file)
     # print(log_file)-
     # print(getOtherPath('TRenesasAll_10H'))
-    change_screenShotName_Firfox(fold_path=get_file_path('IC_Search', 'temp_hot_images'))
+    # change_screenShotName_Firfox(fold_path=get_file_path('IC_Search', 'temp_hot_images'))
     # change_screenShotName_Chrome(fold_path=get_file_path('IC_Search', 'temp_hot_images'))
 

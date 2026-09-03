@@ -21,8 +21,8 @@ import time
 import requests
 from typing import List, Optional, Any
 
-# local_url = "http://localhost:8001/api/data"
-product_url = "http://47.236.113.155:8001/api/data"
+local_url = "http://localhost:8001/api/data"
+# product_url = "http://47.236.113.155:8001/api/data"
 
 
 def singleton(cls):
@@ -46,7 +46,7 @@ def singleton(cls):
 class RecordData:
     """数据记录客户端类，接口与原 DBRecommandChip 保持一致（单例模式）"""
 
-    def __init__(self, base_url: str = product_url, timeout: int = 120):
+    def __init__(self, base_url: str = local_url, timeout: int = 120):
         """
         初始化客户端（单例模式，传入参数时会重新初始化）
         :param base_url: 数据服务API地址
@@ -335,7 +335,7 @@ class RecordData:
     def hq_hot_write(self, data: List[List[Any]]) -> bool:
         """
         写入华强热度数据
-        data格式: [[ppn, manu, week_hot, month_hot, week_price, month_stock, week_price, month_price, task_name], ...]
+        data格式: [[ppn, manu, week_hot, month_hot, week_stock, month_stock, week_price, month_price, task_name], ...]
         """
         dicts = [{'ppn': row[0], 'manu': row[1],
                   'week_hot': row[2], 'month_hot': row[3],

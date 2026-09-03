@@ -3,6 +3,7 @@
 /__pycache__/*
 *.pyc
 *.png
+geckodriver.log
 /.idea
 /venv/*
 /IC_Search/CroppedImages/

@@ -178,17 +178,24 @@ def search_sup(ppn):
 
 
 if __name__ == "__main__":
-    try:
-        driver.get("https://www.hqew.com/")
-        time.sleep(60)
-        login_action(login_url)
-        WaitHelp.waitfor_account_import(True, False)
-        driver.get("https://www.hqew.com/")
-        time.sleep(60)
-        main()
-    except Exception as e:
-        print(f"主程序错误: {str(e)}")
-        LogHelper.write_log(log_file, f"主程序错误: {str(e)}")
-    finally:
-        if 'driver' in locals():
-            driver.quit()
+    # try:
+    #     driver.get("https://www.hqew.com/")
+    #     time.sleep(60)
+    #     login_action(login_url)
+    #     WaitHelp.waitfor_account_import(True, False)
+    #     driver.get("https://www.hqew.com/")
+    #     time.sleep(60)
+    #     main()
+    # except Exception as e:
+    #     print(f"主程序错误: {str(e)}")
+    #     LogHelper.write_log(log_file, f"主程序错误: {str(e)}")
+    # finally:
+    #     if 'driver' in locals():
+    #         driver.quit()
+    cate_info = ["test", "test",
+                 '[0.00, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]',
+                 '[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]',
+                 '[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]',
+                 '[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]',
+                 '', '', "test"]
+    db.hq_hot_write([cate_info])

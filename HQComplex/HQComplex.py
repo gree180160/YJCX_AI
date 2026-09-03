@@ -10,12 +10,12 @@ from Manager import AccManage, URLManager
 log_file = PathHelp.get_file_path('HQComplex', 'HQComplexLog.txt')
 ssl._create_default_https_context = ssl._create_unverified_context
 
-sourceFile_dic = {'fileName': PathHelp.get_file_path(None, 'TRFBJT.xlsx'),
+sourceFile_dic = {'fileName': PathHelp.get_file_path(None, 'TADIPMICBrigeDrivers.xlsx'),
                   'sourceSheet': 'ppn',
                   'colIndex': 1,
-                  'startIndex': 0,
-                  'endIndex': 19}
-task_name = 'TRFBJT'
+                  'startIndex': 2,
+                  'endIndex': 53}
+task_name = 'TADIPMICBrigeDrivers'
 
 db = Record_data.RecordData()
 accouts_arr = [AccManage.HQ_hot_1['n'], AccManage.HQ_hot_1['p']]
@@ -229,10 +229,12 @@ def main(precise):
                 # [ppn, manu, supplier_name, sup_ppn, sup_manu, batch, stock, packing, param, place, instruction, publish_date, task_name]
                 db.hq_stock_write([[ppn, manu, "--", "", "", "", "0", "", "", "", "", "", task_name]])
                 print(f"{ppn} without supplier data")
+            stock_handle = driver.current_window_handle
             # 获取peak data
             link_elem = driver.find_element(By.CSS_SELECTOR, "a.yun-zhishu")
             link_elem.click()
             WaitHelp.waitfor(True, False)
+            driver.switch_to.window(driver.window_handles[1])
             cate_info = [ppn, manu,
                          '[0.00, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]',
                          '[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]',
@@ -258,12 +260,13 @@ def main(precise):
                                          str(week_arr[1]), str(month_arr[1]),
                                          str(week_arr[2]), str(month_arr[2]),
                                          task_name]
-                            db.hq_hot_write([cate_info])
                 except Exception as e:
                     print(f"型号 {ppn} 获取指数信息error {e}")
             else:
                 print(f"型号 {ppn} 没有指数数据")
             db.hq_hot_write([cate_info])
+            driver.close()
+            driver.switch_to.window(stock_handle)
 
 
 if __name__ == "__main__":
@@ -274,7 +277,7 @@ if __name__ == "__main__":
         WaitHelp.waitfor_account_import(True, False)
         driver.get("https://www.hqew.com/")
         time.sleep(60)
-        main()
+        main(False)
     except Exception as e:
         print(f"主程序错误: {str(e)}")
         LogHelper.write_log(log_file, f"主程序错误: {str(e)}")

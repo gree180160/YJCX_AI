@@ -1,9 +1,11 @@
 import undetected_chromedriver as uc
+import os
 from undetected_chromedriver import ChromeOptions
 from Manager import AccManage
 from selenium import webdriver
 from selenium.webdriver import Firefox
 from selenium.webdriver import FirefoxOptions
+from selenium.webdriver.firefox.service import Service as FirefoxService
 import pickle
 
 
@@ -49,5 +51,7 @@ def getWebDriver(index):
 def get_firfox_driver():
     option = FirefoxOptions()
     # option.add_argument("--headless")  # 隐藏浏览器
-    browser = Firefox(executable_path='/usr/local/bin/geckodriver', options=option)
+    # 关闭 geckodriver 日志输出，避免生成 geckodriver.log
+    service = FirefoxService(executable_path='/usr/local/bin/geckodriver', log_path=os.devnull)
+    browser = Firefox(service=service, options=option)
     return browser
